@@ -24,7 +24,7 @@ v4.0.0
 - Support for Lollipop
 
 </div>
-**This SDK should be used for distribution in the Google Play Store.**
+**This SDK should be used for distribution in any other app store except Google Play. Be careful! Do not release your app with this SDK in Google Play Store!**
 
 ## Quick Guide of Universal SDK
 
