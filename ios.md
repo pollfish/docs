@@ -109,9 +109,9 @@ The init function of Pollfish must be called in your application’s delegate ap
 {
   [Pollfish initAtPosition: (PollfishPosition)
                withPadding: (int)
-	   andDeveloperKey: (NSString *)
+	       andDeveloperKey: (NSString *)
              andDebuggable: (BOOL) 
-	     andCustomMode: (BOOL)];
+	         andCustomMode: (BOOL)];
 }
 ```
 
