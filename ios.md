@@ -201,7 +201,8 @@ For example:
  
 
 	MyModalViewController  *myModalViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyModalViewController"];
-    	myModalViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    	
+ myModalViewController.modalPresentationStyle = UIModalPresentationFullScreen;
    
   	[self presentViewController: myModalViewController animated:YES completion:nil];
     
@@ -257,6 +258,7 @@ If you need to pass a custom parameter (for example a UUID as registered in your
 	       andRequestUUID: (NSString *)];
 ```
 
+
 ## Update your Privacy Policy
 
 ### Add the following paragraph to your app's privacy policy
@@ -273,7 +275,9 @@ Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefor
 
 ![](/img/documentation/idfa_2.jpg)
 
+
 ## Other actions
+
 
 ### Manually show or hide Pollfish (optional)
 
@@ -307,6 +311,7 @@ For example:
 }
 ```
 
+
 ### Update user location (optional)
 
 You can update user’s location anytime after initialization to get better fill rate on surveys by calling the following:  
@@ -320,6 +325,7 @@ For example:
 ```
 [Pollfish updateLocationWithLatitude:42.682435 andLongitude:-76.376953 andHorizontalAccuracy:2.0];
 ```
+
 
 ### Set custom user attributes (optional)
 
@@ -348,7 +354,9 @@ UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary 
 [Pollfish setAttributeDictionary:userAttributesDictionary];
 ```
 
+
 ## Implement Pollfish event listeners
+
 
 ### Get notified when a survey is received (optional)
 
@@ -381,6 +389,7 @@ You can also get informed about the price and type of survey (playful or not) th
 }
 ```
 
+
 ### Get notified when survey is completed (optional)
 
 ```
@@ -393,6 +402,7 @@ You can also get informed about the price and type of survey (playful or not) th
     NSLog(@"Pollfish Survey Completed!");
 }
 ```
+
 
 ### Get notified when a user is not eligible for a Pollfish survey (optional)
 
@@ -409,6 +419,7 @@ You can be notified when a user is not eligible for a Pollfish survey after acce
 }
 ```
 
+
 ### Get notified when survey is not available (optional)
 
 You can be notified when a survey is not available for a user via the iOS Notification Center.  
@@ -424,6 +435,7 @@ You can be notified when a survey is not available for a user via the iOS Notifi
 }
 ```
 
+
 ### Get notified when Pollfish is opened (optional)
 
 You can be notified when a user opens Pollfish survey panel via the iOS Notification Center.  
@@ -438,6 +450,7 @@ You can be notified when a user opens Pollfish survey panel via the iOS Notifica
     NSLog(@"Pollfish is opened!");
 }
 ```
+
 
 ### Get notified when Pollfish is closed (optional)
 
