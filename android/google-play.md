@@ -25,7 +25,7 @@ v4.0.0
 </div>
 
 * This SDK should be used for distribution in  Google Play Store.
-* 
+
 ## Quick Guide of Google Play SDK
 
 1.  Download Pollfish jar or aar file and add to your project (or use jcenter())
@@ -443,7 +443,7 @@ public void onPollfishClosed () {
 }
 ```
 
-*** Usually used in game apps to resume the game**
+**Usually used in game apps to resume the game**
 
 ## Other actions
 
@@ -466,7 +466,7 @@ PollFish.hide();
 If you use proguard with your app, please insert the following line in your proguard configuration file:
 
 ```
--libraryjars libs/pollfish.jar // not necessary if you are using Android Studio or .aar library
+-libraryjars libs/pollfish.jar // not necessary if using Android Studio or .aar library
 -keep class com.pollfish.** { *; }
 ```
 
