@@ -34,7 +34,7 @@ v4.0.0
 5.  Set to Release mode and release in AppStore
 6.  Update your privacy policy
 
-or 
+**or** 
 
 Though CocoaPods:
 
