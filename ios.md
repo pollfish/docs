@@ -34,6 +34,23 @@ v4.0.0
 5.  Set to Release mode and release in AppStore
 6.  Update your privacy policy
 
+or 
+
+Though CocoaPods:
+
+1.  Add a Podfile with Pollfish framework as a pod reference:
+
+```
+platform :ios
+pod 'Pollfish'
+```
+
+2. Run 'pod install' on the command line to install the Pollfish cocoapod.
+3. Call init and destroy function of Pollfish in the App’s Delegate
+4. Set to Release mode and release in AppStore
+5. Update your privacy policy
+
+
 **Note: Be careful to set andDebuggable parameter of the init function to false (Release mode) prior releasing to AppStore!**
 
 ## Requirements
