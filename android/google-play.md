@@ -24,7 +24,8 @@ v4.0.0
 - Support for Lollipop
 </div>
 
-* **This SDK should be used for distribution in  Google Play Store.**
+
+**This SDK should be used for distribution in  Google Play Store.**
 
 ## Quick Guide of Google Play SDK
 
