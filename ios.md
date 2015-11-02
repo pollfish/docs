@@ -206,10 +206,10 @@ For example:
   	[self presentViewController: myModalViewController animated:YES completion:nil];
     
 	[Pollfish initAtPosition: PollFishPositionMiddleRight
-                     withPadding: 0
-		 andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
-                   andDebuggable: false 
-                   andCustomMode: false];
+                 withPadding: 0
+		     andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
+               andDebuggable: false 
+               andCustomMode: false];
 
 }
 
@@ -223,7 +223,8 @@ For example:
         [Pollfish initAtPosition: PollFishPositionMiddleLeft
                      withPadding: 0
                  andDeveloperKey: @"af89aaf1-b7d4-46c1-8e91-b2625c2d5dbe"
-                   andDebuggable: true andCustomMode:false];
+                   andDebuggable: true 
+                   andCustomMode:false];
         
     	}];
     
