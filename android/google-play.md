@@ -476,6 +476,7 @@ where pollfish.jar is the latest pollfish jar you use in your app and is placed 
 **Note:**
 
 **- Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!**
+
 **- Include all Google Play services necessary code as described [here](//developer.android.com/google/play-services/setup.html#Proguard).**
 
 ### 18. Highly targeted surveys (optional)
