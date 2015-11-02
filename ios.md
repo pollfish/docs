@@ -355,7 +355,9 @@ You can be notified when a survey is received via the iOS Notification Center. N
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyReceived) name:@"PollfishSurveyReceived" object:nil];
+```
 
+```
 - (void)surveyReceived
 {
     NSLog(@"A survey was received!");
@@ -366,7 +368,9 @@ You can also get informed about the price and type of survey (playful or not) th
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishReceived:) name:@"PollfishSurveyReceived" object:nil];
+```
 
+```
 - (void)pollfishReceived:(NSNotification *)notification
 {
     BOOL playfulSurvey = [[[notification userInfo] valueForKey:@"playfulSurvey"] boolValue];
@@ -380,7 +384,9 @@ You can also get informed about the price and type of survey (playful or not) th
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyCompleted) name:@"PollfishSurveyCompleted" object:nil];
+```
 
+```
 - (void)surveyCompleted
 {
     NSLog(@"Pollfish Survey Completed!");
@@ -393,7 +399,9 @@ You can be notified when a user is not eligible for a Pollfish survey after acce
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishUsernotEligible) name:@"PollfishUserNotEligible" object:nil];
+```
 
+```
 - (void)pollfishUsernotEligible
 {
     NSLog(@"Pollfish User Not Eligible");
@@ -406,7 +414,9 @@ You can be notified when a survey is not available for a user via the iOS Notifi
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyNotAvailable) name:@"PollfishSurveyNotAvailable" object:nil];
+```
 
+```
 - (void) surveyNotAvailable
 {
     NSLog(@"Pollfish Survey Not Available!");
@@ -419,7 +429,9 @@ You can be notified when a user opens Pollfish survey panel via the iOS Notifica
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishOpened) name:@"PollfishOpened" object:nil];
+```
 
+```
 - (void)pollfishOpened
 {
     NSLog(@"Pollfish is opened!");
@@ -432,7 +444,9 @@ You can be notified when a user closes Pollfish survey panel via the iOS Notific
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishClosed) name:@"PollfishClosed" object:nil];
+```
 
+```
 - (void)pollfishClosed
 {
     NSLog(@"Pollfish is closed!");
