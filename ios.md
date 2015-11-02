@@ -250,11 +250,11 @@ If you need to pass a custom parameter (for example a UUID as registered in your
 
 ```
  [Pollfish initAtPosition: (PollfishPosition)
-               	withPadding: (int)
-	    andDeveloperKey: (NSString *)
-              andDebuggable: (BOOL) 
-	      andCustomMode: (BOOL)
-	     andRequestUUID: (NSString *)];
+              withPadding: (int)
+	      andDeveloperKey: (NSString *)
+            andDebuggable: (BOOL) 
+	        andCustomMode: (BOOL)
+	       andRequestUUID: (NSString *)];
 ```
 
 ## Update your Privacy Policy
