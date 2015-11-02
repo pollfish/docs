@@ -82,7 +82,9 @@ Login at [www.pollfish.com](//www.pollfish.com) and add a new app at Pollfish pa
 
 Applications that integrate Pollfish SDK can optionally include the Google Play services library when possible, to achieve better targeting. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).  
 
-*** Be careful - Pollfish does not work with Google Play services for Froyo**
+Pollfish SDK uses only Google Mobile Ads part of Google Play Services library. Having that said you can include only that part of the library in your project.
+
+**Be careful - Pollfish does not work with Google Play services for Froyo**
 
 ## Integrate Pollfish SDK
 
@@ -110,7 +112,7 @@ dependencies {
 }
 ```
 
-b) or retrieve Pollfish through jcenter() with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app') add the following (in the dependencies section):  
+b) or retrieve Pollfish through **jcenter()** with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app') add the following (in the dependencies section):  
 
 ```
 dependencies {
@@ -143,7 +145,9 @@ Pollfish uses these permissions to track and send the survey responses.
 ### init Vs customInit
 
 *   init function is the standard way of using Pollfish in your apps. Using init function enables controlling the behavior of Pollfish in an app from Pollfish panel.
-*   customInit function ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates. Both init and customInit functions have the same arguments.
+*   customInit function ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates. 
+
+Both init and customInit functions have the same arguments.
 
 **Note: do not use both init and customInit in the same activity.**  
 
@@ -169,7 +173,7 @@ The init or custom Init methods enable Pollfish surveys through your app.
 
 1.  <span class="params">act:</span> - The current activity where the Pollfish is initialized
 2.  <span class="params">YOUR_API_KEY:</span> - Your API Key (from step 2)
-3.  <span class="params">pos:</span> - The Position where you wish to place the Pollfish indicator. There are four different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
+3.  <span class="params">pos:</span> - The Position where you wish to place the Pollfish indicator. There are six different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
 4.  <span class="params">padding:</span> - The padding (in dp) from top or bottom according to Position of the indicator specified before (0 is the default value – |*if used in MIDDLE position, padding is calculating from top).
 
 Below you can see an example of the init function:  
@@ -194,7 +198,7 @@ public void onResume() {
 
 ### Other init methods (optional)
 
-**7.1 Use Pollfish listeners without the need of implementing them in the Activity**
+**7.1 Init method with Pollfish listeners without the need of implementing them in the Activity**
 
 You can use Pollfish alternative init and custom init functions that include Pollfish listeners within the initialization function.
 
@@ -224,7 +228,7 @@ PollFish.init(this,"your_api_key", Position.BOTTOM_RIGHT, 5,
   },null,null,null,null)e
 ```
 
-**7.2 Passing user view layout in the init function**
+**7.2 Init method with option of passing user view layout in the init function**
 
 If Pollfish regular init function affects your UI by creating flings or any other issues you can try passing your view's layout in the init function.
 
@@ -241,23 +245,24 @@ public void onResume() {
     PollFish.init(this, "your_api_key_here", Position.BOTTOM_LEFT, 5, (ViewGroup) getWindow().getDecorView());
 }
 ```
-**7.3 Passing custom parameter for server to server postback calls**
+**7.3 Init method for passing custom parameter for server to server postback calls**
 
 If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function within the SDK and receive it back with Server to Server, survey completed postback call you can use:
 
+```java
+PollFish.init(Activity act, String YOUR_API_KEY, Position pos, int padding, ViewGroup userLayout, String request_uuid);
 ```
-PollFish.init(Activity act, String YOUR_API_KEY, Position pos, int padding, String request_uuid);
-```
+where userLayout is the view you would like ot show Pollfish as described in 7.2. You should pass null if you would like the SDK to handle it on its own.
 
 ## Update your Privacy Policy
 
 ### 8\. Add the following paragraph to your app's privacy policy
 
-“Survey Serving Technology  
+*“Survey Serving Technology*  
 
-This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Developers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user’s device data (including Advertising ID which will may be processed by Pollfish only in strict compliance with google play policies- and/or other device data) and response meta-data (including information about the apps which the user has installed in his mobile phone) is automatically sent to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. For a full list of data received by Pollfish through this app, please read carefully Pollfish respondent terms located at https://www.pollfish.com/terms/respondent. These data will be associated with your answers to the questionnaires whenever Pollfish sents such questionnaires to eligible users. By downloading the application you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by using the Pollfish “opt out section” available on Pollfish website . We once more invite you to check the respondent’s terms of use, if you wish to have more detailed view of the way Pollfish works.  
+*This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Developers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user’s device data (including Advertising ID which will may be processed by Pollfish only in strict compliance with google play policies- and/or other device data) and response meta-data (including information about the apps which the user has installed in his mobile phone) is automatically sent to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. For a full list of data received by Pollfish through this app, please read carefully Pollfish respondent terms located at https://www.pollfish.com/terms/respondent. These data will be associated with your answers to the questionnaires whenever Pollfish sents such questionnaires to eligible users. By downloading the application you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by using the Pollfish “opt out section” available on Pollfish website . We once more invite you to check the respondent’s terms of use, if you wish to have more detailed view of the way Pollfish works.*  
 
-APPLE, GOOGLE AND AMAZON ARE NOT A SPONSOR NOR ARE INVOLVED IN ANY WAY IN THIS CONTEST/DRAW. NO APPLE PRODUCTS ARE BEING USED AS PRIZES.”
+*APPLE, GOOGLE AND AMAZON ARE NOT A SPONSOR NOR ARE INVOLVED IN ANY WAY IN THIS CONTEST/DRAW. NO APPLE PRODUCTS ARE BEING USED AS PRIZES.”*
 
 ## Handling orientation changes (optional)
 
@@ -457,19 +462,40 @@ PollFish.hide();
 If you use proguard with your app, please insert the following line in your proguard configuration file:  
 
 ```
--libraryjars libs/pollfish.jar // not necessary if you are using Android Studio or .aar library
+-libraryjars libs/pollfish.jar // not necessary if using Android Studio or .aar library
 -keep class com.pollfish.** { *; }
 ```
 
 where pollfish.jar is the latest pollfish jar you use in your app and is placed in your libs folder.  
 
-**Note:  
+**Note:**  
 
-- Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!  
-- Include all Google Play services necessary Proguard code as described [here](//developer.android.com/google/play-services/setup.html#Proguard) (if you use them in your project).**  
+**- Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!**  
+**- Include all Google Play services necessary Proguard code as described [here](//developer.android.com/google/play-services/setup.html#Proguard) (if you use them in your project).**  
 
 If you do not include Google Play services in your project, add the following code in your Proguard file:  
 
+```
+-keep class com.google.android.gms.** { *; }
+-dontwarn com.google.android.gms.**
+ 
+-keep class * extends java.util.ListResourceBundle {
+    protected Object[][] getContents();
+}
+ 
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+ 
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+ 
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+```
 
 ### 18\. Highly targeted surveys (optional)
 
