@@ -358,7 +358,9 @@ UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary 
 ## Implement Pollfish event listeners
 
 
+
 ### Get notified when a survey is received (optional)
+
 
 You can be notified when a survey is received via the iOS Notification Center. Note that the observer should be already registered when a survey is received in order to run the selector.  
 
@@ -392,6 +394,7 @@ You can also get informed about the price and type of survey (playful or not) th
 
 ### Get notified when survey is completed (optional)
 
+
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyCompleted) name:@"PollfishSurveyCompleted" object:nil];
 ```
@@ -405,6 +408,7 @@ You can also get informed about the price and type of survey (playful or not) th
 
 
 ### Get notified when a user is not eligible for a Pollfish survey (optional)
+
 
 You can be notified when a user is not eligible for a Pollfish survey after accepting to take it via the iOS Notification Center.  
 
@@ -422,6 +426,7 @@ You can be notified when a user is not eligible for a Pollfish survey after acce
 
 ### Get notified when survey is not available (optional)
 
+
 You can be notified when a survey is not available for a user via the iOS Notification Center.  
 
 ```
@@ -438,6 +443,7 @@ You can be notified when a survey is not available for a user via the iOS Notifi
 
 ### Get notified when Pollfish is opened (optional)
 
+
 You can be notified when a user opens Pollfish survey panel via the iOS Notification Center.  
 
 ```
@@ -453,6 +459,7 @@ You can be notified when a user opens Pollfish survey panel via the iOS Notifica
 
 
 ### Get notified when Pollfish is closed (optional)
+
 
 You can be notified when a user closes Pollfish survey panel via the iOS Notification Center.  
 
