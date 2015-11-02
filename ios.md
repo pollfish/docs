@@ -202,7 +202,7 @@ For example:
 
 	MyModalViewController  *myModalViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyModalViewController"];
     	
- myModalViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+   myModalViewController.modalPresentationStyle = UIModalPresentationFullScreen;
    
   	[self presentViewController: myModalViewController animated:YES completion:nil];
     
