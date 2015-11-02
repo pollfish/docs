@@ -141,9 +141,10 @@ The init function of Pollfish must be called in your application’s delegate ap
 
 **Note: Be careful to set andDebuggable parameter to false prior releasing to AppStore!**  
 
-5\. **andCustomMode** (BOOL) – use Pollfish in the standard/recommended way or achieve a specific behavior (false is the default option you should use)  
+**5\. **andCustomMode** (BOOL) – use Pollfish in the standard/recommended way or achieve a specific behavior (false is the default option you should use)  
 
-<span style="text-decoration: underline">customMode – true or false?</span>  
+<span style="text-decoration: underline">customMode – true or false?</span> 
+
 **• false:** is the standard/recommended way of using Pollfish in your apps. It enables controlling the behavior of Pollfish indicator in an app from Pollfish panel on the website.  
 
 **• true:** ignores Pollfish behavior from Pollfish panel on the website. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates.  
