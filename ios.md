@@ -77,9 +77,7 @@ The project will appear at the top of the Link Binary With Libraries section and
 
 **Note: If your deployment target is less than iOS 6.0, change the AdSupport.framework from Required to Optional.**
 
-### or 1,2,3  
-
-Though CocoaPods:
+### or skip 1\. 2\. and 3\. and go through CocoaPods
 
 Add a Podfile with Pollfish framework as a pod reference:
 
