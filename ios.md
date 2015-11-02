@@ -153,10 +153,10 @@ Below you can see an example of the init function:
 
 ```
 [Pollfish initAtPosition:PollFishPositionMiddleRight
-		withPadding: 0
-	    andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
-              andDebuggable: false 
-              andCustomMode: false];
+             withPadding: 0
+	 andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
+           andDebuggable: false 
+           andCustomMode: false];
 ```
 
 ### Destroying Pollfish
