@@ -141,7 +141,7 @@ The init function of Pollfish must be called in your application’s delegate ap
 
 **Note: Be careful to set andDebuggable parameter to false prior releasing to AppStore!**  
 
-**5\. **andCustomMode** (BOOL) – use Pollfish in the standard/recommended way or achieve a specific behavior (false is the default option you should use)  
+5\. **andCustomMode** (BOOL) – use Pollfish in the standard/recommended way or achieve a specific behavior (false is the default option you should use)  
 
 <span style="text-decoration: underline">customMode – true or false?</span> 
 
