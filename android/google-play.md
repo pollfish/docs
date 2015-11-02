@@ -113,7 +113,7 @@ dependencies {
 }
 ```
 
-b) or retrieve Pollfish through **jcenter(** with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app'). In the dependencies section:
+b) or retrieve Pollfish through **jcenter()** with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app'). In the dependencies section:
 
 ```java
 dependencies {
