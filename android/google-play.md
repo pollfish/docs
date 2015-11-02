@@ -24,14 +24,16 @@ v4.0.0
 - Support for Lollipop
 </div>
 
+* This SDK should be used for distribution in  Google Play Store.
+* 
 ## Quick Guide of Google Play SDK
 
-1.  Download Pollfish jar or aar file and add to your project
+1.  Download Pollfish jar or aar file and add to your project (or use jcenter())
 2.  Setup Google Play services for your app, as described [here](//developer.android.com/google/play-services/setup.html).
 3.  Import Pollfish classes
 4.  Add permissions to AndroidManifest.xml
-5.  Call the init function to activate Pollfish
-6.  Set to Release mode and release in Store
+5.  Call init function to activate Pollfish
+6.  Set to Release mode and release in Google Play Store
 7.  Update your privacy policy
 
 Pollfish Android SDK works with Android 10 (2.3.3) and above.
@@ -80,7 +82,9 @@ Login at [www.pollfish.com](//www.pollfish.com) and add a new app at Pollfish pa
 
 Applications that integrate Pollfish SDK are required to include the Google Play services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
 
-*** Be careful - Pollfish does not work with Google Play services for Froyo**
+Pollfish SDK uses only Google Mobile Ads part of Google Play Services library. Having that said you can include only that part of the library in your project.
+
+**Be careful - Pollfish does not work with Google Play services for Froyo**
 
 ## Integrate Pollfish SDK
 
@@ -108,7 +112,7 @@ dependencies {
 }
 ```
 
-b) or retrieve Pollfish through jcenter() with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app') add the following (in the dependencies section):
+b) or retrieve Pollfish through jcenter() with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app'). In the dependencies section:
 
 ```java
 dependencies {
@@ -125,22 +129,24 @@ import com.pollfish.main.PollFish;
 import com.pollfish.constants.Position;
 ```
 
-### 6. Add permissions to AndroidManifest.xml
+### 6. Add permission to AndroidManifest.xml
 
-You should also add the following lines in your AndroidManifest.xml
+You should also add the following line in your AndroidManifest.xml
 
 ```java
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-Pollfish uses these permissions to track and send the survey responses.
+Pollfish uses this permission to track and send the survey responses.
 
 ## Initialize Pollfish
 
 ### init Vs customInit
 
-*   init function is the standard way of using Pollfish in your apps. Using init function enables controlling the behavior of Pollfish in an app from Pollfish panel.
-*   customInit function ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates. Both init and customInit functions have the same arguments.
+*   init function is the standard way of using Pollfish in your apps. Using init function enables controlling the behavior of Pollfish in an app from Pollfish Developer Dashboard.
+*   customInit function ignores Pollfish behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys, in order to increase completion rates. 
+
+Both init and customInit functions have the same arguments.
 
 **Note: do not use both init and customInit in the same activity.**
 
@@ -166,7 +172,7 @@ The init or custom Init methods enable Pollfish surveys through your app.
 
 1.  <span class="params">act:</span> - The current activity where the Pollfish is initialized
 2.  <span class="params">YOUR_API_KEY:</span> - Your API Key (from step 2)
-3.  <span class="params">pos:</span> - The Position where you wish to place the Pollfish indicator. There are four different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
+3.  <span class="params">pos:</span> - The Position where you wish to place the Pollfish indicator. There are six different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
 4.  <span class="params">padding:</span> - The padding (in dp) from top or bottom according to Position of the indicator specified before (0 is the default value – |*if used in MIDDLE position, padding is calculating from top).
 
 Below you can see an example of the init function:
@@ -191,7 +197,7 @@ public void onResume() {
 
 ### Other init methods (optional)
 
-**7.1 Use Pollfish listeners without the need of implementing them in the Activity**
+**7.1 Init method with Pollfish listeners without the need of implementing them in the Activity**
 
 You can use Pollfish alternative init and custom init functions that include Pollfish listeners within the initialization function.
 
@@ -221,7 +227,7 @@ PollFish.init(this,"your_api_key", Position.BOTTOM_RIGHT, 5,
 },null,null,null,null);
 ```
 
-**7.2 Passing user view layout in the init function**
+**7.2 Init method with option of passing user view layout in the init function**
 
 If Pollfish regular init function affects your UI by creating flings or any other issues you can try passing your view's layout in the init function.
 
@@ -239,13 +245,14 @@ public void onResume() {
 }
 ```
 
-**7.3 Passing custom parameter for server to server postback calls**
+**7.3 Init method for passing custom parameter for server to server postback calls**
 
-If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function within the SDK and receive it back with Server to Server, survey completed postback call you can use:
+If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function within the SDK and receive it back with Server to Server survey completed postback call you can use:
 
 ```java
-PollFish.init(Activity act, String YOUR_API_KEY, Position pos, int padding, String request_uuid);
+PollFish.init(Activity act, String YOUR_API_KEY, Position pos, int padding, ViewGroup userLayout, String request_uuid);
 ```
+where userLayout is the view you would like ot show Pollfish as described in 7.2. You should pass null if you would like the SDK to handle it on its own.
 
 ## Update your Privacy Policy
 
@@ -495,10 +502,16 @@ import com.pollfish.constants.UserProperties;
 and set any of the attributes like below. Please remember to call this only after calling the init function.
 
 ```java
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+UserProperties userProperties = new UserProperties();
+
+userProperties.setGender(Gender.MALE).setAge(Age._34).setMaritalStatus(MarritalStatus.SINGLE);
+userProperties.setAgeGroup(AgeGroup._55_64);
+userProperties.setFacebookId("facebookId");
+userProperties.setTwitterId("twitterId");
+userProperties.setCustomParams("PARAM_KEY","PARAM_VALUE");
+
+PollFish.setAttributesMap(userProperties);
 ```
+
+
 
