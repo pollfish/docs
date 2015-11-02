@@ -1,4 +1,4 @@
-<div class="changelog changelog-4.1.0">
+<div class="changelog" data-version="4.1.0">
 v4.1.0
 
 - Support of manual set of devMode for android by ignoring key of signing
