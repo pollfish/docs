@@ -199,7 +199,6 @@ For example:
 						    
     	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
  
-
 	MyModalViewController  *myModalViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyModalViewController"];
     	
     myModalViewController.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -211,14 +210,10 @@ For example:
 		     andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
                andDebuggable: false 
                andCustomMode: false];
-
 }
-
-
 
 - (IBAction)dismissController:(id)sender {
 
-    
     	[[self presentingViewController] dismissViewControllerAnimated:YES completion:^{
         
         [Pollfish initAtPosition: PollFishPositionMiddleLeft
@@ -226,10 +221,7 @@ For example:
                  andDeveloperKey: @"af89aaf1-b7d4-46c1-8e91-b2625c2d5dbe"
                    andDebuggable: true 
                    andCustomMode:false];
-        
     	}];
-    
-
 }
 ```
 
