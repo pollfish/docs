@@ -112,7 +112,7 @@ dependencies {
 }
 ```
 
-b) or retrieve Pollfish through jcenter() with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app'). In the dependencies section:
+b) or retrieve Pollfish through **jcenter(** with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app'). In the dependencies section:
 
 ```java
 dependencies {
@@ -472,10 +472,10 @@ If you use proguard with your app, please insert the following line in your prog
 
 where pollfish.jar is the latest pollfish jar you use in your app and is placed in your libs folder.
 
-**Note:
+Note:
 
 - Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!
-- Include all Google Play services necessary code as described [here](//developer.android.com/google/play-services/setup.html#Proguard).**
+- Include all Google Play services necessary code as described [here](//developer.android.com/google/play-services/setup.html#Proguard).
 
 ### 18. Highly targeted surveys (optional)
 
