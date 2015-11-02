@@ -27,7 +27,7 @@ v4.0.0
 
 ## Quick Guide
 
-1.  Download Pollfish iOS SDK and unzip it
+1.  Download Pollfish iOS SDK and unzip it (or reference through CocoaPods)
 2.  Import Pollfish.framework to your project
 3.  Import AdSupport.framework and CoreTelephony.framework to your project
 4.  Call init and destroy function of Pollfish in the App’s Delegate
