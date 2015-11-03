@@ -17,7 +17,7 @@ Pollfish is a mobile monetization platform delivering surveys instead of ads thr
 
 
 
-![alt tag](https://www.pollfish.com/img/rocketMobile.png)
+![alt tag](/homeassets/images/rocketMobile.png)
 
 ## Steps Analytically
 
