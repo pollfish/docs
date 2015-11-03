@@ -265,7 +265,7 @@ If you need to pass a custom parameter (for example a UUID as registered in your
 
 Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefore when submitting your app to the App you should select the following options as seen in the image below:  
 
-![](/img/documentation/idfa_2.jpg)
+![](/homeassets/images/documentation/idfa_2.jpg)
 
 
 ## Other actions
