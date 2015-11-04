@@ -87,7 +87,7 @@ The project will appear at the top of the Link Binary With Libraries section and
 Add a Podfile with Pollfish framework as a pod reference:
 
 ```
-platform :ios
+platform :ios, '6.0'
 pod 'Pollfish'
 ```
 
