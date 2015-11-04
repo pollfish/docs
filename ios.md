@@ -2,7 +2,7 @@
 v4.1.1
 
 - support Bitcode
-- Xcode 7 support
+- support Xcode 7
 
 v4.1.0
 
