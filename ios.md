@@ -46,7 +46,7 @@ Though CocoaPods:
 1.  Add a Podfile with Pollfish framework as a pod reference:
 
 ```
-platform :ios
+platform :ios, '6.0'
 pod 'Pollfish'
 ```
 
