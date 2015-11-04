@@ -1,4 +1,9 @@
-<div class="changelog" data-version="4.1.0">
+<div class="changelog" data-version="4.1.1">
+v4.1.1
+
+- support Bitcode
+- Xcode 7 support
+
 v4.1.0
 
 - Fixed bug on orientation changes
