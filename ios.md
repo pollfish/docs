@@ -142,7 +142,7 @@ where <Your-Product> must be your "Product Name" as listed in your "Build Settin
 #import <Pollfish/Pollfish.h>
 ```
 
-#### Initializing Pollfish in App Delegate
+### Initializing Pollfish in App Delegate
 
 The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active.  
 
