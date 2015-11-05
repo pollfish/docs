@@ -84,7 +84,8 @@ The project will appear at the top of the Link Binary With Libraries section and
 
 ### or skip 1\. 2\. and 3\. and go through 
 
-###CocoaPods
+
+### CocoaPods
 
 Add a Podfile with Pollfish framework as a pod reference:
 
