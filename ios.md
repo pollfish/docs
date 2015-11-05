@@ -365,7 +365,7 @@ func applicationDidBecomeActive(application: UIApplication) {
        		    andDeveloperKey: String!, 
        		      andDebuggable: Bool, 
        		      andCustomMode: Bool
-       		      andRequestUUID: String!)
+       		     andRequestUUID: String!)
 }
 ```
 
@@ -393,17 +393,36 @@ Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefor
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization:  
 
+<span style="text-decoration: underline">Objective-C:</span>
+
 ```
-Pollfish.show();
+[Pollfish show];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+
+```
+Pollfish.show()
 ```
 
 or  
 
+<span style="text-decoration: underline">Objective-C:</span>
+
 ```
-Pollfish.hide();
+[Pollfish hide];
 ```
 
+<span style="text-decoration: underline">Swift:</span>
+
+```
+Pollfish.hide()
+```
+
+
 For example:  
+
+<span style="text-decoration: underline">Objective-C:</span>
 
 ```
 // MyViewController1
@@ -421,6 +440,27 @@ For example:
 }
 ```
 
+<span style="text-decoration: underline">Swift:</span>
+
+```
+// MyViewController1
+override func viewWillAppear(animated: Bool) 
+{
+    super.viewWillAppear(animated)
+  
+    // ...
+    Pollfish.hide()
+}
+
+// MyViewController2
+override func viewWillAppear(animated: Bool) 
+{
+    super.viewWillAppear(animated)
+    
+    // ...
+    Pollfish.hide()
+}
+```
 
 ### Update user location (optional)
 
