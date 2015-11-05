@@ -336,7 +336,7 @@ For example:
 ```
 @IBAction func showModal(sender: AnyObject) {
 
-self.presentViewController(myModalViewController, animated: true, completion: nil)
+    	self.presentViewController(myModalViewController, animated: true, completion: nil)
   
     	Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
        			    withPadding: 0, 
@@ -347,13 +347,13 @@ self.presentViewController(myModalViewController, animated: true, completion: ni
 
 @IBAction func dismissController(sender: AnyObject) {
 
-self.dismissViewControllerAnimated(true, completion: {  
+	myModalViewController.dismissViewControllerAnimated(true, completion: {  
 	
 	Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
        			    withPadding: 0, 
        		    andDeveloperKey: "2ae349ab-30b8-4100-bc4d-b33b82e76519" , 
        		      andDebuggable: false, 
-       		      andCustomMode: false)})
+       		      andCustomMode: false)});
 }
 ```
  
