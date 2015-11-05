@@ -160,12 +160,12 @@ The init function of Pollfish must be called in your application’s delegate ap
 }
 ```
 
-<span style="text-decoration: underline">Objective-C:</span>
+<span style="text-decoration: underline">Swift:</span>
 
 ```
 func applicationDidBecomeActive(application: UIApplication) {
 
-       Pollfish.initAtPosition( pos: Int32, 
+   Pollfish.initAtPosition(pos: Int32, 
        			withPadding: Int32, 
        		    andDeveloperKey: String!, 
        		      andDebuggable: Bool, 
