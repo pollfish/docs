@@ -130,11 +130,11 @@ You have to include Pollfish library headers in every file that you will use Pol
 
 where <Your-Product> must be your "Product Name" as listed in your "Build Settings"
 
-<img src="/homeassets/images/documentation/ProductName.png" width="180">
+<img src="/homeassets/images/documentation/ProductName.png" width="300">
 
 4\. Declare your new Bridging Header File path in your project's "Build Settings" in row "Objective-C "Bridging Header" section
 
-<img src="/homeassets/images/documentation/Bridging.png" width="180">
+<img src="/homeassets/images/documentation/Bridging.png" width="300">
 
 5\. Import in your Bridging Header file Pollfish header files:
 
