@@ -298,6 +298,8 @@ Another example is when showing for example a modal view controller. This contro
 
 For example:  
 
+<span style="text-decoration: underline">Objective-C:</span>
+
 ```
 - (IBAction)showModal:(id)sender {
 						    
@@ -329,6 +331,33 @@ For example:
 }
 ```
 
+<span style="text-decoration: underline">Swift:</span>
+
+```
+@IBAction func showModal(sender: AnyObject) {
+
+self.presentViewController(myModalViewController, animated: true, completion: nil)
+  
+    	Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
+       			    withPadding: 0, 
+       		    andDeveloperKey: "2ae349ab-30b8-4100-bc4d-b33b82e76519" , 
+       		      andDebuggable: false, 
+       		      andCustomMode: false)
+}
+
+@IBAction func dismissController(sender: AnyObject) {
+
+self.dismissViewControllerAnimated(true, completion: {  
+	
+	Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
+       			    withPadding: 0, 
+       		    andDeveloperKey: "2ae349ab-30b8-4100-bc4d-b33b82e76519" , 
+       		      andDebuggable: false, 
+       		      andCustomMode: false)})
+}
+```
+ 
+ 
 Note:
 
 • It is very important to call init function of Pollfish when the view hierarchy has already changed. Therefore in the example above you have to call init after the completion of the dismissal of the modal view controller.  
