@@ -466,16 +466,32 @@ override func viewWillAppear(animated: Bool)
 
 You can update user’s location anytime after initialization to get better fill rate on surveys by calling the following:  
 
+<span style="text-decoration: underline">Objective-C:</span>
+
 ```
 [Pollfish updateLocationWithLatitude:(double)lat andLongitude:(double)lon andHorizontalAccuracy:(double)acc];
 ```
 
+<span style="text-decoration: underline">Swift:</span>
+
+```
+ Pollfish.updateLocationWithLatitude(lat: Double, andLongitude: Double, andHorizontalAccuracy: Double)
+```
+
+
 For example:
+
+<span style="text-decoration: underline">Objective-C:</span>
 
 ```
 [Pollfish updateLocationWithLatitude:42.682435 andLongitude:-76.376953 andHorizontalAccuracy:2.0];
 ```
 
+<span style="text-decoration: underline">Swift:</span>
+
+```
+ Pollfish.updateLocationWithLatitude(42.682435, andLongitude: -76.376953, andHorizontalAccuracy: 2.0)
+```
 
 ### Set custom user attributes (optional)
 
