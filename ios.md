@@ -99,21 +99,44 @@ Run 'pod install' on the command line to install the Pollfish cocoapod.
 
 ### 4\. Embedding Pollfish into your code
 
+
 #### Import Pollfish header
 
 You have to include Pollfish library headers in every file that you will use Pollfish.  
 
-#### or if you are using Pollfish in a Swift project
+```
+#import <Pollfish/Pollfish.h>
+```
 
- Add a Bridging-Header file:
+
+#### if you are using Pollfish in a Swift project follow the next steps to import Pollfish
+
+ <span style="text-decoration: underline">Add a Bridging-Header file:</span>
  
 1\. Right-click your project and choose “New File…” 
 
+![](/homeassets/images/documentation/idfa_2.jpg)
 
+2\. Choose iOS->Source->Header File->Next
+
+![](/homeassets/images/documentation/idfa_2.jpg)
+
+3\. Name new file "<YourProduct>-Bridging-Header.h”
+
+where <Your-Product> must be your "Product Name" as listed in your "Build Settings"
+
+![](/homeassets/images/documentation/idfa_2.jpg)
+
+4\. Declare your new Bridging Header File path in your project's "Build Settings" in row "Objective-C "Bridging Header" section
+
+![](/homeassets/images/documentation/idfa_2.jpg)
+
+5. Import in your Bridging Header file Pollfish header files:
 
 ```
 #import <Pollfish/Pollfish.h>
 ```
+
 
 #### Initializing Pollfish in App Delegate
 
