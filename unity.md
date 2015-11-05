@@ -25,7 +25,7 @@ In Pollfish Unity plugin zip file you will find a unitypackage file for easy imp
 
 *   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose Import Package, then Custom Package and finally select PollfishUnityPugin. unitypackage.  
 
-    ![](/home/assets/images/documentation/unity/unity1.png)
+    ![](/homeassets/images/documentation/unity/unity1.png)
 *   If you want to exlude demo scene please uncheck Assets/Plugins/Pollfish/demo folder. Have in mind that in demo folder you will find PollfishDemo.cs file that demonstrates Pollfish Unity Plugin usage within a scene.
 *   Review the package files and then select Import. If you are targeting only Android platform for example you can uncheck the iOS folder and vice versa.
 
@@ -33,13 +33,13 @@ In Pollfish Unity plugin zip file you will find a unitypackage file for easy imp
 
 **Assets/Editor** – Files to help with initial setup
 
-![](/home/assets/images//documentation/unity/unity2.png)
+![](/homeassets/images/documentation/unity/unity2.png)
 
 #### iOS
 
 *mod_pbproj,pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish are used to automatically add Pollfish necessary frameworks in your XCode project (frameworks will show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project then you should leave the files as it is in Editor folder, otherwise you can deselect them.
 
-![](/home/assets/images//documentation/unity/unity3.png)
+![](/homeassets/images/documentation/unity/unity3.png)
 
 Be careful to replace your previous project when you build for iOS otherwise frameworks will be added more than once if you choose to append.
 
@@ -70,7 +70,7 @@ Please set minimum versions of your project accordingly.
 
 In order to have a look on a simple integration of Pollfish in a unity project have a look in Assets/Plugins/Pollfish/demo folder. You can run the scene there and see how Pollfish will be rendered through your apps.
 
-![](/homeassets/images//documentation/unity/unity4.png)
+![](/homeassets/images/documentation/unity/unity4.png)
 
 However we suggest that you follow this tutorial in order to understand better the integration steps you have to follow to properly use Pollfish in your project.
 
