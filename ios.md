@@ -123,7 +123,7 @@ You have to include Pollfish library headers in every file that you will use Pol
 
 ![](/homeassets/images/documentation/NewHeaderFile.png)
 
-3\. Name new file "<YourProduct>-Bridging-Header.h”
+3\. Name new file "\<Your-Product\>-Bridging-Header.h”
 
 ![](/homeassets/images/documentation/BridgingHeader.png)
 
@@ -135,7 +135,7 @@ where <Your-Product> must be your "Product Name" as listed in your "Build Settin
 
 ![](/homeassets/images/documentation/Bridging.png)
 
-5. Import in your Bridging Header file Pollfish header files:
+5\. Import in your Bridging Header file Pollfish header files:
 
 ```
 #import <Pollfish/Pollfish.h>
@@ -145,6 +145,10 @@ where <Your-Product> must be your "Product Name" as listed in your "Build Settin
 
 The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive: method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active.  
 
+
+
+<span style="text-decoration: underline">Objective-C:</span>
+ 
 ```
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
@@ -154,6 +158,19 @@ The init function of Pollfish must be called in your application’s delegate ap
              andDebuggable: (BOOL) 
 	         andCustomMode: (BOOL)];
 }
+```
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```
+func applicationDidBecomeActive(application: UIApplication) {
+
+       Pollfish.initAtPosition( pos: Int32, 
+       			withPadding: Int32, 
+       		    andDeveloperKey: String!, 
+       		      andDebuggable: Bool, 
+       		      andCustomMode: Bool)
+    }
 ```
 
 #### Pollfish init function takes the following parameters:
