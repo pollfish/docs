@@ -143,7 +143,7 @@ where <Your-Product> must be your "Product Name" as listed in your "Build Settin
 
 #### Initializing Pollfish in App Delegate
 
-The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive: method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active.  
+The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active.  
 
 
 
@@ -165,8 +165,8 @@ The init function of Pollfish must be called in your application’s delegate ap
 ```
 func applicationDidBecomeActive(application: UIApplication) {
 
-   Pollfish.initAtPosition(pos: Int32, 
-       			withPadding: Int32, 
+   Pollfish.initAtPosition( pos: Int32, 
+       			    withPadding: Int32, 
        		    andDeveloperKey: String!, 
        		      andDebuggable: Bool, 
        		      andCustomMode: Bool)
