@@ -235,7 +235,7 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 ### Destroying Pollfish
 
-You have to release all the resources Pollfish kept during the termination of your application. This should be done in your application’s delegate applicationWillTerminate: method.  
+You have to release all the resources Pollfish kept during the termination of your application. This should be done in your application’s delegate applicationWillTerminate method.  
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -259,20 +259,37 @@ func applicationWillTerminate(application: UIApplication)
 
 ### Call of init when changes in your app’s view hierarchy happen during app’s lifecycle or Pollfish is not shown on top view (optional)
 
-When your app changes it’s view hierarchy during it’s lifecycle eg through a storyboard, or when Pollfish is not shown on the top view, you can call Pollfish init again in your current’s ViewController viewDidLoad that is on super view to bring Pollfish back on the top of your views.  
+When your app changes it’s view hierarchy during it’s lifecycle eg through a storyboard, or when Pollfish is not shown on the top view, you can call Pollfish init again in your current’s ViewController viewWillAppear that is on super view to bring Pollfish back on the top of your views.  
 
 For example:
 
+<span style="text-decoration: underline">Objective-C:</span>
+
 ```
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
     
     [Pollfish initAtPosition: PollFishPositionMiddleRight
                  withPadding: 0
              andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
                andDebuggable: false 
                andCustomMode: false];
+}
+```
+
+<span style="text-decoration: underline">Swift:</span>
+ 
+```
+override func viewWillAppear(animated: Bool) 
+{
+    super.viewWillAppear(animated)
+    
+    Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
+       			    withPadding: 0, 
+       		    andDeveloperKey: "2ae349ab-30b8-4100-bc4d-b33b82e76519" , 
+       		      andDebuggable: false, 
+       		      andCustomMode: false)
 }
 ```
 
@@ -327,6 +344,8 @@ If you still have questions regarding how to handle view hierarchy changes have 
 
 If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function within the SDK and receive it back with Server to Server, survey completed postback call you can use:  
 
+<span style="text-decoration: underline">Objective-C:</span>
+
 ```
  [Pollfish initAtPosition: (PollfishPosition)
               withPadding: (int)
@@ -336,6 +355,19 @@ If you need to pass a custom parameter (for example a UUID as registered in your
 	       andRequestUUID: (NSString *)];
 ```
 
+<span style="text-decoration: underline">Swift:</span>
+
+```
+func applicationDidBecomeActive(application: UIApplication) {
+
+   Pollfish.initAtPosition( pos: Int32, 
+       			    withPadding: Int32, 
+       		    andDeveloperKey: String!, 
+       		      andDebuggable: Bool, 
+       		      andCustomMode: Bool
+       		      andRequestUUID: String!)
+}
+```
 
 ## Update your Privacy Policy
 
