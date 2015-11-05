@@ -120,7 +120,7 @@ You have to include Pollfish library headers in every file that you will use Pol
 ![](/homeassets/images/documentation/NewFile.png)
 
 
-<img src="https://staging.pollfish.com/homeassets/images/documentation/NewFile.png" width="50">
+<img src="/homeassets/images/documentation/NewFile.png" width="120">
 
 2\. Choose iOS->Source->Header File->Next
 
