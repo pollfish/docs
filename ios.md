@@ -561,6 +561,9 @@ You can be notified when a survey is received via the iOS Notification Center. N
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyReceived) name:@"PollfishSurveyReceived" object:nil];
+```
+
+```
 
 - (void)surveyReceived
 {
@@ -571,22 +574,20 @@ You can be notified when a survey is received via the iOS Notification Center. N
 <span style="text-decoration: underline">Swift:</span>
 
 ```
- NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishReceived:" , name:
+ NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishReceived" , name:
             "PollfishSurveyReceived", object: nil)
+```
 
-func pollfishReceived(notification:NSNotification) {
-     
-  let tmp : [NSObject : AnyObject] = notification.userInfo!
-        
-  let playfulSurvey = tmp["playfulSurvey"]! as! Bool
-  let surveyPrice = tmp["surveyPrice"]!
-        
-  print("pollfishReceived - Playful Survey: \(playfulSurvey)  and survey Price: \(surveyPrice)")
-
+```
+func pollfishReceived() 
+{
+   print("A survey was received!");
 }
 ```
 
 You can also get informed about the price and type of survey (playful or not) that was received by listening and reading the relevant notification object. Price is shown in USD (estimated based on daily exchange currency).
+
+<span style="text-decoration: underline">Objective-C:</span>
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishReceived:) name:@"PollfishSurveyReceived" object:nil];
@@ -602,9 +603,29 @@ You can also get informed about the price and type of survey (playful or not) th
 }
 ```
 
+<span style="text-decoration: underline">Swift:</span>
+
+```
+ NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishReceived:" , name:
+            "PollfishSurveyReceived", object: nil)
+```
+
+```
+func pollfishReceived(notification:NSNotification) {
+     
+  let tmp : [NSObject : AnyObject] = notification.userInfo!
+        
+  let playfulSurvey = tmp["playfulSurvey"]! as! Bool
+  let surveyPrice = tmp["surveyPrice"]!
+        
+  print("Pollfish Survey Received - Playful Survey : \(playfulSurvey)  with survey price: \(surveyPrice)")
+
+}
+```
 
 ### Get notified when survey is completed (optional)
 
+<span style="text-decoration: underline">Objective-C:</span>
 
 ```
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyCompleted) name:@"PollfishSurveyCompleted" object:nil];
@@ -614,6 +635,57 @@ You can also get informed about the price and type of survey (playful or not) th
 - (void)surveyCompleted
 {
     NSLog(@"Pollfish Survey Completed!");
+}
+```
+<span style="text-decoration: underline">Swift:</span>
+
+```
+ NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishCompleted" , name:
+            "PollfishSurveyCompleted", object: nil)
+```
+
+```
+func pollfishCompleted() 
+{
+   print("Pollfish Survey Completed!");
+}
+```
+
+You can also get informed about the price and type of survey (playful or not) that was completed by listening and reading the relevant notification object. Price is shown in USD (estimated based on daily exchange currency).
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishCompleted:) name:@"PollfishSurveyCompleted" object:nil];
+```
+
+```
+- (void)pollfishCompleted:(NSNotification *)notification
+{
+    BOOL playfulSurvey = [[[notification userInfo] valueForKey:@"playfulSurvey"] boolValue];
+    int surveyPrice = [[[notification userInfo] valueForKey:@"surveyPrice"] intValue];
+    
+    NSLog(@"Pollfish Survey Completed - Playful Survey: %@ with survey price: %d" , playfulSurvey?@"YES":@"NO", surveyPrice);
+}
+```
+
+<span style="text-decoration: underline">Swift:</span>
+
+```
+ NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishCompleted:" , name:
+            "PollfishSurveyCompleted", object: nil)
+```
+
+```
+func pollfishCompleted(notification:NSNotification) {
+     
+  let tmp : [NSObject : AnyObject] = notification.userInfo!
+        
+  let playfulSurvey = tmp["playfulSurvey"]! as! Bool
+  let surveyPrice = tmp["surveyPrice"]!
+        
+  print("Pollfish Survey Completed - Playful Survey : \(playfulSurvey)  with survey price: \(surveyPrice)")
+
 }
 ```
 
