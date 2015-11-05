@@ -101,7 +101,7 @@ Run 'pod install' on the command line to install the Pollfish cocoapod.
 
 
 
-#### Import Pollfish header
+### Import Pollfish header
 
 You have to include Pollfish library headers in every file that you will use Pollfish.  
 
@@ -111,7 +111,7 @@ You have to include Pollfish library headers in every file that you will use Pol
 
 
 
-#### if you are using Pollfish in a Swift project follow the next steps to import Pollfish
+### if you are using Pollfish in a Swift project follow the next steps to import Pollfish
 
  <span style="text-decoration: underline">Add a Bridging-Header file:</span>
  
@@ -175,7 +175,7 @@ func applicationDidBecomeActive(application: UIApplication) {
 ```
 
 
-#### Pollfish init function takes the following parameters:
+### Pollfish init function takes the following parameters:
 
 **1\. initAtPosition** (PollfishPosition) - The Position where you wish to place the Pollfish indicator. There are six different options:  
 
