@@ -499,11 +499,21 @@ You can set attributes that you receive from your app regarding a user in order 
 
 Create a UserAttributesDictionary object and then you can use that object to set different user attributes by calling the following function:  
 
+<span style="text-decoration: underline">Objective-C:</span>
+
 ```
 [Pollfish setAttributeDictionary:(UserAttributesDictionary *) dict];
 ```
 
+<span style="text-decoration: underline">Swift:</span>
+
+```
+Pollfish.setAttributeDictionary(dict: NSMutableDictionary!)
+```
+
 For example:
+
+<span style="text-decoration: underline">Objective-C:</span>
 
 ```
 UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary alloc] init];
@@ -520,6 +530,22 @@ UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary 
 [Pollfish setAttributeDictionary:userAttributesDictionary];
 ```
 
+<span style="text-decoration: underline">Swift:</span>
+
+```
+ let userAttributesDictionary:UserAttributesDictionary = [:]
+        
+ userAttributesDictionary.setAge(AGE(_36))
+ userAttributesDictionary.setGender(GENDER(MALE))
+ userAttributesDictionary.setAgeGroup(AGE_GROUP(_35_44))
+ userAttributesDictionary.setFacebookId("facebookId")
+ userAttributesDictionary.setTwitterId("twitterId")
+ userAttributesDictionary.setMaritalStatus(MARITAL_STATUS(DIVORCED))
+        
+ userAttributesDictionary.setCustomAtributesWithKey("PARAM_KEY" , andAttrValue: "PARAM_VALUE")
+        
+ Pollfish.setAttributeDictionary(userAttributesDictionary)
+```
 
 ## Implement Pollfish event listeners
 
@@ -530,14 +556,33 @@ UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary 
 
 You can be notified when a survey is received via the iOS Notification Center. Note that the observer should be already registered when a survey is received in order to run the selector.  
 
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyReceived) name:@"PollfishSurveyReceived" object:nil];
-```
+
+<span style="text-decoration: underline">Objective-C:</span>
 
 ```
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyReceived) name:@"PollfishSurveyReceived" object:nil];
+
 - (void)surveyReceived
 {
     NSLog(@"A survey was received!");
+}
+```
+
+<span style="text-decoration: underline">Swift:</span>
+
+```
+ NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishReceived:" , name:
+            "PollfishSurveyReceived", object: nil)
+
+func pollfishReceived(notification:NSNotification) {
+     
+  let tmp : [NSObject : AnyObject] = notification.userInfo!
+        
+  let playfulSurvey = tmp["playfulSurvey"]! as! Bool
+  let surveyPrice = tmp["surveyPrice"]!
+        
+  print("pollfishReceived - Playful Survey: \(playfulSurvey)  and survey Price: \(surveyPrice)")
+
 }
 ```
 
