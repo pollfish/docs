@@ -111,7 +111,7 @@ You have to include Pollfish library headers in every file that you will use Pol
 
 
 
-### if you are using Pollfish in a Swift project follow the next steps to import Pollfish
+### or if you are using Pollfish in a Swift project follow the next steps to import Pollfish
 
  <span style="text-decoration: underline">Add a Bridging-Header file:</span>
  
