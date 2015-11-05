@@ -170,8 +170,9 @@ func applicationDidBecomeActive(application: UIApplication) {
        		    andDeveloperKey: String!, 
        		      andDebuggable: Bool, 
        		      andCustomMode: Bool)
-    }
+}
 ```
+
 
 #### Pollfish init function takes the following parameters:
 
@@ -209,12 +210,27 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 Below you can see an example of the init function:  
 
+<span style="text-decoration: underline">Objective-C:</span>
+
 ```
 [Pollfish initAtPosition: PollFishPositionMiddleRight
              withPadding: 0
 	     andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
            andDebuggable: false 
            andCustomMode: false];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+ 
+```
+func applicationDidBecomeActive(application: UIApplication) {
+
+   Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
+       			    withPadding: 0, 
+       		    andDeveloperKey: "2ae349ab-30b8-4100-bc4d-b33b82e76519" , 
+       		      andDebuggable: false, 
+       		      andCustomMode: false)
+}
 ```
 
 ### Destroying Pollfish
