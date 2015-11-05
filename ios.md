@@ -742,8 +742,7 @@ You can be notified when a survey is not available for a user via the iOS Notifi
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishNotAvailable" , name:
-            "PollfishSurveyNotAvailable", object: nil)
+NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishNotAvailable" , name:"PollfishSurveyNotAvailable", object: nil)
 ```
 
 ```
@@ -774,8 +773,7 @@ You can be notified when a user opens Pollfish survey panel via the iOS Notifica
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishOpened" , name:
-            "PollfishOpened", object: nil)
+NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishOpened" , name:"PollfishOpened", object: nil)
 ```
 
 ```
@@ -806,8 +804,7 @@ You can be notified when a user closes Pollfish survey panel via the iOS Notific
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishClosed" , name:
-            "PollfishClosed", object: nil)
+NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishClosed" , name:"PollfishClosed", object: nil)
 ```
 
 ```
