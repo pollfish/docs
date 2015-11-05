@@ -117,16 +117,16 @@ You have to include Pollfish library headers in every file that you will use Pol
  
 1\. Right-click your project and choose “New File…” 
 
-<img src="/homeassets/images/documentation/NewFile.png" width="160">
+<img src="/homeassets/images/documentation/NewFile.png" width="170">
 
 2\. Choose iOS->Source->Header File->Next
 
-<img src="/homeassets/images/documentation/NewHeaderFile.png" width="140">
+<img src="/homeassets/images/documentation/NewHeaderFile.png" width="170">
 
 
 3\. Name new file "\<Your-Product\>-Bridging-Header.h”
 
-![](/homeassets/images/documentation/BridgingHeader.png)
+<img src="/homeassets/images/documentation/BridgingHeader.png" width="150">
 
 where <Your-Product> must be your "Product Name" as listed in your "Build Settings"
 
