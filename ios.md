@@ -225,7 +225,7 @@ Below you can see an example of the init function:
 ```
 func applicationDidBecomeActive(application: UIApplication) {
 
-   Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
+ Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
        			    withPadding: 0, 
        		    andDeveloperKey: "2ae349ab-30b8-4100-bc4d-b33b82e76519" , 
        		      andDebuggable: false, 
@@ -237,11 +237,23 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 You have to release all the resources Pollfish kept during the termination of your application. This should be done in your application’s delegate applicationWillTerminate: method.  
 
+<span style="text-decoration: underline">Objective-C:</span>
+
 ```
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // ...
     [Pollfish destroy];
+}
+```
+
+<span style="text-decoration: underline">Swift:</span>
+ 
+```
+func applicationWillTerminate(application: UIApplication) 
+{
+     //
+     Pollfish.destroy()
 }
 ```
 
