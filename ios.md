@@ -711,12 +711,12 @@ You can be notified when a user is not eligible for a Pollfish survey after acce
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishUsernotEligible" , name:
-            "PollfishUserNotEligible", object: nil)
+NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishUsernotEligible" , name:"PollfishUserNotEligible", object: nil)
 ```
 
 ```
-func pollfishUsernotEligible() {
+func pollfishUsernotEligible() 
+{
      print("Pollfish User Not Eligible")
 }
 ```
