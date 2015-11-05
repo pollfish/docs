@@ -565,7 +565,6 @@ You can be notified when a survey is received via the iOS Notification Center. N
 ```
 
 ```
-
 - (void)surveyReceived
 {
     NSLog(@"A survey was received!");
