@@ -117,24 +117,24 @@ You have to include Pollfish library headers in every file that you will use Pol
  
 1\. Right-click your project and choose “New File…” 
 
-<img src="/homeassets/images/documentation/NewFile.png" width="170">
+<img src="/homeassets/images/documentation/NewFile.png" width="180">
 
 2\. Choose iOS->Source->Header File->Next
 
-<img src="/homeassets/images/documentation/NewHeaderFile.png" width="170">
+<img src="/homeassets/images/documentation/NewHeaderFile.png" width="180">
 
 
 3\. Name new file "\<Your-Product\>-Bridging-Header.h”
 
-<img src="/homeassets/images/documentation/BridgingHeader.png" width="150">
+<img src="/homeassets/images/documentation/BridgingHeader.png" width="180">
 
 where <Your-Product> must be your "Product Name" as listed in your "Build Settings"
 
-![](/homeassets/images/documentation/ProductName.png)
+<img src="/homeassets/images/documentation/ProductName.png" width="180">
 
 4\. Declare your new Bridging Header File path in your project's "Build Settings" in row "Objective-C "Bridging Header" section
 
-![](/homeassets/images/documentation/Bridging.png)
+<img src="/homeassets/images/documentation/Bridging.png" width="180">
 
 5\. Import in your Bridging Header file Pollfish header files:
 
