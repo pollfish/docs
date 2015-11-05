@@ -103,6 +103,13 @@ Run 'pod install' on the command line to install the Pollfish cocoapod.
 
 You have to include Pollfish library headers in every file that you will use Pollfish.  
 
+#### or if you are using Pollfish in a Swift project
+
+ Add a Bridging-Header file:
+ 
+1\. Right-click your project and choose “New File…” 
+
+
 
 ```
 #import <Pollfish/Pollfish.h>
