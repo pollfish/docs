@@ -63,6 +63,8 @@ pod 'Pollfish'
 - iOS version 6.0 +  
 - Xcode 4.5 or later
 
+You can check our Sample Projects here. https://github.com/pollfish/ios-sdk-pollfish
+
 ## Steps Analytically
 
 ### 1\. Download Pollfish iOS SDK and unzip it
