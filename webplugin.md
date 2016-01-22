@@ -84,7 +84,7 @@ Pollfish Webplugin provides some callback functions to call when specific action
 4.  <span class="params">surveyCompletedCallback</span>  
     Called when the user finishes the survey
 5.  <span class="params">surveyAvailable</span>  
-    Called when there is an availble survey for the user. Also contains revenue and format information
+    Called when there is an availble survey for the user. Also contains revenue and survey format information
 
 Below you can see an example of the pollfishConfig object with all possible callbacks:  
 
