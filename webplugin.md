@@ -117,8 +117,8 @@ function customCloseAndNoShow(){
   console.log("close and hide the indicator");
 }
 
-function surveyAvailable(){
-  console.log("there is an available survey");
+function surveyAvailable(data){
+  console.log("pollfish survey is available with revenue: " + data.revenue + " and survey format playful: " + data.playful);
 }
 ```
 
