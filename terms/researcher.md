@@ -1,6 +1,6 @@
 <div id="templateRightMenu">
 
-## RESEARCHER TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY
+<h2 class="static-page-title">RESEARCHER TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
 <div class="updatedOn">Last updated: 07/21/2015</div>
 
