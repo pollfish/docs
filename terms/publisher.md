@@ -1,8 +1,10 @@
 <div>
 
-## PUBLISHER TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY
+<h2 class="static-page-title">PUBLISHER TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
 <div class="updatedOn">Last updated: 07/21/2015</div>
+
+<br />
 
 Pollfish Inc. ("Pollfish" or "we" "our" or "us") owns or controls Pollfish services, and provides access to the Pollfish.com website, at the url: www.pollfish.com and all subdomains under the pollfish.com domain and related properties (the "Website"), software, data and materials accessed via the Website (the "Services" or "Properties").
 
