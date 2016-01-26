@@ -3,6 +3,8 @@
 
 <div class="updatedOn">Last updated: 07/21/2015</div>
 
+<br />
+
 <div id="templateRightMenuBody">
 
 POLLFISH is committed to preserving your privacy. Please read the following privacy policy to understand how we use and protect the information obtained from those participating in our surveys (the “surveys”).
