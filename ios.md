@@ -1,4 +1,4 @@
-<div class="changelog" data-version="4.1.1">
+<div class="changelog" data-version="4.1.2">
 v4.1.2
 - Fixed ARM64 issue
 
