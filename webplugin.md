@@ -93,12 +93,12 @@ var pollfishConfig = {
   api_key: "api_key_goes_here",
   indicator_position: "BOTTOM_RIGHT",
   debug: true,
-  uuid: "string_uuid"
-  closeCallback: surveyClosed,
+  uuid: "string_uuid",
+  closeCallback: customSurveyClosed,
   userNotEligibleCallback: customUserNotEligible,
   closeAndNoShowCallback: customCloseAndNoShow,
   surveyCompletedCallback: customSurveyFinished,
-  surveyAvailable: surveyAvailable
+  surveyAvailable: customSurveyAvailable
 };
 
 function customSurveyClosed(){
@@ -117,7 +117,7 @@ function customCloseAndNoShow(){
   console.log("close and hide the indicator");
 }
 
-function surveyAvailable(data){
+function customSurveyAvailable(data){
   console.log("pollfish survey is available with revenue: " + data.revenue + " and survey format playful: " + data.playful);
 }
 ```
