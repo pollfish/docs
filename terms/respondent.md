@@ -53,7 +53,9 @@ When a user connects to a mobile application, which cooperates with Pollfish, a 
     20.  Pollfish api key for the application used
     21.  If the application used runs the sdk version of google play or universal
     22.  User’s ip address (retrieved when connecting to the server)
-*   #### For IoS:
+    
+    
+*   #### For iOS:
 
     1.  The Advertising Identifier
     2.  Device Description
