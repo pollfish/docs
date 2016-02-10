@@ -78,7 +78,7 @@ o	invades privacy of the others; f. competes with Pollfish’s activity and inte
 
 If you are a website owner you should update your website’s Privacy Policy by including in it the following paragraph:
 
-    “This website uses Pollfish web plugin. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones and website owners in order to have access to users of such applications/websites and address survey questionnaires to them. This website uses and enables Pollfish cookies. When a user connects to this website, Pollfish detects whether the user is eligible for a survey. Data collected by Pollfish will be associated with your answers to the questionnaires whenever Pollfish sents such questionnaires to eligible users. For a full list of data received by Pollfish through this website, please read carefully Pollfish respondent terms located at https://www.pollfish.com/terms/respondent. By using this website you accept this privacy policy document and you hereby give your explicit consent for the placement of a Pollfish cookie in your system and the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link https://www.pollfish.com/terms/respondent. We once more invite you to check the respondent’s terms of use, if you wish to have more detailed view of the way Pollfish works."  
+    “This website uses Pollfish web plugin. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones and website owners in order to have access to users of such applications/websites and address survey questionnaires to them. This website uses and enables Pollfish cookies. When a user connects to this website, Pollfish detects whether the user is eligible for a survey. Data collected by Pollfish will be associated with your answers to the questionnaires whenever Pollfish sents such questionnaires to eligible users. For a full list of data received by Pollfish through this website, please read carefully Pollfish respondent terms located at https://www.pollfish.com/terms/respondent. By using this website you accept this privacy policy document and you hereby give your explicit consent for the placement of a Pollfish cookie in your system and the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link https://www.pollfish.com/terms/respondent. We once more invite you to check the respondent’s terms of use, if you wish to have more detailed view of the way Pollfish works.
 
     APPLE, GOOGLE AND AMAZON ARE NOT A SPONSOR NOR ARE INVOLVED IN ANY WAY IN THIS CONTEST/DRAW. NO APPLE PRODUCTS ARE BEING USED AS PRIZES.”
 
@@ -111,15 +111,11 @@ In case a payment is owed to the developers, the developers get paid on a monthl
 Pollfish, at the request of such third-party entity which shall be responsible to effect payments, may disclose information about you to such third party or may request you to provide all further necessary identifying information about you either to Pollfish or directly to such third-party entity, for purposes of compliance with National, State or Federal laws (e.g. laws concerning foreign asset controls, or other similar procedures prescribed by law). By accepting this document you specifically agree to the above and accept that you shall fully cooperate with Pollfish or such third-party entity, for the reasons stated above.
 
 Pollfish, may from time to time, request from you (the developer) to provide information about your app/website, in order for Pollfish to be able to verify compliance of your app with the terms and conditions of this agreement and in order to verify the sincerity of your registered info and actual operation of your registered app/website. In case you fail to deliver the verification information requested by Pollfish, Pollfish shall have the right to withhold all due payments until the requested verification information is provided by you.
-
-Payments are effected within a two weeks time-frame (Net14), commencing always after the 1st day of each calendar month. If the amount to be paid is less than $30, the payment will be withheld and transferred to the next month, until the amount reaches or exceeds the amount of $30\. You, the developer, are solely responsible for the payment of any banking, commission and transaction costs. Any additional credit or debit charges that may incur due to the transaction will be paid by you and not by Pollfish The developer is responsible for paying all relevant taxes or fees that may arise from this payment and transaction. Pricing, timing and methods of payments may change at any time without prior notice. However, such change will not affect the minimum price of ongoing services; it will apply from the next survey.
+Payments are effected within a two weeks time-frame (Net14), commencing always after the 1st day of each calendar month. If the amount to be paid is less than $30, the payment will be withheld and transferred to the next month, until the amount reaches or exceeds the amount of $30. You, the developer, are solely responsible for the payment of any banking, commission and transaction costs. Any additional credit or debit charges that may incur due to the transaction will be paid by you and not by Pollfish The developer is responsible for paying all relevant taxes or fees that may arise from this payment and transaction. Pricing, timing and methods of payments may change at any time without prior notice. However, such change will not affect the minimum price of ongoing services; it will apply from the next survey.
 
 Publishers or Networks that use Pollfish with an API integration and not with the standard SDK integration will be paid in Net40.
-
 All Referral prices are displayed in USD and may be found in https://www.pollfish.com/referral
-
 Polllfish Inc. is a registered US company. All publisher payments occur in US currency.
-
 Notifications/listeners fired from the SDK within the apps to inform the user about the money to be earned from a survey are delivered in USD.
 
 Pollfish seeks long term relationships with app developers. Consequently, if you chose to delete or otherwise stop the operation of your registered app, you agree and acknowledge that Pollfish shall not proceed to any payment of fees referring to the time period between the last payment you received from Pollfish and the date of deletion of your app.
@@ -139,7 +135,6 @@ We also reserve the right to disclose your information, including personal infor
 Pollfish complies with applicable Data Protection legislation and cooperates with reliable cloud hosting service providers. Pollfish cooperates with such cloud hosting providers who are either located within the E.U. (and therefore are obliged to comply with all EU Data Protection Laws and Regulations) or may be located in the US. In the latter case, US located cloud hosting providers are selected by POLLFISH, on grounds of US providers being certified members of the U.S. - EU Safe Harbor companies (https://safeharbor.export.gov/list.aspx).
 
 You can update your registration information at any time. To cancel or delete your account you should contact Pollfish team with your request at info@pollfish.com. You can enable or disable Pollfish surveys in your apps/websites.
-
 Pollfish may use from time to time at its own discretion, screenshots from a developer's app/website to expose and market the different ways of Pollfish integration out there.
 
 ### 7\. Termination
@@ -153,7 +148,6 @@ You hereby indemnify and hold Pollfish harmless and agree to defend against any 
 ### 9\. Disclaimer
 
 Without limitation of anything else set forth in the present agreement you understand and agree that Pollfish further limits its liability in connection with your use of its properties as set forth below:
-
 Pollfish Properties, including, without limitation, all Content, Pollfish SDK, the site, the Platform, the panel, the service and the functions made available on or accessed through or sent from the website, are provided "AS IS," "as available, " and "with all faults" without warranties implied or statutory including without limitation warranties of merchantability, fitness for a particular use and non infringement. Pollfish and its parents, subsidiaries and affiliates make no representation or warranties or endorsements of any kind whatsoever (express or implied) about:
 
 *   The Pollfish SDK
@@ -171,6 +165,7 @@ Pollfish makes it best efforts to check the content of the Surveys created by th
 
 Pollfish is not responsible for the incompliances of the application where Pollfish SDK has been registered with Google Android and Apple iOS Policies and the Laws.
 
+
 ### 10\. Limitation of liability
 
 Your access to and use the Services is at your own risk. If you are dissatisfied with the Pollfish SDK, site, platform, panel and service your sole and exclusive remedy is to discontinue using Pollfish SKD, site, platform, software, panel and service. Pollfish’s total cumulative liability to you or any other party for any loss or damages resulting from claims, demands or actions arising out of or relating to this agreement will not exceed $100 (USD).
@@ -185,6 +180,6 @@ The past, present and future content of the Properties, including without limita
 
 ### 13\. Governing Law and Miscellaneous
 
-The present Agreement and its interpretation shall be governed by and construed in accordance with the US Law and the parties consent to the exclusive jurisdiction of the court in the State of Utah. In case any of the provisions of this Terms of Use is found to be invalid, it shall not affect the validity of the other provisions that will remain in force.
+The present Agreement and its interpretation shall be governed by and construed in accordance with the US Law and the parties consent to the exclusive jurisdiction of the courts of the State of Utah. In case any of the provisions of this Terms of Use is found to be invalid, it shall not affect the validity of the other provisions that will remain in force.
 
 </div>
