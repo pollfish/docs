@@ -184,7 +184,7 @@ Pollfish reserves the right to modify the terms and conditions of the present Ag
 
 The present Agreement and its interpretation shall be governed by and construed in accordance with the US Law and the parties consent to the exclusive jurisdiction of the court of the State of Utah. In case any of the provisions of this Terms of Use is found to be invalid, it shall not affect the validity of the other provisions that will remain in force.
 
-### POLLFISH Contact Information
+### Pollfish Contact Information
 
 Please contact us with any questions or comments about this Policy, your personal information, our third party disclosure practices, or your consent choices by email: info@pollfish.com
 
