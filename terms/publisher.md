@@ -2,7 +2,7 @@
 
 <h2 class="static-page-title">PUBLISHER TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 07/21/2015</div>
+<div class="updatedOn">Last updated: 02/08/2016</div>
 
 <br />
 
@@ -10,7 +10,7 @@ Pollfish Inc. ("Pollfish" or "we" "our" or "us") owns or controls Pollfish servi
 
 Pollfish is an on-line survey platform (“The Service”), through which Researchers may conduct surveys. By registering to Pollfish, the researcher has the opportunity to create a questionnaire (or ask Pollfish to create a questionnaire for him based on specific data), and address the questionnaire to the specific public he targets. Surveys maybe conducted in a white label basis from time to time according to survey creator needs. Pollfish collaborates with Publishers of applications for smartphones and/or Website owners ((collectively hereinafter referred to as Publishers or “you”) in order to have access to users of these applications and websites. By integrating Pollfish SDK/libraries to their platform/websites and thus exposing their users to Pollfish surveys, developers gain revenue for each completed survey. Pollfish does not charge developers, who decide to integrate Pollfish SDK/libraries in their applications, with any costs.
 
-Bear in mind that in order to access the above-mentioned Pollfish Service you need to REGISTER.
+<b>Bear in mind that in order to access the above-mentioned Pollfish Service you need to REGISTER.</b>
 
 In order to use our services, you need to conform to and accept the present terms of Service Agreement (“the Agreement”) otherwise you will not have access to our Services.
 
@@ -19,6 +19,8 @@ Pollfish reserves the right to modify the terms and conditions of the present Ag
 Please note that in certain cases and for chosen partners (e.g. big scale developer entities) Pollfish offers API integration options, under separate commercial agreements concluded between such partners and Pollfish. The present terms and conditions, however apply to these agreements unless otherwise agreed between Pollfish and the abovementioned business partners. In such cases, payment to partners shall be effected within a 40day time-frame (Net40), commencing always after the 1st day of each calendar month, as indicated in the section “Payments” below.
 
 Finally, Pollfish has a referral program in place, through which, a developer may introduce Pollfish to other developers. By using the Pollfish referral system, a developer may gain additional earnings as indicated in [https://www.pollfish.com/referral](https://www.pollfish.com/referral). For earnings from referrals the same rules apply as described in the section “Payments” below.
+
+
 
 ### 1\. Registration
 
