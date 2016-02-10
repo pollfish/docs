@@ -76,7 +76,7 @@ o	invades privacy of the others; f. competes with Pollfish’s activity and inte
 
     APPLE, GOOGLE AND AMAZON ARE NOT A SPONSOR NOR ARE INVOLVED IN ANY WAY IN THIS CONTEST/DRAW. NO APPLE PRODUCTS ARE BEING USED AS PRIZES.”
 
-    If you are a website owner you should update your website’s Privacy Policy by including in it the following paragraph:
+If you are a website owner you should update your website’s Privacy Policy by including in it the following paragraph:
 
     “This website uses Pollfish web plugin. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones and website owners in order to have access to users of such applications/websites and address survey questionnaires to them. This website uses and enables Pollfish cookies. When a user connects to this website, Pollfish detects whether the user is eligible for a survey. Data collected by Pollfish will be associated with your answers to the questionnaires whenever Pollfish sents such questionnaires to eligible users. For a full list of data received by Pollfish through this website, please read carefully Pollfish respondent terms located at https://www.pollfish.com/terms/respondent. By using this website you accept this privacy policy document and you hereby give your explicit consent for the placement of a Pollfish cookie in your system and the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link https://www.pollfish.com/terms/respondent. We once more invite you to check the respondent’s terms of use, if you wish to have more detailed view of the way Pollfish works."  
 
