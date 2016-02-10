@@ -133,9 +133,9 @@ Pollfish provides you with a set of tools in order for you to be able to control
 
 You can at all times opt out from interest based advertising provided by advertising companies which may include Pollfish clients and may be members of the relevant associations by using the following opt out links: 
 
-[http://www.aboutads.info/choices/](http://www.aboutads.info/choices/)
-[http://www.networkadvertising.org/choices/](http://www.networkadvertising.org/choices/)
-[http://www.youronlinechoices.eu/](http://www.youronlinechoices.eu/)
+* [http://www.aboutads.info/choices/](http://www.aboutads.info/choices/)
+* [http://www.networkadvertising.org/choices/](http://www.networkadvertising.org/choices/)
+* [http://www.youronlinechoices.eu/](http://www.youronlinechoices.eu/)
 
 <b>Delete Cookies (in the web environment):</b>
 
