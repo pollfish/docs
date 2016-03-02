@@ -20,7 +20,7 @@ Pollfish is an on-line survey platform (“The Service”), through which, anyon
 POLLFISH collects and processes three kinds of data and information:
 <br /><br />
 #### a) “RESPONSE META-DATA”
-<br />
+<br /><br />
 ##### a1) FOR RESPONDENTS REACHED VIA MOBILE PHONE:
 <br />
 Data received automatically by POLLFISH when a user connects to the app with which POLLFISH’s software interoperates (“response meta-data”).
