@@ -3,21 +3,21 @@
 
 <div class="updatedOn">Last updated: 07/21/2015</div>
 
-<br />
+<br /><br />
 
 <div id="templateRightMenuBody">
 
 POLLFISH is committed to preserving your privacy. Please read the following privacy policy to understand how we use and protect the information obtained from those participating in our surveys (the “surveys”).
-
+<br /><br />
 ### What is POLLFISH and how does it Work?
-<br />
+<br /><br />
 <b>Unlike other Services of this kind, POLLFISH provides respondents of our surveys (“users” or “survey respondents”) a detailed account of how POLLFISH works and what sorts of user related data and Info POLLFISH collects, stores and processes. POLLFISH respects your Privacy and is committed to building a relationship of trust and full transparency between POLLFISH and Respondents of its surveys.</b>
-<br />
+<br /><br />
 Pollfish is an on-line survey platform (“The Service”), through which, anyone (referred to as “Researcher”) may conduct surveys. By registering to Pollfish, the researcher has the opportunity to create a questionnaire (or ask Pollfish to create a questionnaire for him based on specific data), and address the questionnaire to the specific public he targets. Pollfish collaborates with Publishers of applications for smartphones as well as with owners of Websites, in order to have access to users of such applications and/or visitors of Websites and delivers to the researchers the answers to their questionnaires. Respondents of surveys may enter a draw for a prize when completing a survey (if and whenever such a Prize is set by Pollfish or a Researcher).
-<br />
+<br /><br />
 
 ### What user or user related Data and Info do we collect and/or process?
-
+<br /><br />
 POLLFISH collects and processes three kinds of data and information:
 
 #### a) “RESPONSE META-DATA”
