@@ -3,13 +3,11 @@
 
 <div class="updatedOn">Last updated: 07/21/2015</div>
 
-<br /><br />
-
 <div id="templateRightMenuBody">
 
 POLLFISH is committed to preserving your privacy. Please read the following privacy policy to understand how we use and protect the information obtained from those participating in our surveys (the “surveys”).
 <br /><br />
-What is POLLFISH and how does it Work?
+### What is POLLFISH and how does it Work?
 <br /><br />
 <b>Unlike other Services of this kind, POLLFISH provides respondents of our surveys (“users” or “survey respondents”) a detailed account of how POLLFISH works and what sorts of user related data and Info POLLFISH collects, stores and processes. POLLFISH respects your Privacy and is committed to building a relationship of trust and full transparency between POLLFISH and Respondents of its surveys.</b>
 <br /><br />
