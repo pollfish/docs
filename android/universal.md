@@ -56,8 +56,8 @@ Pollfish Android SDK works with Android 10 (2.3.3) and above.
 
 You can use Pollfish either in Developer or in Release mode.  
 
-*   Developer mode is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
-*   Release mode is the mode to be used for a released app in any app store(start receiving paid surveys).
+*   **Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
+*   **Release mode** is the mode to be used for a released app in any app store(start receiving paid surveys).
 
 If you **do not set the debuggable parameter** in your AndroidManifest.xml file Pollfish runs in developer mode by default. It will turn to Release mode automatically when you sign your apk with a release key.  
 
