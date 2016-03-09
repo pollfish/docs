@@ -163,8 +163,9 @@ ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 
 Name | Description
 ------------ | -------------
-indicatorPosition(int) | Set indicator position
-requestUUID | Pass custom request UUID to receive on s2s callbacks
+.indicatorPosition(int position) | Sets the Position where you wish to place the Pollfish indicator.There are six different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
+.requestUUID(String requestUUID) | Sets a unique id to identify a user and be passed through server-to-server callbacks
+.indicatorPosition(int position) | Set indicator position
 
 Once you created ParamsBuilder instance then you can call Pollfish initWith() in **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
 
