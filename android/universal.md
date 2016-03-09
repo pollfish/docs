@@ -86,7 +86,7 @@ dependencies {
 	 compile 'com.google.android.gms:play-services-ads:8.3.0'
 }
 ```
-else since Google Play Services 8.4.* you can use only Base Client library. For example:
+otherwise since Google Play Services 8.4.* you can use only Google Play Services Base Client library. For example:
 
 ```java
 dependencies {
@@ -116,7 +116,7 @@ Then in your project build.gradle (not the top level one, the one under 'app') a
 
 ```java
 dependencies {
-    compile project(':pollfish')
+    compile project(':pollfish-universal-4.2.0')
 }
 ```
 
@@ -134,6 +134,7 @@ Import Pollfish classes with the following lines at the top of your Activity’s
 
 ```java
 import com.pollfish.main.PollFish;
+import com.pollfish.main.PollFish.ParamsBuilder;
 import com.pollfish.constants.Position;
 ```
 
@@ -157,7 +158,7 @@ You can easily initialize Pollfish. Add the init statement in the onResume() fun
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 
-PollFish.initWith(Activity activity, paramsBuilder);
+PollFish.initWith(Activity activity, ParamsBuilder paramsBuilder);
 ```
 
 Below you can see an example of the init function:
