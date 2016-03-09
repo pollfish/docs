@@ -163,9 +163,11 @@ ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 
 Name | Description
 ------------ | -------------
-.indicatorPosition(int position) | Sets the Position where you wish to place the Pollfish indicator.There are six different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
+.indicatorPosition(int position) | Sets the Position where you wish to place the Pollfish indicator.
 .requestUUID(String requestUUID) | Sets a unique id to identify a user and be passed through server-to-server callbacks
-.indicatorPosition(int position) | Set indicator position
+.indicatorPadding(int padding) | Sets padding (in dp) from top or bottom according to Position of the indicator
+.userLayout(ViewGroup userLayout) | Sets User View layout that Pollfish surveys will be rendered above it
+
 
 Once you created ParamsBuilder instance then you can call Pollfish initWith() in **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
 
