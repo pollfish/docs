@@ -135,7 +135,6 @@ Import Pollfish classes with the following lines at the top of your Activity’s
 import com.pollfish.main.PollFish;
 import com.pollfish.main.PollFish.ParamsBuilder;
 import com.pollfish.constants.Position;
-
 ```
 
 ### 6. Add permission to AndroidManifest.xml
@@ -149,6 +148,18 @@ You should also add the following permission in your AndroidManifest.xml
 Pollfish uses this permission to track and send the survey responses.
 
 ## Initialize Pollfish
+
+You can easily set initialize Pollfish.
+
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
+
+PollFish.initWith(Activity activity, paramsBuilder);
+```
+
+
+
+
 
 ### init Vs customInit
 
