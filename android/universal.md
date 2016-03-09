@@ -93,7 +93,6 @@ dependencies {
 	 compile 'com.google.android.gms:play-services-base:8.4.0'
 }
 ```
-*Be careful - Pollfish does not work with Google Play Services for Froyo
 
 ## Integrate Pollfish SDK
 
