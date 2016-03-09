@@ -1,12 +1,12 @@
 <div class="changelog" data-version="4.2.0">
 v4.2.0
 
-- added support for beacon surveys
-- added video, rating, slider, open ended, open ended numerical and description questions support
 - new init function structure
 - new builder pattern approach on init function
+- added support for beacon surveys
+- added video, rating, slider, open ended, open ended numerical and description questions support
 - deprecated old init methods
-- imporved performance, bug fixes
+- improved performance, bug fixes
 
 v4.1.0
 
@@ -37,7 +37,9 @@ v4.0.0
 
 </div>
 
-**This SDK should be used for distribution in any other app store except Google Play. Be careful! Do not release your app with this SDK in Google Play Store!**
+**This SDK should be used for distribution in any other app store except Google Play.** 
+
+**Be careful! Do not release your app with this SDK in Google Play Store!**
 
 ## Quick Guide of Universal SDK
 
