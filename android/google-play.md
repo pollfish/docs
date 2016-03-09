@@ -77,6 +77,7 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and add a new ap
 
 Applications that integrate Pollfish SDK are required to include the Google Play services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
 </br>
+
 </br>
 Pollfish SDK uses only a subset of Google Play Services library so if you want you can only include this subset in your project. If you are using Google Play Services 8.3.* and less you can use:
 
@@ -97,7 +98,7 @@ dependencies {
 }
 ```
 </br>
-*Be careful - Pollfish does not work with Google Play services for Froyo
+*Be careful - Pollfish does not work with Google Play Services for Froyo
 </br>
 
 ## Integrate Pollfish SDK
