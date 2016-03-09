@@ -184,7 +184,9 @@ At this point if you sign your app with a release key you are ready to go live o
 
 ### 7.1. ParamsBuilder available options
 
-As we have seen in previous section ParamsBuilder instance requires only one mandatory param, the API key of the app. However we can set several other params to control the behaviour of Pollfish surveys within an app. Below you can see all the available options of ParamsBuilder instance.
+As we have seen in previous section ParamsBuilder instance requires only one mandatory param, the API key of the app. However we can set several other params to control the behaviour of Pollfish surveys within your app or register to several notifications. 
+<br/>
+Below you can see all the available options of ParamsBuilder instance"
 <br/>
 <br/>
 Name | Description
@@ -204,7 +206,7 @@ Name | Description
 <br/>
 <br/>
 Here is an example of using ParamsBuilder to change the position of Pollfish indicator (small red rectangle), add padding to it and turn Pollfish to custom mode prior passing the object to our initWith function:
-
+<br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY")
 					.indicatorPosition(Position.BOTTOM_LEFT)
