@@ -182,7 +182,7 @@ public void onResume() {
 At this point if you sign your app with a release key you are ready to go live on relevant store and start receiving real surveys in your app.
 
 
-### 7.1. ParamsBuilder available other options (optional)
+### 7.1. ParamsBuilder available options (optional)
 
 As we have seen in previous section ParamsBuilder instance requires only one mandatory param, the API key of the app. However we can set several other params to control the behaviour of Pollfish surveys within your app or register to several notifications. 
 <br/>
