@@ -149,9 +149,11 @@ You should also add the following lines in your AndroidManifest.xml
 
 Pollfish uses these permissions to track and send the survey responses.  
 
-## 7. Initialize Pollfish
+## Initialize Pollfish
 
-After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory param which is the API key of your app (step 2 above)
+### 7. Call initWith to activate Pollfish
+
+After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory param which is the API key of your app (step 2 above). Later on we will see several other params that we can pass to ParamsBuilder instance in order to configure Pollfish behaviour.
 
 
 ```java
