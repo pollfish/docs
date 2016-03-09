@@ -63,23 +63,37 @@ Pollfish runs in developer mode by default (when you sign your apk with a debug 
 
 ## Steps Analytically
 
-### 1\. Obtain a Developer Account and download Pollfish SDK
+### 1. Obtain a Developer Account and download Pollfish SDK
 
-Register at [www.pollfish.com](//www.pollfish.com) and download Pollfish Android SDK.
+Register at [www.pollfish.com](//www.pollfish.com/login/publisher) and download Pollfish Android SDK.
 
-### 2\. Add new app in Pollfish panel and copy the given API Key
+### 2. Add new app in Pollfish panel and copy the given API Key
 
-Login at [www.pollfish.com](//www.pollfish.com) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your init function in your app.
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your init function in your app.
 
-## Integrate Google Play services (optional)
+## Integrate Google Play services
 
-### 3\. Add Google Play services to your project (optional)
+### 3. Add Google Play services to your project
 
-Applications that integrate Pollfish SDK can optionally include the Google Play services library when possible, to achieve better targeting. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).  
+Applications that integrate Pollfish SDK are required to include the Google Play services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
 
-Pollfish SDK uses only Google Mobile Ads part of Google Play Services library. Having that said you can include only that part of the library in your project.
+Pollfish SDK uses only a subset of Google Play Services library so if you want you can only include this subset in your project. 
 
-**Be careful - Pollfish does not work with Google Play services for Froyo**
+If you are using Google Play Services 8.3.* and less you can use:
+
+```java
+dependencies {
+	 compile 'com.google.android.gms:play-services-ads:8.3.0'
+}
+```
+else since Google Play Services 8.4.* you can use only Base Client library. For example:
+
+```java
+dependencies {
+	 compile 'com.google.android.gms:play-services-base:8.4.0'
+}
+```
+*Be careful - Pollfish does not work with Google Play Services for Froyo
 
 ## Integrate Pollfish SDK
 
