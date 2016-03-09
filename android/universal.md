@@ -59,22 +59,7 @@ You can use Pollfish either in Developer or in Release mode.
 *   **Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
 *   **Release mode** is the mode to be used for a released app in any app store(start receiving paid surveys).
 
-If you **do not set the debuggable parameter** in your AndroidManifest.xml file Pollfish runs in developer mode by default. It will turn to Release mode automatically when you sign your apk with a release key.  
-
-If you use the debuggable parameter in your AndroidManifest.xml  
-
-```xml
-<application android:debuggable="true" android:label="@string/app_name"> 
-```
-
-then you can set the different modes.  
-
-<span class="debuggable">android:debuggable</span>
-
-*   true: Debug mode
-*   false: Release mode
-
-**Note: Be carefull to turn the debuggable parameter to false when you release your app in the relevant store!!**  
+Pollfish runs in developer mode by default (when you sign your apk with a debug key). It will turn to Release mode automatically when you sign your apk with a release key.
 
 ## Steps Analytically
 
