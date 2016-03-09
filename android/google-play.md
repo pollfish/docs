@@ -77,7 +77,21 @@ Login at [www.pollfish.com](//www.pollfish.com) and add a new app at Pollfish pa
 
 Applications that integrate Pollfish SDK are required to include the Google Play services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
 
-Pollfish SDK uses only Google Mobile Ads part of Google Play Services library. Having that said you can include only that part of the library in your project.
+Pollfish SDK uses only a subset of Google Play Services library so if you want you can only include this subset in your project. If you are using Google Play Services 8.3.* and less you can use:
+
+```java
+dependencies {
+	com.google.android.gms:play-services-ads:8.4.0
+}
+```
+
+Since Google play Services 8.4.* you can use only Base Client library. For example:
+
+```java
+dependencies {
+	com.google.android.gms:play-services-base:8.4.0
+}
+```
 
 **Be careful - Pollfish does not work with Google Play services for Froyo**
 
