@@ -184,6 +184,7 @@ At this point if you sing your app with a release key you are ready to go live o
 
 ### 7.1. ParamsBuilder available options
 
+As we have seen in previous section ParamsBuilder instance requires only on mandatory param, the API key of the app. However we can set several other params to control the behaviour of Pollfish surveys within an app. Below you can see all the available options of ParamsBuilder instence.
 
 
 Name | Description
@@ -200,6 +201,16 @@ Name | Description
 .pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener) | Sets a notification listener when a user is not eligible for a Pollfish survey
 .pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener) | Sets a notification listener when Pollfish Survey panel is opened
 .pollfishClosedListener(PollfishClosedListener pollfishClosedListener) | Sets a notification listener when Pollfish Survey panel is closed
+
+Here is an example of using Pollfish in custom mode and passing a custom param to be retrieved on the server side:
+
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY")
+					.indicatorPosition(Position.BOTTOM_LEFT)
+					.indicatorPadding(50)
+					.customMode(true)
+					.build();
+```
 
 
 ### init Vs customInit
