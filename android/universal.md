@@ -160,7 +160,7 @@ After you link your project to Google Play Services you can easily initialize Po
 ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 ```
 
-then you can call Pollfish init statement in the **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
+Once you created ParamsBuilder instance then you can call Pollfish initWith() in **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
 
 ```java
 PollFish.initWith(Activity activity, ParamsBuilder paramsBuilder);
@@ -176,6 +176,8 @@ public void onResume() {
     PollFish.initWith(this, new ParamsBuilder("YOUR_API_KEY").build());
 }
 ```
+
+**Note: If your app calls setContentView() function more than once in your Activity lifecycle you should call Pollfish.init() or Pollfish.customInit() respectively just after each setContentView to use Pollfish properly.**  
 
 
 
@@ -204,7 +206,6 @@ PollFish.customInit(Activity act, String YOUR_API_KEY, Position pos, int padding
 
 The init or custom Init methods enable Pollfish surveys through your app.  
 
-**Note: If your app calls setContentView() function more than once in your Activity lifecycle you should call Pollfish.init() or Pollfish.customInit() respectively just after each setContentView to use Pollfish properly.**  
 
 #### Both init and customInit functions take the following parameters:
 
