@@ -149,7 +149,7 @@ Pollfish uses this permission to track and send the survey responses.
 
 ## Initialize Pollfish
 
-You can easily set initialize Pollfish.
+You can easily initialize Pollfish. 
 
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
@@ -157,6 +157,16 @@ ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 PollFish.initWith(Activity activity, paramsBuilder);
 ```
 
+Below you can see an example of the init function:
+
+```java
+@Override
+public void onResume() {
+    super.onResume();
+ 
+    PollFish.initWith(this, new ParamsBuilder(String "YOUR_API_KEY").build());
+}
+```
 
 
 
