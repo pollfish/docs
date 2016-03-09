@@ -60,7 +60,7 @@ You can use Pollfish either in Developer or in Release mode.
 *   **Release mode** is the mode to be used for a released app in any app store(start receiving paid surveys).
 
 Pollfish runs in developer mode by default (when you sign your apk with a debug key). It will turn to Release mode automatically when you sign your apk with a release key.
-
+<br/><br/><br/><br/>
 ## Steps Analytically
 
 ### 1. Obtain a Developer Account and download Pollfish SDK
