@@ -177,8 +177,10 @@ public void onResume() {
 }
 ```
 
+
 **Note: If your app calls setContentView() function more than once in your Activity lifecycle you should call Pollfish.init() or Pollfish.customInit() respectively just after each setContentView to use Pollfish properly.**  
 
+At this point if you sing your app with a release key you are ready to go live on relevant store and start receiving real surveys in your app.
 
 
 ### init Vs customInit
