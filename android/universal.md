@@ -41,6 +41,7 @@ v4.0.0
 
 **Be careful, do not release your app with this SDK on Google Play Store!**
 
+<br/><br/>
 ## Quick Guide of Universal SDK
 
 1. Download Pollfish jar or aar file and import to your project
@@ -51,7 +52,7 @@ v4.0.0
 6. Update your privacy policy
 
 Pollfish Android SDK works with Android 10 (2.3.3) and above.  
-
+<br/><br/>
 ### Developer Vs Release Mode
 
 You can use Pollfish either in Developer or in Release mode.  
