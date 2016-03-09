@@ -160,6 +160,12 @@ After you link your project to Google Play Services you can easily initialize Po
 ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 ```
 
+
+Name | Description
+------------ | -------------
+indicatorPosition(int) | Set indicator position
+requestUUID | Pass custom request UUID to receive on s2s callbacks
+
 Once you created ParamsBuilder instance then you can call Pollfish initWith() in **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
 
 ```java
