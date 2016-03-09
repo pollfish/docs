@@ -153,29 +153,12 @@ Pollfish uses these permissions to track and send the survey responses.
 
 ### 7. Call initWith to activate Pollfish
 
-After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory param which is the API key of your app (step 2 above). Later on we will see several other params that we can pass to ParamsBuilder instance in order to configure Pollfish behaviour.
+After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory param which is the API key of your app (step 2 above). In section 7.1 we will see several other params that we can pass to ParamsBuilder instance in order to configure Pollfish behaviour during initialization.
 
 
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 ```
-
-
-Name | Description
------------- | -------------
-.indicatorPosition(int position) | Sets the Position where you wish to place the Pollfish indicator.
-.requestUUID(String requestUUID) | Sets a unique id to identify a user and be passed through server-to-server callbacks
-.indicatorPadding(int padding) | Sets padding (in dp) from top or bottom according to Position of the indicator
-.userLayout(ViewGroup userLayout) | Sets User View layout that Pollfish surveys will be rendered above it
-.releaseMode(boolean releaseMode) | Sets Pollfish SDK to Developer or Release mode
-.customMode(boolean customMode) | Initializes Pollfish in custom mode
-.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)| Sets a notification listener when Pollfish Survey is received
-.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener) | Sets a notification listener when Pollfish Survey is not available
-.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener) | Sets a notification listener when Pollfish Survey is completed
-.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener) | Sets a notification listener when a user is not eligible for a Pollfish survey
-.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener) | Sets a notification listener when Pollfish Survey panel is opened
-.pollfishClosedListener(PollfishClosedListener pollfishClosedListener) | Sets a notification listener when Pollfish Survey panel is closed
-
 Once you created ParamsBuilder instance then you can call Pollfish initWith() in **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
 
 ```java
@@ -197,6 +180,26 @@ public void onResume() {
 **Note: If your app calls setContentView() function more than once in your Activity lifecycle you should call Pollfish.init() or Pollfish.customInit() respectively just after each setContentView to use Pollfish properly.**  
 
 At this point if you sing your app with a release key you are ready to go live on relevant store and start receiving real surveys in your app.
+
+
+### 7.1. ParamsBuilder available options
+
+
+
+Name | Description
+------------ | -------------
+.indicatorPosition(int position) | Sets the Position where you wish to place the Pollfish indicator.
+.requestUUID(String requestUUID) | Sets a unique id to identify a user and be passed through server-to-server callbacks
+.indicatorPadding(int padding) | Sets padding (in dp) from top or bottom according to Position of the indicator
+.userLayout(ViewGroup userLayout) | Sets User View layout that Pollfish surveys will be rendered above it
+.releaseMode(boolean releaseMode) | Sets Pollfish SDK to Developer or Release mode
+.customMode(boolean customMode) | Initializes Pollfish in custom mode
+.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)| Sets a notification listener when Pollfish Survey is received
+.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener) | Sets a notification listener when Pollfish Survey is not available
+.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener) | Sets a notification listener when Pollfish Survey is completed
+.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener) | Sets a notification listener when a user is not eligible for a Pollfish survey
+.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener) | Sets a notification listener when Pollfish Survey panel is opened
+.pollfishClosedListener(PollfishClosedListener pollfishClosedListener) | Sets a notification listener when Pollfish Survey panel is closed
 
 
 ### init Vs customInit
