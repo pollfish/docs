@@ -76,30 +76,22 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and add a new ap
 ### 3. Add Google Play services to your project
 
 Applications that integrate Pollfish SDK are required to include the Google Play services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
-</br>
 
-</br>
 Pollfish SDK uses only a subset of Google Play Services library so if you want you can only include this subset in your project. If you are using Google Play Services 8.3.* and less you can use:
 
-</br>
 ```java
 dependencies {
 	 compile 'com.google.android.gms:play-services-ads:8.3.0'
 }
 ```
-</br>
-
 Since Google Play Services 8.4.* you can use only Base Client library. For example:
-
 
 ```java
 dependencies {
 	 compile 'com.google.android.gms:play-services-base:8.4.0'
 }
 ```
-</br>
 *Be careful - Pollfish does not work with Google Play Services for Froyo
-</br>
 
 ## Integrate Pollfish SDK
 
@@ -123,7 +115,7 @@ Then in your project build.gradle (not the top level one, the one under 'app') a
 
 ```java
 dependencies {
-    compile project(':pollfish')
+    compile project(':pollfish-googleplay-4.2.0')
 }
 ```
 
@@ -141,12 +133,14 @@ Import Pollfish classes with the following lines at the top of your Activity’s
 
 ```java
 import com.pollfish.main.PollFish;
+import com.pollfish.main.PollFish.ParamsBuilder;
 import com.pollfish.constants.Position;
+
 ```
 
 ### 6. Add permission to AndroidManifest.xml
 
-You should also add the following line in your AndroidManifest.xml
+You should also add the following permission in your AndroidManifest.xml
 
 ```java
 <uses-permission android:name="android.permission.INTERNET"/>
