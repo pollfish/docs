@@ -39,7 +39,7 @@ v4.0.0
 
 **This SDK should be used for distribution in any other app store except Google Play.** 
 
-**Be careful! Do not release your app with this SDK in Google Play Store!**
+**Be careful, do not release your app with this SDK on Google Play Store!**
 
 ## Quick Guide of Universal SDK
 
