@@ -167,7 +167,7 @@ Name | Description
 .requestUUID(String requestUUID) | Sets a unique id to identify a user and be passed through server-to-server callbacks
 .indicatorPadding(int padding) | Sets padding (in dp) from top or bottom according to Position of the indicator
 .userLayout(ViewGroup userLayout) | Sets User View layout that Pollfish surveys will be rendered above it
-
+.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)| Sets a notification listener when Pollfish Survey is received
 
 Once you created ParamsBuilder instance then you can call Pollfish initWith() in **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
 
