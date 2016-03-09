@@ -167,7 +167,14 @@ Name | Description
 .requestUUID(String requestUUID) | Sets a unique id to identify a user and be passed through server-to-server callbacks
 .indicatorPadding(int padding) | Sets padding (in dp) from top or bottom according to Position of the indicator
 .userLayout(ViewGroup userLayout) | Sets User View layout that Pollfish surveys will be rendered above it
+.releaseMode(boolean releaseMode) | Sets Pollfish SDK to Developer or Release mode
+.customMode(boolean customMode) | Initializes Pollfish in custom mode
 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)| Sets a notification listener when Pollfish Survey is received
+.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener) | Sets a notification listener when Pollfish Survey is not available
+.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener) | Sets a notification listener when Pollfish Survey is completed
+.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener) | Sets a notification listener when a user is not eligible for a Pollfish survey
+.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener) | Sets a notification listener when Pollfish Survey panel is opened
+.pollfishClosedListener(PollfishClosedListener pollfishClosedListener) | Sets a notification listener when Pollfish Survey panel is closed
 
 Once you created ParamsBuilder instance then you can call Pollfish initWith() in **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
 
