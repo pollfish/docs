@@ -151,17 +151,20 @@ Pollfish uses these permissions to track and send the survey responses.
 
 ## Initialize Pollfish
 
-## Initialize Pollfish
+After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory param which is the API key of your app (step 2 above)
 
-You can easily initialize Pollfish. Add the init statement in the onResume() function of your Activity (just after super.onResume()) and you are ready to go.
 
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
+```
 
+then you can call Pollfish init statement in the **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
+
+```java
 PollFish.initWith(Activity activity, ParamsBuilder paramsBuilder);
 ```
 
-Below you can see an example of the init function:
+Below you can see an example:
 
 ```java
 @Override
