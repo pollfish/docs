@@ -185,8 +185,8 @@ At this point if you sign your app with a release key you are ready to go live o
 ### 7.1. ParamsBuilder available options
 
 As we have seen in previous section ParamsBuilder instance requires only one mandatory param, the API key of the app. However we can set several other params to control the behaviour of Pollfish surveys within an app. Below you can see all the available options of ParamsBuilder instance.
-
-
+<br/>
+<br/>
 Name | Description
 ------------ | -------------
 .indicatorPosition(int position) | Sets the Position where you wish to place the Pollfish indicator.
@@ -201,7 +201,8 @@ Name | Description
 .pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener) | Sets a notification listener when a user is not eligible for a Pollfish survey
 .pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener) | Sets a notification listener when Pollfish Survey panel is opened
 .pollfishClosedListener(PollfishClosedListener pollfishClosedListener) | Sets a notification listener when Pollfish Survey panel is closed
-
+<br/>
+<br/>
 Here is an example of using ParamsBuilder to change the position of Pollfish indicator (small red rectangle), add padding to it and turn Pollfish to custom mode prior passing the object to our initWith function:
 
 ```java
