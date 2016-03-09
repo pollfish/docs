@@ -1,4 +1,13 @@
-<div class="changelog" data-version="4.1.0">
+<div class="changelog" data-version="4.2.0">
+v4.2.0
+
+- added support for beacon surveys
+- added video, rating, slider, open ended, open ended numerical and description questions support
+- new init function structure
+- new builder pattern approach on init function
+- deprecated old init methods
+- imporved performance, bug fixes
+
 v4.1.0
 
 - added new init function with developer mode param
@@ -41,37 +50,22 @@ Pollfish Android SDK works with Android 10 (2.3.3) and above.
 
 Read the Handle Orientations section below, to handle the orientations in your app properly.
 
-**Note: Be careful to turn the debuggable parameter in AndroidManifest.xml to false when you release your app in Google Play! (or just delete it)**
+**Note: Be careful to turn your app in release mode prior releasing your app on Google Play**
 
 ### Developer Vs Release Mode
 
 You can use Pollfish either in Developer or in Release mode.
 
 *   Developer mode is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
-*   Release mode is the mode to be used for a released app in Google Play or any other Store(start receiving paid surveys).
+*   Release mode is the mode to be used for a released app in Google Play or any other Store (required to start receiving paid surveys).
 
-If you **do not set the debuggable parameter** in your AndroidManifest.xml file Pollfish runs in developer mode by default. It will turn to Release mode automatically when you sign your apk with a release key.
-
-If you use the debuggable parameter in your AndroidManifest.xml
-
-```xml
-<application android:debuggable="true" android:label="@string/app_name">
-```
-
-then you can set the different modes.
-
-<span class="debuggable">android:debuggable</span>
-
-*   true: Debug mode
-*   false: Release mode
-
-**Note: Be careful to turn the debuggable parameter to false when you release your app in Google Play!!**
+Pollfish runs in developer mode by default (when you sign your apk with a debug key). It will turn to Release mode automatically when you sign your apk with a release key.
 
 ## Steps Analytically
 
 ### 1. Obtain a Developer Account and download Pollfish SDK
 
-Register at [www.pollfish.com](//www.pollfish.com) and download Pollfish Android SDK.
+Register at [www.pollfish.com](//www.pollfish.com/login/publisher) and download Pollfish Android SDK.
 
 ### 2. Add new app in Pollfish panel and copy the given API Key
 
