@@ -1,19 +1,31 @@
-<div class="changelog" data-version="4.1.0">
+<div class="changelog" data-version="4.2.0">
+v4.2.0
+
+- added support for beacon surveys
+- added video, rating, slider, open ended, open ended numerical and description questions support
+- new init function structure
+- new builder pattern approach on init function
+- deprecated old init methods
+- imporved performance, bug fixes
+
 v4.1.0
 
 - added new init function with developer mode param
 - added track and respect of Google Advertising Id
+- 
 v4.0.3
 
 - added UserProperties object for passing attributes around user.
 - added init function with option to pass user view layout as param
 - added init function with option to pass a custom param and receive it on server-to-server callback
 - Added various bug fixes and optimizations
+
 v4.0.2
 
 - When called manually, show/hide Pollfish on main UI thread
 - fixed bugs on layout resize on orientation changes when android:configChanges="screenSize"
 - Added various bug fixes and optimizations
+
 v4.0.1
 
 - Added various bug fixes and optimizations
@@ -141,6 +153,29 @@ You should also add the following lines in your AndroidManifest.xml
 Pollfish uses these permissions to track and send the survey responses.  
 
 ## Initialize Pollfish
+
+## Initialize Pollfish
+
+You can easily initialize Pollfish. Add the init statement in the onResume() function of your Activity (just after super.onResume()) and you are ready to go.
+
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
+
+PollFish.initWith(Activity activity, paramsBuilder);
+```
+
+Below you can see an example of the init function:
+
+```java
+@Override
+public void onResume() {
+    super.onResume();
+ 
+    PollFish.initWith(this, new ParamsBuilder("YOUR_API_KEY").build());
+}
+```
+
+
 
 ### init Vs customInit
 
