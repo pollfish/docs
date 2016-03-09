@@ -69,7 +69,7 @@ Register at [www.pollfish.com](//www.pollfish.com/login/publisher) and download 
 
 ### 2. Add new app in Pollfish panel and copy the given API Key
 
-Login at [www.pollfish.com](//www.pollfish.com) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your init function in your app.
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your init function in your app.
 
 ## Integrate Google Play services
 
@@ -79,13 +79,13 @@ Applications that integrate Pollfish SDK are required to include the Google Play
 
 Pollfish SDK uses only a subset of Google Play Services library so if you want you can only include this subset in your project. If you are using Google Play Services 8.3.* and less you can use:
 
-
+</br>
 ```java
 dependencies {
-	 compile 'com.google.android.gms:play-services-ads:8.4.0'
+	 compile 'com.google.android.gms:play-services-ads:8.3.0'
 }
 ```
-
+</br>
 
 Since Google Play Services 8.4.* you can use only Base Client library. For example:
 
@@ -95,9 +95,9 @@ dependencies {
 	 compile 'com.google.android.gms:play-services-base:8.4.0'
 }
 ```
-
+</br>
 *Be careful - Pollfish does not work with Google Play services for Froyo
-
+</br>
 
 ## Integrate Pollfish SDK
 
