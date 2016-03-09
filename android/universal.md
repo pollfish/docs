@@ -138,7 +138,7 @@ import com.pollfish.main.PollFish.ParamsBuilder;
 import com.pollfish.constants.Position;
 ```
 
-### 6\. Add permissions to AndroidManifest.xml
+### 6. Add permissions to AndroidManifest.xml
 
 You should also add the following lines in your AndroidManifest.xml  
 
@@ -149,7 +149,7 @@ You should also add the following lines in your AndroidManifest.xml
 
 Pollfish uses these permissions to track and send the survey responses.  
 
-## Initialize Pollfish
+## 7. Initialize Pollfish
 
 After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory param which is the API key of your app (step 2 above)
 
