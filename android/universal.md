@@ -203,7 +203,7 @@ As we have seen in previous section ParamsBuilder instance requires only one man
 ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 ```
 
-However we can set several other params to control the behaviour of Pollfish surveys within your app or register to several notifications. 
+However we can set several other params to control the behaviour of Pollfish surveys within your app or register to several notifications.
 <br/>
 Below you can see all the available options of ParamsBuilder instance"
 <br/>
@@ -225,8 +225,8 @@ No | Description
 
 <br/>
 <br/>
-### 9.1 - .indicatorPosition(int position)
-Sets the Position where you wish to place the Pollfish indicator.There are six different options: 
+### 9.1 .indicatorPosition(int position)
+Sets Position where you wish to place the Pollfish indicator. There are six different options available: 
 
 - Position.TOP_LEFT 
 - Position.BOTTOM_LEFT
@@ -235,16 +235,29 @@ Sets the Position where you wish to place the Pollfish indicator.There are six d
 - Position.BOTTOM_RIGHT (default)
 - Position.MIDDLE_RIGHT
 
-If you do not set explicity a position for the indicator, it will appear by default at Position.BOTTOM_RIGHT
+If you do not set explicity a position for Pollfish indicator, it will appear by default at Position.BOTTOM_RIGHT
+
+Below you can see an example on how we can set Pollfish inticator to slide from top right corner of the screen:
+
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+					.indicatorPosition(Position.TOP_RIGHT)
+					.build();
+```
+
 <br/>
+### 9.2 .requestUUID(String requestUUID)
+Sets a unique id to identify a user and be passed through server-to-server callbacks. 
+
+![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/201860351/Screen_Shot_2015-08-19_at_1.30.21_PM.png)
+
 
 Here is an example of using ParamsBuilder to change the position of Pollfish indicator (small red rectangle), add padding to it and turn Pollfish to custom mode prior passing the object to our initWith function:
 <br/>
 ```java
-ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY")
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.indicatorPosition(Position.BOTTOM_LEFT)
-					.indicatorPadding(50)
-					.customMode(true)
+					.requestUUID("YOUR_UUID")
 					.build();
 ```
 
