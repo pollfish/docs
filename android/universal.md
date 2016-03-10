@@ -37,7 +37,7 @@ v4.0.0
 
 </div>
 
-#### Do not use this SDK for distribution on Google Play Store!
+> **Important!** Do not use this SDK for distribution on Google Play Store!
 
 <br/><br/>
 ## Quick Guide of Universal SDK
