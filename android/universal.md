@@ -197,20 +197,26 @@ In this section we will list several options that can be used to control Pollfis
 
 ### 9. ParamsBuilder available options (optional)
 
-As we have seen in previous section ParamsBuilder instance requires only one mandatory param, the API key of the app. However we can set several other params to control the behaviour of Pollfish surveys within your app or register to several notifications. 
+As we have seen in previous section ParamsBuilder instance requires only one mandatory param, the API key of the app. 
+
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
+```
+
+However we can set several other params to control the behaviour of Pollfish surveys within your app or register to several notifications. 
 <br/>
 Below you can see all the available options of ParamsBuilder instance"
 <br/>
 
-. | .
+Sub-section | Description
 ------------ | -------------
-1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator.
-2 | **.requestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
-3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to Position of the indicator
-4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
-5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
-6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
-7 | **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
+9.1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator.
+9.2 | **.requestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+9.3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to Position of the indicator
+9.4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
+9.5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
+9.6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
+9.7 | **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
 8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
 <br/>
 9 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
