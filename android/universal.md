@@ -151,7 +151,7 @@ Pollfish uses these permissions to track and send the survey responses.
 
 ### 7. Call initWith to activate Pollfish
 
-After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory param which is the API key of your app (step 2 above). In section 7.1 we will see several other params that we can pass to ParamsBuilder instance in order to configure Pollfish behaviour during initialization.
+After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory parameter which is the API key of your app (step 2 above). In section 7.1 we will see several other params that we can pass to ParamsBuilder instance in order to configure Pollfish behaviour during initialization.
 
 
 ```java
@@ -177,8 +177,11 @@ public void onResume() {
 
 **Note: If your app calls setContentView() function more than once in your Activity lifecycle you should call Pollfish.init() or Pollfish.customInit() respectively just after each setContentView to use Pollfish properly.**  
 
-At this point if you sign your app with a release key you are ready to go live on relevant store and start receiving real surveys in your app.
 
+
+## At this point if you sign your app with a release key you are ready to go live on relevant store and start receiving real surveys in your app.
+
+<br/><br/><br/><br/>
 
 ### 7.1. ParamsBuilder available options (optional)
 
