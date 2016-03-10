@@ -232,7 +232,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.indicatorPosition(Position.TOP_RIGHT)
 					.build();
 ```
-
+<br/>
 #### **9.2 .requestUUID(String requestUUID)**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
@@ -248,7 +248,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.requestUUID("YOUR_UUID")
 					.build();
 ```
-
+<br/>
 #### 9.3 .indicatorPadding(int padding)
 
 Sets padding (in dp) of Pollfish indicator, from top or bottom according to Position of the indicator as specified before 
