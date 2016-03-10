@@ -212,7 +212,7 @@ No | Description
 9.10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
 9.11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
 9.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
-
+<br/>
 #### **9.1 .indicatorPosition(int position)**
 Sets Position where you wish to place  Pollfish indicator. There are six different options available: 
 
