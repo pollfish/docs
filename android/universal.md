@@ -255,14 +255,14 @@ Sets padding (in dp) of Pollfish indicator, from top or bottom according to Posi
 Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top.
 <br/>
 Here is an example of setting a padding of Pollfish indicator to be 35dp from the top of the screen:
-<br/>
+<br/><br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.indicatorPosition(Position.TOP_RIGHT)
 					.indicatorPadding(35)
 					.build();
 ```
-
+<br/>
 #### 9.4 .userLayout(ViewGroup userLayout)
 
 Sets user's View layout that Pollfish surveys will be rendered above it. If Pollfish regular init function affects the UI of your app by creating flings or any other issues you can try passing a view layout of your app that can be used to render above Pollfish 
