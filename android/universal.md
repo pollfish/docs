@@ -225,8 +225,11 @@ No | Description
 
 <br/>
 <br/>
-9.1 ## .indicatorPosition(int position)
-Sets the Position where you wish to place the Pollfish indicator.
+## 9.1 - .indicatorPosition(int position)
+Sets the Position where you wish to place the Pollfish indicator.There are six different options: 
+{Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
+
+If you do not set explicity a position for the indicator, it will appear by default at Position.BOTTOM_RIGHT
 <br/>
 
 Here is an example of using ParamsBuilder to change the position of Pollfish indicator (small red rectangle), add padding to it and turn Pollfish to custom mode prior passing the object to our initWith function:
