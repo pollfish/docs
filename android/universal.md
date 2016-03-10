@@ -290,6 +290,22 @@ You can use Pollfish either in Developer or in Release mode.
 
 Pollfish runs in developer mode by default (when you sign your apk with a debug key). It will turn to Release mode automatically when you sign your apk with a release key.
 
+However youy can explicity request Pollfish SDK to run in release or developer mode by setting mode through ParamsBuilder instance during initialization.
+
+Below you can see an exampl on how you can turn your app in Release mode explicitly:
+
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+					.releaseMode(true)
+					.build();
+```
+
+
+
+
+
+
+
 
 
 ### init Vs customInit
