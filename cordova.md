@@ -15,7 +15,7 @@ Pollfish is a mobile monetization platform delivering surveys instead of ads thr
 * Set to Release mode and release in Store
 * Update your app's privacy policy
 
-
+---
 
 ![alt tag](https://www.pollfish.com/img/rocketMobile.png)
 
