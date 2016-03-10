@@ -260,6 +260,12 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 
+### 9.3 .indicatorPadding(int padding)
+
+Sets padding (in dp) of Pollfish indicator, from top or bottom according to Position of the indicator as specified before 
+Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top.
+
+
 
 ### init Vs customInit
 
