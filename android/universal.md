@@ -301,36 +301,29 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **9.6 .customMode(boolean customMode)**  
 
-Initializes Pollfish in custom mode
+Initializes Pollfish in custom mode.
 
-**init Vs customInit**
+**customMode: true Vs false **
 
-*   init function is the standard way of using Pollfish in your apps. Using init function enables controlling the behavior of Pollfish in an app from Pollfish panel.
-*   customInit function ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates. 
+*   false - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
 
-Both init and customInit functions have the same arguments.
+![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/202124442/Screen_Shot_2015-10-13_at_11.56.10_AM.png)
+<br/><br/>
 
-**Note: do not use both init and customInit in the same activity.**  
-
-Below you can see an example of the init function:  
-
-```
-@Override
-public void onResume() {
-    super.onResume();
-    PollFish.init(this, "your_api_key_here", Position.BOTTOM_LEFT, 5);
-}
+*   true -  ignores Pollfish panel behavior from Pollfish Developer Dashboard as described above. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
+<br/>
+Below you can see an example of setting Pollfish to custom mode with ParamsBuilder object:  
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+					.customMode(true)
+					.build();
 ```
 
-or
 
-```
-@Override
-public void onResume() {
-    super.onResume();
-    PollFish.customInit(this, "your_api_key_here", Position.BOTTOM_LEFT, 5);
-}
-```
+
+
+
 
 ### Other init methods (optional)
 
