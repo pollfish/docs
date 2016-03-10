@@ -208,7 +208,7 @@ However we can set several other params to control the behaviour of Pollfish sur
 Below you can see all the available options of ParamsBuilder instance"
 <br/>
 
-Section | Description
+Num | Description
 ------------ | -------------
 9.1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator.
 9.2 | **.requestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
