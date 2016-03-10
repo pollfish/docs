@@ -226,7 +226,7 @@ Sets Position where you wish to place  Pollfish indicator. There are six differe
 - Position.MIDDLE_RIGHT
 
 If you do not set explicity a position for Pollfish indicator, it will appear by default at Position.BOTTOM_RIGHT
-
+<br/>
 Below you can see an example on how we can set Pollfish inticator to slide from top right corner of the screen:
 
 ```java
@@ -243,7 +243,7 @@ Sets a unique id to identify a user and be passed through server-to-server callb
 In order to register for such callbacks you can set up your server URL on your app's page on Pollfish Developer Dashboard and then pass your requestUUID through ParamsBuilder object.
 
 ![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/201860351/Screen_Shot_2015-08-19_at_1.30.21_PM.png)
-
+<br/>
 Here is an example of setting a requestUUID:
 <br/>
 ```java
@@ -256,7 +256,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 
 Sets padding (in dp) of Pollfish indicator, from top or bottom according to Position of the indicator as specified before 
 Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top.
-
+<br/>
 Here is an example of setting a padding of Pollfish indicator to be 35dp from the top of the screen:
 <br/>
 ```java
@@ -269,7 +269,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 #### 9.4 .userLayout(ViewGroup userLayout)
 
 Sets user's View layout that Pollfish surveys will be rendered above it. If Pollfish regular init function affects the UI of your app by creating flings or any other issues you can try passing a view layout of your app that can be used to render above Pollfish 
-
+<br/>
 Here is an example of how a user can pass a view on his own through ParamsBuilder instance during initialization.
 <br/>
 ```java
@@ -290,9 +290,10 @@ You can use Pollfish either in Developer or in Release mode.
 
 Pollfish runs in developer mode by default (when you sign your apk with a debug key). It will turn to Release mode automatically when you sign your apk with a release key.
 
-However youy can explicity request Pollfish SDK to run in release or developer mode by setting mode through ParamsBuilder instance during initialization.
+However you can explicity request Pollfish SDK to run in release or developer mode by setting mode through ParamsBuilder instance during initialization.
+<br/>
 
-Below you can see an exampl on how you can turn your app in Release mode explicitly:
+Below you can see an example on how you can turn your app in Release mode explicitly:
 
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
