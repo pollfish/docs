@@ -222,10 +222,14 @@ No | Description
 9 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
 10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
 11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
-11 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
+12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
 
 <br/>
 <br/>
+9.1 ## .indicatorPosition(int position)
+Sets the Position where you wish to place the Pollfish indicator.
+<br/>
+
 Here is an example of using ParamsBuilder to change the position of Pollfish indicator (small red rectangle), add padding to it and turn Pollfish to custom mode prior passing the object to our initWith function:
 <br/>
 ```java
