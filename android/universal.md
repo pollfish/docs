@@ -174,8 +174,10 @@ public void onResume() {
 
 ### 8\.  Update your Privacy Policy
 
-Add the following paragraph to your app's privacy policy
+Add the following paragraph to your app's privacy policy:
+
 <br/><br/>
+
 *“Survey Serving Technology*  
 
 *This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Developers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user’s device data (including Advertising ID which will may be processed by Pollfish only in strict compliance with google play policies- and/or other device data) and response meta-data (including information about the apps which the user has installed in his mobile phone) is automatically sent to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. For a full list of data received by Pollfish through this app, please read carefully Pollfish respondent terms located at https://www.pollfish.com/terms/respondent. These data will be associated with your answers to the questionnaires whenever Pollfish sents such questionnaires to eligible users. By downloading the application you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by using the Pollfish “opt out section” available on Pollfish website . We once more invite you to check the respondent’s terms of use, if you wish to have more detailed view of the way Pollfish works.*  
@@ -184,11 +186,14 @@ Add the following paragraph to your app's privacy policy
 
 <br/><br/>
 
-> **You are ready to go live. Sign your app with a release key and publish to any app store**
+> **You are ready to go live! Sign your app with a release key and publish to any app store**
 
 ---
 
 <br/><br/><br/><br/>
+
+In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys.
+
 
 ### 7.1. ParamsBuilder available options (optional)
 
@@ -197,20 +202,26 @@ As we have seen in previous section ParamsBuilder instance requires only one man
 Below you can see all the available options of ParamsBuilder instance"
 <br/>
 <br/>
+Name 
+------------ 
+**.indicatorPosition(int position)** 
+Sets the Position where you wish to place the Pollfish indicator.
+
+
 Name | Description
 ------------ | -------------
-.indicatorPosition(int position) | Sets the Position where you wish to place the Pollfish indicator.
-.requestUUID(String requestUUID) | Sets a unique id to identify a user and be passed through server-to-server callbacks
-.indicatorPadding(int padding) | Sets padding (in dp) from top or bottom according to Position of the indicator
-.userLayout(ViewGroup userLayout) | Sets User View layout that Pollfish surveys will be rendered above it
-.releaseMode(boolean releaseMode) | Sets Pollfish SDK to Developer or Release mode
-.customMode(boolean customMode) | Initializes Pollfish in custom mode
-.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)| Sets a notification listener when Pollfish Survey is received
-.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener) | Sets a notification listener when Pollfish Survey is not available
-.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener) | Sets a notification listener when Pollfish Survey is completed
-.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener) | Sets a notification listener when a user is not eligible for a Pollfish survey
-.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener) | Sets a notification listener when Pollfish Survey panel is opened
-.pollfishClosedListener(PollfishClosedListener pollfishClosedListener) | Sets a notification listener when Pollfish Survey panel is closed
+**.indicatorPosition(int position)** | Sets the Position where you wish to place the Pollfish indicator.
+**.requestUUID(String requestUUID)** | Sets a unique id to identify a user and be passed through server-to-server callbacks
+**.indicatorPadding(int padding)** | Sets padding (in dp) from top or bottom according to Position of the indicator
+**.userLayout(ViewGroup userLayout)** | Sets User View layout that Pollfish surveys will be rendered above it
+**.releaseMode(boolean releaseMode)** | Sets Pollfish SDK to Developer or Release mode
+**.customMode(boolean customMode)** | Initializes Pollfish in custom mode
+**.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**| Sets a notification listener when Pollfish Survey is received
+**.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)** | Sets a notification listener when Pollfish Survey is not available
+**.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)** | Sets a notification listener when Pollfish Survey is completed
+**.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)** | Sets a notification listener when a user is not eligible for a Pollfish survey
+**.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)** | Sets a notification listener when Pollfish Survey panel is opened
+**.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)** | Sets a notification listener when Pollfish Survey panel is closed
 <br/>
 <br/>
 Here is an example of using ParamsBuilder to change the position of Pollfish indicator (small red rectangle), add padding to it and turn Pollfish to custom mode prior passing the object to our initWith function:
