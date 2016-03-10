@@ -329,11 +329,11 @@ Below you can see an example of how you can register and listen within your code
 <br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
-				.pollfishSurveyReceivedListener(new PollfishSurveyReceivedListener() {
-                            	  @Override
-                            	  public void onPollfishSurveyReceived(final boolean playfulSurvey, final int surveyPrice) {}
-                        	});
-				.build();
+	.pollfishSurveyReceivedListener(new PollfishSurveyReceivedListener() {
+        	@Override
+                public void onPollfishSurveyReceived(final boolean playfulSurvey, final int surveyPrice) {}
+        });
+	.build();
 ```
 <br/>
 
