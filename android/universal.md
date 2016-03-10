@@ -39,7 +39,6 @@ v4.0.0
 
 > **Important!** Do not use this SDK for distribution on Google Play Store!
 
-<br/><br/>
 ## Quick Guide of Universal SDK
 
 1. Download Pollfish jar or aar file and import to your project
