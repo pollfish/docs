@@ -227,7 +227,13 @@ No | Description
 <br/>
 ## 9.1 - .indicatorPosition(int position)
 Sets the Position where you wish to place the Pollfish indicator.There are six different options: 
-{Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
+
+- Position.TOP_LEFT 
+- Position.BOTTOM_LEFT
+- Position.MIDDLE_LEFT
+- Position.TOP_RIGHT
+- Position.BOTTOM_RIGHT (default)
+- Position.MIDDLE_RIGHT
 
 If you do not set explicity a position for the indicator, it will appear by default at Position.BOTTOM_RIGHT
 <br/>
