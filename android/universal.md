@@ -185,7 +185,7 @@ Add the following paragraph to your app's privacy policy:
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys.
 
 
-#### 9. ParamsBuilder available options (optional)
+### 9. ParamsBuilder available options (optional)
 
 As we have seen in previous section ParamsBuilder instance requires only one mandatory param, the API key of the app. 
 
@@ -320,10 +320,25 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 
+<br/>
+#### **9.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
 
+Sets a notification listener when Pollfish Survey is received.
 
+You can also get informed about the type of survey (playful or not) that was received and its price shown in USD cents.
 
-
+Below you can see an example of how you can register and listen within your code and ParamsBuilder instance to Pollfish survey received notification:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+				.pollfishSurveyReceivedListener(new PollfishSurveyReceivedListener() {
+                            		@Override
+                            		public void onPollfishSurveyReceived(final boolean playfulSurvey, final int surveyPrice) {
+                                	 }
+                        	});
+				.build();
+```
+<br/>
 
 ### Other init methods (optional)
 
