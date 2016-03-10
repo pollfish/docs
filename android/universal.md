@@ -223,7 +223,7 @@ No | Description
 
 <br/>
 <br/>
-### 9.1 .indicatorPosition(int position)
+#### 9.1 .indicatorPosition(int position)
 Sets Position where you wish to place the Pollfish indicator. There are six different options available: 
 
 - Position.TOP_LEFT 
@@ -264,6 +264,28 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 
 Sets padding (in dp) of Pollfish indicator, from top or bottom according to Position of the indicator as specified before 
 Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top.
+
+Here is an example of setting a padding of Pollfish indicator to be 35dp from the top of the screen:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+					.indicatorPosition(Position.TOP_RIGHT)
+					.indicatorPadding(35)
+					.build();
+```
+
+#### 9.4 .userLayout(ViewGroup userLayout)
+
+Sets user's View layout that Pollfish surveys will be rendered above it. If Pollfish regular init function affects the UI of your app by creating flings or any other issues you can try passing a view layout of your app that can be used to render above Pollfish 
+
+Here is an example of how a user can pass a view on his own through ParamsBuilder instance during initialization.
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+					.userLayout((ViewGroup) getWindow().getDecorView())
+					.build();
+```
+
 
 
 
