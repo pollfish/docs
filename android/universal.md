@@ -69,9 +69,7 @@ Register at [www.pollfish.com](//www.pollfish.com/login/publisher) and download 
 
 Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your init function in your app.
 
-## Integrate Google Play services
-
-### 3. Add Google Play services to your project
+### 3. Integrate Google Play Services to your project
 
 Applications that integrate Pollfish SDK are required to include the Google Play services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
 
@@ -91,8 +89,6 @@ dependencies {
 	 compile 'com.google.android.gms:play-services-base:8.4.0'
 }
 ```
-
-## Integrate Pollfish SDK
 
 ### 4\. Add Pollfish jar or aar library to your project
 
@@ -147,9 +143,7 @@ You should also add the following lines in your AndroidManifest.xml
 
 Pollfish uses these permissions to track and send the survey responses.  
 
-## Initialize Pollfish
-
-### 7. Call initWith to activate Pollfish
+### 7. Initialize Pollfish
 
 After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory parameter which is the API key of your app (step 2 above). In section 7.1 we will see several other params that we can pass to ParamsBuilder instance in order to configure Pollfish behaviour during initialization.
 
@@ -177,9 +171,10 @@ public void onResume() {
 
 **Note: If your app calls setContentView() function more than once in your Activity lifecycle you should call Pollfish.init() or Pollfish.customInit() respectively just after each setContentView to use Pollfish properly.**  
 <br/>
-## Update your Privacy Policy
 
-### 8\. Add the following paragraph to your app's privacy policy
+### 8\.  Update your Privacy Policy
+
+Add the following paragraph to your app's privacy policy
 
 *“Survey Serving Technology*  
 
