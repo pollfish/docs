@@ -252,11 +252,10 @@ In order to register for such callbacks you can set up your server URL on your a
 
 ![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/201860351/Screen_Shot_2015-08-19_at_1.30.21_PM.png)
 
-Here is an example of using ParamsBuilder to change the position of Pollfish indicator (small red rectangle), add padding to it and turn Pollfish to custom mode prior passing the object to our initWith function:
+Here is an example of setting a requestUUID:
 <br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
-					.indicatorPosition(Position.BOTTOM_LEFT)
 					.requestUUID("YOUR_UUID")
 					.build();
 ```
