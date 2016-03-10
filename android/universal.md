@@ -301,16 +301,16 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **9.6 .customMode(boolean customMode)**  
 
-Initializes Pollfish in custom mode.
+Initializes Pollfish in custom mode if set to true. By default this is set to false.
 
-**customMode: true Vs false **
+**true Vs false**
 
-*   false - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
+*   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
 
 ![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/202124442/Screen_Shot_2015-10-13_at_11.56.10_AM.png)
 <br/><br/>
 
-*   true -  ignores Pollfish panel behavior from Pollfish Developer Dashboard as described above. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
+*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard as described above. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
 <br/>
 Below you can see an example of setting Pollfish to custom mode with ParamsBuilder object:  
 <br/>
