@@ -249,7 +249,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
-#### 9.3 .indicatorPadding(int padding)
+#### **9.3 .indicatorPadding(int padding)**
 
 Sets padding (in dp) of Pollfish indicator, from top or bottom according to Position of the indicator as specified before 
 Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top.
@@ -263,7 +263,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
-#### 9.4 .userLayout(ViewGroup userLayout)
+#### **9.4 .userLayout(ViewGroup userLayout)**
 
 Sets user's View layout that Pollfish surveys will be rendered above it. If Pollfish regular init function affects the UI of your app by creating flings or any other issues you can try passing a view layout of your app that can be used to render above Pollfish 
 <br/>
@@ -275,7 +275,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
-#### 9.5 .releaseMode(boolean releaseMode)
+#### **9.5 .releaseMode(boolean releaseMode)**
 
 Sets Pollfish SDK to Developer or Release mode
 <br/><br/>
@@ -298,14 +298,12 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.releaseMode(true)
 					.build();
 ```
+<br/>
+#### **9.6 .customMode(boolean customMode)**  
 
-#### 9.6 .customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
+Initializes Pollfish in custom mode
 
-
-
-
-
-### init Vs customInit
+**init Vs customInit**
 
 *   init function is the standard way of using Pollfish in your apps. Using init function enables controlling the behavior of Pollfish in an app from Pollfish panel.
 *   customInit function ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates. 
@@ -313,30 +311,6 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 Both init and customInit functions have the same arguments.
 
 **Note: do not use both init and customInit in the same activity.**  
-
-### 7\. Call init or customInit function to activate Pollfish
-
-Add the init or customInit statement of Pollfish in the onResume() function of your activity (just after super.onResume()) and you are ready to go.  
-
-```
-PollFish.init(Activity act, String YOUR_API_KEY, Position pos, int padding);
-```
-
-or
-
-```
-PollFish.customInit(Activity act, String YOUR_API_KEY, Position pos, int padding);
-```
-
-The init or custom Init methods enable Pollfish surveys through your app.  
-
-
-#### Both init and customInit functions take the following parameters:
-
-1.  <span class="params">act:</span> - The current activity where the Pollfish is initialized
-2.  <span class="params">YOUR_API_KEY:</span> - Your API Key (from step 2)
-3.  <span class="params">pos:</span> - The Position where you wish to place the Pollfish indicator. There are six different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
-4.  <span class="params">padding:</span> - The padding (in dp) from top or bottom according to Position of the indicator specified before (0 is the default value – |*if used in MIDDLE position, padding is calculating from top).
 
 Below you can see an example of the init function:  
 
