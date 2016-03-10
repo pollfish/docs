@@ -200,7 +200,7 @@ Below you can see all the available options of ParamsBuilder instance"
 
 No | Description
 ------------ | -------------
-9.1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator.
+9.1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator (small red rectangle).
 9.2 | **.requestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
 9.3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to Position of the indicator
 9.4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
@@ -277,7 +277,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.userLayout((ViewGroup) getWindow().getDecorView())
 					.build();
 ```
-#### 9.5 .releaseMode(boolean releaseMode)**  
+#### 9.5 .releaseMode(boolean releaseMode)
 
 Sets Pollfish SDK to Developer or Release mode
 <br/><br/>
@@ -301,9 +301,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 
-
-
-
+#### 9.6 .customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
 
 
 
