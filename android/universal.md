@@ -49,15 +49,7 @@ v4.0.0
 6. Update your privacy policy
 
 Pollfish Android SDK works with Android 10 (2.3.3) and above.  
-<br/><br/>
-### Developer Vs Release Mode
 
-You can use Pollfish either in Developer or in Release mode.  
-
-*   **Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
-*   **Release mode** is the mode to be used for a released app in any app store(start receiving paid surveys).
-
-Pollfish runs in developer mode by default (when you sign your apk with a debug key). It will turn to Release mode automatically when you sign your apk with a release key.
 <br/><br/><br/><br/>
 ## Steps Analytically
 
@@ -224,7 +216,7 @@ No | Description
 <br/>
 <br/>
 #### 9.1 .indicatorPosition(int position)
-Sets Position where you wish to place the Pollfish indicator. There are six different options available: 
+Sets Position where you wish to place  Pollfish indicator. There are six different options available: 
 
 - Position.TOP_LEFT 
 - Position.BOTTOM_LEFT
@@ -285,7 +277,18 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.userLayout((ViewGroup) getWindow().getDecorView())
 					.build();
 ```
+#### 9.5 .releaseMode(boolean releaseMode)**  
 
+Sets Pollfish SDK to Developer or Release mode
+<br/><br/>
+**Developer Vs Release Mode**
+
+You can use Pollfish either in Developer or in Release mode.  
+
+*   **Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
+*   **Release mode** is the mode to be used for a released app in any app store(start receiving paid surveys).
+
+Pollfish runs in developer mode by default (when you sign your apk with a debug key). It will turn to Release mode automatically when you sign your apk with a release key.
 
 
 
