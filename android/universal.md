@@ -305,12 +305,11 @@ Initializes Pollfish in custom mode if set to true. By default this is set to fa
 
 **true Vs false**
 
+*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
 *   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
 
 ![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/202124442/Screen_Shot_2015-10-13_at_11.56.10_AM.png)
 <br/><br/>
-
-*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard as described above. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
 
 Below you can see an example of setting Pollfish to custom mode with ParamsBuilder object:  
 <br/>
@@ -323,7 +322,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **9.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
 
-Sets a notification listener when a Pollfish Survey is received. With this notification publisher can also get informed about the type of survey (playful or not) that was received and its price, shown in USD cents.
+Sets a notification listener when a Pollfish Survey is received. With this notification publisher can also get informed about the type of survey (playful or not) that was received and money to be earned, shown in USD cents.
 
 Below you can see an example of how you can register and listen within your code to Pollfish survey received notification:
 <br/>
