@@ -211,14 +211,13 @@ Below you can see all the available options of ParamsBuilder instance"
 5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
 6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
 7 | **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
-
+8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
 <br/>
+9 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
+10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
+11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
+11 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
 
-**.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)** | Sets a notification listener when Pollfish Survey is not available
-**.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)** | Sets a notification listener when Pollfish Survey is completed
-**.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)** | Sets a notification listener when a user is not eligible for a Pollfish survey
-**.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)** | Sets a notification listener when Pollfish Survey panel is opened
-**.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)** | Sets a notification listener when Pollfish Survey panel is closed
 <br/>
 <br/>
 Here is an example of using ParamsBuilder to change the position of Pollfish indicator (small red rectangle), add padding to it and turn Pollfish to custom mode prior passing the object to our initWith function:
