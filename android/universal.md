@@ -213,9 +213,7 @@ No | Description
 9.11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
 9.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
 
-<br/>
-<br/>
-#### 9.1 .indicatorPosition(int position)
+#### **9.1 .indicatorPosition(int position)**
 Sets Position where you wish to place  Pollfish indicator. There are six different options available: 
 
 - Position.TOP_LEFT 
@@ -226,7 +224,7 @@ Sets Position where you wish to place  Pollfish indicator. There are six differe
 - Position.MIDDLE_RIGHT
 
 If you do not set explicity a position for Pollfish indicator, it will appear by default at Position.BOTTOM_RIGHT
-<br/>
+<br/><br/>
 Below you can see an example on how we can set Pollfish inticator to slide from top right corner of the screen:
 
 ```java
@@ -235,8 +233,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 
-<br/>
-#### 9.2 .requestUUID(String requestUUID)
+#### **9.2 .requestUUID(String requestUUID)**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
 
