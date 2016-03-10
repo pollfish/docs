@@ -176,7 +176,7 @@ Add the following paragraph to your app's privacy policy:
 
 <br/><br/>
 
-> **You are ready to go live! Sign your app with a release key and publish to any app store**
+**You are ready to go live! Sign your app with a release key and publish to any app store**
 
 ---
 
