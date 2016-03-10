@@ -207,8 +207,8 @@ No | Description
 9.5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
 9.6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
 9.7 | **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
-8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
-9.8 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
+9.8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
+9.9 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
 9.10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
 9.11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
 9.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
@@ -352,8 +352,41 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
+#### **9.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
+
+Sets a notification listener when a Pollfish Survey is completed. With this notification publisher can also get informed about the type of survey (playful or not) that was completed and its money earned in USD cents.
+
+Below you can see an example of how you can register and listen within your code to Pollfish survey completed notification:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+	.pollfishSurveyCompletedListener(new PollfishSurveyCompletedListener() {
+    @Override
+    public void onPollfishSurveyCompleted(final boolean playfulSurvey, final int surveyPrice)
+    {}
+    });
+	.build();
+```
+<br/>
+#### **9.10 .pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**
+
+Sets a notification listener when a user is not eligible for a Pollfish survey. If a user is not eligible for a survey this notification will be fired and publisher will make no money from that survey. User not eligible notification will fire after survey received when user start completing the survey.
+
+Below you can see an example of how you can register and listen within your code to Pollfish user not eligible notification:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+	.pollfishUserNotEligibleListener(new PollfishUserNotEligibleListener() {
+    	@Override
+    	public void onUserNotEligible()
+    	{}
+    	});
+	.build();
+```
+<br/>
 
 
+.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> 
 
 
 
