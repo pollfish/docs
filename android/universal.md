@@ -200,7 +200,7 @@ Below you can see all the available options of ParamsBuilder instance"
 
 No | Description
 ------------ | -------------
-9.1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator (small red rectangle).
+9.1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator (small red rectangle)
 9.2 | **.requestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
 9.3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to Position of the indicator
 9.4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
@@ -225,8 +225,8 @@ Sets Position where you wish to place  Pollfish indicator. There are six differe
 
 If you do not set explicity a position for Pollfish indicator, it will appear by default at Position.BOTTOM_RIGHT
 <br/><br/>
-Below you can see an example on how we can set Pollfish inticator to slide from top right corner of the screen:
-
+Below you can see an example on how you can set Pollfish indicator to slide from top right corner of the screen:
+<br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.indicatorPosition(Position.TOP_RIGHT)
@@ -240,7 +240,7 @@ Sets a unique id to identify a user and be passed through server-to-server callb
 In order to register for such callbacks you can set up your server URL on your app's page on Pollfish Developer Dashboard and then pass your requestUUID through ParamsBuilder object.
 
 ![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/201860351/Screen_Shot_2015-08-19_at_1.30.21_PM.png)
-<br/>
+<br/><br/>
 Here is an example of setting a requestUUID:
 <br/>
 ```java
@@ -274,6 +274,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.userLayout((ViewGroup) getWindow().getDecorView())
 					.build();
 ```
+<br/>
 #### 9.5 .releaseMode(boolean releaseMode)
 
 Sets Pollfish SDK to Developer or Release mode
