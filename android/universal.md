@@ -208,13 +208,12 @@ Below you can see all the available options of ParamsBuilder instance"
 2 | **.requestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
 3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to Position of the indicator
 4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
+5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
+6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
+7 | **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
 
 <br/>
 
-**.userLayout(ViewGroup userLayout)** | Sets User View layout that Pollfish surveys will be rendered above it
-**.releaseMode(boolean releaseMode)** | Sets Pollfish SDK to Developer or Release mode
-**.customMode(boolean customMode)** | Initializes Pollfish in custom mode
-**.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**| Sets a notification listener when Pollfish Survey is received
 **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)** | Sets a notification listener when Pollfish Survey is not available
 **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)** | Sets a notification listener when Pollfish Survey is completed
 **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)** | Sets a notification listener when a user is not eligible for a Pollfish survey
