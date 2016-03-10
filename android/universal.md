@@ -225,7 +225,7 @@ No | Description
 
 <br/>
 <br/>
-## 9.1 - .indicatorPosition(int position)
+### 9.1 - .indicatorPosition(int position)
 Sets the Position where you wish to place the Pollfish indicator.There are six different options: 
 
 - Position.TOP_LEFT 
