@@ -323,18 +323,15 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **9.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
 
-Sets a notification listener when Pollfish Survey is received.
-
-You can also get informed about the type of survey (playful or not) that was received and its price shown in USD cents.
+Sets a notification listener when a Pollfish Survey is received. With this notification publisher can also get informed about the type of survey (playful or not) that was received and its price, shown in USD cents.
 
 Below you can see an example of how you can register and listen within your code and ParamsBuilder instance to Pollfish survey received notification:
 <br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 				.pollfishSurveyReceivedListener(new PollfishSurveyReceivedListener() {
-                            		@Override
-                            		public void onPollfishSurveyReceived(final boolean playfulSurvey, final int surveyPrice) {
-                                	 }
+                            	  @Override
+                            	  public void onPollfishSurveyReceived(final boolean playfulSurvey, final int surveyPrice) {}
                         	});
 				.build();
 ```
