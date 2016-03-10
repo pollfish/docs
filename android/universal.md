@@ -195,19 +195,22 @@ Add the following paragraph to your app's privacy policy:
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys.
 
 
-### 7.1. ParamsBuilder available options (optional)
+### 9. ParamsBuilder available options (optional)
 
 As we have seen in previous section ParamsBuilder instance requires only one mandatory param, the API key of the app. However we can set several other params to control the behaviour of Pollfish surveys within your app or register to several notifications. 
 <br/>
 Below you can see all the available options of ParamsBuilder instance"
 <br/>
+
+. | .
+------------ | -------------
+1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator.
+2 | **.requestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to Position of the indicator
+4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
+
 <br/>
 
-Name | Description
------------- | -------------
-**.indicatorPosition(int position)** | Sets the Position where you wish to place the Pollfish indicator.
-**.requestUUID(String requestUUID)** | Sets a unique id to identify a user and be passed through server-to-server callbacks
-**.indicatorPadding(int padding)** | Sets padding (in dp) from top or bottom according to Position of the indicator
 **.userLayout(ViewGroup userLayout)** | Sets User View layout that Pollfish surveys will be rendered above it
 **.releaseMode(boolean releaseMode)** | Sets Pollfish SDK to Developer or Release mode
 **.customMode(boolean customMode)** | Initializes Pollfish in custom mode
