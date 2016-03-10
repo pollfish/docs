@@ -193,7 +193,7 @@ Add the following paragraph to your app's privacy policy:
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys.
 
 
-### 9. ParamsBuilder available options (optional)
+#### 9. ParamsBuilder available options (optional)
 
 As we have seen in previous section ParamsBuilder instance requires only one mandatory param, the API key of the app. 
 
@@ -244,7 +244,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 ```
 
 <br/>
-### 9.2 .requestUUID(String requestUUID)
+#### 9.2 .requestUUID(String requestUUID)
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
 
@@ -260,7 +260,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 
-### 9.3 .indicatorPadding(int padding)
+#### 9.3 .indicatorPadding(int padding)
 
 Sets padding (in dp) of Pollfish indicator, from top or bottom according to Position of the indicator as specified before 
 Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top.
