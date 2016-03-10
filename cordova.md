@@ -300,3 +300,8 @@ pollfishplugin.setAttributesMap(userAttributes);
 For more information on setting up Cordova see [the documentation](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 
 For more info about Pollfish please check [Pollfish Website](http://www.pollfish.com)
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
