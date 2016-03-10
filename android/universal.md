@@ -253,9 +253,9 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 
 Sets padding (in dp) of Pollfish indicator, from top or bottom according to Position of the indicator as specified before 
 Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top.
-<br/>
-Here is an example of setting a padding of Pollfish indicator to be 35dp from the top of the screen:
 <br/><br/>
+Here is an example of setting a padding of Pollfish indicator to be 35dp from the top of the screen:
+<br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.indicatorPosition(Position.TOP_RIGHT)
