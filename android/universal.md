@@ -598,41 +598,46 @@ public void onPollfishClosed () {
 <br/>
 ### 12. Other actions (optional)
 
+#### **12.1. Manually show or hide Pollfish in an Activity**
 
+You can manually show or hide Pollfish indicator or survey panel by calling anywhere in your activity after the initialization line:  
 
-### 16\. Manually show or hide Pollfish in an Activity (optional)
-
-You can manually show or hide Pollfish indicator or panel by calling anywhere in your activity after the initialization line:  
-
-```
+```java
 PollFish.show();
 ```
 
 or  
 
-```
+```java
 PollFish.hide();
 ```
 
-### 17\. Proguard (optional)
+#### **12.2. Check if Pollfish survey is still available on your device**
+
+It happens that time had past since you initialized Pollfish and a survey is received. If you want to check is survey is still avaialble on your device and has not expired you can check by calling:
+
+```java
+PollFish.isPollfishPresent();
+```
+
+### 13. Proguard (optional)
 
 If you use proguard with your app, please insert the following line in your proguard configuration file:  
 
-```
--libraryjars libs/pollfish.jar // not necessary if using Android Studio or .aar library
+```java
+-libraryjars libs/pollfish-universal-4.2.0.jar // not necessary if using Android Studio or .aar library
 -keep class com.pollfish.** { *; }
 ```
 
-where pollfish.jar is the latest pollfish jar you use in your app and is placed in your libs folder.  
+where pollfish-universal-4.2.0.jar is the latest pollfish jar you use in your app and is placed in your libs folder (if you used Pollfish jar file).
+| **Note:** Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!
+| **Note:**  Include all Google Play services necessary Proguard code as described
 
-**Note:**  
-
-**- Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!**  
-**- Include all Google Play services necessary Proguard code as described [here](//developer.android.com/google/play-services/setup.html#Proguard) (if you use them in your project).**  
+[here](//developer.android.com/google/play-services/setup.html#Proguard) (if you use them in your project).**  
 
 If you do not include Google Play services in your project, add the following code in your Proguard file:  
 
-```
+```java
 -keep class com.google.android.gms.** { *; }
 -dontwarn com.google.android.gms.**
  
@@ -654,32 +659,36 @@ If you do not include Google Play services in your project, add the following co
 }
 ```
 
-### 18\. Highly targeted surveys (optional)
+### 14. Highly targeted surveys (optional)
 
 If you wish to receive highly targeted surveys in your app and increase your chances for a higher revenue you can include any or all of the following permissions in your AndroidManifest.xml file:  
 
-```
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+```java
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
 
+If you want to be eligible for beacon based surveys for your app you can include the following permsissionsin your AndroidManifest.xml file:  
 
-### 19\. Set user attributes (optional)
+```java
+<uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+```
 
-You can set attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys.  
+### 15. Sent user attributes (optional)
 
+You can sent attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys.  
 Just import:  
 
 ```
 import com.pollfish.constants.UserProperties;
 ```
 
-and set any of the attributes like below. Please remember to call this only after calling the init function.  
+and set any of the attributes like below. Please remember to call this only after calling init function.  
 
-```
+```java
 UserProperties userProperties = new UserProperties();
 
 userProperties.setGender(Gender.MALE).setAge(Age._34).setMaritalStatus(MarritalStatus.SINGLE);
