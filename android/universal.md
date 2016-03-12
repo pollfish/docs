@@ -325,9 +325,9 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **9.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
 
-Sets a notification listener when a Pollfish Survey is received. With this notification publisher can also get informed about the type of survey (playful or not) that was received and money to be earned, shown in USD cents.
+Sets a notification listener when a Pollfish Survey is received. With this notification publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
 
-Below you can see an example of how you can register and listen within your code to Pollfish survey received notification:
+Below you can see an example of how you can register and listen within your code to Pollfish survey received notification through ParamsBuilder instance:
 <br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
@@ -339,11 +339,26 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **9.8 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
+#### **9.8 .pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener  pollfishSurveyNotAvailableListener)**
 
-Sets a notification listener when a Pollfish Survey is completed. With this notification publisher can also get informed about the type of survey (playful or not) that was completed and its money earned in USD cents.
+Sets a notification listener when a Pollfish Survey is not available after initialization.
 
-Below you can see an example of how you can register and listen within your code to Pollfish survey completed notification:
+Below you can see an example of how you can register and listen within your code to Pollfish survey not available notification through ParamsBuilder instance:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+	.pollfishSurveyNotAvailableListener(new PollfishSurveyNotAvailableListener() {
+    @Override
+    public void onPollfishSurveyNotAvailable(){}
+    });
+	.build();
+```
+<br/>
+#### **9.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
+
+Sets a notification listener when a Pollfish Survey is completed. With this notification, publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
+
+Below you can see an example of how you can register and listen within your code to Pollfish survey completed notification through ParamsBuilder instance:
 <br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
