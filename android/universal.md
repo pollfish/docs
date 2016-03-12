@@ -163,7 +163,7 @@ public void onResume() {
 ```
 
 
-**Note: If your app calls setContentView() function more than once in your Activity lifecycle you should call Pollfish.init() or Pollfish.customInit() respectively just after each setContentView to use Pollfish properly.**  
+| **Note:** If your app calls setContentView() function more than once in your Activity lifecycle you should call Pollfish.init() or Pollfish.customInit() respectively just after each setContentView to use Pollfish properly.**  
 <br/>
 
 ### 8\.  Update your Privacy Policy
@@ -189,15 +189,15 @@ In this section we will list several options that can be used to control Pollfis
 
 ### 9. ParamsBuilder available options (optional)
 
-As we have seen in previous section ParamsBuilder instance requires only one mandatory param, the API key of the app. 
+As we have seen in section 7, ParamsBuilder instance requires only one mandatory param, the API key of the app that you acquired at step 2. 
 
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 ```
 
-However we can set several other params to control the behaviour of Pollfish surveys within your app or register to several notifications.
+However you can set several other params to control the behaviour of Pollfish surveys within your app or register to several notifications.
 <br/>
-Below you can see all the available options of ParamsBuilder instance"
+Below you can see all the available options of ParamsBuilder instance. All these functions can be called in any order consequently prior calling build() to ParamsBuilder instance.
 <br/>
 
 No | Description
@@ -216,7 +216,7 @@ No | Description
 9.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
 <br/>
 #### **9.1 .indicatorPosition(int position)**
-Sets Position where you wish to place  Pollfish indicator. There are six different options available: 
+Sets Position where you wish to place  Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish-images/pollfish_indicator_left.png). There are six different options available: 
 
 - Position.TOP_LEFT 
 - Position.BOTTOM_LEFT
