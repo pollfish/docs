@@ -329,13 +329,6 @@ Sets a notification listener when a Pollfish Survey is received. With this notif
 
 Below you can see an example of how you can register and listen within your code to Pollfish survey received notification through ParamsBuilder instance:
 <br/>
-Just import:  
-
-```java
-import com.pollfish.interfaces.PollfishSurveyReceivedListener; 
-```
-
-
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishSurveyReceivedListener(new PollfishSurveyReceivedListener() {
@@ -455,28 +448,28 @@ public void onConfigurationChanged(Configuration newConfig) {
 <br/>
 ### 11. Implement Pollfish event listeners through your Activity (optional)
 
-#### 11.1. Get notified when a Pollfish survey is received
+#### **11.1. Get notified when a Pollfish survey is received**
 
-You can be notified when a Pollfish survey is received. Just import:  
+You can be notified when a Pollfish survey is received. With this notification publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
 
-```
+ Just import:  
+
+```java
 import com.pollfish.interfaces.PollfishSurveyReceivedListener; 
 ```
-
+<br/>
 and make your Activity implement PollfishSurveyReceivedListener, e.g 
 
-```
+```java
 public class MyActivity extends Activity implements PollfishSurveyReceivedListener
 ```
 
-and Override the onPollfishSurveyReceived() function. You can also get informed about the type of survey (playful or not) that was received and its price shown in USD (estimated based on daily exchange currency).  
+and Override the onPollfishSurveyReceived() function. 
 
 ```
 @Override
 public void onPollfishSurveyReceived(boolean playfulSurveys, int surveyPrice) {
-
   Log.d("Pollfish", "Pollfish survey received - Playful survey: " + playfulSurveys + " with price: " + surveyPrice);
-
 }
 ```
 
