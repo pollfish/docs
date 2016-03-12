@@ -2,7 +2,7 @@
 
 <h2 class="static-page-title">PUBLISHER TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 02/08/2016</div>
+<div class="updatedOn">Last updated: 03/15/2016</div>
 
 <br />
 
