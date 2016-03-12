@@ -400,7 +400,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **9.12 .pollfishClosedListener(PollfishClosedListener pollfishClosedListener) **
+#### **9.12 .pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**
 
 Sets a notification listener Pollfish survey panel is closed. Publishers usually use this notification to resume a game that they have previously paused when Pollfish panel opened.
 
@@ -415,20 +415,20 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-
+<br/>
 ### 10. Handling orientation changes (optional)
 
 If your app supports both orientations and **your Activities are recreated** on each orientation change **you should not do anything more**.  
 
-If your app **does not recreate the Activity** on change orientation  
+If your app **does not recreate the Activity** on change orientation: 
 
-e.g you may have in your manifest file, AndroidManifest.xml, the following lines if targeting prior Android 3.2:  
+e.g you may have in your AndroidManifest.xml file, the following lines if targeting prior Android 3.2:  
 
 ```
 <activity android:name=".MyActivity" android:configChanges="keyboardHidden|orientation"> 
 ```
 
-or beginning with Android 3.2
+or beginning with Android 3.2:
 
 ```
 <activity android:name=".MyActivity" android:configChanges="keyboardHidden|orientation|screenSize">
@@ -441,7 +441,7 @@ If any of the above is true you should override the **onConfigurationChanged** m
 public void onConfigurationChanged(Configuration newConfig) {
 	super.onConfigurationChanged(newConfig);
 	
-	ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
+    	PollFish.initWith(this, new ParamsBuilder("YOUR_API_KEY").build());
 }
 ```
 
