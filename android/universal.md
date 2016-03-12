@@ -57,9 +57,9 @@ Pollfish Android SDK works with Android 10 (2.3.3) and above.
 
 Register at [www.pollfish.com](//www.pollfish.com/login/publisher) and download Pollfish Android SDK.
 
-### 2. Add new app in Pollfish panel and copy the given API Key
+### 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
 
-Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your init function in your app.
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and add a new app on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later in your initialization function in your app.
 
 ### 3. Integrate Google Play Services to your project
 
