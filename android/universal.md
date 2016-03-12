@@ -370,25 +370,9 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **9.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
-
-Sets a notification listener when a Pollfish Survey is completed. With this notification publisher can also get informed about the type of survey (playful or not) that was completed and its money earned in USD cents.
-
-Below you can see an example of how you can register and listen within your code to Pollfish survey completed notification:
-<br/>
-```java
-ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
-	.pollfishSurveyCompletedListener(new PollfishSurveyCompletedListener() {
-    @Override
-    public void onPollfishSurveyCompleted(final boolean playfulSurvey, final int surveyPrice)
-    {}
-    });
-	.build();
-```
-<br/>
 #### **9.10 .pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**
 
-Sets a notification listener when a user is not eligible for a Pollfish survey. If a user is not eligible for a survey this notification will be fired and publisher will make no money from that survey. User not eligible notification will fire after survey received when user start completing the survey.
+Sets a notification listener when a user is not eligible for a Pollfish survey. If a user is not eligible for a survey this notification will be fired and publisher will make no money from that survey. User not eligible notification will fire after survey received when user starts completing the survey.
 
 Below you can see an example of how you can register and listen within your code to Pollfish user not eligible notification:
 <br/>
@@ -396,89 +380,47 @@ Below you can see an example of how you can register and listen within your code
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishUserNotEligibleListener(new PollfishUserNotEligibleListener() {
     	@Override
-    	public void onUserNotEligible()
-    	{}
+    	public void onUserNotEligible(){}
+    	});
+	.build();
+```
+<br/>
+#### **9.11 .pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**
+
+Sets a notification listener Pollfish survey panel is opened. Publishers usually use this notification to pause a game until Pollfish panel is closed again.
+
+Below you can see an example of how you can register and listen within your code to Pollfish panel opened notification:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+	.pollfishOpenedListener(new PollfishOpenedListener() {
+    	@Override
+    	public void onPollfishOpened(){}
+    	});
+	.build();
+```
+<br/>
+#### **9.12 .pollfishClosedListener(PollfishClosedListener pollfishClosedListener) **
+
+Sets a notification listener Pollfish survey panel is closed. Publishers usually use this notification to resume a game that they have previously paused when Pollfish panel opened.
+
+Below you can see an example of how you can register and listen within your code to Pollfish panel closed notification:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+	.pollfishClosedListener(new PollfishClosedListener() {
+    	@Override
+    	public void onPollfishClosed(){}
     	});
 	.build();
 ```
 <br/>
 
+### 10. Handling orientation changes (optional)
 
-.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> 
+If your app supports both orientations and **your Activities are recreated** on each orientation change **you should not do anything more**.  
 
-
-
-
-
-
-
-### Other init methods (optional)
-
-**7.1 Init method with Pollfish listeners without the need of implementing them in the Activity**
-
-You can use Pollfish alternative init and custom init functions that include Pollfish listeners within the initialization function.
-
-```
-PollFish.init(Activity act, String YOUR_API_KEY, Position p, int indPadding, 
-  PollfishSurveyReceivedListener pollfishSurveyReceivedListener, 
-  PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener, 
-  PollfishSurveyCompletedListener pollfishSurveyCompletedListener, 
-  PollfishOpenedListener pollfishOpenedListener, 
-  PollfishClosedListener pollfishClosedListener, 
-  PollfishUserNotEligibleListener pollfishUserNotEligibleListener);
-```
-
-for example:
-
-```
-PollFish.init(this,"your_api_key", Position.BOTTOM_RIGHT, 5, 
-  null, null ,new PollfishSurveyCompletedListener() {
-  
-    @Override
-    public void onPollfishSurveyCompleted(boolean playfulSurvey, int surveyPrice) {
-      
-      Log.d("Pollfish", "Pollfish survey completed - Playful survey: " + playfulSurveys + " with price: " + surveyPrice);
-
-    }
-      
-  },null,null,null,null)e
-```
-
-**7.2 Init method with option of passing user view layout in the init function**
-
-If Pollfish regular init function affects your UI by creating flings or any other issues you can try passing your view's layout in the init function.
-
-```
-PollFish.init(Activity act, String YOUR_API_KEY, Position pos, int padding, ViewGroup userLayout);
-```
-
-for example:
-
-```
-@Override
-public void onResume() {
-    super.onResume();
-    PollFish.init(this, "your_api_key_here", Position.BOTTOM_LEFT, 5, (ViewGroup) getWindow().getDecorView());
-}
-```
-**7.3 Init method for passing custom parameter for server to server postback calls**
-
-If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function within the SDK and receive it back with Server to Server, survey completed postback call you can use:
-
-```java
-PollFish.init(Activity act, String YOUR_API_KEY, Position pos, int padding, ViewGroup userLayout, String request_uuid);
-```
-where userLayout is the view you would like ot show Pollfish as described in 7.2. You should pass null if you would like the SDK to handle it on its own.
-
-
-
-## Handling orientation changes (optional)
-
-### 9\. Handle Orientations
-
-If your app supports both orientations and **your activities are recreated** on each orientation change **you should not do anything more**.  
-
-If your app **does not recreate the activity** on change orientation  
+If your app **does not recreate the Activity** on change orientation  
 
 e.g you may have in your manifest file, AndroidManifest.xml, the following lines if targeting prior Android 3.2:  
 
@@ -497,11 +439,9 @@ If any of the above is true you should override the **onConfigurationChanged** m
 ```
 @Override
 public void onConfigurationChanged(Configuration newConfig) {
-
-    super.onConfigurationChanged(newConfig);
-
-    PollFish.init(this, "your_api_key_here", Position.BOTTOM_LEFT, 50);
-
+	super.onConfigurationChanged(newConfig);
+	
+	ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 }
 ```
 
