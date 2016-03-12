@@ -255,7 +255,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **9.3 .indicatorPadding(int padding)**
 
-Sets padding (in dp) of Pollfish indicator, from top or bottom of the screeb according to the specified Position of the indicator as described before in 9.1. Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top of the middle of the screen.
+Sets padding (in dp) of Pollfish indicator, from top or bottom of the screen according to the specified Position of the indicator as described before in 9.1. Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top of the middle of the screen.
 <br/><br/>
 Here is an example of setting padding of Pollfish indicator to be 35dp from the top of the screen:
 <br/>
@@ -268,10 +268,10 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **9.4 .userLayout(ViewGroup userLayout)**
 
-Sets user's View layout that Pollfish surveys will be rendered above it. If Pollfish regular init function affects the UI of your app by creating flings or any other issues you can try passing a view layout of your app that can be used to render above Pollfish 
+Sets user's View layout that Pollfish surveys will be rendered above it. If Pollfish regular init function affects the UI of your app by creating flings or any other issues you can try passing a view layout of your app that can be used to render above Pollfish surveys
 <br/>
-Here is an example of how a user can pass a view on his own through ParamsBuilder instance during initialization.
-<br/>
+Here is an example of how a user can pass a view of his Activity through ParamsBuilder instance during initialization.
+<br/><br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.userLayout((ViewGroup) getWindow().getDecorView())
@@ -286,12 +286,12 @@ Sets Pollfish SDK to Developer or Release mode
 
 You can use Pollfish either in Developer or in Release mode.  
 
-*   **Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
-*   **Release mode** is the mode to be used for a released app in any app store(start receiving paid surveys).
+*   **Developer mode** is used to show to the developer how Pollfish surveys will be shown through an app (useful during development and testing).
+*   **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
 
 Pollfish runs in developer mode by default (when you sign your apk with a debug key). It will turn to Release mode automatically when you sign your apk with a release key.
 
-However you can explicity request Pollfish SDK to run in release or developer mode by setting mode through ParamsBuilder instance during initialization.
+However you can explicity request Pollfish SDK to run in release or developer mode by setting mode through ParamsBuilder instance during initialization. If you explicity request release mode or not through ParamsBuilder, type of signing key is ignored and does not affect Pollfish mode any more.
 <br/>
 
 Below you can see an example on how you can turn your app in Release mode explicitly:
