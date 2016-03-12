@@ -457,14 +457,14 @@ You can be notified when a Pollfish survey is received. With this notification p
 ```java
 import com.pollfish.interfaces.PollfishSurveyReceivedListener; 
 ```
-<br/>
-and make your Activity implement PollfishSurveyReceivedListener, e.g 
+
+and make your Activity implement PollfishSurveyReceivedListener, for example:
 
 ```java
 public class MyActivity extends Activity implements PollfishSurveyReceivedListener
 ```
 
-and Override the onPollfishSurveyReceived() function. 
+and Override onPollfishSurveyReceived() function: 
 
 ```
 @Override
@@ -473,15 +473,17 @@ public void onPollfishSurveyReceived(boolean playfulSurveys, int surveyPrice) {
 }
 ```
 
-### 11\. Get notified when no Pollfish survey is available (optional)
+#### **11.2. Get notified when a Pollfish survey is not available**
 
-You can be notified when no Pollfish survey is available. Just import:  
+You can be notified when Pollfish survey is not available. 
+
+Just import:  
 
 ```
 import com.pollfish.interfaces.PollfishSurveyNotAvailableListener;
 ```
 
-and Override the onPollfishSurveyNotAvailable () function  
+and Override onPollfishSurveyNotAvailable() function:  
 
 ```
 @Override
@@ -490,21 +492,23 @@ public void onPollfishSurveyNotAvailable() {
 }
 ```
 
-### 12\. Get notified when Pollfish Survey is completed (optional)
+#### **11.3. Get notified when a Pollfish survey is completed**
 
-You can be notified when a user completed a survey. Just import:  
+You can be notified when a user completed a survey. With this notification, publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
+
+Just import:  
 
 ```
 import com.pollfish.interfaces.PollfishSurveyCompletedListener;
 ```
 
-and make your Activity implement SurveyCompletedListener, e.g  
+and make your Activity implement SurveyCompletedListener,for example: 
 
 ```
 public class MyActivity extends Activity implements PollfishSurveyCompletedListener 
 ```
 
-and Override the onPollfishSurveyCompleted() function. You can also get informed about the type of survey (playful or not) that was completed and its price shown in USD (estimated based on daily exchange currency).  
+and Override  onPollfishSurveyCompleted() function:
 
 ```
 @Override
@@ -514,6 +518,10 @@ public void onPollfishSurveyCompleted(boolean playfulSurveys , int surveyPrice) 
 
 }
 ```
+
+
+
+
 
 ### 13\. Get notified when a user is not eligible for a Pollfish survey (optional)
 
