@@ -241,7 +241,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
 
-In order to register for such callbacks you can set up your server URL on your app's page on Pollfish Developer Dashboard and then pass your requestUUID through ParamsBuilder object.
+In order to register for such callbacks you can set up your server URL on your app's page on Pollfish Developer Dashboard and then pass your requestUUID through ParamsBuilder object during initialization. On each survey completion you will receive a callback to your server including the requestUUID param passed.
 
 ![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/201860351/Screen_Shot_2015-08-19_at_1.30.21_PM.png)
 <br/><br/>
@@ -255,10 +255,9 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **9.3 .indicatorPadding(int padding)**
 
-Sets padding (in dp) of Pollfish indicator, from top or bottom according to Position of the indicator as specified before 
-Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top.
+Sets padding (in dp) of Pollfish indicator, from top or bottom of the screeb according to the specified Position of the indicator as described before in 9.1. Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top of the middle of the screen.
 <br/><br/>
-Here is an example of setting a padding of Pollfish indicator to be 35dp from the top of the screen:
+Here is an example of setting padding of Pollfish indicator to be 35dp from the top of the screen:
 <br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
