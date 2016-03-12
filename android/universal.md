@@ -619,7 +619,7 @@ It happens that time had past since you initialized Pollfish and a survey is rec
 ```java
 PollFish.isPollfishPresent();
 ```
-
+<br/><br/>
 ### 13. Proguard (optional)
 
 If you use proguard with your app, please insert the following line in your proguard configuration file:  
@@ -630,6 +630,7 @@ If you use proguard with your app, please insert the following line in your prog
 ```
 
 where pollfish-universal-4.2.0.jar is the latest pollfish jar you use in your app and is placed in your libs folder (if you used Pollfish jar file).
+
 | **Note:** Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!
 | **Note:**  Include all Google Play services necessary Proguard code as described
 
@@ -658,7 +659,7 @@ If you do not include Google Play services in your project, add the following co
     public static final ** CREATOR;
 }
 ```
-
+<br/><br/>
 ### 14. Highly targeted surveys (optional)
 
 If you wish to receive highly targeted surveys in your app and increase your chances for a higher revenue you can include any or all of the following permissions in your AndroidManifest.xml file:  
@@ -676,7 +677,7 @@ If you want to be eligible for beacon based surveys for your app you can include
 <uses-permission android:name="android.permission.BLUETOOTH" />
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 ```
-
+<br/><br/>
 ### 15. Sent user attributes (optional)
 
 You can sent attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys.  
