@@ -216,7 +216,7 @@ No | Description
 9.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
 <br/>
 #### **9.1 .indicatorPosition(int position)**
-Sets Position where you wish to place  Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish-images/pollfish_indicator_left.png). There are six different options available: 
+Sets Position where you wish to place  Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png). There are six different options available: 
 
 - Position.TOP_LEFT 
 - Position.BOTTOM_LEFT
