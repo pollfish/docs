@@ -329,6 +329,13 @@ Sets a notification listener when a Pollfish Survey is received. With this notif
 
 Below you can see an example of how you can register and listen within your code to Pollfish survey received notification through ParamsBuilder instance:
 <br/>
+Just import:  
+
+```java
+import com.pollfish.interfaces.PollfishSurveyReceivedListener; 
+```
+
+
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishSurveyReceivedListener(new PollfishSurveyReceivedListener() {
@@ -444,10 +451,11 @@ public void onConfigurationChanged(Configuration newConfig) {
     	PollFish.initWith(this, new ParamsBuilder("YOUR_API_KEY").build());
 }
 ```
+<br/>
+<br/>
+### 11. Implement Pollfish event listeners through your Activity (optional)
 
-## Implement Pollfish event listeners
-
-### 10\. Get notified when a Pollfish survey is received (optional)
+#### 11.1. Get notified when a Pollfish survey is received
 
 You can be notified when a Pollfish survey is received. Just import:  
 
