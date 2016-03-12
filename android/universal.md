@@ -47,7 +47,7 @@ v4.0.0
 3. Add permissions to AndroidManifest.xml
 4. Call initialization function to activate Pollfish
 5. Update your privacy policy
-6. Set to **Release mode** and publish your app in any app store
+6. Set to **Release mode** and publish your app at any app store
 
 > **Requirements:** Pollfish Android SDK works with Android 10 (2.3.3) and above.  
 
