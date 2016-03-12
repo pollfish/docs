@@ -424,19 +424,19 @@ If your app **does not recreate the Activity** on change orientation:
 
 e.g you may have in your AndroidManifest.xml file, the following lines if targeting prior Android 3.2:  
 
-```
+```java
 <activity android:name=".MyActivity" android:configChanges="keyboardHidden|orientation"> 
 ```
 
 or beginning with Android 3.2:
 
-```
+```java
 <activity android:name=".MyActivity" android:configChanges="keyboardHidden|orientation|screenSize">
 ```
 
 If any of the above is true you should override the **onConfigurationChanged** method and initialize Pollfish again
 
-```
+```java
 @Override
 public void onConfigurationChanged(Configuration newConfig) {
 	super.onConfigurationChanged(newConfig);
@@ -466,139 +466,139 @@ public class MyActivity extends Activity implements PollfishSurveyReceivedListen
 
 and Override onPollfishSurveyReceived() function: 
 
-```
+```java
 @Override
 public void onPollfishSurveyReceived(boolean playfulSurveys, int surveyPrice) {
   Log.d("Pollfish", "Pollfish survey received - Playful survey: " + playfulSurveys + " with price: " + surveyPrice);
 }
 ```
-
+<br/>
 #### **11.2. Get notified when a Pollfish survey is not available**
 
 You can be notified when Pollfish survey is not available. 
 
 Just import:  
 
-```
+```java
 import com.pollfish.interfaces.PollfishSurveyNotAvailableListener;
 ```
 
 and Override onPollfishSurveyNotAvailable() function:  
 
-```
+```java
 @Override
 public void onPollfishSurveyNotAvailable() {
   Log.d("Pollfish", "Survey not available!");
 }
 ```
-
+<br/>
 #### **11.3. Get notified when a Pollfish survey is completed**
 
 You can be notified when a user completed a survey. With this notification, publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
 
 Just import:  
 
-```
+```java
 import com.pollfish.interfaces.PollfishSurveyCompletedListener;
 ```
 
 and make your Activity implement SurveyCompletedListener,for example: 
 
-```
+```java
 public class MyActivity extends Activity implements PollfishSurveyCompletedListener 
 ```
 
 and Override  onPollfishSurveyCompleted() function:
 
-```
+```java
 @Override
 public void onPollfishSurveyCompleted(boolean playfulSurveys , int surveyPrice) {
-
   Log.d("Pollfish", "Pollfish survey completed - Playful survey: " + playfulSurveys + " with price: " + surveyPrice);
 
 }
 ```
+<br/>
+#### **11.4. Get notified when a user is not eligible for a Pollfish survey**
 
+You can be notified when a user is not eligible for a Pollfish survey. If a user is not eligible for a survey, this notification will be fired and publisher will make no money from that survey. User not eligible notification will fire after survey received when user starts completing the survey.
 
+Just import:  
 
-
-
-### 13\. Get notified when a user is not eligible for a Pollfish survey (optional)
-
-You can be notified when a user is not eligible for a Pollfish survey after accepting to take it. Just import:  
-
-```
+```java
 import com.pollfish.interfaces.PollfishUserNotEligibleListener;
 ```
 
 and make your Activity implement PollfishUserNotEligibleListener, e.g  
 
-```
+```java
 public class MyActivity extends Activity implements PollfishUserNotEligibleListener
 ```
 
 and Override the onUserNotEligible() function 
 
-```
+```java
 @Override
 public void onUserNotEligible() {
 	Log.d("Pollfish", "onUserNotEligible()");
 
 }
 ```
+<br/>
+#### **11.5. Get notified when Pollfish Survey panel has opened**
 
-### 14\. Get notified when Pollfish Survey is opened (optional)
+You can be notified when a Pollfish survey panel has opened. Publishers usually use this notification to pause a game until Pollfish panel is closed again.
 
-You can be notified when a Pollfish survey is opened. Just import:  
+Just import:  
 
-```
+```java
 import com.pollfish.interfaces.PollfishOpenedListener; 
 ```
 
 and make your Activity implement PollfishOpenedListener, e.g  
 
-```
+```java
 public class MyActivity extends Activity implements PollfishOpenedListener
 ```
 
 and Override the onPollfishOpened() function  
 
-```
+```java
 @Override
 public void onPollfishOpened () {
-
     Log.d("Pollfish", "Survey opened!");
 }
 ```
+<br/>
+#### **11.6. Get notified when Pollfish Survey panel has closed**
 
+You can be notified when a Pollfish survey panel has closed. Publishers usually use this notification to resume a game that they have previously paused when Pollfish panel opened.
 
-### 15\. Get notified when Pollfish Survey is closed (optional)
+Just import:  
 
-You can be notified when a Pollfish survey is closed. Just import:  
-
-```
+```java
 import com.pollfish.interfaces.PollfishClosedListener;
 ```
 
 and make your Activity implement PollfishClosedListener, e.g  
 
-```
+```java
 public class MyActivity extends Activity implements PollfishClosedListener
 ```
 
 and Override the onPollfishClosed() function  
 
-```
+```java
 @Override
 public void onPollfishClosed () {
-
     Log.d("Pollfish", "Survey closed!");
 }
 ```
 
-*** Usually used in game apps to resume the game**
 
-## Other actions
+<br/>
+### 12. Other actions (optional)
+
+
 
 ### 16\. Manually show or hide Pollfish in an Activity (optional)
 
