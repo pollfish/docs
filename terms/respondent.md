@@ -1,7 +1,7 @@
 <div>
 <h2 class="static-page-title">SURVEY RESPONDENTS TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 07/21/2015</div>
+<div class="updatedOn">Last updated: 03/15/2016</div>
 
 <br />
 
@@ -9,9 +9,9 @@
 
 POLLFISH is committed to preserving your privacy. Please read the following privacy policy to understand how we use and protect the information obtained from those participating in our surveys (the “surveys”).
 
-### What is POLLFISH and how does it Work?
+### What is Pollfish and how does it Work?
 <br />
-<b>Unlike other Services of this kind, POLLFISH provides respondents of our surveys (“users” or “survey respondents”) a detailed account of how POLLFISH works and what sorts of user related data and Info POLLFISH collects, stores and processes. POLLFISH respects your Privacy and is committed to building a relationship of trust and full transparency between POLLFISH and Respondents of its surveys.</b>
+<b>Unlike other Services of this kind, Pollfish provides respondents of our surveys (“users” or “survey respondents”) a detailed account of how POLLFISH works and what sorts of user related data and Info Pollfish collects, stores and processes. Pollfish respects your Privacy and is committed to building a relationship of trust and full transparency between Pollfish and Respondents of its surveys.</b>
 
 Pollfish is an on-line survey platform (“The Service”), through which, anyone (referred to as “Researcher”) may conduct surveys. By registering to Pollfish, the researcher has the opportunity to create a questionnaire (or ask Pollfish to create a questionnaire for him based on specific data), and address the questionnaire to the specific public he targets. Pollfish collaborates with Publishers of applications for smartphones as well as with owners of Websites, in order to have access to users of such applications and/or visitors of Websites and delivers to the researchers the answers to their questionnaires. Respondents of surveys may enter a draw for a prize when completing a survey (if and whenever such a Prize is set by Pollfish or a Researcher).
 
@@ -52,6 +52,11 @@ When a user connects to a mobile application, which cooperates with Pollfish, a 
     20.  Pollfish api key for the application used
     21.  If the application used runs the sdk version of google play or universal
     22.  User’s ip address (retrieved when connecting to the server)
+    23.	 Device brand info
+    24.	 Device board info
+    25.	 Android web view user agent
+    26.	 Further location info (latitude, longitude, accuracy, altitude etc.)
+
     
     
 *   #### For iOS:
@@ -76,9 +81,19 @@ All such data are completely anonymous.
 The aforementioned data are collected by POLLFISH under your permission and consent, which has already been granted by you by accepting the app’s terms and conditions/privacy policy provided by the publisher or Pollfish-enabled application owner.
 Under the Pollfish-enabled app’s terms and conditions/privacy policy, the app publisher has informed you and has asked your consent for the collection and use of the aforementioned data by such third parties (including POLLFISH) with which the app has opted to cooperate. Please note that, as regards collection of (precise) location data, Pollfish collects such data only insofar as, by accepting the app-publisher’s terms of use, you have consented to the collection and processing, by the app-publisher, of your geolocation data. If you have blocked collection of such data by the app-publisher, Pollfish shall not be able to collect or process any precise location data of the user. <span style="text-decoration: underline;">The automatically received data/information</span>, as described above, are collected and stored by POLLFISH in order for POLLFISH to be able to discern whether the user is eligible for a survey offer. The aforementioned “response meta-data” are collected, stored, used and processed by POLLFISH, according to the terms of this Policy. Please note that once the user accepts this privacy policy and participates in a survey, Pollfish may be able to collect, additionally, only in Android, the following data:
 
-*   connectable networks
+*   Connectable networks
 *   Device IMEI (only when the app publisher has obtained persmission of the user to access such data
-*   Mac Address
+*   Mac address (only on Android Lollipop and below)
+*   List of running services
+*	Memory information
+*	CPU information
+*	Bluetooth information
+*	List of initial scan results of available BLE devices
+*	Android ID (randomly generated number by the system)
+*	Hardware serial number
+*	List of installed apps
+
+Most of the above data will not be sent/received by Pollfish every time a user accepts this policy and chooses to participate in a survey. Aforementioned data may be collected only if such a collection is necessary in order to meet certain survey parameters and technical survey criteria (e.g if Pollfish needs to micro-target a survey with the help of beacon data (Bluetooth devices), Pollfish may enable retrieval of such data in order to achieve better targeting).
 
 If the user who is offered to participate in a survey chooses not to participate, or declines acceptance of this policy, POLLFISH will not proceed to any further collection of user data but can at all times use and process already collected response meta-data.
 
