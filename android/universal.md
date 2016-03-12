@@ -2,7 +2,7 @@
 v4.2.0
 
 - new init function structure
-- new builder pattern approach on init function
+- new pattern approach on init function
 - added support for beacon surveys
 - added video, rating, slider, open ended, open ended numerical and description questions support
 - deprecated old init methods
@@ -45,10 +45,10 @@ v4.0.0
 2. Import Pollfish classes
 3. Add permissions to AndroidManifest.xml
 4. Call init function to activate Pollfish
-5. Set to **Release mode** and release in any app store
-6. Update your privacy policy
+5. Update your privacy policy
+6. Set to **Release mode** and publish your app in any app store
 
-Pollfish Android SDK works with Android 10 (2.3.3) and above.  
+> **Requirements:** Pollfish Android SDK works with Android 10 (2.3.3) and above.  
 
 <br/><br/><br/><br/>
 ## Steps Analytically
@@ -632,9 +632,9 @@ If you use proguard with your app, please insert the following line in your prog
 where pollfish-universal-4.2.0.jar is the latest pollfish jar you use in your app and is placed in your libs folder (if you used Pollfish jar file).
 
 | **Note:** Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!
-| **Note:**  Include all Google Play services necessary Proguard code as described
+| **Note:** Include all Google Play services necessary Proguard code as described
 
-[here](//developer.android.com/google/play-services/setup.html#Proguard) (if you use them in your project).**  
+[here](//developer.android.com/google/play-services/setup.html#Proguard) (if you use them in your project).
 
 If you do not include Google Play services in your project, add the following code in your Proguard file:  
 
@@ -678,9 +678,10 @@ If you want to be eligible for beacon based surveys for your app you can include
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 ```
 <br/><br/>
-### 15. Sent user attributes (optional)
+### 15. Send user attributes (optional)
 
-You can sent attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys.  
+You can send attributes that you received from your app regarding a user, in order to receive a better fill rate and higher priced surveys.  
+
 Just import:  
 
 ```
