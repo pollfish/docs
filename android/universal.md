@@ -59,11 +59,11 @@ Register at [www.pollfish.com](//www.pollfish.com/login/publisher) and download 
 
 ### 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
 
-Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and add a new app on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later in your initialization function in your app.
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later on when initializing Pollfish within your code.
 
 ### 3. Integrate Google Play Services to your project
 
-Applications that integrate Pollfish SDK are required to include the Google Play services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
+Applications that integrate Pollfish SDK are required to include  Google Play Services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
 
 Pollfish SDK uses only a subset of Google Play Services library so if you want you can only include this subset in your project. 
 
@@ -133,11 +133,13 @@ You should also add the following lines in your AndroidManifest.xml
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 
-Pollfish uses these permissions to track and send the survey responses.  
+Pollfish uses these permissions to track and send survey responses to Pollfish servers.  
 
 ### 7. Initialize Pollfish
 
-After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory parameter which is the API key of your app (step 2 above). In section 7.1 we will see several other params that we can pass to ParamsBuilder instance in order to configure Pollfish behaviour during initialization.
+After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory parameter which is the API key of your app (step 2 above). 
+
+| Note: In section 9 you can see several other params that you can pass to ParamsBuilder instance in order to configure Pollfish behaviour during initialization.
 
 
 ```java
