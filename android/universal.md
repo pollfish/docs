@@ -269,9 +269,9 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 #### **9.4 .userLayout(ViewGroup userLayout)**
 
 Sets user's View layout that Pollfish surveys will be rendered above it. If Pollfish regular init function affects the UI of your app by creating flings or any other issues you can try passing a view layout of your app that can be used to render above Pollfish surveys
-<br/>
-Here is an example of how a user can pass a view of his Activity through ParamsBuilder instance during initialization.
 <br/><br/>
+Here is an example of how a user can pass a view of his Activity through ParamsBuilder instance during initialization.
+<br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.userLayout((ViewGroup) getWindow().getDecorView())
