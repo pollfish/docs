@@ -54,9 +54,9 @@ v4.0.0
 <br/><br/><br/><br/>
 ## Steps Analytically
 
-### 1. Obtain a Developer Account and download Pollfish SDK
+### 1. Obtain a Developer Account
 
-Register at [www.pollfish.com](//www.pollfish.com/login/publisher) and download Pollfish Android SDK.
+Register at [www.pollfish.com](//www.pollfish.com/login/publisher)
 
 ### 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
 
@@ -91,6 +91,8 @@ dependencies {
 
 ### 4\. Add Pollfish jar or aar library to your project
 
+Download Pollfish Android SDK or reference it through jCenter().
+
 **+jar: +**  
 
 Add Pollfish jar to your project libraries  
@@ -103,15 +105,8 @@ Add Pollfish .aar file to your project.
 
 If you are using Android Studio  
 
-a) right click on your project add select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate pollfish.aar file.  
+a) right click on your project add select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate pollfish.aar file.  Right click again on your project and in Module Dependencies tab choose to add pollfish module that you recently added.
 
-Then in your project build.gradle (not the top level one, the one under 'app') add the following (in the dependencies section):  
-
-```java
-dependencies {
-    compile project(':pollfish-universal-4.2.0')
-}
-```
 
 b) or retrieve Pollfish through **jcenter()** with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app') add the following (in the dependencies section):  
 
