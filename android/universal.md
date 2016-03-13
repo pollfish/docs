@@ -95,13 +95,13 @@ dependencies {
 
 Download Pollfish Android SDK or reference it through jCenter().
 
-**+jar: +**  
+* **JAR**  
 
 Add Pollfish jar to your project libraries  
 
 or  
 
-**+aar:+**  
+* **AAR**  
 
 Add Pollfish .aar file to your project.  
 
