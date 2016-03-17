@@ -37,7 +37,7 @@ v4.0.0
 
 </div>
 
-</br></br></br>
+</br></br>
 ## Quick Guide of Google Play SDK
 
 1. Register as a publisher at Pollfish, create an App and copy app's API key
@@ -51,7 +51,7 @@ v4.0.0
 
 > **Requirements:** Pollfish Android SDK works with Android 10 (2.3.3) and above.  
 
-<br/><br/><br/><br/>
+<br/><br/>
 ## Steps Analytically
 
 ### 1. Obtain a Developer Account
