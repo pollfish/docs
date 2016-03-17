@@ -38,6 +38,10 @@ v4.0.0
 </div>
 
 
+
+
+
+
 ## Quick Guide of Google Play SDK
 
 1. Register as a publisher at Pollfish, create an App and copy app's API key
