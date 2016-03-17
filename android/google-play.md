@@ -60,7 +60,7 @@ Register at [www.pollfish.com](//www.pollfish.com/login/publisher)
 
 ### 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
 
-Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later on when initializing Pollfish within your code.
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
 ### 3. Integrate Google Play Services to your project
 
