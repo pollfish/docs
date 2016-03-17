@@ -12,7 +12,7 @@ v4.1.0
 
 - added new init function with developer mode param
 - added track and respect of Google Advertising Id
-- 
+
 v4.0.3
 
 - added UserProperties object for passing attributes around user.
