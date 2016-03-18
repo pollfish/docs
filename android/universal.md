@@ -105,7 +105,7 @@ public void onResume() {
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
-
+![alt text](https://spbvip.files.wordpress.com/2010/06/michael_jackson-logo-59b43fd1c9-seeklogo-com.gif)
 <br/><br/><br/><br/>
 
 ```
