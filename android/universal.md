@@ -79,11 +79,13 @@ If you are using Android Studio, right click on your project add select New Modu
 Retrieve Pollfish through **jCenter()** with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app') in  dependencies section:  
 
 <br/><br/>
+###  How to add Pollfish surveys in your app?
+
 #### <b>A</b> - Add dependency to Pollfish and Google Play Services libraries in your build.gradle file
 ```java
 dependencies {
 	 compile 'com.google.android.gms:play-services-base:+'
-	 compile 'com.pollfish:pollfish:+:googleplaylRelease@aar'
+	 compile 'com.pollfish:pollfish:+:googleplayRelease@aar'
 }
 ```
 
