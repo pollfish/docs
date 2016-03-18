@@ -79,7 +79,7 @@ If you are using Android Studio, right click on your project add select New Modu
 Retrieve Pollfish through **jCenter()** with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app') in  dependencies section:  
 
 <br/><br/>
-### Add dependency to Pollfish and Google Play Services libraries in your build.gradle file
+#### A. Add dependency to Pollfish and Google Play Services libraries in your build.gradle file
 ```java
 dependencies {
 	 compile 'com.google.android.gms:play-services-base:8.4.0'
@@ -87,7 +87,7 @@ dependencies {
 }
 ```
 
-### Initialize Pollfish in your activity
+#### B. Initialize Pollfish in your activity
 
 ```java
 @Override
@@ -98,7 +98,7 @@ public void onResume() {
 }
 ```
 
-### Add internet permission in your AndroidManifest.xml file
+#### C. Add internet permission in your AndroidManifest.xml file
 
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
