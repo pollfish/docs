@@ -105,7 +105,7 @@ public void onResume() {
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
-![alt text](https://spbvip.files.wordpress.com/2010/06/michael_jackson-logo-59b43fd1c9-seeklogo-com.gif)
+![alt text](http://images4.fanpop.com/image/photos/21700000/MJ-King-of-Dance-and-Music-michael-jacksons-gold-pants-21789772-104-104.jpg)
 <br/><br/><br/><br/>
 
 ```
