@@ -105,7 +105,7 @@ public void onResume() {
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
-![alt text](http://images4.fanpop.com/image/photos/21700000/MJ-King-of-Dance-and-Music-michael-jacksons-gold-pants-21789772-104-104.jpg)
+<b>You are ready to go live!</b>
 <br/><br/><br/><br/>
 
 ```
