@@ -91,6 +91,9 @@ dependencies {
 }
 ```
 
+> **Note:** If you cannot see surveys even in developer mode, please do check your logs to see if this is related your current version of Google Play Services  
+
+
 ### 4\. Add Pollfish jar or aar library to your project
 
 Download Pollfish Android SDK or reference it through jCenter().
