@@ -183,9 +183,8 @@ Add the following paragraph to your app's privacy policy:
 **At this point you are ready to go live! Sign your app with a release key and publish to any app store**
 
 ---
+<br/>
 <img style="margin: 0 auto; display: block;" src="https://pollfish.files.wordpress.com/2016/03/basic_survey.gif?w=200"/>
-![alt text](https://pollfish.files.wordpress.com/2016/03/basic_survey.gif?w=200)
-
 <br/><br/><br/><br/>
 
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
