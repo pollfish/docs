@@ -148,12 +148,6 @@ Add the following paragraph to your app's privacy policy:
 
 <br/><br/>
 
-**At this point you are ready to go live! Sign your app with a release key and publish to any app store**
-
----
-
-<br/><br/>
-
 **At this point you are ready to go live! Sign your app with a release key or explicitly set .releaseMode(true) - (section 9.5) in your ParamsBuilder and publish to any Android app store**
 
 ---
