@@ -191,7 +191,7 @@ If you have any question, like why you do not see surveys on your own device in 
 <br/><br/><br/>
 
 
-### Optional section
+## Optional section
 
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
 
