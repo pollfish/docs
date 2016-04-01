@@ -180,12 +180,14 @@ Add the following paragraph to your app's privacy policy:
 
 <br/><br/>
 
-**At this point you are ready to go live! Sign your app with a release key OR explicitly setReleaseMode(true) in your ParamsBuilder and publish to any app store**
+**At this point you are ready to go live! Sign your app with a release key or explicitly set .releaseMode(true) - (section 9.5) in your ParamsBuilder and publish to any Android app store**
 
 ---
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://pollfish.files.wordpress.com/2016/03/basic_survey.gif?w=200"/>
 <br/><br/><br/><br/>
+
+| **Note:** If you have any question, like why you do not see surveys in your app in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
 
 ### Optional section
 
