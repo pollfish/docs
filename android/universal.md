@@ -611,9 +611,6 @@ If you use proguard with your app, please insert the following line in your prog
 where pollfish-universal-4.2.0.jar is the latest pollfish jar you use in your app and is placed in your libs folder (if you used Pollfish jar file).
 
 | **Note:** Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!
-| **Note:** Include all Google Play services necessary Proguard code as described
-
-[here](//developer.android.com/google/play-services/setup.html#Proguard) (if you use them in your project).
 
 If you do not include Google Play services in your project, add the following code in your Proguard file:  
 
