@@ -152,7 +152,21 @@ Add the following paragraph to your app's privacy policy:
 
 ---
 
-<br/><br/><br/><br/>
+<br/><br/>
+
+**At this point you are ready to go live! Sign your app with a release key or explicitly set .releaseMode(true) - (section 9.5) in your ParamsBuilder and publish to any Android app store**
+
+---
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://pollfish.files.wordpress.com/2016/03/basic_survey.gif?w=200"/>
+<br/>
+
+If you have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
+<br/><br/><br/>
+
+
+## Optional section
+
 
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
 
@@ -596,6 +610,7 @@ If you use proguard with your app, please insert the following line in your prog
 
 ```java
 -libraryjars libs/pollfish-universal-4.2.0.jar // not necessary if using Android Studio or .aar library
+-dontwarn com.pollfish.**
 -keep class com.pollfish.** { *; }
 ```
 
