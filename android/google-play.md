@@ -187,7 +187,7 @@ Add the following paragraph to your app's privacy policy:
 <img style="margin: 0 auto; display: block;" src="https://pollfish.files.wordpress.com/2016/03/basic_survey.gif?w=200"/>
 <br/>
 
-If you have any question, like why you do not see surveys in your app in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
+If you have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
 <br/><br/><br/>
 
 
