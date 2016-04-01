@@ -628,39 +628,13 @@ If you use proguard with your app, please insert the following line in your prog
 
 ```java
 -libraryjars libs/pollfish-googleplay-4.2.0.jar // not necessary if using Android Studio or .aar library
+-dontwarn com.pollfish.**
 -keep class com.pollfish.** { *; }
 ```
 
 where pollfish-googleplay-4.2.0.jar is the latest pollfish jar you use in your app and is placed in your libs folder (if you used Pollfish jar file).
 
 | **Note:** Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!
-| **Note:** Include all Google Play services necessary Proguard code as described
-
-[here](//developer.android.com/google/play-services/setup.html#Proguard) (if you use them in your project).
-
-If you do not include Google Play services in your project, add the following code in your Proguard file:  
-
-```java
--keep class com.google.android.gms.** { *; }
--dontwarn com.google.android.gms.**
- 
--keep class * extends java.util.ListResourceBundle {
-    protected Object[][] getContents();
-}
- 
--keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
-    public static final *** NULL;
-}
- 
--keepnames @com.google.android.gms.common.annotation.KeepName class *
--keepclassmembernames class * {
-    @com.google.android.gms.common.annotation.KeepName *;
-}
- 
--keepnames class * implements android.os.Parcelable {
-    public static final ** CREATOR;
-}
-```
 <br/><br/>
 ### 14. Highly targeted surveys (optional)
 
