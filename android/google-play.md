@@ -655,7 +655,7 @@ If you wish to receive highly targeted surveys in your app and increase your cha
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
 
-If you want to be eligible for beacon based surveys for your app you can include the following permsissionsin your AndroidManifest.xml file:  
+If you want to be eligible for beacon based surveys for your app you can include the following permsissions in your AndroidManifest.xml file:  
 
 ```java
 <uses-permission android:name="android.permission.BLUETOOTH" />
