@@ -118,9 +118,9 @@ Run **pod install** on the command line to install  Pollfish cocoapod.
 
 ### 5\. Embedding Pollfish into your code
 
+<br/>
 
-
-### 5.1\.Import Pollfish header
+### 5.1\. Import Pollfish header
 
 You have to include Pollfish library headers in any file that you will use Pollfish.  
 
