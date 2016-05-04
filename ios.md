@@ -279,7 +279,7 @@ func applicationWillTerminate(application: UIApplication)
 ```
 <br/>
 **At this point you are ready to go live! Turn your app to Release mode by setting andDebuggable:false and submit your app to AppStore.**
-<br/>
+<br/><br/>
 ### 6\. Distributing your app to AppStore
 
 Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefore when submitting your app to the App you should select the following options as seen in the image below:  
