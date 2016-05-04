@@ -702,7 +702,7 @@ func pollfishReceived(notification:NSNotification) {
 
 }
 ```
-
+<br/>
 ### 14.2 Get notified when survey is completed (optional)
 
 <span style="text-decoration: underline">Objective-C:</span>
@@ -769,8 +769,8 @@ func pollfishCompleted(notification:NSNotification) {
 }
 ```
 
-
-### Get notified when a user is not eligible for a Pollfish survey (optional)
+<br/>
+### 14.3 Get notified when a user is not eligible for a Pollfish survey (optional)
 
 
 You can be notified when a user is not eligible for a Pollfish survey after accepting to take it via the iOS Notification Center.  
@@ -791,7 +791,7 @@ You can be notified when a user is not eligible for a Pollfish survey after acce
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishUsernotEligible" , name:"PollfishUserNotEligible", object: nil)
+NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishUsernotEligible), name:"PollfishUserNotEligible", object: nil)
 ```
 
 ```
@@ -801,7 +801,8 @@ func pollfishUsernotEligible()
 }
 ```
 
-### Get notified when survey is not available (optional)
+<br/>
+### 14.4 Get notified when survey is not available (optional)
 
 
 You can be notified when a survey is not available for a user via the iOS Notification Center.  
@@ -822,7 +823,7 @@ You can be notified when a survey is not available for a user via the iOS Notifi
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishNotAvailable" , name:"PollfishSurveyNotAvailable", object: nil)
+NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishNotAvailable)  , name:"PollfishSurveyNotAvailable", object: nil)
 ```
 
 ```
@@ -832,7 +833,8 @@ func pollfishNotAvailable()
 }
 ```
 
-### Get notified when Pollfish is opened (optional)
+<br/>
+### 14.5 Get notified when Pollfish is opened (optional)
 
 
 You can be notified when a user opens Pollfish survey panel via the iOS Notification Center.  
@@ -853,7 +855,7 @@ You can be notified when a user opens Pollfish survey panel via the iOS Notifica
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishOpened" , name:"PollfishOpened", object: nil)
+NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishOpened), name:"PollfishOpened", object: nil)
 ```
 
 ```
@@ -863,7 +865,8 @@ func pollfishOpened()
 }
 ```
 
-### Get notified when Pollfish is closed (optional)
+<br/>
+### 14.6 Get notified when Pollfish is closed (optional)
 
 
 You can be notified when a user closes Pollfish survey panel via the iOS Notification Center.  
@@ -884,7 +887,7 @@ You can be notified when a user closes Pollfish survey panel via the iOS Notific
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishClosed" , name:"PollfishClosed", object: nil)
+NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishClosed) , name:"PollfishClosed", object: nil)
 ```
 
 ```
