@@ -317,6 +317,7 @@ If you have any question, like why you do not see surveys on your own device in 
 
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
 <br/>
+<br/>
 
 ### 8\. Handling changes in app’s view hierarchy after intialization (optional)
 
@@ -431,7 +432,7 @@ Note:
 If you still have questions regarding how to handle view hierarchy changes have a look in the SampleApp in the iOS SDK  
 
 <br/>
-### 9\.Other init methods (optional)
+### 9\. Other init methods (optional)
 
 #### Passing custom parameter for server to server postback calls
 
@@ -537,7 +538,7 @@ override func viewWillAppear(animated: Bool)
 ```
 <br/>
 
-### 11\.Update user location (optional)
+### 11\. Update user location (optional)
 
 You can update user’s location anytime after initialization to get better fill rate on surveys by calling the following:  
 
@@ -550,12 +551,29 @@ You can update user’s location anytime after initialization to get better fill
 <span style="text-decoration: underline">Swift:</span>
 
 ```
- Pollfish.Pollfish.updateLocationWith(location: CLLocation!);
+ Pollfish.updateLocationWith(location: CLLocation!);
+```
+<br/>
+
+### 12\. Send beacon information (optional)
+
+You can send beacon information if available anytime after initialization to get to be eligible for receiveing beacon surveys by calling the following:  
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```
+[Pollfish sendBeaconInfo:(CLBeacon *)beacon];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+
+```
+Pollfish.sendBeaconInfo(beacon: CLBeacon!);
 ```
 <br/>
 
 
-### Set custom user attributes (optional)
+### 13\. Set custom user attributes (optional)
 
 You can set attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys.  
 
@@ -609,7 +627,8 @@ UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary 
  Pollfish.setAttributeDictionary(userAttributesDictionary)
 ```
 
-## Implement Pollfish event listeners
+<br/>
+### 14\.Implement Pollfish event listeners
 
 
 
