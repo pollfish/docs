@@ -628,11 +628,11 @@ UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary 
 ```
 
 <br/>
-### 14\.Implement Pollfish event listeners
+### 14\.Implement Pollfish event listeners (optional)
 
 
 
-### 14.1 Get notified when a survey is received (optional)
+### 14.1 Get notified when a survey is received
 
 
 You can be notified when a survey is received via the iOS Notification Center. Note that the observer should be already registered when a survey is received in order to run the selector.  
@@ -703,7 +703,7 @@ func pollfishReceived(notification:NSNotification) {
 }
 ```
 <br/>
-### 14.2 Get notified when survey is completed (optional)
+### 14.2 Get notified when survey is completed
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -770,7 +770,7 @@ func pollfishCompleted(notification:NSNotification) {
 ```
 
 <br/>
-### 14.3 Get notified when a user is not eligible for a Pollfish survey (optional)
+### 14.3 Get notified when a user is not eligible for a Pollfish survey
 
 
 You can be notified when a user is not eligible for a Pollfish survey after accepting to take it via the iOS Notification Center.  
@@ -802,7 +802,7 @@ func pollfishUsernotEligible()
 ```
 
 <br/>
-### 14.4 Get notified when survey is not available (optional)
+### 14.4 Get notified when survey is not available
 
 
 You can be notified when a survey is not available for a user via the iOS Notification Center.  
@@ -834,7 +834,7 @@ func pollfishNotAvailable()
 ```
 
 <br/>
-### 14.5 Get notified when Pollfish is opened (optional)
+### 14.5 Get notified when Pollfish is opened
 
 
 You can be notified when a user opens Pollfish survey panel via the iOS Notification Center.  
@@ -866,7 +866,7 @@ func pollfishOpened()
 ```
 
 <br/>
-### 14.6 Get notified when Pollfish is closed (optional)
+### 14.6 Get notified when Pollfish is closed
 
 
 You can be notified when a user closes Pollfish survey panel via the iOS Notification Center.  
