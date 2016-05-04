@@ -430,9 +430,10 @@ Note:
 
 If you still have questions regarding how to handle view hierarchy changes have a look in the SampleApp in the iOS SDK  
 
-## Other init methods (optional)
+<br/>
+### 9\.Other init methods (optional)
 
-### Passing custom parameter for server to server postback calls
+#### Passing custom parameter for server to server postback calls
 
 If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function within the SDK and receive it back with Server to Server, survey completed postback call you can use:  
 
@@ -460,9 +461,9 @@ func applicationDidBecomeActive(application: UIApplication) {
        		     andRequestUUID: String!)
 }
 ```
+<br/>
 
-
-### 9\. Manually show or hide Pollfish (optional)
+### 10\. Manually show or hide Pollfish (optional)
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization:  
 
@@ -536,7 +537,7 @@ override func viewWillAppear(animated: Bool)
 ```
 <br/>
 
-### 10\.Update user location (optional)
+### 11\.Update user location (optional)
 
 You can update user’s location anytime after initialization to get better fill rate on surveys by calling the following:  
 
