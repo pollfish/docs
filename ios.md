@@ -84,11 +84,11 @@ Register at [www.pollfish.com](//www.pollfish.com/login/publisher)
 Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
 
+### 3\. Add Pollfish framework to your project
 
+Download Pollfish iOS SDK or reference it through CocoaPods
 
-### 1\. Download Pollfish iOS SDK and unzip it
-
-### 2\. Add pollfish framework in your project
+#### **Download Pollfish iOS SDK**
 
 In Xcode, select the target that you want to use and in the Build Phases tab expand the Link Binary With Libraries section. Press the + button, and press Add other… In the dialog box that appears, go to the Pollfish framework’s location and select it.  
 
@@ -96,7 +96,7 @@ The project will appear at the top of the Link Binary With Libraries section and
 
 **Note: The framework is a folder and you should add the whole folder into your project.**
 
-### 3\. Add the following frameworks (if you don’t already have them) in your project
+### 4\. Add the following frameworks (if you don’t already have them) in your project
 
 - AdSupport.framework  
 - CoreTelephony.framework
