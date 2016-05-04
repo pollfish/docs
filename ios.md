@@ -54,7 +54,8 @@ v4.0.0
 
 **or** 
 
-###Though CocoaPods:
+Though CocoaPods:
+---
 
 1.  Add a Podfile with Pollfish framework as a pod reference:
 
