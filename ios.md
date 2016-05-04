@@ -102,7 +102,7 @@ The project will appear at the top of the Link Binary With Libraries section and
 
 <br/><br/>
 
-### or skip 3\. and 4\. and go through CocoaPods
+### or skip steps 3\. and 4\. and go through CocoaPods
 
 Add a Podfile with Pollfish framework as a pod reference:
 
@@ -114,7 +114,9 @@ pod 'Pollfish'
 Run 'pod install' on the command line to install the Pollfish cocoapod.
 
 
-### 4\. Embedding Pollfish into your code
+
+
+### 5\. Embedding Pollfish into your code
 
 
 
