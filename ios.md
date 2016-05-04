@@ -218,7 +218,7 @@ func applicationDidBecomeActive(application: UIApplication) {
 • **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).  
 • **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
 
-**Note: Be careful to set andDebuggable parameter to false prior releasing to AppStore!**  
+> **Note:** Be careful to set andDebuggable parameter to false prior releasing to AppStore!  
 
 5\. **andCustomMode** (BOOL) – use Pollfish in the standard/recommended way or achieve a specific behavior (false is the default option you should use)  
 
@@ -291,7 +291,7 @@ Add the following paragraph to your app's privacy policy:
 
 <br/><br/>
 
-**At this point you are ready to go live! Turn your app to Release mode by setting andDebuggable:true and submit your app to AppStore.**
+**At this point you are ready to go live! Turn your app to Release mode by setting andDebuggable:false and submit your app to AppStore.**
 
 ---
 <br/>
