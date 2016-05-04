@@ -120,7 +120,7 @@ Run **pod install** on the command line to install  Pollfish cocoapod.
 
 <br/>
 
-### 5.1\. Import Pollfish header
+### 5.1 Import Pollfish header
 
 You have to include Pollfish library headers in any file that you will use Pollfish.  
 
@@ -254,7 +254,7 @@ func applicationDidBecomeActive(application: UIApplication) {
 ```
 <br/>
 
-### Destroying Pollfish
+### 5.3 Destroying Pollfish
 
 You have to release all the resources Pollfish kept during the termination of your application. This should be done in your application’s delegate applicationWillTerminate method.  
 
