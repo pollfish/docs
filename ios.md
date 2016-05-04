@@ -111,7 +111,7 @@ platform :ios, '7.0'
 pod 'Pollfish'
 ```
 
-Run 'pod install' on the command line to install the Pollfish cocoapod.
+Run **pod install** on the command line to install  Pollfish cocoapod.
 
 <br/>
 
