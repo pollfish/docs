@@ -632,7 +632,7 @@ UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary 
 
 
 
-### Get notified when a survey is received (optional)
+### 14.1 Get notified when a survey is received (optional)
 
 
 You can be notified when a survey is received via the iOS Notification Center. Note that the observer should be already registered when a survey is received in order to run the selector.  
@@ -686,7 +686,7 @@ You can also get informed about the price and type of survey (playful or not) th
 <span style="text-decoration: underline">Swift:</span>
 
 ```
- NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishReceived:" , name:
+ NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(FirstViewController.pollfishReceived(_:)) , name:
             "PollfishSurveyReceived", object: nil)
 ```
 
@@ -703,7 +703,7 @@ func pollfishReceived(notification:NSNotification) {
 }
 ```
 
-### Get notified when survey is completed (optional)
+### 14.2 Get notified when survey is completed (optional)
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -720,7 +720,7 @@ func pollfishReceived(notification:NSNotification) {
 <span style="text-decoration: underline">Swift:</span>
 
 ```
- NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishCompleted" , name:
+ NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishCompleted) , name:
             "PollfishSurveyCompleted", object: nil)
 ```
 
@@ -752,7 +752,7 @@ You can also get informed about the price and type of survey (playful or not) th
 <span style="text-decoration: underline">Swift:</span>
 
 ```
- NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishCompleted:" , name:
+ NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(FirstViewController.pollfishCompleted(_:)) , name:
             "PollfishSurveyCompleted", object: nil)
 ```
 
