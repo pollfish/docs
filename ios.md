@@ -86,11 +86,7 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a
 
 ### 3\. Add Pollfish framework to your project
 
-Download Pollfish iOS SDK or reference it through CocoaPods
-
-#### **Download Pollfish iOS SDK**
-
-In Xcode, select the target that you want to use and in the Build Phases tab expand the Link Binary With Libraries section. Press the + button, and press Add other… In the dialog box that appears, go to the Pollfish framework’s location and select it.  
+Download Pollfish iOS SDK from the website and then in Xcode, select the target that you want to use and in the Build Phases tab expand the Link Binary With Libraries section. Press the + button, and press Add other… In the dialog box that appears, go to the Pollfish framework’s location and select it.  
 
 The project will appear at the top of the Link Binary With Libraries section and will also be added to your project files (left-hand pane).  
 
@@ -104,10 +100,9 @@ The project will appear at the top of the Link Binary With Libraries section and
 
 **Note: If your deployment target is less than iOS 7.0, change the AdSupport.framework from Required to Optional.**
 
-### or skip 1\. 2\. and 3\. and go through 
+<br/><br/>
 
-
-### CocoaPods
+#### or skip 3\. and 4\. and go through CocoaPods
 
 Add a Podfile with Pollfish framework as a pod reference:
 
