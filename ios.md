@@ -69,7 +69,7 @@ pod 'Pollfish'
 4. Set to Release mode and release in AppStore
 5. Update your privacy policy
 
-> **Requirements:** Pollfish iOS SDK works with iOS version 7.0 and above.  
+> **Requirements:** Pollfish framework works with iOS version 7.0 and above.  
 
 <br/><br/>
 
