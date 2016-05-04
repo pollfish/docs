@@ -277,8 +277,11 @@ func applicationWillTerminate(application: UIApplication)
      Pollfish.destroy()
 }
 ```
+<br/>
 
-### Call of init when changes in your app’s view hierarchy happen during app’s lifecycle or Pollfish is not shown on top view (optional)
+### 6\. Handling changes in app’s view hierarchy after intialization (optional)
+
+#### Call of init when changes in your app’s view hierarchy happen during app’s lifecycle or Pollfish is not shown on top view
 
 When your app changes it’s view hierarchy during it’s lifecycle eg through a storyboard, or when Pollfish is not shown on the top view, you can call Pollfish init again in your current’s ViewController viewWillAppear that is on super view to bring Pollfish back on the top of your views.  
 
