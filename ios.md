@@ -100,7 +100,7 @@ The project will appear at the top of the Link Binary With Libraries section and
 
 **Note: If your deployment target is less than iOS 7.0, change the AdSupport.framework from Required to Optional.**
 
-<br/><br/>
+<br/>
 
 ### or skip steps 3\. and 4\. and go through CocoaPods
 
@@ -113,7 +113,7 @@ pod 'Pollfish'
 
 Run 'pod install' on the command line to install the Pollfish cocoapod.
 
-
+<br/>
 
 
 ### 5\. Embedding Pollfish into your code
