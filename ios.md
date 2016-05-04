@@ -897,3 +897,21 @@ func pollfishClosed()
 }
 ```
 
+<br/>
+### 14.5 Check if Pollfish survey is still available on your device
+
+It happens that time had past since you initialized Pollfish and a survey is received. If you want to check is survey is still avaialble on your device and has not expired you can check by calling:
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```
+[Pollfish isPollfishPresent]
+```
+
+<span style="text-decoration: underline">Swift:</span>
+
+```
+Pollfish.isPollfishPresent()
+```
+
+
