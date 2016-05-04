@@ -1,5 +1,11 @@
-<div class="changelog" data-version="4.1.2">
+<div class="changelog" data-version="4.2.0">
 
+v4.2.0
+
+- Fixed bitcode issue
+- New API functions to support beacon and location relevant surveys 
+- Added support for new type of questions in surveys, including video surveys
+- Added new framework dependency (SystemConfiguration.framework)
 
 v4.1.2
 
@@ -40,20 +46,20 @@ v4.0.0
 ## Quick Guide
 
 1.  Download Pollfish iOS SDK and unzip it
-2.  Import Pollfish.framework to your project
-3.  Import AdSupport.framework and CoreTelephony.framework to your project
+2.  Import pollfish.framework to your project
+3.  Import AdSupport.framework, SystemConfiguration.framework and CoreTelephony.framework to your project
 4.  Call init and destroy function of Pollfish in the App’s Delegate
 5.  Set to Release mode and release in AppStore
 6.  Update your privacy policy
 
 **or** 
 
-Though CocoaPods:
+#####Though CocoaPods:
 
 1.  Add a Podfile with Pollfish framework as a pod reference:
 
 ```
-platform :ios, '6.0'
+platform :ios, '7.0'
 pod 'Pollfish'
 ```
 
@@ -62,21 +68,15 @@ pod 'Pollfish'
 4. Set to Release mode and release in AppStore
 5. Update your privacy policy
 
+> **Requirements:** Pollfish iOS SDK works with iOS version 7.0 and above.  
 
-**Note: Be careful to set andDebuggable parameter of the init function to false (Release mode) prior releasing to AppStore!**
-
-## Requirements
-
-- iOS version 6.0 +  
-- Xcode 4.5 or later
-
-You can also check Pollfish iOS Sample Project [here](//github.com/pollfish/ios-sdk-pollfish). 
+<br/><br/>
 
 ## Steps Analytically
 
 ### 1\. Download Pollfish iOS SDK and unzip it
 
-### 2\. Add the pollfish framework in your project
+### 2\. Add pollfish framework in your project
 
 In Xcode, select the target that you want to use and in the Build Phases tab expand the Link Binary With Libraries section. Press the + button, and press Add other… In the dialog box that appears, go to the Pollfish framework’s location and select it.  
 
@@ -87,9 +87,10 @@ The project will appear at the top of the Link Binary With Libraries section and
 ### 3\. Add the following frameworks (if you don’t already have them) in your project
 
 - AdSupport.framework  
-- CoreTelephony.framework  
+- CoreTelephony.framework
+- SystemConfiguration.framework 
 
-**Note: If your deployment target is less than iOS 6.0, change the AdSupport.framework from Required to Optional.**
+**Note: If your deployment target is less than iOS 7.0, change the AdSupport.framework from Required to Optional.**
 
 ### or skip 1\. 2\. and 3\. and go through 
 
@@ -99,7 +100,7 @@ The project will appear at the top of the Link Binary With Libraries section and
 Add a Podfile with Pollfish framework as a pod reference:
 
 ```
-platform :ios, '6.0'
+platform :ios, '7.0'
 pod 'Pollfish'
 ```
 
@@ -112,7 +113,7 @@ Run 'pod install' on the command line to install the Pollfish cocoapod.
 
 ### Import Pollfish header
 
-You have to include Pollfish library headers in every file that you will use Pollfish.  
+You have to include Pollfish library headers in any file that you will use Pollfish.  
 
 ```
 #import <Pollfish/Pollfish.h>
