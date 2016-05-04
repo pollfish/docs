@@ -306,7 +306,7 @@ Add the following paragraph to your app's privacy policy:
 <br/>
 
 If you have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
-<br/><br/><br/>
+<br/><br/><br/><br/>
 
 
 
@@ -318,7 +318,7 @@ If you have any question, like why you do not see surveys on your own device in 
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
 <br/>
 
-### 7\. Handling changes in app’s view hierarchy after intialization (optional)
+### 8\. Handling changes in app’s view hierarchy after intialization (optional)
 
 #### Call of init when changes in your app’s view hierarchy happen during app’s lifecycle or Pollfish is not shown on top view
 
@@ -462,7 +462,7 @@ func applicationDidBecomeActive(application: UIApplication) {
 ```
 
 
-### Manually show or hide Pollfish (optional)
+### 9\. Manually show or hide Pollfish (optional)
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization:  
 
@@ -534,37 +534,25 @@ override func viewWillAppear(animated: Bool)
     Pollfish.hide()
 }
 ```
+<br/>
 
-### Update user location (optional)
+### 10\.Update user location (optional)
 
 You can update user’s location anytime after initialization to get better fill rate on surveys by calling the following:  
 
 <span style="text-decoration: underline">Objective-C:</span>
 
 ```
-[Pollfish updateLocationWithLatitude:(double)lat andLongitude:(double)lon andHorizontalAccuracy:(double)acc];
+[Pollfish updateLocationWith:(CLocation *) location];
 ```
 
 <span style="text-decoration: underline">Swift:</span>
 
 ```
- Pollfish.updateLocationWithLatitude(lat: Double, andLongitude: Double, andHorizontalAccuracy: Double)
+ Pollfish.Pollfish.updateLocationWith(location: CLLocation!);
 ```
+<br/>
 
-
-For example:
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
-[Pollfish updateLocationWithLatitude:42.682435 andLongitude:-76.376953 andHorizontalAccuracy:2.0];
-```
-
-<span style="text-decoration: underline">Swift:</span>
-
-```
- Pollfish.updateLocationWithLatitude(42.682435, andLongitude: -76.376953, andHorizontalAccuracy: 2.0)
-```
 
 ### Set custom user attributes (optional)
 
