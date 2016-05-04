@@ -252,6 +252,7 @@ func applicationDidBecomeActive(application: UIApplication) {
        		      andCustomMode: false)
 }
 ```
+<br/>
 
 ### Destroying Pollfish
 
