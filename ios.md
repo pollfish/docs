@@ -64,9 +64,9 @@ platform :ios, '7.0'
 pod 'Pollfish'
 ```
 
-2. Run 'pod install' on the command line to install the Pollfish cocoapod.
+2. Run **pod install** on the command line to install  Pollfish cocoapod.
 3. Call init and destroy function of Pollfish in the App’s Delegate
-4. Set to Release mode and release in AppStore
+4. Set to **Release mode** and release in AppStore
 5. Update your privacy policy
 <br/>
 > **Requirements:** Pollfish framework works with iOS version 7.0 and above.  
