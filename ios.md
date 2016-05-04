@@ -192,7 +192,7 @@ func applicationDidBecomeActive(application: UIApplication) {
        		      andCustomMode: Bool)
 }
 ```
-
+<br/>
 
 ### Pollfish init function takes the following parameters:
 
