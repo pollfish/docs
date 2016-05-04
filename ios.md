@@ -120,7 +120,7 @@ Run **pod install** on the command line to install  Pollfish cocoapod.
 
 
 
-### Import Pollfish header
+### 5.1\.Import Pollfish header
 
 You have to include Pollfish library headers in any file that you will use Pollfish.  
 
@@ -134,16 +134,16 @@ You have to include Pollfish library headers in any file that you will use Pollf
 
  <span style="text-decoration: underline">Add a Bridging-Header file:</span>
  
-1\. Right-click your project and choose “New File…” 
+**1\. Right-click your project and choose “New File…”** 
 
 <img src="/homeassets/images/documentation/NewFile.png" width="220">
 
-2\. Choose iOS->Source->Header File->Next
+**2\. Choose iOS->Source->Header File->Next**
 
 <img src="/homeassets/images/documentation/NewHeaderFile.png" width="220">
 
 
-3\. Name new file "\<Your-Product\>-Bridging-Header.h”
+**3\. Name new file "\<Your-Product\>-Bridging-Header.h”**
 
 <img src="/homeassets/images/documentation/BridgingHeader.png" width="220">
 
@@ -151,17 +151,17 @@ where <Your-Product> must be your "Product Name" as listed in your "Build Settin
 
 <img src="/homeassets/images/documentation/ProductName.png" width="600">
 
-4\. Declare your new Bridging Header File path in your project's "Build Settings" in row "Objective-C "Bridging Header" section
+**4\. Declare your new Bridging Header File path in your project's "Build Settings" in row "Objective-C "Bridging Header" section**
 
 <img src="/homeassets/images/documentation/Bridging.png" width="600">
 
-5\. Import in your Bridging Header file Pollfish header files:
+**5\. Import in your Bridging Header file Pollfish header files:**
 
 ```
 #import <Pollfish/Pollfish.h>
 ```
-
-### Initializing Pollfish in App Delegate
+<br/>
+### 5.2 Initializing Pollfish in App Delegate
 
 The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active.  
 
