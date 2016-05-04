@@ -49,7 +49,7 @@ v4.0.0
 2.  Import pollfish.framework to your project
 3.  Import AdSupport.framework, SystemConfiguration.framework and CoreTelephony.framework to your project
 4.  Call init and destroy function of Pollfish in the App’s Delegate
-5.  Set to Release mode and release in AppStore
+5.  Set to **Release mode** and release in AppStore
 6.  Update your privacy policy
 
 **or** 
