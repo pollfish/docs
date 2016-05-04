@@ -654,7 +654,7 @@ You can be notified when a survey is received via the iOS Notification Center. N
 <span style="text-decoration: underline">Swift:</span>
 
 ```
- NSNotificationCenter.defaultCenter().addObserver(self, selector:"pollfishReceived" , name:
+ NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishReceived) , name:
             "PollfishSurveyReceived", object: nil)
 ```
 
