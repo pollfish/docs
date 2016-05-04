@@ -120,7 +120,7 @@ Run **pod install** on the command line to install  Pollfish cocoapod.
 
 <br/>
 
-### 5.1\. Import Pollfish header
+#### 5.1\. Import Pollfish header
 
 You have to include Pollfish library headers in any file that you will use Pollfish.  
 
@@ -130,7 +130,7 @@ You have to include Pollfish library headers in any file that you will use Pollf
 
 
 
-### or if you are using Pollfish in a Swift project follow the next steps to import Pollfish
+#### or if you are using Pollfish in a Swift project follow the next steps to import Pollfish
 
  <span style="text-decoration: underline">Add a Bridging-Header file:</span>
  
@@ -161,7 +161,7 @@ where <Your-Product> must be your "Product Name" as listed in your "Build Settin
 #import <Pollfish/Pollfish.h>
 ```
 <br/>
-### 5.2 Initializing Pollfish in App Delegate
+#### 5.2 Initializing Pollfish in App Delegate
 
 The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active.  
 
