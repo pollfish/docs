@@ -222,13 +222,14 @@ There are six different options available:
 
 > **Note:** Be careful to set andDebuggable parameter to false prior releasing to AppStore!  
 
-5\. **andCustomMode** (BOOL) – use Pollfish in the standard/recommended way or achieve a specific behavior (false is the default option you should use)  
+5\. **andCustomMode** (BOOL) – Initializes Pollfish in custom mode if set to true. By default this is set to false.
 
-<span style="text-decoration: underline">customMode – true or false?</span> 
+**true Vs false**
 
-**• false:** is the standard/recommended way of using Pollfish in your apps. It enables controlling the behavior of Pollfish indicator in an app from Pollfish panel on the website.  
+*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
+*   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
 
-**• true:** ignores Pollfish behavior from Pollfish panel on the website. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates.  
+![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/202124442/Screen_Shot_2015-10-13_at_11.56.10_AM.png)
 
 Below you can see an example of the init function:  
 
