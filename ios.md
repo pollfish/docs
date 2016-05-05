@@ -198,18 +198,18 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 **1\. initAtPosition** (PollfishPosition) - Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)
 
-There are six different options available: 
+<span style="text-decoration: underline">There are six different options available: </span> 
 
-- PollFishPositionBottomLeft  
-- PollFishPositionBottomRight  
-- PollFishPositionTopLeft  
-- PollFishPositionTopRight  
-- PollFishPositionMiddleLeft  
-- PollFishPositionMiddleRight  
+*   **PollFishPositionBottomLeft**  
+*   **PollFishPositionBottomRight**  
+*   **PollFishPositionTopLeft**  
+*   **PollFishPositionTopRight**  
+*   **PollFishPositionMiddleLeft** 
+*   **PollFishPositionMiddleRight**  
 
 **2\. withPadding** (int) - The padding from top or bottom of the screen according to PollfishPosition of the indicator (small red rectangle) specified before (0 is the default value)  
 
-**Note: *if used in MIDDLE position, padding is calculating from top.**  
+> **Note:** if used in MIDDLE position, padding is calculating from top.**  
 
 **3\. andDeveloperKey** (NSString *)- Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
 
