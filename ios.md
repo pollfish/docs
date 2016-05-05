@@ -196,7 +196,9 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 ### Pollfish init function takes the following parameters:
 
-**1\. initAtPosition** (PollfishPosition) - The Position where you wish to place the Pollfish indicator. There are six different options:  
+**1\. initAtPosition** (PollfishPosition) - Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)
+
+There are six different options available: 
 
 - PollFishPositionBottomLeft  
 - PollFishPositionBottomRight  
@@ -273,7 +275,7 @@ You have to release all the resources Pollfish kept during the termination of yo
 ```
 func applicationWillTerminate(application: UIApplication) 
 {
-     //
+    // ...
      Pollfish.destroy()
 }
 ```
