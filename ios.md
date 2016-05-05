@@ -217,8 +217,8 @@ There are six different options available:
 
 <span style="text-decoration: underline">You can use Pollfish either in Debug or in Release mode.</span>  
 
-• **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).  
-• **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
+*   **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).  
+*   **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
 
 > **Note:** Be careful to set andDebuggable parameter to false prior releasing to AppStore!  
 
