@@ -325,7 +325,7 @@ In this section we will list several options that can be used to control Pollfis
 
 #### Call of init when changes in your app’s view hierarchy happen during app’s lifecycle or Pollfish is not shown on top view
 
-When your app changes it’s view hierarchy during it’s lifecycle eg through a storyboard, or when Pollfish is not shown on the top view, you can call Pollfish init again in your current’s ViewController viewWillAppear that is on super view to bring Pollfish back on the top of your views.  
+When your app changes it’s view hierarchy during it’s lifecycle (e.g. through a storyboard), or when Pollfish is not shown on the top view of your application, you can call Pollfish init method again in your current’s ViewController viewWillAppear methos, in order to bring Pollfish back on the top of your views.  
 
 For example:
 
@@ -359,7 +359,7 @@ override func viewWillAppear(animated: Bool)
 }
 ```
 
-Another example is when showing for example a modal view controller. This controller changes current view hierarchy since it is displayed on the top. Therefore, in that case you need to call init again to bring Pollfish back on the top.  
+Another example of this case is when showing for example a modal view controller. This controller changes current view hierarchy in order to display modal view controller on top. Therefore, in that case you need to call init again to bring Pollfish back on top.  
 
 For example:  
 
@@ -390,7 +390,7 @@ For example:
         [Pollfish initAtPosition: PollFishPositionMiddleLeft
                      withPadding: 0
                  andDeveloperKey: @"af89aaf1-b7d4-46c1-8e91-b2625c2d5dbe"
-                   andDebuggable: true 
+                   andDebuggable: false 
                    andCustomMode:false];
     	}];
 }
@@ -431,7 +431,7 @@ Note:
 
 • Even if you call init in any ViewController somewhere within the app lifecycle you should still keep the init and destroy function in your App’s Delegate.  
 
-If you still have questions regarding how to handle view hierarchy changes have a look in the SampleApp in the iOS SDK  
+If you still have questions regarding how to handle view hierarchy changes have a look in SampleApp in iOS SDK  
 
 <br/>
 ### 9\. Other init methods (optional)
