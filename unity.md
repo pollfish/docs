@@ -43,7 +43,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 ### Check/uncheck files to be imported
 
-Imported Files will be listed in the following directories:
+Imported files will be listed in the following directories:
 
 ![alt text](https://storage.googleapis.com/pollfish-images/PollfishUnityPlugin.png)
 
