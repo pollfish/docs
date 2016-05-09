@@ -27,7 +27,7 @@ Register at [www.pollfish.com](//www.pollfish.com/login/publisher)
 
 Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
-**Note: If your app supports both Android and iOS it would be better to create 2 different apps on the dashboard and use different API keys for each platform in your Unity code**
+> **Note:** If your app supports both Android and iOS it would be better to create 2 different apps on the dashboard and use different API keys for each platform in your Unity code
 
 ### 3\. Add Pollfish framework to your project
 
