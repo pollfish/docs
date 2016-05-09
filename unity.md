@@ -274,7 +274,7 @@ void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, b
 <br/>
 ### 8. Adjusting Pollfish with app lifecycle events (optional)
 
-To init Pollfish when app resumes you can call:
+It would be a good practise to init Pollfish when app resumes in order to check if a new survey is available for the user.
 
 ```
 void OnApplicationPause (bool pause)
