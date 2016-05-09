@@ -218,20 +218,17 @@ Also Pollfish requires Internet permission so please do not forget to add the fo
 If you use proguard with your app, please insert the following line in your proguard configuration file:
 
 ```
--libraryjars libs/pollfish_unity_android_bridge.jar
+-libraryjars libs/pollfish_unity_bridge.jar
 
 -keep class com.pollfish.** { *; }
 -keep class com.pollfish_unity.** { *; }
 -dontwarn com.pollfish.**
 ```
 
-where **pollfish_unity_android_bridge.jar** is the bridge jar between Pollfish and Unity that are placed in your Assets folder.
+where **pollfish_unity_bridge.jar** is the bridge jar between Pollfish and Unity that are placed in your Assets folder.
 
-**Note:**
+> **Note:** Using Proguard with Pollfish requires setting your Project Build Target to Android 4.2.2 (API 17) or above!**
 
-**- Using Proguard with Pollfish requires setting your Project Build Target to Android 4.2.2 (API 17) or above!**
-
-**- Include all Google Play services necessary code as described [here](http://developer.android.com/google/play-services/setup.html#Proguard).**
 <br/>
 ###  5.2 If you are targeting iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
