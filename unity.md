@@ -94,7 +94,7 @@ You should use a MonoBehaviour object for your scene that will enable interactio
 void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, bool debugMode, bool customMode);
 ```
 
-#### Pollfish init function takes the following parameters:
+### Pollfish init function takes the following parameters:
 
 **1\. pollfishPosition** (PollfishPosition) - Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)
 
