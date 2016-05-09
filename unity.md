@@ -70,11 +70,11 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 <br/><br/><br/>
 
 
-#### Requirements
+#### **Requirements**
 
 Have in mind that Pollfish works with Unity 4.3+ and :
 
-*   iOS 6.0 +
+*   iOS 7.0 +
 *   Android 2.3.3 (10) +
 
 Please set minimum versions of your project accordingly.
@@ -82,64 +82,82 @@ Please set minimum versions of your project accordingly.
 <br/><br/><br/>
 
 
-### Sample Project
+### 4. Initializing Pollfish
 
-In order to have a look on a simple integration of Pollfish in a unity project have a look in Assets/Plugins/Pollfish/demo folder. You can run the scene there and see how Pollfish will be rendered through your apps.
-
-![](/homeassets/images/documentation/unity/unity4.png)
-
-However we suggest that you follow this tutorial in order to understand better the integration steps you have to follow to properly use Pollfish in your project.
-
-### Initializing Pollfish
-
-You should use a MonoBehaviour object for your scene that will enable interaction with Pollfish plugin. (See example PollfishBinding.cs in Assets/Plugins/Pollfish folder)
-
-Set your API key for each platform prior calling init:
+You should use a MonoBehaviour object for your scene that will enable interaction with Pollfish Unity plugin. Pollfish should be initialized when an app starts or resumes.
 
 ```
+void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, bool debugMode, bool customMode);
+```
+
+#### Pollfish init function takes the following parameters:
+
+**1\. pollfishPosition** (PollfishPosition) - Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)
+
+<span style="text-decoration: underline">There are six different options available: </span> 
+
+*   **Position.TOP_LEFT**  
+*   **Position.TOP_RIGHT**  
+*   **Position.BOTTOM_LEFT**  
+*   **Position.BOTTOM_RIGHT**  
+*   **Position.MIDDLE_LEFT** 
+*   **Position.MIDDLE_RIGHT**  
+
+**2\. indPadding** (int) - The padding from top or bottom of the screen according to PollfishPosition of the indicator (small red rectangle) specified before (0 is the default value)  
+
+> **Note:** if used in MIDDLE position, padding is calculating from top.**  
+
+**3\. apiKey** (NSString *)- Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
+
+**4\. debugMode (BOOL)** – Debug or Release mode  
+
+<span style="text-decoration: underline">You can use Pollfish either in Debug or in Release mode.</span>  
+
+*   **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).  
+*   **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
+
+> **Note:** Be careful to set andDebuggable parameter to false prior releasing to AppStore!  
+
+5\. **customMode** (BOOL) – Initializes Pollfish in custom mode if set to true. By default this is set to false.
+
+**true Vs false**
+
+*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
+*   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
+
+![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/202124442/Screen_Shot_2015-10-13_at_11.56.10_AM.png)
+
+Below you can see an example of the init function. Remember to set your API key for each platform prior calling init:
+
+```
+
+private string appDeveloperKey;
+	
+private Position pollfishPosition = Position.MIDDLE_LEFT;
+
+private bool debugMode = true;
+private bool customMode = false;
+private int indPadding = 10;
+
+
 public void onEnable()
 {
   #if UNITY_ANDROID
   
-  appDeveloperKey = "ANDROID_API_KEY";
+  apiKey = "ANDROID_API_KEY";
   
   #elif UNITY_IPHONE
   
-  appDeveloperKey = "IOS_API_KEY";
+  apiKey = "IOS_API_KEY";
   
   #endif
   
-  Pollfish.PollfishInitFunction ((int)pollfishPosition, padding, appDeveloperKey, debugMode, customMode);
+  Pollfish.PollfishInitFunction((int) pollfishPosition, indPadding, apiKey, bool debugMode, bool customMode);
+
 }
 ```
 
-You should initialize Pollfish when apps starts or resumes.
-
-```
-Pollfish.PollfishInitFunction ((int)pollfishPosition, padding, appDeveloperKey, debugMode, customMode);
-```
-
-Pollfish init function takes the following parameters:
-
-*   **string appDeveloperKey** – your app developer key (iOS and Android)
-*   **Position pollfishPosition** - The Position where you wish to place the Pollfish indicator. There are six different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
-*   **bool debugMode** – Debug or Release mode
-
-    You can use Pollfish either in Debug or in Release mode.
-
-    -Debug/Developer mode is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
-
-    -Release mode is the mode to be used for a released app in AppStore or Google Play (start receiving paid surveys).
-
-*   **bool customMode** – use Pollfish in custom mode.
-
-    customMode false or true.
-
-    customMode false is the standard way of using Pollfish in your apps. Using customMode false enables controlling the behavior of Pollfish in an app from Pollfish panel. customMode true function ignores Pollfish behavior from Pollfish web panel. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. customMode true is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates.
-
-*   **int padding** - The padding from top or bottom according to Position of the indicator specified before (0 is the default value – |*if used in MIDDLE position, padding is calculating from top).
-
-### App Lifecycle handling (optional)
+### Handling app Lifecycle (optional)
 
 To init Pollfish when app resumes you can call:
 
@@ -152,23 +170,16 @@ void OnApplicationPause (bool pause)
   } else {
     // we are in foreground again.
     ispaused=false;                        
-
-    #if UNITY_IPHONE 
-            
+       
     /* you can use this on Android too, but test since low end devices may freeze */
     Pollfish.PollfishInitFunction ((int)pollfishPosition, padding, appDeveloperKey, debugMode, customMode);
-
-    #endif            
-  
   }
 }
 ```
 
-*Calling Pollfish init on other times on Android may cause UI freezing on low end devices.
+### 5\. Manually show or hide Pollfish (optional)
 
-### Manually call show and hide (optional)
-
-You can manually show or hide Pollfish by calling anywhere after initialization of Pollfish:
+You can manually show or hide Pollfish anytime, by calling anywhere after initialization:  
 
 ```
 Pollfish.ShowPollfish ();
@@ -181,13 +192,15 @@ Pollfish.HidePollfish ();
 ```
 
 
-### Listening to Pollfish events (optional)
+### 6. Listening to Pollfish events (optional)
 
 If you want to register to listen for Pollfish events you can add PollfishEventListener.cs to your scene object and listen for the relevant functions to fire. If you want to listen only to specific listeners choose from them and add them to your MonoBehaviour object in a similar way as in PollfishEventListener.cs
 
 Generally, in order to listen to Pollfish events you have to explicitly listen for them:
 
 ```
+/* register to listen to Pollfish events */
+
 public void OnEnable()
 {
   Pollfish.surveyCompletedEvent += surveyCompleted;
@@ -196,15 +209,6 @@ public void OnEnable()
   Pollfish.surveyReceivedEvent += surveyReceived;
   Pollfish.surveyNotAvailableEvent += surveyNotAvailable;
   Pollfish.userNotEligibleEvent += userNotEligible;
-        
-  #if UNITY_ANDROID
-
-  /* events for back button android */
-
-  Pollfish.shouldQuitEvent += shouldQuit;
-  Pollfish.shouldNotQuitEvent += shouldNotQuit;
-
-  #endif
 }
 
 /* unregister from Pollfish events */
@@ -217,19 +221,12 @@ public void OnDisable()
   Pollfish.surveyReceivedEvent -= surveyReceived;
   Pollfish.surveyNotAvailableEvent -= surveyNotAvailable;
   Pollfish.userNotEligibleEvent -= userNotEligible;
-        
-  #if UNITY_ANDROID
-
-  /* events for back button android */
-
-  Pollfish.shouldQuitEvent -= shouldQuit;
-  Pollfish.shouldNotQuitEvent -= shouldNotQuit;
-
+    
   #endif
 }
 ```
 
-On the left side you can see the event you are registering with, and on the right side the function that will be fired when the event occurs.
+On the left side you can see the event you are registering to listen to, and on the right side the function that will be fired when the event occurs.
 
 In order to inform Android and iOS to which object to send the unity messages when an event happens we have to add the following code in Awake function:
 
@@ -241,6 +238,51 @@ void Awake()
   Pollfish.SetEventObjectPollfish(this.gameObject.name);
 }
 ```
+
+### 7. Pausing and Resuming a scene when user takes a survey (optional)
+
+It is good practice to pause your scene when a user is taking a survey and resume when he is done. To do this we pause our scene when Pollfish panel opens and we resume when Pollfish panel closes.
+
+```
+private bool ispaused = false ; 
+
+public void Update () {
+    
+  if (!ispaused) {
+    Time.timeScale = 1;
+
+  } else if (ispaused) {
+    Time.timeScale = 0;        
+  }
+}    
+
+public void surveyOpened()
+{
+  ispaused = true; // pause scene 
+}
+    
+public void surveyClosed()
+{
+  ispaused = false; // resume scene 
+}
+```
+
+
+
+
+
+
+### Sample Project
+
+In order to have a look on a simple integration of Pollfish in a unity project have a look in Assets/Plugins/Pollfish/demo folder. You can run the scene there and see how Pollfish will be rendered through your apps.
+
+![](/homeassets/images/documentation/unity/unity4.png)
+
+However we suggest that you follow this tutorial in order to understand better the integration steps you have to follow to properly use Pollfish in your project.
+
+
+
+
 
 ### Android Back Event
 
@@ -314,33 +356,6 @@ Also Pollfish requires Internet permission so please do not forget to add the fo
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-### Pausing and Resuming a scene when user takes a survey (optional)
-
-It is good practice to pause your scene when a user is taking a survey and resume when he is done. To do this we pause our scene when Pollfish panel opens and we resume when Pollfish panel closes.
-
-```
-private bool ispaused = false ; 
-
-public void Update () {
-    
-  if (!ispaused) {
-    Time.timeScale = 1;
-
-  } else if (ispaused) {
-    Time.timeScale = 0;        
-  }
-}    
-
-public void surveyOpened()
-{
-  ispaused = true; // pause scene 
-}
-    
-public void surveyClosed()
-{
-  ispaused = false; // resume scene 
-}
-```
 
 ### Set custom user attributes (optional)
 
