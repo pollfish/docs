@@ -15,17 +15,17 @@ v4.0.0
 - Initial Release
 - Support for Lollipop
 </div>
-<br/><br/>
+<br/>
 
 #### **Requirements**
 
-Pollfish works with:
+Pollfish Unity Plugin works with:
 
 *   Unity 4.3+
 *   iOS 7.0 +
 *   Android 2.3.3 (10) +
 
-Please set minimum versions of your project accordingly.
+Please set minimum version of your project accordingly.
 
 > **Note:** Pollfish does not work on Editor, only on mobile devices
 
