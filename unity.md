@@ -27,9 +27,9 @@ Pollfish Unity Plugin works with:
 
 Please set minimum version of your project accordingly.
 
-> **Note:** Pollfish does not work on Editor, only on mobile devices
+> **Note:** Pollfish does not work on Editor, so please do try only on mobile devices
 
-<br/><br/><br/>
+<br/><br/>
 
 ## Steps Analytically
 
