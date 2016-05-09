@@ -428,7 +428,9 @@ Pollfish.IsPollfishPresent();
 
 In order to have a look on a simple integration of Pollfish in a unity project have a look in **Assets/Plugins/Pollfish/demo** folder. You can run the scene there and see how Pollfish will be rendered through your apps.
 
-![](/homeassets/images/documentation/unity/unity4.png)
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/rewarded.gif"/>
+<br/>
 
 In sample project you can see both standard and rewarded integration from Pollfish in case you want to use Pollfish for rewarding users with some sort of virtual currency. However we suggest that you follow this tutorial in order to understand better the integration steps you have to follow to properly use Pollfish in your project.
 
