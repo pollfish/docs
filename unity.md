@@ -1,13 +1,51 @@
-<div class="changelog" data-version="4.1.0">
+<div class="changelog" data-version="4.2.0">
+v4.2.0
+
+- New updated iOS and Android SDKs
+- Added video, rating, slider, open ended, open ended numerical and description questions support
+- Improved performance, bug fixes
+
 v4.1.0
 
 - Support of manual set of devMode for android by ignoring key of signing
 - Respect and submit of Google Advertising Id
+
 v4.0.0
 
 - Initial Release
 - Support for Lollipop
 </div>
+
+
+## Steps Analytically
+
+### 1. Obtain a Developer Account
+
+Register at [www.pollfish.com](//www.pollfish.com/login/publisher)
+
+### 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
+
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 **Obtain a Developer Account and download Pollfish Unity Plugin**
 
