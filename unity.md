@@ -432,7 +432,7 @@ In order to have a look on a simple integration of Pollfish in a unity project h
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/rewarded.gif"/>
 <br/>
 
-In sample project you can see both standard and rewarded integration from Pollfish in case you want to use Pollfish for rewarding users with some sort of virtual currency. However we suggest that you follow this tutorial in order to understand better the integration steps you have to follow to properly use Pollfish in your project.
+In sample project you can see both standard and rewarded integration from Pollfish in case you want to use Pollfish for rewarding users with some sort of virtual currency. However we suggest that you follow this tutorial in order to understand better the integration steps you have to follow in order to properly integrate Pollfish in your project.
 
 
 
