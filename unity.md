@@ -47,13 +47,13 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 ![](/homeassets/images/documentation/unity/unity2.png)
 
-#### If you target iOS - ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
+### If you target iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
 * **mod_pbproj,pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish and PollfishBuildPostprocessor.cs** are used to automatically add Pollfish necessary frameworks in your XCode project (if frameworks  show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
 
 > **Note:** Be careful to replace your previous project when you build for iOS otherwise frameworks will be added more than once if you choose to append.
 
-#### If you target Android - ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
+### If you target Android ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
 
 
 * **PollfishAndroidSetupUI.cs** is a script file that allows to automatically add Google Play Services in your Android project from Unity menu.
@@ -261,7 +261,7 @@ If you have any question, like why you do not see surveys on your own device in 
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
 <br/>
 <br/>
-### 6\. Other init methods (optional)
+### 7\. Other init methods (optional)
 
 #### Passing custom parameter for server to server postback calls
 
@@ -272,7 +272,7 @@ void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, b
 ```
 
 <br/>
-### 7. Handling app Lifecycle (optional)
+### 8. Adjusting Pollfish with app lifecycle events (optional)
 
 To init Pollfish when app resumes you can call:
 
@@ -292,7 +292,7 @@ void OnApplicationPause (bool pause)
 }
 ```
 <br/>
-### 8\. Manually show or hide Pollfish (optional)
+### 9\. Manually show or hide Pollfish (optional)
 
 You can manually show or hide Pollfish anytime, by calling anywhere after initialization:  
 
@@ -307,7 +307,7 @@ Pollfish.HidePollfish ();
 ```
 <br/>
 
-### 9. Listening to Pollfish events (optional)
+### 10. Listening to Pollfish events (optional)
 
 If you want to register to listen for Pollfish events you can add PollfishEventListener.cs to your scene object and listen for the relevant functions to fire. If you want to listen only to specific listeners choose from them and add them to your MonoBehaviour object in a similar way as in PollfishEventListener.cs
 
@@ -354,7 +354,7 @@ void Awake()
 }
 ```
 <br/>
-### 10. Pausing and Resuming a scene when user takes a survey (optional)
+### 11. Pausing and Resuming a scene when user takes a survey (optional)
 
 It is good practice to pause your scene when a user is taking a survey and resume when he is done. To do this we pause our scene when Pollfish panel opens and we resume when Pollfish panel closes.
 
@@ -382,7 +382,7 @@ public void surveyClosed()
 }
 ```
 <br/>
-### 11. Set custom user attributes (optional)
+### 12. Set custom user attributes (optional)
 
 You can set custom attributes that you receive from your app regarding a user in order to receive a better fill rate on surveys by calling the following:  
 
@@ -402,18 +402,13 @@ Pollfish.SetAttributesPollfish(dict);
 ```
 
 <br/>
-### 12\. Handling Android events (optional)
+### 13\. Check if Pollfish survey is still available on your device (optional)
 
 It happens that time had past since you initialized Pollfish and a survey is received. If you want to check is survey is still avaialble on your device and has not expired you can check by calling:
-
-<span style="text-decoration: underline">Objective-C:</span>
 
 ```
 Pollfish.IsPollfishPresent();
 ```
-
-<br/>
-### 12\. Check if Pollfish survey is still available on your device (optional)
 
 
 
@@ -426,7 +421,7 @@ In order to have a look on a simple integration of Pollfish in a unity project h
 
 ![](/homeassets/images/documentation/unity/unity4.png)
 
-However we suggest that you follow this tutorial in order to understand better the integration steps you have to follow to properly use Pollfish in your project.
+In sample project you can see both standard and rewarded integration from Pollfish in case you want to use Pollfish for rewarding users with some sort of virtual currency. However we suggest that you follow this tutorial in order to understand better the integration steps you have to follow to properly use Pollfish in your project.
 
 
 
