@@ -47,18 +47,17 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 ![](/homeassets/images/documentation/unity/unity2.png)
 
-#### iOS
+#### If you target iOS - ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
-*![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
+*
  **mod_pbproj,pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish and PollfishBuildPostprocessor.cs** are used to automatically add Pollfish necessary frameworks in your XCode project (if frameworks  show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
-
-![](/homeassets/images/documentation/unity/unity3.png)
 
 > **Note:** Be careful to replace your previous project when you build for iOS otherwise frameworks will be added more than once if you choose to append.
 
-#### Android
+#### If you target Android - ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
 
-*![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png) **PollfishAndroidSetupUI.cs** is a script file that allows to automatically add Google Play Services in your Android project from Unity menu.
+
+* **PollfishAndroidSetupUI.cs** is a script file that allows to automatically add Google Play Services in your Android project from Unity menu.
 
 Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can do that easily do that by selecting File and then Pollfish – Setup Android dependencies. If you do not have Google Play Services you can install them through Android SDK Manager.
 
