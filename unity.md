@@ -297,6 +297,9 @@ void OnApplicationPause (bool pause)
   }
 }
 ```
+
+Have in mind that it can also be a good practise to intiialize Pollfish during orientation changes (if your app supports them)
+
 <br/>
 ### 9\. Manually show or hide Pollfish (optional)
 
