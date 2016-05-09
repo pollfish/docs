@@ -22,13 +22,13 @@ v4.0.0
 ### 1. Obtain a Developer Account
 
 Register at [www.pollfish.com](//www.pollfish.com/login/publisher)
-
+<br/>
 ### 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
 
 Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
 > **Note:** If your app supports both Android and iOS it would be better to create 2 different apps on the dashboard and use different API keys for each platform in your Unity code
-
+<br/>
 ### 3\. Importing Pollfish framework to your project
 
 Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip file you will find a unitypackage file. You can use this file to easily import plugin’s necessary files.
@@ -160,7 +160,83 @@ public void onEnable()
 ```
 <br/>
 
-### 5\.  Update your Privacy Policy
+### 5. Handling Android or iOS specific cases
+
+###  5.1 If you are targeting Android ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
+
+### Android Back Event
+
+Since Pollfish uses Android back button to close its panel if open, if you want to replicate this behavior you should capture  back button event and call Pollfish.ShouldQuit(); to inform the library and act accordingly.
+
+```
+public void Update ()
+{        
+	/* handling Android back event */	
+
+	if (Input.GetKeyDown (KeyCode.Escape)) {
+
+		Pollfish.ShouldQuit();
+	}
+}
+```
+
+### Android AndroidManifest file
+
+We have included an AndroidManifest.xml file that will work for most of user cases However if you need to include your own AndroidManifest file remember to add the following lines:
+
+```
+<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+```
+
+within your Activity <activity></activity> that holds the following intent filters:
+
+```
+<intent-filter>
+  <action android:name="android.intent.action.MAIN" />
+  <category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+```
+
+This line enable touch events to pass through Pollfish SDK.
+
+Also Pollfish requires Internet permission so please do not forget to add the following line if you do not already have it.
+
+```
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
+
+### Android Obfuscation (Using Proguard when exporting)
+
+If you use proguard with your app, please insert the following line in your proguard configuration file:
+
+```
+-libraryjars libs/pollfish_unity_android_bridge.jar
+
+-keep class com.pollfish.** { *; }
+-keep class com.pollfish_unity.** { *; }
+-dontwarn com.pollfish.**
+```
+
+where pollfish_unity_android_bridge.jar is the bridge jar between Pollfish and Unity that are placed in your Assets folder.
+
+**Note:**
+
+**- Using Proguard with Pollfish requires setting your Project Build Target to Android 4.2.2 (API 17) or above!**
+
+**- Include all Google Play services necessary code as described [here](http://developer.android.com/google/play-services/setup.html#Proguard).**
+
+###  5.2 If you are targeting iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
+
+### Distributing your app to AppStore
+
+Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefore when submitting your app to the App you should select the following options as seen in the image below:  
+
+![](/homeassets/images/documentation/idfa_2.jpg)
+
+<br/>
+
+### 6\.  Update your Privacy Policy
 
 Add the following paragraph to your app's privacy policy:
 
@@ -211,7 +287,7 @@ void OnApplicationPause (bool pause)
     ispaused=false;                        
        
     /* you can use this on Android too, but test since low end devices may freeze */
-    Pollfish.PollfishInitFunction ((int)pollfishPosition, padding, appDeveloperKey, debugMode, customMode);
+    Pollfish.PollfishInitFunction ((int)pollfishPosition, indPadding, apiKey, debugMode, customMode);
   }
 }
 ```
@@ -326,7 +402,7 @@ Pollfish.SetAttributesPollfish(dict);
 ```
 
 <br/>
-### 12\. Check if Pollfish survey is still available on your device (optional)
+### 12\. Handling Android events (optional)
 
 It happens that time had past since you initialized Pollfish and a survey is received. If you want to check is survey is still avaialble on your device and has not expired you can check by calling:
 
@@ -335,6 +411,12 @@ It happens that time had past since you initialized Pollfish and a survey is rec
 ```
 Pollfish.IsPollfishPresent();
 ```
+
+<br/>
+### 12\. Check if Pollfish survey is still available on your device (optional)
+
+
+
 <br/><br/><br/>
 
 
@@ -350,97 +432,5 @@ However we suggest that you follow this tutorial in order to understand better t
 
 
 
-### Android Back Event
 
-Since Pollfish uses Android back button to close its panel if open, if you want to replicate this behavior you should capture the back button event and call Pollfish.ShouldQuit (); to inform the library and act accordingly.
-
-```
-public void Update ()
-{        
-    /* handling Android back event */    
-  if (Input.GetKeyDown (KeyCode.Escape)) {
-                
-    Pollfish.ShouldQuit ();
-    
-  }
-}
-```
-
-This function will fire any of the following listeners that you should prior register in order to listen for the following events in the same way as described before:
-
-```
-#if UNITY_ANDROID
-
-public void shouldQuit()
-{
-  Debug.Log("PollfishEventListener: shouldQuit()");
-
-  Application.Quit ();
-
-}
-
-public void shouldNotQuit()
-{
-  Debug.Log("PollfishEventListener: shouldNotQuit()");
-}
-
-#endif
-```
-
-shouldNotQuit() listener informs you that Pollfish has handled the Pollfish back event (Pollfish panel was open and the event closed it) and you should not quit the app or take any other action upon it.
-
-### Android AndroidManifest file
-
-We have included an AndroidManifest.xml file that will work for most of user cases However if you need to include your own AndroidManifest file remember to add the following lines:
-
-```
-<meta-data android:name="com.google.android.gms.version"
-  android:value="@integer/google_play_services_version" />
-```
-
-that are required by Google Play Services within the <application> tags and also to add the following line
-
-```
-<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
-```
-
-within your Activity <activity></activity> that holds the following intent filters:
-
-```
-<intent-filter>
-  <action android:name="android.intent.action.MAIN" />
-  <category android:name="android.intent.category.LAUNCHER" />
-</intent-filter>
-```
-
-This line enable touch events to pass through Pollfish SDK.
-
-Also Pollfish requires Internet permission so please do not forget to add the following line if you do not already have it.
-
-
-```
-<uses-permission android:name="android.permission.INTERNET"/>
-```
-
-
-
-### Android Obfuscation (Using Proguard when exporting)
-
-If you use proguard with your app, please insert the following line in your proguard configuration file:
-
-```
--libraryjars libs/pollfish.jar
--libraryjars libs/pollfish_unity_android_bridge.jar
-
--keep class com.pollfish.** { *; }
--keep class com.pollfish_unity.** { *; }
-```
-
-where pollfish.jar is the latest pollfish jar you use in your app and pollfish_unity_android_bridge.jar is the bridge jar between Pollfish and Unit that are placed in your Assets folder.
-
-**Note:**
-
-**- Using Proguard with Pollfish requires setting your Project Build Target to Android 4.2.2 (API 17) or above!**
-
-**- Include all Google Play services necessary code as described [here](http://developer.android.com/google/play-services/setup.html#Proguard).**
 
