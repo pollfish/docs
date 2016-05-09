@@ -130,7 +130,7 @@ void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, b
 *   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
 
 ![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/202124442/Screen_Shot_2015-10-13_at_11.56.10_AM.png)
-
+<br/><br/>
 Below you can see an example of the init function. Remember to set your API key for each platform prior calling init:
 
 ```
@@ -182,7 +182,7 @@ public void Update ()
 }
 ```
 
-### Android AndroidManifest file
+### AndroidManifest file
 
 We have included an AndroidManifest.xml file that will work for most of user cases However if you need to include your own AndroidManifest file remember to add the following lines:
 
