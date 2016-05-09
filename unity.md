@@ -33,7 +33,7 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a
 
 Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip file you will find a unitypackage file. You can use this file to easily import plugin’s necessary files.
 
-### Importing Pollfish unity package:
+#### Importing Pollfish unity package:
 
 *   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose Import Package, then Custom Package and finally select PollfishUnityPugin.unitypackage
 
@@ -41,7 +41,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 *   If you want to exlude demo scene please uncheck Assets/Plugins/Pollfish/demo folder. Have in mind that in demo folder you will find PollfishDemo.cs file that demonstrates Pollfish Unity Plugin usage within a scene.
 *   Review the package files and then select Import. If you are targeting only Android platform for example you can uncheck the iOS folder and vice versa.
 
-### Imported Files will be listed in the following directories:
+#### Imported Files will be listed in the following directories:
 
 **Assets/Editor** – Files to help with initial setup
 
@@ -58,7 +58,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 * **PollfishAndroidSetupUI.cs** is a script file that allows to automatically add Google Play Services in your Android project from Unity menu.
 
-Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can do that easily do that by selecting File and then Pollfish – Setup Android dependencies. If you do not have Google Play Services you can install them through Android SDK Manager.
+> **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can do that easily do that by selecting File and then Pollfish – Setup Android dependencies. If you do not have Google Play Services you can install them through Android SDK Manager.
 
 **Assets/Plugins/Android** – Android Pollfish libraries and resources
 
@@ -67,9 +67,10 @@ Please have in mind that in order to use Pollfish you have to include Google Pla
 **Assets/Plugins/Pollfish** – Pollfish C# bridge files that allow communication between Unity and Java for Android and Unity and Objective-C for iOS.
 
 **Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration
-<br/><br/>
+<br/><br/><br/>
 
-### Requirements
+
+#### Requirements
 
 Have in mind that Pollfish works with Unity 4.3+ and :
 
@@ -77,6 +78,9 @@ Have in mind that Pollfish works with Unity 4.3+ and :
 *   Android 2.3.3 (10) +
 
 Please set minimum versions of your project accordingly.
+
+<br/><br/><br/>
+
 
 ### Sample Project
 
