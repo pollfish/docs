@@ -29,40 +29,13 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a
 
 > **Note:** If your app supports both Android and iOS it would be better to create 2 different apps on the dashboard and use different API keys for each platform in your Unity code
 
-### 3\. Add Pollfish framework to your project
+### 3\. Importing Pollfish framework to your project
 
-Download Pollfish Unity Plugin from the website.
+Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip file you will find a unitypackage file. You can use this file to easily import plugin’s necessary files.
 
+> **Note:**If you're building for iOS, you can skip the Plugins/Android subdirectory; if you're building for Android, you can skip the Plugins/iOS subdirectory.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**Obtain a Developer Account and download Pollfish Unity Plugin**
-
-Register at [www.pollfish.com](//www.pollfish.com) and download Pollfish Unity Plugin.
-
-**Add app (one for iOS and one for Android) in Pollfish panel and copy the given API Keys**
-
-Login at [www.pollfish.com](//www.pollfish.com) and add two new apps (iOS and Android if you support both platforms) at Pollfish panel in section My Apps and copy the given API key for each app to use later in your init function in Unity.
-
-## Initial Setup
-
-In Pollfish Unity plugin zip file you will find a unitypackage file for easy import of plugin’s necessary files.
-
-### To import Pollfish unity package:
+###3.1 To import Pollfish unity package:
 
 *   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose Import Package, then Custom Package and finally select PollfishUnityPugin. unitypackage.  
 
