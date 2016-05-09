@@ -208,7 +208,7 @@ Also Pollfish requires Internet permission so please do not forget to add the fo
 ```
 
 
-### Android Obfuscation (Using Proguard when exporting)
+### Using Proguard
 
 If you use proguard with your app, please insert the following line in your proguard configuration file:
 
