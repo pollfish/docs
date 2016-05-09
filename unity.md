@@ -60,6 +60,8 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 > **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can do that easily do that by selecting File and then Pollfish – Setup Android dependencies. If you do not have Google Play Services you can install them through Android SDK Manager.
 
+![alt text](https://storage.googleapis.com/pollfish-images/android_dep.png)
+
 **Assets/Plugins/Android** – Android Pollfish libraries and resources
 
 **Assets/Plugins/iOS** – Pollfish framework and bridge files.
