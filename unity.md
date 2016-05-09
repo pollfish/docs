@@ -417,7 +417,7 @@ Pollfish.IsPollfishPresent();
 
 ### Sample Project
 
-In order to have a look on a simple integration of Pollfish in a unity project have a look in Assets/Plugins/Pollfish/demo folder. You can run the scene there and see how Pollfish will be rendered through your apps.
+In order to have a look on a simple integration of Pollfish in a unity project have a look in **Assets/Plugins/Pollfish/demo** folder. You can run the scene there and see how Pollfish will be rendered through your apps.
 
 ![](/homeassets/images/documentation/unity/unity4.png)
 
