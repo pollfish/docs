@@ -17,6 +17,20 @@ v4.0.0
 </div>
 <br/><br/>
 
+#### **Requirements**
+
+Pollfish works with:
+
+*   Unity 4.3+
+*   iOS 7.0 +
+*   Android 2.3.3 (10) +
+
+Please set minimum versions of your project accordingly.
+
+> **Note:** Pollfish does not work on Editor, only on mobile devices
+
+<br/><br/><br/>
+
 ## Steps Analytically
 
 ### 1. Obtain a Developer Account
@@ -73,19 +87,6 @@ Imported files will be listed in the following directories:
 **Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration
 <br/><br/><br/>
 
-
-#### **Requirements**
-
-Have in mind that Pollfish works with Unity 4.3+ and :
-
-*   iOS 7.0 +
-*   Android 2.3.3 (10) +
-
-Please set minimum versions of your project accordingly.
-
-> **Note:** Pollfish does not work on Editor, only on mobile devices
-
-<br/><br/><br/>
 
 
 ### 4. Initializing Pollfish
