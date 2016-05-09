@@ -229,7 +229,7 @@ where **pollfish_unity_android_bridge.jar** is the bridge jar between Pollfish a
 **- Using Proguard with Pollfish requires setting your Project Build Target to Android 4.2.2 (API 17) or above!**
 
 **- Include all Google Play services necessary code as described [here](http://developer.android.com/google/play-services/setup.html#Proguard).**
-
+<br/>
 ###  5.2 If you are targeting iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
 ### Distributing your app to AppStore
@@ -253,6 +253,8 @@ Add the following paragraph to your app's privacy policy:
 <br/><br/>
 
 ---
+
+### At this point you are ready to publish your app with Pollfish! 
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://pollfish.files.wordpress.com/2016/03/basic_survey.gif"/>
 <br/>
