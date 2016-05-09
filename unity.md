@@ -37,7 +37,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 *   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose **Import Package**, then **Custom Package** and finally select **PollfishUnityPugin.unitypackage**
 
-    ![](/homeassets/images/documentation/unity/unity1.png)
+    ![](/homeassets/images/documentation/unity/unity1.png?w=100)
 *   If you want to exlude demo scene please uncheck **Assets/Plugins/Pollfish/demo** folder. Have in mind that in demo folder you will find **PollfishDemo.cs file** that demonstrates Pollfish Unity Plugin usage within a scene.
 *   Review the package files and then select Import. If you are targeting only Android platform for example you can uncheck the iOS folder and vice versa.
 
