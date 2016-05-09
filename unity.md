@@ -49,8 +49,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 #### If you target iOS - ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
-*
- **mod_pbproj,pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish and PollfishBuildPostprocessor.cs** are used to automatically add Pollfish necessary frameworks in your XCode project (if frameworks  show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
+* **mod_pbproj,pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish and PollfishBuildPostprocessor.cs** are used to automatically add Pollfish necessary frameworks in your XCode project (if frameworks  show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
 
 > **Note:** Be careful to replace your previous project when you build for iOS otherwise frameworks will be added more than once if you choose to append.
 
@@ -68,6 +67,7 @@ Please have in mind that in order to use Pollfish you have to include Google Pla
 **Assets/Plugins/Pollfish** – Pollfish C# bridge files that allow communication between Unity and Java for Android and Unity and Objective-C for iOS.
 
 **Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration
+<br/><br/>
 
 ### Requirements
 
