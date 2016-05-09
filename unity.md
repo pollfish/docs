@@ -47,7 +47,7 @@ Imported Files will be listed in the following directories:
 
 **Assets/Editor** – Files to help with initial setup
 
-![alt text](https://storage.googleapis.com/pollfish-images/PollfishUnityPlugin.png?w=100)
+![alt text](https://storage.googleapis.com/pollfish-images/PollfishUnityPlugin.png)
 
 ### If you target iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
