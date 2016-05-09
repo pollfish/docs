@@ -35,7 +35,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 ### Import Pollfish unity package
 
-*   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose Import Package, then Custom Package and finally select PollfishUnityPugin.unitypackage
+*   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose **Import Package**, then **Custom Package** and finally select **PollfishUnityPugin.unitypackage**
 
     ![](/homeassets/images/documentation/unity/unity1.png)
 *   If you want to exlude demo scene please uncheck **Assets/Plugins/Pollfish/demo** folder. Have in mind that in demo folder you will find **PollfishDemo.cs file** that demonstrates Pollfish Unity Plugin usage within a scene.
