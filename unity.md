@@ -123,7 +123,7 @@ void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, b
 *   **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).  
 *   **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
 
-> **Note:** Be careful to set andDebuggable parameter to false prior releasing to AppStore!  
+> **Note:** Be careful to set andDebuggable parameter to false prior releasing to Google Play or AppStore!  
 
 5\. **customMode** (BOOL) – Initializes Pollfish in custom mode if set to true. By default this is set to false.
 
