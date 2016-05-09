@@ -33,15 +33,15 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a
 
 Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip file you will find a unitypackage file. You can use this file to easily import plugin’s necessary files.
 
-### 3.1 To import Pollfish unity package:
+### Importing Pollfish unity package:
 
-*   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose Import Package, then Custom Package and finally select PollfishUnityPugin. unitypackage.  
+*   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose Import Package, then Custom Package and finally select PollfishUnityPugin.unitypackage
 
     ![](/homeassets/images/documentation/unity/unity1.png)
 *   If you want to exlude demo scene please uncheck Assets/Plugins/Pollfish/demo folder. Have in mind that in demo folder you will find PollfishDemo.cs file that demonstrates Pollfish Unity Plugin usage within a scene.
 *   Review the package files and then select Import. If you are targeting only Android platform for example you can uncheck the iOS folder and vice versa.
 
-### 3.2 Imported Files will be listed in the following directories:
+### Imported Files will be listed in the following directories:
 
 **Assets/Editor** – Files to help with initial setup
 
@@ -49,15 +49,16 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 #### iOS
 
-*mod_pbproj,pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish are used to automatically add Pollfish necessary frameworks in your XCode project (frameworks will show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project then you should leave the files as it is in Editor folder, otherwise you can deselect them.
+*![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
+ **mod_pbproj,pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish and PollfishBuildPostprocessor.cs** are used to automatically add Pollfish necessary frameworks in your XCode project (if frameworks  show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
 
 ![](/homeassets/images/documentation/unity/unity3.png)
 
-Be careful to replace your previous project when you build for iOS otherwise frameworks will be added more than once if you choose to append.
+> **Note:** Be careful to replace your previous project when you build for iOS otherwise frameworks will be added more than once if you choose to append.
 
 #### Android
 
-*PollfishAndroidSetupUI.cs is a script file that allows to automatically add Google Play Services in your Android project from Unity menu.
+*![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png) **PollfishAndroidSetupUI.cs** is a script file that allows to automatically add Google Play Services in your Android project from Unity menu.
 
 Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can do that easily do that by selecting File and then Pollfish – Setup Android dependencies. If you do not have Google Play Services you can install them through Android SDK Manager.
 
