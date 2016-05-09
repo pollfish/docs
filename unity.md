@@ -33,7 +33,7 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a
 
 Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip file you will find a unitypackage file. You can use this file to easily import plugin’s necessary files.
 
-### Import Pollfish unity package:
+### Import Pollfish unity package
 
 *   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose Import Package, then Custom Package and finally select PollfishUnityPugin.unitypackage
 
