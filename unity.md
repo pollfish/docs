@@ -38,7 +38,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 *   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose Import Package, then Custom Package and finally select PollfishUnityPugin.unitypackage
 
     ![](/homeassets/images/documentation/unity/unity1.png)
-*   If you want to exlude demo scene please uncheck Assets/Plugins/Pollfish/demo folder. Have in mind that in demo folder you will find PollfishDemo.cs file that demonstrates Pollfish Unity Plugin usage within a scene.
+*   If you want to exlude demo scene please uncheck **Assets/Plugins/Pollfish/demo** folder. Have in mind that in demo folder you will find **PollfishDemo.cs file** that demonstrates Pollfish Unity Plugin usage within a scene.
 *   Review the package files and then select Import. If you are targeting only Android platform for example you can uncheck the iOS folder and vice versa.
 
 ### Check/uncheck files to be imported
@@ -130,7 +130,9 @@ void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, b
 *   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
 
 ![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/202124442/Screen_Shot_2015-10-13_at_11.56.10_AM.png)
+
 <br/><br/>
+
 Below you can see an example of the init function. Remember to set your API key for each platform prior calling init:
 
 ```
@@ -220,7 +222,7 @@ If you use proguard with your app, please insert the following line in your prog
 -dontwarn com.pollfish.**
 ```
 
-where pollfish_unity_android_bridge.jar is the bridge jar between Pollfish and Unity that are placed in your Assets folder.
+where **pollfish_unity_android_bridge.jar** is the bridge jar between Pollfish and Unity that are placed in your Assets folder.
 
 **Note:**
 
@@ -311,7 +313,7 @@ Pollfish.HidePollfish ();
 
 ### 10. Listening to Pollfish events (optional)
 
-If you want to register to listen for Pollfish events you can add PollfishEventListener.cs to your scene object and listen for the relevant functions to fire. If you want to listen only to specific listeners choose from them and add them to your MonoBehaviour object in a similar way as in PollfishEventListener.cs
+If you want to register to listen for Pollfish events you can add **PollfishEventListener.cs** to your scene object and listen for the relevant functions to fire. If you want to listen only to specific listeners choose from them and add them to your MonoBehaviour object in a similar way as in PollfishEventListener.cs
 
 Generally, in order to listen to Pollfish events you have to explicitly listen for them:
 
