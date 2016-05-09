@@ -83,7 +83,8 @@ Have in mind that Pollfish works with Unity 4.3+ and :
 
 Please set minimum versions of your project accordingly.
 
-> **Note:** Pollfish does not work on Editor
+> **Note:** Pollfish does not work on Editor, only on mobile devices
+
 <br/><br/><br/>
 
 
