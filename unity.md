@@ -161,7 +161,7 @@ public void onEnable()
   
   #endif
   
-  Pollfish.PollfishInitFunction((int) pollfishPosition, indPadding, apiKey, bool debugMode, bool customMode);
+  Pollfish.PollfishInitFunction((int) pollfishPosition, indPadding, apiKey, debugMode, customMode);
 
 }
 ```
