@@ -185,18 +185,18 @@ If you have any question, like why you do not see surveys on your own device in 
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
 <br/>
 <br/>
-### 5\. Other init methods (optional)
+### 6\. Other init methods (optional)
 
 #### Passing custom parameter for server to server postback calls
 
 If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function within the plugin and receive it back with Server to Server, survey completed postback call you can use:  
 
 ```
-void PollfishInitFunction(int pollfishPosition, int padding, string apiKeyKey, bool debugMode, bool customMode, string request_uuid);
+void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, bool debugMode, bool customMode, string request_uuid);
 ```
 
 <br/>
-### 5. Handling app Lifecycle (optional)
+### 7. Handling app Lifecycle (optional)
 
 To init Pollfish when app resumes you can call:
 
@@ -216,7 +216,7 @@ void OnApplicationPause (bool pause)
 }
 ```
 <br/>
-### 6\. Manually show or hide Pollfish (optional)
+### 8\. Manually show or hide Pollfish (optional)
 
 You can manually show or hide Pollfish anytime, by calling anywhere after initialization:  
 
@@ -229,9 +229,9 @@ Or
 ```
 Pollfish.HidePollfish ();
 ```
+<br/>
 
-
-### 6. Listening to Pollfish events (optional)
+### 9. Listening to Pollfish events (optional)
 
 If you want to register to listen for Pollfish events you can add PollfishEventListener.cs to your scene object and listen for the relevant functions to fire. If you want to listen only to specific listeners choose from them and add them to your MonoBehaviour object in a similar way as in PollfishEventListener.cs
 
@@ -277,8 +277,8 @@ void Awake()
   Pollfish.SetEventObjectPollfish(this.gameObject.name);
 }
 ```
-
-### 7. Pausing and Resuming a scene when user takes a survey (optional)
+<br/>
+### 10. Pausing and Resuming a scene when user takes a survey (optional)
 
 It is good practice to pause your scene when a user is taking a survey and resume when he is done. To do this we pause our scene when Pollfish panel opens and we resume when Pollfish panel closes.
 
@@ -305,10 +305,37 @@ public void surveyClosed()
   ispaused = false; // resume scene 
 }
 ```
+<br/>
+### 11. Set custom user attributes (optional)
 
+You can set custom attributes that you receive from your app regarding a user in order to receive a better fill rate on surveys by calling the following:  
 
+```
+Pollfish.SetAttributesPollfish(Dictionary<string,string> dict);
+```
 
+For example:
 
+```
+Dictionary<string, string> dict = new Dictionary<string, string>();
+ 
+dict.Add("FacebookID", "1234");
+dict.Add("TwitterID", "10sde");
+ 
+Pollfish.SetAttributesPollfish(dict);
+```
+
+<br/>
+### 12\. Check if Pollfish survey is still available on your device (optional)
+
+It happens that time had past since you initialized Pollfish and a survey is received. If you want to check is survey is still avaialble on your device and has not expired you can check by calling:
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```
+Pollfish.IsPollfishPresent();
+```
+<br/><br/><br/>
 
 
 ### Sample Project
@@ -396,24 +423,6 @@ Also Pollfish requires Internet permission so please do not forget to add the fo
 ```
 
 
-### Set custom user attributes (optional)
-
-You can set custom attributes that you receive from your app regarding a user in order to receive a better fill rate on surveys by calling the following:  
-
-```
-Pollfish.SetAttributesPollfish(Dictionary<string,string> dict);
-```
-
-For example:
-
-```
-Dictionary<string, string> dict = new Dictionary<string, string>();
- 
-dict.Add("FacebookID", "1234");
-dict.Add("TwitterID", "10sde");
- 
-Pollfish.SetAttributesPollfish(dict);
-```
 
 ### Android Obfuscation (Using Proguard when exporting)
 
