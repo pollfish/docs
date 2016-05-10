@@ -119,9 +119,9 @@ void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, b
 
 > **Note:** if used in MIDDLE position, padding is calculating from top.**  
 
-**3\. apiKey** (NSString *)- Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
+**3\. apiKey** (string)- Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
 
-**4\. debugMode (BOOL)** – Debug or Release mode  
+**4\. debugMode (bool)** – Debug or Release mode  
 
 <span style="text-decoration: underline">You can use Pollfish either in Debug or in Release mode.</span>  
 
@@ -130,7 +130,7 @@ void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, b
 
 > **Note:** Be careful to set andDebuggable parameter to false prior releasing to Google Play or AppStore!  
 
-5\. **customMode** (BOOL) – Initializes Pollfish in custom mode if set to true. By default this is set to false.
+5\. **customMode** (bool) – Initializes Pollfish in custom mode if set to true. By default this is set to false.
 
 **true Vs false**
 
