@@ -32,7 +32,7 @@ Please set minimum version of your project accordingly.
 <br/><br/>
 
 ## Steps Analytically
-
+<br/>
 ### 1. Obtain a Developer Account
 
 Register at [www.pollfish.com](//www.pollfish.com/login/publisher)
