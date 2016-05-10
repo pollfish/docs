@@ -62,7 +62,7 @@ Imported files will be listed in the following directories:
 
 ![alt text](https://storage.googleapis.com/pollfish-images/PollfishUnityPlugin.png)
 
-**Assets/Editor** – Files to help with initial setup
+- **Assets/Editor** – Files to help with initial setup
 
 <div style="margin-left: 40px;">
 
@@ -83,13 +83,13 @@ Imported files will be listed in the following directories:
 
 </div>
 
-**Assets/Plugins/Android** – Android Pollfish libraries and resources
+- **Assets/Plugins/Android** – Android Pollfish libraries and resources
 
-**Assets/Plugins/iOS** – Pollfish framework and bridge files.
+- **Assets/Plugins/iOS** – Pollfish framework and bridge files.
 
-**Assets/Plugins/Pollfish** – Pollfish C# bridge files that allow communication between Unity and Java for Android and Unity and Objective-C for iOS.
+- **Assets/Plugins/Pollfish** – Pollfish C# bridge files that allow communication between Unity and Java for Android and Unity and Objective-C for iOS.
 
-**Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration
+- **Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration
 <br/><br/><br/>
 
 
