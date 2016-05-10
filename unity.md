@@ -64,6 +64,7 @@ Imported files will be listed in the following directories:
 
 ### **Assets/Editor** – Files to help with initial setup
 <div style="margin-left: 40px;">
+
 ### If you target iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
 * **mod_pbproj.pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish and PollfishBuildPostprocessor.cs** are used to automatically add Pollfish necessary frameworks in your XCode project (if frameworks  show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
