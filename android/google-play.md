@@ -688,5 +688,5 @@ PollFish.setAttributesMap(userProperties);
 <br/><br/>
 ### 16\. Server-to-server callbacks on survey completion (optional)
 
-If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enchansed security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
+If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
 
