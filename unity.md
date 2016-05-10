@@ -62,7 +62,7 @@ Imported files will be listed in the following directories:
 
 ![alt text](https://storage.googleapis.com/pollfish-images/PollfishUnityPlugin.png)
 
-### **Assets/Editor** – Files to help with initial setup
+**Assets/Editor** – Files to help with initial setup
 <div style="margin-left: 40px;">
 
 ### If you target iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
@@ -79,14 +79,16 @@ Imported files will be listed in the following directories:
 > **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can do that easily do that by selecting **File** and then **Pollfish – Setup Android dependencies**. If you do not have Google Play Services you can install them through Android SDK Manager.
 
 ![alt text](https://storage.googleapis.com/pollfish-images/android_dep.png)
+
 </div>
-### **Assets/Plugins/Android** – Android Pollfish libraries and resources
 
-### **Assets/Plugins/iOS** – Pollfish framework and bridge files.
+**Assets/Plugins/Android** – Android Pollfish libraries and resources
 
-### **Assets/Plugins/Pollfish** – Pollfish C# bridge files that allow communication between Unity and Java for Android and Unity and Objective-C for iOS.
+**Assets/Plugins/iOS** – Pollfish framework and bridge files.
 
-### **Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration
+**Assets/Plugins/Pollfish** – Pollfish C# bridge files that allow communication between Unity and Java for Android and Unity and Objective-C for iOS.
+
+**Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration
 <br/><br/><br/>
 
 
