@@ -211,7 +211,7 @@ within your Activity <activity></activity> that holds the following intent filte
 
 This line enable touch events to pass through Pollfish SDK.
 
-Also Pollfish requires Internet permission so please do not forget to add the following line if you do not already have it.
+Finally, Pollfish requires Internet permission in order to work, so please do not forget to add the following line if you do not already have it.
 
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -220,7 +220,7 @@ Also Pollfish requires Internet permission so please do not forget to add the fo
 
 ### Using Proguard
 
-If you use proguard with your app, please insert the following line in your proguard configuration file:
+If you use proguard with your app, please insert the following lines in your proguard configuration file:
 
 ```
 -libraryjars libs/pollfish_unity_bridge.jar
@@ -260,6 +260,7 @@ Add the following paragraph to your app's privacy policy:
 ---
 
 ### At this point you are ready to publish your app with Pollfish! 
+** remember to turn app in release mode prior uploading to a relevant App Store
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://pollfish.files.wordpress.com/2016/03/basic_survey.gif"/>
 <br/>
