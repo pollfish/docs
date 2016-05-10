@@ -66,14 +66,14 @@ Imported files will be listed in the following directories:
 
 <div style="margin-left: 40px;">
 
-If you target iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
----
+**If you target iOS** ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
+
 * **mod_pbproj.pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish and PollfishBuildPostprocessor.cs** are used to automatically add Pollfish necessary frameworks in your XCode project (if frameworks  show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
 
 > **Note:** Be careful to replace your previous project when you build for iOS otherwise frameworks will be added more than once if you choose to append.
 
-If you target Android ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
----
+**If you target Android** ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
+
 
 * **PollfishAndroidSetupUI.cs** is a script file that allows to automatically add Google Play Services in your Android project from Unity menu.
 
