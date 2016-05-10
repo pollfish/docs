@@ -48,7 +48,7 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click **"Add
 
 Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip file you will find a **.unitypackage** file. You can use this file to easily import plugin’s necessary files.
 
-#### Import Pollfish unity package
+### Import Pollfish unity package
 
 *   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose **Import Package**, then **Custom Package** and finally select **PollfishUnityPugin.unitypackage**
 
@@ -56,8 +56,8 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 *   If you want to exlude demo scene please uncheck **Assets/Plugins/Pollfish/demo** folder. Have in mind that in demo folder you will find **PollfishDemo.cs file** that demonstrates Pollfish Unity Plugin usage within a scene.
 *   Review the package files and then select Import. If you are targeting only Android platform for example you can uncheck the iOS folder and vice versa.
 
-#### Check/uncheck files to import
-
+### Check/uncheck files to import
+<br/>
 Imported files will be listed in the following directories:
 
 ![alt text](https://storage.googleapis.com/pollfish-images/PollfishUnityPlugin.png)
