@@ -260,8 +260,8 @@ Add the following paragraph to your app's privacy policy:
 ---
 
 ### At this point you are ready to publish your app with Pollfish! 
-** remember to turn app in release mode prior uploading to a relevant App Store
-<br/>
+> **Note:** Remember to turn your app in release mode prior publishing to a relevant app store
+<br/><br/><br/>
 <img style="margin: 0 auto; display: block;" src="https://pollfish.files.wordpress.com/2016/03/basic_survey.gif"/>
 <br/>
 
