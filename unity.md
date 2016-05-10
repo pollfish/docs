@@ -42,10 +42,11 @@ Register as a Publisher at [www.pollfish.com](//www.pollfish.com/login/publisher
 Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click **"Add a new app"** on Pollfish Developer Dashboard in section **"My Apps"**. Copy then the given API key for this app, in order to use later on, when initializing Pollfish within your code.
 
 > **Note:** If your app supports both Android and iOS it would be better to create 2 different apps on the dashboard and use different API keys for each platform in your Unity code
+
 <br/><br/>
 ### 3\. Import Pollfish in your project
 
-Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip file you will find a .unitypackage file. You can use this file to easily import plugin’s necessary files.
+Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip file you will find a **.unitypackage** file. You can use this file to easily import plugin’s necessary files.
 
 ### Import Pollfish unity package
 
@@ -61,7 +62,7 @@ Imported files will be listed in the following directories:
 
 ![alt text](https://storage.googleapis.com/pollfish-images/PollfishUnityPlugin.png)
 
-**Assets/Editor** – Files to help with initial setup
+### **Assets/Editor** – Files to help with initial setup
 
 ### If you target iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
@@ -78,13 +79,13 @@ Imported files will be listed in the following directories:
 
 ![alt text](https://storage.googleapis.com/pollfish-images/android_dep.png)
 
-**Assets/Plugins/Android** – Android Pollfish libraries and resources
+### **Assets/Plugins/Android** – Android Pollfish libraries and resources
 
-**Assets/Plugins/iOS** – Pollfish framework and bridge files.
+### **Assets/Plugins/iOS** – Pollfish framework and bridge files.
 
-**Assets/Plugins/Pollfish** – Pollfish C# bridge files that allow communication between Unity and Java for Android and Unity and Objective-C for iOS.
+### **Assets/Plugins/Pollfish** – Pollfish C# bridge files that allow communication between Unity and Java for Android and Unity and Objective-C for iOS.
 
-**Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration
+### **Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration
 <br/><br/><br/>
 
 
