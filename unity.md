@@ -63,7 +63,7 @@ Imported files will be listed in the following directories:
 ![alt text](https://storage.googleapis.com/pollfish-images/PollfishUnityPlugin.png)
 
 ### **Assets/Editor** – Files to help with initial setup
-
+<div style="margin-left: 40px;">
 ### If you target iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
 * **mod_pbproj.pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish and PollfishBuildPostprocessor.cs** are used to automatically add Pollfish necessary frameworks in your XCode project (if frameworks  show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
@@ -78,7 +78,7 @@ Imported files will be listed in the following directories:
 > **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can do that easily do that by selecting **File** and then **Pollfish – Setup Android dependencies**. If you do not have Google Play Services you can install them through Android SDK Manager.
 
 ![alt text](https://storage.googleapis.com/pollfish-images/android_dep.png)
-
+</div>
 ### **Assets/Plugins/Android** – Android Pollfish libraries and resources
 
 ### **Assets/Plugins/iOS** – Pollfish framework and bridge files.
