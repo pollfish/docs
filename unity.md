@@ -121,7 +121,7 @@ void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, b
 
 **3\. apiKey** (string)- Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
 
-**4\. debugMode (bool)** – Debug or Release mode  
+**4\. debugMode** (bool) – Debug or Release mode  
 
 <span style="text-decoration: underline">You can use Pollfish either in Debug or in Release mode.</span>  
 
