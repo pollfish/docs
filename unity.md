@@ -35,17 +35,17 @@ Please set minimum version of your project accordingly.
 <br/>
 ### 1. Obtain a Developer Account
 
-Register at [www.pollfish.com](//www.pollfish.com/login/publisher)
+Register as a Publisher at [www.pollfish.com](//www.pollfish.com/login/publisher)
 <br/><br/>
 ### 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
 
-Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click **"Add a new app"** on Pollfish Developer Dashboard in section **"My Apps"**. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click **"Add a new app"** on Pollfish Developer Dashboard in section **"My Apps"**. Copy then the given API key for this app, in order to use later on, when initializing Pollfish within your code.
 
 > **Note:** If your app supports both Android and iOS it would be better to create 2 different apps on the dashboard and use different API keys for each platform in your Unity code
-<br/>
+<br/><br/>
 ### 3\. Import Pollfish in your project
 
-Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip file you will find a unitypackage file. You can use this file to easily import plugin’s necessary files.
+Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip file you will find a .unitypackage file. You can use this file to easily import plugin’s necessary files.
 
 ### Import Pollfish unity package
 
