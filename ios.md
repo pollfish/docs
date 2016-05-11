@@ -236,11 +236,15 @@ Below you can see an example of the init function:
 <span style="text-decoration: underline">Objective-C:</span>
 
 ```
-[Pollfish initAtPosition: PollFishPositionMiddleRight
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+
+  [Pollfish initAtPosition: PollFishPositionMiddleRight
              withPadding: 0
 	     andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
            andDebuggable: false 
            andCustomMode: false];
+           
+}
 ```
 
 <span style="text-decoration: underline">Swift:</span>
