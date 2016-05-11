@@ -942,13 +942,13 @@ end
 ```
 and call **pod install**
 
-#### **B** - Add Pollfish header file
+#### **B** - Add Pollfish header file in your AppDelegate 
 
 ```
 #import <Pollfish/Pollfish.h>
 ```
 
-#### **C** - Initialize Pollfish in your AppDelegate 
+#### **C** - Initialize Pollfish 
 
 ```
 - (void)applicationDidBecomeActive:(UIApplication *)application {
