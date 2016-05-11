@@ -942,7 +942,7 @@ end
 ```
 and call **pod install**
 
-#### **B** - Add Pollfish headers
+#### **B** - Add Pollfish header file
 
 ```
 #import <Pollfish/Pollfish.h>
@@ -960,7 +960,7 @@ and call **pod install**
            andCustomMode: false];
 }
 ```
-and publish your app
+
 
 
 
