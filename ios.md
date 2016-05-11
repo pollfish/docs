@@ -928,9 +928,9 @@ Pollfish.isPollfishPresent()
 If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
 
 
-### How to enable Pollfish surveys in your iOS apps
+### How to enable Pollfish surveys in your iOS app?
 
-**A** - Add dependency to Pollfish in your Podfile
+#### **A** - Add dependency to Pollfish in your Podfile
 
 ```
 target 'YOUR_APP' do
@@ -945,14 +945,17 @@ end
 #import <Pollfish/Pollfish.h>
 ```
 
-#### **C** - Initialize Pollfish
+#### **C** - Initialize Pollfish in your AppDelegate 
 
 ```
-[Pollfish initAtPosition: PollFishPositionMiddleRight
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+
+  [Pollfish initAtPosition: PollFishPositionMiddleRight
              withPadding: 0
          andDeveloperKey: @"YOUR_API_KEY" 
            andDebuggable: false 
            andCustomMode: false];
+}
 ```
 
 
