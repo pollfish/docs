@@ -940,7 +940,7 @@ target 'YOUR_APP' do
   pod 'Pollfish'
 end
 ```
-and call pod install
+and call **pod install**
 
 #### **B** - Add Pollfish headers
 
