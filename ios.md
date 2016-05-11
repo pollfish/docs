@@ -931,4 +931,37 @@ If you want to reward your users for completing a survey it is common practise t
 
 
 
+### How to enable Pollfish surveys in your iOS app?
+
+#### **A** - Add dependency to Pollfish in your Podfile
+
+```
+target 'YOUR_APP' do
+  platform :ios, '7.0'
+  pod 'Pollfish'
+end
+```
+and call **pod install**
+
+#### **B** - Import Pollfish header in your AppDelegate 
+
+```
+#import <Pollfish/Pollfish.h>
+```
+
+#### **C** - Initialize Pollfish 
+
+```
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+
+  [Pollfish initAtPosition: PollFishPositionMiddleRight
+             withPadding: 15
+         andDeveloperKey: @"YOUR_API_KEY" 
+           andDebuggable: false 
+           andCustomMode: false];
+}
+```
+
+
+
 
