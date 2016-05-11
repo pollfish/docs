@@ -4,6 +4,7 @@ v4.2.0
 - New updated iOS and Android SDKs
 - Added video, rating, slider, open ended, open ended numerical and description questions support
 - Improved performance, bug fixes
+- Deprecated shouldQuit events and replaces with function
 
 v4.1.0
 
