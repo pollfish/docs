@@ -96,9 +96,9 @@ Pollfish can be used along with other online advertising networks which also-whe
 
 
 
-### 5\. Types of Surveys & Payment
+### 5\. Types of Surveys 
 
-Two types of surveys may be conducted on Pollfish platform:
+The following type of revenue generating surveys may be conducted on the Pollfish platform:
 
 1.  #### Basic Surveys
 
@@ -108,29 +108,33 @@ Two types of surveys may be conducted on Pollfish platform:
 
     When a Playful Survey is conducted, the payment of a fee may vary depending on the extent of the research. The minimum lump sum fee described above does not apply in this case. However, the publisher, when installing Pollfish, may disable the Playful Surveys option and accept to adhere only for Basic Surveys.
 
-Furthermore, some surveys require a screening process to detect if a mobile user/website visitor is eligible for taking a survey. If a user fails to pass the screening process then the survey is considered as not completed and no revenue will be delivered to the publisher.
+The following types of non revenue generating surveys are also conducted on the Pollfish Platfom: 
+
+1.  Screening process surveys: 
+
+    Some surveys require a screening process to detect if a mobile user/website visitor is eligible for taking a survey. If a user fails to pass the screening process then the survey is considered as not completed and no revenue will be delivered to the publisher.
+
+2.  #### Demographic information surveys: 
+
+    In order to constantly improve Pollfish platform, and make sure that app users are targeted for surveys that would be relevant to them, giving higher completion rate and reliable results, a survey, collecting demographic information will be shown to app users. The process is simple: users will receive a short demographic survey. Response data will be used to divide them into various demographic groups, based on the information gathered. The benefits are two-pronged; users that are very specifically targeted in apps with almost tailor-made surveys on publisher end, and a more relevant survey audience for Pollfish clients. This survey will not generate any revenue for the Publisher since it is part of survey distribution process. Most of information gathered will be displayed also on the Pollfish developer dashboard in order for publishers to better understand their users.
+
+### 6\. Payment
 
 In case a payment is owed to the publishers, the publishers get paid on a monthly base through the payment system and payment channel determined by Pollfish or other agreed method (if such a special agreement is concluded between Pollfish and app-publisher). Pollfish may use the services of third party payment systems and solutions (e.g. multi-payment solution hosting entities) in order to effect payments and therefore, publishers shall be requested to provide their consent, cooperate and abide by the terms and conditions of such third party entities. If the publisher declines to accept the rules and terms and conditions of such third party payment systems, no payment can or shall be able to be effected by Pollfish to the declining publisher.
-
-
 Pollfish, at the request of such third-party entity which shall be responsible to effect payments, may disclose information about you to such third party or may request you to provide all further necessary identifying information about you either to Pollfish or directly to such third-party entity, for purposes of compliance with National, State or Federal laws (e.g. laws concerning foreign asset controls, or other similar procedures prescribed by law). By accepting this document you specifically agree to the above and accept that you shall fully cooperate with Pollfish or such third-party entity, for the reasons stated above. Please bear in mind that you (and not Pollfish) are responsible for bearing and paying all requested possible commissions or other transaction costs (banking costs, credit, debit charges etc.), as may be requested by the third party payment system appointed by Pollfish to effect payments and depending on your preferred payment method. Before you start using our Services and calculating your revenues from the use of the Pollfish platform, please check the terms of service of such third-party systems in order to get informed about third party commission rates or other possible costs leading to certain deductions from your final payments. We also note that publishers may at all times visit their account section on the Pollfish publisher Dashboard and state their preferred payment method. Costs and fees deducted from their payment, are analytically indicated therein, based on the publisher’s preferred payment method.
-
-Pollfish, may from time to time, request from you (the publisher) to provide information about your app/website, in order for Pollfish to be able to verify compliance of your app with the terms and conditions of this agreement and in order to verify the sincerity of your registered info and actual operation of your registered app/website. In case you fail to deliver the verification information requested by Pollfish, Pollfish shall have the right to withhold all due payments until the requested verification information is provided by you. 
-Payments are effected within a two weeks time-frame (Net14), commencing always after the 1st day of each calendar month. For publishers generating more than $10.000 (>$10k) payments shall be effected within a fourty five days time frame (Net45) commencing always after the 1st day of each calendar month.. If the amount to be paid is less than $30, the payment will be withheld and transferred to the next month, until the amount reaches or exceeds the amount of $30. 
-
+Pollfish, may from time to time, request from you (the publisher) to provide information about your app/website, in order for Pollfish to be able to verify compliance of your app with the terms and conditions of this agreement and in order to verify the sincerity of your registered info and actual operation of your registered app/website. In case you fail to deliver the verification information requested by Pollfish, Pollfish shall have the right to withhold all due payments until the requested verification information is provided by you. Payments are effected within a two weeks time-frame (Net14), commencing always after the 1st day of each calendar month. For publishers generating more than $10.000 (>$10k) payments shall be effected within a fourty five days time frame (Net45) commencing always after the 1st day of each calendar month.. If the amount to be paid is less than $30, the payment will be withheld and transferred to the next month, until the amount reaches or exceeds the amount of $30.
 Publishers or Networks that use Pollfish with an API integration and not with the standard SDK integration will be paid in Net45. All Referral prices are displayed in USD and may be found in https://www.pollfish.com/referral Polllfish Inc. is a registered US company. All publisher payments occur in US currency. Notifications/listeners fired from the SDK within the apps to inform the user about the money to be earned from a survey are delivered in USD.
-
-
-Publishers or Networks that use Pollfish with an API integration and not with the standard SDK integration will be paid in Net45.
-All Referral prices are displayed in USD and may be found in https://www.pollfish.com/referral
-Polllfish Inc. is a registered US company. All publisher payments occur in US currency.
-Notifications/listeners fired from the SDK within the apps to inform the user about the money to be earned from a survey are delivered in USD.
-
-You, the publisher, are solely responsible for the payment of any banking, commission and transaction costs. Any additional credit or debit charges that may incur due to the transaction will be paid by you and not by Pollfish . You, the publisher are also responsible for paying all relevant taxes or fees that may arise from payments and transactions. You acknowledge that all and any aforementioned costs (e.g. commission fees) shall be deducted from the sum payable to you by Pollfish, according to the terms of such third party payment systems (and depending on your preferred method of payment), for which you are so notified when using the relevant third party payment service and/or visiting the account section on the Pollfish publisher Dashboard.  
-
+Publishers or Networks that use Pollfish with an API integration and not with the standard SDK integration will be paid in Net45. All Referral prices are displayed in USD and may be found in https://www.pollfish.com/referral Polllfish Inc. is a registered US company. All publisher payments occur in US currency. Notifications/listeners fired from the SDK within the apps to inform the user about the money to be earned from a survey are delivered in USD.
+You, the publisher, are solely responsible for the payment of any banking, commission and transaction costs. Any additional credit or debit charges that may incur due to the transaction will be paid by you and not by Pollfish . You, the publisher are also responsible for paying all relevant taxes or fees that may arise from payments and transactions. You acknowledge that all and any aforementioned costs (e.g. commission fees) shall be deducted from the sum payable to you by Pollfish, according to the terms of such third party payment systems (and depending on your preferred method of payment), for which you are so notified when using the relevant third party payment service and/or visiting the account section on the Pollfish publisher Dashboard.
 Pricing, timing and methods of payments may change at any time without prior notice. However, such change will not affect the minimum price of ongoing services; it will apply from the next survey.Pollfish seeks long term relationships with app publishers. Consequently, if you chose to delete or otherwise stop the operation of your registered app/website, you agree and acknowledge that Pollfish shall not proceed to any payment of fees referring to the time period between the last payment you received from Pollfish and the date of deletion of your app/website.
 
-### 6\. Privacy
+### 7\. User Incentivisation 
+
+If you decide to set money rewards in order to incentivize your user to complete surveys, please have the following in mind: 
+Calculation of Publisher fees and related payments made by Pollfish to the Publisher, are always based on the completed survey reports, as reported to Pollfish through the server-to-server callbacks. 
+Server-to-server callbacks, being the standard industry practice for implementing user-rewarding policies in monetization networks,  is also the only 100% secure and accurate way to reward your own users in case you decide to do so. All other reports or analytics you may be collecting may be vulnerable to user fraud, false code implementation, false counting of analytics and several other errors. Therefore, we strongly suggest that calculation of due payments owed to your own users, as a result of a money rewarding policy set by you in order to incentivize your app users, is always based on the completed survey reports, as reported by our servers through the secure callbacks. Pollfish server to server option is available on the Pollfish dashboard and can be used at your convenience.
+
+### 8\. Privacy
 
 Pollfish only collects Registration and app/website information about you and your app/website. In order to register your app/website with Pollfish you have to register and create an account providing your e-mail, password and VAT (if applicable). In order to enable Pollfish in your app/website you have to provide information about your app/website such as title, link etc.
 
@@ -147,15 +151,15 @@ Pollfish complies with applicable Data Protection legislation and cooperates wit
 You can update your registration information at any time. To cancel or delete your account you should contact Pollfish team with your request at info@pollfish.com. You can enable or disable Pollfish surveys in your apps/websites.
 Pollfish may use from time to time at its own discretion, screenshots from a developer's app/website to expose and market the different ways of Pollfish integration out there.
 
-### 7\. Termination
+### 9\. Termination
 
 Pollfish reserves the right to terminate this Agreement at any time, without prior notice and without liability, at its sole discretion. Pollfish will prohibit you from using its services if you misuse Pollfish service, if your application does not comply with Google Android or Apple iOS system and Policies (in case your application is uploaded to the relevant stores), is incompatible with the Laws and does not abide to the Rules – Obligations set forth in this Agreement or if you breach this Agreement in any way. If your application/website is suspended for any reason whatsoever, you acknowledge that you will not receive any payment from Pollfish.
 
-### 8\. Indemnification
+### 10\. Indemnification
 
 You hereby indemnify and hold Pollfish harmless and agree to defend against any third party claim or action brought against Pollfish or any of its parent, subsidiary or affiliated companies, from and against any and all claims, actions, losses, liabilities, damages, costs and expenses (including legal fees and costs) arising out of or in connection with any claim(s) that would constitute a breach of any warranty, representation, covenant or agreement made by you in this agreement. You agree to indemnify and hold Pollfish harmless from any claims, damages/injury and costs, including attorney's fees arising out of or relating to: a) the breach of any term or condition in this Agreement b) the misuse of Pollfish service, c) the violation of all and any applicable laws or regulations and/or any violation of any rights of third parties. Pollfish will provide you with written notice of any claim, suit or action from which you must indemnify Pollfish. Pollfish reserves its right to terminate at any time your use of its Services, in case of any breach of the present agreement, which may impose liability upon Pollfish.
 
-### 9\. Disclaimer
+### 11\. Disclaimer
 
 Without limitation of anything else set forth in the present agreement you understand and agree that Pollfish further limits its liability in connection with your use of its properties as set forth below:
 Pollfish Properties, including, without limitation, all Content, Pollfish SDK, the site, the Platform, the panel, the service and the functions made available on or accessed through or sent from the website, are provided "AS IS," "as available, " and "with all faults" without warranties implied or statutory including without limitation warranties of merchantability, fitness for a particular use and non infringement. Pollfish and its parents, subsidiaries and affiliates make no representation or warranties or endorsements of any kind whatsoever (express or implied) about:
@@ -176,19 +180,19 @@ Pollfish makes it best efforts to check the content of the Surveys created by th
 Pollfish is not responsible for the incompliances of the application where Pollfish SDK has been registered with Google Android and Apple iOS Policies and the Laws.
 
 
-### 10\. Limitation of liability
+### 12\. Limitation of liability
 
 Your access to and use the Services is at your own risk. If you are dissatisfied with the Pollfish SDK, site, platform, panel and service your sole and exclusive remedy is to discontinue using Pollfish SKD, site, platform, software, panel and service. Pollfish’s total cumulative liability to you or any other party for any loss or damages resulting from claims, demands or actions arising out of or relating to this agreement will not exceed $100 (USD).
 
-### 11\. Confidentiality
+### 13\. Confidentiality
 
 You undertake not to disclose to any third party any financial, technical, legal information relating to Pollfish services, SDK, software, platform or panel. This confidentiality obligation shall not apply (a) if the Confidential information has already been published by Pollfish or (b) the disclosure the confidential information is required by law or by the competent authorities.
 
-### 12\. Intellectual; Property rights and others
+### 14\. Intellectual; Property rights and others
 
 The past, present and future content of the Properties, including without limitation, copyright works and all intellectual property rights (including Industrial Property rights) such as software, logos, trademarks domain names, designs, graphics, pictures, photos, texts, newsletters, etc and any and all copyright material and all other intellectual property right and/or materials related to the Properties are the sole property of Pollfish. No rights in or to the Content and/or to the Properties are granted to you.
 
-### 13\. Governing Law and Miscellaneous
+### 15\. Governing Law and Miscellaneous
 
 The present Agreement and its interpretation shall be governed by and construed in accordance with the US Law and the parties consent to the exclusive jurisdiction of the courts of the State of Utah. In case any of the provisions of this Terms of Use is found to be invalid, it shall not affect the validity of the other provisions that will remain in force.
 
