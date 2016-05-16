@@ -234,7 +234,7 @@ public class MyGdxGame extends ApplicationAdapter {
 }
 ```
 
-**3. Check if Pollfish survey is still available on your device
+** 3. Check if Pollfish survey is still available on your device
 
 It happens that time had past since you initialized Pollfish and a survey is received. If you want to check if survey is still avaialble on your device and has not expired you can check by calling:
 
