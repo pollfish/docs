@@ -110,7 +110,7 @@ The following type of revenue generating surveys may be conducted on the Pollfis
 
 The following types of non revenue generating surveys are also conducted on the Pollfish Platfom: 
 
-1.  Screening process surveys: 
+1.  #### Screening process surveys: 
 
     Some surveys require a screening process to detect if a mobile user/website visitor is eligible for taking a survey. If a user fails to pass the screening process then the survey is considered as not completed and no revenue will be delivered to the publisher.
 
