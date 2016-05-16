@@ -48,7 +48,7 @@ With this simple implementation you should be able to see Pollfish surveys in yo
 ## Optional Steps
 
 
-**1. Listen to Pollfish listeners (optional)**
+### 1. Listen to Pollfish listeners (optional)
 
 You can listen to Pollfish listeners by implementing them in your AndroidLauncher, for example:
 
@@ -68,7 +68,7 @@ public void onPollfishSurveyCompleted(boolean playfulSurveys , int surveyPrice) 
 }
 ```
 
-**2. Manually show or hide Pollfish (optional)**
+### 2. Manually show or hide Pollfish (optional)
 
 You can manually show or hide Pollfish in your Android App with a simple implementation as the following one:
 
@@ -234,7 +234,7 @@ public class MyGdxGame extends ApplicationAdapter {
 }
 ```
 
-**3. Check if Pollfish survey is still available on your device**
+### 3. Check if Pollfish survey is still available on your device
 
 It happens that time had past since you initialized Pollfish and a survey is received. If you want to check if survey is still avaialble on your device and has not expired you can check by calling:
 
