@@ -2,13 +2,13 @@
 
 This is a simple tutorial that will help you integrate Pollfish surveys in your libgdx Android app.
 
-Integration of Pollfish in an Android application is simple, and is described in detail in the official guide here: [Pollfish Android Documentation](https://www.pollfish.com/android)
+Integration of Pollfish in an Android application is simple, and is described in detail in the official guide here: [Pollfish Android Documentation](https://www.pollfish.com/docs/android)
 
 ## STEPS SUMMARY
 
-1. [Sign Up](http://www.pollfish.com/login/dev) as a Developer at Pollfish website, create a new app and grab its API key from the dashboard
-2. [Download](https://www.pollfish.com/android) Pollfish SDK (either Google Play or Universal)
-3. Add relevant Pollfish jar in your project, import relevant classes and add required permissions in your app's manifest as described in the [documentation](https://www.pollfish.com/android)
+1. [Sign Up](https://www.pollfish.com/login/publisher) as a Publisher at Pollfish website, create a new app and grab its API key from the dashboard
+2. [Download](https://www.pollfish.com/docs/android) Pollfish SDK (either Google Play or Universal) or reference it in your gradle file through jcenter()
+3. Add relevant Pollfish aar or jar file in your project, import relevant classes and add required permissions in your app's manifest as described in the [documentation](https://www.pollfish.com/docs/android)
 4. Call Pollfish init function in your onResume of your AndroidLauncher
 
 ```java
@@ -34,16 +34,16 @@ public class AndroidLauncher extends AndroidApplication{
  }
 
  @Override
- public void onResume() {  
-    super.onResume();
-    
-    PollFish.init(this, "your_api_key_here", Position.BOTTOM_LEFT, 5);  
+ public void onResume() {
+     super.onResume();
+ 
+     PollFish.initWith(this, new ParamsBuilder("YOUR_API_KEY").build());
  }
 
 }
 ```
 
-With this simple implementation you should be able to see Pollfish surveys within your app within a few minutes.
+With this simple implementation you should be able to see Pollfish surveys in your app within a few minutes.
 
 ## Optional Steps
 
@@ -106,7 +106,10 @@ public class AndroidLauncher extends AndroidApplication implements MyGdxGame.MyP
  public void onResume() {  
     super.onResume();
     
-    PollFish.customInit(this, "your_api_key_here", Position.BOTTOM_LEFT, 5);
+    PollFish.initWith(this, new ParamsBuilder("YOUR_API_KEY")
+            .customMode(true)
+            .build());
+            
     PollFish.hide();  
  }
 
@@ -230,3 +233,14 @@ public class MyGdxGame extends ApplicationAdapter {
     }
 }
 ```
+
+**3. Check if Pollfish survey is still available on your device
+
+It happens that time had past since you initialized Pollfish and a survey is received. If you want to check if survey is still avaialble on your device and has not expired you can check by calling:
+
+```
+PollFish.isPollfishPresent();
+```
+
+
+
