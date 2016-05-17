@@ -26,7 +26,7 @@ You can test server-to-server callbacks in developer mode. On every survey compl
 
 Every user can complete only once a specific survey. You can avoid doublicates in survey completion callbacks by appending and listening to **tx_id** param. This id is calculated by user id and survey id and uniquely identifies a survey completion by a user. A user should not complete the same survey twice. Having that said you should never receive callbacks with the same **tx_id** param. Use this param to avoid crediting a user more than once for the same survey.   
 
-### 4. Passing a unique id of a user (as used in a third party system) in callback
+### 4. Passing and retrieving your own unique id of a user through the callback
 
 You can pass a unique id for a user (as you may use it in your own system) through the SDK, during intiialization. You can retrieve this id through the server-to-server callback if you append **request_uuid** parameter to the call.
 
