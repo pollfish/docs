@@ -1,19 +1,21 @@
 
 ## Server-to-Server postback call for survey completion
 
-You can set a Server-to-Server postback call through Pollfish developer dashboard. This call will be fired on every survey completion. 
+You can set a Server-to-Server postback call through Pollfish developer dashboard, in your app's page. This call will be fired on every survey completion through your app. 
 
 <img src="https://storage.googleapis.com/pollfish-images/s2s.png">
 
-> **Note:** You should use this call to verify a survey completion if you reward your users. This is the only 100% accurate and secure way to monitor survey completion through an app.
+> **Note:** You should use this call to verify a survey completion if you reward your users. This is the only 100% accurate and secure way to monitor survey completion through your app.
 
 Server-to-server callbacks can be used to retrieve several different params on publisher's server side.
 
 <img src="https://storage.googleapis.com/pollfish-images/s2s_call.png">
 
+In general, we advice to monitor all these parameters on your server side.
+
 ###  Testing postback calls in developer mode 
 
-You can test server-to-server callbacks in developer mode. On every survey completion a callback will fire. In that call a **debug=true** parameter will be appended to indicate that the callback is for a survey completed in developer mode. If testing in release mode no debug parameter will exist in the call.
+You can test server-to-server callbacks in developer mode. On every survey completion a callback will be fired. In that call a **debug=true** parameter will be appended to indicate that the callback is for a survey completed in developer mode. If your app is turned in release mode, no debug parameter will exist in the call.
 
 ### Uniquely identifying a survey completion (avoiding duplicates)
 
