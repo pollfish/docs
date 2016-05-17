@@ -1,7 +1,7 @@
 
 ## Server-to-Server postback call for survey completion
 
-### Introduction
+### 1. Introduction
 
 #### Server-to-Server postback call for survey completion
 
@@ -18,21 +18,25 @@ Server-to-server callbacks can be used to retrieve several different params on p
 
 In general, we advice to monitor all these parameters on your server side.
 
-###  Testing postback calls in developer mode 
+### 2. Testing postback calls in developer mode 
 
 You can test server-to-server callbacks in developer mode. On every survey completion a callback will be fired. In that call a **debug=true** parameter will be appended to indicate that the callback is for a survey completed in developer mode. If your app is turned in release mode, no debug parameter will exist in the call.
 
-### Uniquely identifying a survey completion (avoiding duplicates)
+### 3. Uniquely identifying a survey completion (avoiding duplicates)
 
-You can avoid doublicates in survey completion callbacks by appending and listeing to **tx_id** param. This id is calculated by user id and survey id and uniquely identifies a survey completion by a user. A user should not complete the same survey twice. Having that said you should never receive callbacks with the same **tx_id** param. Use this param to avoid crediting the user more than once for the same survey.   
+Every user can complete only once a specific survey. You can avoid doublicates in survey completion callbacks by appending and listening to **tx_id** param. This id is calculated by user id and survey id and uniquely identifies a survey completion by a user. A user should not complete the same survey twice. Having that said you should never receive callbacks with the same **tx_id** param. Use this param to avoid crediting a user more than once for the same survey.   
 
-### Passing a unique id of a user (as used in a third party system) in callback
+### 4. Passing a unique id of a user (as used in a third party system) in callback
 
-You can pass a unique id for a user through the sdk during intiialization. You can retrieve this is through the server-to-server callback if you append **request_uuid** parameter
+You can pass a unique id for a user (as you may use it in your own system) through the SDK, during intiialization. You can retrieve this id through the server-to-server callback if you append **request_uuid** parameter to the call.
 
-### Callback URL signatures
+### 5. Retrieving money to be earned
 
-#### How to include a signature in the callback URLs
+You can easily retrieve through every callback how much money were earned in USD cents, by appending and earning param with name **cpa**.
+
+### 6. Securing your callback with signature
+
+#### 6.1 How to include a signature in the callback URLs
 
 As with all callback URL parameters, in order to receive values for a parameter you have to include the corresponding parameter placeholder in the URL that you submit to Pollfish. For the **signature** parameter you have to include the **[[signature]]** parameter placeholder. If you do not included it then your callback URLs will not be signed. Because of this the following URL templates will result in not having your callback URLS signed.
 
@@ -55,7 +59,7 @@ http://www.example.com/pollfish-callback?tx_id=[[tx_id]&time=[[timestamp]]&sig=[
 http://www.example.com/pollfish-callback?tx_id=[[tx_id]&time=[[timestamp]]&cpa=[[cpa]]&device=[[device_id]]&request_uuid=[[request_uuid]]&sig=[[signature]]
 ```
 
-#### Effective use of URL signatures
+#### 6.2 Effective use of URL signatures
 
 If you want to be protected by fake requests forged by malicious third parties then including the **[[signature]]** in your URL is not enough. You must make sure that you include at least one other parameter that varies a lot between requests or is unique between requests. We recommend using at least the **[[tx_id]]** parameter in combination with the **[[signature]]** parameter to protect against fake callback requests. 
 
