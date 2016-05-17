@@ -87,7 +87,7 @@ http://www.example.com/pollfish-callback?id=[[tx_id]]time=[[timestamp]]&sig=[[si
 
 Includes both **[[tx_id]]** and **[[timestamp]]**.
 
-#### 6.3 How signatures are produced.
+#### 6.3 How signatures are produced
 
 The **signature** of the callback URLs is the result of appling the HMAC-SHA1 hash function to the parameters that are included in the URL using your account's secret_key.
 
