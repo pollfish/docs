@@ -32,7 +32,7 @@ You can pass a unique id for a user (as you may use it in your own system) throu
 
 ### 5. Retrieving money to be earned
 
-You can easily retrieve through every callback how much money were earned in USD cents, by appending and earning param with name **cpa**.
+You can easily retrieve through every callback how much money were earned in USD cents, by appending and reading param with name **cpa**.
 
 ### 6. Securing your callback with signature
 
