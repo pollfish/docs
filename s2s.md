@@ -66,9 +66,9 @@ To make sure that your callback URLs are signed include the **signature** parame
 **Valid examples:**
 
 ```
-http://www.example.com/pollfish-callback?tx_id=[[tx_id]&sig=[[signature]]
-http://www.example.com/pollfish-callback?tx_id=[[tx_id]&time=[[timestamp]]&sig=[[signature]]
-http://www.example.com/pollfish-callback?tx_id=[[tx_id]&time=[[timestamp]]&cpa=[[cpa]]&device=[[device_id]]&request_uuid=[[request_uuid]]&sig=[[signature]]
+http://www.example.com/pollfish-callback?tx_id=[[tx_id]]&sig=[[signature]]
+http://www.example.com/pollfish-callback?tx_id=[[tx_id]]&time=[[timestamp]]&sig=[[signature]]
+http://www.example.com/pollfish-callback?tx_id=[[tx_id]]&time=[[timestamp]]&cpa=[[cpa]]&device=[[device_id]]&request_uuid=[[request_uuid]]&sig=[[signature]]
 ```
 
 #### 6.2 Effective use of URL signatures
