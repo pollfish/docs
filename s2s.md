@@ -101,14 +101,20 @@ Includes both **tx_id** and **timestamp**.
 
 #### 6.3 How signatures are produced
 
-The **signature** of the callback URLs is the result of appling the  [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) hash function to the parameters that are included in the URL using your account's secret_key.
+The **signature** of the callback URLs is the result of appling the  [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) hash function to the **[[parameters]]** that are included in the URL using your account's secret_key.
+
+We only sign the values that are substituted using the parameters placeholders (**[[cpa]]**, **[[device_id]]**, **[[request_uuid]]**, **[[timestamp]]** and **[[tx_id]]**). We do not sign any other part of the URL including any other *URL parameters* that the publisher might specify. For example in the below URL only the values that are going to be substituded in **[[request_uuid]]** and **[[tx_id]]** are used as inputand not the values of the `bundle_id` and `source` URL parameters.
+
+```
+https://www.example.com?request_uuid=[[request_uuid]]&tx_id=[[tx_id]]&signature=[[signature]]&bundle_id=com.domain.app&source=pollfish
+```
 
 Your secret_key is an auto-generated key by Pollfish that serves as a shared secret between the publisher and Pollfish. You can find out more about your secret_key at the [Account Information](//www.pollfish.com/dashboard/account) page.
 
 To sign the parameters they are assembled in alphabetical order using the parameter placeholder names in a string by concatenating them using the colon ':' character. For example if you have the follwing URL template:
 
 ```
-https://www.example.com?device_id=[[device_id]]&cpa=[[cpa]]&timestamp=[[timespamp]]&tx_id=[[timestamp]]&signature=[[signature]]
+https://www.example.com?device_id=[[device_id]]&cpa=[[cpa]]&timestamp=[[timespamp]]&tx_id=[[tx_id]]&signature=[[signature]]
 ```
 Then the produced string, that will be the input to HMAC-SHA1, will have the pattern: `cpa:device_id:timestamp:tx_id`
 
