@@ -123,6 +123,27 @@ pollfishplugin.initWithRequestUUID (debugMode,customMode,api_key,pos,padding,req
 *APPLE, GOOGLE AND AMAZON ARE NOT A SPONSOR NOR ARE INVOLVED IN ANY WAY IN THE DRAWS. NO APPLE PRODUCTS ARE BEING USED AS PRIZES.*
 
 
+---
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://pollfish.files.wordpress.com/2016/03/basic_survey.gif"/>
+<br/>
+
+If you have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
+<br/><br/><br/><br/>
+
+
+
+
+
+
+## Optional section
+
+In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
+<br/>
+<br/>
+
+
+
 ### 6. Handling orientation changes (optional)
 
 If your app supports both orientations you should listen for the orientation event and initialise Pollfish again.
@@ -298,6 +319,6 @@ pollfishplugin.setAttributesMap(userAttributes);
 
 ## More Info
 
-For more information on setting up Cordova see [the documentation](http://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
+For more information on setting up Cordova see [the documentation](http://cordova.apache.org/docs/en/latest/guide/cli/index.html)
 
 For more info about Pollfish please check [Pollfish Website](http://www.pollfish.com)
