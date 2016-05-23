@@ -32,13 +32,15 @@ Login at [www.pollfish.com](http://www.pollfish.com) and add a new app at Pollfi
 
 To add Pollfish plugin just type:
 
-```cordova plugin add https://github.com/pollfish/cordova-plugin-pollfish.git```
+```
+cordova plugin add https://github.com/pollfish/cordova-plugin-pollfish.git
+```
 
 To remove Pollfish plugin type:
 
-```cordova plugin remove com.pollfish.cordova```
-
-
+```
+cordova plugin remove com.pollfish.cordova
+```
 
 
 
