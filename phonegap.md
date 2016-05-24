@@ -177,7 +177,7 @@ onResume: function () {
 ```
 
 
-### 8. Implement Pollfish event listeners
+### 8. Implement Pollfish event listeners (optional)
 
 #### 8.1 Get notified when a Pollfish survey is received (optional)
 
@@ -281,9 +281,7 @@ pollfishPanelClosedEvent: function(id) {
 }
 ```
 
-### 9. Other actions (optional)
-
-#### 9.1 Manually show Pollfish panel
+### 9. Manually show/hide Pollfish panel (optional)
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization: 
 
@@ -299,7 +297,7 @@ or
 pollfishplugin.hidePollfish();
 ```
 
-#### 9.2 Set user attributes (optional)
+### 10. Set user attributes (optional)
 
 You can set attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys. 
 
@@ -314,10 +312,3 @@ userAttributes['LinkedInID'] = 'My LinkedIn';
 pollfishplugin.setAttributesMap(userAttributes);
 
 ```
-
-
-
-## More Info
-
-For more information on setting up Cordova see [the documentation](http://cordova.apache.org/docs/en/latest/guide/cli/index.html)
-
