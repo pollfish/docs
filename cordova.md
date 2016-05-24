@@ -177,7 +177,7 @@ onResume: function () {
 ```
 
 
-### 8. Implement Pollfish event listeners
+### 8. Implement Pollfish event listeners (optional)
 
 #### 8.1 Get notified when a Pollfish survey is received (optional)
 
@@ -281,7 +281,7 @@ pollfishPanelClosedEvent: function(id) {
 }
 ```
 
-### 9. Manually show/hide Pollfish panel
+### 9. Manually show/hide Pollfish panel (optional)
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization: 
 
