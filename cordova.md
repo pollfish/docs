@@ -281,9 +281,7 @@ pollfishPanelClosedEvent: function(id) {
 }
 ```
 
-### 9. Other actions (optional)
-
-#### 9.1 Manually show Pollfish panel
+### 9. Manually show/hide Pollfish panel
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization: 
 
@@ -299,7 +297,7 @@ or
 pollfishplugin.hidePollfish();
 ```
 
-#### 9.2 Set user attributes (optional)
+### 10. Set user attributes (optional)
 
 You can set attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys. 
 
