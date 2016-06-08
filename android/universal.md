@@ -1,4 +1,4 @@
-<div class="changelog" data-version="4.2.0">
+<div class="changelog" data-version="4.2.1">
 v4.2.1
 
 - fixed shrinkResources bug
