@@ -1,4 +1,8 @@
 <div class="changelog" data-version="4.2.0">
+v4.2.1
+
+- fixed shrinkResources bug
+
 v4.2.0
 
 - new init function structure
