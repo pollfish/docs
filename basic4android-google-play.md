@@ -40,3 +40,4 @@ public void _onResume() {
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
+* If you need further customizations and options, please have a look at Android Documentation
