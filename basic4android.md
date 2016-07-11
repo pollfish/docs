@@ -30,7 +30,7 @@ import com.pollfish.constants.Position;
 public void _onResume() {
     PollFish.initWith(this, new ParamsBuilder("YOUR API KEY").build());
 }
-#End IF
+#End If
 
 ```
 
