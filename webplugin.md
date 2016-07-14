@@ -85,6 +85,8 @@ Pollfish Webplugin provides some callback functions to call when specific action
     Called when the user finishes the survey
 5.  <span class="params">surveyAvailable</span>  
     Called when there is an availble survey for the user. Also contains revenue and survey format information
+6.  <span class="params">surveyNotAvailable</span>  
+    Called when there is no availble survey for the user.
 
 Below you can see an example of the pollfishConfig object with all possible callbacks:  
 
@@ -98,7 +100,8 @@ var pollfishConfig = {
   userNotEligibleCallback: customUserNotEligible,
   closeAndNoShowCallback: customCloseAndNoShow,
   surveyCompletedCallback: customSurveyFinished,
-  surveyAvailable: customSurveyAvailable
+  surveyAvailable: customSurveyAvailable,
+  surveyNotAvailable: customSurveyNotAvailable
 };
 
 function customSurveyClosed(){
@@ -119,6 +122,10 @@ function customCloseAndNoShow(){
 
 function customSurveyAvailable(data){
   console.log("pollfish survey is available with revenue: " + data.revenue + " and survey format playful: " + data.playful);
+}
+
+function customSurveyNotAvailable(){
+  console.log("survey not available");
 }
 ```
 
