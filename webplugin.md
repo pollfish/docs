@@ -86,7 +86,7 @@ Pollfish Webplugin provides some callback functions to call when specific action
 5.  <span class="params">surveyAvailable</span>  
     Called when there is an availble survey for the user. Also contains revenue and survey format information
 6.  <span class="params">surveyNotAvailable</span>  
-    Called when there is no availble survey for the user.
+    Called when there is no available survey for the user.
 
 Below you can see an example of the pollfishConfig object with all possible callbacks:  
 
