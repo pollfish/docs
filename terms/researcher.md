@@ -156,6 +156,7 @@ The past, present and future content of the Properties, including without limita
 Pollfish understands that surveys distributed may include sensitive or confidential information about the Researcher’s business and operations (e.g. launching of a new product, marketing strategies etc as such information may be revealed directly or indirectly through the contents of a certain survey), which the Researcher does not want to be made public or become accessible to competitors. Pollfish cannot guarantee that the Respondents will treat such information as confidential and that they will desist from divulging or reproducing it. Therefore, in case your survey contains confidential information you wish to protect, we advise you to draft your surveys accordingly. Here are some indicative steps you could follow, in order to reduce aforementioned risks: 
 
 (a)	You could consider not using any mark, name, logo or other sign which may identify your Company, 
+
 (b)	You could use an alternate-test name for the product related to your survey
 
 Please note that experience has proven that “confidentiality notifications” presented to the Respondent at the end of surveys usually has the opposite effect than the one expected, since Respondents seem to share information flagged as “confidential”, more often than they do with information which is not directly identifiable as confidential or sensitive.  
