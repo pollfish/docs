@@ -143,15 +143,25 @@ Pollfish complies with applicable Data Protection legislation and cooperates wit
 
 You can update your registration information at any time. To cancel or delete your account you should contact Pollfish team with your request at info@pollfish.com. You can enable or disable Pollfish surveys in your apps.
 
-### 12\. Confidentiality
+### 12\. Confidentiality relating to use of Pollfish Services
 
 You undertake not to disclose to any third party any financial, technical, legal information relating to Pollfish services, SDK, software, platform or panel. This confidentiality obligation shall not apply (a) if the Confidential information has already been published by Pollfish or (b) the disclosure the confidential information is required by law or by the competent authorities. Pollfish reserves the right to use previous survey responses to profile users and use this information for improving its services in the future.
 
 ### 13\. Intellectual; Property rights and others
 
-The past, present and future content of the Properties, including without limitation, copyright works and all intellectual property rights (including Industrial Property rights) such as software, logos, trademarks domain names, designs, graphics, pictures, photos, texts, newsletters, etc and any and all copyright material and all other intellectual property right and/or materials related to the Properties (collectively "Content") are the sole property of Pollfish. No rights in or to the Content and/or to the Properties are granted to you. You are permitted to use the to use the Site of Pollfish to use it consistently with Pollfish’s conducting business.
+The past, present and future content of the Properties, including without limitation, copyright works and all intellectual property rights (including Industrial Property rights) such as software, logos, trademarks domain names, designs, graphics, pictures, photos, texts, newsletters, etc and any and all copyright material and all other intellectual property right and/or materials related to the Properties (collectively "Content") are the sole property of Pollfish. No rights in or to the Content and/or to the Properties are granted to you. 
 
-### 14\. Governing Law and Miscellaneous
+### 14\. Confidentiality of Surveys
+
+Pollfish understands that surveys distributed may include sensitive or confidential information about the Researcher’s business and operations (e.g. launching of a new product, marketing strategies etc as such information may be revealed directly or indirectly through the contents of a certain survey), which the Researcher does not want to be made public or become accessible to competitors. Pollfish cannot guarantee that the Respondents will treat such information as confidential and that they will desist from divulging or reproducing it. Therefore, in case your survey contains confidential information you wish to protect, we advise you to draft your surveys accordingly. Here are some indicative steps you could follow, in order to reduce aforementioned risks: 
+
+(a)	You could consider not using any mark, name, logo or other sign which may identify your Company, 
+(b)	You could use an alternate-test name for the product related to your survey
+
+Please note that experience has proven that “confidentiality notifications” presented to the Respondent at the end of surveys usually has the opposite effect than the one expected, since Respondents seem to share information flagged as “confidential”, more often than they do with information which is not directly identifiable as confidential or sensitive.  
+
+
+### 15\. Governing Law and Miscellaneous
 
 The present Agreement and its interpretation shall be governed by and construed in accordance with the US Law and the parties consent to the exclusive jurisdiction of the court in the State of Utah.
 
