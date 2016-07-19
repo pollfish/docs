@@ -1,7 +1,7 @@
 <div>
 <h2 class="static-page-title">SURVEY RESPONDENTS TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 03/15/2016</div>
+<div class="updatedOn">Last updated: 07/19/2016</div>
 
 <br />
 
@@ -189,6 +189,11 @@ Data collected by Pollfish is set to expire three (3) years after collection. Af
 ### Compliance with Data Protection/Privacy Policy legislation and data hosting
 
 Pollfish complies with applicable Data Protection legislation and cooperates with reliable cloud hosting service providers. POLLFISH cooperates with such cloud hosting providers who are either located within the E.U. (and therefore are obliged to comply with all EU Data Protection Laws and Regulations) or may be located in the US. In the latter case, US located cloud hosting providers are selected by Pollfish, on grounds of US providers being certified members of the U.S. - EU Safe Harbor companies (https://safeharbor.export.gov/list.aspx).
+
+### REPRODUCTION OF SURVEY CONTENT BY THE RESPONDENT AND RELATED MATTERS
+
+Please note that the surveys presented to you are created either by Pollfish or by Pollfish clients (researchers), who are the proprietors of all related Intellectual Property Rights. Furthermore, surveys may include information about the business of the researcher which the researcher treats as confidential and sensitive. Unlicensed divulging of such business information may cause serious damage to the researcher’s business. As a result of the above, by accepting this  terms of service and privacy policy document you agree that you shall not use, copy, reproduce or publicize (e.g. via social media) surveys and their content which may have been presented to you, as these acts may constitute a violation of third parties’ rights as protected by Law. 
+
 
 ### Changes and Updates to this Policy
 
