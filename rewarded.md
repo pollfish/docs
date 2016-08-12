@@ -20,6 +20,14 @@ Pollfish surveys are a great option for the rewarded approach:
 
 # Implementing Rewarded Approach - Step by Step
 
-Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)
+Here we are going to list all the logical steps in order to archieve the rewarded approach with Pollfish surveys.
 
+## 1. Initialize Pollfish in custom mode (skip Pollfish Indicator)
 
+You should initialize Pollfish SDK in custom mode. This way you will be able to skip Pollfish indicator (small red rectangle ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)  ). Pollfish in custom ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator and always force open Pollfish panel view to app users.
+
+## 2. Hide Pollfish panel
+
+Immediately after Pollfish intiialisation you should call Pollfish hide function. This way you ensure that Pollfish survey panel will not force slide if a survey is received on the device and you will have full control on when to show the panel (for example with the click of a button)
+
+## 3. Listen to Pollfish survey received notification
