@@ -31,3 +31,19 @@ You should initialize Pollfish SDK in custom mode. This way you will be able to 
 Immediately after Pollfish intiialisation you should call Pollfish hide function. This way you ensure that Pollfish survey panel will not force slide if a survey is received on the device and you will have full control on when to show the panel (for example with the click of a button)
 
 ## 3. Listen to Pollfish survey received notification
+
+You should register and listen for Pollfish notifications, listeners in order to know when a survey was received on the device. In the relevant Survey Received notification you can see if a survey was either of Playful or Basic format
+
+
+## 4. Show Button (or custom prompt)
+
+## 5. Show Pollfish survey panel
+
+## 6. Listen for Pollfish survey completed or user not eligible notification
+
+## 6. Listen for Pollfish survey completed or user not eligible notification
+
+
+
+
+
