@@ -73,7 +73,7 @@ You should register and listen for Pollfish survey completed notification/listen
 
 In order to avoid user fraud it is strongly adviced to register a server-to-server callback on Pollfish Developer Dashboard in order to receive a relevant callback on survey completion. 
 
-You can find detailed information on s2s callbacks (here)[https://www.pollfish.com/docs/s2s]
+You can find detailed information on s2s callbacks [here](https://www.pollfish.com/docs/s2s)
 
 
 
