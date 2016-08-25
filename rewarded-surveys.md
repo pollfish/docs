@@ -48,7 +48,7 @@ You can see example of custom prompts by other publishers at Pollfish [here](htt
 
 Below you can see an example of a custom prompt created by another publisher on the platform:
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://i1.wp.com/www.pollfish.com/wp-content/uploads/2016/05/earn.png?resize=768%2C460&ssl=1" width="200" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://i1.wp.com/www.pollfish.com/wp-content/uploads/2016/05/earn.png?resize=768%2C460&ssl=1" width="320" height="auto"/>
 
 ## 4. Show Button (or custom prompt)
 
