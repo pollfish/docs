@@ -91,7 +91,7 @@ Since Pollfish is a survey platform, some times users maybe screened out once a 
 <br/>
 <h1>Examples of integrations</h1>
 
-You can see below some examples of implementations of the rewarded approach:
+Below, you can see some examples of implementations of the rewarded approach by Pollfish partners:
 
 <u>Animated</u>
 <p align="center"><img style="border: 1px solid #000;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/textme.gif?resize=638%2C1024&ssl=1" width="250" height="auto"/>        <img style="border: 1px solid #000;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/ufl_survey-1.gif?resize=639%2C1024&ssl=1" width="250" height="auto"/></p>
