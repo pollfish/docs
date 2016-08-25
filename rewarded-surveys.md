@@ -30,7 +30,7 @@ With Pollfish, you are allowed to incentivize/reward your app's users for comple
 
 Below, you can see a list of all logical steps in order to archieve the rewarded approach with Pollfish surveys.
 
-## 1. Initialize Pollfish in custom mode (skip Pollfish Indicator)
+<h3>1. Initialize Pollfish in custom mode (skip Pollfish Indicator)</h3>
 
 You should initialize Pollfish SDK in custom mode. With this mode, Pollfish indicator (small red rectangle ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)  ) will be skipped. Pollfish in custom mode ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator and always force open Pollfish survey panel view to app users.
 
