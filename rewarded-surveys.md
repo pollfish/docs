@@ -13,7 +13,7 @@ With Pollfish, you are allowed to incentivize/reward your app's users for comple
 **d) Enchanced security** - Pollfish provides secured server-to-server callbacks on survey completion to inform instantly a publisher if a survey was completed through an app.
 
 **e) Users love them!** - Pollfish p
-https://www.pollfish.com/blog/2016/05/18/rewarded-surveys-monetize-mobile-apps/
+[blog post](https://www.pollfish.com/blog/2016/05/18/rewarded-surveys-monetize-mobile-apps/)
 
 </br>
 
