@@ -31,7 +31,7 @@ Below, you can see a list of all logical steps in order to archieve the rewarded
 
 ## 1. Initialize Pollfish in custom mode (skip Pollfish Indicator)
 
-You should initialize Pollfish SDK in custom mode. This way you will be able to skip Pollfish indicator (small red rectangle ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)  ). Pollfish in custom ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator and always force open Pollfish panel view to app users.
+You should initialize Pollfish SDK in custom mode. With this mode, Pollfish indicator (small red rectangle ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)  ) will be skipped. Pollfish in custom mode ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator and always force open Pollfish survey panel view to app users.
 
 ## 2. Hide Pollfish panel
 
