@@ -62,7 +62,7 @@ If a user chose to take a survey you should call Pollfish show function in order
 
 > **Note:** On Android and iOS there is also an optional function that you can call in order to see if a survey is present/available on the device (did not expire), prior calling Pollfish show.
 
-<h3>6. Listen for Pollfish survey completed notification</h3>
+<h3>6. Register & Listen for Pollfish survey completed notification</h3>
 
 You should register and listen for Pollfish survey completed notification/listener. In survey completed notification you can easily find information on survey completed format (Basic or Playful) and money earned in USD cents.
 
