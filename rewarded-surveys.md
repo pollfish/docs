@@ -89,7 +89,7 @@ Since Pollfish is a survey platform, some times users maybe screened out once a 
 
 <br/>
 <br/>
-<h1>Example integrations</h1>
+<h1>Examples of integrations</h1>
 
 You can see below some examples of implementations of the rewarded approach:
 
