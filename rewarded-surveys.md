@@ -78,7 +78,11 @@ You can find detailed information on how to set up server-to-server callbacks [h
 
 <h3>8. Register & Listen for Pollfish user not eligible notification</h3>
 
-You should register and listen for Pollfish user not eligible notification/listener. 
+Since Pollfish is a survey platform, some times users maybe screened out once a survey is started. You should register and listen for Pollfish user not eligible notification/listener. 
+
+
+
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/not_eligible.png" width="320" height="auto"/>
 
 
 
