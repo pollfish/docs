@@ -25,7 +25,7 @@ With Pollfish, you are allowed to incentivize/reward your app's users for comple
 
 </br>
 
-# Implementing rewarded approach - Step by Step
+<h1>Implementing rewarded surveys - Step by Step</h1>
 
 Below, you can see a list of all logical steps in order to archieve the rewarded approach with Pollfish surveys.
 
