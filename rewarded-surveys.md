@@ -83,10 +83,18 @@ Since Pollfish is a survey platform, some times users maybe screened out once a 
 
 > Below you can see an example of handling user not eligible event by a Pollfish partner
 
-<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish-images/not_eligible.png" width="250" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish-images/eligible_not.png" width="250" height="auto"/>
 
 
+<h3>9. Passing custom params on survey completion to server side (optional)</h3>
 
+If you want to pass custom params on your server side during a survey completion you should follow the steps below:
+
+a) pass your custom param during Pollfish initialization (check for requestUUID param in docs)
+b) set your server-to-server callback as described in step 7
+c) receive custom param on your server side
+
+This approach is usually followed to send over a unique identification of a user (as it is saved on publisher side) to server side through Pollfish SDK to associate completion with that user.
 
 <br/>
 <br/>
