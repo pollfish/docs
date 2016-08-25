@@ -23,7 +23,7 @@ With Pollfish, you are allowed to incentivize/reward your app's users for comple
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/incentivized1.gif" width="200" height="auto"/>
 </p>
 
-</br>
+<br/>
 
 <h1>Implementing rewarded surveys - Step by Step</h1>
 
