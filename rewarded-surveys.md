@@ -113,5 +113,5 @@ You can find examples in code on how to implement the rewarded approach on the G
 
 ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png) [iOS Sample Project](https://github.com/pollfish/ios-sdk-pollfish/blob/master/SampleProject/SampleProject/SecondViewController.m)
 
-
+If you are using a different platform or engine please follow the logical steps as described above in order to archieve the desired behaviour.
 
