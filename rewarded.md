@@ -3,7 +3,7 @@ With Pollfish, you are allowed to incentivize/reward your app's users for comple
 Why use Pollfish rewarded surveys?
 ------
 </br>
-**a) High Payouts** - Pollfish surveys follow a CPA Model where action is completed survey. Payments on Pollfish Basic survey format, start from $0.30 per completed survey and can end up to several dollars.
+**a) High Payouts** - Pollfish surveys follow a CPA model where action is completed survey. Payments on Pollfish Basic survey format, start from $0.30 per completed survey and can end up to several dollars.
 
 **b) Users stay always within the app** - Users are incentivized to complete a survey from within the app. Survey procedure is executed through the app enviroment (Since everything is displayed as an overlay) and users never engage outside the app (like for example when user are incentivized to download an app). Once a survey is completed, surveys dissapear from the app and user continues with current flow of the app.
 
