@@ -90,11 +90,11 @@ Since Pollfish is a survey platform, some times users maybe screened out once a 
 
 If you want to pass custom params on your server side during a survey completion you should follow the steps below:
 
-a) pass your custom param during Pollfish initialization (check for requestUUID param in docs)
+a) Pass your custom param during Pollfish initialization (check for requestUUID param in docs)
 
-b) set your server-to-server callback as described in step 7
+b) Set your server-to-server callback as described in step 7
 
-c) receive custom param on your server side
+c) Receive custom param on your server side
 
 This approach is usually followed to send over a unique identification of a user (as it is saved on publisher side) to server side through Pollfish SDK to associate completion with that user.
 
