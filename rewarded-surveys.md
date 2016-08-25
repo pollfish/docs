@@ -60,11 +60,16 @@ or you can find more examples [here](https://www.pollfish.com/blog/2016/05/18/re
 
 If a user chose to take a survey you should call Pollfish show function in order to open survey panel tothe user, to complete the survey. 
 
-> **Note:** On Android and iOS there is also an optional function that you can call in order to see if a survey is present/available on the device (did not expire) and prior calling Pollfish show.
+> **Note:** On Android and iOS there is also an optional function that you can call in order to see if a survey is present/available on the device (did not expire), prior calling Pollfish show.
 
-<h3>6. Listen for Pollfish survey completed or user not eligible notification</h3>
+<h3>6. Listen for Pollfish survey completed</h3>
 
-<h3>6. Listen for Pollfish survey completed or user not eligible notification</h3>
+You should register and listen for Pollfish survey completed notification/listener. In survey completed notification you can easily find information on survey completed format (Basic or Playful) and money earned in USD cents.
+
+> **Note:** It is strongly adviced that you do not reward users directly on survey completion notification within the SDK. You should register on Pollfish Dashboard a server-to-server callback as described in step 7
+
+
+<h3>7. Register for server-to-server callback on survey completion</h3>
 
 
 
