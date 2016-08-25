@@ -13,13 +13,13 @@ Why use Pollfish rewarded surveys?
 
 </br>
 
-> Below you can see an example of how to implement Pollfish surveys in order to unlock a feature in an app.
+> Below you can see an example implementation of using Pollfish rewarded surveys in order to unlock a feature in an app.
 <p></p>  
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/incentivized1.gif" width="200" height="auto"/>
 </p>
 
-
+</br>
 
 # Implementing Rewarded Approach - Step by Step
 
