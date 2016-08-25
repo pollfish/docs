@@ -20,7 +20,7 @@ With Pollfish, you are allowed to incentivize/reward your app's users for comple
 > Below you can see an example implementation of using Pollfish rewarded surveys in order to unlock a feature in an app.
 <p></p>  
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/incentivized1.gif" width="200" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish-images/incentivized1.gif" width="200" height="auto"/>
 </p>
 
 <br/>
