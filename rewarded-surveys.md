@@ -44,13 +44,17 @@ You should register and listen for Pollfish survey received notification/listene
 
 In survey received notification you can easily find information on survey format (Basic or Playful) and money to be earned, if survey is completed, in USD cents.
 
-You can see example of custom prompts by other publishers at Pollfish [here](https://www.pollfish.com/blog/2016/05/18/rewarded-surveys-monetize-mobile-apps/)
+## 4. Show button or custom prompt or offerwall entry
+
+When you receive a notification that a survey was received on the device you can show a custom prompt, or a button or add an offerwall entry to prompt your users to take a survey in exchange for a reward.
 
 > Below you can see an example of a custom prompt created by a publisher of the platform:
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://i1.wp.com/www.pollfish.com/wp-content/uploads/2016/05/earn.png?resize=768%2C460&ssl=1" width="320" height="auto"/>
 
-## 4. Show Button (or custom prompt)
+
+or you can find more [here](https://www.pollfish.com/blog/2016/05/18/rewarded-surveys-monetize-mobile-apps/)
+
 
 ## 5. Show Pollfish survey panel
 
