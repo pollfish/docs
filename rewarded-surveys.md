@@ -91,9 +91,9 @@ Since Pollfish is a survey platform, some times users maybe screened out once a 
 <br/>
 <h1>Example integrations</h1>
 
-You can have a look on implementations of the rewarded approach by some Pollfish partners below:
+You can see below some examples of implementations of the rewarded approach:
 
-<p align="center"><img style="border: 1px solid #000;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/textme.gif?resize=638%2C1024&ssl=1" width="250" height="auto"/>    <img style="border: 1px solid #000;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/ufl_survey-1.gif?resize=639%2C1024&ssl=1" width="250" height="auto"/></p>
+<p align="center"><img style="border: 1px solid #000;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/textme.gif?resize=638%2C1024&ssl=1" width="250" height="auto"/>        <img style="border: 1px solid #000;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/ufl_survey-1.gif?resize=639%2C1024&ssl=1" width="250" height="auto"/></p>
 
 You can always see more examples of implementations at the following blog posts [here](https://www.pollfish.com/blog/2016/05/18/rewarded-surveys-monetize-mobile-apps/) and [here](https://www.pollfish.com/blog/2016/08/03/rewarded-surveys-in-mobile-apps/)
 <br/>
