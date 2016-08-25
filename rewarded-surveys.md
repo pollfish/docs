@@ -34,7 +34,7 @@ Below, you can see a list of all logical steps in order to archieve the rewarded
 
 You should initialize Pollfish SDK in custom mode. With this mode, Pollfish indicator (small red rectangle ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)  ) will be skipped. Pollfish in custom mode ignores Pollfish panel behavior from Pollfish Developer Dashboard (you can read more on Pollfish panel behavior settings on our [FAQ page](https://pollfish.zendesk.com/hc/en-us/articles/205355891--What-do-different-PollFish-Indicator-Settings-mean-])). Custom mode always skips showing Pollfish indicator and always force open Pollfish survey panel view to app users.
 
-## 2. Hide Pollfish panel
+<h3>2. Hide Pollfish survey panel</h3>
 
 Immediately after Pollfish intiialisation you should call Pollfish hide function. This way you will ensure that Pollfish survey panel will not force slide if a survey is received on the device and therefore you will have full control on when to show the panel (for example with the click of a button or a custom prompt you will make)
 
