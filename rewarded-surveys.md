@@ -91,7 +91,7 @@ Since Pollfish is a survey platform, some times users maybe screened out once a 
 <br/>
 <h1>Example integrations</h1>
 
-<center><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/textme.gif?resize=638%2C1024&ssl=1" width="250" height="auto"/><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/ufl_survey-1.gif?resize=639%2C1024&ssl=1" width="250" height="auto"/></center>
+<p align="center"><img style="border: 1px solid #000;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/textme.gif?resize=638%2C1024&ssl=1" width="250" height="auto"/><img style="border: 1px solid #000;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/ufl_survey-1.gif?resize=639%2C1024&ssl=1" width="250" height="auto"/></p>
 
 
 <br/>
