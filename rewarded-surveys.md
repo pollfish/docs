@@ -71,7 +71,7 @@ You should register and listen for Pollfish survey completed notification/listen
 
 <h3>7. Register for server-to-server (s2s) callbacks on survey completion</h3>
 
-In order to avoid user fraud it is strongly adviced to register a server-to-server callback on Pollfish Developer Dashboard in order to receive a relevant callback on survey completion. Once this notification is received you can reward your users.
+In order to avoid user fraud it is strongly adviced to register a server-to-server callback on Pollfish Developer Dashboard in order to receive a relevant notification on your server on survey completion. Once this notification is received you can reward your users.
 
 You can find detailed information on how to set up server-to-server callbacks [here](https://www.pollfish.com/docs/s2s)
 
@@ -83,6 +83,19 @@ Since Pollfish is a survey platform, some times users maybe screened out once a 
 
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/not_eligible.png" width="320" height="auto"/>
+
+
+
+
+<br/>
+<br/>
+<h1>Sample projects</h1>
+
+You can find examples in code on how to implement the rewarded approach on the links below:
+
+
+![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
+![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
 
 
