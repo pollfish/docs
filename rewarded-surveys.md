@@ -69,8 +69,11 @@ You should register and listen for Pollfish survey completed notification/listen
 > **Note:** It is strongly adviced that you do not reward users directly on survey completion notification within the SDK. You should register on Pollfish Dashboard a server-to-server callback as described in step 7
 
 
-<h3>7. Register for server-to-server callback on survey completion</h3>
+<h3>7. Register for server-to-server (s2s) callback on survey completion</h3>
 
+In order to avoid user fraud it is strongly adviced to register a server-to-server callback on Pollfish Developer Dashboard in order to receive a relevant callback on survey completion. 
+
+You can find detailed information on s2s callbacks (here)[https://www.pollfish.com/docs/s2s]
 
 
 
