@@ -89,13 +89,14 @@ Since Pollfish is a survey platform, some times users maybe screened out once a 
 
 <br/>
 <br/>
-<h1>Sample projects</h1>
+<h1>Sample projects (Show me some code!)</h1>
 
-You can find examples in code on how to implement the rewarded approach on the links below:
+You can find examples in code on how to implement the rewarded approach on the GitHub links below:
 
 
-![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
-![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
+![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png) - [Android Sample Project](https://github.com/pollfish/android-sdk-pollfish/blob/master/sample-project/app/src/main/java/pollfish/com/sampleproject/IncentivizeActivity.java)
+
+![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png) - [iOS Sample Project](https://github.com/pollfish/ios-sdk-pollfish/blob/master/SampleProject/SampleProject/SecondViewController.m)
 
 
 
