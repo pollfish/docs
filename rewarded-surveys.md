@@ -1,5 +1,6 @@
 With Pollfish, you are allowed to incentivize/reward your app's users for completing a survey. Rewarding users for completing surveys is a great approach since it increases engagemenent and retention in an app.
-</br>
+
+<br/>
 Why use Pollfish rewarded surveys?
 ------
 </br>
@@ -10,6 +11,9 @@ Why use Pollfish rewarded surveys?
 **c) Full transparency** - Pollfish SDK provides all necessary notifications from within the SDK to inform the publisher, in code, when a survey is received and how much money to be earned, upon survey completion, prior the publisher prompts the user. This way a publisher can make a decision if it worths to bother users based on money to be earned. Pollfish notifications provide the exact pricing avoiding  estimations or assumptions on pricing by the publisher. Furhtermore, Pollfish SDK provides notifications on survey completion to inform a publisher on how much were earned in order to credit the user.
 
 **d) Enchanced security** - Pollfish provides secured server-to-server callbacks on survey completion to inform instantly a publisher if a survey was completed through an app.
+
+**e) Users love them!** - Pollfish p
+https://www.pollfish.com/blog/2016/05/18/rewarded-surveys-monetize-mobile-apps/
 
 </br>
 
