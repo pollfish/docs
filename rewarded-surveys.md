@@ -69,18 +69,19 @@ You should register and listen for Pollfish survey completed notification/listen
 > **Note:** It is strongly adviced that you do not reward users directly on survey completion notification within the SDK. You should register on Pollfish Dashboard a server-to-server callback as described in step 7
 
 
-<h3>7. Register for server-to-server (s2s) callbacks on survey completion (optional)</h3>
+<h3>7. Register for server-to-server (s2s) callbacks on survey completion</h3>
 
 In order to avoid user fraud it is strongly adviced to register a server-to-server callback on Pollfish Developer Dashboard in order to receive a relevant notification on your server on survey completion. Once this notification is received you can reward your users.
 
 You can find detailed information on how to set up server-to-server callbacks [here](https://www.pollfish.com/docs/s2s)
 
 
-<h3>8. Register & Listen for Pollfish user not eligible notification (optional)</h3>
+<h3>8. Register & Listen for Pollfish user not eligible notification</h3>
 
 Since Pollfish is a survey platform, some times users maybe screened out once a survey is started. You should register and listen for Pollfish user not eligible notification/listener. 
 
 
+> Below you can see an example of handling user not eligible event by a Pollfish partner
 
 <p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish-images/not_eligible.png" width="250" height="auto"/>
 
