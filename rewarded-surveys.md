@@ -89,6 +89,13 @@ Since Pollfish is a survey platform, some times users maybe screened out once a 
 
 <br/>
 <br/>
+<h1>Example integrations</h1>
+
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://i0.wp.com/www.pollfish.com/wp-content/uploads/2016/08/textme.gif?resize=638%2C1024&ssl=1" width="320" height="auto"/>
+
+
+<br/>
+<br/>
 <h1>Sample projects (Show me some code!)</h1>
 
 You can find examples in code on how to implement the rewarded approach on the GitHub links below:
