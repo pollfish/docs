@@ -2,7 +2,7 @@
 
 <h2 class="static-page-title">PUBLISHER TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 05/16/2016</div>
+<div class="updatedOn">Last updated: 09/07/2016</div>
 
 <br />
 
@@ -65,7 +65,7 @@ o	invades privacy of the others; f. competes with Pollfish’s activity and inte
 10.	Your application/website is compatible with all applicable Laws (IPRs, COPPA , data protection, security laws etc) and (if uploaded to the relevant stores) the policies of Google Android and/or Apple iOS systems;
 11.	By enabling Pollfish in your application/website you gain no control whatsoever over the survey’s content, the data collected through our surveys, the content displayed through your applications, the rewards offered to the final users who are taking part in the surveys. You are not allowed to access, use or process the information deriving from our services;
 12.	You will use different API keys for each different application/website and platform you register Pollfish with, for better profiling of the user base; You shall use only one API key per app/website on this platform. You shall operate only one account in the platform. Any attempt to bypass aforementioned obligation (operation of  one account only) in order to take advantage of the Pollfish referral scheme via referring one account to another account operated by the same publisher, constitutes a major misuse of the Service and shall be treated as such according to point 16 below. 
-13.	You will not permit to any other survey platform to operate with your application. However, as set forth under article 4 of the present Agreement Pollfish services are compatible and can be used/registered in combination with other online advertisement networks;
+13.	As set forth under article 4 of the present Agreement Pollfish services are compatible and can be used/registered in combination with other online advertisement networks;
 14.	You will not access, process or modify the content or the form of any survey;
 15.	If you are a mobile application publisher, you should update your app's Privacy policy with the following paragraph:
 
