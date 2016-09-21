@@ -1,4 +1,8 @@
-<div class="changelog" data-version="4.2.1">
+<div class="changelog" data-version="4.3.0">
+v4.3.0
+
+- added support for third-party survey providers
+
 v4.2.1
 
 - fixed shrinkResources bug
