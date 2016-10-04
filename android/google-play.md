@@ -1,4 +1,9 @@
-<div class="changelog" data-version="4.3.0">
+<div class="changelog" data-version="4.3.1">
+v4.3.1
+
+- improved support and optimizations for third-party survey providers
+- fixed bug with google play services
+
 v4.3.0
 
 - added support for third-party survey providers
