@@ -1,4 +1,9 @@
 <div class="changelog" data-version="4.2.0">
+v4.3.1
+
+- Updated Android SDK to latest on with 3rd party survey providers support
+- Updated to jar resolver from Google in order to support Google Play Services
+
 v4.2.0
 
 - New updated iOS and Android SDKs
@@ -22,7 +27,7 @@ v4.0.0
 
 Pollfish Unity Plugin works with:
 
-*   Unity 4.3+
+*   Unity 4.6.8 +
 *   iOS 7.0 +
 *   Android 2.3.3 (10) +
 
