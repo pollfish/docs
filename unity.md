@@ -448,7 +448,7 @@ If you want to reward your users for completing a survey it is common practise t
 
 <br/><br/>
 
-### 15\. Rewarding users for completing surveys
+### 15\. Rewarding users for completing surveys (optional)
 
 If you want to reward your users for completing a survey with some sort of virtual currency please follow the flow described in Rewarded surveys section on the website <a href="https://www.pollfish.com/docs/rewarded-surveys">here</a> or have a look in the Demo Scene implementation to see an example in code.
 
