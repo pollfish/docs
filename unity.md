@@ -1,4 +1,4 @@
-<div class="changelog" data-version="4.2.0">
+<div class="changelog" data-version="4.3.1">
 v4.3.1
 
 - Updated Android SDK to latest on with 3rd party survey providers support
