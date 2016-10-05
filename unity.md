@@ -66,7 +66,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 <br/>
 Imported files will be listed in the following directories:
 
-![alt text](https://storage.googleapis.com/pollfish-images/PollfishUnityPlugin.png)
+![alt text](https://storage.googleapis.com/pollfish-images/import_package.png)
 
 - **Assets/Editor** – Files to help with initial setup
 
@@ -80,7 +80,7 @@ Imported files will be listed in the following directories:
 
 </div>
 
-- **Assets/PlayServicesResolver** – Files to help with Goolge Play services Setup
+- **Assets/PlayServicesResolver** – Files to help with Goolge Play Services Setup
 <div style="margin-left: 40px;">
 
 **If you target Android** ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
