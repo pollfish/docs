@@ -87,7 +87,7 @@ Imported files will be listed in the following directories:
 
 * **PlayServicesResolver** folder contains files to allow automatically add Google Play Services in your Android project from Unity menu.
 
-> **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can do that easily do that by selecting **File** and then **Assets – Google Play Services - Resolve Client Jars**. If you do not have Google Play Services you can install them through Android SDK Manager.
+> **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can easily do that by selecting **File** and then **Assets – Google Play Services - Resolve Client Jars**. If you do not have Google Play Services you can install them through Android SDK Manager.
 
 ![alt text](https://storage.googleapis.com/pollfish-images/services_assets.png)
 
@@ -444,6 +444,13 @@ Pollfish.IsPollfishPresent();
 ### 14\. Server-to-server callbacks on survey completion (optional)
 
 If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
+
+<br/><br/><br/>
+
+
+### 15\. Rewarding users for completing surveys
+
+If you want to reward your users for completing a survey with some sort of virtual currency please follow the flow described in Rewarded surveys section on the website <a href="https://www.pollfish.com/docs/rewarded-surveys">here</a> or have a look in the Demo Scene implementation to see an example in code.
 
 <br/><br/><br/>
 
