@@ -81,6 +81,7 @@ Imported files will be listed in the following directories:
 </div>
 
 - **Assets/PlayServicesResolver** – Files to help with Goolge Play services Setup
+<div style="margin-left: 40px;">
 
 **If you target Android** ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
 
@@ -94,7 +95,7 @@ or
 
 ![alt text](https://storage.googleapis.com/pollfish-images/services_menu.png)
 
-
+</div>
 - **Assets/Plugins/Android** – Android Pollfish libraries and resources
 
 - **Assets/Plugins/iOS** – Pollfish framework and bridge files.
