@@ -206,10 +206,13 @@ If you have any question, like why you do not see surveys on your own device in 
 | **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase their exposure in our clients' survey inventory.  This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Have in mind that if a paid survey is available at that point of time, the demographic survey will get prepended to it. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education completed etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform; we estimate that over 80% of the surveys designed on the platform will require this new type of targeting. If your users do not take the surveys and share that information with us, they will end up being part of a group of respondents that are not that popular as target audiences go, with whatever consequences that might have, revenue-wise.
 
 <br/>
-<p style="margin: 0 auto; display: block;" >
-<img src="https://storage.googleapis.com/pollfish-images/targeting.png"/><img src="https://storage.googleapis.com/pollfish-images/results.png"/></p>
 
-
+<table>
+<tr>
+<td><img src="https://storage.googleapis.com/pollfish-images/targeting.png"/></td>
+<td><img src="https://storage.googleapis.com/pollfish-images/results.png"/></td>
+</tr>
+</table>
 <br/>
 
 
