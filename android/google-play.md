@@ -209,8 +209,8 @@ If you have any question, like why you do not see surveys on your own device in 
 
 <table style="border:0 !important;">
 <tr>
-<td><img src="https://storage.googleapis.com/pollfish-images/targeting.png" style="padding:15px"/></td>
-<td><img src="https://storage.googleapis.com/pollfish-images/results.png" style="padding:15px"/></td>
+<td><img src="https://storage.googleapis.com/pollfish-images/targeting.png" style="padding:4px"/></td>
+<td><img src="https://storage.googleapis.com/pollfish-images/results.png" style="padding:4px"/></td>
 </tr>
 </table>
 <br/>
