@@ -216,7 +216,7 @@ If you have any question, like why you do not see surveys on your own device in 
 <br/>
 
 
-In our efforts to include publishers in this process and be as transparent as possible  we provide full control over the process, letting publishers decide if their users are served these surveys or not by monitoring the process in code and excluding any users by listening the relevant noitifications in code (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) filed whcih will be 0 USD cents. Bear in mind that by filtering out all surveys with PPS 0 will also deny you the possibility of running any free internal surveys, since they also have a PPS of 0.
+In our efforts to include publishers in this process and be as transparent as possible  we provide full control over the process, letting publishers decide if their users are served these surveys or not by monitoring the process in code and excluding any users by listening the relevant noitifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) filed which will be 0 USD cents. Bear in mind that by filtering out all surveys with PPS 0 will also deny you the possibility of running any free internal surveys, since they also have a PPS of 0.
 
 <br/>
 <br/>
