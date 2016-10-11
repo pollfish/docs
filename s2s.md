@@ -127,7 +127,7 @@ Furthermore if we have the following values: `device_id=my-device-id`, `cpa=30`,
 and the produced callback URL will be:
 
 ```
-https://www.example.com?device_id=my-device-id&cpa=30&timestamp=1463152452308&tx_id=08f31d41d800cc7a0beb7eb4897639a8ba7fd7db&signature=3493ed0af36198c5c4a30ec531542b888cd84106
+https://www.example.com?device_id=my-device-id&cpa=30&timestamp=1463152452308&tx_id=08f31d41d800cc7a0beb7eb4897639a8ba7fd7db&signature=BbgBlH5HODk%2FSKw3MQuvqM%2BgTxQ%3D
 ```
 
 Please note that the string is created using the parameter values before they are URL encoded.
