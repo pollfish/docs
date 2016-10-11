@@ -174,7 +174,11 @@ Please note that during developer mode the `debug=true` parameter is *not includ
   $tx_id = urldecode($_GET["tx_id"]);
   $url_signature = urldecode($_GET["signature"]);
 
-  $data = $cpa . ":" . $device_id . ":" . $request_uuid  . ":" . $timestamp . ":" . $tx_id;
+  $data = $cpa . ":" . $device_id;
+  if (!empty($request_uuid)) { // only added when non-empty
+    $data = $data . ":" . $request_uuid;
+  }
+  $data = $data . ":" . $timestamp . ":" . $tx_id;
 
   $computed_signature = base64_encode(hash_hmac("sha1" , $data, $secret_key, true));
   $is_valid = $url_signature == $computed_signature;
