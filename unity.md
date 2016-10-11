@@ -282,7 +282,25 @@ Add the following paragraph to your app's privacy policy:
 <br/>
 
 If you have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
-<br/><br/><br/><br/>
+<br/><br/><br/>
+
+| **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase their exposure in our clients' survey inventory.  This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Have in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform requires this new type of targeting.
+
+<br/>
+
+<table style="border:0 !important;">
+<tr>
+<td><img src="https://storage.googleapis.com/pollfish-images/targeting.png" style="padding:4px"/></td>
+<td><img src="https://storage.googleapis.com/pollfish-images/results.png" style="padding:4px"/></td>
+</tr>
+</table>
+<br/>
+
+
+In our efforts to include publishers in this process and be as transparent as possible we provide full control over the process. We let publishers decide if their users are served these standalone surveys or not, by monitoring the process in code and excluding any users by listening to the relevant noitifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) field which will be 0 USD cents. Bear in mind that by filtering out all surveys with PPS 0 will also deny you the possibility of running any free internal surveys, since they also have a PPS of 0.
+
+<br/>
+<br/>
 
 ## Optional section
 
@@ -464,28 +482,3 @@ In order to have a look on a simple integration of Pollfish in a unity project h
 <br/>
 
 In sample project you can see both standard and rewarded integration from Pollfish in case you want to use Pollfish for rewarding users with some sort of virtual currency. In general, we suggest that you follow this tutorial in order to understand better the integration steps you have to follow in order to properly integrate Pollfish in your project.
-
-
-<br/><br/><br/>
-
-| **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase their exposure in our clients' survey inventory.  This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Have in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform requires this new type of targeting.
-
-<br/>
-
-<table style="border:0 !important;">
-<tr>
-<td><img src="https://storage.googleapis.com/pollfish-images/targeting.png" style="padding:4px"/></td>
-<td><img src="https://storage.googleapis.com/pollfish-images/results.png" style="padding:4px"/></td>
-</tr>
-</table>
-<br/>
-
-
-In our efforts to include publishers in this process and be as transparent as possible we provide full control over the process. We let publishers decide if their users are served these standalone surveys or not, by monitoring the process in code and excluding any users by listening to the relevant noitifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) field which will be 0 USD cents. Bear in mind that by filtering out all surveys with PPS 0 will also deny you the possibility of running any free internal surveys, since they also have a PPS of 0.
-
-<br/>
-<br/>
-
-
-
-
