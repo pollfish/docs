@@ -2,7 +2,7 @@
 
 <h2 class="static-page-title">PUBLISHER TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 09/07/2016</div>
+<div class="updatedOn">Last updated: 25/10/2016</div>
 
 <br />
 
@@ -107,6 +107,10 @@ The following type of revenue generating surveys may be conducted on the Pollfis
 2.  #### Playful Surveys
 
     When a Playful Survey is conducted, the payment of a fee may vary depending on the extent of the research. The minimum lump sum fee described above does not apply in this case. However, the publisher, when installing Pollfish, may disable the Playful Surveys option and accept to adhere only for Basic Surveys.
+    
+3.  #### 3rd Party Surveys
+
+    When a 3rd Party Survey is conducted, the payment of a fee may vary depending on the extent of the research. The minimum lump sum fee described above does not apply in this case. However, the publisher, when installing Pollfish, may disable the 3rd Party Surveys option and accept to adhere only for Basic Surveys and Playful surveys. Have in mind that these surveys are provided by third party partners of Pollfish and are not created through Pollfish platform. These surveys are rendered outside the app in a browser and therefore do not have the exact look and feel nor the native experience of Pollfish surveys.
 
 The following types of non revenue generating surveys are also conducted on the Pollfish Platfom: 
 
