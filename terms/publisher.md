@@ -2,7 +2,7 @@
 
 <h2 class="static-page-title">PUBLISHER TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 25/10/2016</div>
+<div class="updatedOn">Last updated: 15/11/2016</div>
 
 <br />
 
@@ -110,7 +110,8 @@ The following type of revenue generating surveys may be conducted on the Pollfis
     
 3.  #### 3rd Party Surveys
 
-    When a 3rd Party Survey is conducted, the payment of a fee may vary depending on the extent of the research. The minimum lump sum fee described above does not apply in this case. However, the publisher, when installing Pollfish, may disable the 3rd Party Surveys option and accept to adhere only for Basic Surveys and Playful surveys. 3rd Party surveys are provided by third party partners of Pollfish and are not created through Pollfish platform. These surveys are rendered outside the app in a browser and therefore do not have the exact look and feel nor the native experience of Pollfish surveys.
+    When a 3rd Party Survey is conducted, Pollfish pays to the publishers who register Pollfish in their application/website, a minimum lump sum of approximately $0,30, for each completed survey/questionnaire. These surveys arrive to Pollfish via partnerships formed with other 3rd party survey providers. 3rd Party Surveys have a different look and feel from Pollfish Basic and Playful surveys (they do not follow the Pollfish mobile design) and  are launched in an external browser outside of the context of the app, after an initial prompt.
+However, the publisher, when installing Pollfish, may disable the 3rd Party Surveys option and accept to adhere only for Basic Surveys and/or Playful Surveys.
 
 The following types of non revenue generating surveys are also conducted on the Pollfish Platfom: 
 
@@ -120,7 +121,8 @@ The following types of non revenue generating surveys are also conducted on the 
 
 2.  #### Demographic information surveys: 
 
-    In order to constantly improve Pollfish platform, and make sure that app users are targeted for surveys that would be relevant to them, giving higher completion rate and reliable results, a survey, collecting demographic information will be shown to app users. The process is simple: users will receive a short demographic survey. Response data will be used to divide them into various demographic groups, based on the information gathered. The benefits are two-pronged; users that are very specifically targeted in apps with almost tailor-made surveys on publisher end, and a more relevant survey audience for Pollfish clients. This survey will not generate any revenue for the Publisher since it is part of survey distribution process. Most of information gathered will be displayed also on the Pollfish developer dashboard in order for publishers to better understand their users.
+    In order to constantly improve Pollfish platform, and make sure that app users are targeted for surveys that would be relevant to them, when a user is first introduced to the platform, if no paying surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure to our clients' survey inventory. This survey returns no payment to app publishers, as it is part of the process users need to go through in order to join the platform. Bear in mind that if a paid survey is available at that point in time, the demographic questions will be inserted at the beginning of the paying survey, before the actual survey questions. In this process publishers are included and have full control over the process. Publishers can decide whether their users are served, demographic standalone surveys or not in two ways either in code or through Pollfish Developer dashboard.
+    
 
 ### 6\. Payment
 
