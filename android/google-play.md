@@ -83,7 +83,7 @@ If you are using gradle you can easily add in your dependencies:
 
 ```java
 dependencies {
-	 compile 'com.google.android.gms:play-services:8.4.0'
+	 compile 'com.google.android.gms:play-services:9.6.1'
 }
 ```
 
@@ -100,7 +100,7 @@ otherwise since Google Play Services 8.4.* you can use only Google Play Services
 
 ```java
 dependencies {
-	 compile 'com.google.android.gms:play-services-base:8.4.0'
+	 compile 'com.google.android.gms:play-services-base:9.6.1'
 }
 ```
 
