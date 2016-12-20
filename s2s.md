@@ -167,12 +167,12 @@ Please note that during developer mode the `debug=true` parameter is *not includ
 <p>Will check signature using HMAC-SHA1 and secret_key = <br><?php echo($secret_key) ?></b></p>
 
 <?php
-  $cpa = urldecode($_GET["cpa"]);
-  $device_id = urldecode($_GET["device_id"]);
-  $request_uuid = urldecode($_GET["request_uuid"]);
-  $timestamp = urldecode($_GET["timestamp"]);
-  $tx_id = urldecode($_GET["tx_id"]);
-  $url_signature = urldecode($_GET["signature"]);
+  $cpa = rawurldecode($_GET["cpa"]);
+  $device_id = rawurldecode($_GET["device_id"]);
+  $request_uuid = rawurldecode($_GET["request_uuid"]);
+  $timestamp = rawurldecode($_GET["timestamp"]);
+  $tx_id = rawurldecode($_GET["tx_id"]);
+  $url_signature = rawurldecode($_GET["signature"]);
 
   $data = $cpa . ":" . $device_id;
   if (!empty($request_uuid)) { // only added when non-empty
