@@ -296,7 +296,7 @@ func applicationWillTerminate(application: UIApplication)
 
 Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefore when submitting your app to the App you should select the following options as seen in the image below:  
 
-![](/homeassets/images/documentation/idfa_2.jpg)
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/idfa_3.png"/>
 
 <br/>
 
