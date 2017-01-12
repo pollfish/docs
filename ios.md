@@ -660,7 +660,7 @@ UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary 
 <br/>
 ### 14\.Implement Pollfish event listeners (optional)
 
-> **Note:** Pollfish listeners/notifications fire in an asynchronous way. Having said that it's possible that you receive them while being in a background thread and not the main UI thread. If you want to make any prompts or custom changes when you receive those notifications please be sure to make them on the main UI thread** 
+> **Note:** Pollfish listeners/notifications fire in an asynchronous way. Having said that it's possible that you receive them while being in a background thread and not the main UI thread. If you want to make any prompts or custom changes on the view level when you receive those notifications, please be sure to make them on the main UI thread** 
 
 ### 14.1 Get notified when a survey is received
 
