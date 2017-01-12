@@ -1,4 +1,9 @@
-<div class="changelog" data-version="4.2.0">
+<div class="changelog" data-version="4.2.1">
+
+v4.2.1
+
+- ATS compliance
+- improved performance
 
 v4.2.0
 
@@ -655,7 +660,7 @@ UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary 
 <br/>
 ### 14\.Implement Pollfish event listeners (optional)
 
-
+> **Note:** Pollfish listeners/notifications fire in an asynchronous way. Having said that it's possible that you receive them while being in a background thread and not the main UI thread. If you want to make any prompts or custom changes when you receive those notifications please be sure to make them on the main UI thread** 
 
 ### 14.1 Get notified when a survey is received
 
