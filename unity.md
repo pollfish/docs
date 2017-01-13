@@ -1,4 +1,9 @@
-<div class="changelog" data-version="4.3.1">
+<div class="changelog" data-version="4.3.2">
+
+v4.3.2
+
+- Updated iOS SDK to latest with support for ATS
+
 v4.3.1
 
 - Updated Android SDK to latest on with 3rd party survey providers support
