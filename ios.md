@@ -69,6 +69,8 @@ platform :ios, '7.0'
 pod 'Pollfish'
 ```
 
+You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapods.org/pods/Pollfish)  
+
 2. Run **pod install** on the command line to install  Pollfish cocoapod.
 3. Call init and destroy function of Pollfish in the App’s Delegate
 4. Set to **Release mode** and release in AppStore
