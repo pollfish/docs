@@ -118,6 +118,8 @@ platform :ios, '7.0'
 pod 'Pollfish'
 ```
 
+You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapods.org/pods/Pollfish)  
+
 Run **pod install** on the command line to install  Pollfish cocoapod.
 
 <br/>
