@@ -49,9 +49,31 @@ You can pass a unique id for a user (as you may use it in your own system) throu
 
 You can easily retrieve through every callback how much money were earned in USD cents, by appending and reading param with name **cpa**.
 
-### 6. Securing your callback with signature
+### 6. Getting notified when a user is not eligible
 
-#### 6.1 How to include a signature in the callback URLs
+You can register and receive callbacks when a user was not eligible for a survey. User not eligible in that case means that either the user was screened out from a particular survey or he/she was marked as fraud by our anti-fradu system.
+
+If you want to register and receive not eligible/eligible info in your callbacks please select the checkbox as below (selected by defualt)
+
+<img src="https://storage.googleapis.com/pollfish-images/not_eligible1.png">
+
+Once you select to register for not eligible callbacks, you will need to add "status" in your url. This param will return two values [eligible | noteligible]. 
+
+<img src="https://storage.googleapis.com/pollfish-images/not_eligible1.png2">
+
+For example:
+
+```
+ https://mybaseurl.com?device_id=[[device_id]]&cpa=[[cpa]]&request_uuid=[[request_uuid]]&timestamp=[[timestamp]]&tx_id=[[tx_id]]&signature=[[signature]]&status=[[status]]
+```
+
+> **Important:** If you have selected checkbox "Notify me when the user is not eligible" you should add "status" param in your url. If you uncheck this option you should remove "status" param from your url.
+
+
+
+### 7. Securing your callback with signature
+
+#### 7.1 How to include a signature in the callback URLs
 
 As with all callback URL parameters, in order to receive values for a parameter you have to include the corresponding parameter placeholder in the URL that you submit to Pollfish. For the **signature** parameter you have to include the **[[signature]]** parameter placeholder. If you do not included it then your callback URLs will not be signed. Because of this the following URL templates will result in not having your callback URLs signed.
 
@@ -74,7 +96,7 @@ http://www.example.com/pollfish-callback?tx_id=[[tx_id]]&time=[[timestamp]]&sig=
 http://www.example.com/pollfish-callback?tx_id=[[tx_id]]&time=[[timestamp]]&cpa=[[cpa]]&device=[[device_id]]&request_uuid=[[request_uuid]]&sig=[[signature]]
 ```
 
-#### 6.2 Effective use of URL signatures
+#### 7.2 Effective use of URL signatures
 
 If you want to be protected by fake requests forged by malicious third parties then including the **signature** in your URL is not enough. You must make sure that you include at least one other parameter that varies a lot between requests or is unique between requests. We recommend using at least the **tx_id** parameter in combination with the **signature** parameter to protect against fake callback requests. 
 
@@ -102,7 +124,7 @@ http://www.example.com/pollfish-callback?id=[[tx_id]]time=[[timestamp]]&sig=[[si
 
 Includes both **tx_id** and **timestamp**.
 
-#### 6.3 How signatures are produced
+#### 7.3 How signatures are produced
 
 The **signature** of the callback URLs is the result of appling the  [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) hash function to the **[[parameters]]** that are included in the URL using your account's secret_key.
 
@@ -135,7 +157,7 @@ https://www.example.com?device_id=my-device-id&cpa=30&timestamp=1463152452308&tx
 
 Please note that the string is created using the parameter values before they are URL encoded.
 
-#### 6.4 How to verify signatures
+#### 7.4 How to verify signatures
 
 To verify the signature in server-to-server postback calls follow the below proceedure:
 
@@ -151,7 +173,7 @@ To verify the signature in server-to-server postback calls follow the below proc
 
 Please note that during developer mode the `debug=true` parameter is *not included* in the input of the signature.
 
-#### 6.5 Example code for signature verification
+#### 7.5 Example code for signature verification
 
 ```php
 <!DOCTYPE html>
@@ -202,3 +224,9 @@ Please note that during developer mode the `debug=true` parameter is *not includ
 </body>
 </html>
 ```
+
+### 8. Checking callback logs
+
+You c
+
+
