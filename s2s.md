@@ -14,7 +14,7 @@ You can set a Server-to-Server postback call through Pollfish developer dashboar
 
 Server-to-server callbacks can be used to retrieve several different params on publisher's server side.
 
-<img src="https://storage.googleapis.com/pollfish-images/s2s_call.png">
+<img src="https://storage.googleapis.com/pollfish-images/s2s_new.png">
 
 In general, we advice to monitor all these parameters on your server side.
 
