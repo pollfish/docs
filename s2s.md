@@ -59,7 +59,7 @@ If you want to register and receive not eligible/eligible info in your callbacks
 
 Once you select to register for not eligible callbacks, you will need to add "status" in your url. This param will return two values [eligible | noteligible]. 
 
-<img src="https://storage.googleapis.com/pollfish-images/not_eligible1.png2">
+<img src="https://storage.googleapis.com/pollfish-images/not_eligible2.png">
 
 For example:
 
@@ -227,6 +227,10 @@ Please note that during developer mode the `debug=true` parameter is *not includ
 
 ### 8. Checking callback logs
 
-You c
+You can check logs from your s2s callbacks history simply by selecting the relevant button on your Dashboard.
+
+<img src="https://storage.googleapis.com/pollfish-images/show_logs.png">
+
+In that popup you will find all callbacks generated from Pollfish servers for your app, sorted by date. You can easily track the status of each call and response from you server side. Each call in the logs is clickable and you can also search for a specific callback based on specific params of your url structure.
 
 
