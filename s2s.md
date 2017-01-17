@@ -55,11 +55,11 @@ You can register and receive callbacks when a user was not eligible for a survey
 
 If you want to register and receive not eligible/eligible info in your callbacks please select the checkbox as below (selected by defualt)
 
-<img src="https://storage.googleapis.com/pollfish-images/not_eligible1.png">
+<img src="https://storage.googleapis.com/pollfish-images/not_eligible2.png">
 
 Once you select to register for not eligible callbacks, you will need to add "status" in your url. This param will return two values [eligible | noteligible]. 
 
-<img src="https://storage.googleapis.com/pollfish-images/not_eligible2.png">
+<img src="https://storage.googleapis.com/pollfish-images/not_eligible1.png">
 
 For example:
 
