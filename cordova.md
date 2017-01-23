@@ -330,6 +330,10 @@ pollfishplugin.setAttributesMap(userAttributes);
 ```
 
 
+## Example
+
+If you want to have a look at sample code on how you can call and use Pollfish plugin in your app, you can have a review files located at test/index.js and test/index.html
+
 
 ## More Info
 
