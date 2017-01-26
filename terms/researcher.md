@@ -121,6 +121,9 @@ Pollfish is not responsible and cannot be held liable for any incompliance of th
 
 Pollfish reserves the right to withdraw the questionnaire in case its content does not respect the standing legislation or the terms of this agreement.
 
+Pollfish reserves the right to reject surveys during the review phase for several reasons including but not limited to low incident rate, asking multiple questions in one, asking demographic questions, asking simplified YES/NO Screening questions and others. Succesfull payment does not guarantee neither Survey Approval nor Survey Distribution. Pollfish reserves the right to terminate at any time Surveys with law incident rate and issue a partial refund.
+
+
 Pollfish reserves its right to terminate at any time your use of its Services, in case of any breach of the present agreement which may impose liability upon Pollfish.
 
 ### 10\. Limitation of liability
