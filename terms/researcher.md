@@ -2,7 +2,7 @@
 
 <h2 class="static-page-title">RESEARCHER TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 07/19/2016</div>
+<div class="updatedOn">Last updated: 01/26/2017</div>
 
 <br />
 
