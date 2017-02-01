@@ -1,4 +1,8 @@
-<div class="changelog" data-version="4.2.1">
+<div class="changelog" data-version="4.2.2">
+
+v4.2.2
+
+- Fixed bug on survey viewed
 
 v4.2.1
 
