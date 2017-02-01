@@ -2,7 +2,7 @@
 
 v4.2.2
 
-- Fixed bug on survey viewed
+- Fixed bug on survey view
 
 v4.2.1
 
