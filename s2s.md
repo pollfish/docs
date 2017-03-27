@@ -128,7 +128,7 @@ Includes both **tx_id** and **timestamp**.
 
 The **signature** of the callback URLs is the result of appling the  [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) hash function to the **[[parameters]]** that are included in the URL using your account's secret_key.
 
-We only sign the values that are substituted using the parameters placeholders (**[[cpa]]**, **[[device_id]]**, **[[request_uuid]]**, **[[timestamp]]** and **[[tx_id]]**). We do not sign any other part of the URL including any other *URL parameters* that the publisher might specify. For example in the below URL only the values that are going to be substituded in **[[request_uuid]]** and **[[tx_id]]** are used as inputand not the values of the `bundle_id` and `source` URL parameters.
+We only sign the values that are substituted using the parameters placeholders (**[[cpa]]**, **[[device_id]]**, **[[request_uuid]]**, **[[status]]** **[[timestamp]]** and **[[tx_id]]**). We do not sign any other part of the URL including any other *URL parameters* that the publisher might specify. For example in the below URL only the values that are going to be substituded in **[[request_uuid]]** and **[[tx_id]]** are used as input and not the values of the `bundle_id` and `source` URL parameters.
 
 ```
 https://www.example.com?request_uuid=[[request_uuid]]&tx_id=[[tx_id]]&signature=[[signature]]&bundle_id=com.domain.app&source=pollfish
@@ -165,7 +165,7 @@ To verify the signature in server-to-server postback calls follow the below proc
 2. URL decode the value you extracted in (1) using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding)
 3. Extract the values of the rest of the parameters URL.
 4. URL decode the values you extracted in (3) using Percent encoding.
-5. Sort the values from (4) alphabeticaly using the names of the template parameters. The names of the template parameters are: `cpa`, `device_id`, `request_uuid`, `timestamp` and `tx_id` and not the names of any [URL parameters](https://en.wikipedia.org/wiki/Query_string) your URL may contain.
+5. Sort the values from (4) alphabeticaly using the names of the template parameters. The names of the template parameters are: `cpa`, `device_id`, `request_uuid`, `status`, `timestamp` and `tx_id` and not the names of any [URL parameters](https://en.wikipedia.org/wiki/Query_string) your URL may contain.
 6. Produce a string by concatenating all non-empty parameter values as sorted in the previous step using the `:` character. The only parameter that when specified in the URL template can be empty is `request_uuid`.
 7. Sign the string produced in (6) using the [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) algorithm and your account's **secret_key** that can be retrieved from the [Account Information](https://www.pollfish.com/dashboard/account) page.
 8. Encode the value produced in (7) using [Base64](https://en.wikipedia.org/wiki/Base64)
@@ -185,7 +185,7 @@ Please note that during developer mode the `debug=true` parameter is *not includ
 
 <h1>Validate signature</h1>
 
-<p>Url pattern is: <code>https://example.com?device_id=[[device_id]]]&amp;cpa=[[cpa]]&amp;timestamp=[[timstamp]]&amp;tx_id=[[tx_id]]&amp;request_uuid=[[request_uuid]]&amp;signature=[[signature]]</code></p>
+<p>Url pattern is: <code>https://example.com?device_id=[[device_id]]]&amp;cpa=[[cpa]]&amp;timestamp=[[timstamp]]&amp;tx_id=[[tx_id]]&amp;request_uuid=[[request_uuid]]&amp;status=[[status]]&amp;signature=[[signature]]</code></p>
 
 <?php $secret_key = "my-secret"; ?>
 
@@ -195,6 +195,7 @@ Please note that during developer mode the `debug=true` parameter is *not includ
   $cpa = rawurldecode($_GET["cpa"]);
   $device_id = rawurldecode($_GET["device_id"]);
   $request_uuid = rawurldecode($_GET["request_uuid"]);
+  $status = rawurldecode($_GET["status"]);
   $timestamp = rawurldecode($_GET["timestamp"]);
   $tx_id = rawurldecode($_GET["tx_id"]);
   $url_signature = rawurldecode($_GET["signature"]);
@@ -203,7 +204,7 @@ Please note that during developer mode the `debug=true` parameter is *not includ
   if (!empty($request_uuid)) { // only added when non-empty
     $data = $data . ":" . $request_uuid;
   }
-  $data = $data . ":" . $timestamp . ":" . $tx_id;
+  $data = $data . ":" . $status . ":" . $timestamp . ":" . $tx_id;
 
   $computed_signature = base64_encode(hash_hmac("sha1" , $data, $secret_key, true));
   $is_valid = $url_signature == $computed_signature;
@@ -212,6 +213,7 @@ Please note that during developer mode the `debug=true` parameter is *not includ
 <p>cpa = <?php echo($cpa); ?></p>
 <p>device_id = <?php echo($device_id); ?></p>
 <p>request_uuid = <?php echo($request_uuid); ?></p>
+<p>status = <?php echo($status); ?></p>
 <p>timestamp = <?php echo($timestamp); ?></p>
 <p>tx_id = <?php echo($tx_id); ?></p>
 
