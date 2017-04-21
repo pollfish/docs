@@ -123,6 +123,8 @@ You can find examples in code on how to implement the rewarded approach in the l
 
 ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png) [iOS Sample Project](https://github.com/pollfish/ios-sdk-pollfish/blob/master/SampleProject/SampleProject/SecondViewController.m)
 
+![alt text](https://storage.googleapis.com/pollfish-images/web_icon.png) [Web Plugin Sample Project](https://gist.github.com/vourkosa/202221c7442531b23fb1b4ca9a643de0)
+
 If you are using a different platform or engine please follow the logical steps as described above in order to archieve the desired behaviour.
 
 
