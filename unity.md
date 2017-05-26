@@ -45,6 +45,7 @@ Please set minimum version of your project accordingly.
 
 
 > **Note:** There is an open issue with Unity 5.6 which affects Pollfish. We are working around the clock to find a solution. Please use Unity >5.6 until this is resolved.
+<br/>
 > **Note:** Pollfish does not work on Editor, so please do try only on mobile devices
 
 <br/><br/>
