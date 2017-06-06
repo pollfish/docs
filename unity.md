@@ -315,14 +315,3 @@ In our efforts to include publishers in this process and be as transparent as po
 
 <br/>
 <br/>
-
-## Optional section
-
-In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
-<br/>
-<br/>
-### 7\. Other init methods (optional)
-
-#### Passing custom parameter for server to server postback calls
-
-If you need to pass a custom parameter (for example a UUID as registered in 
