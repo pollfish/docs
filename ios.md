@@ -705,67 +705,11 @@ Pollfish.sendBeaconInfo(beacon: CLBeacon!);
 ```
 <br/>
 
-
-### 13\. Set custom user attributes (optional)
-
-You can set attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys.  
-
-Create a UserAttributesDictionary object and then you can use that object to set different user attributes by calling the following function:  
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
-[Pollfish setAttributeDictionary:(UserAttributesDictionary *) dict];
-```
-
-<span style="text-decoration: underline">Swift:</span>
-
-```
-Pollfish.setAttributeDictionary(dict: NSMutableDictionary!)
-```
-
-For example:
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
-UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary alloc] init];
-
-[userAttributesDictionary setAge:AGE(_36)];
-[userAttributesDictionary setGender: GENDER(MALE)];
-[userAttributesDictionary setAgeGroup: AGE_GROUP(_35_44)];
-[userAttributesDictionary setFacebookId:@"facebookId"];
-[userAttributesDictionary setTwitterId:@"twitterId"];
-[userAttributesDictionary setMaritalStatus:MARITAL_STATUS(DIVORCED)];
- 
-[userAttributesDictionary setCustomAtributesWithKey:@"PARAM_KEY" andAttrValue: @"PARAM_VALUE"];
-
-[Pollfish setAttributeDictionary:userAttributesDictionary];
-```
-
-<span style="text-decoration: underline">Swift:</span>
-
-```
- let userAttributesDictionary:UserAttributesDictionary = [:]
-        
- userAttributesDictionary.setAge(AGE(_36))
- userAttributesDictionary.setGender(GENDER(MALE))
- userAttributesDictionary.setAgeGroup(AGE_GROUP(_35_44))
- userAttributesDictionary.setFacebookId("facebookId")
- userAttributesDictionary.setTwitterId("twitterId")
- userAttributesDictionary.setMaritalStatus(MARITAL_STATUS(DIVORCED))
-        
- userAttributesDictionary.setCustomAtributesWithKey("PARAM_KEY" , andAttrValue: "PARAM_VALUE")
-        
- Pollfish.setAttributeDictionary(userAttributesDictionary)
-```
-
-<br/>
-### 14\.Implement Pollfish event listeners (optional)
+### 13\.Implement Pollfish event listeners (optional)
 
 > **Note:** Pollfish listeners/notifications fire in an asynchronous way. Having said that it's possible that you receive them while being in a background thread and not the main UI thread. If you want to make any prompts or custom changes on the view level when you receive those notifications, please be sure to make them on the main UI thread
 
-### 14.1 Get notified when a survey is received
+### 13.1 Get notified when a survey is received
 
 
 You can be notified when a survey is received via the iOS Notification Center. Note that the observer should be already registered when a survey is received in order to run the selector.  
@@ -836,7 +780,7 @@ func pollfishReceived(notification:NSNotification) {
 }
 ```
 <br/>
-### 14.2 Get notified when survey is completed
+### 13.2 Get notified when survey is completed
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -903,7 +847,7 @@ func pollfishCompleted(notification:NSNotification) {
 ```
 
 <br/>
-### 14.3 Get notified when a user is not eligible for a Pollfish survey
+### 13.3 Get notified when a user is not eligible for a Pollfish survey
 
 
 You can be notified when a user is not eligible for a Pollfish survey after accepting to take it via the iOS Notification Center.  
@@ -935,7 +879,7 @@ func pollfishUsernotEligible()
 ```
 
 <br/>
-### 14.4 Get notified when survey is not available
+### 13.4 Get notified when survey is not available
 
 
 You can be notified when a survey is not available for a user via the iOS Notification Center.  
@@ -967,7 +911,7 @@ func pollfishNotAvailable()
 ```
 
 <br/>
-### 14.5 Get notified when Pollfish is opened
+### 13.5 Get notified when Pollfish is opened
 
 
 You can be notified when a user opens Pollfish survey panel via the iOS Notification Center.  
@@ -999,7 +943,7 @@ func pollfishOpened()
 ```
 
 <br/>
-### 14.6 Get notified when Pollfish is closed
+### 13.6 Get notified when Pollfish is closed
 
 
 You can be notified when a user closes Pollfish survey panel via the iOS Notification Center.  
@@ -1031,7 +975,7 @@ func pollfishClosed()
 ```
 
 <br/>
-### 15\. Check if Pollfish survey is still available on your device (optional)
+### 14\. Check if Pollfish survey is still available on your device (optional)
 
 It happens that time had past since you initialized Pollfish and a survey is received. If you want to check if survey is still avaialble on your device and has not expired you can check by calling:
 
@@ -1049,7 +993,7 @@ Pollfish.isPollfishPresent()
 
 <br/>
 
-### 16\. Server-to-server callbacks on survey completion (optional)
+### 15\. Server-to-server callbacks on survey completion (optional)
 
 If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
 
