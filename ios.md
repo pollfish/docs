@@ -513,6 +513,9 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
 
+| **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
+
+
 <span style="text-decoration: underline">Objective-C:</span>
 
 ```
