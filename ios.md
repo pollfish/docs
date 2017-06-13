@@ -1,4 +1,11 @@
-<div class="changelog" data-version="4.2.2">
+<div class="changelog" data-version="4.2.3">
+
+v4.2.3
+
+- Added support for sending user attributes during init
+- Deprecated setAttributeDictionary function
+- Fixed bug for multiple notifications and url encoding
+- Fixed isPollfishPresent bug
 
 v4.2.2
 
