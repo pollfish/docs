@@ -534,7 +534,7 @@ func applicationDidBecomeActive(application: UIApplication) {
        		    andDeveloperKey: String!, 
        		      andDebuggable: Bool, 
        		      andCustomMode: Bool
-	          andUserAttributes:NSMutableDictionary!)
+	          andUserAttributes: NSMutableDictionary!)
 }
 ```
 <br/>
@@ -557,14 +557,14 @@ an example of user attributes dictionary could be the following one:
     [userAttributesDictionary setIncome:INCOME(MIDDLE_I)];
     
     /*other user attributes*/
-    [userAttributesDictionary setEmail:@"andreas@pollfish.com"];
-    [userAttributesDictionary setFacebookId:@"fb_id"];
-    [userAttributesDictionary setGoogleId:@"google_id"];
-    [userAttributesDictionary setTwitterId:@"twit_id"];
-    [userAttributesDictionary setLinkedInId:@"link_id"];
-    [userAttributesDictionary setPhone:@"003069232242424"];
-    [userAttributesDictionary setName:@"Andreas"];
-    [userAttributesDictionary setSurname:@"Vour"];
+    [userAttributesDictionary setEmail:@"user@email.com"];
+    [userAttributesDictionary setFacebookId:@"USER_FB"];
+    [userAttributesDictionary setGoogleId:@"USER_GOOGLEID"];
+    [userAttributesDictionary setTwitterId:@"USER_TWITTER"];
+    [userAttributesDictionary setLinkedInId:@"USER_LINKEDIN"];
+    [userAttributesDictionary setPhone:@"0030002221929"];
+    [userAttributesDictionary setName:@"USER_NAME"];
+    [userAttributesDictionary setSurname:@"USER_SURNAME"];
     [userAttributesDictionary setCustomAttributeWithKey:@"my_param" andValue:@"my_value"];
     
 ```
@@ -586,15 +586,16 @@ an example of user attributes dictionary could be the following one:
     userAttributesDictionary.setIncome(INCOME(MIDDLE_I));
     
     /*other user attributes*/
-    userAttributesDictionary.setEmail(@"andreas@pollfish.com");
-    userAttributesDictionary.setFacebookId(@"fb_id");
-    userAttributesDictionary.setGoogleId(@"google_id");
-    userAttributesDictionary.setTwitterId(@"twit_id");
-    userAttributesDictionary.setLinkedInId(@"link_id");
-    userAttributesDictionary.setPhone(@"003069232242424");
-    userAttributesDictionary.setName(@"Andreas");
-    userAttributesDictionary.setSurname(@"Vour");
+    userAttributesDictionary.setEmail(@"user@email.com");
+    userAttributesDictionary.setFacebookId(@"USER_FB");
+    userAttributesDictionary.setGoogleId(@"USER_GOOGLEID");
+    userAttributesDictionary.setTwitterId(@"USER_TWITTER");
+    userAttributesDictionary.setLinkedInId(@"USER_LINKEDIN");
+    userAttributesDictionary.setPhone(@"0030002221929");
+    userAttributesDictionary.setName(@"USER_NAME");
+    userAttributesDictionary.setSurname(@"USER_SURNAME");
     userAttributesDictionary.setCustomAttributeWithKey(@"my_param" andValue:@"my_value");
+    
 ```
 
 ### 10\. Manually show or hide Pollfish (optional)
