@@ -511,7 +511,7 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 #### Passing user attributes to skip or shorten Pollfish Demographic surveys
 
-If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys.
+If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -521,7 +521,7 @@ If you know upfront some user attributes like gender, age, education and others 
 	      andDeveloperKey: (NSString *)
             andDebuggable: (BOOL) 
 	        andCustomMode: (BOOL)
-	       andUserAttributes: (NSMutableDictionary *)];
+	    andUserAttributes: (NSMutableDictionary *)];
 ```
 
 <span style="text-decoration: underline">Swift:</span>
@@ -534,16 +534,18 @@ func applicationDidBecomeActive(application: UIApplication) {
        		    andDeveloperKey: String!, 
        		      andDebuggable: Bool, 
        		      andCustomMode: Bool
-		     andUserAttributes:NSMutableDictionary!)
+	          andUserAttributes:NSMutableDictionary!)
 }
 ```
 <br/>
 
 an example of user attributes dictionary could be the following one:
 
+<span style="text-decoration: underline">Objective-C:</span>
 ```
     UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary alloc] init];
     
+    /*included in Demographic Surveys*/
     [userAttributesDictionary setGender: GENDER(MALE)];
     [userAttributesDictionary setRace:RACE(WHITE)];
     [userAttributesDictionary setYearOfBirth:YEAR_OF_BIRTH(_1984)];
@@ -553,6 +555,8 @@ an example of user attributes dictionary could be the following one:
     [userAttributesDictionary setEmployment:EMPLOYMENT_STATUS(EMPLOYED_FOR_WAGES)];
     [userAttributesDictionary setCareer:CAREER(TELECOMMUNICATIONS)];
     [userAttributesDictionary setIncome:INCOME(MIDDLE_I)];
+    
+    /*other user attributes*/
     [userAttributesDictionary setEmail:@"andreas@pollfish.com"];
     [userAttributesDictionary setFacebookId:@"fb_id"];
     [userAttributesDictionary setGoogleId:@"google_id"];
@@ -566,8 +570,32 @@ an example of user attributes dictionary could be the following one:
 ```
     
 
-
-
+<span style="text-decoration: underline">Swift:</span>
+```
+    let userAttributesDictionary:UserAttributesDictionary = [:]
+    
+    /*included in Demographic Surveys*/
+    userAttributesDictionary.setGender(GENDER(MALE));
+    userAttributesDictionary.setRace(RACE(WHITE));
+    userAttributesDictionary.setYearOfBirth(YEAR_OF_BIRTH(_1984));
+    userAttributesDictionary.setMaritalStatus(MARITAL_STATUS(MARRIED));
+    userAttributesDictionary.setParentalStatus(PARENTAL_STATUS(THREE));
+    userAttributesDictionary.setEducation(EDUCATION_LEVEL(UNIVERSITY));
+    userAttributesDictionary.setEmployment(EMPLOYMENT_STATUS(EMPLOYED_FOR_WAGES));
+    userAttributesDictionary.setCareer(CAREER(TELECOMMUNICATIONS));
+    userAttributesDictionary.setIncome(INCOME(MIDDLE_I));
+    
+    /*other user attributes*/
+    userAttributesDictionary.setEmail(@"andreas@pollfish.com");
+    userAttributesDictionary.setFacebookId(@"fb_id");
+    userAttributesDictionary.setGoogleId(@"google_id");
+    userAttributesDictionary.setTwitterId(@"twit_id");
+    userAttributesDictionary.setLinkedInId(@"link_id");
+    userAttributesDictionary.setPhone(@"003069232242424");
+    userAttributesDictionary.setName(@"Andreas");
+    userAttributesDictionary.setSurname(@"Vour");
+    userAttributesDictionary.setCustomAttributeWithKey(@"my_param" andValue:@"my_value");
+```
 
 ### 10\. Manually show or hide Pollfish (optional)
 
