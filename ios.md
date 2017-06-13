@@ -509,6 +509,66 @@ func applicationDidBecomeActive(application: UIApplication) {
 ```
 <br/>
 
+#### Passing user attributes to skip or shorten Pollfish Demographic surveys
+
+If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys.
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```
+ [Pollfish initAtPosition: (PollfishPosition)
+              withPadding: (int)
+	      andDeveloperKey: (NSString *)
+            andDebuggable: (BOOL) 
+	        andCustomMode: (BOOL)
+	       andUserAttributes: (NSMutableDictionary *)];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+
+```
+func applicationDidBecomeActive(application: UIApplication) {
+
+   Pollfish.initAtPosition( pos: Int32, 
+       			    withPadding: Int32, 
+       		    andDeveloperKey: String!, 
+       		      andDebuggable: Bool, 
+       		      andCustomMode: Bool
+		     andUserAttributes:NSMutableDictionary!)
+}
+```
+<br/>
+
+an example of user attributes dictionary could be the following one:
+
+```
+    UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary alloc] init];
+    
+    [userAttributesDictionary setGender: GENDER(MALE)];
+    [userAttributesDictionary setRace:RACE(WHITE)];
+    [userAttributesDictionary setYearOfBirth:YEAR_OF_BIRTH(_1984)];
+    [userAttributesDictionary setMaritalStatus:MARITAL_STATUS(MARRIED)];
+    [userAttributesDictionary setParentalStatus:PARENTAL_STATUS(THREE)];
+    [userAttributesDictionary setEducation:EDUCATION_LEVEL(UNIVERSITY)];
+    [userAttributesDictionary setEmployment:EMPLOYMENT_STATUS(EMPLOYED_FOR_WAGES)];
+    [userAttributesDictionary setCareer:CAREER(TELECOMMUNICATIONS)];
+    [userAttributesDictionary setIncome:INCOME(MIDDLE_I)];
+    [userAttributesDictionary setEmail:@"andreas@pollfish.com"];
+    [userAttributesDictionary setFacebookId:@"fb_id"];
+    [userAttributesDictionary setGoogleId:@"google_id"];
+    [userAttributesDictionary setTwitterId:@"twit_id"];
+    [userAttributesDictionary setLinkedInId:@"link_id"];
+    [userAttributesDictionary setPhone:@"003069232242424"];
+    [userAttributesDictionary setName:@"Andreas"];
+    [userAttributesDictionary setSurname:@"Vour"];
+    [userAttributesDictionary setCustomAttributeWithKey:@"my_param" andValue:@"my_value"];
+    
+```
+    
+
+
+
+
 ### 10\. Manually show or hide Pollfish (optional)
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization:  
