@@ -486,8 +486,8 @@ and specify any user information you know upfront:
 ```java
 
 UserProperties userProperties = new UserProperties()
-                      /*included in Demographic Surveys*/
-		      		.setGender(Gender.MALE)
+                      /*included in Demographic Surveys*/      		
+		      .setGender(Gender.MALE)
                       .setYearOfBirth(YearOfBirth._1984)
                       .setMaritalStatus(MaritalStatus.SINGLE)
                       .setParentalStatus(ParentalStatus.ZERO)
