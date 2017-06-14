@@ -474,7 +474,14 @@ If you know upfront some user attributes like gender, age, education and others 
 
 | **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
 
-Below you can see an example of how you can pass user properties during initialization:
+Below you can see an example of how you can pass user properties during initialization.
+
+Just import:  
+
+```
+import com.pollfish.constants.UserProperties;
+```
+and specify any user information you need upfront:
 
 <br/>
 ```java
@@ -744,31 +751,7 @@ If you want to be eligible for beacon based surveys for your app you can include
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 ```
 <br/><br/>
-### 15. Send user attributes (optional)
-
-You can send attributes that you received from your app regarding a user, in order to receive a better fill rate and higher priced surveys.  
-
-Just import:  
-
-```
-import com.pollfish.constants.UserProperties;
-```
-
-and set any of the attributes like below. Please remember to call this only after calling init function.  
-
-```java
-UserProperties userProperties = new UserProperties();
-
-userProperties.setGender(Gender.MALE).setAge(Age._34).setMaritalStatus(MarritalStatus.SINGLE);
-userProperties.setAgeGroup(AgeGroup._55_64);
-userProperties.setFacebookId("facebookId");
-userProperties.setTwitterId("twitterId");
-userProperties.setCustomParams("PARAM_KEY","PARAM_VALUE");
-
-PollFish.setAttributesMap(userProperties);
-```
-<br/><br/>
-### 16\. Server-to-server callbacks on survey completion (optional)
+### 15\. Server-to-server callbacks on survey completion (optional)
 
 If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
 
