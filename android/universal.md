@@ -441,7 +441,14 @@ If you know upfront some user attributes like gender, age, education and others 
 
 | **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
 
-Below you can see an example of how you can pass user properties during initialization:
+Below you can see an example of how you can pass user properties during initialization.
+
+Just import:  
+
+```
+import com.pollfish.constants.UserProperties;
+```
+and specify any user information you need upfront:
 
 <br/>
 ```java
