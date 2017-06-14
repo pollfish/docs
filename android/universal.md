@@ -233,7 +233,7 @@ No | Description
 8.10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
 8.11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
 8.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
-8.13 | **.userProperties(UserProperties userProperties)**  <br/> Sends user attributes to skip or shorten Pollfish demographic surveys
+8.13 | **.userProperties(UserProperties userProperties)**  <br/> Send user attributes to skip or shorten Pollfish demographic surveys
 <br/>
 #### **8.1 .indicatorPosition(int position)**
 Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)
@@ -448,9 +448,8 @@ Just import:
 ```
 import com.pollfish.constants.UserProperties;
 ```
-and specify any user information you need upfront:
+and specify any user information you know upfront:
 
-<br/>
 ```java
 
 UserProperties userProperties = new UserProperties()
