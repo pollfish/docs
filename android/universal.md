@@ -1,4 +1,13 @@
-<div class="changelog" data-version="4.3.1">
+<div class="changelog" data-version="4.3.3">
+v4.3.3
+
+- added support for sending user attributes during init
+- deprecated setCustomAttributes
+
+v4.3.2
+
+- bug fixes
+
 v4.3.1
 
 - improved support and optimizations for third-party survey providers
@@ -184,6 +193,9 @@ If you have any question, like why you do not see surveys on your own device in 
 
 In our efforts to include publishers in this process and be as transparent as possible we provide full control over the process. We let publishers decide if their users are served these standalone surveys or not, in 2 different ways. Firstly by monitoring the process in code and excluding any users by listening to the relevant noitifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) field which will be 0 USD cents. Secondly, publishers can disable the standalone demographic surveys through the Pollfish Developer Dashboard in the Settings area of an app. You can read more on demographic surveys <a href="https://pollfish.zendesk.com/hc/en-us/articles/213287545">here</a>. 
 
+If you know attributes about a user like gender, age and others, you can provide them during initialization as described in section 8.13 - and skip or shorten this way, Pollfish Demographic surveys.
+
+
 <br/>
 <br/>
 
@@ -221,6 +233,7 @@ No | Description
 8.10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
 8.11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
 8.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
+8.13 | **.userProperties(UserProperties userProperties)**  <br/> Sends user attributes to skip or shorten Pollfish demographic surveys
 <br/>
 #### **8.1 .indicatorPosition(int position)**
 Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)
@@ -419,6 +432,44 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
     	@Override
     	public void onPollfishClosed(){}
     	});
+	.build();
+```
+<br/>
+#### **8.13 .userProperties(UserProperties userProperties)**
+
+If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
+
+| **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
+
+Below you can see an example of how you can pass user properties during initialization:
+
+<br/>
+```java
+
+UserProperties userProperties = new UserProperties()
+                      /*included in Demographic Surveys*/
+		      .setGender(Gender.MALE)
+                      .setYearOfBirth(YearOfBirth._1984)
+                      .setMaritalStatus(MaritalStatus.SINGLE)
+                      .setParentalStatus(ParentalStatus.ZERO)
+                      .setEducation(EducationLevel.UNIVERSITY)
+                      .setEmployment(EmploymentStatus.EMPLOYED_FOR_WAGES)
+                      .setCareer(Career.TELECOMMUNICATIONS)
+                      .setRace(Race.WHITE)
+                      .setIncome(Income.MIDDLE_I)
+		       /*other user attributes*/
+                      .setEmail("user_email@test.com")
+                      .setFacebookId("USER_FB")
+                      .setGoogleId("USER_GOOGLE")
+                      .setTwitterId("USER_TWITTER")
+                      .setLinkedInId("USER_LINKEDIN")
+                      .setPhone("USER_PHONE")
+                      .setName("USER_NAME")
+                      .setSurname("USER_SURNAME")
+                      .setCustomAttributes("MY_PARAM", "MY_VALUE");
+			    
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+	.userProperties(userProperties);
 	.build();
 ```
 <br/>
@@ -683,33 +734,7 @@ If you want to be eligible for beacon based surveys for your app you can include
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 ```
 <br/><br/>
-### 14. Send user attributes (optional)
-
-You can send attributes that you received from your app regarding a user, in order to receive a better fill rate and higher priced surveys.  
-
-Just import:  
-
-```
-import com.pollfish.constants.UserProperties;
-```
-
-and set any of the attributes like below. Please remember to call this only after calling init function.  
-
-```java
-UserProperties userProperties = new UserProperties();
-
-userProperties.setGender(Gender.MALE).setAge(Age._34).setMaritalStatus(MarritalStatus.SINGLE);
-userProperties.setAgeGroup(AgeGroup._55_64);
-userProperties.setFacebookId("facebookId");
-userProperties.setTwitterId("twitterId");
-userProperties.setCustomParams("PARAM_KEY","PARAM_VALUE");
-
-PollFish.setAttributesMap(userProperties);
-```
-
-<br/><br/>
-
-### 15\. Server-to-server callbacks on survey completion (optional)
+### 14\. Server-to-server callbacks on survey completion (optional)
 
 If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
 
