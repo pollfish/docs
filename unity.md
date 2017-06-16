@@ -52,7 +52,9 @@ Please set minimum version of your project accordingly.
 
 
 > **Note:** There is an  [issue](https://issuetracker.unity3d.com/issues/regression-android-banner-ads-are-invisible-but-clickable) with Unity 5.6 which affected Pollfish prior version 4.3.4. Pollfish SDK v4.3.4 fixes that issue however more updates might be needed in the future since this issue is marked as to be resolved in a future release on Unity's issue tracker.
+
 <br/><br/>
+
 > **Note:** Pollfish does not work on Editor, so please do try only on mobile devices
 
 
