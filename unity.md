@@ -325,3 +325,65 @@ If you know attributes about a user like gender, age and others, you can provide
 
 <br/>
 <br/>
+
+### 7\. Other init methods (optional)
+
+#### 7.1 Passing custom parameter for server to server postback calls
+
+If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function and receive it back with Server to Server, survey completed postback call you can use:  
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```
+void PollfishInitWithRequestUUID(int position, int padding, string developerKey, bool debuggable, bool customMode, string request_uuid);
+
+```
+<br/>
+
+#### 7.2 Passing user attributes to skip or shorten Pollfish Demographic surveys
+
+If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
+
+| **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
+
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```
+void PollfishInitWithUserAttributes(int position, int padding, string developerKey, bool debuggable, bool customMode, string request_uuid, Dictionary<string,string> attrDict);
+
+```
+<br/>
+
+for example:
+
+```
+// Send user demographic attributes to shorten or skip demographic surveys
+
+Dictionary<string, string> dict = new Dictionary<string, string> ();
+
+//used in demographic surveys
+dict.Add ("gender", "1");
+dict.Add ("year_of_birth", "1974");
+dict.Add ("marital_status", "2");
+dict.Add ("parental", "3");
+dict.Add ("education", "1");
+dict.Add ("employment", "1");
+dict.Add ("career", "2");
+dict.Add ("race", "3");
+dict.Add ("income", "1");
+
+//general user attributes
+dict.Add ("email", "user_email@gmail.com");
+dict.Add ("google_id", "USER_GOOGLE");
+dict.Add ("linkedin_id", "USER_LINKEDIN");
+dict.Add ("twitter_id", "USER_TWITTER");
+dict.Add ("facebook_id", "USER_FB");
+dict.Add ("phone", "USER_PHONE");
+dict.Add ("name", "USER_NAME");
+dict.Add ("surname", "USER_SURNAME");
+
+Pollfish.PollfishInitFunction ((int)pollfishPosition, indPadding, apiKey, debugMode, customMode, requestUUID,dict);
+
+```
+You can check values mapping for demographic surveys in the followin [section](https://www.pollfish.com/docs/demographic-surveys)
