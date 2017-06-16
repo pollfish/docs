@@ -38,4 +38,7 @@ Below you can find the list of demographic info you can send over along with the
 
 ![alt text](https://storage.googleapis.com/pollfish-images/gender.png)
 
-
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
