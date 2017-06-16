@@ -108,13 +108,13 @@ Imported files will be listed in the following directories:
 
 * **PlayServicesResolver** folder contains files to allow automatically add Google Play Services in your Android project from Unity menu.
 
-> **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can easily do that by selecting **Assets –> Google Play Services -> Resolve Client Jars**. If you do not have Google Play Services you can install them through Android SDK Manager.
+> **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can easily do that by selecting **Assets –> Play Services Resolver -> Android Resolver -> Resolve Client Jars**. If you do not have Google Play Services you can install them through Android SDK Manager.
 
-![alt text](https://storage.googleapis.com/pollfish-images/services_assets.png)
+![alt text](https://storage.googleapis.com/pollfish-images/android_resolver.png)
 
 or
 
-![alt text](https://storage.googleapis.com/pollfish-images/services_menu.png)
+![alt text](https://storage.googleapis.com/pollfish-images/new_unity.png)
 
 </div>
 
