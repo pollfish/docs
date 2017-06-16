@@ -52,3 +52,17 @@ Below you can find the list of demographic info you can send over along with the
 |  | WIDOWED | 5
 |  | PREFER_NOT_TO_SAY | 6
 
+
+| Key | Description | Value |
+| --- | --- | --- |
+| `parental` | ZERO | 0
+|  | ONE | 1
+|  | TWO | 2
+|  | THREE | 3
+|  | FOUR | 4
+|  | FIVE | 5
+|  | SIX_OR_MORE | 6
+|  | PREFER_NOT_TO_SAY | 7
+
+
+
