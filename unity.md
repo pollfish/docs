@@ -332,8 +332,6 @@ If you know attributes about a user like gender, age and others, you can provide
 
 If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function and receive it back with Server to Server, survey completed postback call you can use:  
 
-<span style="text-decoration: underline">Objective-C:</span>
-
 ```
 void PollfishInitWithRequestUUID(int position, int padding, string developerKey, bool debuggable, bool customMode, string request_uuid);
 
