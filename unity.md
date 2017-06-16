@@ -345,8 +345,6 @@ If you know upfront some user attributes like gender, age, education and others 
 | **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
 
 
-<span style="text-decoration: underline">Objective-C:</span>
-
 ```
 void PollfishInitWithUserAttributes(int position, int padding, string developerKey, bool debuggable, bool customMode, string request_uuid, Dictionary<string,string> attrDict);
 
