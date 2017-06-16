@@ -6,6 +6,7 @@ v4.3.4
 - Deprecated setCustomAttributes
 - Fixed rendering bug of Unity 5.6
 - Updated to latest Google's Unity Jar Resolver
+- Updated Android & iOS SDK to the latest
 
 v4.3.3
 
