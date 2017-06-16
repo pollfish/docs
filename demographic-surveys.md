@@ -44,7 +44,11 @@ Below you can find the list of demographic info you can send over along with the
 
 | Key | Description | Value |
 | --- | --- | --- |
-| `gender` | FEMALE | 1
-|  | MALE | 2
-|  | OTHER | 3
+| `marital_status` | SINGLE | 0
+|  | MARRIED | 1
+|  | DIVORCED | 2
+|  | LIVING_WITH_PARTNER | 3
+|  | SEPARATED | 4
+|  | WIDOWED | 5
+|  | PREFER_NOT_TO_SAY | 6
 
