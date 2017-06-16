@@ -349,8 +349,6 @@ If you know upfront some user attributes like gender, age, education and others 
 void PollfishInitWithUserAttributes(int position, int padding, string developerKey, bool debuggable, bool customMode, string request_uuid, Dictionary<string,string> attrDict);
 
 ```
-<br/>
-
 for example:
 
 ```
