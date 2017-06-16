@@ -32,6 +32,8 @@ Below you can find the list of demographic info you can send over along with the
 
 ![alt text](https://storage.googleapis.com/pollfish-images/demographic.png)
 
+| **Note:** Both key and values should be eventually converted to strings prior sending over through the relevant functions within the library
+
 ### Mappings
 
 ![alt text](https://storage.googleapis.com/pollfish-images/gender.png)
