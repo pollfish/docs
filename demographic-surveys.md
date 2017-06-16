@@ -40,7 +40,6 @@ Below you can find the list of demographic info you can send over along with the
 
 | Key | Description | Value |
 | --- | --- | --- |
-
 | gender | FEMALE | 1
 |  | MALE | 2
 |  | OTHER | 3
