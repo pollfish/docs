@@ -55,7 +55,7 @@ Below you can find the list of demographic info you can send over along with the
 
 | Key | Description | Value |
 | --- | --- | --- |
-| `parental` | ZERO | 0
+| <b>parental<b> | ZERO | 0
 |  | ONE | 1
 |  | TWO | 2
 |  | THREE | 3
