@@ -42,6 +42,8 @@ Below you can find the list of demographic info you can send over along with the
 |  | MALE | 2
 |  | OTHER | 3
 
+</br>
+
 | Key | Description | Value |
 | --- | --- | --- |
 | `marital_status` | SINGLE | 0
@@ -52,10 +54,11 @@ Below you can find the list of demographic info you can send over along with the
 |  | WIDOWED | 5
 |  | PREFER_NOT_TO_SAY | 6
 
+</br>
 
 | Key | Description | Value |
 | --- | --- | --- |
-| <b>parental<b> | ZERO | 0
+| `parental` | ZERO | 0
 |  | ONE | 1
 |  | TWO | 2
 |  | THREE | 3
@@ -63,6 +66,17 @@ Below you can find the list of demographic info you can send over along with the
 |  | FIVE | 5
 |  | SIX_OR_MORE | 6
 |  | PREFER_NOT_TO_SAY | 7
+
+</br>
+
+| Key | Description | Value |
+| --- | --- | --- |
+| `education` | ELEMENTARY_SCHOOL | 0
+|  | MIDDLE_SCHOOL | 1
+|  | HIGH_SCHOOL | 2
+|  | VOCATIONAL_TECHNICAL_COLLEGE | 3
+|  | UNIVERSITY | 4
+|  | POST_GRADUATE | 5
 
 
 
