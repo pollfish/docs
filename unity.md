@@ -87,7 +87,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 <br/>
 Imported files will be listed in the following directories:
 
-![alt text](https://storage.googleapis.com/pollfish-images/import_package.png)
+![alt text](https://storage.googleapis.com/pollfish-images/pakcage_contents.png)
 
 - **Assets/Editor** – Files to help with initial setup
 
@@ -114,7 +114,7 @@ Imported files will be listed in the following directories:
 
 or
 
-![alt text](https://storage.googleapis.com/pollfish-images/new_unity.png)
+![alt text](https://storage.googleapis.com/pollfish-images/new_unity_menu.png)
 
 </div>
 
