@@ -25,7 +25,7 @@ In our efforts to include publishers in this process and be as transparent as po
 
 3) By submitting known user attributes like gender or age, during initialization in code, you may skip some or all of the questions in our Demographic surveys.  
 
-| **Note:** <b>Bear in mind, that you need to contact our Support Department to ask them to acknowledge the information you have provided and mark you as eligible for providing such info through the library! <b>.
+| **Note:** <b>Bear in mind, that you need to contact our Support Department to ask them to acknowledge the information you have provided and mark you as eligible for providing such info through the library! </b>.
 
 
 If you know upfront some user attributes like gender, age, education and others you can pass them during initialization.
