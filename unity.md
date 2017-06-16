@@ -380,4 +380,4 @@ dict.Add ("surname", "USER_SURNAME");
 Pollfish.PollfishInitFunction ((int)pollfishPosition, indPadding, apiKey, debugMode, customMode, requestUUID,dict);
 
 ```
-You can check values mapping for demographic surveys in the followin [section](https://www.pollfish.com/docs/demographic-surveys)
+You can check values mapping for demographic surveys in the following [section](https://www.pollfish.com/docs/demographic-surveys)
