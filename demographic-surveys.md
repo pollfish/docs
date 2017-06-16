@@ -23,10 +23,12 @@ In our efforts to include publishers in this process and be as transparent as po
 
 ![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/208795189/receiving.png)
 
-3) By submitting known user attributes like gender or age, during initialization in code, you may skip some or all of the questions in our Demographic surveys.  Bear in mind, that you need to contact our Support Department to ask them to acknowledge the information you have provided.
+3) By submitting known user attributes like gender or age, during initialization in code, you may skip some or all of the questions in our Demographic surveys.  
+
+| **Note:** Bear in mind, that you need to contact our Support Department to ask them to acknowledge the information you have provided.
 
 
-If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
+If you know upfront some user attributes like gender, age, education and others you can pass them during initialization.
 
 Below you can find the list of demographic info you can send over along with the relevant keys and mappings
 
@@ -77,6 +79,58 @@ Below you can find the list of demographic info you can send over along with the
 |  | VOCATIONAL_TECHNICAL_COLLEGE | 3
 |  | UNIVERSITY | 4
 |  | POST_GRADUATE | 5
+
+</br>
+
+| Key | Description | Value |
+| --- | --- | --- |
+| `employment` | EMPLOYED_FOR_WAGES | 0
+|  | SELF_EMPLOYED | 1
+|  | UNEMPLOYED_LOOKING | 2
+|  | UNEMPLOYED_NOT_LOOKING | 3
+|  | HOMEMAKER | 4
+|  | STUDENT | 5
+|  | MILITARY | 6
+|  | RETIRED | 7
+|  | UNABLE_TO_WORK | 8
+|  | OTHER | 9
+
+</br>
+
+| Key | Description | Value |
+| --- | --- | --- |
+| `career` | AGRICULTURE_FORESTRY_FISHING_OR_HUNTING | 0
+|  | ARTS_ENTERTAINMENT_OR_RECREATION | 1
+|  | BROADCASTING | 2
+|  | CONSTRUCTION | 3
+|  | EDUCATION | 4
+|  | FINANCE_AND_INSURANCE | 5
+|  | GOVERNMENT_AND_PUBLIC_ADMINISTRATION | 6
+|  | HEALTH_CARE_AND_SOCIAL_ASSISTANCE | 7
+|  | HOMEMAKER | 8
+|  | HOTEL_AND_FOOD_SERVICES | 9
+|  | INFORMATION_OTHER | 10
+|  | INFORMATION_SERVICES_AND_DATA | 11
+|  | LEGAL_SERVICES | 12
+|  | MANUFACTURING_COMPUTER_AND_ELECTRONICS | 13
+|  | MANUFACTURING_OTHER | 14
+|  | MILITARY | 15
+|  | MINING | 16
+|  | PROCESSING | 18
+|  | REAL_ESTATE_RENTAL_OR_LEASING | 19
+|  | RELIGIOUS | 20
+|  | RETAIL | 21
+|  | RETIRED | 22
+|  | SCIENTIFIC_OR_TECHNICAL_SERVICES | 23
+|  | SOFTWARE | 24
+|  | STUDENT | 25
+|  | TELECOMMUNICATIONS | 26
+|  | TRANSPORTATION_AND_WAREHOUSING | 27
+|  | UNEMPLOYED | 28
+|  | UTILITIES | 29
+|  | WHOLESALE | 30
+|  | OTHER | 31
+
 
 
 
