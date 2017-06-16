@@ -1,5 +1,7 @@
 <div class="changelog" data-version="4.3.4">
 
+v4.3.4
+
 - Added support for sending user attributes during init
 - Deprecated setCustomAttributes
 - Fixed rendering bug of Unity 5.6
