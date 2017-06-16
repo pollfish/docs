@@ -30,7 +30,9 @@ In our efforts to include publishers in this process and be as transparent as po
 
 If you know upfront some user attributes like gender, age, education and others you can pass them during initialization.
 
-Below you can find the list of demographic info you can send over along with the relevant keys and mappings
+Below you can find the list of demographic info you can send over along with the relevant keys and mappings:
+
+### Keys
 
 ![alt text](https://storage.googleapis.com/pollfish-images/demographic.png)
 
@@ -131,6 +133,31 @@ Below you can find the list of demographic info you can send over along with the
 |  | WHOLESALE | 30
 |  | OTHER | 31
 
+</br>
 
+| Key | Description | Value |
+| --- | --- | --- |
+| `race` | ARAB | 0
+|  | ASIAN | 1
+|  | BLACK | 2
+|  | WHITE | 3
+|  | HISPANIC | 4
+|  | LATINO | 5
+|  | MULTIRACIAL | 6
+|  | OTHER | 7
+|  | PREFER_NOT_TO_SAY | 8
 
+</br>
 
+| Key | Description | Value |
+| --- | --- | --- |
+| `income` | LOWER_I | 0
+|  | LOWER_II | 1
+|  | MIDDLE_I | 2
+|  | MIDDLE_II | 3
+|  | HIGHT_I | 4
+|  | HIGHT_II | 5
+|  | HIGHT_III | 6
+|  | PREFER_NOT_TO_SAY | 7
+
+If you need to find household income mapping for a specific country you can have a look at the following [link](https://www.pollfish.com/pf/household-income-mapping)
