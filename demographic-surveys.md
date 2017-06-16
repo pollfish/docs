@@ -36,11 +36,15 @@ Below you can find the list of demographic info you can send over along with the
 
 ### Mappings
 
-![alt text](https://storage.googleapis.com/pollfish-images/gender.png)
+| Key | Description | Value |
+| --- | --- | --- |
+| `gender` | FEMALE | 1
+|  | MALE | 2
+|  | OTHER | 3
 
 | Key | Description | Value |
 | --- | --- | --- |
-| gender | FEMALE | 1
+| `gender` | FEMALE | 1
 |  | MALE | 2
 |  | OTHER | 3
 
