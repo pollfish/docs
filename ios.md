@@ -1,4 +1,8 @@
-<div class="changelog" data-version="4.2.3">
+<div class="changelog" data-version="4.2.4">
+
+v4.2.4
+
+- Fixed bitcode issue
 
 v4.2.3
 
