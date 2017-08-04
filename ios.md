@@ -71,7 +71,7 @@ v4.0.0
 4.  Call init and destroy function of Pollfish in the App’s Delegate
 5.  Set to **Release mode** and release in AppStore
 6.  Update your privacy policy
-7. Request your account to get verified from Pollfish Dashboard
+7.  Request your account to get verified from Pollfish Dashboard
 
 **or** 
 
@@ -91,6 +91,7 @@ You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapo
 3. Call init and destroy function of Pollfish in the App’s Delegate
 4. Set to **Release mode** and release in AppStore
 5. Update your privacy policy
+6. Request your account to get verified from Pollfish Dashboard
 <br/>
 > **Requirements:** Pollfish framework works with iOS version 7.0 and above.  
 
