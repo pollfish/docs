@@ -241,6 +241,8 @@ After your app is published on an app store you should request your account to g
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/account.png"/>
 <br/>
+
+When your account is verified you will be able to start receiving paid surveys from Pollfish clients.
 <br/>
 
 <br/>
