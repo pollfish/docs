@@ -71,6 +71,7 @@ v4.0.0
 4.  Call init and destroy function of Pollfish in the App’s Delegate
 5.  Set to **Release mode** and release in AppStore
 6.  Update your privacy policy
+7. Request your account to get verified from Pollfish Dashboard
 
 **or** 
 
@@ -356,9 +357,24 @@ In our efforts to include publishers in this process and be as transparent as po
 
 If you know attributes about a user like gender, age and others, you can provide them during initialization as described in section 9 - "Passing user attributes to skip or shorten Pollfish Demographic surveys" and skip or shorten this way, Pollfish Demographic surveys.
 
-<br/>
+
+
 <br/>
 
+### 8\.  Request your account to get verified
+
+After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
+
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/account.png"/>
+<br/>
+
+When your account is verified you will be able to start receiving paid surveys from Pollfish clients.
+<br/>
+
+<br/>
+
+<br/>
 
 
 
@@ -370,7 +386,7 @@ In this section we will list several options that can be used to control Pollfis
 <br/>
 <br/>
 
-### 8\. Handling changes in app’s view hierarchy after intialization (optional)
+### 9\. Handling changes in app’s view hierarchy after intialization (optional)
 
 #### Call of init when changes in your app’s view hierarchy happen during app’s lifecycle or Pollfish is not shown on top view
 
@@ -483,7 +499,7 @@ Note:
 If you still have questions regarding how to handle view hierarchy changes have a look in SampleApp in iOS SDK  
 
 <br/>
-### 9\. Other init methods (optional)
+### 10\. Other init methods (optional)
 
 #### Passing custom parameter for server to server postback calls
 
@@ -607,7 +623,7 @@ an example of user attributes dictionary could be the following one:
     
 ```
 
-### 10\. Manually show or hide Pollfish (optional)
+### 11\. Manually show or hide Pollfish (optional)
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization:  
 
@@ -681,7 +697,7 @@ override func viewWillAppear(animated: Bool)
 ```
 <br/>
 
-### 11\. Update user location (optional)
+### 12\. Update user location (optional)
 
 You can update user’s location anytime after initialization to get better fill rate on surveys by calling the following:  
 
@@ -698,7 +714,7 @@ You can update user’s location anytime after initialization to get better fill
 ```
 <br/>
 
-### 12\. Send beacon information (optional)
+### 13\. Send beacon information (optional)
 
 You can send beacon information if available anytime after initialization to get to be eligible for receiveing beacon surveys by calling the following:  
 
@@ -715,11 +731,11 @@ Pollfish.sendBeaconInfo(beacon: CLBeacon!);
 ```
 <br/>
 
-### 13\.Implement Pollfish event listeners (optional)
+### 14\.Implement Pollfish event listeners (optional)
 
 > **Note:** Pollfish listeners/notifications fire in an asynchronous way. Having said that it's possible that you receive them while being in a background thread and not the main UI thread. If you want to make any prompts or custom changes on the view level when you receive those notifications, please be sure to make them on the main UI thread
 
-### 13.1 Get notified when a survey is received
+### 14.1 Get notified when a survey is received
 
 
 You can be notified when a survey is received via the iOS Notification Center. Note that the observer should be already registered when a survey is received in order to run the selector.  
@@ -790,7 +806,7 @@ func pollfishReceived(notification:NSNotification) {
 }
 ```
 <br/>
-### 13.2 Get notified when survey is completed
+### 14.2 Get notified when survey is completed
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -857,7 +873,7 @@ func pollfishCompleted(notification:NSNotification) {
 ```
 
 <br/>
-### 13.3 Get notified when a user is not eligible for a Pollfish survey
+### 14.3 Get notified when a user is not eligible for a Pollfish survey
 
 
 You can be notified when a user is not eligible for a Pollfish survey after accepting to take it via the iOS Notification Center.  
@@ -889,7 +905,7 @@ func pollfishUsernotEligible()
 ```
 
 <br/>
-### 13.4 Get notified when survey is not available
+### 14.4 Get notified when survey is not available
 
 
 You can be notified when a survey is not available for a user via the iOS Notification Center.  
@@ -921,7 +937,7 @@ func pollfishNotAvailable()
 ```
 
 <br/>
-### 13.5 Get notified when Pollfish is opened
+### 14.5 Get notified when Pollfish is opened
 
 
 You can be notified when a user opens Pollfish survey panel via the iOS Notification Center.  
@@ -953,7 +969,7 @@ func pollfishOpened()
 ```
 
 <br/>
-### 13.6 Get notified when Pollfish is closed
+### 14.6 Get notified when Pollfish is closed
 
 
 You can be notified when a user closes Pollfish survey panel via the iOS Notification Center.  
@@ -985,7 +1001,7 @@ func pollfishClosed()
 ```
 
 <br/>
-### 14\. Check if Pollfish survey is still available on your device (optional)
+### 15\. Check if Pollfish survey is still available on your device (optional)
 
 It happens that time had past since you initialized Pollfish and a survey is received. If you want to check if survey is still avaialble on your device and has not expired you can check by calling:
 
@@ -1003,7 +1019,7 @@ Pollfish.isPollfishPresent()
 
 <br/>
 
-### 15\. Server-to-server callbacks on survey completion (optional)
+### 16\. Server-to-server callbacks on survey completion (optional)
 
 If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
 
