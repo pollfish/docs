@@ -241,7 +241,10 @@ If you know attributes about a user like gender, age and others, you can provide
 
 After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
 
-<img src="hhttps://storage.googleapis.com/pollfish_production/multimedia/account.png"/>
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/account.png"/>
+<br/>
+
 
 ## Optional section
 
