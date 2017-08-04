@@ -70,6 +70,7 @@ v4.0.0
 6. Call Pollfish initialization function in onResume() of your Activity to activate Pollfish
 7. Update your privacy policy
 8. Set to **Release mode** and publish your app at any app store
+9. Request your account to get verified from Pollfish Dashboard
 
 > **Requirements:** Pollfish Android SDK works with Android 10 (2.3.3) and above.  
 
@@ -233,6 +234,14 @@ If you know attributes about a user like gender, age and others, you can provide
 
 <br/>
 <br/>
+
+<br/>
+
+### 9\.  Request your account to get verified
+
+After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
+
+<img src="hhttps://storage.googleapis.com/pollfish_production/multimedia/account.png"/>
 
 ## Optional section
 
