@@ -15,6 +15,8 @@ Pollfish is a mobile monetization platform delivering surveys instead of ads thr
 * Install Pollfish plugin and call init function
 * Set to Release mode and release in Store
 * Update your app's privacy policy
+* Request your account to get verified from Pollfish Dashboard
+
 
 ![alt tag](https://www.pollfish.com/homeassets/images/rocketMobile.png)
 
