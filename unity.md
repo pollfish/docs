@@ -332,11 +332,23 @@ In our efforts to include publishers in this process and be as transparent as po
 If you know attributes about a user like gender, age and others, you can provide them during initialization as described in section 7.2 to skip or shorten Pollfish Demographic surveys.
 
 <br/>
+
+### 7\.  Request your account to get verified
+
+After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
+
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/account.png"/>
 <br/>
 
-### 7\. Other init methods (optional)
+When your account is verified you will be able to start receiving paid surveys from Pollfish clients.
+<br/>
+<br/>
+<br/>
 
-#### 7.1 Passing custom parameter for server to server postback calls
+### 8\. Other init methods (optional)
+
+#### 8.1 Passing custom parameter for server to server postback calls
 
 If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function and receive it back with Server to Server, survey completed postback call you can use:  
 
@@ -346,7 +358,7 @@ void PollfishInitWithRequestUUID(int position, int padding, string developerKey,
 ```
 <br/>
 
-#### 7.2 Passing user attributes to skip or shorten Pollfish Demographic surveys
+#### 8.2 Passing user attributes to skip or shorten Pollfish Demographic surveys
 
 If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
 
