@@ -15,6 +15,7 @@ Pollfish is a mobile monetization platform delivering surveys instead of ads thr
 * Install Pollfish plugin and call init function
 * Set to Release mode and release in Store
 * Update your app's privacy policy
+* Request your account to get verified from Pollfish Dashboard
 
 ![alt tag](https://www.pollfish.com/homeassets/images/rocketMobile.png)
 
@@ -148,6 +149,18 @@ In our efforts to include publishers in this process and be as transparent as po
 
 
 <br/>
+
+### 6\.  Request your account to get verified
+
+After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
+
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/account.png"/>
+<br/>
+
+When your account is verified you will be able to start receiving paid surveys from Pollfish clients.
+<br/>
+<br/>
 <br/>
 
 
@@ -161,7 +174,7 @@ In this section we will list several options that can be used to control Pollfis
 
 
 
-### 6. Handling orientation changes (optional)
+### 7. Handling orientation changes (optional)
 
 If your app supports both orientations you should listen for the orientation event and initialise Pollfish again.
 
@@ -177,7 +190,7 @@ updateOrientation: function () {
 }
 ```
 
-### 7. Handling application entering to foreground (optional)
+### 8. Handling application entering to foreground (optional)
 
 You should handle the event when your app is entering to foreground in order to initialise Pollfish again by listening to the relevant event.
 
@@ -194,9 +207,9 @@ onResume: function () {
 ```
 
 
-### 8. Implement Pollfish event listeners (optional)
+### 9. Implement Pollfish event listeners (optional)
 
-#### 8.1 Get notified when a Pollfish survey is received (optional)
+#### 9.1 Get notified when a Pollfish survey is received (optional)
 
 You can be notified when a Pollfish survey is received.
 
@@ -215,7 +228,7 @@ try{
 }
 ```
 
-#### 8.2 Get notified when a Pollfish survey is completed (optional)
+#### 9.2 Get notified when a Pollfish survey is completed (optional)
 
 You can be notified when a Pollfish survey is completed.
 
@@ -234,7 +247,7 @@ try{
 }
 ```
 
-#### 8.3 Get notified when a user is not eligible for a Pollfish survey (optional)
+#### 9.3 Get notified when a user is not eligible for a Pollfish survey (optional)
 
 You can be notified when a user is not eligible for a Pollfish survey.
 
@@ -250,7 +263,7 @@ userNotEligibleEvent: function(id) {
 }
 ```
 
-#### 8.4 Get notified when a Pollfish survey is not available (optional)
+#### 9.4 Get notified when a Pollfish survey is not available (optional)
 
 You can be notified when a Pollfish survey is not available
 
@@ -266,7 +279,7 @@ surveyNotAvailableEvent: function(id) {
 }
 ```
 
-#### 8.5 Get notified when a Pollfish survey panel is open (optional)
+#### 9.5 Get notified when a Pollfish survey panel is open (optional)
 
 You can be notified when Pollfish survey panel is open
 
@@ -282,7 +295,7 @@ pollfishPanelOpenEvent: function(id) {
 }
 ```
 
-#### 8.6 Get notified when a Pollfish survey panel is closed (optional)
+#### 9.6 Get notified when a Pollfish survey panel is closed (optional)
 
 You can be notified when Pollfish survey panel is closed
 
@@ -298,7 +311,7 @@ pollfishPanelClosedEvent: function(id) {
 }
 ```
 
-### 9. Manually show/hide Pollfish panel (optional)
+### 10. Manually show/hide Pollfish panel (optional)
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization: 
 
@@ -314,7 +327,7 @@ or
 pollfishplugin.hidePollfish();
 ```
 
-### 10. Set user attributes (optional)
+### 11. Set user attributes (optional)
 
 You can set attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys. 
 
