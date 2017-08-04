@@ -3,6 +3,8 @@
 1.  Create the pollfishConfig object to setup Pollfish library
 2.  Include jQuery library to your website (version 1.4.3 and above)
 3.  Include Pollfish library to your website
+4. Request your account to get verified from Pollfish Dashboard
+
 
 Pollfish library works with IE 10 and above, Chrome 16 and above, Firefox 20 and above.
 You can checkout the Pollfish Webplugin experience by visiting this page [here](/webplugin).
@@ -230,4 +232,20 @@ In our efforts to include publishers in this process and be as transparent as po
 
 
 <br/>
+<br/>
+
+
+##  Request your account to get verified
+
+After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
+
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/account.png"/>
+<br/>
+
+When your account is verified you will be able to start receiving paid surveys from Pollfish clients.
+<br/>
+
+<br/>
+
 <br/>
