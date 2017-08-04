@@ -233,9 +233,6 @@ If you know attributes about a user like gender, age and others, you can provide
 
 
 <br/>
-<br/>
-
-<br/>
 
 ### 9\.  Request your account to get verified
 
@@ -244,14 +241,18 @@ After your app is published on an app store you should request your account to g
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/account.png"/>
 <br/>
+<br/>
 
+<br/>
+
+<br/>
 
 ## Optional section
 
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
 
 
-### 9. ParamsBuilder available options (optional)
+### 10. ParamsBuilder available options (optional)
 
 As we have seen in section 7, ParamsBuilder instance requires only one mandatory param, the API key of the app that you acquired at step 2. 
 
@@ -266,21 +267,21 @@ Below you can see all the available options of ParamsBuilder instance. All these
 
 No | Description
 ------------ | -------------
-9.1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator (small red rectangle)
-9.2 | **.requestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
-9.3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to Position of the indicator
-9.4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
-9.5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
-9.6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
-9.7 | **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
-9.8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
-9.9 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
-9.10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
-9.11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
-9.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
-9.13 | **.userProperties(UserProperties userProperties)**  <br/> Send user attributes to skip or shorten Pollfish demographic surveys
+10.1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator (small red rectangle)
+10.2 | **.requestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+10.3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to Position of the indicator
+10.4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
+10.5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
+10.6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
+10.7 | **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
+10.8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
+10.9 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
+10.10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
+10.11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
+10.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
+10.13 | **.userProperties(UserProperties userProperties)**  <br/> Send user attributes to skip or shorten Pollfish demographic surveys
 <br/>
-#### **9.1 .indicatorPosition(int position)**
+#### **10.1 .indicatorPosition(int position)**
 Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish-images/indicator.png)
 
 There are six different options available: 
@@ -302,7 +303,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
-#### **9.2 .requestUUID(String requestUUID)**
+#### **10.2 .requestUUID(String requestUUID)**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
 
@@ -318,7 +319,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
-#### **9.3 .indicatorPadding(int padding)**
+#### **10.3 .indicatorPadding(int padding)**
 
 Sets padding (in dp) of Pollfish indicator, from top or bottom of the screen according to the specified Position of the indicator as described before in 9.1. Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top of the middle of the screen.
 <br/><br/>
@@ -331,7 +332,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
-#### **9.4 .userLayout(ViewGroup userLayout)**
+#### **10.4 .userLayout(ViewGroup userLayout)**
 
 Sets user's View layout that Pollfish surveys will be rendered above it. If Pollfish regular init function affects the UI of your app by creating flings or any other issues you can try passing a view layout of your app that can be used to render above Pollfish surveys
 <br/><br/>
@@ -343,7 +344,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
-#### **9.5 .releaseMode(boolean releaseMode)**
+#### **10.5 .releaseMode(boolean releaseMode)**
 
 Sets Pollfish SDK to Developer or Release mode
 <br/><br/>
@@ -367,7 +368,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
-#### **9.6 .customMode(boolean customMode)**  
+#### **10.6 .customMode(boolean customMode)**  
 
 Initializes Pollfish in custom mode if set to true. By default this is set to false.
 
@@ -388,7 +389,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 ```
 
 <br/>
-#### **9.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
+#### **10.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
 
 Sets a notification listener when a Pollfish Survey is received. With this notification publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
 
@@ -404,7 +405,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **9.8 .pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener  pollfishSurveyNotAvailableListener)**
+#### **10.8 .pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener  pollfishSurveyNotAvailableListener)**
 
 Sets a notification listener when a Pollfish Survey is not available after initialization.
 
@@ -419,7 +420,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **9.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
+#### **10.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
 
 Sets a notification listener when a Pollfish Survey is completed. With this notification, publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
 
@@ -435,7 +436,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **9.10 .pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**
+#### **10.10 .pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**
 
 Sets a notification listener when a user is not eligible for a Pollfish survey. If a user is not eligible for a survey this notification will be fired and publisher will make no money from that survey. User not eligible notification will fire after survey received when user starts completing the survey.
 
@@ -450,7 +451,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **9.11 .pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**
+#### **10.11 .pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**
 
 Sets a notification listener Pollfish survey panel is opened. Publishers usually use this notification to pause a game until Pollfish panel is closed again.
 
@@ -465,7 +466,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **9.12 .pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**
+#### **10.12 .pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**
 
 Sets a notification listener Pollfish survey panel is closed. Publishers usually use this notification to resume a game that they have previously paused when Pollfish panel opened.
 
@@ -480,7 +481,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **9.13 .userProperties(UserProperties userProperties)**
+#### **10.13 .userProperties(UserProperties userProperties)**
 
 If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
 
@@ -525,7 +526,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 ```
 <br/>
 <br/>
-### 10. Handling orientation changes (optional)
+### 11. Handling orientation changes (optional)
 
 If your app supports both orientations and **your Activities are recreated** on each orientation change **you should not do anything more**.  
 
@@ -555,9 +556,9 @@ public void onConfigurationChanged(Configuration newConfig) {
 ```
 <br/>
 <br/>
-### 11. Implement Pollfish event listeners through your Activity (optional)
+### 12. Implement Pollfish event listeners through your Activity (optional)
 
-#### **11.1. Get notified when a Pollfish survey is received**
+#### **12.1. Get notified when a Pollfish survey is received**
 
 You can be notified when a Pollfish survey is received. With this notification publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
 
@@ -582,7 +583,7 @@ public void onPollfishSurveyReceived(boolean playfulSurveys, int surveyPrice) {
 }
 ```
 <br/>
-#### **11.2. Get notified when a Pollfish survey is not available**
+#### **12.2. Get notified when a Pollfish survey is not available**
 
 You can be notified when Pollfish survey is not available. 
 
@@ -601,7 +602,7 @@ public void onPollfishSurveyNotAvailable() {
 }
 ```
 <br/>
-#### **11.3. Get notified when a Pollfish survey is completed**
+#### **12.3. Get notified when a Pollfish survey is completed**
 
 You can be notified when a user completed a survey. With this notification, publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
 
@@ -627,7 +628,7 @@ public void onPollfishSurveyCompleted(boolean playfulSurveys , int surveyPrice) 
 }
 ```
 <br/>
-#### **11.4. Get notified when a user is not eligible for a Pollfish survey**
+#### **12.4. Get notified when a user is not eligible for a Pollfish survey**
 
 You can be notified when a user is not eligible for a Pollfish survey. If a user is not eligible for a survey, this notification will be fired and publisher will make no money from that survey. User not eligible notification will fire after survey received when user starts completing the survey.
 
@@ -653,7 +654,7 @@ public void onUserNotEligible() {
 }
 ```
 <br/>
-#### **11.5. Get notified when Pollfish Survey panel has opened**
+#### **12.5. Get notified when Pollfish Survey panel has opened**
 
 You can be notified when a Pollfish survey panel has opened. Publishers usually use this notification to pause a game until Pollfish panel is closed again.
 
@@ -678,7 +679,7 @@ public void onPollfishOpened () {
 }
 ```
 <br/>
-#### **11.6. Get notified when Pollfish Survey panel has closed**
+#### **12.6. Get notified when Pollfish Survey panel has closed**
 
 You can be notified when a Pollfish survey panel has closed. Publishers usually use this notification to resume a game that they have previously paused when Pollfish panel opened.
 
@@ -705,9 +706,9 @@ public void onPollfishClosed () {
 
 
 <br/>
-### 12. Other actions (optional)
+### 13. Other actions (optional)
 
-#### **12.1. Manually show or hide Pollfish in an Activity**
+#### **13.1. Manually show or hide Pollfish in an Activity**
 
 You can manually show or hide Pollfish indicator or survey panel by calling anywhere in your activity after the initialization line:  
 
@@ -721,7 +722,7 @@ or
 PollFish.hide();
 ```
 
-#### **12.2. Check if Pollfish survey is still available on your device**
+#### **13.2. Check if Pollfish survey is still available on your device**
 
 It happens that time had past since you initialized Pollfish and a survey is received. If you want to check if survey is still avaialble on your device and has not expired you can check by calling:
 
@@ -729,7 +730,7 @@ It happens that time had past since you initialized Pollfish and a survey is rec
 PollFish.isPollfishPresent();
 ```
 <br/><br/>
-### 13. Proguard (optional)
+### 14. Proguard (optional)
 
 If you use proguard with your app, please insert the following line in your proguard configuration file:  
 
@@ -743,7 +744,7 @@ where pollfish-googleplay-4.2.0.jar is the latest pollfish jar you use in your a
 
 | **Note:** Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!
 <br/><br/>
-### 14. Highly targeted surveys (optional)
+### 15. Highly targeted surveys (optional)
 
 If you wish to receive highly targeted surveys in your app and increase your chances for a higher revenue you can include any or all of the following permissions in your AndroidManifest.xml file:  
 
@@ -762,7 +763,7 @@ If you want to be eligible for beacon based surveys for your app you can include
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 ```
 <br/><br/>
-### 15\. Server-to-server callbacks on survey completion (optional)
+### 16\. Server-to-server callbacks on survey completion (optional)
 
 If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
 
