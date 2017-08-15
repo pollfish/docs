@@ -217,6 +217,8 @@ If you have any question, like why you do not see surveys on your own device in 
 
 <br/>
 
+| **Note:** It's important that you include this disclosure both in your privacy policy on your website but also in-app as explicitly requested by [Google's Developer Privacy Policy](https://play.google.com/about/privacy-security/personal-sensitive/)**  
+<br/>
 <table style="border:0 !important;">
 <tr>
 <td><img src="https://storage.googleapis.com/pollfish-images/targeting.png" style="padding:4px"/></td>
