@@ -159,6 +159,10 @@ public void onResume() {
 
 ### 7\.  Update your Privacy Policy
 
+| **Note:** It's important that you include this disclosure both in your privacy policy on your website but also in-app as explicitly requested by [Google's Developer Privacy Policy](https://play.google.com/about/privacy-security/personal-sensitive/)  
+
+<br/>
+
 Add the following paragraph to your app's privacy policy:
 
 *“Survey Serving Technology*  
