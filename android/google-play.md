@@ -193,6 +193,12 @@ public void onResume() {
 
 ### 8\.  Update your Privacy Policy
 
+
+
+| **Note:** It's important that you include this disclosure both in your privacy policy on your website but also in-app as explicitly requested by [Google's Developer Privacy Policy](https://play.google.com/about/privacy-security/personal-sensitive/)**  
+
+<br/>
+
 Add the following paragraph to your app's privacy policy:
 
 *“Survey Serving Technology*  
@@ -215,9 +221,6 @@ If you have any question, like why you do not see surveys on your own device in 
 
 | **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Bear in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this new type of targeting.
 
-<br/>
-
-| **Note:** It's important that you include this disclosure both in your privacy policy on your website but also in-app as explicitly requested by [Google's Developer Privacy Policy](https://play.google.com/about/privacy-security/personal-sensitive/)**  
 <br/>
 <table style="border:0 !important;">
 <tr>
