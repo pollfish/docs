@@ -195,7 +195,7 @@ public void onResume() {
 
 
 
-| **Note:** It's important that you include this disclosure both in your privacy policy on your website but also in-app as explicitly requested by [Google's Developer Privacy Policy](https://play.google.com/about/privacy-security/personal-sensitive/)**  
+| **Note:** It's important that you include this disclosure both in your privacy policy on your website but also in-app as explicitly requested by [Google's Developer Privacy Policy](https://play.google.com/about/privacy-security/personal-sensitive/) **  
 
 <br/>
 
