@@ -232,6 +232,8 @@ In our efforts to include publishers in this process and be as transparent as po
 
 
 <br/>
+You can have a look for some integration tips <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a> or if have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
+
 <br/>
 
 
