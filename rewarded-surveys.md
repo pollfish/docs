@@ -113,6 +113,8 @@ Below, you can see some examples of implementations of the rewarded approach by 
 
 You can always see more examples of implementations at the following blog posts [here](https://www.pollfish.com/blog/2016/05/18/rewarded-surveys-monetize-mobile-apps/) and [here](https://www.pollfish.com/blog/2016/08/03/rewarded-surveys-in-mobile-apps/)
 <br/>
+You can have a look for some integration tips <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a>
+<br/>
 <br/>
 <h1>Sample projects (Show me some code!)</h1>
 
