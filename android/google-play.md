@@ -408,7 +408,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
     @Override
     public void onPollfishSurveyReceived(final boolean playfulSurvey, final int surveyPrice)
     {}
-    });
+    })
 	.build();
 ```
 <br/>
@@ -423,7 +423,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishSurveyNotAvailableListener(new PollfishSurveyNotAvailableListener() {
     @Override
     public void onPollfishSurveyNotAvailable(){}
-    });
+    })
 	.build();
 ```
 <br/>
@@ -439,7 +439,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
     @Override
     public void onPollfishSurveyCompleted(final boolean playfulSurvey, final int surveyPrice)
     {}
-    });
+    })
 	.build();
 ```
 <br/>
@@ -469,7 +469,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishOpenedListener(new PollfishOpenedListener() {
     	@Override
     	public void onPollfishOpened(){}
-    	});
+    	})
 	.build();
 ```
 <br/>
@@ -484,7 +484,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishClosedListener(new PollfishClosedListener() {
     	@Override
     	public void onPollfishClosed(){}
-    	});
+    	})
 	.build();
 ```
 <br/>
@@ -528,7 +528,7 @@ UserProperties userProperties = new UserProperties()
                       .setCustomAttributes("MY_PARAM", "MY_VALUE");
 			    
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
-	.userProperties(userProperties);
+	.userProperties(userProperties)
 	.build();
 ```
 <br/>
