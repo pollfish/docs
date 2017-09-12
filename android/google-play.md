@@ -454,7 +454,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishUserNotEligibleListener(new PollfishUserNotEligibleListener() {
     	@Override
     	public void onUserNotEligible(){}
-    	});
+    	})
 	.build();
 ```
 <br/>
