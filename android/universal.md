@@ -373,7 +373,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
     @Override
     public void onPollfishSurveyReceived(final boolean playfulSurvey, final int surveyPrice)
     {}
-    });
+    })
 	.build();
 ```
 <br/>
@@ -388,7 +388,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishSurveyNotAvailableListener(new PollfishSurveyNotAvailableListener() {
     @Override
     public void onPollfishSurveyNotAvailable(){}
-    });
+    })
 	.build();
 ```
 <br/>
@@ -404,7 +404,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
     @Override
     public void onPollfishSurveyCompleted(final boolean playfulSurvey, final int surveyPrice)
     {}
-    });
+    })
 	.build();
 ```
 <br/>
@@ -419,7 +419,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishUserNotEligibleListener(new PollfishUserNotEligibleListener() {
     	@Override
     	public void onUserNotEligible(){}
-    	});
+    	})
 	.build();
 ```
 <br/>
@@ -434,7 +434,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishOpenedListener(new PollfishOpenedListener() {
     	@Override
     	public void onPollfishOpened(){}
-    	});
+    	})
 	.build();
 ```
 <br/>
@@ -449,7 +449,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishClosedListener(new PollfishClosedListener() {
     	@Override
     	public void onPollfishClosed(){}
-    	});
+    	})
 	.build();
 ```
 <br/>
