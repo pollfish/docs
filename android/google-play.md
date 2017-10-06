@@ -1,4 +1,12 @@
 <div class="changelog" data-version="4.3.3">
+v4.3.4
+
+- drastically decreased sdk footprint
+- improved performance
+- fixed crashing issues on open ended questions
+- fixed memory leaks issue
+- updated Pollfish indicators
+
 v4.3.3
 
 - added support for sending user attributes during init
@@ -110,7 +118,7 @@ otherwise since Google Play Services 8.4.* you can use only Google Play Services
 
 ```java
 dependencies {
-	 compile 'com.google.android.gms:play-services-base:9.6.1'
+	 compile 'com.google.android.gms:play-services-base:11.0.2'
 }
 ```
 
@@ -742,12 +750,12 @@ PollFish.isPollfishPresent();
 If you use proguard with your app, please insert the following line in your proguard configuration file:  
 
 ```java
--libraryjars libs/pollfish-googleplay-4.2.0.jar // not necessary if using Android Studio or .aar library
+-libraryjars libs/pollfish-googleplay-4.3.4.jar // not necessary if using Android Studio or .aar library
 -dontwarn com.pollfish.**
 -keep class com.pollfish.** { *; }
 ```
 
-where pollfish-googleplay-4.2.0.jar is the latest pollfish jar you use in your app and is placed in your libs folder (if you used Pollfish jar file).
+where pollfish-googleplay-4.3.4.jar is the latest pollfish jar you use in your app and is placed in your libs folder (if you used Pollfish jar file).
 
 | **Note:** Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!
 <br/><br/>
