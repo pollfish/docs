@@ -1,6 +1,6 @@
-<div class="changelog" data-version="4.3.3">
+<div class="changelog" data-version="4.3.4">
 v4.3.4
-
+	
 - drastically decreased sdk footprint
 - improved performance
 - fixed crashing issues on open ended questions
