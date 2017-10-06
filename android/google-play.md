@@ -101,7 +101,7 @@ If you are using gradle you can easily add in your dependencies:
 
 ```java
 dependencies {
-	 compile 'com.google.android.gms:play-services:9.6.1'
+	 compile 'com.google.android.gms:play-services:11.0.2'
 }
 ```
 
