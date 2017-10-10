@@ -1,4 +1,13 @@
-<div class="changelog" data-version="4.2.4">
+<div class="changelog" data-version="4.3.4">
+
+v4.3.4
+
+- Deprecated destroy function
+- Added dynamic caching
+- Drastically decreased sdk size
+- Updated Pollfish indicator
+- Improved performance
+- Fixed memory leaks
 
 v4.2.4
 
@@ -68,7 +77,7 @@ v4.0.0
 1.  Download Pollfish iOS SDK and unzip it
 2.  Import pollfish.framework to your project
 3.  Import AdSupport.framework, SystemConfiguration.framework and CoreTelephony.framework to your project
-4.  Call init and destroy function of Pollfish in the App’s Delegate
+4.  Call init function of Pollfish in the App’s Delegate
 5.  Set to **Release mode** and release in AppStore
 6.  Update your privacy policy
 7.  Request your account to get verified from Pollfish Dashboard
@@ -88,7 +97,7 @@ pod 'Pollfish'
 You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapods.org/pods/Pollfish)  
 
 2. Run **pod install** on the command line to install  Pollfish cocoapod.
-3. Call init and destroy function of Pollfish in the App’s Delegate
+3. Call init function of Pollfish in the App’s Delegate
 4. Set to **Release mode** and release in AppStore
 5. Update your privacy policy
 6. Request your account to get verified from Pollfish Dashboard
@@ -286,31 +295,6 @@ func applicationDidBecomeActive(application: UIApplication) {
 }
 ```
 <br/>
-
-### 5.3 Destroying Pollfish
-
-You have to release all the resources Pollfish kept during the termination of your application. This should be done in your application’s delegate applicationWillTerminate method.  
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // ...
-    [Pollfish destroy];
-}
-```
-
-<span style="text-decoration: underline">Swift:</span>
- 
-```
-func applicationWillTerminate(application: UIApplication) 
-{
-    // ...
-     Pollfish.destroy()
-}
-```
-<br/>
 **At this point you are ready to go live! Turn your app to Release mode by setting andDebuggable:false and submit your app to AppStore.**
 <br/><br/>
 ### 6\. Distributing your app to AppStore
@@ -495,7 +479,7 @@ Note:
 
 • Be careful to use the same arguments as the arguments you used in the init function in your app’s delegate.  
 
-• Even if you call init in any ViewController somewhere within the app lifecycle you should still keep the init and destroy function in your App’s Delegate.  
+• Even if you call init in any ViewController somewhere within the app lifecycle you should still keep the init function in your App’s Delegate.  
 
 If you still have questions regarding how to handle view hierarchy changes have a look in SampleApp in iOS SDK  
 
