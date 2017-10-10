@@ -1,4 +1,8 @@
-<div class="changelog" data-version="4.3.6">
+<div class="changelog" data-version="4.3.7">
+v4.3.6
+
+- Updated with Pollfish latest Android & iOS SDK v4.3.4
+
 v4.3.6
 
 - Updated with Pollfish latest iOS SDK v4.2.4 to fix bitcode issue
