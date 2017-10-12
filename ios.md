@@ -8,6 +8,7 @@ v4.3.4
 - Updated Pollfish indicator
 - Improved performance
 - Fixed memory leaks
+- XCode 9 support (required)
 
 v4.2.4
 
