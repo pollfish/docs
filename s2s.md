@@ -51,13 +51,14 @@ You can easily retrieve through every callback how much money were earned in USD
 
 ### 6. Getting notified when a user is not eligible
 
-You can register and receive callbacks when a user was not eligible for a survey. User not eligible in that case means that either the user was screened out from a particular survey or he/she was marked as fraud by our anti-fradu system.
+You can register and receive callbacks when a user was not eligible for a survey. User not eligible in that case means that either the user was screened out from a particular survey or he/she was marked as fraud by our anti-fraud system.
 
 If you want to register and receive not eligible/eligible info in your callbacks please select the checkbox as below (selected by defualt)
 
 <img src="https://storage.googleapis.com/pollfish-images/not_eligible2.png">
 
-Once you select to register for not eligible callbacks, you will need to add "status" in your url. This param will return two values [eligible | noteligible]. 
+Once you select to register for not eligible callbacks, you will need to add "status" in your url. This param will return two values 
+```[eligible | noteligible]``` 
 
 <img src="https://storage.googleapis.com/pollfish-images/not_eligible1.png">
 
