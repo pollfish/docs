@@ -126,7 +126,7 @@ pollfishplugin.initWithRequestUUID (debugMode,customMode,api_key,pos,padding,req
 
 ---
 <br/>
-<img style="margin: 0 auto; display: block;" src="https://pollfish.files.wordpress.com/2016/03/basic_survey.gif"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/basic-format.gif"/>
 <br/>
 
 If you have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
