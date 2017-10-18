@@ -392,7 +392,7 @@ Initializes Pollfish in custom mode if set to true. By default this is set to fa
 *   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
 *   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
 
-![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/202124442/Screen_Shot_2015-10-13_at_11.56.10_AM.png)
+![alt text](https://storage.googleapis.com/pollfish_production/multimedia/dashboard_1.png)
 <br/><br/>
 
 Below you can see an example of setting Pollfish to custom mode with ParamsBuilder object:  
