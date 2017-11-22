@@ -1,4 +1,8 @@
-<div class="changelog" data-version="4.3.4">
+<div class="changelog" data-version="4.3.5">
+v4.3.5
+	
+- added ability to test survey formats in debug mode
+
 v4.3.4
 	
 - drastically decreased sdk footprint
@@ -260,6 +264,7 @@ No | Description
 9.11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
 9.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
 9.13 | **.userProperties(UserProperties userProperties)**  <br/> Send user attributes to skip or shorten Pollfish demographic surveys
+9.14 | **.surveyFormat(SurveyFormat surveyFormat)**  <br/> Requests a specific survey format (only in debug mode)
 <br/>
 #### **9.1 .indicatorPosition(int position)**
 Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
@@ -503,6 +508,36 @@ UserProperties userProperties = new UserProperties()
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.userProperties(userProperties);
 	.build();
+```
+<br/>
+#### **9.14 .surveyFormat(SurveyFormat surveyFormat)**
+
+Explicitly requests a specific survey format.
+
+| **Note:** You can request and receive a specific survey format only in debug mode
+
+
+There are four different options available: 
+
+- SurveyFormat.BASIC 
+- SurveyFormat.PLAYFUL
+- SurveyFormat.THIRD_PARTY
+- SurveyFormat.RANDOM
+
+
+Here is an example of how a user can explicitly request a specific survey format during initialization.
+
+Just import:
+<br/>
+```java
+import com.pollfish.constants.SurveyFormat;
+```
+and specify the survey format you would like to receive in order to test:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+					.surveyFormat(SurveyFormat.PLAYFUL)
+					.build();
 ```
 <br/>
 <br/>
