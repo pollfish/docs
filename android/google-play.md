@@ -545,21 +545,20 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-10.14 | **.surveyFormat(SurveyFormat surveyFormat)**  <br/> Request specific survey format (only in debug mode)
 #### **10.4 .surveyFormat(SurveyFormat surveyFormat)**
 
-Request specific survey format
+Explicitly requests a specific survey format.
 
 | **Note:** You can request and receive a specific survey format only in debug mode
 <br/><br/>
-Here is an example of how a user can explicitly request a specific survey format  during initialization.
+Here is an example of how a user can explicitly request a specific survey format during initialization.
 
 Just import:
 <br/>
 ```java
 import com.pollfish.constants.SurveyFormat;
 ```
-and specify the survey format you would like to receive in order to test
+and specify the survey format you would like to receive in order to test:
 <br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
