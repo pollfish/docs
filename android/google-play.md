@@ -559,7 +559,6 @@ There are four different options available:
 - SurveyFormat.THIRD_PARTY
 - SurveyFormat.RANDOM
 
-<br/>
 
 Here is an example of how a user can explicitly request a specific survey format during initialization.
 
@@ -575,7 +574,6 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.surveyFormat(SurveyFormat.PLAYFUL)
 					.build();
 ```
-<br/>
 <br/>
 <br/>
 ### 11. Handling orientation changes (optional)
