@@ -299,7 +299,7 @@ No | Description
 10.11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
 10.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
 10.13 | **.userProperties(UserProperties userProperties)**  <br/> Send user attributes to skip or shorten Pollfish demographic surveys
-10.14 | **.surveyFormat(SurveyFormat surveyFormat)**  <br/> Request specific survey format (only in debug mode)
+10.14 | **.surveyFormat(SurveyFormat surveyFormat)**  <br/> Requests a specific survey format (only in debug mode)
 <br/>
 #### **10.1 .indicatorPosition(int position)**
 Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
@@ -553,10 +553,13 @@ Request specific survey format
 | **Note:** You can request and receive a specific survey format only in debug mode
 <br/><br/>
 Here is an example of how a user can explicitly request a specific survey format  during initialization.
+
+Just import:
 <br/>
 ```java
 import com.pollfish.constants.SurveyFormat;
 ```
+and specify the survey format you would like to receive in order to test
 <br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
