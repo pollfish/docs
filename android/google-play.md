@@ -550,6 +550,16 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 Explicitly requests a specific survey format.
 
 | **Note:** You can request and receive a specific survey format only in debug mode
+
+
+There are four different options available: 
+
+- SurveyFormat.BASIC 
+- SurveyFormat.PLAYFUL
+- SurveyFormat.THIRD_PARTY
+- SurveyFormat.RANDOM
+
+
 <br/><br/>
 Here is an example of how a user can explicitly request a specific survey format during initialization.
 
