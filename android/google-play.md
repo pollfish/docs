@@ -545,7 +545,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **10.4 .surveyFormat(SurveyFormat surveyFormat)**
+#### **10.14 .surveyFormat(SurveyFormat surveyFormat)**
 
 Explicitly requests a specific survey format.
 
