@@ -558,7 +558,9 @@ There are four different options available:
 - SurveyFormat.PLAYFUL
 - SurveyFormat.THIRD_PARTY
 - SurveyFormat.RANDOM
+
 <br/>
+
 Here is an example of how a user can explicitly request a specific survey format during initialization.
 
 Just import:
