@@ -575,6 +575,8 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
+*In third party surveys when a survey is completed or the user gets screened out, since the user is outside of the app at a website, the next time Pollfish init will be called within the app, survey completed or user not eligible event will be fired (instead of survey received or not available) in order to inform the user on what happened at the website.
+<br/>
 <br/>
 ### 11. Handling orientation changes (optional)
 
