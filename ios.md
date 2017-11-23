@@ -612,9 +612,9 @@ an example of user attributes dictionary could be the following one:
     
 ```
 
-#### Explicitly requesting a specific survey format for testing purposes.
+#### Explicitly requesting a specific survey format for testing purposes
 
-If you want to test Pollfish different available formats you can explicitly request a specific survey format during initialization
+If you want to test Pollfish different available SURVEYS formats you can explicitly request a specific survey format during initialization
 
 | **Note:** You can request and receive a specific survey format only in debug mode
 
@@ -635,8 +635,7 @@ Here is an example of how a user can explicitly request a specific survey format
 	        andCustomMode: (BOOL)
 	       andRequestUUID: (NSString *)
 	    andUserAttributes: (NSMutableDictionary *)
-	    andSurveyFormat: (SurveyFormat *)
-	    ];
+	    andSurveyFormat: (SurveyFormat *)];
 ```
 
 <span style="text-decoration: underline">Swift:</span>
