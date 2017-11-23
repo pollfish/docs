@@ -1,4 +1,7 @@
-<div class="changelog" data-version="4.3.4">
+<div class="changelog" data-version="4.3.5">
+v4.3.5
+
+- Added ability to test survey formats in debug mode
 
 v4.3.4
 
@@ -608,6 +611,53 @@ an example of user attributes dictionary could be the following one:
     userAttributesDictionary.setCustomAttributeWithKey(@"my_param" andValue:@"my_value");
     
 ```
+
+#### Explicitly requesting a specific survey format for testing purposes.
+
+If you want to test Pollfish different available formats you can explicitly request a specific survey format during initialization
+
+| **Note:** You can request and receive a specific survey format only in debug mode
+
+There are four different options available: 
+
+- SurveyFormatBasic
+- SurveyFormatPlayful
+- SurveyFormatRandom
+- SurveyFormatThirdParty
+
+
+Here is an example of how a user can explicitly request a specific survey format during initialization.
+```
+ [Pollfish initAtPosition: (PollfishPosition)
+              withPadding: (int)
+	      andDeveloperKey: (NSString *)
+            andDebuggable: (BOOL) 
+	        andCustomMode: (BOOL)
+	       andRequestUUID: (NSString *)
+	    andUserAttributes: (NSMutableDictionary *)
+	    andSurveyFormat: (SurveyFormat *)
+	    ];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+
+```
+func applicationDidBecomeActive(application: UIApplication) {
+
+   Pollfish.initAtPosition( pos: Int32, 
+       			    withPadding: Int32, 
+       		    andDeveloperKey: String!, 
+       		      andDebuggable: Bool, 
+       		      andCustomMode: Bool
+		     andRequestUUID: String!
+	          andUserAttributes: NSMutableDictionary!
+		  andSurveyFormat: Int32)
+}
+```
+<br/>
+*In third party surveys when a survey is completed or the user gets screened out, since the user is outside of the app at a website, the next time Pollfish init will be called within the app, survey completed or user not eligible event will be fired (instead of survey received or not available) in order to inform the user on what happened at the website.
+<br/>
+
 
 ### 11\. Manually show or hide Pollfish (optional)
 
