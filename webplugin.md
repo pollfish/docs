@@ -62,7 +62,7 @@ var pollfishConfig = {
 5.  <span class="params">survey_format (optional)</span>  
     Works only in debug mode  
     This parameter is used during development to check different types of surveys.
-    Acceptable values are:
+    Acceptable values are (defaults to 0):
     
     - Basic Survey: 0
     - Playful Survey: 1
