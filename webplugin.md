@@ -58,7 +58,16 @@ var pollfishConfig = {
     Set true to enable debug mode (for development), set false to set Pollfish in release mode.  
     Defaults to false
 4.  <span class="params">uuid (optional)</span>  
-    Uuid for callback to your server
+    Uuid for callback to your server  
+5.  <span class="params">survey_format (optional)</span>  
+    Works only in debug mode  
+    This parameter is used during development to check different types of surveys.
+    Acceptable values are:
+    
+    - Basic Survey: 0
+    - Playful Survey: 1
+    - Random: 2
+    - 3rd-party: 3
 
 Below you can see an example of the pollfishConfig object:  
 
