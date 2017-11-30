@@ -228,7 +228,7 @@ var pollfishConfig = {
 };
 ```
 <br/>
-*In 3rd-party surveys when a survey is completed or the user gets screened out, since the user is outside of the website in another browser tab, the next time Pollfish will be called within the website, survey completed or user not eligible event will be fired (instead of survey received or not available) in order to inform the user on what happened at the website.
+*Both in production and during testing 3rd-party surveys when a survey is completed or the user gets screened out, since the user is outside of the website in another browser tab, the next time Pollfish will be called within the website, survey completed or user not eligible event will be fired (instead of survey received or not available) in order to inform the user on what happened at the website.
 <br/>
 
 One way to approach this is to listen for the focus event and call Pollfish.start like in the example below:
@@ -240,6 +240,7 @@ document.querySelector('body').onfocus = function () {
 };
 ```
 
+Another way is to wait for the next session of the user and Pollfish will notify you about those events.
 
 ## Update your Privacy Policy
 
