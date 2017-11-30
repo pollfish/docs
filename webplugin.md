@@ -228,7 +228,7 @@ var pollfishConfig = {
 };
 ```
 <br/>
-*In third party surveys when a survey is completed or the user gets screened out, since the user is outside of the website, the next time Pollfish will be called within the app, survey completed or user not eligible event will be fired (instead of survey received or not available) in order to inform the user on what happened at the website.
+*In 3rd-party surveys when a survey is completed or the user gets screened out, since the user is outside of the website in another browser tab, the next time Pollfish will be called within the website, survey completed or user not eligible event will be fired (instead of survey received or not available) in order to inform the user on what happened at the website.
 <br/>
 
 
