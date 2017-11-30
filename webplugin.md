@@ -211,7 +211,7 @@ _If you call Pollfish.showIndicator or Pollfish.showFullSurvey and there is no a
 Pollfish.hide();
 ```
 
-#### 7\. Explicitly requesting a specific survey format for testing purposes
+#### 7\. Explicitly requesting a specific survey format for testing purposes (works only in debug mode)
 
 If you want to test Pollfish different available Survey Formats you can set survey_format as descibed in Section 3.
 
