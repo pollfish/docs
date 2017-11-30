@@ -53,19 +53,19 @@ var pollfishConfig = {
     The Position where you wish to place the Pollfish indicator.  
     There are four different positions: {TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT}  
     Defaults to BOTTOM_RIGHT
-3.  <span class="params">debug (optional)</span>  
+3.  <span class="params">uuid (optional)</span>  
+    Uuid for callback to your server  
+4.  <span class="params">debug (optional)</span>  
     Sets Pollfish in debug mode  
     Set true to enable debug mode (for development), set false to set Pollfish in release mode.  
     Defaults to false
-4.  <span class="params">uuid (optional)</span>  
-    Uuid for callback to your server  
 5.  <span class="params">survey_format (optional)</span>  
     Works only in debug mode  
-    This parameter is used during development to check different types of surveys.
+    This parameter is used during development to check integration with different survey formats.
     Acceptable values are (defaults to 0):
     
-    - Basic Survey: 0
-    - Playful Survey: 1
+    - Basic: 0
+    - Playful: 1
     - Random: 2
     - 3rd-party: 3
 
@@ -210,6 +210,27 @@ _If you call Pollfish.showIndicator or Pollfish.showFullSurvey and there is no a
 ```js
 Pollfish.hide();
 ```
+
+#### 7\. Explicitly requesting a specific survey format for testing purposes
+
+If you want to test Pollfish different available Survey Formats you can set survey_format as descibed in Section 3.
+
+| **Note:** You can request and receive a specific survey format only in debug mode
+
+Here is an example of how you can select a Playful Survey Format.
+
+```js
+var pollfishConfig = {
+  api_key: "api_key_goes_here",
+  indicator_position: "BOTTOM_RIGHT",
+  debug: true,
+  survey_format: 1
+};
+```
+<br/>
+*In third party surveys when a survey is completed or the user gets screened out, since the user is outside of the website, the next time Pollfish will be called within the app, survey completed or user not eligible event will be fired (instead of survey received or not available) in order to inform the user on what happened at the website.
+<br/>
+
 
 ## Update your Privacy Policy
 
