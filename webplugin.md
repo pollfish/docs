@@ -235,9 +235,9 @@ One way to approach this is to listen for the focus event and call Pollfish.star
 
 ```js
 document.querySelector('body').onfocus = function () {
-        Pollfish.hide();
-        Pollfish.start(pollfishConfig);
-      };
+  Pollfish.hide();
+  Pollfish.start(pollfishConfig);
+};
 ```
 
 
