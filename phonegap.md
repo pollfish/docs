@@ -302,7 +302,7 @@ You can be notified when Pollfish survey panel is closed
 For example:
 
 ```
-pollfishplugin.setEventCallback('onPollfishOpened',app.pollfishPanelClosedEvent);
+pollfishplugin.setEventCallback('onPollfishClosed',app.pollfishPanelClosedEvent);
 ```
 
 ```
