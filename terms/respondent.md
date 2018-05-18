@@ -20,7 +20,9 @@ Pollfish is committed to preserving your privacy and maintains a global Privacy 
 ### 2. WHAT WE DO
 <br />
 Pollfish operates an on-line survey platform, through which a Researcher may conduct surveys. Pollfish collaborates with Developers of applications for smartphones and or website owners, in order to have access to users of such applications/websites and deliver surveys to targeted users.
-<br />
+
+
+
 By registering to Pollfish, a Researcher can create a survey questionnaire and address the survey questionnaires to specific audience segments. The Researcher sets the targeting criteria and Pollfish distributes the surveys to the audience segments which meet the targeting criteria set by the Researcher. In order to identify eligible Survey Respondents whose profile meets the targeting criteria, Pollfish operates its proprietary Database, which consists of Data of members of the audience which may be eligible for a survey. Pollfish distributes the surveys created by the Researcher, collects the survey responses and provides the Researcher with reports which consist of: 
 (a) The Researcher’s survey questions and the responses to such questions
 (b) Certain anonymous statistical and socio-demographic data, as already existing in the Pollfish proprietary Database, pertaining to the statistical and socio-demographic profile of anonymous Survey Respondents who have participated successfully in the Survey Process.
@@ -88,15 +90,20 @@ When a user connects to a mobile application, which cooperates with Pollfish, a 
     
 
 All such data received automatically by Pollfish when you connect to an app which cooperates with Pollfish, are completely anonymous. 
-<br />
+
+
 The aforementioned data are collected by Pollfish under your permission and consent, which has already been granted by you <b>by accepting the app’s terms and conditions/privacy policy provided by the publisher or Pollfish-enabled application owner. </b>
-<br />
+
+
 Under the Pollfish-enabled app’s terms and conditions/privacy policy, the app publisher has informed you and has asked your consent for the collection and use of the aforementioned data by such third parties (including Pollfish) with which the app has opted to cooperate. 
-<br />
+
+
 <b>Please note that, as regards collection of the above data by Pollfish, Pollfish collects such data (and such portion of data) only insofar as, by accepting the app-publisher’s terms of use, you have consented to the collection and processing of such data. If you have blocked collection of such data (or parts of such data) either by withholding consent in the process of accepting the app’s ToS (according to the privacy options provided to you by the operator of the app), or by disabling relevant device settings, Pollfish shall not be able to collect such data. </b>
-<br />
+
+
 The automatically received data/information, as described above, are collected and stored by Pollfish in order for Pollfish to be able to discern whether the user is eligible for a survey offer. The aforementioned “response meta-data” are collected, stored, used and processed by Pollfish, according to the terms of this Policy. 
-<br />
+
+
 Please note that once the user accepts this privacy policy and agrees to participate in a survey, Pollfish may be able to collect, additionally, only in Android, the following data:
 
 *   Connectable networks
@@ -113,7 +120,9 @@ Please note that once the user accepts this privacy policy and agrees to partici
 
 <b>Most of the above data will not be sent/received by Pollfish every time a user accepts this policy and chooses to participate in a survey.</b> Aforementioned data may be collected only if such a collection is necessary in order to meet certain survey parameters and technical survey criteria (e.g if Pollfish needs to micro-target a survey with the help of beacon data (Bluetooth devices), Pollfish may enable retrieval of such data in order to achieve better targeting).
 
+
 <b>If the user who is offered to participate in a survey chooses not to participate, or declines acceptance of this policy, Pollfish will not proceed to any further collection of user data but can at all times use and process already collected response meta-data.</b>
+
 
 By accepting this Privacy Policy, you once more give Pollfish your consent for the processing of data described above (including possible precise location data, if available), according to the terms and conditions of this Privacy Policy. Without prejudice to the foregoing, you hereby, once more, specifically grant your explicit consent, for the collection and processing, by Pollfish, of device information such as your Advertising ID/Advertising Identifier and, where applicable or available, of other Device Identifiers (as described above). You hereby give your explicit consent for the connection of your Advertising Identifier to a previous Identifier or data derived from it. Furthermore, you grant Pollfish your explicit consent for the association of all data and info, which Pollfish collects, stores and processes, to any collected, stored and processed persistent advertising identifier.
 
@@ -147,7 +156,9 @@ Direct Personally Identifiable Data (such as, e-mail address etc) which the user
 
 Pollfish collects, processes and analyzes data and provides its clients with statistical charts, data, info, and tools/options for further analysis, related to the results of a Survey. Correlation/association of all data and info received/deduced by Pollfish during the Survey process and all prior-to Survey/after-Survey processes, are also conducted in order for Pollfish to be able to provide services to its clients. Pollfish may at all times correlate or associate collected response metadata and collected content data with Data voluntarily submitted by the respondent.
 
+
 Pollfish may at all times use, transfer, process, develop and exploit at its sole discretion all elements, data or content included in such Pollfish Databases for any legal, commercial or other purpose.
+
 
 <b>Pollfish does not collect and does not share with any entity whatsoever any sensitive or “special categories of data” including but not limited to financial account numbers, Social Security numbers, pharmaceutical prescriptions or medical records.</b>
 
@@ -155,20 +166,28 @@ Pollfish may at all times use, transfer, process, develop and exploit at its sol
 
 Pollfish is the main recipient of data and Pollfish may share, transfer or license, in whole or in part elements such data to third parties such as our client-researchers, app-publishers or other Pollfish clients (collectively “Clients”). You hereby give your consent for the lawful processing of your data by our Clients, with whom we share such data. We require from our clients to abide by the GDRP and/or the EU-US/SWISS-US privacy shield, in relation to their processing of your data. 
 
+
 Pollfish is a U.S. based company, therefore you understand and consent to the processing of your personal data by us in the U.S. We may also transfer your personal information to other countries outside the United States and make it accessible to our parents, subsidiaries, affiliates and third party service providers and clients internationally.
+
 
 Pollfish may share, transfer or license such data to marketing companies, advertisers or other ad-serving companies who may use (or further sublicense) the data with the purpose of serving advertisements. 
 
+
 Pollfish, does not itself collect (and does not allow third parties to directly collect e.g. via third party cookies), user multi-site or cross-app data through the operation of the Pollfish platform. However, Pollfish may share or license Pollfish-collected data with third entities which, after having received Pollfish data, may themselves associate them with other data (including multi-site data or cross-app data) previously collected/owned by them or licensed to them by other (non-Pollfish and non-Pollfish-affiliated) sources. Such third-party entities, depending on their business scope, may engage in Online Behavioral and Interest based Advertising, allowing advertisers to infer interests and serve ads to users based on their activity and location over time. For the transfer or licensing of Pollfish-collected Data to aforementioned entities (although such transferred/licensed data does not in itself include any cross-app or multi-site data) we require from clients to be compliant: with the DAA (Digital Advertising Alliance) to be found at http://www.aboutads.info/ (as each set of principles may be amended from time to time by the DAA or any successor entity to the DAA, and all interpretations of the DAA’s Self-Regulatory Principles, whether by the DAA itself or by the Council of Better Business Bureaus in an accountability proceeding or otherwise); the NAI self-regulatory principles to be found at http://www.networkadvertising.org/ (as the Code may be amended from time to time by the NAI or any successor entity to the NAI, and all interpretations of the NAI’s Code of Conduct by the NAI itself or any successor entity to the NAI); the Principles of the European Interactive Digital Alliance (“EDAA”), currently available at (http://www.edaa.eu/european-principles/), as each set of principles may be amended from time to time by the EDAA or any successor entity to the EDAA; any other relevant FTC, NAI or DAA code, principles or other guidance relating to the collection and use of data or serving of advertising or other Targeted content in the mobile environment; all United States Federal Trade Commission (“FTC”) rules and guidelines regarding the collection, use or disclosure of information from or about a unique user of a website, application or mobile website and/or the device associated with such user.
 
+
 Please also note that:
+
 
 *   We may work with third-party service providers to provide maintenance services, data analysis, service hosting, and other services for us. These third parties may have access to or process data/information collected by us as part of providing their contracted services to us. Pollfish complies with applicable Data Protection legislation and cooperates with reliable cloud hosting service providers. Pollfish cooperates with such cloud hosting providers who are either located within the E.U. (and therefore are obliged to comply with all EU Data Protection Laws and Regulations) or may be located in the US. In the latter case, US located cloud hosting providers are selected by Pollfish, on grounds of US providers being certified members of the U.S. - EU Privacy Shield companies (https://www.privacyshield.gov/list ).
 *   We may disclose data collected by us (including Direct Personally Identifiable Data, such as e-mail address etc. which the user sends to Pollfish in order to participate in competitions), if required to do so by law or in the good-faith belief that such action is necessary to comply with state and federal laws in response to a court order, judicial or other government subpoena or warrant, or to otherwise cooperate with law enforcement activity or other legal process. We also reserve the right to disclose data collected by us, as we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Pollfish and others from fraudulent, abusive, or unlawful uses or activity; to investigate and defend ourselves against any claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Service and our other property; or to protect the rights, property, or safety of us, our users, or other persons or entities.
 
+
 We use all the data you provide us only for the purposes for which it was provided to us in accordance with the present Terms of Service Agreement and Privacy Policy and we warrant that all the processing operations in which we engage shall be lawful and compliant with the provisions of the GDPR. In particular, taking into account the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for the rights and freedoms of natural persons, we have implemented, by design and by default, appropriate technical and organisational measures to ensure and be able to demonstrate that processing is performed in accordance with the GDPR.
 
+
 We require from all third parties with whom we share your data to agree and warrant that all the processing operations in which they engage shall be lawful and compliant with the provisions of the GDPR (even if not applicable directly by Law to their business) and/or the EU-US/SWISS-US Privacy Shield and any further Data Protection Legislation which may be applicable to their business. We also require that they provide, in particular in terms of expert knowledge, reliability and resources, sufficient guarantees to implement appropriate technical and organisational measures in such a manner that processing will meet the requirements the GDPR (even if not applicable directly by Law to their business) and/or the EU-US/SWISS-US Privacy Shield and ensure the protection of the rights of the data subject.
+
 
 Finally, we use commercially reasonable physical, managerial, and technical safeguards in an effort to preserve the integrity and security of your personal information. All data and responses are transferred via HTTPS/SSL secure channels to ensure the secure exchange of data between the users' devices and Pollfish servers. We cannot, however, ensure or warrant the security of any information you transmit to us, and you do so at your own risk. Once we receive your transmission of personal information, we make commercially reasonable efforts to ensure the security of our systems. Please be aware, however, that this is not a guarantee that such personal information may not be accessed, disclosed, altered, or destroyed by breach of any of our physical, technical, or managerial safeguards. If we learn of a security systems breach, then we will attempt to notify you electronically so that you can take appropriate protective steps. We shall post a notice through the Service if a security breach occurs and we shall notify the personal data breach to the supervisory authority without undue delay and, where feasible, not later than 72 hours after having become aware of it, in case the personal data breach is likely to result in a risk to the rights and freedoms of natural persons.
 
@@ -188,6 +207,7 @@ In your capacity as a data subject whose data is collected and processed by Poll
 
 Please contact us with any questions or comments about this Policy, your personal information, our third-party disclosure practices, or your consent choices by email: support@pollfish.com
 
+
 Pollfish designates as its representative in the EU, who acts on Pollfish’s behalf and who may be addressed by any supervisory authority and be subject to enforcement proceedings in the event of non-compliance with the GDPR by Pollifish, Mr Zissis Bellas, who can be contacted at the following address: gdpr@pollfish.com Pollfish remains fully liable under the GDPR.
 Pollfish appoints as a Data Protection Officer Mr Zissis Bellas, who can be contacted at the following addressgdpr@pollfish.com
 
@@ -199,7 +219,9 @@ Pollfish provides you with a set of tools in order for you to be able to control
 
 <b>Opt-out from interest-based advertising (web environment)</b>
 
+
 You can at all times opt out from interest-based advertising provided by advertising companies which may include Pollfish clients and may be members of the relevant associations by using the following opt out links: 
+
 
 * [http://www.aboutads.info/choices/](http://www.aboutads.info/choices/)
 * [http://www.networkadvertising.org/choices/](http://www.networkadvertising.org/choices/)
@@ -209,7 +231,9 @@ You can at all times opt out from interest-based advertising provided by adverti
 
 By visiting the following address and by submitting your advertising id (in the mobile environment) or your cookie (in the web environment) Pollfish shall stop sending to you any survey forms in the future and shall stop collecting or processing any further data about you. To disable Pollfish operation visit https://www.pollfish.com/respondent/opt-out and follow instructions.
 
+
 <b>Resetting your Advertising Identifier:</b>
+
 
 You can also at all times reset your Advertising identifier from the relevant setting section of your mobile device. If you choose to do so, all data previously collected about the user and associated with the Advertising identifier cannot be correlated or associated with the new Advertising Identifier obtained after the resetting.
 
