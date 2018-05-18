@@ -88,12 +88,12 @@ In order to be entitled to use or continue to use our services, you acknowledge 
 *	You are in compliance with the terms set by this Agreement;
 *	You will regularly review Researcher’s ToS in order to be informed on potential changes
 *	You shall not use the Service to transmit content (including questionnaire content which you have formed through the use of our service) that:
-⋅⋅*	is defamatory, fraudulent, deceptive, racial, abusive, threatening, harassing, pornographic
-⋅⋅*	may infringe intellectual property rights of others such as Copyright, Trademarks, trade secrets, patents or may harm the right of privacy or any other right of any party
-⋅⋅*	Is unlawful or encourages or supports illegal activities
+  *	is defamatory, fraudulent, deceptive, racial, abusive, threatening, harassing, pornographic
+  *	may infringe intellectual property rights of others such as Copyright, Trademarks, trade secrets, patents or may harm the right of privacy or any other right of any party
+  *	Is unlawful or encourages or supports illegal activities
 *	does not respect and is not in accordance with all standing Laws (including data protection and Protection of Privacy laws as well as COPPA)
-⋅⋅*	invades privacy of others
-⋅⋅*	competes with Pollfish’s activity and interests
+  *	invades privacy of others
+  *	competes with Pollfish’s activity and interests
 *	By registering to Pollfish you do not gain control over our software or the application through which the participants participate in our surveys.
 *	Surveys are distributed by Pollfish based on targeting options agreed with you;
 *	You acknowledge that Pollfish may run along with other online advertisement platforms;
