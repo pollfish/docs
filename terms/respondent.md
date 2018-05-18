@@ -85,7 +85,8 @@ When a user connects to a mobile application, which cooperates with Pollfish, a 
     10. Exact time of communication with server
     11. Pollfish api key for the application used
     12. User’s ip address (retrieved when connecting to the server)
-<br />
+    
+
 All such data received automatically by Pollfish when you connect to an app which cooperates with Pollfish, are completely anonymous. 
 <br />
 The aforementioned data are collected by Pollfish under your permission and consent, which has already been granted by you <b>by accepting the app’s terms and conditions/privacy policy provided by the publisher or Pollfish-enabled application owner. </b>
