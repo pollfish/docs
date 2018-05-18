@@ -91,7 +91,7 @@ In order to be entitled to use or continue to use our services, you acknowledge 
     *	is defamatory, fraudulent, deceptive, racial, abusive, threatening, harassing, pornographic
     *	may infringe intellectual property rights of others such as Copyright, Trademarks, trade secrets, patents or may harm the right of privacy or any other right of any party
     *	Is unlawful or encourages or supports illegal activities
-*	does not respect and is not in accordance with all standing Laws (including data protection and Protection of Privacy laws as well as COPPA)
+    *	does not respect and is not in accordance with all standing Laws (including data protection and Protection of Privacy laws as well as COPPA)
     *	invades privacy of others
     *	competes with Pollfish’s activity and interests
 *	By registering to Pollfish you do not gain control over our software or the application through which the participants participate in our surveys.
