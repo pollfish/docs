@@ -164,13 +164,18 @@ You shall specifically provide users of your app all necessary information conce
 
 As a minimum requirement, and in addition to any further (more user-protective) privacy policies you may implement in order to guarantee lawful compliance of your app with the standing Personal Data legislation, you are required to update your app's Privacy policy by including the following sections in your ToU/ToS/Privacy Policy Documents. 
 
-*If you are a mobile application Publisher: *
+*If you are a mobile application Publisher:*
+
 
 “Survey Serving Technology  
 
 This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user’s device data (including Advertising ID and response meta-data is automatically sent, via our app, to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. For a full list of data received by Pollfish through this app, please read carefully the Pollfish respondent terms located at https://www.pollfish.com/terms/respondent. These data will be associated with your answers to the questionnaires whenever Pollfish sends such questionnaires to eligible users. By downloading the application you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link https://www.pollfish.com/respondent/opt-out  We once more invite you to check the Pollfish respondent’s terms of use, if you wish to have more detailed view of the way Pollfish works.   
 APPLE, GOOGLE AND AMAZON ARE NOT A SPONSOR NOR ARE INVOLVED IN ANY WAY IN ANY POLLFISH driven CONTEST/DRAW. NO APPLE PRODUCTS ARE BEING USED AS PRIZES.”
-If you are a website owner: 
+
+
+*If you are a website owner:* 
+
+
 “This website uses Pollfish web plugin. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones and website owners in order to have access to users of such applications/websites and address survey questionnaires to them. This website uses and enables Pollfish cookies. When a user connects to this website, Pollfish detects whether the user is eligible for a survey. Data collected by Pollfish will be associated with your answers to the questionnaires whenever Pollfish sents such questionnaires to eligible users. For a full list of data received by Pollfish through this website, please read carefully Pollfish respondent terms located at [https://www.pollfish.com/terms/respondent](https://www.pollfish.com/terms/respondent). By using this website you accept this privacy policy document and you hereby give your explicit consent for the placement of a Pollfish cookie in your system and the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link [https://www.pollfish.com/respondent/opt-out](https://www.pollfish.com/respondent/opt-out) We once more invite you to check the respondent’s terms of use, if you wish to have more detailed view of the way Pollfish works.
 
 APPLE, GOOGLE AND AMAZON ARE NOT A SPONSOR NOR ARE INVOLVED IN ANY WAY IN ANY POLLFISH driven CONTEST/DRAW. NO APPLE PRODUCTS ARE BEING USED AS PRIZES.”
