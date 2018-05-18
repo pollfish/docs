@@ -12,7 +12,8 @@
 <br />
 Pollfish Inc. (hereinafter “Pollfish”) is a US company seated at 1460 Broadway New York, NY 10036, USA.  Pollfish operates a Greek Branch (hereinafter “the Branch”) located at Pirri 5 Athens, Attica 11527, GR. 
 
-<br />
+
+
 
 Pollfish is committed to preserving your privacy and maintains a global Privacy Statement governing the privacy of information collected by Pollfish and its entities around the world through its websites and by other means. Users of the service that are residents of the European Union can be rest assured that their personal data is treated with utmost care since Pollfish abides by the requirements set forth in the General Data Protection Regulation 2016/679 (hereinafter “GDPR”) with effect from 25 May 2018. Please read the following privacy policy to understand how we use and protect the information obtained from those participating in our surveys (the “surveys”).
 
