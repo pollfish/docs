@@ -385,7 +385,9 @@ appropriate response to any request from a regulator or court for disclosure of 
 
 ### 8. RECORDS OF PROCESSING ACTIVITIES, DELETION OR RETURN OF DATA & AUDIT RIGHTS
 <b>8.1</b> Processor shall appoint persons responsible for the protection of personal data as required by the applicable legislation, keep records of the processing activities under his / her responsibility, cooperate with the competent authorities and set at their disposal such records so that it can use them to monitor the processing operations in question.
+
 <b>8.2</b> At the choice of the Controller and based on his instructions, Processor, after the end of the provision of services relating to processing, shall (a) comply with any other agreement made between the parties concerning the return or destruction of data, or (b) return all personal data passed to the Processor by the Controller for processing, or (c) on receipt of instructions from the Controller, destroy all such data unless prohibited from doing so by any applicable law.
+
 <b>8.3</b> Processor shall make available to Controller all information necessary to demonstrate compliance with the obligations laid down in this Article and allow for and contribute to audits, including inspections, conducted by the controller or another auditor mandated by the Controller.
 
 ### 9. TERM AND TERMINATION
