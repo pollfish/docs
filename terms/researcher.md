@@ -316,4 +316,84 @@ The present Agreement and its interpretation shall be governed by and construed 
 
 Pollfish reserves the right to modify the terms and conditions of the present Agreement or alter or end its Services at any time at its sole discretion. You are responsible for ensuring that you will regularly review the present Agreement. If you choose to continue using Pollfish Services after any modifications to the present terms are made, you will be considered to have fully and unconditionally accepted the aforementioned modifications to this Agreement.
 
+
+### DATA PROCESSING ADDENDUM
+
+
+This Data Processing Addendum (“DPA”) forms indispensable part of the Pollfish ToS Agreement
+
+
+### BACKGROUND
+
+
+If and to the extent that Pollfish shall be deemed Processor of any Researcher Client Personal Data delivered by Researcher Client to Pollfish in the course of this Agreement, and if and to the extent that any Service provided by Pollfish in the course of this Agreement may be deemed or be may be interpreted to include processing of Data on behalf of the Researcher Client, this Data Processing Addendum shall apply.  
+
+
+### 1. DEFINITIONS AND INTERPRETATION
+
+<b>1.1</b> In this Agreement the following words and phrases shall have the following meanings, unless
+inconsistent with the context or as otherwise specified:
+<b>“personal data”</b> shall mean any information relating to a natural person («data subject») from which, directly or indirectly, the said natural person is or can be identified (his identity is verified);
+<b>“processing of personal data”</b> shall mean any operation or set of operations which is performed by the Processor on behalf of the Controller, which takes place with or without automated means, on personal data or on sets of personal data, collection, recording, organisation, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction;
+<b>“sub-processing”</b> shall mean the process by which either party arranges for a third party to carry out its obligations under this Agreement and “Sub Contractor” shall mean the
+party to whom the obligations are subcontracted;
+<b>“Technical and organisational security measures”</b> shall mean means those measures aimed at protecting personal data against accidental or unlawful destruction or accidental loss, alteration, unauthorised disclosure or access, in particular where the processing involves the transmission of data over a network, and against all other unlawful forms of processing, and
+<b>“Instruction”</b> shall means the documented instructions offered by the Controller to the Processor and instruct the latter to perform specific actions regarding personal data. These instructions are initially specified in the MSA and ToU and may from time to time be modified, strengthened or replaced by the controller with separate documented instructions from the controller (personalized instructions).
+
+
+### 2. SECURITY OBLIGATIONS OF THE PROCESSOR
+
+
+<b>2.1</b> The Processor shall only carry out those actions in respect of the personal data processed on behalf of the Controller as are expressly authorised by the Controller. Processor shall immediately inform Controller if, in its opinion, an instruction infringes GDPR.
+<b>2.2</b> Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of Processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, Processor shall implement appropriate technical and organizational measures to ensure a level of security appropriate to that risk, including, as appropriate, the measures referred to in Article 32(1) of the GDPR. In assessing the appropriate level of security, Processor shall take account in particular of the risks that are presented by Processing, in particular from a Personal Data Breach.
+
+
+### 3. CONFIDENTIALITY
+
+
+<b>3.1</b> The Processor agrees that it shall maintain the personal data processed by the Processor on behalf of the Controller in confidence. In particular, the Processor agrees that, save with the prior written consent of the Controller, it shall not disclose any personal data supplied to the Processor by, for, or on behalf of, the Controller to any third party.
+<b>3.2</b> The Processor shall not make any use of any personal data supplied to it by the Controller otherwise than in connection with the provision of services to the Controller.
+<b>3.3</b> The obligations in clauses 4.1 and 4.2 above shall continue for a period of five years after the
+cessation of the provision of services by the Processor to the Controller.
+<b>3.4</b> Nothing in this agreement shall prevent either party from complying with any legal obligation
+imposed by a regulator or court. Both parties shall however, where possible, discuss together the
+appropriate response to any request from a regulator or court for disclosure of information.
+
+
+### 4. SUB-PROCESSING
+
+
+<b>4.1</b> The Processor shall not appoint a sub-processor and shall not subcontract any of its rights or obligations under this Agreement without the prior written consent of the Controller.
+<b>4.2</b> Where the Processor, with the consent of the Controller, appoints a sub-processor and sub-contracts its obligations under this agreement it shall do so only by way of a written agreement with the sub-processor which imposes the same obligations in relation to the security of the processing on the sub-processor as are imposed on the Processor under this Agreement.
+<b>4.3</b> For the avoidance of doubt, where the sub-processor fails to fulfil its obligations under any sub-processing agreement, the Processor shall remain fully liable to the Controller for the fulfilment of its obligations under this Agreement.
+
+
+### 5. DATA-SUBJECT RIGHTS
+
+
+<b>5.1</b> Taking into account the nature of the processing, the Processors shall assist the Controller by implementing appropriate technical and technological measures, insofar as possible, for the fulfillment of the Controller’s obligations to respond to requests to exercise Data Subject rights under the GDPR. Processors shall promptly notify Controller in case it receives a request from a Data Subject under GDPR in respect of personal data. Processor shall not respond to such request except on the documented instructions of Controller or as required by applicable laws to which Processor is subject, in which case Processor shall inform Controller of that legal requirement before Processor responds to Data Subject’s request. 
+
+
+### 6. INTERNATIONAL TRANSFERS
+
+
+<b>6.1</b> Any processing of Data outside the territory of the European Economic Area shall require the prior written consent of Controller and may only be carried out if all legal requirements under Applicable Data Protection Law for such processing are fulfilled. Such measures may include (without limitation) transferring the Data to a recipient in a country that the European Commission has decided provides adequate protection for personal data, to a recipient that has achieved binding corporate rules authorisation in accordance with Applicable Data Protection Law, or to a recipient that has executed standard contractual clauses adopted or approved by the European Commission.
+
+### 7. PERSONAL DATA BREACH, DATA PROTECTION IMPACT ASSESSEMENT AND PRIOR CONSULTATION
+<b>7.1</b> Processor shall notify Controller without undue delay upon it becoming aware of a Personal Data Breach, providing Controller with sufficient information to allow it to meet any obligations to report or inform Data Subjects of the Personal Data Breach. Processor shall cooperate with Controller and take such reasonable commercial steps as are directed by Controller to assist in the investigation, mitigation and remediation of each such Personal Data Breach. 
+<b>7.2</b> Processor shall provide reasonable assistance to Controller with any data protection impact assessments, and prior consultations with Supervising Authorities or other competent data privacy authorities.
+
+### 8. RECORDS OF PROCESSING ACTIVITIES, DELETION OR RETURN OF DATA & AUDIT RIGHTS
+<b>8.1</b> Processor shall appoint persons responsible for the protection of personal data as required by the applicable legislation, keep records of the processing activities under his / her responsibility, cooperate with the competent authorities and set at their disposal such records so that it can use them to monitor the processing operations in question.
+<b>8.2</b> At the choice of the Controller and based on his instructions, Processor, after the end of the provision of services relating to processing, shall (a) comply with any other agreement made between the parties concerning the return or destruction of data, or (b) return all personal data passed to the Processor by the Controller for processing, or (c) on receipt of instructions from the Controller, destroy all such data unless prohibited from doing so by any applicable law.
+<b>8.3</b> Processor shall make available to Controller all information necessary to demonstrate compliance with the obligations laid down in this Article and allow for and contribute to audits, including inspections, conducted by the controller or another auditor mandated by the Controller.
+
+### 9. TERM AND TERMINATION
+<b>9.1</b> This Agreement shall continue in full force and effect for so long as the Processor is processing personal data on behalf of the Controller.
+
+### 10. GOVERNING LAW
+<b>10.1</b> This Agreement shall be governed by and construed in accordance with the national law of the
+country in which the Controller is established.
+
+
 </div>
