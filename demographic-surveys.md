@@ -161,3 +161,34 @@ Below you can find the list of demographic info you can send over along with the
 |  | PREFER_NOT_TO_SAY | 7
 
 If you need to find household income mapping for a specific country you can have a look at the following [link](https://www.pollfish.com/pf/household-income-mapping)
+
+### Server-to-server callbacks for demographics
+
+Publishers can get all the demographic data that we collect from their users via server-to-server callbacks. This feature can be enabled per app by specifying a "Demographics URL" in the app's settings in the Pollfish dashboard.
+
+When this URL is specifed Pollfish will make an HTTP **PUT** request to that URL with a JSON body that contains all demographic information that we currently know about the user.
+
+For example if you specify the following URL template: http://www.example.com?user=[[device_id]] when a user with device_id "ed9111bb-8859-4f55-8bf6-0f7f4a289d7c" answers the demographic questions we will make a PUT request to:
+
+```
+http://www.example.com?user=ed9111bb-8859-4f55-8bf6-0f7f4a289d7c
+```
+
+with an example body:
+
+```
+{
+  "device_id":"ed9111bb-8859-4f55-8bf6-0f7f4a289d7c"
+  "gender":2,
+  "year_of_birth":1980,
+  "marital_status":1,
+  "parental":1,
+  "education":3,
+  "employment":0,
+  "career":13,
+  "race":8,
+  "income":6
+}
+```
+
+Please note that because we will make the request if the user answers all the demographic question or if he/she answers some of the questions and quits the survey you might receive multiple requests for the same user.
