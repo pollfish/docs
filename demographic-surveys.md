@@ -118,7 +118,8 @@ Below you can find the list of demographic info you can send over along with the
 |  | MANUFACTURING_OTHER | 14
 |  | MILITARY | 15
 |  | MINING | 16
-|  | PROCESSING | 18
+|  | PROCESSING | 17
+|  | PUBLISHING | 18
 |  | REAL_ESTATE_RENTAL_OR_LEASING | 19
 |  | RELIGIOUS | 20
 |  | RETAIL | 21
