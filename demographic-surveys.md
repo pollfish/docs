@@ -156,9 +156,9 @@ Below you can find the list of demographic info you can send over along with the
 |  | LOWER_II | 1
 |  | MIDDLE_I | 2
 |  | MIDDLE_II | 3
-|  | HIGHT_I | 4
-|  | HIGHT_II | 5
-|  | HIGHT_III | 6
+|  | HIGH_I | 4
+|  | HIGH_II | 5
+|  | HIGH_III | 6
 |  | PREFER_NOT_TO_SAY | 7
 
 If you need to find household income mapping for a specific country you can have a look at the following [link](https://www.pollfish.com/pf/household-income-mapping)
