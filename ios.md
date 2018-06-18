@@ -829,9 +829,9 @@ You can also get informed about the price and type of survey (playful or not) th
 ```
 
 ```
-func pollfishReceived(notification:NSNotification) {
+func pollfishReceived(_ notification:Notification) {
      
-  let tmp : [NSObject : AnyObject] = notification.userInfo!
+  let tmp : [AnyHashable: Any] = notification.userInfo!
         
   let playfulSurvey = tmp["playfulSurvey"]! as! Bool
   let surveyPrice = tmp["surveyPrice"]!
@@ -895,9 +895,9 @@ You can also get informed about the price and type of survey (playful or not) th
 ```
 
 ```
-func pollfishCompleted(notification:NSNotification) {
+func pollfishCompleted(_ notification:Notification) {
      
-  let tmp : [NSObject : AnyObject] = notification.userInfo!
+  let tmp : [AnyHashable: Any] = notification.userInfo!
         
   let playfulSurvey = tmp["playfulSurvey"]! as! Bool
   let surveyPrice = tmp["surveyPrice"]!
