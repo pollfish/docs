@@ -179,7 +179,7 @@ with an example body:
 
 ```
 {
-  "device_id":"ed9111bb-8859-4f55-8bf6-0f7f4a289d7c"
+  "device_id":"ed9111bb-8859-4f55-8bf6-0f7f4a289d7c",
   "gender":2,
   "year_of_birth":1980,
   "marital_status":1,
