@@ -25,13 +25,13 @@ You can test server-to-server callbacks in developer mode. On every survey compl
 For example the following URL template:
 
 ```
-http://www.example.com/pollfish/[[template_uuid]]?cpa=[[cpa]]
+http://www.example.com/pollfish/[[request_uuid]]?cpa=[[cpa]]
 ```
 
 could produce a URL in developer mode like the following:
 
 ```
-http://www.example.com/pollfish/CPMdQdgAzHoL6360iXY5qLp%2F19s%3D?cpa=30&debug=true
+http://www.example.com/pollfish/CPMdQdgAzHoL6360iXY5qLp?cpa=30&debug=true
 ```
 
 ### 3. Uniquely identifying a survey completion (avoiding duplicates)
