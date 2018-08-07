@@ -69,7 +69,7 @@ In case a transaction is rejected, irrespectively of the reason of the rejection
 
 
 In order to access the Pollfish Service you are requested to accept and conform to the present terms of Service Agreement (“the Researchers’ ToS”, “these ToS” or “This Agreement”) otherwise you will not have access to our Services.
-Pollfish reserves the right to modify the terms and conditions of the present Researchers’ ToS. You are responsible for ensuring that you will regularly review the Researchers’ ToS. If you choose to continue using Pollfish Services after any modifications to the present terms are made, you will be considered to have fully and unconditionally accepted the aforementioned modifications to this Agreement.
+Pollfish reserves the right to modify the terms and conditions of the present Researchers’ ToS. Pollfish will notify Subscribers of any change in the Terms, by a newsletter sent to the registered email of the subscriber. If you choose to continue using Pollfish Services after any modifications to the present terms are made, you will be considered to have fully and unconditionally accepted the aforementioned modifications to this Agreement.
 
 ### 4. REGISTRATION
 
@@ -86,7 +86,6 @@ In order to be entitled to use or continue to use our services, you acknowledge 
 
 *	You have the authority to enter and perform obligations. The services provided by Pollfish are not available to any person without capacity to exercise legal rights or any Researcher disqualified from the system by Pollfish for any reason whatsoever;
 *	You are in compliance with the terms set by this Agreement;
-*	You will regularly review Researcher’s ToS in order to be informed on potential changes
 *	You shall not use the Service to transmit content (including questionnaire content which you have formed through the use of our service) that:
     *	is defamatory, fraudulent, deceptive, racial, abusive, threatening, harassing, pornographic
     *	may infringe intellectual property rights of others such as Copyright, Trademarks, trade secrets, patents or may harm the right of privacy or any other right of any party
