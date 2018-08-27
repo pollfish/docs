@@ -105,7 +105,7 @@ Through CocoaPods:
 1.  Add a Podfile with Pollfish framework as a pod reference:
 
 ```
-platform :ios, '7.0'
+platform :ios, '9.0'
 pod 'Pollfish'
 ```
 
