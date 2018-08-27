@@ -1,4 +1,12 @@
-<div class="changelog" data-version="4.3.5">
+<div class="changelog" data-version="4.4.0">
+v4.4.0
+
+- Added support for iOS 12
+- New iOS minimum is 9.0
+- Added the abilioty to render surveys from Mediation within the app
+- Improved performance
+- Added notification for user rejecting a survey
+
 v4.3.5
 
 - Added ability to test survey formats in debug mode
@@ -80,7 +88,7 @@ v4.0.0
 
 1.  Download Pollfish iOS SDK and unzip it
 2.  Import pollfish.framework to your project
-3.  Import AdSupport.framework, SystemConfiguration.framework and CoreTelephony.framework to your project
+3.  Import AdSupport.framework, SystemConfiguration.framework and CoreTelephony.framework, WebKit.framework to your project
 4.  Call init function of Pollfish in the App’s Delegate
 5.  Set to **Release mode** and release in AppStore
 6.  Update your privacy policy
@@ -134,6 +142,7 @@ The project will appear at the top of the Link Binary With Libraries section and
 - AdSupport.framework  
 - CoreTelephony.framework
 - SystemConfiguration.framework 
+- WebKit.framework (added in Pollfish v4.4.0)
 
 **Note: If your deployment target is less than iOS 7.0, change the AdSupport.framework from Required to Optional.**
 
@@ -144,7 +153,7 @@ The project will appear at the top of the Link Binary With Libraries section and
 Add a Podfile with Pollfish framework as a pod reference:
 
 ```
-platform :ios, '7.0'
+platform :ios, '9.0'
 pod 'Pollfish'
 ```
 
@@ -653,9 +662,6 @@ func applicationDidBecomeActive(application: UIApplication) {
 		  andSurveyFormat: Int32)
 }
 ```
-<br/>
-*In third party surveys when a survey is completed or the user gets screened out, since the user is outside of the app at a website, the next time Pollfish init will be called within the app, survey completed or user not eligible event will be fired (instead of survey received or not available) in order to inform the user on what happened at the website.
-<br/>
 
 
 ### 11\. Manually show or hide Pollfish (optional)
@@ -1036,6 +1042,40 @@ func pollfishClosed()
 ```
 
 <br/>
+
+### 14.7 Get notified when a user rejected a survey (added in Pollfish v4.4.0)
+
+
+You can be notified when a user rejected a survey via the iOS Notification Center.  
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishUserRejectedSurvey) name:@"PollfishUserRejectedSurvey" object:nil];
+```
+
+```
+- (void)pollfishUserRejectedSurvey
+{
+    NSLog(@"Pollfish User Rejected Survey");
+}
+```
+
+<span style="text-decoration: underline">Swift:</span>
+
+```
+NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishUserRejectedSurvey), name:"PollfishUserRejectedSurvey", object: nil)
+```
+
+```
+func pollfishUserRejectedSurvey() 
+{
+     print("Pollfish User Rejected Survey")
+}
+```
+
+<br/>
+
 ### 15\. Check if Pollfish survey is still available on your device (optional)
 
 It happens that time had past since you initialized Pollfish and a survey is received. If you want to check if survey is still avaialble on your device and has not expired you can check by calling:
