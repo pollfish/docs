@@ -117,7 +117,7 @@ You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapo
 5. Update your privacy policy
 6. Request your account to get verified from Pollfish Dashboard
 <br/>
-> **Requirements:** Pollfish framework works with iOS version 7.0 and above and XCode9.  
+> **Requirements:** Pollfish framework works with iOS version 9.0 and above and XCode9.  
 
 <br/><br/>
 
