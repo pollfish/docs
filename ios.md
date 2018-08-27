@@ -3,9 +3,12 @@ v4.4.0
 
 - Added support for iOS 12
 - New iOS minimum is 9.0
+- Added dependency on WebKit.framework
 - Added the abilioty to render surveys from Mediation within the app
-- Improved performance
 - Added notification for user rejecting a survey
+- Improved performance
+- Fixed bugs
+
 
 v4.3.5
 
