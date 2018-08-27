@@ -91,7 +91,7 @@ v4.0.0
 
 1.  Download Pollfish iOS SDK and unzip it
 2.  Import pollfish.framework to your project
-3.  Import AdSupport.framework, SystemConfiguration.framework and CoreTelephony.framework, WebKit.framework to your project
+3.  Import AdSupport.framework, SystemConfiguration.framework, WebKit.framework and CoreTelephony.framework to your project
 4.  Call init function of Pollfish in the App’s Delegate
 5.  Set to **Release mode** and release in AppStore
 6.  Update your privacy policy
