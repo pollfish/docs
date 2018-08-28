@@ -155,7 +155,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  compile 'com.pollfish:pollfish:+:googleplayRelease@aar'
+  implementation 'com.pollfish:pollfish:+:googleplayRelease@aar'
 }
 ```
 
