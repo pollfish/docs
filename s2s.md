@@ -135,7 +135,7 @@ We only sign the values that are substituted using the parameters placeholders (
 https://www.example.com?request_uuid=[[request_uuid]]&tx_id=[[tx_id]]&signature=[[signature]]&bundle_id=com.domain.app&source=pollfish
 ```
 
-Your secret_key is an auto-generated key by Pollfish that serves as a shared secret between the publisher and Pollfish. You can find out more about your secret_key at the [Account Information](//www.pollfish.com/dashboard/account) page.
+Your secret_key is an auto-generated key by Pollfish that serves as a shared secret between the publisher and Pollfish. You can find out more about your secret_key at the [Account Information](//www.pollfish.com/dashboard/dev/account/information) page.
 
 To sign the parameters they are assembled in alphabetical order using the parameter placeholder names in a string by concatenating them using the colon ':' character. For example if you have the follwing URL template:
 
