@@ -1,4 +1,11 @@
-<div class="changelog" data-version="4.3.5">
+<div class="changelog" data-version="4.4.0">
+v4.4.0
+	
+- Added the ability to render surveys from Mediation within the app
+- Added notification for user rejecting a survey
+- Improved performance
+- Fixed bugs
+
 v4.3.5
 	
 - added ability to test survey formats in debug mode
@@ -105,7 +112,7 @@ If you are using gradle you can easily add in your dependencies:
 
 ```java
 dependencies {
-	 compile 'com.google.android.gms:play-services:11.0.2'
+	 implementation 'com.google.android.gms:play-services:11.0.2'
 }
 ```
 
@@ -115,14 +122,14 @@ If you are using Google Play Services 8.3.* and less you can use:
 
 ```java
 dependencies {
-	 compile 'com.google.android.gms:play-services-ads:8.3.0'
+	 implementation 'com.google.android.gms:play-services-ads:8.3.0'
 }
 ```
 otherwise since Google Play Services 8.4.* you can use only Google Play Services Base Client library. For example:
 
 ```java
 dependencies {
-	 compile 'com.google.android.gms:play-services-base:11.0.2'
+	 implementation 'com.google.android.gms:play-services-base:11.0.2'
 }
 ```
 
@@ -296,10 +303,11 @@ No | Description
 10.8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
 10.9 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
 10.10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
-10.11 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
-10.12 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
-10.13 | **.userProperties(UserProperties userProperties)**  <br/> Send user attributes to skip or shorten Pollfish demographic surveys
-10.14 | **.surveyFormat(SurveyFormat surveyFormat)**  <br/> Requests a specific survey format (only in debug mode)
+10.11 | **.pollfishUserRejectedSurveyListener(PollfishUserRejectedSurveyListener pollfishUserRejectedSurveyListener)**  <br/> Sets a notification listener when a user rejects a survey
+10.12 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
+10.13 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
+10.14 | **.userProperties(UserProperties userProperties)**  <br/> Send user attributes to skip or shorten Pollfish demographic surveys
+10.15 | **.surveyFormat(SurveyFormat surveyFormat)**  <br/> Requests a specific survey format (only in debug mode)
 <br/>
 #### **10.1 .indicatorPosition(int position)**
 Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
@@ -471,7 +479,22 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **10.11 .pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**
+#### **10.11 .pollfishUserRejectedSurveyListener(PollfishUserRejectedSurveyListener pollfishUserRejectedSurveyListener)**
+
+Sets a notification listener when a user rejects a survey. If a user decides to reject a survey this notification will be fired and publisher will make no money from that survey. 
+
+Below you can see an example of how you can register and listen within your code to Pollfish user rejected survey notification:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+	.pollfishUserRejectedSurveyListener(new PollfishUserRejectedSurveyListener() {
+    	@Override
+    	public void onUserRejectedSurvey(){}
+    	})
+	.build();
+```
+<br/>
+#### **10.12 .pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**
 
 Sets a notification listener Pollfish survey panel is opened. Publishers usually use this notification to pause a game until Pollfish panel is closed again.
 
@@ -486,7 +509,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **10.12 .pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**
+#### **10.13 .pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**
 
 Sets a notification listener Pollfish survey panel is closed. Publishers usually use this notification to resume a game that they have previously paused when Pollfish panel opened.
 
@@ -501,7 +524,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **10.13 .userProperties(UserProperties userProperties)**
+#### **10.14 .userProperties(UserProperties userProperties)**
 
 If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
 
@@ -545,7 +568,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **10.14 .surveyFormat(SurveyFormat surveyFormat)**
+#### **10.15 .surveyFormat(SurveyFormat surveyFormat)**
 
 Explicitly requests a specific survey format.
 
