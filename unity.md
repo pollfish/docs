@@ -115,9 +115,7 @@ Imported files will be listed in the following directories:
 
 **If you target iOS** ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
-* **mod_pbproj.pyc, PostprocessBuildPlayer and PostprocessBuildPlayer_Pollfish and PollfishBuildPostprocessor.cs** are used to automatically add Pollfish necessary frameworks in your XCode project (if frameworks  show up in red color in your XCode project, ignore that and build). If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
-
-> **Note:** Be careful to replace your previous project when you build for iOS otherwise frameworks will be added more than once if you choose to append.
+* **PollfishBuildPostprocessor.cs** IS used to automatically add Pollfish necessary frameworks in your XCode project. If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
 
 </div>
 
@@ -191,8 +189,6 @@ void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, b
 
 *   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
 *   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
-
-![alt text](https://storage.googleapis.com/pollfish_production/multimedia/dashboard_1.png)
 
 <br/><br/>
 
