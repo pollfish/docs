@@ -1,4 +1,11 @@
 <div class="changelog" data-version="4.3.7">
+v4.4.0
+
+- Added support for Unity 2018
+- Updated with Pollfish latest Android & iOS SDK v4.4.0
+- Added user rejected event
+- Fixed bugs
+
 v4.3.6
 
 - Updated with Pollfish latest Android & iOS SDK v4.3.4
@@ -90,7 +97,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 ### Import Pollfish unity package
 
-*   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose **Import Package**, then **Custom Package** and finally select **PollfishUnityPugin.unitypackage**
+*   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose **Import Package**, then **Custom Package** and finally select **PollfishUnityPlugin.unitypackage**
 
     ![](/homeassets/images/documentation/unity/unity1.png)
 *   If you want to exlude demo scene please uncheck **Assets/Plugins/Pollfish/demo** folder. Have in mind that in demo folder you will find **PollfishDemo.cs file** that demonstrates Pollfish Unity Plugin usage within a scene.
@@ -123,7 +130,7 @@ Imported files will be listed in the following directories:
 
 > **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can easily do that by selecting **Assets –> Play Services Resolver -> Android Resolver -> Resolve Client Jars**. If you do not have Google Play Services you can install them through Android SDK Manager.
 
-![alt text](https://storage.googleapis.com/pollfish-images/android_resolver.png)
+![alt text](https://storage.googleapis.com/pollfish_production/doc_images/services.png)
 
 or
 
