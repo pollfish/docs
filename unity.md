@@ -1,4 +1,4 @@
-<div class="changelog" data-version="4.3.7">
+<div class="changelog" data-version="4.4.0">
 v4.4.0
 
 - Added support for Unity 2018
