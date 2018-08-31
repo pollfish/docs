@@ -31,3 +31,14 @@ Pollfish Surveys are provided by Pollfish clients and are generated through Poll
 
 * <b>Basic Surveys</b> are usually surveys with 8-12 questions that pay minimum $0.30 per completed survey. This price can go up to several dollars depending on how much we get
 
+<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish-images/incentivized1.gif" width="200" height="auto"/>
+</p>
+
+* <b>Playful Surveys are small one-pager image question surveys (3-4 questions) that have a fluctuating price. On average they pay around $0.11 per completed. The interesting thing with this survey format is that when a user answers a question he can see what other people answered. A lot of people answer questions just to see what other people said and this increases conversion rates and eventually, the money a publisher makes.</b>
+
+<h3>Other Providers</h3>
+
+Surveys from different survey providers can be found on Pollfish mediation stack. All those surveys are rendered within the apps for the SDK integrations of Pollfish while for web plugin and API integration they are rendered outside of the app in a browser. There is full transparency to the respondents on the survey provider of each survey. 
+
+Surveys from mediation providers pay minimum $0.30 per completed survey and the payouts can end up to $3 to $4.
+
