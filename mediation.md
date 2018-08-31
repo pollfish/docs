@@ -47,6 +47,9 @@ Surveys from different survey providers can be found on Pollfish mediation stack
 Surveys from mediation providers pay minimum $0.30 per completed survey and the payouts can end up to $3 to $4.
 
 
+<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/mediation.gif" width="200" height="auto"/>
+</p>
+
 <h3> <img src="https://storage.googleapis.com/pollfish_production/random/lucid.png" width="100" height="auto"/></h3>
 
 Lucid introduced the first global marketplace for market research sample in 2011 and brought programmatic buying and selling to the market research industry. Lucid surveys come from a variety of clients that they provide the survey links from the tools that they have build them on, within the marketplace. Lucid is based in New Orleans, Louisiana, with offices in London and Gurgaon. It is considered  at the moment the biggest survey provider on the mediation in terms of volume. End clients see the client-fencing logo of Lucid when they answer a survey that is called Samplicio.us
