@@ -25,7 +25,7 @@ Publishers can log-in to their Dashboard and review their revenue  and performan
 
 Below you can see a list of the survey providers providing surveys on Pollfish Mediation platform.
 
-<h3>Pollfish Surveys</h3><imgsrc="https://s3.amazonaws.com/pf.mobile/img/pollfishlogo.png" width="40" height="auto"/>
+<h3>Pollfish Surveys</h3><img src="https://s3.amazonaws.com/pf.mobile/img/pollfishlogo.png" width="40" height="auto"/>
 
 Pollfish Surveys are provided by Pollfish clients and are generated through Pollfish DIY survey tool. There are two types of Pollfish Surveys, Basic Surveys and Playful Surveys.  Pollfish surveys have a unique interactive experience designed around mobile and are enabled by default on the platform. They have a premium position on Pollfish mediation stack.
 
