@@ -20,3 +20,14 @@ Publishers can log in to their Pollfish Dashboard and enable or disable any surv
 Publishers can log-in to their Dashboard and review their revenue  and performance reports per mediation network. 
 
 <p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/revenue.png" />
+  
+<h2>Mediation Networks</h2>
+
+Below you can see a list of the survey providers providing surveys on Pollfish Mediation platform.
+
+<h3>Pollfish Surveys</h3>
+
+Pollfish Surveys are provided by Pollfish clients and are generated through Pollfish DIY survey tool. There are two types of Pollfish Surveys, Basic Surveys and Playful Surveys.  Pollfish surveys have a unique interactive experience designed around mobile and are enabled by default on the platform. They have a premium position on Pollfish mediation stack.
+
+* <b>Basic Surveys</b> are usually surveys with 8-12 questions that pay minimum $0.30 per completed survey. This price can go up to several dollars depending on how much we get
+
