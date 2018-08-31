@@ -54,23 +54,13 @@ Surveys from mediation providers pay minimum $0.30 per completed survey and the 
 
 Lucid introduced the first global marketplace for market research sample in 2011 and brought programmatic buying and selling to the market research industry. Lucid surveys come from a variety of clients that they provide the survey links from the tools that they have build them on, within the marketplace. Lucid is based in New Orleans, Louisiana, with offices in London and Gurgaon. It is considered  at the moment the biggest survey provider on the mediation in terms of volume. End clients see the client-fencing logo of Lucid when they answer a survey that is called Samplicio.us
 
-<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/samplicious.png" width="200" height="auto"/>
-</p>
-
 <h3> <img src="https://s3.amazonaws.com/pf.mobile/img/cint.png" width="100" height="auto"/></h3>
 
 Cint is an online insights exchange platform that connects community owners to researchers, agencies and brands, for the sharing and accessing of consumer data. Cint was founded in 1998 in Stockholm, Sweden, and maintains one of world’s largest insights exchange platform.
 
-<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/cint.png" width="200" height="auto"/>
-</p>
-
-
 <h3> <img src="https://s3.amazonaws.com/pf.mobile/img/toluna.png" width="100" height="auto"/></h3>
 
 Toluna is a global real time consumers platform. Toluna QuickSurveys is an innovative online tool that allows clients to create and launch surveys easily and cost-effectively. The company has 24 offices globally spanning Europe, North America, South America, Asia Pacific, and MENA.
-
-<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/toluna3.png" width="200" height="auto"/>
-</p>
 
 <h3> <img src="https://s3.amazonaws.com/pf.mobile/img/innovatemr.png" width="100" height="auto"/></h3>
 
