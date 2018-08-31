@@ -59,6 +59,9 @@ Lucid introduced the first global marketplace for market research sample in 2011
 Cint is an online insights exchange platform that connects community owners to researchers, agencies and brands, for the sharing and accessing of consumer data. Cint was founded in 1998 in Stockholm, Sweden, and maintains one of world’s largest insights exchange platform.
 
 
+<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/toluna3.png" width="200" height="auto"/>
+</p>
+
 <h3> <img src="https://s3.amazonaws.com/pf.mobile/img/toluna.png" width="100" height="auto"/></h3>
 
 Toluna is a global real time consumers platform. Toluna QuickSurveys is an innovative online tool that allows clients to create and launch surveys easily and cost-effectively. The company has 24 offices globally spanning Europe, North America, South America, Asia Pacific, and MENA.
