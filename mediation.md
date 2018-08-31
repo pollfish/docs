@@ -11,7 +11,7 @@ Pollfish internal mediation algorithm optimizes to distribute the best convertin
 
 Publishers can log in to their Pollfish Dashboard and enable or disable any survey provider that they do not like through their apps without the need for any changes in code. Mediation settings are applied per app.
 
-<p align="center"><img style="margin: 0 auto;" src="https://storage.googleapis.com/pollfish_production/random/med_settings.png" />
+<p align="center"><img style="margin: 0 auto;" src="https://storage.googleapis.com/pollfish_production/random/med_settings.png" width="500" height="auto"/>
 </p>
 
 <br/>
