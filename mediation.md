@@ -11,10 +11,12 @@ Pollfish internal mediation algorithm optimizes to distribute the best convertin
 
 Publishers can log in to their Pollfish Dashboard and enable or disable any survey provider that they do not like through their apps without the need for any changes in code. Mediation settings are applied per app.
 
-<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish-images/incentivized1.gif" width="200" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/revenue.png" width="200" height="auto"/>
 </p>
 
 <br/>
 <h2>Mediation Revenue & Performance</h2>
 
 Publishers can log-in to their Dashboard and review their revenue  and performance reports per mediation network. 
+
+<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/revenue.png" />
