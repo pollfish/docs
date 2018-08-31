@@ -19,7 +19,7 @@ Publishers can log in to their Pollfish Dashboard and enable or disable any surv
 
 Publishers can log-in to their Dashboard and review their revenue  and performance reports per mediation network. 
 
-<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/revenue.png" />
+<p align="center"><img style="margin: 0 auto;" src="https://storage.googleapis.com/pollfish_production/random/revenue.png" />
   
 <h2>Mediation Networks</h2>
 
