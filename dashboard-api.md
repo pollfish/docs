@@ -102,7 +102,7 @@ information
 |6  | callback_url | string | The URL for server-to-server callbacks | No
 |7  | behavior | number | Just indicators: 0, Dynamic (Recommended): 1, Force slide regularly: 2, Force all the time: 3 | No
 |8  | data_collection_surveys_enabled | boolean | Whether the apps should receive data collection surveys | No
-|9  | third_party_surveys_enabled | boolean | Whether the app should receive third party surveys | No                                            No
+|9  | third_party_surveys_enabled | boolean | Whether the app should receive third party surveys | No
 
 ### Server Response
 
