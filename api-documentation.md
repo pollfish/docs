@@ -335,13 +335,12 @@ have the persona, else do not specify a value for the field.
 
 ### Example Requests
 
-```
-// example request
-https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"debug\":\"true\"}&dontencrypt=true
-```
+Example request
 
-```
-// Example request (with user attributes)
+https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"debug\":\"true\"}&dontencrypt=true
+
+
+Example request ( with user attributes ) 
 
 https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"email\":
 \"user@[example.com](http://example.com/)\",\"year\_of\_birth\":
@@ -349,7 +348,6 @@ https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4
 \"0\",\"education\": \"2\",\"race\": \"0\",\"twitter\_id\":
 \"916809126\",\"personas\": {\"gamer\":
 \"true\"},\"debug\":\"true\"}&dontencrypt=true
-```
 
 *\* Notice that you might need to change the timestamp to current values
 for the links above to operate properly.*
