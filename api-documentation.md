@@ -62,7 +62,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 
 
 ### JSON Parameters
-{:.foo}
+
 |   | Name | Type  | Description                       | Value     | Static   |  Required
 |---|:-----|:-----------|:-----------------------------|:----------|:---------|:-----------
 |1  | **api_key** | String     | Pollfish API Key (step 2) |           | No       | Yes
@@ -133,7 +133,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 **Demographics**
 <table>
   <tr>
-    <td>:bar_chart:</td>
+    <td><span class="demographics">•</span></td>
     <td>Parameters from #48 to #56 are used in demographic surveys. If you already know this information you can provide them during register call and minimize or avoid demographic surveys.</td>
   </tr>
 </table>
