@@ -65,69 +65,69 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 
 |   | Name | Type  | Description                       | Value     | Static   |  Required
 |---|:-----|:-----------|:-----------------------------|:----------|:---------|:-----------
-|1  | api_key | String     | Pollfish API Key (step 2) |           | No       | Yes
-|2  | debug | Boolean | Run Pollfish in Developer or Release mode | true \| false ( defaults to false ) | No | Yes
-|3  | ip | string | IP of user’s device  | | No | Yes
-|4  | device_id | String | Advertising Identifier  (IDFA or Advertising ID)| | No | Yes
-|5  | timestamp | Long | Timestamp of the request in milliseconds since January 1, 1970 00:00:00.0 UTC. | | No | Yes
-|6  | encryption | String | Encrypt request | "NONE" | Yes | Yes
-|7  | version | Int | Current version of API | 7 | Yes | Yes
-|8  | device_descr | String | Product model name: <br>Android: device_model(device_product) <br>iOS: device_model | Android: android.os.Build.MODEL (android.os.Build.PRODUCT) <br>iOS: systemInfo.machine | No | No
-|9  | os | Int | Operating system | Enumeration. See below for the list of possible values | No | Yes
-|10 | os_ver | String | Framework version | Android: android.os.Build.VERSION.SDK_INT <br>iOS: systemVersion | No | No
-|11 | scr_h | Int | Screen height in pixels | | No | No
-|12 | scr_w | Int | Screen width in pixels | | No | No
-|13 | scr_size | Float | Screen size in inch | | No | No
-|14 | con_type | String | Network connection type | A human-readable name describe the type of the network, * for example "WIFI" | on iOS (Unknown, None, 3G, Wifi) | No | No
-|15 | lat | Long | Location latitude (8 or 9 digits in total) | String((int)bestLocation.getLatitude() * 1E6) <br>*ONLY GPS/WIFI data. | No | No
-|16 | lon | Long | Location longitude (8 or 9 digits in total) | String((int)bestLocation.getLatitude() * 1E6) <br>*ONLY GPS/WIFI data. | No | No
-|17 | accuracy | Int | Location accuracy in meters | | No | No
-|18 | provider | String | Name of current registered network operator | | No | No
-|19 | provider_mcc | String | MCC of current registered network operator | | No | No
-|20 | provider_mnc | String | MNC of current registered network operator | | No | No
-|21 | manufacturer | String | Device's manufacturer | Android: android.os.Build.MANUFACTURER <br>iOS: "Apple" | No | No
-|22 | google_play | Boolean | API used for google play app (“true”) or other market “false” (Android) | true \| false | No | No
-|23 | applications | String | List of installed applications (Android) | Package names comma separated "com.app1,com.app2” | No | No
-|24 | imei | String | Device's IMEI (Android) | | No | No
-|25 | mac | String | Device MAC address | | No | No
-|26 | nfc_exists | Boolean | If NFC exists (Android) | | No | No
-|27 | nfc_enabled | Boolean | If NFC is enabled (Android) | | No | No
-|28 | locale | String | Device language code | Required from version 7 | No | Yes
-|29 | app_version | String | App's version | Android: packageInfo.versionName + packageInfo.versionCode <br>iOS: "CFBundleShortVersionString"."CFBundleVersion" | No | No
-|30 | is_roaming | Boolean | If device is roaming on current network | true \| false | No | No
-|31 | hardware_accelerated | Boolean | If hardware acceleration is on | true | Yes | No
-|32 | accessibility_enabled | Boolean | If accessibility is enabled | | No | No
-|33 | developer_enabled | Boolean | If developer options enabled on device (Android) | true\| false | No | No
-|34 | install_non_market_apps | Boolean | Check if install non market apps is enabled (Android) | true\| false | No | No
-|35 | app_api_key | String | App’s API key as registered in third party provider’s system | | No | No
-|36 | request_uuid | String | Param passed through s2s postback calls to dev server | | No | No
-|37 | app_id | String | App's package name | Android: Package name <br> iOS: Bundle ID | No | No
-|38 | app_name | String | App's name | | No | No
-|39 | app_category | String | App's category | | No | No
-|40 | app_subcategory | String | App's subcategory | | No | No
-|41 | survey_id | Int | Explicitly request a survey based on its id (only for on demand surveys) | | No | No
-|42 | opt_out | Bool | Opt out from Interest-based advertising | true \| false (defaults to false) | No | No
-|43 | usr_agent | String | User agent | Android: System.getProperty("http.agent") <br>iOS: @"navigator.userAgent" | No | No
-|44 | target | Int | Target SDK (Android) | | No | No
-|45 | board | String | The name of the underlying board | Android: like "goldfish" <br>iOS: [[UIDevice currentDevice] model] | No | No
-|46 | serial | String | A hardware serial number, if available. Alphanumeric only, case-insensitive (Android) | | No | No
-|47 | iap\*\* | JSON Array | List of installed apps objects (Android) | See below | No | No
-|48 | gender | Int | The gender of the user | Enumeration. See below for the list of possible values | No | No
-|49 | year_of_birth | Int | The birth year of the user | A positive integer | No | No
-|50 | marital_status | Int | The marital status of the user | Enumeration. See below for the list of possible values | No | No
-|51 | parental | Int | How many kids the user has | Enumeration. See below for the list of possible values | No | No
-|52 | education | Int | The education level of the user | Enumeration. See below for the list of possible values | No | No
-|53 | employment | Int | The employment status of the user | Enumeration. See below for the list of possible values | No | No
-|54 | career | Int | The industry that the user is employed in | Enumeration. See below for the list of possible values | No | No
-|55 | race | Int | The race of the user | Enumeration. See below for the list of possible values | No | No
-|56 | income | Int | The level of the income of the user | Enumeration. See below for the list of possible values | No | No
-|57 | personas \*\*\* | JSON Object | The personas of the user | See below | No | No
-|58 | email | String | The email of the user | A valid email address | No | No
-|59 | google_id | String | The Google id of the user | | No | No
-|60 | linkedin_id | String | The Linkedin id of the user | | No | No
-|61 | twitter_id | String | The Twitter id of the user | | No | No
-|62 | facebook_id | String | The Facebbok id of the user | | No | No
-|63 | survey_format | String | The format of the survey to return (only available in debug mode, should be used for testing). | Enumeration. See below for the list of possible values | No | No
+|1  | **api_key** | String     | Pollfish API Key (step 2) |           | No       | Yes
+|2  | **debug** | Boolean | Run Pollfish in Developer or Release mode | true \| false ( defaults to false ) | No | Yes
+|3  | **ip** | string | IP of user’s device  | | No | Yes
+|4  | **device_id** | String | Advertising Identifier  (IDFA or Advertising ID)| | No | Yes
+|5  | **timestamp** | Long | Timestamp of the request in milliseconds since January 1, 1970 00:00:00.0 UTC. | | No | Yes
+|6  | **encryption** | String | Encrypt request | "NONE" | Yes | Yes
+|7  | **version** | Int | Current version of API | 7 | Yes | Yes
+|8  | **device_descr** | String | Product model name: <br>Android: device_model(device_product) <br>iOS: device_model | Android: android.os.Build.MODEL (android.os.Build.PRODUCT) <br>iOS: systemInfo.machine | No | No
+|9  | **os** | Int | Operating system | Enumeration. See below for the list of possible values | No | Yes
+|10 | **os_ver** | String | Framework version | Android: android.os.Build.VERSION.SDK_INT <br>iOS: systemVersion | No | No
+|11 | **scr_h** | Int | Screen height in pixels | | No | No
+|12 | **scr_w** | Int | Screen width in pixels | | No | No
+|13 | **scr_size** | Float | Screen size in inch | | No | No
+|14 | **con_type** | String | Network connection type | A human-readable name describe the type of the network, * for example "WIFI" | on iOS (Unknown, None, 3G, Wifi) | No | No
+|15 | **lat** | Long | Location latitude (8 or 9 digits in total) | String((int)bestLocation.getLatitude() * 1E6) <br>*ONLY GPS/WIFI data. | No | No
+|16 | **lon** | Long | Location longitude (8 or 9 digits in total) | String((int)bestLocation.getLatitude() * 1E6) <br>*ONLY GPS/WIFI data. | No | No
+|17 | **accuracy** | Int | Location accuracy in meters | | No | No
+|18 | **provider** | String | Name of current registered network operator | | No | No
+|19 | **provider_mcc** | String | MCC of current registered network operator | | No | No
+|20 | **provider_mnc** | String | MNC of current registered network operator | | No | No
+|21 | **manufacturer** | String | Device's manufacturer | Android: android.os.Build.MANUFACTURER <br>iOS: "Apple" | No | No
+|22 | **google_play** | Boolean | API used for google play app (“true”) or other market “false” (Android) | true \| false | No | No
+|23 | **applications** | String | List of installed applications (Android) | Package names comma separated "com.app1,com.app2” | No | No
+|24 | **imei** | String | Device's IMEI (Android) | | No | No
+|25 | **mac** | String | Device MAC address | | No | No
+|26 | **nfc_exists** | Boolean | If NFC exists (Android) | | No | No
+|27 | **nfc_enabled** | Boolean | If NFC is enabled (Android) | | No | No
+|28 | **locale** | String | Device language code | Required from version 7 | No | Yes
+|29 | **app_version** | String | App's version | Android: packageInfo.versionName + packageInfo.versionCode <br>iOS: "CFBundleShortVersionString"."CFBundleVersion" | No | No
+|30 | **is_roaming** | Boolean | If device is roaming on current network | true \| false | No | No
+|31 | **hardware_accelerated** | Boolean | If hardware acceleration is on | true | Yes | No
+|32 | **accessibility_enabled** | Boolean | If accessibility is enabled | | No | No
+|33 | **developer_enabled** | Boolean | If developer options enabled on device (Android) | true\| false | No | No
+|34 | **install_non_market_apps** | Boolean | Check if install non market apps is enabled (Android) | true\| false | No | No
+|35 | **app_api_key** | String | App’s API key as registered in third party provider’s system | | No | No
+|36 | **request_uuid** | String | Param passed through s2s postback calls to dev server | | No | No
+|37 | **app_id** | String | App's package name | Android: Package name <br> iOS: Bundle ID | No | No
+|38 | **app_name** | String | App's name | | No | No
+|39 | **app_category** | String | App's category | | No | No
+|40 | **app_subcategory** | String | App's subcategory | | No | No
+|41 | **survey_id** | Int | Explicitly request a survey based on its id (only for on demand surveys) | | No | No
+|42 | **opt_out** | Bool | Opt out from Interest-based advertising | true \| false (defaults to false) | No | No
+|43 | **usr_agent** | String | User agent | Android: System.getProperty("http.agent") <br>iOS: @"navigator.userAgent" | No | No
+|44 | **target** | Int | Target SDK (Android) | | No | No
+|45 | **board** | String | The name of the underlying board | Android: like "goldfish" <br>iOS: [[UIDevice currentDevice] model] | No | No
+|46 | **serial** | String | A hardware serial number, if available. Alphanumeric only, case-insensitive (Android) | | No | No
+|47 | **iap\*\*** | JSON Array | List of installed apps objects (Android) | See below | No | No
+|48 | **gender** | Int | The gender of the user | Enumeration. See below for the list of possible values | No | No
+|49 | **year_of_birth** | Int | The birth year of the user | A positive integer | No | No
+|50 | **marital_status** | Int | The marital status of the user | Enumeration. See below for the list of possible values | No | No
+|51 | **parental** | Int | How many kids the user has | Enumeration. See below for the list of possible values | No | No
+|52 | **education** | Int | The education level of the user | Enumeration. See below for the list of possible values | No | No
+|53 | **employment** | Int | The employment status of the user | Enumeration. See below for the list of possible values | No | No
+|54 | **career** | Int | The industry that the user is employed in | Enumeration. See below for the list of possible values | No | No
+|55 | **race** | Int | The race of the user | Enumeration. See below for the list of possible values | No | No
+|56 | **income** | Int | The level of the income of the user | Enumeration. See below for the list of possible values | No | No
+|57 | **personas \*\*\*** | JSON Object | The personas of the user | See below | No | No
+|58 | **email** | String | The email of the user | A valid email address | No | No
+|59 | **google_id** | String | The Google id of the user | | No | No
+|60 | **linkedin_id** | String | The Linkedin id of the user | | No | No
+|61 | **twitter_id** | String | The Twitter id of the user | | No | No
+|62 | **facebook_id** | String | The Facebbok id of the user | | No | No
+|63 | **survey_format** | String | The format of the survey to return (only available in debug mode, should be used for testing). | Enumeration. See below for the list of possible values | No | No
 
 
 <table>
@@ -420,50 +420,6 @@ Pollfish survey:
 |3 | **userNotEligible**    | When a user successfully completed a survey <br>(NOTICE: Further investigation of the response will be done on the server side to detect e.g fraudulent activites, so make sure to use the server-to-server callbacks, as described in section 4 to track valid responses prior crediting users)
 |4 | **setSurveyCompleted** | When a user was not qualified to complete the survey (screened-out)         
 |5 | **userRejectedSurvey** | When a user selected the "No thanks" option on the homescreen, or when a user selected the "I will not participate in this survey" button when on the GDPR page
-
-
-+-----------------------+-----------------------+-----------------------+
-|                       | **Event**             | **Description**       |
-+=======================+=======================+=======================+
-| 1                     | **close**             | When a user clicks on |
-|                       |                       | close button          |
-+-----------------------+-----------------------+-----------------------+
-| 2                     | **closeAndNoShow**    | When a user clicks on |
-|                       |                       | close button          |
-+-----------------------+-----------------------+-----------------------+
-| 3                     | **userNotEligible**   | When a user was not   |
-|                       |                       | qualified to complete |
-|                       |                       | the survey            |
-|                       |                       | (screened-out)        |
-+-----------------------+-----------------------+-----------------------+
-| 4                     | **setSurveyCompleted* | When a user           |
-|                       | *                     | successfully          |
-|                       |                       | completed a survey    |
-|                       |                       |                       |
-|                       |                       | (NOTICE: Further      |
-|                       |                       | investigation of the  |
-|                       |                       | response will be done |
-|                       |                       | on the server side to |
-|                       |                       | detect e.g fraudulent |
-|                       |                       | activites, so make    |
-|                       |                       | sure to use the       |
-|                       |                       | server-to-server      |
-|                       |                       | callbacks, as         |
-|                       |                       | described in section  |
-|                       |                       | 4 to track valid      |
-|                       |                       | responses prior       |
-|                       |                       | crediting users)      |
-+-----------------------+-----------------------+-----------------------+
-| 5                     | **userRejectedSurvey* | When a user selected  |
-|                       | *                     | the \"No thanks\"     |
-|                       |                       | option on the         |
-|                       |                       | homescreen, or when a |
-|                       |                       | user selected the \"I |
-|                       |                       | will not participate  |
-|                       |                       | in this survey\"      |
-|                       |                       | button when on the    |
-|                       |                       | GDPR page             |
-+-----------------------+-----------------------+-----------------------+
 
 Below you can find some examples of how to catch and handle the events
 described above:
