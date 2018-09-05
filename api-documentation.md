@@ -267,7 +267,7 @@ application.
 
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
-|53| **race**            | ARAB                | 0
+|55| **race**            | ARAB                | 0
 |  |                     | ASIAN               | 1
 |  |                     | BLACK               | 2
 |  |                     | WHITE               | 3
@@ -281,7 +281,7 @@ application.
 
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
-|53| **income**          | LOWER_I             | 0
+|56| **income**          | LOWER_I             | 0
 |  |                     | LOWER_II            | 1
 |  |                     | MIDDLE_I            | 2
 |  |                     | MIDDLE_II           | 3
