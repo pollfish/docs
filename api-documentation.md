@@ -112,15 +112,15 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |45 | **board** | String | The name of the underlying board | Android: like "goldfish" <br>iOS: [[UIDevice currentDevice] model] | No | No
 |46 | **serial** | String | A hardware serial number, if available. Alphanumeric only, case-insensitive (Android) | | No | No
 |47 | **iap\*\*** | JSON Array | List of installed apps objects (Android) | See below | No | No
-|48 | **gender** | Int | The gender of the user | Enumeration. See below for the list of possible values | No | No
-|49 | **year_of_birth** | Int | The birth year of the user | A positive integer | No | No
-|50 | **marital_status** | Int | The marital status of the user | Enumeration. See below for the list of possible values | No | No
-|51 | **parental** | Int | How many kids the user has | Enumeration. See below for the list of possible values | No | No
-|52 | **education** | Int | The education level of the user | Enumeration. See below for the list of possible values | No | No
-|53 | **employment** | Int | The employment status of the user | Enumeration. See below for the list of possible values | No | No
-|54 | **career** | Int | The industry that the user is employed in | Enumeration. See below for the list of possible values | No | No
-|55 | **race** | Int | The race of the user | Enumeration. See below for the list of possible values | No | No
-|56 | **income** | Int | The level of the income of the user | Enumeration. See below for the list of possible values | No | No
+|:bar_chart:48 | **gender** | Int | The gender of the user | Enumeration. See below for the list of possible values | No | No
+|:bar_chart:49 | **year_of_birth** | Int | The birth year of the user | A positive integer | No | No
+|:bar_chart:50 | **marital_status** | Int | The marital status of the user | Enumeration. See below for the list of possible values | No | No
+|:bar_chart:51 | **parental** | Int | How many kids the user has | Enumeration. See below for the list of possible values | No | No
+|:bar_chart:52 | **education** | Int | The education level of the user | Enumeration. See below for the list of possible values | No | No
+|:bar_chart:53 | **employment** | Int | The employment status of the user | Enumeration. See below for the list of possible values | No | No
+|:bar_chart:54 | **career** | Int | The industry that the user is employed in | Enumeration. See below for the list of possible values | No | No
+|:bar_chart:55 | **race** | Int | The race of the user | Enumeration. See below for the list of possible values | No | No
+|:bar_chart:56 | **income** | Int | The level of the income of the user | Enumeration. See below for the list of possible values | No | No
 |57 | **personas \*\*\*** | JSON Object | The personas of the user | See below | No | No
 |58 | **email** | String | The email of the user | A valid email address | No | No
 |59 | **google_id** | String | The Google id of the user | | No | No
@@ -130,10 +130,11 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |63 | **survey_format** | String | The format of the survey to return (only available in debug mode, should be used for testing). | Enumeration. See below for the list of possible values | No | No
 
 
+**Demographics**
 <table>
   <tr>
-    <td style="background:red">Demographics</td>
-    <td>All params with this background are used in demographic surveys. If you already know this information you can provide them during register call and minimize or avoid demographic surveys.</td>
+    <td>:bar_chart:</td>
+    <td>Parameters from #48 to #56 are used in demographic surveys. If you already know this information you can provide them during register call and minimize or avoid demographic surveys.</td>
   </tr>
 </table>
 
