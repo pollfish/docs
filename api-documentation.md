@@ -62,7 +62,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 
 
 ### JSON Parameters
-
+{:.foo}
 |   | Name | Type  | Description                       | Value     | Static   |  Required
 |---|:-----|:-----------|:-----------------------------|:----------|:---------|:-----------
 |1  | **api_key** | String     | Pollfish API Key (step 2) |           | No       | Yes
