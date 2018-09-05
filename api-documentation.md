@@ -66,7 +66,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |   | Name | Type  | Description                       | Value     | Static   |  Required
 |---|:-----|:-----------|:-----------------------------|:----------|:---------|:-----------
 |1  | **api_key** | String     | Pollfish API Key (step 2) |           | No       | Yes
-|2  | **debug** | Boolean | Run Pollfish in Developer or Release mode | true \| false ( defaults to false ) | No | Yes
+|2  | **debug** | Boolean | Run Pollfish in Developer or Release mode | true/false ( defaults to false ) | No | Yes
 |3  | **ip** | string | IP of user’s device  | | No | Yes
 |4  | **device_id** | String | Advertising Identifier  (IDFA or Advertising ID)| | No | Yes
 |5  | **timestamp** | Long | Timestamp of the request in milliseconds since January 1, 1970 00:00:00.0 UTC. | | No | Yes
@@ -78,7 +78,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |11 | **scr_h** | Int | Screen height in pixels | | No | No
 |12 | **scr_w** | Int | Screen width in pixels | | No | No
 |13 | **scr_size** | Float | Screen size in inch | | No | No
-|14 | **con_type** | String | Network connection type | A human-readable name describe the type of the network, * for example "WIFI" | on iOS (Unknown, None, 3G, Wifi) | No | No
+|14 | **con_type** | String | Network connection type | A human-readable name describe the type of the network, * for example "WIFI" / on iOS (Unknown, None, 3G, Wifi) | No | No
 |15 | **lat** | Long | Location latitude (8 or 9 digits in total) | String((int)bestLocation.getLatitude() * 1E6) <br>*ONLY GPS/WIFI data. | No | No
 |16 | **lon** | Long | Location longitude (8 or 9 digits in total) | String((int)bestLocation.getLatitude() * 1E6) <br>*ONLY GPS/WIFI data. | No | No
 |17 | **accuracy** | Int | Location accuracy in meters | | No | No
@@ -86,7 +86,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |19 | **provider_mcc** | String | MCC of current registered network operator | | No | No
 |20 | **provider_mnc** | String | MNC of current registered network operator | | No | No
 |21 | **manufacturer** | String | Device's manufacturer | Android: android.os.Build.MANUFACTURER <br>iOS: "Apple" | No | No
-|22 | **google_play** | Boolean | API used for google play app (“true”) or other market “false” (Android) | true \| false | No | No
+|22 | **google_play** | Boolean | API used for google play app (“true”) or other market “false” (Android) | true/false | No | No
 |23 | **applications** | String | List of installed applications (Android) | Package names comma separated "com.app1,com.app2” | No | No
 |24 | **imei** | String | Device's IMEI (Android) | | No | No
 |25 | **mac** | String | Device MAC address | | No | No
@@ -94,11 +94,11 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |27 | **nfc_enabled** | Boolean | If NFC is enabled (Android) | | No | No
 |28 | **locale** | String | Device language code | Required from version 7 | No | Yes
 |29 | **app_version** | String | App's version | Android: packageInfo.versionName + packageInfo.versionCode <br>iOS: "CFBundleShortVersionString"."CFBundleVersion" | No | No
-|30 | **is_roaming** | Boolean | If device is roaming on current network | true \| false | No | No
+|30 | **is_roaming** | Boolean | If device is roaming on current network | true/false | No | No
 |31 | **hardware_accelerated** | Boolean | If hardware acceleration is on | true | Yes | No
 |32 | **accessibility_enabled** | Boolean | If accessibility is enabled | | No | No
-|33 | **developer_enabled** | Boolean | If developer options enabled on device (Android) | true\| false | No | No
-|34 | **install_non_market_apps** | Boolean | Check if install non market apps is enabled (Android) | true\| false | No | No
+|33 | **developer_enabled** | Boolean | If developer options enabled on device (Android) | true/false | No | No
+|34 | **install_non_market_apps** | Boolean | Check if install non market apps is enabled (Android) | true/false | No | No
 |35 | **app_api_key** | String | App’s API key as registered in third party provider’s system | | No | No
 |36 | **request_uuid** | String | Param passed through s2s postback calls to dev server | | No | No
 |37 | **app_id** | String | App's package name | Android: Package name <br> iOS: Bundle ID | No | No
@@ -167,12 +167,15 @@ application.
 |  |         | Windows Phone | 2
 |  |         | Web           | 3
 
+<br>
 
 |  | Key         | Name          | Value
 |--|:------------|:--------------|:----------
 |48| **gender**  | FEMALE        | 0
 |  |             | MALE          | 1
 |  |             | OTHER         | 2
+
+<br>
 
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
@@ -183,6 +186,8 @@ application.
 |  |                     | SEPARATED           | 4
 |  |                     | WIDOWED             | 5
 |  |                     | PREFER_NOT_TO_SAY   | 6
+
+<br>
 
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
@@ -195,6 +200,8 @@ application.
 |  |                     | SIX_OR_MORE         | 6
 |  |                     | PREFER_NOT_TO_SAY   | 7
 
+<br>
+
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
 |52| **education**       | ELEMENTARY_SCHOOL   | 0
@@ -203,6 +210,8 @@ application.
 |  |                     | VOCATION_TECHNICAL_COLLEGE | 3
 |  |                     | UNIVERSITY          | 4
 |  |                     | POST_GRADUATE       | 5
+
+<br>
 
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
@@ -216,6 +225,8 @@ application.
 |  |                     | RETIRED             | 7
 |  |                     | UNABLE_TO_WORK      | 8
 |  |                     | OTHER               | 9
+
+<br>
 
 |  | Key                 | Name                                     | Value
 |--|:--------------------|:-----------------------------------------|:----------
@@ -252,6 +263,8 @@ application.
 |  |                     | WHOLESALE                                | 30
 |  |                     | OTHER                                    | 31
 
+<br>
+
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
 |53| **race**            | ARAB                | 0
@@ -263,6 +276,8 @@ application.
 |  |                     | MULTIRACIAL         | 6
 |  |                     | OTHER               | 7
 |  |                     | PREFER_NOT_TO_SAY   | 8
+
+<br>
 
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
@@ -303,7 +318,7 @@ not null. Do not send system apps.
 <table>
   <tr>
     <td>57</td>
-    <td>**personas**</td>
+      <td><b>personas</b></td>
   </tr>
 </table>
 
@@ -338,17 +353,11 @@ have the persona, else do not specify a value for the field.
 
 Example request
 
-https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"debug\":\"true\"}&dontencrypt=true
-
+[https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"debug\":\"true\"}&dontencrypt=true](https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"debug\":\"true\"}&dontencrypt=true)
 
 Example request ( with user attributes ) 
 
-https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"email\":
-\"user@[example.com](http://example.com/)\",\"year\_of\_birth\":
-\"1990\",\"gender\": \"1\",\"marital\_status\": \"0\",\"parental\":
-\"0\",\"education\": \"2\",\"race\": \"0\",\"twitter\_id\":
-\"916809126\",\"personas\": {\"gamer\":
-\"true\"},\"debug\":\"true\"}&dontencrypt=true
+[https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"email\":\"user@[example.com](http://example.com/)\",\"year\_of\_birth\":\"1990\",\"gender\": \"1\",\"marital\_status\": \"0\",\"parental\":\"0\",\"education\": \"2\",\"race\": \"0\",\"twitter\_id\":\"916809126\",\"personas\": {\"gamer\":\"true\"},\"debug\":\"true\"}&dontencrypt=true](https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"email\":\"user@[example.com](http://example.com/)\",\"year\_of\_birth\":\"1990\",\"gender\": \"1\",\"marital\_status\": \"0\",\"parental\":\"0\",\"education\": \"2\",\"race\": \"0\",\"twitter\_id\":\"916809126\",\"personas\": {\"gamer\":\"true\"},\"debug\":\"true\"}&dontencrypt=true)
 
 *\* Notice that you might need to change the timestamp to current values
 for the links above to operate properly.*
@@ -378,7 +387,7 @@ the money to be earned from survey received in US dollar cents.
 
 A displayable HTML page
 
-#### MRAID library (optional)
+#### **MRAID library (optional)**
 
 Pollfish can use MRAID library from IAB (<http://www.iab.net/MRAID>)
 implemented in a web container. Pollfish will use the mraid.close()  in
@@ -401,7 +410,7 @@ that param to the callback structure as explained in the link above.
 
 <table>
   <tr>
-    <td><bold>app_api_key</bold></td>
+    <td><b>app_api_key</b></td>
     <td>String</td>
     <td>App's api key as registered on third party provider's system</td>
   </tr>
