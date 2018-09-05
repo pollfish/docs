@@ -66,7 +66,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |   | Name | Type  | Description                       | Value     | Static   |  Required
 |---|:-----|:-----------|:-----------------------------|:----------|:---------|:-----------
 |1  | **api_key** | String     | Pollfish API Key (step 2) |           | No       | Yes
-|2  | **debug** | Boolean | Run Pollfish in Developer or Release mode | true/false ( defaults to false ) | No | Yes
+|2  | **debug** | Boolean | Run Pollfish in Developer or Release mode | true / false ( defaults to false ) | No | Yes
 |3  | **ip** | string | IP of user’s device  | | No | Yes
 |4  | **device_id** | String | Advertising Identifier  (IDFA or Advertising ID)| | No | Yes
 |5  | **timestamp** | Long | Timestamp of the request in milliseconds since January 1, 1970 00:00:00.0 UTC. | | No | Yes
@@ -86,7 +86,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |19 | **provider_mcc** | String | MCC of current registered network operator | | No | No
 |20 | **provider_mnc** | String | MNC of current registered network operator | | No | No
 |21 | **manufacturer** | String | Device's manufacturer | Android: android.os.Build.MANUFACTURER <br>iOS: "Apple" | No | No
-|22 | **google_play** | Boolean | API used for google play app (“true”) or other market “false” (Android) | true/false | No | No
+|22 | **google_play** | Boolean | API used for google play app (“true”) or other market “false” (Android) | true / false | No | No
 |23 | **applications** | String | List of installed applications (Android) | Package names comma separated "com.app1,com.app2” | No | No
 |24 | **imei** | String | Device's IMEI (Android) | | No | No
 |25 | **mac** | String | Device MAC address | | No | No
@@ -94,11 +94,11 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |27 | **nfc_enabled** | Boolean | If NFC is enabled (Android) | | No | No
 |28 | **locale** | String | Device language code | Required from version 7 | No | Yes
 |29 | **app_version** | String | App's version | Android: packageInfo.versionName + packageInfo.versionCode <br>iOS: "CFBundleShortVersionString"."CFBundleVersion" | No | No
-|30 | **is_roaming** | Boolean | If device is roaming on current network | true/false | No | No
+|30 | **is_roaming** | Boolean | If device is roaming on current network | true / false | No | No
 |31 | **hardware_accelerated** | Boolean | If hardware acceleration is on | true | Yes | No
 |32 | **accessibility_enabled** | Boolean | If accessibility is enabled | | No | No
-|33 | **developer_enabled** | Boolean | If developer options enabled on device (Android) | true/false | No | No
-|34 | **install_non_market_apps** | Boolean | Check if install non market apps is enabled (Android) | true/false | No | No
+|33 | **developer_enabled** | Boolean | If developer options enabled on device (Android) | true / false | No | No
+|34 | **install_non_market_apps** | Boolean | Check if install non market apps is enabled (Android) | true / false | No | No
 |35 | **app_api_key** | String | App’s API key as registered in third party provider’s system | | No | No
 |36 | **request_uuid** | String | Param passed through s2s postback calls to dev server | | No | No
 |37 | **app_id** | String | App's package name | Android: Package name <br> iOS: Bundle ID | No | No
@@ -106,7 +106,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |39 | **app_category** | String | App's category | | No | No
 |40 | **app_subcategory** | String | App's subcategory | | No | No
 |41 | **survey_id** | Int | Explicitly request a survey based on its id (only for on demand surveys) | | No | No
-|42 | **opt_out** | Bool | Opt out from Interest-based advertising | true \| false (defaults to false) | No | No
+|42 | **opt_out** | Bool | Opt out from Interest-based advertising | true / false (defaults to false) | No | No
 |43 | **usr_agent** | String | User agent | Android: System.getProperty("http.agent") <br>iOS: @"navigator.userAgent" | No | No
 |44 | **target** | Int | Target SDK (Android) | | No | No
 |45 | **board** | String | The name of the underlying board | Android: like "goldfish" <br>iOS: [[UIDevice currentDevice] model] | No | No
