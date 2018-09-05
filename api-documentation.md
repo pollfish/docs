@@ -112,7 +112,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |45 | **board** | String | The name of the underlying board | Android: like "goldfish" <br>iOS: [[UIDevice currentDevice] model] | No | No
 |46 | **serial** | String | A hardware serial number, if available. Alphanumeric only, case-insensitive (Android) | | No | No
 |47 | **iap\*\*** | JSON Array | List of installed apps objects (Android) | See below | No | No
-|48:bar_chart: | **gender** | Int | The gender of the user | Enumeration. See below for the list of possible values | No | No
+|<span style="background-color: red">48:bar_chart:</span> | **gender** | Int | The gender of the user | Enumeration. See below for the list of possible values | No | No
 |49:bar_chart: | **year_of_birth** | Int | The birth year of the user | A positive integer | No | No
 |50:bar_chart: | **marital_status** | Int | The marital status of the user | Enumeration. See below for the list of possible values | No | No
 |51:bar_chart: | **parental** | Int | How many kids the user has | Enumeration. See below for the list of possible values | No | No
