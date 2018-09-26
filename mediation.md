@@ -46,12 +46,13 @@ Surveys from different survey providers can be found on Pollfish mediation stack
 
 Surveys from mediation providers pay minimum $0.30 per completed survey and the payouts can end up to $3-$4 per completed survey.
 
-<h3> <img src="https://s3.amazonaws.com/pf.mobile/img/demothirdparty.png" width="40" height="auto"/></h3>
+<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/mediation.gif" width="200" height="auto"/>
+</p>
+
+<h3> <img src="https://s3.amazonaws.com/pf.mobile/img/demothirdparty.png" width="90" height="auto"/></h3>
 
 Pollfish 3rd party surveys are surveys programmed on other survey platforms (with an experience different than Pollfish native experience) which are provided by Pollfish clients.
 
-<p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/mediation.gif" width="200" height="auto"/>
-</p>
 
 <h3> <img src="https://storage.googleapis.com/pollfish_production/random/lucid.png" width="40" height="auto"/></h3>
 
