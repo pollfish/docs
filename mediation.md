@@ -46,6 +46,9 @@ Surveys from different survey providers can be found on Pollfish mediation stack
 
 Surveys from mediation providers pay minimum $0.30 per completed survey and the payouts can end up to $3-$4 per completed survey.
 
+<h3> <img src="https://s3.amazonaws.com/pf.mobile/img/demothirdparty.png" width="40" height="auto"/></h3>
+
+Pollfish 3rd party surveys are surveys programmed on other survey platforms (with an experience different than Pollfish native experience) which are provided by Pollfish clients.
 
 <p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish_production/random/mediation.gif" width="200" height="auto"/>
 </p>
@@ -65,5 +68,6 @@ Toluna is a global real time consumers platform. Toluna QuickSurveys is an innov
 <h3> <img src="https://s3.amazonaws.com/pf.mobile/img/innovatemr.png" width="40" height="auto"/></h3>
 
 InnovateMR is a fiercely independent sampling company that delivers faster answers from business and consumer audiences. As industry pioneers, InnovateMR helps market research agencies worldwide answer business questions and uncover insights with online surveys. InnovateMR has offices in Los Angeles, New York, London and New Delhi.
+
 
 
