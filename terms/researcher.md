@@ -274,7 +274,7 @@ Pollfish takes all necessary action to comply with COPPA and protect the rights 
 
 In your capacity as a data subject whose data is collected and processed by Pollfish, we inform you that you have the rights provided to you under the GDPR and, in particular, you have (a) the right to withdraw your consent at any time and without detriment, without affecting the lawfulness of processing based on consent before its withdrawal, by notifying such withdrawal to us via email with the subject “Data processing consent withdrawal” at the following email address [gdpr@pollfish.com](gdpr@pollfish.com) ; (b) the right to request from Pollfish access to and rectification or erasure of personal data or restriction of processing concerning you and to object to processing as well as the right to data portability; (c) the right to receive notification regarding rectification or erasure of your personal data or restriction of processing that is takes place following your request; (d) the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning you or similarly significantly affects you, and (e) to lodge a complaint with a supervisory authority.
 
-### 16.5 POLLFISH CONTACT INFO/REPRESENTATIVE IN THE EU/DATA PROTECTION OFFICER
+#### 16.5 POLLFISH CONTACT INFO/REPRESENTATIVE IN THE EU/DATA PROTECTION OFFICER
 
 Please contact us with any questions or comments about this Policy, your personal information, our third-party disclosure practices, or your consent choices by email: [support@pollfish.com](support@pollfish.com)
 
@@ -282,11 +282,11 @@ Pollfish designates as its representative in the EU, who acts on Pollfish’s be
 
 Pollfish appoints as a Data Protection Officer Mr Zissis Bellas, who can be contacted at the following address [zissis@pollfish.com](zissis@pollfish.com).
 
-#### 17. GOVERNING LAW & MISCELLANEOUS
+### 17. GOVERNING LAW & MISCELLANEOUS
 
 The present Agreement and its interpretation shall be governed by and construed in accordance with the US Law and the parties consent to the exclusive jurisdiction of the courts of the State of New York. In case any of the provisions of this Terms of Use is found to be invalid, it shall not affect the validity of the other provisions that will remain in force.
 
-#### 18. CHANGES AND UPDATES TO THIS POLICY
+### 18. CHANGES AND UPDATES TO THIS POLICY
 
 Pollfish reserves the right to modify the terms and conditions of the present Agreement or alter or end its Services at any time at its sole discretion. You are responsible for ensuring that you will regularly review the present Agreement. If you choose to continue using Pollfish Services after any modifications to the present terms are made, you will be considered to have fully and unconditionally accepted the aforementioned modifications to this Agreement.
 
