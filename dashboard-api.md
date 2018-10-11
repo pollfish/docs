@@ -430,7 +430,7 @@ app.
 ## `4.11 GET /api/public/v3/apps/revenue`
 
 returns the total revenue per provider for all the apps of the developer
-for a designated time period
+for a designated time period and for selected countries
 
 The url can contain the following query parameters
 
@@ -440,6 +440,7 @@ The url can contain the following query parameters
 |---|:------|:--------------|:---------------------------------|:--------
 | 1 | from  | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the beginning of the time period for the query. <br>If omitted, the default is one month before parameter to. | No
 | 2 | to    | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the end of the time period for the query. <br>If omitted, the default is the current date. | No
+| 3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
 
 ### Server Response
 
@@ -453,6 +454,8 @@ The url can contain the following query parameters
 *http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 [https://www.pollfish.com/api/public/v3/apps/revenue?from=2018-07-01&to=2018-07-10](https://www.pollfish.com/api/public/v2/apps)*
 
 *http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 [https://www.pollfish.com/api/public/v3/apps/revenue?from=2018-07-04](https://www.pollfish.com/api/public/v2/apps)*
+
+*http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 [https://www.pollfish.com/api/public/v3/apps/revenue?countries=US,FR](https://www.pollfish.com/api/public/v2/apps)*
 
 ### Example Response
 
@@ -556,10 +559,13 @@ designated time period
 |---|:----------|:----------------------------------------------------------------------------------------------------------
 |1  | 200       | Successful response
 |2  | 400       | Missing or invalid parameters <br>- **from** not is ISO 8601 format <br>- **to** not in ISO 8601 format <br>- The **api_key** is invalid or does not belong to the user
+| 3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes, like countries=US,FR for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
 
 ### Example Requests
 
 *http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 [https://www.pollfish.com/api/public/v3/apps/84e1a754-a261-40cf-b566-baa375b64e21/revenue?from=2018-07-01&to=2018-07-10](https://www.pollfish.com/api/public/v2/apps)*
+
+*http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 [https://www.pollfish.com/api/public/v3/apps/84e1a754-a261-40cf-b566-baa375b64e21/revenue?from=2018-07-01&to=2018-07-10&countries=US](https://www.pollfish.com/api/public/v2/apps)*
 
 ### Example Response
 
