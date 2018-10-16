@@ -384,6 +384,22 @@ Response Code without the HTML response if you perform a HEAD request.
 Server responses include a header parameter called **CPA** that shows
 the money to be earned from survey received in US dollar cents.
 
+The response headers also include a **provider** parameter for the 
+survey network of the returned survey. This is an integer with the
+following possible values:
+
+| Value | Network
+|:------|:----------------
+| 0     | Pollfish
+| 1     | Toluna
+| 2     | Cint
+| 3     | -
+| 4     | Lucid
+| 5     | InnovateMR
+| 6     | Pollfish 3rdParty
+| 7     | SaySo
+
+
 ### RESPONSE BODY
 
 A displayable HTML page
