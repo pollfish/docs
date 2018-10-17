@@ -171,9 +171,9 @@ application.
 
 |  | Key         | Name          | Value
 |--|:------------|:--------------|:----------
-|48| **gender**  | FEMALE        | 0
-|  |             | MALE          | 1
-|  |             | OTHER         | 2
+|48| **gender**  | FEMALE        | 1
+|  |             | MALE          | 2
+|  |             | OTHER         | 3
 
 <br>
 
