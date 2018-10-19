@@ -72,3 +72,6 @@ InnovateMR is a fiercely independent sampling company that delivers faster answe
 
 
 
+<h3> <img src="https://s3.amazonaws.com/pf.mobile/img/sayso.png" width="40" height="auto"/></h3>
+
+Research for Good Inc. (SaySo Rewards),is an online sample company that provides online market research surveys. It connects nonprofits with the market research industry as a new donation development channel. The company was incorporated in 2010 and is based in Redmond, Washington.
