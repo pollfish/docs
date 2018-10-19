@@ -399,6 +399,8 @@ that is a network name followed by an optional slash and survey type.
 
 The provider is the network that provides the answer. The syntax rule has all the networks currently supported by Pollfish.
 
+The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish.
+
 The type is that of the survey as described in the network's documentation. The exception is the type "Demographics" which
 is always used to identify surveys whose purpose is to collect demographic data for the users.
 
