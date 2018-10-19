@@ -406,6 +406,13 @@ is always used to identify surveys whose purpose is to collect demographic data 
 
 The whole set of values currently supported are:
 
+| Value              | Description
+|:------------------|:----------------
+| Pollfish           | a standard pollfish survey
+| Pollfish/Basic           | another name for a standard pollfish survey
+| Pollfish/Playful         | a pollfish playful survey 
+| Pollfish/ThirdParty         | a survey of another network fulfilled by Pollfish   
+
 * Pollfish - a standard pollfish survey
 * Pollfish/Basic - another name for a standard pollfish survey
 * Pollfish/Playful - a pollfish playful survey 
