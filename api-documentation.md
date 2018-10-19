@@ -397,7 +397,7 @@ type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 
 that is a network name followed by an optional slash and survey type.
 
-The provider is the network that provides the answer. The syntax rule has all the networks currently supported by Pollfish.
+The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish.
 
 The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish.
 
@@ -408,22 +408,17 @@ The whole set of values currently supported are:
 
 | Value              | Description
 |:------------------|:----------------
-| Pollfish           | a standard pollfish survey
-| Pollfish/Basic           | another name for a standard pollfish survey
-| Pollfish/Playful         | a pollfish playful survey 
+| Pollfish           | a Basic Pollfish survey
+| Pollfish/Basic           | another name for a Basic Pollfish survey
+| Pollfish/Playful         | a Pollfish Playful survey 
 | Pollfish/ThirdParty         | a survey of another network fulfilled by Pollfish   
-
-* Pollfish - a standard pollfish survey
-* Pollfish/Basic - another name for a standard pollfish survey
-* Pollfish/Playful - a pollfish playful survey 
-* Pollfish/ThirdParty - a survey of another network fulfilled by Pollfish
-* Pollfish/Demographics - a Pollfish survey to collect demographics
-* Pollfish/Internal - a Pollfish survey initiated by and for the publisher
-* Toluna - a standard Toluna survey
-* Cint- a standard Toluna survey
-* Lucid - a standard Toluna survey
-* InnovateMR - a standard Toluna survey
-* SaySo - a standard Toluna survey
+| Pollfish/Demographics         | a Pollfish survey to collect demographics  
+| Pollfish/Internal         | a Pollfish survey initiated by and for the publisher 
+| Toluna         | a Toluna survey   
+| Cint         | a Cint survey   
+| Lucid         | a Lucid survey   
+| InnovateMR         | a InnovateMR survey   
+| SaySo         | a SaySo survey   
 
 When a new mediation network enters the Pollfish network the appropriate values with added.
 
