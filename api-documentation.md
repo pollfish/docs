@@ -423,13 +423,12 @@ When the html file loads on the user side, there are
 several javascript events that can be fired through the lifetime of a
 Pollfish survey:
 
-
 |  | Event                  | Description
 |--|:-----------------------|:----------------
 |1 | **close**              | When a user clicks on close button
 |2 | **closeAndNoShow**     | When a user clicks on close button
-|3 | **userNotEligible**    | When a user successfully completed a survey <br>(NOTICE: Further investigation of the response will be done on the server side to detect e.g fraudulent activites, so make sure to use the server-to-server callbacks, as described in section 4 to track valid responses prior crediting users)
-|4 | **setSurveyCompleted** | When a user was not qualified to complete the survey (screened-out)         
+|3 | **setSurveyCompleted** | When a user successfully completed a survey <br>(NOTICE: Further investigation of the response will be done on the server side to detect e.g fraudulent activites, so make sure to use the server-to-server callbacks, as described in section 4 to track valid responses prior crediting users)
+|4 | **userNotEligible**    | When a user was not qualified to complete the survey (screened-out)         
 |5 | **userRejectedSurvey** | When a user selected the "No thanks" option on the homescreen, or when a user selected the "I will not participate in this survey" button when on the GDPR page
 
 Below you can find some examples of how to catch and handle the events
