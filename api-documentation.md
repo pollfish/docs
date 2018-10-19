@@ -379,10 +379,44 @@ explained below.
 You can also check if there is a survey available by getting the
 Response Code without the HTML response if you perform a HEAD request.
 
-### RESPONSE HEADER
+### RESPONSE HEADERS
 
-Server responses include a header parameter called **CPA** that shows
+Server responses include http header parameters with additional information.
+
+The header parameter called **CPA** shows
 the money to be earned from survey received in US dollar cents.
+
+The header parameter called **survey_class** is used to pass to the client information
+about the survey network and type. The syntax is
+
+```
+survey_class: provider["/"type]
+provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo"
+type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
+```
+
+that is a network name followed by an optional slash and survey type.
+
+The provider is the network that provides the answer. The syntax rule has all the networks currently supported by Pollfish.
+
+The type is that of the survey as described in the network's documentation. The exception is the type "Demographics" which
+is always used to identify surveys whose purpose is to collect demographic data for the users.
+
+The whole set of values currently supported are:
+
+* Pollfish - a standard pollfish survey
+* Pollfish/Basic - another name for a standard pollfish survey
+* Pollfish/Playful - a pollfish playful survey 
+* Pollfish/ThirdParty - a survey of another network fulfilled by Pollfish
+* Pollfish/Demographics - a Pollfish survey to collect demographics
+* Pollfish/Internal - a Pollfish survey initiated by and for the publisher
+* Toluna - a standard Toluna survey
+* Cint- a standard Toluna survey
+* Lucid - a standard Toluna survey
+* InnovateMR - a standard Toluna survey
+* SaySo - a standard Toluna survey
+
+When a new mediation network enters the Pollfish network the appropriate values with added.
 
 ### RESPONSE BODY
 
