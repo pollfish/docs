@@ -408,17 +408,17 @@ The whole set of values currently supported are:
 
 | Value              | Description
 |:------------------|:----------------
-| Pollfish           | Pollfish Basic survey
-| Pollfish/Basic           |  Pollfish Basic survey (another name)
-| Pollfish/Playful         | Pollfish Playful survey 
-| Pollfish/ThirdParty         | Pollfish 3rd party survey
-| Pollfish/Demographics         | Pollfish Demographic survey
-| Pollfish/Internal         | Pollfish internal survey created by the publisher
-| Toluna         | Toluna survey   
-| Cint         | Cint survey   
-| Lucid         | Lucid survey   
-| InnovateMR         | InnovateMR survey   
-| SaySo         | SaySo survey   
+| **Pollfish**           | Pollfish Basic survey
+| **Pollfish/Basic**           |  Pollfish Basic survey (another name)
+| **Pollfish/Playful**         | Pollfish Playful survey 
+| **Pollfish/ThirdParty**         | Pollfish 3rd party survey
+| **Pollfish/Demographics**         | Pollfish Demographic survey
+| **Pollfish/Internal**         | Pollfish internal survey created by the publisher
+| **Toluna**         | Toluna survey   
+| **Cint**         | Cint survey   
+| **Lucid**         | Lucid survey   
+| **InnovateMR**         | InnovateMR survey   
+| **SaySo**       | SaySo survey   
 
 When a new mediation network enters the Pollfish network the appropriate values with added.
 
