@@ -11,13 +11,13 @@ Pollfish internal mediation algorithm optimizes to distribute the best convertin
 
 Publishers can log in to their Pollfish Dashboard and enable or disable any survey provider that they do not like through their apps without the need for any changes in code. Mediation settings are applied per app.
 
-Publishers can also change through their Dashboard per mediation network:
+Publishers can also change through their Dashboard per mediation network the following settings:
 
 - Maximum Length Of Interview (LOI)
 - Minimum Incidence Rate (IR) 
 - Desktop Vs Mobile Surveys (when available)
 
-<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/settings_control.png" width="900" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/settings_control.png" width="600" height="auto"/>
 </p>
 
 <br/>
@@ -31,7 +31,15 @@ Publishers can log in to their Pollfish Dashboard and review their revenue and p
 <br/>
 <h2>Mediation Router</h2>
 
+When a user gets screened out from a survey, publishers can enable our internal router. This router looks automatically looks for another survey for that user in order not to miss the revenue opportunity.
 
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/router.gif" width="900" height="auto"/>
+</p>
+
+Publishers have the ability  select from their app's settings and specify how many times a user should be allowed to get a new survey opportunity if they have been screened out while trying to complete a survey.
+
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/set_router.png" width="900" height="auto"/>
+</p>
 
 <h2>Mediation Networks</h2>
 
