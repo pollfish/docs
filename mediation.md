@@ -11,6 +11,12 @@ Pollfish internal mediation algorithm optimizes to distribute the best convertin
 
 Publishers can log in to their Pollfish Dashboard and enable or disable any survey provider that they do not like through their apps without the need for any changes in code. Mediation settings are applied per app.
 
+Publishers can also change through their Dashboard per mediation network:
+
+- Maximum Length Of Interview (LOI)
+- Minimum Incidence Rate (IR) 
+- Desktop Vs Mobile Surveys (when available)
+
 <p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/settings_control.png" width="900" height="auto"/>
 </p>
 
