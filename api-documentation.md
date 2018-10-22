@@ -393,7 +393,7 @@ about the survey network and type. The syntax is
 
 ```
 survey_class: provider["/"type]
-provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo"
+provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "P2Sample"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
@@ -419,6 +419,7 @@ The whole set of values currently supported are:
 | **Lucid**         | Lucid survey   
 | **InnovateMR**         | InnovateMR survey   
 | **SaySo**       | SaySo survey   
+| **P2Sample**       | P2Sample survey
 
 When a new mediation network enters the Pollfish network the appropriate values with added.
 
