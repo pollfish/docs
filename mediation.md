@@ -15,9 +15,9 @@ Publishers can log in to their Pollfish Dashboard and enable or disable any surv
 
 Publishers can also change through their Dashboard per mediation network the following settings:
 
-- **Maximum Length Of Interview (LOI)** - The Length Of Interview  is the maximum amount of time (in minutes) a survey should take.
-- **Minimum Incidence Rate (IR)** - The Incidence Rate is calculated as a percentage of successful completes over the total surveys served.
-- **Desktop Vs Mobile Surveys (when available)** - Some providers support surveys not only for mobile but also for desktop (ideal for websites)
+- **Maximum Length Of Interview (LOI)** - Publishers can set the maximum amount of time (in minutes) a survey should take.
+- **Minimum Incidence Rate (IR)** - Publisher can set the minimum IR of accepted surveys. IR is calculated as a percentage of successful completes over the total surveys served.
+- **Desktop Vs Mobile Surveys (when available)** - Publishers can enable and allow surveys that are not mobile optimized (ideal for websites)
 
 <p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/settings_control.png" width="600" height="auto"/>
 </p>
@@ -35,12 +35,12 @@ Publishers can log in to their Pollfish Dashboard and review their revenue and p
 
 When a user gets screened out from a survey, publishers can enable our internal router. This router looks automatically looks for another survey for that user in order not to miss the revenue opportunity.
 
-<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/router.gif" width="900" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/router.gif" width="500" height="auto"/>
 </p>
 
 Publishers have the ability  select from their app's settings and specify how many times a user should be allowed to get a new survey opportunity if they have been screened out while trying to complete a survey.
 
-<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/set_router.png" width="900" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/set_router.png" width="700" height="auto"/>
 </p>
 
 <h2>Mediation Networks</h2>
