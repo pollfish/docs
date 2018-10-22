@@ -96,3 +96,10 @@ InnovateMR is a fiercely independent sampling company that delivers faster answe
 <h3> <img src="https://s3.amazonaws.com/pf.mobile/img/sayso.png" width="40" height="auto"/></h3>
 
 Research for Good Inc. (SaySo Rewards),is an online sample company that provides online market research surveys. It connects nonprofits with the market research industry as a new donation development channel. The company was incorporated in 2010 and is based in Redmond, Washington.
+
+
+<h3> <img src="https://storage.googleapis.com/pollfish_production/other/P2Sample.png" width="40" height="auto"/></h3>
+
+P2Sample, Inc. provides online sample and market research services. The company uses a sampling technology and provide sample in various areas, including Hispanic/ethnic targets, millennial/teens, and multinational audiences. P2Sample, Inc. was founded in 2007 and is based in Alpharetta, Georgia.
+
+
