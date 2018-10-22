@@ -33,12 +33,12 @@ Publishers can log in to their Pollfish Dashboard and review their revenue and p
 <br/>
 <h2>Mediation Router</h2>
 
-When a user gets screened out from a survey, publishers can enable our internal router. This router looks automatically looks for another survey for that user in order not to miss the revenue opportunity.
+Mediation Router automatically looks for a new survey when a user gets screened out. Publishers can enable or disable the router. 
 
 <p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/router.gif" width="500" height="auto"/>
 </p>
 
-Publishers have the ability  select from their app's settings and specify how many times a user should be allowed to get a new survey opportunity if they have been screened out while trying to complete a survey.
+Publishers have also  the ability  select from their app's settings and specify how many times a user should be allowed to get a new survey opportunity if they have been screened out while trying to complete a survey.
 
 <p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/set_router.png" width="700" height="auto"/>
 </p>
