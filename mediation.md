@@ -3,7 +3,7 @@
 
 Pollfish Survey Mediation Platform exposes apps and websites to the whole market research monetization marketplace providing the maximum possible fill rates with the highest eCPMs for publishers looking to make money from their apps with surveys. 
 
-With Pollfish mediation, publishers can set up and manage multiple survey providers within a single platform. Integration of Pollfish mediation is straightforward and should take a few minutes to set up and go live while with every single individual survey provider it could take weeks to integrate. There is a constant pipeline of adding more and more network partners to the mediation stack.
+With Pollfish mediation, publishers can set up and manage multiple survey providers within a single platform. Integration of Pollfish mediation is straightforward and should take a few minutes to set up and go live, while with every single individual survey provider it could take weeks to integrate  seperately. There is a constant pipeline of adding more and more network partners to the mediation stack. Publishers will have to just enable or enable them through their dashboard without the need for changes in code.
 
 Pollfish internal mediation algorithm optimizes to distribute the best converting and the most high paid surveys to users.
 
@@ -11,7 +11,7 @@ Pollfish internal mediation algorithm optimizes to distribute the best convertin
 
 Publishers can log in to their Pollfish Dashboard and enable or disable any survey provider that they do not like through their apps without the need for any changes in code. Mediation settings are applied per app.
 
-<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/random/med_settings.jpg" width="900" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/settings_control.png" width="900" height="auto"/>
 </p>
 
 <br/>
@@ -21,6 +21,11 @@ Publishers can log in to their Pollfish Dashboard and review their revenue and p
 
 <p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/random/revenue.png" width="900" height="auto"/>
 </p>
+
+<br/>
+<h2>Mediation Router</h2>
+
+
 
 <h2>Mediation Networks</h2>
 
