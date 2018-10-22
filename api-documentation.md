@@ -342,6 +342,7 @@ have the persona, else do not specify a value for the field.
 |10| **entertainment_enthusiast** | Boolean  | false
 |11| **fashionista**   | Boolean             | false
 
+
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
 |63| **survey_format**   | Basic               | 0
@@ -396,8 +397,6 @@ type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
 that is a network name followed by an optional slash and survey type.
-
-The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish.
 
 The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish.
 
