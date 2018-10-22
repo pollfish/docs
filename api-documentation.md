@@ -343,6 +343,7 @@ have the persona, else do not specify a value for the field.
 |11| **fashionista**   | Boolean             | false
 
 
+
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
 |63| **survey_format**   | Basic               | 0
