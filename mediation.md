@@ -3,7 +3,9 @@
 
 Pollfish Survey Mediation Platform exposes apps and websites to the whole market research monetization marketplace providing the maximum possible fill rates with the highest eCPMs for publishers looking to make money from their apps with surveys. 
 
-With Pollfish mediation, publishers can set up and manage multiple survey providers within a single platform. Integration of Pollfish mediation is straightforward and should take a few minutes to set up and go live, while with every single individual survey provider it could take weeks to integrate  seperately. There is a constant pipeline of adding more and more network partners to the mediation stack. Publishers will have to just enable or enable them through their dashboard without the need for changes in code.
+With Pollfish mediation, publishers can set up and manage multiple survey providers within a single platform. Integration of Pollfish mediation is straightforward and should take a few minutes to set up and go live, while with every single individual survey provider it could take weeks to integrate  seperately. 
+
+note://There is a constant pipeline of adding more and more network partners to the mediation stack.
 
 Pollfish internal mediation algorithm optimizes to distribute the best converting and the most high paid surveys to users.
 
@@ -13,9 +15,9 @@ Publishers can log in to their Pollfish Dashboard and enable or disable any surv
 
 Publishers can also change through their Dashboard per mediation network the following settings:
 
-- Maximum Length Of Interview (LOI)
-- Minimum Incidence Rate (IR) 
-- Desktop Vs Mobile Surveys (when available)
+- **Maximum Length Of Interview (LOI)** - The Length Of Interview  is the maximum amount of time (in minutes) a survey should take.
+- **Minimum Incidence Rate (IR)** - The Incidence Rate is calculated as a percentage of successful completes over the total surveys served.
+- **Desktop Vs Mobile Surveys (when available)** - Some providers support surveys not only for mobile but also for desktop (ideal for websites)
 
 <p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/settings_control.png" width="600" height="auto"/>
 </p>
