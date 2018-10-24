@@ -423,6 +423,16 @@ The whole set of values currently supported are:
 
 When a new mediation network enters the Pollfish network the appropriate values with added.
 
+The header parameter called **survey_ir** shows
+the current estimation for the survey incidence rate as
+an integer number in the range 0-100. The header is optional
+and present only if the IR can be computed reliably.
+
+The header parameter called **survey_loi** shows
+the expected time in minutes that it takes to
+complete the survey. The header is optional
+and present only if the LOI can be computed reliably.
+
 ### RESPONSE BODY
 
 A displayable HTML page
