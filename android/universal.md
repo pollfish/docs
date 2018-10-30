@@ -537,9 +537,6 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 
 Explicitly requests a specific survey format.
 
-| **Note:** You can request and receive a specific survey format only in debug mode
-
-
 There are four different options available: 
 
 - SurveyFormat.BASIC 
@@ -562,9 +559,6 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.surveyFormat(SurveyFormat.PLAYFUL)
 					.build();
 ```
-<br/>
-*In third party surveys when a survey is completed or the user gets screened out, since the user is outside of the app at a website, the next time Pollfish init will be called within the app, survey completed or user not eligible event will be fired (instead of survey received or not available) in order to inform the user on what happened at the website.
-<br/>
 <br/>
 <br/>
 ### 10. Handling orientation changes (optional)
