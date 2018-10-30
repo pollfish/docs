@@ -572,9 +572,6 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 
 Explicitly requests a specific survey format.
 
-| **Note:** You can request and receive a specific survey format only in debug mode
-
-
 There are four different options available: 
 
 - SurveyFormat.BASIC 
