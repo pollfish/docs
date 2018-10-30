@@ -628,8 +628,6 @@ an example of user attributes dictionary could be the following one:
 
 If you want to test Pollfish different available Survey Formats you can explicitly request a specific survey format during initialization
 
-| **Note:** You can request and receive a specific survey format only in debug mode
-
 There are four different options available: 
 
 - SurveyFormatBasic
