@@ -125,7 +125,9 @@ You can find examples in code on how to implement the rewarded approach in the l
 
 - [iOS Sample Project](https://github.com/pollfish/ios-sdk-pollfish/blob/master/SampleProject/SampleProject/SecondViewController.m)
 
-- [Web Plugin Sample Project](https://gist.github.com/vourkosa/202221c7442531b23fb1b4ca9a643de0)
+- [Web Plugin Sample Project](https://github.com/pollfish/webplugin-rewarded-example)
+
+- [Api Documentation Sample Project](https://github.com/pollfish/api-pollfish)
 
 If you are using a different platform or engine please follow the logical steps as described above in order to archieve the desired behaviour.
 
