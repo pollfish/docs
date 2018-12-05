@@ -71,7 +71,7 @@ For example:
 > **Important:** If you have selected checkbox "Notify me when the user is not eligible" you should add "status" param in your url. If you uncheck this option you should remove "status" param from your url.
 
 
-#### (optional) Get informed about the reason a user was not eligible
+#### Get informed about the reason a user was not eligible (optional) 
 As before, you will need to select the **Notify me when the user is not eligible** checkbox and provide a new parameter for the termination reason called **[[term_reason]]**
 
 For example:
