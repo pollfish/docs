@@ -8,13 +8,13 @@
 
 You can set a Server-to-Server postback call through Pollfish developer dashboard, in your app's page. This call will be fired on every survey completion through your app. 
 
-<img src="https://storage.googleapis.com/pollfish-images/s2s.png">
+<img src="https://storage.googleapis.com/pollfish-images/s2s_dashboard_o.png">
 
 > **Note:** You should use this call to verify a survey completion if you reward your users. This is the only 100% accurate and secure way to monitor survey completion through your app.
 
 Server-to-server callbacks can be used to retrieve several different params on publisher's server side.
 
-<img src="https://storage.googleapis.com/pollfish-images/s2s_new.png">
+<img src="https://storage.googleapis.com/pollfish-images/s2s_status_form_o.png">
 
 In general, we advice to monitor all these parameters on your server side.
 
@@ -53,7 +53,7 @@ You can easily retrieve through every callback how much money were earned in USD
 
 You can register and receive callbacks when a user was not eligible for a survey. User not eligible in that case means that either the user was screened out from a particular survey or he/she was marked as fraud by our anti-fraud system.
 
-If you want to register and receive not eligible/eligible info in your callbacks please select the checkbox as below (selected by defualt)
+If you want to register and receive not eligible/eligible info in your callbacks please select the checkbox as below
 
 <img src="https://storage.googleapis.com/pollfish-images/not_eligible2.png">
 
@@ -71,6 +71,29 @@ For example:
 > **Important:** If you have selected checkbox "Notify me when the user is not eligible" you should add "status" param in your url. If you uncheck this option you should remove "status" param from your url.
 
 
+#### (optional) Get informed about the reason a user was not eligible
+As before, you will need to select the **Notify me when the user is not eligible** checkbox and provide a new parameter for the termination reason called **[[term_reason]]**
+
+For example:
+
+```
+ https://mybaseurl.com?device_id=[[device_id]]&cpa=[[cpa]]&request_uuid=[[request_uuid]]&timestamp=[[timestamp]]&tx_id=[[tx_id]]&signature=[[signature]]&status=[[status]]&reason=[[term_reason]]
+```
+The **[[term_reason]]** value will contain **one** of these strings as the reason
+ - quota_full
+ - survey_closed
+ - profiling
+ - screenout
+ - duplicate
+ - security
+ - eomissmatch
+ - quality
+ - hasty_answers
+ - gibberish
+ - captcha
+ - third_party_termination
+ 
+ > **Important:** These responses might change in the future
 
 ### 7. Securing your callback with signature
 
