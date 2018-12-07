@@ -855,7 +855,7 @@ The whole set of values currently supported are:
 | **SaySo**       | SaySo survey   
 | **P2Sample**       | P2Sample survey
 
-When a new mediation network enters the Pollfish network the appropriate values with added.
+When a new mediation network enters the Pollfish network the appropriate values will be added.
 
 
 <span style="text-decoration: underline">Objective-C:</span>
