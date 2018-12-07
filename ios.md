@@ -1,4 +1,8 @@
-<div class="changelog" data-version="4.4.0">
+<div class="changelog" data-version="4.5.0">
+v4.5.0
+
+- Added support for retrieving survey info in callbacks (CPA, IR, LOI, Survey Class)
+
 v4.4.0
 
 - Added support for iOS 12
@@ -810,7 +814,7 @@ func pollfishReceived()
 }
 ```
 
-You can also get informed about the price and type of survey (playful or not) that was received by listening and reading the relevant notification object. Price is shown in USD (estimated based on daily exchange currency).
+You can also get informed about: the price and type of survey (playful or not) that was received by listening and reading the relevant notification object. Price is shown in USD cents (estimated based on daily exchange currency).
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -820,11 +824,15 @@ You can also get informed about the price and type of survey (playful or not) th
 
 ```
 - (void)pollfishReceived:(NSNotification *)notification
-{
-    BOOL playfulSurvey = [[[notification userInfo] valueForKey:@"playfulSurvey"] boolValue];
-    int surveyPrice = [[[notification userInfo] valueForKey:@"surveyPrice"] intValue];
+{   
+    int surveyPrice = [[[notification userInfo] valueForKey:@"survey_cpa"] intValue];
+    int surveyIR = [[[notification userInfo] valueForKey:@"survey_ir"] intValue];
+    int surveyLOI = [[[notification userInfo] valueForKey:@"survey_loi"] intValue];
     
-    NSLog(@"Pollfish Survey Received - Playful Survey: %@ with survey price: %d" , playfulSurvey?@"YES":@"NO", surveyPrice);
+    NSString *surveyClass =[[notification userInfo] valueForKey:@"survey_class"];
+  
+    NSLog(@"Pollfish: Survey Received - SurveyPrice:%d andSurveyIR: %d andSurveyLOI:%d andSurveyClass:%@", surveyPrice,surveyIR, surveyLOI, surveyClass);
+    
 }
 ```
 
@@ -839,11 +847,14 @@ You can also get informed about the price and type of survey (playful or not) th
 func pollfishReceived(_ notification:Notification) {
      
   let tmp : [AnyHashable: Any] = notification.userInfo!
+  
+  let surveyPrice = tmp["survey_cpa"]!
+  let surveyIR =  tmp["survey_ir"]!
+  let surveyLOI =  tmp["survey_loi"]!
+  let surveyClass =  tmp["survey_class"]!
         
-  let playfulSurvey = tmp["playfulSurvey"]! as! Bool
-  let surveyPrice = tmp["surveyPrice"]!
-        
-  print("Pollfish Survey Received - Playful Survey : \(playfulSurvey)  with survey price: \(surveyPrice)")
+  print("Pollfish Survey  Received - SurveyPrice: \(surveyPrice) andSurveyIR: \(surveyIR) andSurveyLOI: \(surveyLOI) andSurveyClass: \(surveyClass)")
+
 
 }
 ```
@@ -886,11 +897,14 @@ You can also get informed about the price and type of survey (playful or not) th
 
 ```
 - (void)pollfishCompleted:(NSNotification *)notification
-{
-    BOOL playfulSurvey = [[[notification userInfo] valueForKey:@"playfulSurvey"] boolValue];
-    int surveyPrice = [[[notification userInfo] valueForKey:@"surveyPrice"] intValue];
+{ 
+    int surveyPrice = [[[notification userInfo] valueForKey:@"survey_cpa"] intValue];
+    int surveyIR = [[[notification userInfo] valueForKey:@"survey_ir"] intValue];
+    int surveyLOI = [[[notification userInfo] valueForKey:@"survey_loi"] intValue]; 
+    NSString *surveyClass =[[notification userInfo] valueForKey:@"survey_class"];
     
-    NSLog(@"Pollfish Survey Completed - Playful Survey: %@ with survey price: %d" , playfulSurvey?@"YES":@"NO", surveyPrice);
+    NSLog(@"Pollfish Survey Completed - SurveyPrice:%d andSurveyIR: %d andSurveyLOI:%d andSurveyClass:%@", surveyPrice,surveyIR, surveyLOI, surveyClass);
+    
 }
 ```
 
@@ -904,13 +918,15 @@ You can also get informed about the price and type of survey (playful or not) th
 ```
 func pollfishCompleted(_ notification:Notification) {
      
-  let tmp : [AnyHashable: Any] = notification.userInfo!
+ let tmp : [AnyHashable: Any] = notification.userInfo!
         
-  let playfulSurvey = tmp["playfulSurvey"]! as! Bool
-  let surveyPrice = tmp["surveyPrice"]!
+ let surveyPrice = tmp["survey_cpa"]!
+ let surveyIR =  tmp["survey_ir"]!
+ let surveyLOI =  tmp["survey_loi"]!
+ let surveyClass =  tmp["survey_class"]!
         
-  print("Pollfish Survey Completed - Playful Survey : \(playfulSurvey)  with survey price: \(surveyPrice)")
-
+ print("Pollfish Survey  Completed - SurveyPrice: \(surveyPrice) andSurveyIR: \(surveyIR) andSurveyLOI: \(surveyLOI) andSurveyClass: \(surveyClass)")
+       
 }
 ```
 
