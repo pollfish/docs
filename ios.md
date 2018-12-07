@@ -814,7 +814,49 @@ func pollfishReceived()
 }
 ```
 
-You can also get informed about: the price and type of survey (playful or not) that was received by listening and reading the relevant notification object. Price is shown in USD cents (estimated based on daily exchange currency).
+You can also get informed about: 
+
+- **survey_cpa** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
+- **survey_ir** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR wan not computed reliably.
+- **survey_loi** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
+- **survey_class** :  information about the survey network and type* 
+
+by listening and reading the relevant notification object. 
+
+* The syntax for survey_class values is:
+
+```
+survey_class: provider["/"type]
+provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "P2Sample"
+type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
+```
+
+that is a network name followed by an optional slash and survey type.
+
+The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish.
+
+The type is that of the survey as described in the network's documentation. The exception is the type "Demographics" which
+is always used to identify surveys whose purpose is to collect demographic data for the users.
+
+The whole set of values currently supported are:
+
+| Value              | Description
+|:------------------|:----------------
+| **Pollfish**           | Pollfish Basic survey
+| **Pollfish/Basic**           |  Pollfish Basic survey (another name)
+| **Pollfish/Playful**         | Pollfish Playful survey 
+| **Pollfish/ThirdParty**         | Pollfish 3rd party survey
+| **Pollfish/Demographics**         | Pollfish Demographic survey
+| **Pollfish/Internal**         | Pollfish internal survey created by the publisher
+| **Toluna**         | Toluna survey   
+| **Cint**         | Cint survey   
+| **Lucid**         | Lucid survey   
+| **InnovateMR**         | InnovateMR survey   
+| **SaySo**       | SaySo survey   
+| **P2Sample**       | P2Sample survey
+
+When a new mediation network enters the Pollfish network the appropriate values with added.
+
 
 <span style="text-decoration: underline">Objective-C:</span>
 
