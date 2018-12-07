@@ -1,4 +1,8 @@
-<div class="changelog" data-version="4.5.0">
+<div class="changelog" data-version="4.5.1">
+v4.5.1
+
+- Fixed bug with user locale
+
 v4.5.0
 
 - Added support for retrieving survey info in callbacks (CPA, IR, LOI, Survey Class)
