@@ -421,7 +421,7 @@ The whole set of values currently supported are:
 | **SaySo**       | SaySo survey   
 | **P2Sample**       | P2Sample survey
 
-When a new mediation network enters the Pollfish network the appropriate values with added.
+When a new mediation network enters the Pollfish network the appropriate values will be added.
 
 The header parameter called **survey_ir** shows
 the current estimation for the survey incidence rate as
