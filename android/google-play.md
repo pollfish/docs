@@ -125,7 +125,7 @@ dependencies {
 	 implementation 'com.google.android.gms:play-services-ads:8.3.0'
 }
 ```
-otherwise since Google Play Services 8.4.* you can use only Google Play Services Base Client library. For example:
+since Google Play Services 8.4.* you can use only Google Play Services Base Client library. For example:
 
 ```java
 dependencies {
@@ -134,6 +134,15 @@ dependencies {
 ```
 
 > **Note:** If you cannot see surveys even in developer mode, please do check your logs to see if this is related your current version of Google Play Services  
+
+since Google Play Services 16.* you can use the following packages:
+
+```java
+dependencies {
+    implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
+    implementation 'com.google.android.gms:play-services-base:16.0.1'
+}
+```
 
 </br>
 
