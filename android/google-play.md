@@ -133,9 +133,7 @@ dependencies {
 }
 ```
 
-> **Note:** If you cannot see surveys even in developer mode, please do check your logs to see if this is related your current version of Google Play Services  
-
-since Google Play Services 16.* you can use the following packages:
+If you are using Google Play Services 16.+ you can use the following packages:
 
 ```java
 dependencies {
@@ -143,6 +141,10 @@ dependencies {
     implementation 'com.google.android.gms:play-services-base:16.0.1'
 }
 ```
+
+
+> **Note:** If you cannot see surveys even in developer mode, please do check your logs to see if this is related your current version of Google Play Services  
+
 
 </br>
 
