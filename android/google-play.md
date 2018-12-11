@@ -326,6 +326,9 @@ No | Description
 10.13 | **.pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is closed
 10.14 | **.userProperties(UserProperties userProperties)**  <br/> Send user attributes to skip or shorten Pollfish demographic surveys
 10.15 | **.surveyFormat(SurveyFormat surveyFormat)**  <br/> Requests a specific survey format (only in debug mode)
+10.16 | **.pollfishReceivedSurveyListener(PollfishReceivedSurveyListener pollfishReceivedSurveyListener)**  <br/> Sets a notification listener when Pollfish Survey is received
+10.17 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
+
 <br/>
 #### **10.1 .indicatorPosition(int position)**
 Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
@@ -435,7 +438,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 ```
 
 <br/>
-#### **10.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
+#### [DEPRECATED] **10.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
 
 Sets a notification listener when a Pollfish Survey is received. With this notification publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
 
@@ -466,7 +469,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **10.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
+#### [DEPRECATED] **10.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
 
 Sets a notification listener when a Pollfish Survey is completed. With this notification, publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
 
@@ -613,6 +616,68 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
+#### **10.16 .pollfishReceivedSurveyListener(PollfishReceivedSurveyListener pollfishReceivedSurveyListener)**
+
+Sets a notification listener when a Pollfish Survey is received. 
+
+With this notification publisher can also get informed through the SurveyInfo object returned about:
+
+- **surveyCPA** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
+- **surveyIR** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR wan not computed reliably.
+- **surveyLOI** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
+- **surveyClass** :  information about the survey network and type* 
+
+by listening and reading the relevant notification object. 
+
+* The syntax for survey_class values is:
+
+```
+survey_class: provider["/"type]
+provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "P2Sample"
+type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
+```
+
+that is a network name followed by an optional slash and survey type.
+
+The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish.
+
+The type is that of the survey as described in the network's documentation. The exception is the type "Demographics" which
+is always used to identify surveys whose purpose is to collect demographic data for the users.
+
+The whole set of values currently supported are:
+
+| Value              | Description
+|:------------------|:----------------
+| **Pollfish**           | Pollfish Basic survey
+| **Pollfish/Basic**           |  Pollfish Basic survey (another name)
+| **Pollfish/Playful**         | Pollfish Playful survey 
+| **Pollfish/ThirdParty**         | Pollfish 3rd party survey
+| **Pollfish/Demographics**         | Pollfish Demographic survey
+| **Pollfish/Internal**         | Pollfish internal survey created by the publisher
+| **Toluna**         | Toluna survey   
+| **Cint**         | Cint survey   
+| **Lucid**         | Lucid survey   
+| **InnovateMR**         | InnovateMR survey   
+| **SaySo**       | SaySo survey   
+| **P2Sample**       | P2Sample survey
+
+When a new mediation network enters the Pollfish network the appropriate values will be added.
+
+Below you can see an example of how you can register and listen within your code to Pollfish survey received notification through ParamsBuilder instance:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+	.pollfishReceivedSurveyListener(new PollfishReceivedSurveyListener() {
+    @Override
+  public void onPollfishSurveyReceived(SurveyInfo surveyInfo) {
+        Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
+                + " SurveyClass: " + surveyInfo.getSurveyClass()+ " LOI: " + surveyInfo.getSurveyLOI()+ " IR: " + surveyInfo.getSurveyIR());
+    }
+    })
+	.build();
+```
+<br/>
+
 ### 11. Handling orientation changes (optional)
 
 If your app supports both orientations and **your Activities are recreated** on each orientation change **you should not do anything more**.  
