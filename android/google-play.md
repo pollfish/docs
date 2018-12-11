@@ -630,7 +630,7 @@ With this notification publisher can get informed through the SurveyInfo object 
 * The syntax for surveyClass values is:
 
 ```
-survey_class: provider["/"type]
+provider["/"type]
 provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "P2Sample"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
