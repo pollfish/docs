@@ -791,9 +791,12 @@ and Override  onPollfishSurveyCompleted() function:
 
 ```java
 @Override
-public void onPollfishSurveyCompleted(boolean playfulSurveys , int surveyPrice) {
-  Log.d("Pollfish", "Pollfish survey completed - Playful survey: " + playfulSurveys + " with price: " + surveyPrice);
+public void onPollfishSurveyCompleted(SurveyInfo surveyInfo) {
 
+  Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
+                + " SurveyClass: " + surveyInfo.getSurveyClass()
+		+ " LOI: " + surveyInfo.getSurveyLOI()
+		+ " IR: " + surveyInfo.getSurveyIR());
 }
 ```
 <br/>
