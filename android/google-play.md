@@ -438,7 +438,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 ```
 
 <br/>
-#### [DEPRECATED-use 10.16] **10.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
+#### **10.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)** [DEPRECATED-use 10.16] 
 
 Sets a notification listener when a Pollfish Survey is received. With this notification publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
 
@@ -469,7 +469,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### [DEPRECATED-use 10.17] **10.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
+#### **10.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)** [DEPRECATED-use 10.17] 
 
 Sets a notification listener when a Pollfish Survey is completed. With this notification, publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
 
@@ -637,10 +637,7 @@ type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 
 network name followed by an optional slash and survey type.
 
-The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish.
-
-The type is that of the survey as described in the network's documentation. The exception is the type "Demographics" which
-is always used to identify surveys whose purpose is to collect demographic data for the users.
+The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish. The type reffers to different types of surveys provided by a network.
 
 The whole set of values currently supported are:
 
@@ -680,7 +677,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY").pollfishReceived
 
 Sets a notification listener when a Pollfish Survey is completed. With this notification, publisher can also get informed through the SurveyInfo object returned. about the:
 
-- **surveyCPA** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
+- **surveyCPA** : money earned from survey received in US dollar cents (estimated based on daily exchange currency)
 - **surveyIR** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR wan not computed reliably.
 - **surveyLOI** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
 - **surveyClass** :  information about the survey network and type
