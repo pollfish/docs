@@ -327,7 +327,7 @@ No | Description
 10.14 | **.userProperties(UserProperties userProperties)**  <br/> Send user attributes to skip or shorten Pollfish demographic surveys
 10.15 | **.surveyFormat(SurveyFormat surveyFormat)**  <br/> Requests a specific survey format (only in debug mode)
 10.16 | **.pollfishReceivedSurveyListener(PollfishReceivedSurveyListener pollfishReceivedSurveyListener)**  <br/> Sets a notification listener when Pollfish Survey is received
-10.17 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
+10.17 | **.pollfishCompletedSurveyListener(PollfishCompletedSurveyListener pollfishCompletedSurveyListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
 
 <br/>
 #### **10.1 .indicatorPosition(int position)**
