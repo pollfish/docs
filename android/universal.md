@@ -115,9 +115,9 @@ Download Pollfish Android SDK or reference it through jCenter().
 
 #### **Download Pollfish Android SDK**
 
-Add Pollfish **.JAR** or **.AAR** file to your project libraries  
+Add Pollfish **.AAR** file to your project libraries  
 
-If you are using Android Studio, right click on your project add select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate pollfish jar or aar file. Right click again on your project and in Module Dependencies tab choose to add pollfish module that you recently added, as a dependency.
+If you are using Android Studio, right click on your project add select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate pollfish aar file. Right click again on your project and in Module Dependencies tab choose to add pollfish module that you recently added, as a dependency.
 
 **OR**
 
