@@ -155,15 +155,15 @@ dependencies {
 
 </br>
 
-### 4\. Add Pollfish jar or aar library to your project
+### 4\. Add Pollfis aar library to your project
 
 Download Pollfish Android SDK or reference it through jCenter().
 
 #### **Download Pollfish Android SDK**
 
-Add Pollfish **.JAR** or **.AAR** file to your project libraries  
+Add Pollfish **.AAR** file to your project libraries  
 
-If you are using Android Studio, right click on your project add select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate pollfish jar or aar file. Right click again on your project and in Module Dependencies tab choose to add pollfish module that you recently added, as a dependency.
+If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate pollfish jar or aar file. Right click again on your project and in Module Dependencies tab choose to add pollfish module that you recently added, as a dependency.
 
 **OR**
 
@@ -317,9 +317,9 @@ No | Description
 10.4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
 10.5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
 10.6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
-10.7 | **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
+10.7 | [DEPRECATED] **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
 10.8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
-10.9 | **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
+10.9 | [DEPRECATED] **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
 10.10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
 10.11 | **.pollfishUserRejectedSurveyListener(PollfishUserRejectedSurveyListener pollfishUserRejectedSurveyListener)**  <br/> Sets a notification listener when a user rejects a survey
 10.12 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
