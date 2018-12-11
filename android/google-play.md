@@ -317,9 +317,9 @@ No | Description
 10.4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
 10.5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
 10.6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
-10.7 | [DEPRECATED] **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
+10.7 | [DEPRECATED-use 10.16] **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
 10.8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
-10.9 | [DEPRECATED] **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
+10.9 | [DEPRECATED-use 10.17] **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
 10.10 | **.pollfishUserNotEligibleListener(PollfishUserNotEligibleListener pollfishUserNotEligibleListener)**  <br/> Sets a notification listener when a user is not eligible for a Pollfish survey
 10.11 | **.pollfishUserRejectedSurveyListener(PollfishUserRejectedSurveyListener pollfishUserRejectedSurveyListener)**  <br/> Sets a notification listener when a user rejects a survey
 10.12 | **.pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**  <br/> Sets a notification listener when Pollfish Survey panel is opened
@@ -438,7 +438,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 ```
 
 <br/>
-#### [DEPRECATED] **10.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
+#### [DEPRECATED-use 10.16] **10.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**
 
 Sets a notification listener when a Pollfish Survey is received. With this notification publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
 
@@ -469,7 +469,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### [DEPRECATED] **10.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
+#### [DEPRECATED-use 10.17] **10.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**
 
 Sets a notification listener when a Pollfish Survey is completed. With this notification, publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
 
@@ -620,16 +620,14 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 
 Sets a notification listener when a Pollfish Survey is received. 
 
-With this notification publisher can also get informed through the SurveyInfo object returned about:
+With this notification publisher can also get informed through the SurveyInfo object returned, about the:
 
 - **surveyCPA** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
 - **surveyIR** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR wan not computed reliably.
 - **surveyLOI** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
 - **surveyClass** :  information about the survey network and type* 
 
-by listening and reading the relevant notification object. 
-
-* The syntax for survey_class values is:
+* The syntax for surveyClass values is:
 
 ```
 survey_class: provider["/"type]
@@ -637,7 +635,7 @@ provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "P
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
-that is a network name followed by an optional slash and survey type.
+network name followed by an optional slash and survey type.
 
 The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish.
 
@@ -666,13 +664,35 @@ When a new mediation network enters the Pollfish network the appropriate values 
 Below you can see an example of how you can register and listen within your code to Pollfish survey received notification through ParamsBuilder instance:
 <br/>
 ```java
-ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
-	.pollfishReceivedSurveyListener(new PollfishReceivedSurveyListener() {
-    @Override
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY").pollfishReceivedSurveyListener(new PollfishReceivedSurveyListener() {
+  @Override
   public void onPollfishSurveyReceived(SurveyInfo surveyInfo) {
         Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
-                + " SurveyClass: " + surveyInfo.getSurveyClass()+ " LOI: " + surveyInfo.getSurveyLOI()+ " IR: " + surveyInfo.getSurveyIR());
+                + " SurveyClass: " + surveyInfo.getSurveyClass()
+		+ " LOI: " + surveyInfo.getSurveyLOI()
+		+ " IR: " + surveyInfo.getSurveyIR());
     }
+  }).build();
+```
+<br/>
+
+**10.17 .pollfishCompletedSurveyListener(PollfishCompletedSurveyListener pollfishCompletedSurveyListener)**
+
+Sets a notification listener when a Pollfish Survey is completed. With this notification, publisher can also get informed through the SurveyInfo object returned. about the:
+
+- **surveyCPA** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
+- **surveyIR** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR wan not computed reliably.
+- **surveyLOI** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
+- **surveyClass** :  information about the survey network and type
+
+Below you can see an example of how you can register and listen within your code to Pollfish survey completed notification through ParamsBuilder instance:
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+	.pollfishCompletedSurveyListener(new PollfishCompletedSurveyListener() {
+    @Override
+    public void onPollfishSurveyCompleted(SurveyInfo surveyInfo)
+    {}
     })
 	.build();
 ```
@@ -712,26 +732,29 @@ public void onConfigurationChanged(Configuration newConfig) {
 
 #### **12.1. Get notified when a Pollfish survey is received**
 
-You can be notified when a Pollfish survey is received. With this notification publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
+You can be notified when a Pollfish survey is received. With this notification publisher can also get informed about the type of survey that was received, money to be earned if survey is completed, shown in USD cents and other info around the survey such us LOI and IR.
 
  Just import:  
 
 ```java
-import com.pollfish.interfaces.PollfishSurveyReceivedListener; 
+import com.pollfish.interfaces.PollfishReceivedSurveyListener; 
 ```
 
-and make your Activity implement PollfishSurveyReceivedListener, for example:
+and make your Activity implement PollfishReceivedSurveyListener, for example:
 
 ```java
-public class MyActivity extends Activity implements PollfishSurveyReceivedListener
+public class MyActivity extends Activity implements PollfishReceivedSurveyListener
 ```
 
 and Override onPollfishSurveyReceived() function: 
 
 ```java
 @Override
-public void onPollfishSurveyReceived(boolean playfulSurveys, int surveyPrice) {
-  Log.d("Pollfish", "Pollfish survey received - Playful survey: " + playfulSurveys + " with price: " + surveyPrice);
+public void onPollfishSurveyReceived(SurveyInfo surveyInfo) {
+  Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
+                + " SurveyClass: " + surveyInfo.getSurveyClass()
+		+ " LOI: " + surveyInfo.getSurveyLOI()
+		+ " IR: " + surveyInfo.getSurveyIR());
 }
 ```
 <br/>
@@ -756,18 +779,18 @@ public void onPollfishSurveyNotAvailable() {
 <br/>
 #### **12.3. Get notified when a Pollfish survey is completed**
 
-You can be notified when a user completed a survey. With this notification, publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
+You can be notified when a user completed a survey. With this notification, publisher can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such us LOI and IR.
 
 Just import:  
 
 ```java
-import com.pollfish.interfaces.PollfishSurveyCompletedListener;
+import com.pollfish.interfaces.PollfishCompletedSurveyListener;
 ```
 
 and make your Activity implement SurveyCompletedListener,for example: 
 
 ```java
-public class MyActivity extends Activity implements PollfishSurveyCompletedListener 
+public class MyActivity extends Activity implements PollfishCompletedSurveyListener 
 ```
 
 and Override  onPollfishSurveyCompleted() function:
