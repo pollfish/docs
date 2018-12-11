@@ -726,7 +726,7 @@ public void onConfigurationChanged(Configuration newConfig) {
 
 #### **12.1. Get notified when a Pollfish survey is received**
 
-You can be notified when a Pollfish survey is received. With this notification publisher can also get informed about the type of survey that was received, money to be earned if survey is completed, shown in USD cents and other info around the survey such us LOI and IR.
+You can be notified when a Pollfish survey is received. With this notification publisher can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
 
  Just import:  
 
@@ -773,7 +773,7 @@ public void onPollfishSurveyNotAvailable() {
 <br/>
 #### **12.3. Get notified when a Pollfish survey is completed**
 
-You can be notified when a user completed a survey. With this notification, publisher can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such us LOI and IR.
+You can be notified when a user completed a survey. With this notification, publisher can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
 
 Just import:  
 
