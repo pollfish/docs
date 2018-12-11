@@ -1,4 +1,11 @@
-<div class="changelog" data-version="4.4.0">
+<div class="changelog" data-version="4.5.0">
+v4.5.0
+	
+- Moved away from Jar format in SDKs
+- Fixed localisation issues
+- Added new interfaces PollfishReceivedSurveyListener,PollfishCompletedSurveyListener to expose survey info (CPA, LOI, IR, Survey Class)
+- Deprecated old interfaces PollfishSurveyReceivedListener,PollfishSurveyCompletedListener
+
 v4.4.0
 	
 - Added the ability to render surveys from Mediation within the app
