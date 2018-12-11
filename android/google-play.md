@@ -627,12 +627,14 @@ With this notification publisher can get informed through the SurveyInfo object 
 - **surveyLOI** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
 - **surveyClass** :  information about the survey network and type* 
 
-* The syntax for surveyClass values is:
+The syntax for surveyClass values is:
 
 ```
 provider["/"type]
 provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "P2Sample"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
+
+example: Pollfish/Playful
 ```
 
 network name followed by an optional slash and survey type.
