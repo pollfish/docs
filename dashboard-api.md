@@ -11,19 +11,20 @@ create, update, delete or retrieve stats of Pollfish apps.
 
 |#|     **URL**                                           | **Description**
 |---|:--------------------------------------------------- |:-----------------------------------------------------------------------
-|1|    **GET /api/public/v2/apps/:api_key**              |   returns an app object
+|1|    **GET /api/public/v2/apps/:api_key**               |   returns an app object
 |2|    **POST /api/public/v2/apps**                       |   creates a new app
-|3|    **PUT /api/public/v2/apps/:api_key**              |   updates info of an existing app
-|4|    **DELETE /api/public/v2/apps/:api_key**           |   deletes an app
-|5|    **GET /api/public/v2/apps/:api_key/stats**        |   returns the stats of an app
+|3|    **PUT /api/public/v2/apps/:api_key**               |   updates info of an existing app
+|4|    **DELETE /api/public/v2/apps/:api_key**            |   deletes an app
+|5|    **GET /api/public/v2/apps/:api_key/stats**         |   returns the stats of an app
 |6|    **GET /api/public/v2/apps**                        |   returns an array of apps of a user
 |7|    **GET /api/public/v2/apps/revenue**                |   returns the revenue per app for all the apps of the developer
-|8|    **GET /api/public/v2/apps/:api_key/revenue**      |   returns the revenue of the specified app
+|8|    **GET /api/public/v2/apps/:api_key/revenue**       |   returns the revenue of the specified app
 |9|    **GET /api/public/v3/apps/performance**            |   returns the performance metrics for all the apps of the developer
-|10|    **GET /api/public/v3/apps/:api_key/performance** |   returns the performance metrics of the specified app of the developer
+|10|    **GET /api/public/v3/apps/:api_key/performance**  |   returns the performance metrics of the specified app of the developer
 |11|    **GET** **/api/public/v3/apps/revenue**           |   returns the revenue per provider for all the apps of the developer
-|12|    **GET /api/public/v3/apps/:api_key/revenue**     |   returns the revenue per provider of the specified app of the developer
+|12|    **GET /api/public/v3/apps/:api_key/revenue**      |   returns the revenue per provider of the specified app of the developer
 |13|    **GET /api/public/v3/apps/demographics**          |   returns the demographic data for a particular user
+|14|    **GET /api/public/v3/apps/:api_key/users_log**   |   returns the user logs for a given device_id or request_uuid
 
 ## Usage Steps
 
@@ -613,5 +614,59 @@ The codes are documented at
     "parental": 2,
     "race": 2,
     "year_of_birth": 1985
+}
+```
+
+## `4.14 GET /api/public/v3/apps/:api_key/users_log`
+
+returns the user logs for a given device_id or request_uuid
+
+The url can contain the following query parameters
+
+### **Parameter**
+
+|   | Name  | JSON Type     | Description                                  | Required
+|---|:------|:--------------|:---------------------------------------------|:--------
+| 1 | key   | string        | The search term (device_id or request_uuid)  | Yes
+| 2 | page  | Int           | The Page number if results are paginated     | No
+| 3 | rows  | Int           | The number of rows returned                  | No
+
+### Server Response
+
+|   | Code      | Description
+|---|:----------|:-----------------------------------
+|1  | 200       | Successful response
+|2  | 400       | Missing or invalid parameters
+
+
+### Example Requests
+
+*http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 [https://www.pollfish.com/api/public/v3/apps/27278f6e-4197-492a-b8e9-e6478317e253/users_log?key=1](https://www.pollfish.com/api/public/v3/apps/27278f6e-4197-492a-b8e9-e6478317e253/users_log?key=1)*
+
+### Example Response
+
+```json
+{
+  "totalCount":3,
+  "results":[
+    {
+      "id":"s_2_1544539226922_p",
+      "survey_started":1544539226922,
+      "completed":false,
+      "disqualified_reason":"Survey Closed"
+    },
+    {
+      "id":"s_4_1544539226922_p",
+      "survey_started":1544539226922,
+      "completed":true,
+      "disqualified_reason": null
+    },
+    {
+      "id":"s_5_15445657226922_p",
+      "survey_started":1544264926922,
+      "completed":false,
+      "disqualified_reason": "Quota Full"
+    }
+  ]
 }
 ```
