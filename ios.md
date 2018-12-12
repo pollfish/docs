@@ -821,7 +821,7 @@ func pollfishReceived()
 You can also get informed about: 
 
 - **survey_cpa** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
-- **survey_ir** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR wan not computed reliably.
+- **survey_ir** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably.
 - **survey_loi** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
 - **survey_class** :  information about the survey network and type* 
 
