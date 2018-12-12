@@ -623,7 +623,7 @@ Sets a notification listener when a Pollfish Survey is received.
 With this notification publisher can get informed through the SurveyInfo object returned, about the:
 
 - **surveyCPA** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
-- **surveyIR** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR wan not computed reliably.
+- **surveyIR** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably.
 - **surveyLOI** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
 - **surveyClass** :  information about the survey network and type* 
 
