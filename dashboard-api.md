@@ -670,3 +670,24 @@ The url can contain the following query parameters
   ]
 }
 ```
+
+### **List of available public termination reasons**
+
+
+|    | Disqualification Reason  | Description                                 
+|----|:-------------------------|:---------------------------------------------
+| 1  | Quota Full               | The respondent selected a targeting question that had fulfilled its Quota.
+| 2  | Survey Closed            | The respondent successfully answered a survey which was completed/closed while answering.
+| 3  | Profiling                | The respondent was disqualified based on the targeting of the survey received.
+| 4  | Screenout                | The respondent was screened out of the survey.
+| 5  | Duplicate                | Thrown when a respondent has been received as a duplicate participation (ex: having the same id, found to be resetting their device_id to get the same survey twice etc...).
+| 6  | Security                 | Thrown when we decide that there is a security reason to reject a respondent (ex: the respondent is banned from answering).
+| 7  | VPN                      | The respondent is using a VPN.
+| 8  | GeoMissmatch             | The respondent received a survey targeted for a different country than the one they are in.
+| 9  | Quality                  | The respondent answered incorrectly in our Quality checks
+| 10 | Hasty Answers            | The respondent answered consistently way faster than expected for the given questions.
+| 11 | Gibberish                | The repondents answers contained gibberish in open-ended questions
+| 12 | Captcha                  | A captcha check failed for the respondent.
+| 13 | Third Party Termination  | A respondent was disqualified by a mediation partner.
+
+> Note: We are working on making **Third Party Termination** reasons more verbose
