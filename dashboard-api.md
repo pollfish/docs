@@ -680,8 +680,8 @@ The url can contain the following query parameters
 | 2  | Survey Closed            | The respondent successfully answered a survey which was completed/closed while answering.
 | 3  | Profiling                | The respondent was disqualified based on the targeting of the survey received.
 | 4  | Screenout                | The respondent was screened out of the survey.
-| 5  | Duplicate                | Thrown when a respondent has been received as a duplicate participation (ex: having the same id, found to be resetting their device_id to get the same survey twice etc...).
-| 6  | Security                 | Thrown when we decide that there is a security reason to reject a respondent (ex: the respondent is banned from answering).
+| 5  | Duplicate                | When a respondent has been received as a duplicate participation (ex: having the same id, found to be resetting their device_id to get the same survey twice etc...).
+| 6  | Security                 | When we decide that there is a security reason to reject a respondent (ex: the respondent is banned from answering).
 | 7  | VPN                      | The respondent is using a VPN.
 | 8  | GeoMissmatch             | The respondent received a survey targeted for a different country than the one they are in.
 | 9  | Quality                  | The respondent answered incorrectly in our Quality checks
