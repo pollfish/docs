@@ -64,7 +64,7 @@ Pollfish Unity Plugin works with:
 
 *   Unity 4.6.8 +
 *   iOS 9.0 +
-*   Android 2.3.3 (10) +
+*   Android 4.2 (17) +
 
 Please set minimum version of your project accordingly.
 
