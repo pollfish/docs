@@ -88,7 +88,7 @@ v4.0.0
 ## Quick Guide of Universal SDK
 
 1. Register as a publisher at Pollfish, create an App and copy app's API key
-2. Download Pollfish jar or aar file and import to your project
+2. Download Pollfish aar file and import to your project
 3. Import Pollfish classes
 4. Add permissions to AndroidManifest.xml
 5. Call Pollfish initialization function in onResume() of your Activity to activate Pollfish
