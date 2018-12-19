@@ -89,7 +89,7 @@ v4.0.0
 ## Quick Guide of Google Play SDK
 
 1. Register as a publisher at Pollfish, create an App and copy app's API key
-2. Download Pollfish jar or aar file and import to your project
+2. Download Pollfish aar file and import to your project
 3. Import Google Play Services to your project
 4. Import Pollfish classes
 5. Add permissions to AndroidManifest.xml
