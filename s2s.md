@@ -6,7 +6,7 @@
 #### Server-to-Server postback call for survey completion
 
 
-You can set a Server-to-Server postback call through Pollfish developer dashboard, in your app's page. This call will be fired on every survey completion through your app. 
+You can set a Server-to-Server webhook URL through Pollfish developer dashboard, in your app's page. On every survey completion through your app an HTTP GET request will be made using that URL.
 
 <img src="https://storage.googleapis.com/pollfish-images/s2s_dashboard_o.png">
 
