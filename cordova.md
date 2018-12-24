@@ -156,7 +156,7 @@ In our efforts to include publishers in this process and be as transparent as po
 After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
 
 <br/>
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/account.png"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/verify_account.png"/>
 <br/>
 
 When your account is verified you will be able to start receiving paid surveys from Pollfish clients.
