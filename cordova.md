@@ -8,9 +8,6 @@ Pollfish is a mobile monetization platform delivering surveys instead of ads thr
 *	Android 17+ using Google Play Services
 *	iOS version 9.0+
 *	Apache Cordova v3.0.4+
-* Android<7 (there is a known issue at the moment with android 7 so you will need to downgrade to use the plugin to android 6.4.0)
-
-```sudo cordova platform add android@6.4.0```
 
 ## Quick Guide
 
@@ -226,7 +223,9 @@ pollfishplugin.setEventCallback('onPollfishSurveyReceived',app.surveyReceivedEve
 surveyReceivedEvent: function(id) {
 
 try{
-   console.log("Pollfish Survey Received - playfulSurveys: " + id.playfulSurveys + " surveyPrice: " + id.surveyPrice);
+
+console.log("Pollfish Survey Received - CPA: " + id.survey_cpa + " IR: " + id.survey_ir + " LOI: " + id.survey_loi + " Survey Class: " + id.survey_class);
+       
  }catch(e){}
 }
 ```
@@ -245,7 +244,8 @@ pollfishplugin.setEventCallback('onPollfishSurveyCompleted',app.surveyCompletedE
 surveyCompletedEvent: function(id) {
 
 try{
-   console.log("Pollfish Survey Completed - playfulSurveys: " + id.playfulSurveys + " surveyPrice: " + id.surveyPrice);
+  	console.log("Pollfish Survey Completed - CPA: " + id.survey_cpa + " IR: " + id.survey_ir + " LOI: " + id.survey_loi + " Survey Class: " + id.survey_class);
+       
  }catch(e){}
 }
 ```
