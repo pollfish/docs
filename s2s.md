@@ -191,7 +191,7 @@ To verify the signature in server-to-server postback calls follow the below proc
 4. URL decode the values you extracted in (3) using Percent encoding.
 5. Sort the values from (4) alphabeticaly using the names of the template parameters. The names of the template parameters are: `cpa`, `device_id`, `request_uuid`, `status`, `timestamp` and `tx_id` and not the names of any [URL parameters](https://en.wikipedia.org/wiki/Query_string) your URL may contain.
 6. Produce a string by concatenating all non-empty parameter values as sorted in the previous step using the `:` character. The only parameter that when specified in the URL template can be empty is `request_uuid`.
-7. Sign the string produced in (6) using the [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) algorithm and your account's **secret_key** that can be retrieved from the [Account Information](https://www.pollfish.com/dashboard/account) page.
+7. Sign the string produced in (6) using the [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) algorithm and your account's **secret_key** that can be retrieved from the [Account Information](https://www.pollfish.com/dashboard/dev/account) page.
 8. Encode the value produced in (7) using [Base64](https://en.wikipedia.org/wiki/Base64)
 9. Compare the values produced in (2) and (8). If they are equal then the signature is valid.
 
