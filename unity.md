@@ -1,4 +1,4 @@
-<div class="changelog" data-version="4.4.0">
+<div class="changelog" data-version="4.5.0">
 v4.5.0
 
 
