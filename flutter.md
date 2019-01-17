@@ -53,25 +53,24 @@ flutter packages get
 
 ### 4. Initialize Pollfish
 
-Init function takes the following parameters:
+When you initialize Pollfish you should pass the API Key of the app which is a mandatory param:
 
-1.	**debugMode**: - Choose Debug or Release Mode
-2.	**customMode**: - Init or custom init
-3.	**api_key**: - Your API Key (from step 2)
-4.	**pos**: - The Position where you wish to place the Pollfish indicator. There are four different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
-5.	**padding**: - The padding (in dp) from top or bottom according to Position of the indicator specified before (0 is the default value – |*if used in MIDDLE position, padding is calculating from top).
+1. **apiKey**: - Your API Key (from step 2)
 
 For example:
 
 ```
-var debugMode = true;
-var customMode = false;
-var api_key = "YOUR_API_KEY";
-var pos=pollfishplugin.Position.TOP_LEFT;
-var padding = 50;
- 
-pollfishplugin.init (debugMode,customMode,api_key,pos,padding);
+FlutterPollfish.instance.init(apiKey: 'YOUR_API_KEY')
 ```
+#### 4.1 Other Init functions (optional)
+
+During initialization you can pass different optional params:
+
+1. **pollfishPosition**: int - TOP_LEFT=0 , BOTTOM_LEFT=1, TOP_RIGHT=2, BOTTOM_RIGHT=3, MIDDLE_LEFT=4, MIDDLE_RIGHT=5 (defines the side of Pollish panel, and position o Pollish indicator)
+2. **indPadding**: int - Sets padding (in dp) from top or bottom according to Position of the indicator
+3. **debugMode**: bool - Sets Pollfish SDK to Developer or Release mode. Use Developer mode to test your implementation with demo surveys
+4. **customMode**: bool - Initializes Pollfish in custom mode (used when implementing a Rewarded approach)
+5. **requestUUID**: String - Sets a unique id to identify a user. This param will be passed backthrough server-to-server callbacks
 
 #### Debug Vs Release Mode
 
@@ -81,36 +80,12 @@ You can use Pollfish either in Debug or in Release mode.
 * **Release mode** is the mode to be used for a released app (start receiving paid surveys).
 
 
-**Note: In Android debugMode parameter is ignored. Your app turns into debug mode once it is signed with a debug key. If you sign your app with a release key it automatically turns into Release mode.**
-
-**Note: Be careful to turn the debugMode parameter to false when you release your app in a relevant app store!!**
-
-
-
 #### init Vs custom init
 
-*	**init function** is the standard way of using Pollfish in your apps. Using init function enables controlling the behavior of Pollfish in an app from Pollfish panel.
+*	**custom mode = false** is the standard way of using Pollfish in your apps. Using init function enables controlling the behavior of Pollfish in an app from Pollfish panel.
 
-*	**custom init function** ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates. Both init and customInit functions have the same arguments.
+*	**custom mode = true** ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates. Both init and customInit functions have the same arguments.
 
-#### 4.1 Other Init functions (optional)
-
-##### Passing custom parameter for server to server postback calls
-
-If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function within the SDK and receive it back with Server to Server, survey completed postback call you can use
-
-For example:
-
-```
-var debugMode = true;
-var customMode = false;
-var api_key = "YOUR_API_KEY";
-var pos=pollfishplugin.Position.TOP_LEFT;
-var padding = 50;
-var requestUUID = "my_uuid";
-
-pollfishplugin.initWithRequestUUID (debugMode,customMode,api_key,pos,padding,requestUUID);
-```
 
 ### 5. Update your Privacy Policy
 
@@ -173,43 +148,9 @@ In this section we will list several options that can be used to control Pollfis
 <br/>
 
 
+### 7. Implement Pollfish event listeners (optional)
 
-### 7. Handling orientation changes (optional)
-
-If your app supports both orientations you should listen for the orientation event and initialise Pollfish again.
-
-For example:
-
-```
-document.addEventListener("orientationchange", app.updateOrientation,false);
-```
-
-```
-updateOrientation: function () {
-    pollfishplugin.init (debugmode,customMode,api_key,pos,padding);
-}
-```
-
-### 8. Handling application entering to foreground (optional)
-
-You should handle the event when your app is entering to foreground in order to initialise Pollfish again by listening to the relevant event.
-
-For example:
-
-```
-document.addEventListener("resume", app.onResume, false);
-```
-
-```
-onResume: function () {
-    pollfishplugin.init (debugmode,customMode,api_key,pos,padding);
-}
-```
-
-
-### 9. Implement Pollfish event listeners (optional)
-
-#### 9.1 Get notified when a Pollfish survey is received (optional)
+#### 7.1 Get notified when a Pollfish survey is received (optional)
 
 You can be notified when a Pollfish survey is received.
 
@@ -330,21 +271,6 @@ or
 pollfishplugin.hidePollfish();
 ```
 
-### 11. Set user attributes (optional)
-
-You can set attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys. 
-
-For example:
-
-```
-var userAttributes = {};
-
-userAttributes['FacebookID'] = 'My Facebook';
-userAttributes['LinkedInID'] = 'My LinkedIn';
-
-pollfishplugin.setAttributesMap(userAttributes);
-
-```
 
 
 ## Example
