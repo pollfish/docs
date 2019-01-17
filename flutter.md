@@ -20,7 +20,9 @@ Pollfish Flutter Plugin along with an example can be found on Dart Packages webs
 * Request your account to get verified from Pollfish Dashboard
 
 
-![alt tag](https://www.pollfish.com/homeassets/images/rocketMobile.png)
+<br/>
+<img style="margin: 0 width:200; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/basic-format.gif"/>
+<br/>
 
 ## Steps Analytically
 
