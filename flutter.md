@@ -254,7 +254,7 @@ You can be notified when Pollfish survey panel is closed
 For example:
 
 ```
-pollfishplugin.setEventCallback('onPollfishOpened',app.pollfishPanelClosedEvent);
+FlutterPollfish.instance.setPollfishSurveyClosedListener(onPollfishSurveyClosed);
 ```
 
 ```
