@@ -63,7 +63,7 @@ For example:
 ```
 FlutterPollfish.instance.init(apiKey: 'YOUR_API_KEY')
 ```
-#### 4.1 Other Init functions (optional)
+#### 4.1 Other Init params (optional)
 
 During initialization you can pass different optional params:
 
