@@ -302,7 +302,7 @@ FlutterPollfish.instance.hide();
 
 ## Example
 
-If you want to have a look at sample code on how you can call and use Pollfish plugin in your app, you can review the example app on [Github](https://github.com/pollfish/flutter-plugin-pollfish).
+If you would like to implement the Rewarded approach or just review an example in code, you can review the example app on [Github](https://github.com/pollfish/flutter-plugin-pollfish).
 
 <br/>
 <img style="margin:auto;  width:230px; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/flutter_example.gif"/>
