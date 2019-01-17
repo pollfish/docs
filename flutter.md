@@ -34,7 +34,7 @@ Register as a Developer at [www.pollfish.com](http://www.pollfish.com)
 
 Login at [www.pollfish.com](http://www.pollfish.com) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your init function in your app.
 
-### 3. Installing the plugin
+### 3. Installing and importin the plugin
 
 Add this to your package's pubspec.yaml file:
 
@@ -48,6 +48,11 @@ with Flutter:
 
 ```
 flutter packages get
+```
+You can import then in your Dart code the plugin as below:
+
+```
+import 'package:flutter_pollfish/flutter_pollfish.dart';
 ```
 
 
@@ -157,18 +162,19 @@ You can be notified when a Pollfish survey is received.
 For example:
 
 ```
-pollfishplugin.setEventCallback('onPollfishSurveyReceived',app.surveyReceivedEvent);
+FlutterPollfish.instance.setPollfishReceivedSurveyListener(onPollfishSurveyReveived);
 ```
 
 ```
-surveyReceivedEvent: function(id) {
+void onPollfishSurveyReveived(String result) => setState(() {
 
-try{
+    List<String> surveyCharacteristics = result.split(',');
 
-console.log("Pollfish Survey Received - CPA: " + id.survey_cpa + " IR: " + id.survey_ir + " LOI: " + id.survey_loi + " Survey Class: " + id.survey_class);
-       
- }catch(e){}
-}
+     if (surveyCharacteristics.length >= 4) {
+       String _logText =
+              'Survey Received: - SurveyInfo with CPA: ${surveyCharacteristics[0]} and IR: ${surveyCharacteristics[1]} and LOI: ${surveyCharacteristics[2]} and SurveyClass: ${surveyCharacteristics[3]}';
+    }
+ });
 ```
 
 #### 9.2 Get notified when a Pollfish survey is completed (optional)
@@ -178,17 +184,19 @@ You can be notified when a Pollfish survey is completed.
 For example:
 
 ```
-pollfishplugin.setEventCallback('onPollfishSurveyCompleted',app.surveyCompletedEvent);
+FlutterPollfish.instance.setPollfishCompletedSurveyListener(onPollfishSurveyCompleted);
 ```
 
 ```
-surveyCompletedEvent: function(id) {
+void onPollfishSurveyCompleted(String result) => setState(() {
 
-try{
-  	console.log("Pollfish Survey Completed - CPA: " + id.survey_cpa + " IR: " + id.survey_ir + " LOI: " + id.survey_loi + " Survey Class: " + id.survey_class);
-       
- }catch(e){}
-}
+    List<String> surveyCharacteristics = result.split(',');
+
+     if (surveyCharacteristics.length >= 4) {
+       String _logText =
+              'Survey Completed: - SurveyInfo with CPA: ${surveyCharacteristics[0]} and IR: ${surveyCharacteristics[1]} and LOI: ${surveyCharacteristics[2]} and SurveyClass: ${surveyCharacteristics[3]}';
+    }
+ });
 ```
 
 #### 9.3 Get notified when a user is not eligible for a Pollfish survey (optional)
@@ -198,12 +206,13 @@ You can be notified when a user is not eligible for a Pollfish survey.
 For example:
 
 ```
-pollfishplugin.setEventCallback('onPollfishUserNotEligible',app.userNotEligibleEvent);
+FlutterPollfish.instance.setPollfishUserNotEligibleListener(onPollfishUserNotEligible);
 ```
 
 ```
-userNotEligibleEvent: function(id) {
- console.log("Pollfish User Not Eligible");
+void onPollfishUserNotEligible() => setState(() {
+
+   String _logText = 'User Not Eligible';
 }
 ```
 
