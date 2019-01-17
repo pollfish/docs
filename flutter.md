@@ -4,7 +4,7 @@ Pollfish Flutter plugin, allows integration of Pollfish surveys into Flutter And
 Pollfish is a mobile monetization platform delivering surveys instead of ads through mobile apps. Developers get paid per completed surveys through their apps.
 
 
-Pollfish Flutter Plugin along with an example can be found on Dart Packages website [here](https://pub.dartlang.org/packages/flutter_pollfish)
+Pollfish Flutter Plugin can be found on Dart Packages [website](https://pub.dartlang.org/packages/flutter_pollfish). The source code and an example app can be found on [Github](https://github.com/pollfish/flutter-plugin-pollfish).
 
 ## Prerequisites
 
@@ -54,9 +54,9 @@ import 'package:flutter_pollfish/flutter_pollfish.dart';
 ```
 
 
-### 4. Initialize Pollfish
+### 4. Initializing Pollfish
 
-When you initialize Pollfish you should pass the API Key (from step 2) of the app which is a mandatory param:
+When you initialize Pollfish you should pass the API Key of the app  (from step 2) which is a mandatory param:
 
 For example:
 
@@ -113,11 +113,8 @@ FlutterPollfish.instance.init(
 
 
 ---
-<br/>
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/basic-format.gif"/>
-<br/>
 
-If you have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
+If you have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://help.pollfish.com/faq-publishers/why-i-cannot-see-any-surveys-on-my-app">FAQ page</a>
 <br/><br/><br/>
 
 | **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Bear in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this new type of targeting.
@@ -132,11 +129,6 @@ If you have any question, like why you do not see surveys on your own device in 
 </table>
 <br/>
 
-
-In our efforts to include publishers in this process and be as transparent as possible we provide full control over the process. We let publishers decide if their users are served these standalone surveys or not, in 2 different ways. Firstly by monitoring the process in code and excluding any users by listening to the relevant noitifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) field which will be 0 USD cents. Secondly, publishers can disable the standalone demographic surveys through the Pollfish Developer Dashboard in the Settings area of an app. You can read more on demographic surveys <a href="https://pollfish.zendesk.com/hc/en-us/articles/213287545">here</a>. 
-
-
-<br/>
 
 ### 6\.  Request your account to get verified
 
@@ -155,7 +147,7 @@ When your account is verified you will be able to start receiving paid surveys f
 
 ## Optional section
 
-In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
+In this section we will list several options that can be used to control Pollfish surveys behaviour and explain how to register and listen to several notifications. All these steps are optional.
 <br/>
 <br/>
 
@@ -275,7 +267,7 @@ void onPollfishSurveyClosed() => setState(() {
 
 #### 9.7 Get notified when a user rejected a survey (optional)
 
-You can be notified when Pollfish survey panel is closed
+You can be notified when user rejects a survey
 
 For example:
 
@@ -293,7 +285,7 @@ void onPollfishUserRejectedSurvey() => setState(() {
 
 ### 10. Manually show/hide Pollfish panel (optional)
 
-You can manually hide and show Pollfish panel from your view by calling anywhere after initialization: 
+You can manually hide and show Pollfish panel by calling anywhere after initialization: 
 
 For example:
 
@@ -310,5 +302,9 @@ FlutterPollfish.instance.hide();
 
 ## Example
 
-If you want to have a look at sample code on how you can call and use Pollfish plugin in your app, you can review the example app included.
+If you want to have a look at sample code on how you can call and use Pollfish plugin in your app, you can review the example app on [Github](https://github.com/pollfish/flutter-plugin-pollfish).
+
+<br/>
+<img style="margin:auto;  width:230px; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/flutter_example.gif"/>
+<br/>
 
