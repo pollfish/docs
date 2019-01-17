@@ -1,5 +1,5 @@
 
-Pollfish Flutter plugin allows integration of Pollfish surveys into Flutter Android and iOS apps. 
+Pollfish Flutter plugin, allows integration of Pollfish surveys into Flutter Android and iOS apps. 
 
 Pollfish is a mobile monetization platform delivering surveys instead of ads through mobile apps. Developers get paid per completed surveys through their apps.
 
@@ -8,16 +8,14 @@ Pollfish Flutter Plugin along with an example can be found on Dart Packages webs
 
 ## Prerequisites
 
-
 *	Android 17+ using Google Play Services
 *	iOS version 9.0+
-*	Apache Cordova v3.0.4+
 
 ## Quick Guide
 
-* Create Pollfish developer account, create new app and grap it's API key
-* Install Pollfish plugin and call init function
-* Set to Release mode and release in Store
+* Sign Up for a Pollfish Publisher account, create a new app and grap it's API key
+* Install and integrate Pollfish plugin and call the init function
+* Set to Release mode and publish on app store
 * Update your app's privacy policy
 * Request your account to get verified from Pollfish Dashboard
 
@@ -32,9 +30,9 @@ Register as a Developer at [www.pollfish.com](http://www.pollfish.com)
 
 ### 2. Add new app in Pollfish panel and copy the given API Key
 
-Login at [www.pollfish.com](http://www.pollfish.com) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your init function in your app.
+Login at [www.pollfish.com](http://www.pollfish.com) and add a new app on Pollfish Dashboard. Copy the given API key for this app in order use it later on, in your init function in your app.
 
-### 3. Installing and importin the plugin
+### 3. Installing and importing the plugin
 
 Add this to your package's pubspec.yaml file:
 
@@ -44,12 +42,10 @@ dependencies:
 ```
 You can install then the package from the command line:
 
-with Flutter:
-
 ```
 flutter packages get
 ```
-You can import then in your Dart code the plugin as below:
+You can import then in your Dart code the plugin, as below:
 
 ```
 import 'package:flutter_pollfish/flutter_pollfish.dart';
@@ -58,9 +54,7 @@ import 'package:flutter_pollfish/flutter_pollfish.dart';
 
 ### 4. Initialize Pollfish
 
-When you initialize Pollfish you should pass the API Key of the app which is a mandatory param:
-
-1. **apiKey**: - Your API Key (from step 2)
+When you initialize Pollfish you should pass the API Key (from step 2) of the app which is a mandatory param:
 
 For example:
 
@@ -71,9 +65,9 @@ FlutterPollfish.instance.init(apiKey: 'YOUR_API_KEY')
 
 During initialization you can pass different optional params:
 
-1. **pollfishPosition**: int - TOP_LEFT=0 , BOTTOM_LEFT=1, TOP_RIGHT=2, BOTTOM_RIGHT=3, MIDDLE_LEFT=4, MIDDLE_RIGHT=5 (defines the side of Pollish panel, and position o Pollish indicator)
-2. **indPadding**: int - Sets padding (in dp) from top or bottom according to Position of the indicator
-3. **debugMode**: bool - Sets Pollfish SDK to Developer or Release mode. Use Developer mode to test your implementation with demo surveys
+1. **pollfishPosition**: int - TOP_LEFT=0 , BOTTOM_LEFT=1, TOP_RIGHT=2, BOTTOM_RIGHT=3, MIDDLE_LEFT=4, MIDDLE_RIGHT=5 (defines the side of the Pollish panel, and position of Pollish indicator)
+2. **indPadding**: int - Sets padding (in dp) from the top or bottom according to Position of the indicator
+3. **debugMode**: bool - Sets Pollfish SDK to Debug or Release mode. Use Developer mode to test your implementation with demo surveys
 4. **customMode**: bool - Initializes Pollfish in custom mode (used when implementing a Rewarded approach)
 5. **requestUUID**: String - Sets a unique id to identify a user. This param will be passed backthrough server-to-server callbacks
 
@@ -87,10 +81,21 @@ You can use Pollfish either in Debug or in Release mode.
 
 #### init Vs custom init
 
-*	**custom mode = false** is the standard way of using Pollfish in your apps. Using init function enables controlling the behavior of Pollfish in an app from Pollfish panel.
+*	**custom mode = false** is the standard way of using Pollfish in your apps. Using init function with custom mode disabled, enables controlling the behavior of Pollfish in an app from Pollfish panel.
 
-*	**custom mode = true** ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates. Both init and customInit functions have the same arguments.
+*	**custom mode = true** ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small Pollfish icon) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates.
 
+For example:
+
+```
+FlutterPollfish.instance.init(
+     apiKey: 'YOUR_API_KEY',
+     pollfishPosition: 5,
+     indPadding: 40,
+     customMode: false,
+     debugMode: true,
+     requestUUID: 'USER_INTERNAL_ID');
+```
 
 ### 5. Update your Privacy Policy
 
@@ -223,13 +228,13 @@ You can be notified when a Pollfish survey is not available
 For example:
 
 ```
-pollfishplugin.setEventCallback('onPollfishSurveyNotAvailable',app.surveyNotAvailableEvent);
+FlutterPollfish.instance.setPollfishSurveyNotAvailableSurveyListener(onPollfishSurveyNotAvailable);
 ```
 
 ```
-surveyNotAvailableEvent: function(id) {
- console.log("Pollfish Survey not available");
-}
+void onPollfishSurveyNotAvailable() => setState(() {
+   String _logText = 'Survey Not Available';
+});
 ```
 
 #### 9.5 Get notified when a Pollfish survey panel is open (optional)
@@ -239,13 +244,13 @@ You can be notified when Pollfish survey panel is open
 For example:
 
 ```
-pollfishplugin.setEventCallback('onPollfishOpened',app.pollfishPanelOpenEvent);
+FlutterPollfish.instance.setPollfishSurveyOpenedListener(onPollfishSurveyOpened);
 ```
 
 ```
-pollfishPanelOpenEvent: function(id) {
- console.log("Pollfish Survey panel is open");
-}
+void onPollfishSurveyOpened() => setState(() {
+    String _logText = 'Survey Panel Open';
+});
 ```
 
 #### 9.6 Get notified when a Pollfish survey panel is closed (optional)
@@ -259,35 +264,49 @@ pollfishplugin.setEventCallback('onPollfishOpened',app.pollfishPanelClosedEvent)
 ```
 
 ```
-pollfishPanelClosedEvent: function(id) {
- console.log("Pollfish Survey panel is closed");
+void onPollfishSurveyClosed() => setState(() {
+   String _logText = 'Survey Panel Closed';
 }
+
 ```
 
-### 10. Manually show/hide Pollfish panel (optional)
 
-You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization: 
+#### 9.7 Get notified when a user rejected a survey (optional)
+
+You can be notified when Pollfish survey panel is closed
 
 For example:
 
 ```
-pollfishplugin.showPollfish();
+FlutterPollfish.instance.setPollfishUserRejectedSurveyListener(onPollfishUserRejectedSurvey);```
+```
+
+```
+void onPollfishUserRejectedSurvey() => setState(() {
+  String _logText = 'User Rejected Survey';
+});
+```
+
+
+
+### 10. Manually show/hide Pollfish panel (optional)
+
+You can manually hide and show Pollfish panel from your view by calling anywhere after initialization: 
+
+For example:
+
+```
+FlutterPollfish.instance.show();
 ```
 
 or
 
 ```
-pollfishplugin.hidePollfish();
+FlutterPollfish.instance.hide();
 ```
-
 
 
 ## Example
 
-If you want to have a look at sample code on how you can call and use Pollfish plugin in your app, you can a review files located at test/index.js and test/index.html
-
-
-## More Info
-
-For more information on setting up Cordova see [the documentation](http://cordova.apache.org/docs/en/latest/guide/cli/index.html)
+If you want to have a look at sample code on how you can call and use Pollfish plugin in your app, you can review the example app included.
 
