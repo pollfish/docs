@@ -272,7 +272,7 @@ You can be notified when user rejects a survey
 For example:
 
 ```
-FlutterPollfish.instance.setPollfishUserRejectedSurveyListener(onPollfishUserRejectedSurvey);```
+FlutterPollfish.instance.setPollfishUserRejectedSurveyListener(onPollfishUserRejectedSurvey);
 ```
 
 ```
