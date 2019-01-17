@@ -3,6 +3,9 @@ Pollfish Flutter plugin allows integration of Pollfish surveys into Flutter Andr
 
 Pollfish is a mobile monetization platform delivering surveys instead of ads through mobile apps. Developers get paid per completed surveys through their apps.
 
+
+Pollfish Flutter Plugin alon with an example can be found on Dart Packages [here](https://pub.dartlang.org/packages/flutter_pollfish)
+
 ## Prerequisites
 
 
