@@ -176,7 +176,7 @@ void onPollfishSurveyReveived(String result) => setState(() {
  });
 ```
 
-#### 9.2 Get notified when a Pollfish survey is completed (optional)
+#### 7.2 Get notified when a Pollfish survey is completed (optional)
 
 You can be notified when a Pollfish survey is completed.
 
@@ -198,7 +198,7 @@ void onPollfishSurveyCompleted(String result) => setState(() {
  });
 ```
 
-#### 9.3 Get notified when a user is not eligible for a Pollfish survey (optional)
+#### 7.3 Get notified when a user is not eligible for a Pollfish survey (optional)
 
 You can be notified when a user is not eligible for a Pollfish survey.
 
@@ -215,7 +215,7 @@ void onPollfishUserNotEligible() => setState(() {
 }
 ```
 
-#### 9.4 Get notified when a Pollfish survey is not available (optional)
+#### 7.4 Get notified when a Pollfish survey is not available (optional)
 
 You can be notified when a Pollfish survey is not available
 
@@ -231,7 +231,7 @@ void onPollfishSurveyNotAvailable() => setState(() {
 });
 ```
 
-#### 9.5 Get notified when a Pollfish survey panel is open (optional)
+#### 7.5 Get notified when a Pollfish survey panel is open (optional)
 
 You can be notified when Pollfish survey panel is open
 
@@ -247,7 +247,7 @@ void onPollfishSurveyOpened() => setState(() {
 });
 ```
 
-#### 9.6 Get notified when a Pollfish survey panel is closed (optional)
+#### 7.6 Get notified when a Pollfish survey panel is closed (optional)
 
 You can be notified when Pollfish survey panel is closed
 
@@ -265,7 +265,7 @@ void onPollfishSurveyClosed() => setState(() {
 ```
 
 
-#### 9.7 Get notified when a user rejected a survey (optional)
+#### 7.7 Get notified when a user rejected a survey (optional)
 
 You can be notified when user rejects a survey
 
@@ -283,7 +283,7 @@ void onPollfishUserRejectedSurvey() => setState(() {
 
 
 
-### 10. Manually show/hide Pollfish panel (optional)
+### 8. Manually show/hide Pollfish panel (optional)
 
 You can manually hide and show Pollfish panel by calling anywhere after initialization: 
 
