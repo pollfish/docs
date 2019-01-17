@@ -21,7 +21,7 @@ Pollfish Flutter Plugin along with an example can be found on Dart Packages webs
 
 
 <br/>
-<img style="margin: 0 width:200; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/basic-format.gif"/>
+<img style="margin: 0; auto;  width:200px; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/basic-format.gif"/>
 <br/>
 
 ## Steps Analytically
