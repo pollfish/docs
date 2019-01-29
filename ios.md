@@ -133,11 +133,11 @@ You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapo
 
 ### 1. Obtain a Developer Account
 
-Register at [www.pollfish.com](//www.pollfish.com/login/publisher)
+Register as a Publisher at [www.pollfish.com](//www.pollfish.com/login/publisher)
 
 ### 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
 
-Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
 
 ### 3\. Add Pollfish framework to your project
@@ -290,6 +290,10 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/dashboard_1.png)
 
+<br/>
+Custom mode true should be used if you want to incentivize users to participate to surveys. We have a detailed guide on how to implement the rewarded approach <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a>
+<br/>
+
 Below you can see an example of the init function:  
 
 <span style="text-decoration: underline">Objective-C:</span>
@@ -349,7 +353,8 @@ Add the following paragraph to your app's privacy policy:
 You can have a look for some integration tips <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a> or if have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
 <br/><br/><br/>
 
-| **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Bear in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this new type of targeting.
+| **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process that users need to go through, in order to join the platform. If a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this type of targeting.
+
 
 <br/>
 
@@ -1167,7 +1172,7 @@ Pollfish.isPollfishPresent()
 
 ### 16\. Server-to-server callbacks on survey completion (optional)
 
-If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
+If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>. 
 
 
 
