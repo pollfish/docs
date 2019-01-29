@@ -105,15 +105,15 @@ v4.0.0
 
 ### 1. Obtain a Developer Account
 
-Register at [www.pollfish.com](//www.pollfish.com/login/publisher)
+Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
 
 ### 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
 
-Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard in section "My Apps". Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
 ### 3. Integrate Google Play Services to your project
 
-Applications that integrate Pollfish SDK are required to include  Google Play Services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
+Applications that integrate Pollfish SDK are required to include Google Play Services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
 
 If you are using gradle you can easily add in your dependencies:
 
@@ -150,26 +150,26 @@ dependencies {
 ```
 
 
-> **Note:** If you cannot see surveys even in developer mode, please do check your logs to see if this is related your current version of Google Play Services  
+> **Note:** If you cannot see surveys even in developer mode, please do check your logs to see if this is related with your current version of Google Play Services  
 
 
 </br>
 
-### 4\. Add Pollfis aar library to your project
+### 4\. Add Pollfish aar library to your project
 
 Download Pollfish Android SDK or reference it through jCenter().
 
 #### **Download Pollfish Android SDK**
 
-Add Pollfish **.AAR** file to your project libraries  
+Import Pollfish **.AAR** file to your project libraries  
 
-If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate pollfish jar or aar file. Right click again on your project and in Module Dependencies tab choose to add pollfish module that you recently added, as a dependency.
+If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate Pollfish aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
 
 **OR**
 
 #### **Retrieve Pollfish Android SDK through jCenter()**
 
-Retrieve Pollfish through **jCenter()** with gradle by adding the following line in your project build.gradle (not the top level one, the one under 'app') in  dependencies section:  
+Retrieve Pollfish through **jCenter()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
 ```
 dependencies {
@@ -189,17 +189,17 @@ import com.pollfish.constants.Position;
 
 ### 6. Add permissions to AndroidManifest.xml
 
-You should also add the following lines in your AndroidManifest.xml  
+You should add the following line in your AndroidManifest.xml  
 
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-Pollfish uses these permissions to track and send survey responses to Pollfish servers.  
+Pollfish uses this permission to track and send survey responses to Pollfish servers.  
 
 ### 7. Initialize Pollfish
 
-After you link your project to Google Play Services you can easily initialize Pollfish. In order to initialize you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory parameter which is the API key of your app (step 2 above). 
+After linking your project to Google Play Services you can easily initialize Pollfish. In order to initialize, you will need to create an instance of ParamsBuilder. ParamsBuilder has only one mandatory parameter which is the API key of your app (step 2 above). 
 
 | **Note:** In section 9 you can see several other optional params that you can pass to ParamsBuilder instance in order to configure Pollfish behaviour during initialization.
 
@@ -207,7 +207,7 @@ After you link your project to Google Play Services you can easily initialize Po
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder(String "YOUR_API_KEY").build();
 ```
-Once you created ParamsBuilder instance then you can call Pollfish initWith() in **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
+Once you have created ParamsBuilder instance, then you can call Pollfish initWith() in **onResume()** function of your Activity ( just after super.onResume() ) and you are ready to go.
 
 ```java
 PollFish.initWith(Activity activity, ParamsBuilder paramsBuilder);
@@ -225,7 +225,7 @@ public void onResume() {
 ```
 
 
-| **Note:** If your app calls setContentView() function more than once in your Activity lifecycle you should call Pollfish.init() or Pollfish.customInit() respectively just after each setContentView to use Pollfish properly.**  
+| **Note:** If your initialization in the app uses setContentView() function more than once in your Activity lifecycle you should call Pollfish.initWith() just after each setContentView in order to use Pollfish properly.**  
 <br/>
 
 ### 8\.  Update your Privacy Policy
@@ -241,12 +241,12 @@ Add the following paragraph to your app's privacy policy:
 
 <br/>
 
-| **Note:** It's important that you include this disclosure both in the privacy policy posted on Google Play but also in the privacy policy included in your app as described in [Google's Developer Privacy Policy](https://play.google.com/about/privacy-security/personal-sensitive/)  
+| **Note:** It's important that you include this disclosure both in the privacy policy posted on Google Play but also in the privacy policy included in your app, as described in [Google's Developer Privacy Policy](https://play.google.com/about/privacy-security/personal-sensitive/)  
 
 
 <br/><br/>
 
-**At this point you are ready to go live! Sign your app with a release key or explicitly set .releaseMode(true) - (section 9.5) in your ParamsBuilder and publish to any Android app store**
+**At this point you are ready to go live! Sign your app with a release key or explicitly set .releaseMode(true) - (section 10.5) in your ParamsBuilder and publish to any Android app store**
 
 ---
 <br/>
@@ -254,9 +254,9 @@ Add the following paragraph to your app's privacy policy:
 <br/>
 
 You can have a look for some integration tips <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a> or if have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
-<br/><br/><br/>
+<br/><br/>
 
-| **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Bear in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this new type of targeting.
+| **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process that users need to go through, in order to join the platform. If a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this type of targeting.
 
 <br/>
 <table style="border:0 !important;">
@@ -268,10 +268,9 @@ You can have a look for some integration tips <a href="https://www.pollfish.com/
 <br/>
 
 
-In our efforts to include publishers in this process and be as transparent as possible we provide full control over the process. We let publishers decide if their users are served these standalone surveys or not, in 2 different ways. Firstly by monitoring the process in code and excluding any users by listening to the relevant noitifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) field which will be 0 USD cents. Secondly, publishers can disable the standalone demographic surveys through the Pollfish Developer Dashboard in the Settings area of an app. You can read more on demographic surveys <a href="https://www.pollfish.com/docs/demographic-surveys">here</a>. 
+In our efforts to include publishers in this process and be as transparent as possible we provide full control over the process. We let publishers decide if their users are served these standalone surveys or not, in 2 different ways. Firstly by monitoring the process in code and excluding any users by listening to the relevant noitifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) field which will be 0 USD cents and also Survey Type. Secondly, publishers can disable the standalone demographic surveys through the Pollfish Developer Dashboard in the Settings area of an app. You can read more on demographic surveys <a href="https://www.pollfish.com/docs/demographic-surveys">here</a>. 
 
-If you know attributes about a user like gender, age and others, you can provide them during initialization as described in section 9.13 - and skip or shorten this way, Pollfish Demographic surveys.
-
+If you know attributes about a user like gender, age and others, you can provide them during initialization as described in section 10.13 - and skip or shorten this way, Pollfish Demographic surveys.
 
 
 <br/>
@@ -293,7 +292,7 @@ When your account is verified you will be able to start receiving paid surveys f
 
 ## Optional section
 
-In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
+In this section we will list several options that can be used to control Pollfish surveys behaviour. For example how to listen to several events that happen during the lifetime of a survey, or how to receive more targeted (high-paid) surveys. All these steps are optional.
 
 
 ### 10. ParamsBuilder available options (optional)
@@ -313,7 +312,7 @@ No | Description
 ------------ | -------------
 10.1 | **.indicatorPosition(int position)**  <br/> Sets the Position where you wish to place the Pollfish indicator
 10.2 | **.requestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
-10.3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to Position of the indicator
+10.3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to the Position of the indicator
 10.4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
 10.5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
 10.6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
@@ -352,6 +351,8 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
+This choice affects also from which side the survey panel will slide-in.
+<br/>
 #### **10.2 .requestUUID(String requestUUID)**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
@@ -370,7 +371,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **10.3 .indicatorPadding(int padding)**
 
-Sets padding (in dp) of Pollfish indicator, from top or bottom of the screen according to the specified Position of the indicator as described before in 10.1. Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top of the middle of the screen.
+Sets padding (in dp) of Pollfish indicator, from top or bottom of the screen according to the specified Position of the indicator as described before in point 10.1. Default value is 5. If Position of Pollfish indicator is MIDDLE, padding is calculated from the top of the middle of the screen.
 <br/><br/>
 Here is an example of setting padding of Pollfish indicator to be 35dp from the top of the screen:
 <br/>
@@ -406,7 +407,7 @@ You can use Pollfish either in Developer or in Release mode.
 
 Pollfish runs in developer mode by default (when you sign your apk with a debug key). It will turn to Release mode automatically when you sign your apk with a release key.
 
-However you can explicity request Pollfish SDK to run in release or developer mode by setting mode through ParamsBuilder instance during initialization. If you explicity request release mode or not through ParamsBuilder, type of signing key is ignored and does not affect Pollfish mode any more.
+However you can explicity request Pollfish SDK to run in release or developer mode by setting mode through ParamsBuilder instance during initialization. If you explicity request release mode or not through ParamsBuilder, the type of the signing key is ignored and does not affect Pollfish mode any more.
 <br/>
 
 Below you can see an example on how you can turn your app in Release mode explicitly:
@@ -438,9 +439,12 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 ```
 
 <br/>
+This mode should be used if you want to incentivize users to participate to surveys. We have a detailed guide on how to implement the rewarded approach <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a>
+<br/>
+
 #### **10.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)** [DEPRECATED-use 10.16] 
 
-Sets a notification listener when a Pollfish Survey is received. With this notification publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
+Sets a notification listener when a Pollfish Survey is received. With this notification, the publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
 
 Below you can see an example of how you can register and listen within your code to Pollfish survey received notification through ParamsBuilder instance:
 <br/>
@@ -471,7 +475,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **10.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)** [DEPRECATED-use 10.17] 
 
-Sets a notification listener when a Pollfish Survey is completed. With this notification, publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
+Sets a notification listener when a Pollfish Survey is completed. With this notification, the publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
 
 Below you can see an example of how you can register and listen within your code to Pollfish survey completed notification through ParamsBuilder instance:
 <br/>
@@ -517,7 +521,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **10.12 .pollfishOpenedListener(PollfishOpenedListener pollfishOpenedListener)**
 
-Sets a notification listener Pollfish survey panel is opened. Publishers usually use this notification to pause a game until Pollfish panel is closed again.
+Sets a notification listener for when Pollfish survey panel is opened. Publishers usually use this notification to pause a game until Pollfish panel is closed again.
 
 Below you can see an example of how you can register and listen within your code to Pollfish panel opened notification:
 <br/>
@@ -532,7 +536,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 #### **10.13 .pollfishClosedListener(PollfishClosedListener pollfishClosedListener)**
 
-Sets a notification listener Pollfish survey panel is closed. Publishers usually use this notification to resume a game that they have previously paused when Pollfish panel opened.
+Sets a notification listener for when Pollfish survey panel is closed. Publishers usually use this notification to resume a game that they have previously paused when Pollfish panel opened.
 
 Below you can see an example of how you can register and listen within your code to Pollfish panel closed notification:
 <br/>
@@ -620,7 +624,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 
 Sets a notification listener when a Pollfish Survey is received. 
 
-With this notification publisher can get informed through the SurveyInfo object returned, about the:
+With this notification the publisher can get informed through the SurveyInfo object returned, about the:
 
 - **surveyCPA** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
 - **surveyIR** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably.
@@ -907,12 +911,9 @@ PollFish.isPollfishPresent();
 If you use proguard with your app, please insert the following line in your proguard configuration file:  
 
 ```java
--libraryjars libs/pollfish-googleplay-4.3.4.jar // not necessary if using Android Studio or .aar library
 -dontwarn com.pollfish.**
 -keep class com.pollfish.** { *; }
 ```
-
-where pollfish-googleplay-4.3.4.jar is the latest pollfish jar you use in your app and is placed in your libs folder (if you used Pollfish jar file).
 
 | **Note:** Using Proguard with Pollfish requires setting your Project Build Target to Android 5.0 (API 21)!
 <br/><br/>
@@ -937,7 +938,7 @@ If you want to be eligible for beacon based surveys for your app you can include
 <br/><br/>
 ### 16\. Server-to-server callbacks on survey completion (optional)
 
-If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks in our FAQ page <a href="https://pollfish.zendesk.com/hc/en-us/articles/204106261">here</a>. 
+If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>. 
 
 
 
