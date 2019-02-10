@@ -1,6 +1,9 @@
-<div class="changelog" data-version="4.5.0">
-v4.5.0
+<div class="changelog" data-version="4.5.1">
+v4.5.1
 
+- Fixed crash issues relevant with with AndroidManifest and UnityPlayerActivity
+
+v4.5.0
 
 - Updated with Pollfish latest Android & iOS SDK v4.5.x
 
