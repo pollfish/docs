@@ -128,7 +128,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |61 | **twitter_id** | String | The Twitter id of the user | | No | No
 |62 | **facebook_id** | String | The Facebbok id of the user | | No | No
 |63 | **survey_format** | String | The format of the survey to return (only available in debug mode, should be used for testing). | Enumeration. See below for the list of possible values | No | No
-
+|64 | **always_return_content** | Boolean | Applies only to server register call and sets the type of the response if no survey is found. If it is true the response will be HTTP 200 with a readable HTML page. Otherwise it will be an HTTP 204 without any content | No | No
 
 **Demographics**
 <table>
