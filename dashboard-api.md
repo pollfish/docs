@@ -7,7 +7,7 @@ create, update, delete or retrieve stats of Pollfish apps.
 |:--------|
 | https://www.pollfish.com/
 
-## Methods
+## Endpoints
 
 |#|     **URL**                                           | **Description**
 |---|:--------------------------------------------------- |:-----------------------------------------------------------------------
@@ -15,16 +15,22 @@ create, update, delete or retrieve stats of Pollfish apps.
 |2|    **POST /api/public/v2/apps**                       |   creates a new app
 |3|    **PUT /api/public/v2/apps/:api_key**               |   updates info of an existing app
 |4|    **DELETE /api/public/v2/apps/:api_key**            |   deletes an app
-|5|    **GET /api/public/v2/apps/:api_key/stats**         |   returns the stats of an app
-|6|    **GET /api/public/v2/apps**                        |   returns an array of apps of a user
-|7|    **GET /api/public/v2/apps/revenue**                |   returns the revenue per app for all the apps of the developer
-|8|    **GET /api/public/v2/apps/:api_key/revenue**       |   returns the revenue of the specified app
-|9|    **GET /api/public/v3/apps/performance**            |   returns the performance metrics for all the apps of the developer
-|10|    **GET /api/public/v3/apps/:api_key/performance**  |   returns the performance metrics of the specified app of the developer
-|11|    **GET** **/api/public/v3/apps/revenue**           |   returns the revenue per provider for all the apps of the developer
-|12|    **GET /api/public/v3/apps/:api_key/revenue**      |   returns the revenue per provider of the specified app of the developer
-|13|    **GET /api/public/v3/apps/demographics**          |   returns the demographic data for a particular user
-|14|    **GET /api/public/v3/apps/:api_key/users_log**   |   returns the user logs for a given device_id or request_uuid
+|5|    **GET /api/public/v2/apps**                        |   returns an array of apps of a user
+|6|    **GET /api/public/v3/apps/performance**            |   returns the performance metrics for all the apps of the developer
+|7|    **GET /api/public/v3/apps/:api_key/performance**  |   returns the performance metrics of the specified app of the developer
+|8|    **GET** **/api/public/v3/apps/revenue**           |   returns the revenue per provider for all the apps of the developer
+|9|    **GET /api/public/v3/apps/:api_key/revenue**      |   returns the revenue per provider of the specified app of the developer
+|10|    **GET /api/public/v3/apps/demographics**          |   returns the demographic data for a particular user
+|11|    **GET /api/public/v3/apps/:api_key/users_log**    |   returns the user logs for a given device_id or request_uuid
+
+### Removed Endpoints
+
+|#|     **URL**                                           | **Description**
+|---|:--------------------------------------------------- |:-----------------------------------------------------------------------
+|1|    **GET /api/public/v2/apps/:api_key/stats**         |   use the newer /v3/apps/:api_key/performance
+|2|    **GET /api/public/v2/apps/revenue**                |   use the newer v3/apps/revenue
+|3|    **GET /api/public/v2/apps/:api_key/revenue**       |   use the newer v3/apps/:api_key/revenue
+
 
 ## Usage Steps
 
