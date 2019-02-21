@@ -107,6 +107,7 @@ var pollfishConfig = {
   indicator_position: "BOTTOM_RIGHT",
   debug: true,
   uuid: "string_uuid",
+  alwaysReturnContent: false, // show the iframe even when no survey is found
   closeCallback: customSurveyClosed,
   userNotEligibleCallback: customUserNotEligible,
   closeAndNoShowCallback: customCloseAndNoShow,
@@ -247,6 +248,20 @@ document.querySelector('body').onfocus = function () {
 ```
 
 Another way is to wait for the next session of the user and Pollfish will notify you about those events.
+
+
+#### 8\. Explicitly Show the "No Survey Found" page when no survey is found
+
+The default behavior when there is no survey found, is to not show anything to the user, and no indicator is shown.
+If this is not the required behavior for your use case you can set the `alwaysReturnContent` set to `true` and the indicator will always be shown, even when no survey can be answered.
+
+```js
+const config = {
+  // ...,
+  alwaysReturnContent: true
+  // ...,
+}
+```
 
 ## Update your Privacy Policy
 
