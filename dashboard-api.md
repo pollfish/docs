@@ -22,6 +22,8 @@ create, update, delete or retrieve stats of Pollfish apps.
 |9|    **GET /api/public/v3/apps/:api_key/revenue**      |   returns the revenue per provider of the specified app of the developer
 |10|    **GET /api/public/v3/apps/demographics**          |   returns the demographic data for a particular user
 |11|    **GET /api/public/v3/apps/:api_key/users_log**    |   returns the user logs for a given device_id or request_uuid
+|12|    **GET** **/api/public/v3/apps/revenuePerCountry**           |   returns the revenue per country for all the apps of the developer
+|13|    **GET /api/public/v3/apps/:api_key/revenuePerCountry**      |   returns the revenue per country of the specified app of the developer
 
 ### Removed Endpoints
 
@@ -216,53 +218,7 @@ in the relevant document
 |1  | 204       | Successfully deleted the app
 |2  | 403       | If an app with the specified api_key does not exist or you don\'t have the permissions to access the app
 
-## `4.5 GET /api/public/v2/apps/:api_key/stats`
-
-*Returns the stats for an app*
-
-### Query params
-
-|   | Name      | Description                                  | Required
-|---|:----------|:---------------------------------------------|:--------
-|1  | unit      | Time unit, values := days \| months \| weeks | Yes
-
-### Server Response
-
-|   | Code      | Description
-|---|:----------|:----------------------------------------------------------------------------------------------------------
-|1  | 200       | Successful response
-|2  | 400       | Missing or invalid parameters
-|3  | 403       | If an app with the specified api_key does not exist or you don\'t have the permissions to access the app
-
-
-###  Example Request
-
-*http -a test\@gmail.com:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 https://www.pollfish.com/api/public/v2/apps/b77bb0f8-5962-4882-a23c-2e6c9e99a84a/stats?unit=months*
-
-### Example Response
-
-```json
-[
-  {
-    "completed_short_survey": 100, 
-    "completed_survey": 854, 
-    "date": "2017/03/01", 
-    "revenue": 500, 
-    "saw_short_survey": 500, 
-    "saw_survey": 3000
-  },
-  {
-    "completed_short_survey": 50, 
-    "completed_survey": 780, 
-    "date": "2017/02/01", 
-    "revenue": 450, 
-    "saw_short_survey": 30, 
-    "saw_survey": 5400
-  }
-]
-```
-
-## `4.6 GET /api/public/v2/apps`
+## `4.5 GET /api/public/v2/apps`
 
 *Returns an array of apps of the user*
 
@@ -295,50 +251,7 @@ in the relevant document
 ]
 ```
 
-## `4.7 GET /api/public/v2/apps/revenue`
-
-*Returns the revenue per app for all the apps of the publisher*
-
-### Server Response
-
-|   | Code      | Description
-|---|:----------|:----------------------------------------------------------------------------------------------------------
-|1  | 200       | Successful response
-
-###  Example Response
-
-```json
-{
-  "apps": [
-    {
-      "c7881502-5e87-4007-8853-91c8c10f4ed5": {
-        "revenue": {
-          "balance_dollars": 0.0, 
-           "daily_dollars": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ], 
-           "monthly_dollars": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ], 
-           "weekly_dollars": [ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ], 
-         }
-       }
-    }
-  ]
-}
-```
-
-## `4.8 GET /api/public/v2/apps/:api_key/revenue`
-
-*Returns the revenue of the specified app*
-
-### Server Response
-
-|   | Code      | Description
-|---|:----------|:----------------------------------------------------------------------------------------------------------
-|1  | 200       | Successful response
-
-### Example Response
-
-Same as above but include the revenue only for the specified app.
-
-## `4.9 GET /api/public/v3/apps/performance`
+## `4.6 GET /api/public/v3/apps/performance`
 
 *returns the performance metrics for all the apps of the developer for a
 designated time period*
@@ -412,7 +325,7 @@ The url can contain the following query parameters
 ]
 ```
 
-## `4.10 GET /api/public/v3/apps/:api_key/performance`
+## `4.7 GET /api/public/v3/apps/:api_key/performance`
 
 returns the performance metrics of the specified app for a designated
 time period
@@ -434,7 +347,7 @@ time period
 Same as above but include the performance metrics only for the specified
 app.
 
-## `4.11 GET /api/public/v3/apps/revenue`
+## `4.8 GET /api/public/v3/apps/revenue`
 
 returns the total revenue per provider for all the apps of the developer
 for a designated time period and for selected countries
@@ -555,7 +468,7 @@ The url can contain the following query parameters
 ]
 ```
 
-## `4.12 GET /api/public/v3/apps/:api_key/revenue`
+## `4.9 GET /api/public/v3/apps/:api_key/revenue`
 
 returns the total revenue per provider of the specified app for a
 designated time period
@@ -579,7 +492,7 @@ designated time period
 Same as above but include the revenue only for the specified app.
 
 
-## `4.13 GET /api/public/v3/apps/demographics`
+## `4.10 GET /api/public/v3/apps/demographics`
 
 returns the demographic data for a particular user
 
@@ -623,7 +536,7 @@ The codes are documented at
 }
 ```
 
-## `4.14 GET /api/public/v3/apps/:api_key/users_log`
+## `4.11 GET /api/public/v3/apps/:api_key/users_log`
 
 returns the user logs for a given device_id or request_uuid
 
@@ -697,3 +610,94 @@ The url can contain the following query parameters
 | 13 | Third Party Termination  | A respondent was disqualified by a mediation partner.
 
 > Note: We are working on making **Third Party Termination** reasons more verbose
+
+## `4.12 GET /api/public/v3/apps/revenuePerCountry`
+
+returns the total revenue per country for all the apps of the developer
+for a designated time period and for selected countries
+
+The url can contain the following query parameters
+
+### **Parameter**
+
+|   | Name  | JSON Type     | Description                      | Required
+|---|:------|:--------------|:---------------------------------|:--------
+| 1 | from  | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the beginning of the time period for the query. <br>If omitted, the default is one month before parameter to. | No
+| 2 | to    | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the end of the time period for the query. <br>If omitted, the default is the current date. | No
+| 3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
+
+### Server Response
+
+|   | Code      | Description
+|---|:----------|:----------------------------------------------------------------------------------------------------------
+|1  | 200       | Successful response
+|2  | 400       | Missing or invalid parameters <br>- **from** not is ISO 8601 format <br>- **to** not in ISO 8601 format <br>- The **api_key** is invalid or does not belong to the user
+
+### Example Requests
+
+*http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 https://www.pollfish.com/api/public/v3/apps/revenuePerCountry?from=2018-07-01&to=2018-07-10*
+
+*http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 https://www.pollfish.com/api/public/v3/apps/revenuePerCountry?from=2018-07-04*
+
+*http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 https://www.pollfish.com/api/public/v3/apps/revenuePerCountry?countries=US,FR*
+
+### Example Response
+
+```json
+[
+  {
+    "date": "2019-01-01",
+    "total": 38.17,
+    "countries": [
+      {
+        "iso_code": "us",
+        "amount": 0.77
+      },
+      {
+        "iso_code": "gb",
+        "amount": 17.00 
+      }
+      ...
+    ]
+  },
+  {
+    "date": "2019-01-02",
+    "total": 35.8,
+    "countries": [
+      {
+        "iso_code": "us",
+        "amount": 0.95
+      },
+      {
+        "iso_code": "gb",
+        "amount": 0.6
+      }
+      ...
+    ]
+  }
+]
+```
+
+## `4.13 GET /api/public/v3/apps/:api_key/revenuePerCountry`
+
+returns the total revenue per country of the specified app for a
+designated time period
+
+### Server Response
+
+|   | Code      | Description
+|---|:----------|:----------------------------------------------------------------------------------------------------------
+|1  | 200       | Successful response
+|2  | 400       | Missing or invalid parameters <br>- **from** not is ISO 8601 format <br>- **to** not in ISO 8601 format <br>- The **api_key** is invalid or does not belong to the user
+|3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes, like countries=US,FR for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
+
+### Example Requests
+
+*http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 https://www.pollfish.com/api/public/v3/apps/84e1a754-a261-40cf-b566-baa375b64e21/revenuePerCountry?from=2018-07-01&to=2018-07-10*
+
+*http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 https://www.pollfish.com/api/public/v3/apps/84e1a754-a261-40cf-b566-baa375b64e21/revenue?from=2018-07-01&to=2018-07-10&countries=US*
+
+### Example Response
+
+Same as above (section 4.12) but include the revenue only for the specified app.
+
