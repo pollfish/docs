@@ -479,7 +479,6 @@ designated time period
 |---|:----------|:----------------------------------------------------------------------------------------------------------
 |1  | 200       | Successful response
 |2  | 400       | Missing or invalid parameters <br>- **from** not is ISO 8601 format <br>- **to** not in ISO 8601 format <br>- The **api_key** is invalid or does not belong to the user
-| 3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes, like countries=US,FR for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
 
 ### Example Requests
 
@@ -683,13 +682,20 @@ The url can contain the following query parameters
 returns the total revenue per country of the specified app for a
 designated time period
 
+### **Parameter**
+
+|   | Name  | JSON Type     | Description                      | Required
+|---|:------|:--------------|:---------------------------------|:--------
+| 1 | from  | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the beginning of the time period for the query. <br>If omitted, the default is one month before parameter to. | No
+| 2 | to    | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the end of the time period for the query. <br>If omitted, the default is the current date. | No
+| 3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
+
 ### Server Response
 
 |   | Code      | Description
 |---|:----------|:----------------------------------------------------------------------------------------------------------
 |1  | 200       | Successful response
 |2  | 400       | Missing or invalid parameters <br>- **from** not is ISO 8601 format <br>- **to** not in ISO 8601 format <br>- The **api_key** is invalid or does not belong to the user
-|3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes, like countries=US,FR for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
 
 ### Example Requests
 
