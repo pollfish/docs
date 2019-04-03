@@ -204,7 +204,7 @@ Below you can see an example of the init function. Remember to set your API key 
 
 ```
 
-private string appDeveloperKey;
+private string apiKey;
 	
 private Position pollfishPosition = Position.MIDDLE_LEFT;
 
@@ -213,7 +213,7 @@ private bool customMode = false;
 private int indPadding = 10;
 
 
-public void onEnable()
+public void OnEnable()
 {
   #if UNITY_ANDROID
   
