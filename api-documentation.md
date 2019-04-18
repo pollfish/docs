@@ -443,7 +443,7 @@ Pollfish can use MRAID library from IAB (<http://www.iab.net/MRAID>)
 implemented in a web container. Pollfish will use the mraid.close()  in
 order to operate properly.
 
-## 4. Server-to-server callbacks
+## 4. Server-to-server callbacks  (Optional)
 
 You can register and listen for two server-to-server callback events:
 
@@ -466,7 +466,7 @@ that param to the callback structure as explained in the link above.
   </tr>
 </table>
 
-## 5. Events
+## 5. Events (Optional)
 
 When the html file loads on the user side, there are
 several javascript events that can be fired through the lifetime of a
