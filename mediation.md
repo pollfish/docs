@@ -74,11 +74,6 @@ Surveys from mediation providers pay minimum $0.30 per completed survey and the 
 
 Pollfish 3rd party surveys are surveys programmed on other survey platforms (with an experience different than Pollfish native experience) which are provided by Pollfish clients.
 
-
-<h3> <img src="https://storage.googleapis.com/pollfish_production/random/lucid.png" width="40" height="auto"/></h3>
-
-Lucid introduced the first global marketplace for market research sample in 2011 and brought programmatic buying and selling to the market research industry. Lucid surveys come from a variety of clients that they provide the survey links from the tools that they have build them on, within the marketplace. Lucid is based in New Orleans, Louisiana, with offices in London and Gurgaon. It is considered  at the moment the biggest survey provider on the mediation stack of Pollfish, in terms of volume. End clients see the client-fencing logo of Lucid when they answer a survey that is called Samplicio.us
-
 <h3> <img src="https://s3.amazonaws.com/pf.mobile/img/cint.png" width="40" height="auto"/></h3>
 
 Cint is an online insights exchange platform that connects community owners to researchers, agencies and brands, for the sharing and accessing of consumer data. Cint was founded in 1998 in Stockholm, Sweden, and maintains one of world’s largest insights exchange platform.
