@@ -86,7 +86,7 @@ The **[[term_reason]]** value will contain **one** of these strings as the reaso
  - screenout
  - duplicate
  - security
- - eomissmatch
+ - geomissmatch
  - quality
  - hasty_answers
  - gibberish
