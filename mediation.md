@@ -19,7 +19,7 @@ Publishers can also change through their Dashboard per mediation network the fol
 - **Minimum Incidence Rate (IR)** - Publisher can set the minimum IR of accepted surveys. IR is calculated as a percentage of successful completes over the total surveys served.
 - **Desktop Vs Mobile Surveys (when available)** - Publishers can enable and allow surveys that are not mobile optimized (ideal for websites)
 
-<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/settings_control.png" width="600" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_settings.png" width="600" height="auto"/>
 </p>
 
 <br/>
