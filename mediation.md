@@ -27,7 +27,7 @@ Publishers can also change through their Dashboard per mediation network the fol
 
 Publishers can log in to their Pollfish Dashboard and review their revenue and performance reports per mediation network. 
 
-<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/random/revenue.png" width="900" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/doc_images/Revenue_new.png" width="900" height="auto"/>
 </p>
 
 <br/>
@@ -40,7 +40,7 @@ Mediation Router automatically looks for a new survey when a user gets screened 
 
 Publishers have also the ability to select from their app's settings the number of times a user should be allowed to get a new survey opportunity, if got screened out while trying to complete a survey.
 
-<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/doc_images/Revenue_new.png" width="700" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/set_router.png" width="700" height="auto"/>
 </p>
 
 <h2>Mediation Networks</h2>
