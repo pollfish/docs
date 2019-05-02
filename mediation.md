@@ -40,7 +40,7 @@ Mediation Router automatically looks for a new survey when a user gets screened 
 
 Publishers have also the ability to select from their app's settings the number of times a user should be allowed to get a new survey opportunity, if got screened out while trying to complete a survey.
 
-<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/doc_images/Revenue1.png" width="700" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/doc_images/Revenue_new.png" width="700" height="auto"/>
 </p>
 
 <h2>Mediation Networks</h2>
