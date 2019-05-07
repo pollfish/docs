@@ -80,18 +80,21 @@ For example:
  https://mybaseurl.com?device_id=[[device_id]]&cpa=[[cpa]]&request_uuid=[[request_uuid]]&timestamp=[[timestamp]]&tx_id=[[tx_id]]&signature=[[signature]]&status=[[status]]&reason=[[term_reason]]
 ```
 The **[[term_reason]]** value will contain **one** of these strings as the reason
- - quota_full
- - survey_closed
- - profiling
- - screenout
- - duplicate
- - security
- - geomissmatch
- - quality
- - hasty_answers
- - gibberish
- - captcha
- - third_party_termination
+
+Term reason | Description
+------------|------------
+quota_full | The quota that the respondent belongs was closed while the user was answering the survey
+survey_closed | The survey collected all the desired responses while the user was answering the survey
+profiling | The respondent did not match the target audience of the survey
+screenout | The respondent choose a non-desired answer in a survey screening question
+duplicate | The respondent attempted to answer the same survey twice
+security | Generic reason for security and fraud checks
+geomissmatch | We identified irregularities in the location data of the respondent
+quality | The respondent failed in one of our trap questions or other quality checks
+hasty_answers | The respondent completed the survey too fast or used straightlining
+gibberish | The respondent answered with gibberish text in at least one open-ended question
+captcha | The respondent failed one of our CAPTCHA tests
+third_party_termination | Generic reason for terminations that happen in mediation survey providers
  
  > **Important:** These responses might change in the future
 
