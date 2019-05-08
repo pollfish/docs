@@ -59,7 +59,11 @@ var pollfishConfig = {
     Sets Pollfish in debug mode  
     Set true to enable debug mode (for development), set false to set Pollfish in release mode.  
     Defaults to false
-5.  <span class="params">survey_format (optional)</span>  
+5.  <span class="params">offerwall (optional)</span>  
+    Sets Pollfish in offerwall approach mode  
+    Set to true to enable offerwall mode
+    Defaults to false
+6.  <span class="params">survey_format (optional)</span>  
     Works only in debug mode  
     This parameter is used during development to check integration with different survey formats.
     Acceptable values are (defaults to 0):
@@ -76,6 +80,7 @@ var pollfishConfig = {
   api_key: "api_key_goes_here",
   indicator_position: "BOTTOM_RIGHT",
   debug: true,
+  offerwall: false,
   uuid: "string_uuid"
 };
 ```
@@ -93,7 +98,7 @@ Pollfish Webplugin provides some callback functions to call when specific action
 3.  <span class="params">closeAndNoShowCallback</span>  
     Called when the survey is closed and the indicator hides permanently (e.g. when finishing the survey)
 4.  <span class="params">surveyCompletedCallback</span>  
-    Called when the user finishes the survey
+    Called when the user finishes the survey. Also contains revenue, survey format, estimated LOI, [survey_class](https://www.pollfish.com/docs/api-documentation) (surveyProvider + type) and IR survey information on offerwall integrations.
 5.  <span class="params">surveyAvailable</span>  
     Called when there is an availble survey for the user. Also contains revenue, survey format, estimated LOI, [survey_class](https://www.pollfish.com/docs/api-documentation) (surveyProvider + type) and IR survey information. 
 6.  <span class="params">surveyNotAvailable</span>  
@@ -106,6 +111,7 @@ var pollfishConfig = {
   api_key: "api_key_goes_here",
   indicator_position: "BOTTOM_RIGHT",
   debug: true,
+  offerwall: false,
   uuid: "string_uuid",
   alwaysReturnContent: false, // show the iframe even when no survey is found
   closeCallback: customSurveyClosed,
