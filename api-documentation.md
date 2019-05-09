@@ -540,7 +540,7 @@ integration here : <https://github.com/pollfish/api-pollfish>
 
 When the html file loads on the user side, there are
 several javascript events that can be fired through the lifetime of a
-Pollfish survey:
+Pollfish offerwall page:
 
 |  | Event                  | Description
 |--|:-----------------------|:----------------
