@@ -129,6 +129,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |62 | **facebook_id** | String | The Facebook id of the user | | No | No
 |63 | **survey_format** | String | The format of the survey to return (only available in debug mode, should be used for testing). | Enumeration. See below for the list of possible values | No | No
 |64 | **always_return_content** | Boolean | Applies only to server register call and sets the type of the response if no survey is found. If it is true the response will be HTTP 200 with a readable HTML page. Otherwise it will be an HTTP 204 without any content | true / false | No | No
+|65 | **offerwall** | Boolean | Returns offerwall response. If it is true the response will always be HTTP 200 with a readable HTML page that will contain the offerwall or a screen showing that no surveys were found | true / false | No | No
 
 **Demographics**
 <table>
@@ -361,6 +362,9 @@ Example request ( with user attributes )
 
 [https://wss.pollfish.com/v2/device/register/true?json={"api_key":"27278f6e-4197-492a-b8e9-e6478317e253","device_id":"112123-a12331fd","timestamp":"1417149043057","encryption":"NONE","version":"5","device_descr":"IPhone%205S","os":"1","os_ver":"1","scr_h":"500","scr_w":"400","scr_size":"4","con_type":"wifi","lat":"-32452123","lon":"-32452123","accuracy":"20","ip":"8.8.8.8","provider":"T-Mobile","provider_mcc":"202","provider_mnc":"05","manufacturer":"nokia","hardware_accelerated":"true","app_api_key":"provided_by_you","request_uuid":"provided_by_you","app_name":"Quiz","app_category":"Game","email":"user@example.com","year_of_birth":"1990","gender":"1","marital_status":"0","parental":"0","education":"2","race":"0","twitter_id":"916809126","personas":{"gamer":"true"},"debug":"true"}&dontencrypt=true](https://wss.pollfish.com/v2/device/register/true?json={"api_key":"27278f6e-4197-492a-b8e9-e6478317e253","device_id":"112123-a12331fd","timestamp":"1417149043057","encryption":"NONE","version":"5","device_descr":"IPhone%205S","os":"1","os_ver":"1","scr_h":"500","scr_w":"400","scr_size":"4","con_type":"wifi","lat":"-32452123","lon":"-32452123","accuracy":"20","ip":"8.8.8.8","provider":"T-Mobile","provider_mcc":"202","provider_mnc":"05","manufacturer":"nokia","hardware_accelerated":"true","app_api_key":"provided_by_you","request_uuid":"provided_by_you","app_name":"Quiz","app_category":"Game","email":"user@example.com","year_of_birth":"1990","gender":"1","marital_status":"0","parental":"0","education":"2","race":"0","twitter_id":"916809126","personas":{"gamer":"true"},"debug":"true"}&dontencrypt=true)
 
+Example offerwall request
+[https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"offerwall\":\"true\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"debug\":\"true\"}&dontencrypt=true](Offerwall example URL)
+
 
 *\* Notice that you might need to change the timestamp to current values
 for the links above to operate properly.*
@@ -381,7 +385,7 @@ explained below.
 You can also check if there is a survey available by getting the
 Response Code without the HTML response if you perform a HEAD request.
 
-### RESPONSE HEADERS
+### RESPONSE HEADERS (Non-Offerwall Approach)
 
 Server responses include http header parameters with additional information.
 
@@ -437,12 +441,6 @@ and present only if the LOI can be computed reliably.
 
 A displayable HTML page
 
-#### **MRAID library (optional)**
-
-Pollfish can use MRAID library from IAB (<http://www.iab.net/MRAID>)
-implemented in a web container. Pollfish will use the mraid.close()  in
-order to operate properly.
-
 ## 4. Server-to-server callbacks  (Optional)
 
 You can register and listen for two server-to-server callback events:
@@ -466,7 +464,7 @@ that param to the callback structure as explained in the link above.
   </tr>
 </table>
 
-## 5. Events (Optional)
+## 5. Events (Optional) - Single Survey At A Time Approach
 
 When the html file loads on the user side, there are
 several javascript events that can be fired through the lifetime of a
@@ -536,6 +534,78 @@ integration here : <https://github.com/pollfish/api-pollfish>
         vertical-align: top;
     }
 </style>
+
+## 5. Events (Optional) - Offerwall Approach
+
+When the html file loads on the user side, there are
+several javascript events that can be fired through the lifetime of a
+Pollfish survey:
+
+|  | Event                  | Description
+|--|:-----------------------|:----------------
+|1 | **close**              | When a user clicks on close button
+|2 | **closeAndNoShow**     | When a user clicks on close button
+|3 | **noSurveyAvailable**  | When the offerwall contains no survey for the user
+|4 | **setSurveyCompleted** | When a user successfully completed a survey containing information such as CPA etc. <br>(NOTICE: Further investigation of the response will be done on the server side to detect e.g fraudulent activites, so make sure to use the server-to-server callbacks, as described in section 4 to track valid responses prior crediting users)
+|5 | **userNotEligible**    | When a user was not qualified to complete the survey (screened-out)         
+|6 | **userRejectedSurvey** | When a user selected the "I will not participate in this survey" button when on the GDPR page
+
+Below you can find some examples of how to catch and handle the events
+described above:
+
+```js
+window.onmessage = function(e){
+    if(e.data === 'close' || e.data === 'closeAndNoShow'){
+        // Handle the event of user clicking to close the survey
+    }
+}
+```
+```js
+window.onmessage = function(e){
+    if(e.data === 'userNotEligible'){
+        // Handle the event when a user gets screened out
+    }
+}
+```
+```js
+window.onmessage = function(e){
+    if(e.data.indexOf('setSurveyCompleted') > -1) {
+        var data = JSON.parse(e.data);
+        if(data.type === 'setSurveyCompleted'){
+            var survey = {
+                survey_price: data.survey_price,
+                reward_name: data.reward_name,
+                reward_value: data.reward_value,
+                survey_class: data.survey_class,
+                survey_loi: data.survey_loi,
+                survey_ir: data.survey_ir,
+            };
+            // you can use this survey object however you like
+        }
+    }
+}
+```
+
+```js
+window.onmessage = function(e){
+    if(e.data === 'userRejectedSurvey'){
+        // Handle the event when a user rejected a survey prompt
+    }
+}
+```
+You can check out our sample project on how to implement an API
+integration here : <https://github.com/pollfish/api-offerwall-pollfish>
+
+
+<style>
+    .demographics {
+        color: #95bde2;
+        font-size: 22px;
+        padding-top: 15px;
+        vertical-align: top;
+    }
+</style>
+
 
 
 ## 6. Request your account to get verified
