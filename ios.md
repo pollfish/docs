@@ -1,7 +1,8 @@
 <div class="changelog" data-version="4.5.1">
 	
 v.5.0.0
-	
+
+- Created new expandable interface initWithAPIKey(...)
 - Removed old multiple init interfaces
 - Removed deprecated interface setAttributes
 - Removed deprecated customMode and introduced rewardMode option
