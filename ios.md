@@ -1,4 +1,5 @@
 <div class="changelog" data-version="4.5.1">
+	
 v.5.0.0
 	
 - Created new expandable interface initWithAPIKey:(NSString*)apiKey andParams:(PollfishParams *) pollfishParams
