@@ -2,7 +2,6 @@
 	
 v.5.0.0
 	
-- Created new expandable interface initWithAPIKey:(NSString*)apiKey andParams:(PollfishParams *) pollfishParams
 - Removed old multiple init interfaces
 - Removed deprecated interface setAttributes
 - Removed deprecated customMode and introduced rewardMode option
