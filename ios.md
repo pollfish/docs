@@ -1,4 +1,14 @@
 <div class="changelog" data-version="4.5.1">
+v.5.0.0
+- Created new expandable interface initWithAPIKey:(NSString*)apiKey andParams:(PollfishParams *) pollfishParams
+- Removed old multiple init interfaces
+- Removed deprecated interface setAttributes
+- Removed deprecated customMode and introduced rewardMode option
+- Added support for offerwall mode
+- Added option to pass a container view to renderd Pollfish overlay
+- Removed automatic re-init feature for device orientation
+- Added support for exiting faulty mediation surveys
+	
 v4.5.1
 
 - Fixed bug with user locale
