@@ -30,21 +30,17 @@ Pollfish allows publishers to incentivize/reward their app's users for completin
 
 Below, you can see a list of all logical steps needed, in order to archieve the rewarded approach with Pollfish surveys.
 
-<h3>1. Initialize Pollfish in custom mode (skip Pollfish Indicator)</h3>
+<h3>1. Initialize Pollfish in reward mode (skip Pollfish Indicator)</h3>
 
-You should initialize Pollfish SDK in custom mode. With this mode, Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) will be skipped. Pollfish in custom mode ignores Pollfish panel behaviour from Pollfish Developer Dashboard (you can read more on Pollfish panel behaviour settings on Pollfish [FAQ page](https://pollfish.zendesk.com/hc/en-us/articles/205355891--What-do-different-PollFish-Indicator-Settings-mean-])). Custom mode always skips showing Pollfish indicator and always force open Pollfish survey panel view to app users.
+You should initialize Pollfish SDK in custom mode. With this mode, Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) will be skipped. Pollfish in custom mode ignores Pollfish panel behaviour from Pollfish Developer Dashboard (you can read more on Pollfish panel behaviour settings on Pollfish [FAQ page](https://pollfish.zendesk.com/hc/en-us/articles/205355891--What-do-different-PollFish-Indicator-Settings-mean-])). Custom mode always skips showing Pollfish indicator and hides Pollfish survey panel view from app users.
 
-<h3>2. Hide Pollfish survey panel</h3>
-
-Immediately after Pollfish initialisation you should call Pollfish hide function. This way you will ensure that Pollfish survey panel will not force slide if a survey is received on the device and therefore you will have full control on when to show Pollfish survey panel (for example with the click of a button or with a custom prompt you will make)
-
-<h3>3. Register & listen to Pollfish survey received notification</h3>
+<h3>2. Register & listen to Pollfish survey received notification</h3>
 
 You should register and listen for Pollfish survey received notification/listener. If you receive a survey received notification you can prompt your users with a custom prompt in order to complete a survey. 
 
 In survey received notification you can easily find information on survey format (Basic or Playful) and money to be earned, if survey is completed, in USD cents.
 
-<h3>4. Show custom prompt or OfferWall entry</h3>
+<h3>3. Show custom prompt or OfferWall entry</h3>
 
 When you receive a notification that a survey was received on the device you can show a custom prompt, or a button or add an offerwall entry to prompt your users to take a survey in exchange for a reward.
 
@@ -56,27 +52,27 @@ When you receive a notification that a survey was received on the device you can
 or you can find more examples [here](https://www.pollfish.com/blog/2016/05/18/rewarded-surveys-monetize-mobile-apps/)
 
 
-<h3>5. Show Pollfish survey</h3>
+<h3>4. Show Pollfish survey</h3>
 
 If a user chose to take a survey (though your custom prompt for example) you should call Pollfish show function in order to open Pollfish survey panel to the user, to complete the survey. 
 
 > **Note:** On Android and iOS there is also an optional function that you can call in order to see if a survey is present/available on the device (did not expire), prior calling Pollfish show.
 
-<h3>6. Register & Listen for Pollfish survey completed notification</h3>
+<h3>5. Register & Listen for Pollfish survey completed notification</h3>
 
 You should register and listen for Pollfish survey completed notification/listener. In survey completed notification you can easily find information on survey completed format (Basic or Playful) and money earned in USD cents.
 
 > **Note:** It is strongly adviced that you do not reward users directly on survey completion notification within the SDK. You should register on Pollfish Dashboard a server-to-server callback as described in step 7 and reward your users upon the receiveal of that callback
 
 
-<h3>7. Register for server-to-server (s2s) callbacks on survey completion</h3>
+<h3>6. Register for server-to-server (s2s) callbacks on survey completion</h3>
 
 In order to avoid user fraud it is strongly adviced to register a server-to-server callback on Pollfish Developer Dashboard in order to receive a relevant notification on your server side upon survey completion. Once this notification is receivedm you can reward your users.
 
 You can find detailed information on how to set up server-to-server callbacks [here](https://www.pollfish.com/docs/s2s)
 
 
-<h3>8. Register & Listen for Pollfish user not eligible notification</h3>
+<h3>7. Register & Listen for Pollfish user not eligible notification</h3>
 
 Since Pollfish is a survey platform, some times users maybe screened out once a survey is started. Having that said, you should register and listen for Pollfish user not eligible notification/listener.  If this event is fired you will not earn any money from that survey and you should not reward your users either. The best approach to handle this case is to inform your users with a custom prompt. 
 
@@ -86,7 +82,7 @@ Since Pollfish is a survey platform, some times users maybe screened out once a 
 <p align="center"><img style="margin: 0 auto; display: block; border: 1px solid #000;" src="https://storage.googleapis.com/pollfish-images/eligible_not.png" width="250" height="auto"/>
 
 
-<h3>9. Passing custom user params on survey completion to server side (optional)</h3>
+<h3>8. Passing custom user params on survey completion to server side (optional)</h3>
 
 If you want to pass custom params on your server side during survey completion you should follow the steps below:
 
@@ -121,7 +117,7 @@ You can have a look for some integration tips <a href="https://www.pollfish.com/
 You can find examples in code on how to implement the rewarded approach in the links below:
 
 
-- [Android Sample Project](https://github.com/pollfish/android-sdk-pollfish/blob/master/sample-project/app/src/main/java/pollfish/com/sampleproject/IncentivizeActivity.java)
+- [Android Sample Project](https://github.com/pollfish/android-sdk-pollfish/blob/master/sample-project/app/src/main/java/pollfish/com/sampleproject/RewardedSurveyActivity.java)
 
 - [iOS Sample Project](https://github.com/pollfish/ios-sdk-pollfish/blob/master/SampleProject/SampleProject/SecondViewController.m)
 
