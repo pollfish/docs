@@ -379,6 +379,8 @@ Sets padding from the top or bottom of the screen according to the Position of t
         Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
+| **Note:** if used in MIDDLE position, padding is calculating from top.**  
+<br/>
 <br/>
 #### **5.2.4 .pollfishViewContainer (UIView \*)**
 
@@ -402,6 +404,36 @@ Sets a UIView container where Pollfish surveys will be rendered above it. If thi
 ```
 <br/>
 <br/>
+#### **5.2.5 .releaseMode (BOOL)**
+
+Sets Pollfish SDK to Developer or Release mode. If you do not set this param it will turn thew SDK to developer mode by default in order for the developer to be able to test with test surveys
+
+*   **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing - always returns a survey).  
+*   **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
+
+> **Note:** Be careful to set andDebuggable parameter to false prior releasing to AppStore!  
+
+<br/><br/>
+<span style="text-decoration: underline">Objective-C:</span>
+```
+    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
+        pollfishParams.releaseMode=true;
+    }];
+    
+    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
+```
+<span style="text-decoration: underline">Swift:</span>
+```
+	let pollfishParams = PollfishParams ()
+        
+        pollfishParams.releaseMode=true;
+	
+        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
+```
+<br/>
+<br/>
+
+
 
 
 ### Pollfish init function takes the following parameters:
