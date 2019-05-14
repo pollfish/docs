@@ -2,10 +2,10 @@
 	
 v.5.0.0
 
-- Created new expandable interface initWithAPIKey(...)
+- Created new expandable interface initWithAPIKey(...) with a configuration PollfishParams object
 - Removed old init interfaces
 - Removed deprecated interface setAttributes
-- Removed deprecated customMode and introduced rewardMode option
+- Removed customMode and introduced rewardMode option
 - Added support for offerwall mode
 - Added option to pass a container view to renderd Pollfish overlay
 - Removed automatic re-init feature for device orientation
@@ -538,75 +538,8 @@ PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pol
 ```
 
 
-
-
-
-
-
-
-### Pollfish init function takes the following parameters:
-
-**1\. initAtPosition** (PollfishPosition) - Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
-
-
-**2\. withPadding** (int) - The padding from top or bottom of the screen according to PollfishPosition of the indicator (small red rectangle) specified before (0 is the default value)  
-
-> **Note:** if used in MIDDLE position, padding is calculating from top.**  
-
-**3\. andDeveloperKey** (NSString *)- Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
-
-**4\. andDebuggable (BOOL)** – Debug or Release mode  
-
-<span style="text-decoration: underline">You can use Pollfish either in Debug or in Release mode.</span>  
-
-*   **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).  
-*   **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
-
-> **Note:** Be careful to set andDebuggable parameter to false prior releasing to AppStore!  
-
-5\. **andCustomMode** (BOOL) – Initializes Pollfish in custom mode if set to true. By default this is set to false.
-
-**true Vs false**
-
-*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
-*   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
-
-![alt text](https://storage.googleapis.com/pollfish_production/multimedia/dashboard_1.png)
-
 <br/>
-Custom mode true should be used if you want to incentivize users to participate to surveys. We have a detailed guide on how to implement the rewarded approach <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a>
-<br/>
-
-Below you can see an example of the init function:  
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-
-  [Pollfish initAtPosition: PollFishPositionMiddleRight
-             withPadding: 0
-	     andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
-           andDebuggable: false 
-           andCustomMode: false];
-           
-}
-```
-
-<span style="text-decoration: underline">Swift:</span>
- 
-```
-func applicationDidBecomeActive(application: UIApplication) {
-
- Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
-       			    withPadding: 0, 
-       		    andDeveloperKey: "2ae349ab-30b8-4100-bc4d-b33b82e76519" , 
-       		      andDebuggable: false, 
-       		      andCustomMode: false)
-}
-```
-<br/>
-**At this point you are ready to go live! Turn your app to Release mode by setting andDebuggable:false and submit your app to AppStore.**
+**At this point you are ready to go live! Turn your app to Release mode by setting releaseMode:true and submit your app to AppStore.**
 <br/><br/>
 ### 6\. Distributing your app to AppStore
 
@@ -668,258 +601,46 @@ After your app is published on an app store you should request your account to g
 
 When your account is verified you will be able to start receiving paid surveys from Pollfish clients.
 <br/>
-
 <br/>
-
-<br/>
-
-
-
 
 
 ## Optional section
 
-In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
+In this section we will list several options that can be used to control Pollfish surveys behaviour by listening and acting on different  notifications. All the steps below are optional.
 <br/>
 <br/>
 
-### 9\. Handling changes in app’s view hierarchy after intialization (optional)
+### 9\. Handling orientation changes (optional)
 
-#### Call of init when changes in your app’s view hierarchy happen during app’s lifecycle or Pollfish is not shown on top view
-
-When your app changes it’s view hierarchy during it’s lifecycle (e.g. through a storyboard), or when Pollfish is not shown on the top view of your application, you can call Pollfish init method again in your current’s ViewController viewWillAppear methos, in order to bring Pollfish back on the top of your views.  
+Pollfish SDK does not handle by default different orientation changes. If your app supports more than one orientations you should register and get notified when a device is roated and re-init Pollfish.
 
 For example:
 
 <span style="text-decoration: underline">Objective-C:</span>
 
 ```
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    [Pollfish initAtPosition: PollFishPositionMiddleRight
-                 withPadding: 0
-             andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
-               andDebuggable: false 
-               andCustomMode: false];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appRotated) name:UIDeviceOrientationDidChangeNotification object:nil];
+```
+```
+-(void) appRotated{
+    // Pollfish re-init
 }
 ```
-
 <span style="text-decoration: underline">Swift:</span>
  
 ```
-override func viewWillAppear(animated: Bool) 
-{
-    super.viewWillAppear(animated)
-    
-    Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
-       			    withPadding: 0, 
-       		    andDeveloperKey: "2ae349ab-30b8-4100-bc4d-b33b82e76519" , 
-       		      andDebuggable: false, 
-       		      andCustomMode: false)
-}
+NotificationCenter.default.addObserver(forName: UIDevice.orientationDidChangeNotification,
+                                               object: nil,
+                                               queue: nil,
+                                               using:appRotated)
 ```
-
-Another example of this case is when showing for example a modal view controller. This controller changes current view hierarchy in order to display modal view controller on top. Therefore, in that case you need to call init again to bring Pollfish back on top.  
-
-For example:  
-
-<span style="text-decoration: underline">Objective-C:</span>
-
 ```
-- (IBAction)showModal:(id)sender {
-						    
-    	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
- 
-	MyModalViewController  *myModalViewController = [storyboard instantiateViewControllerWithIdentifier:@"MyModalViewController"];
-    	
-    myModalViewController.modalPresentationStyle = UIModalPresentationFullScreen;
-   
-  	[self presentViewController: myModalViewController animated:YES completion:nil];
-    
-	[Pollfish initAtPosition: PollFishPositionMiddleRight
-                 withPadding: 0
-		     andDeveloperKey: @"2ae349ab-30b8-4100-bc4d-b33b82e76519" 
-               andDebuggable: false 
-               andCustomMode: false];
-}
-
-- (IBAction)dismissController:(id)sender {
-
-    	[[self presentingViewController] dismissViewControllerAnimated:YES completion:^{
-        
-        [Pollfish initAtPosition: PollFishPositionMiddleLeft
-                     withPadding: 0
-                 andDeveloperKey: @"af89aaf1-b7d4-46c1-8e91-b2625c2d5dbe"
-                   andDebuggable: false 
-                   andCustomMode:false];
-    	}];
-}
-```
-
-<span style="text-decoration: underline">Swift:</span>
-
-```
-@IBAction func showModal(sender: AnyObject) {
-
-    	self.presentViewController(myModalViewController, animated: true, completion: nil)
-  
-    	Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
-       			    withPadding: 0, 
-       		    andDeveloperKey: "2ae349ab-30b8-4100-bc4d-b33b82e76519" , 
-       		      andDebuggable: false, 
-       		      andCustomMode: false)
-}
-
-@IBAction func dismissController(sender: AnyObject) {
-
-	myModalViewController.dismissViewControllerAnimated(true, completion: {  
-	
-	Pollfish.initAtPosition(Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue), 
-       			    withPadding: 0, 
-       		    andDeveloperKey: "2ae349ab-30b8-4100-bc4d-b33b82e76519" , 
-       		      andDebuggable: false, 
-       		      andCustomMode: false)});
-}
-```
- 
- 
-Note:
-
-• It is very important to call init function of Pollfish when the view hierarchy has already changed. Therefore in the example above you have to call init after the completion of the dismissal of the modal view controller.  
-
-• Be careful to use the same arguments as the arguments you used in the init function in your app’s delegate.  
-
-• Even if you call init in any ViewController somewhere within the app lifecycle you should still keep the init function in your App’s Delegate.  
-
-If you still have questions regarding how to handle view hierarchy changes have a look in SampleApp in iOS SDK  
-
-<br/>
-### 10\. Other init methods (optional)
-
-#### Passing custom parameter for server to server postback calls
-
-If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function within the SDK and receive it back with Server to Server, survey completed postback call you can use:  
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
- [Pollfish initAtPosition: (PollfishPosition)
-              withPadding: (int)
-	      andDeveloperKey: (NSString *)
-            andDebuggable: (BOOL) 
-	        andCustomMode: (BOOL)
-	       andRequestUUID: (NSString *)];
-```
-
-<span style="text-decoration: underline">Swift:</span>
-
-```
-func applicationDidBecomeActive(application: UIApplication) {
-
-   Pollfish.initAtPosition( pos: Int32, 
-       			    withPadding: Int32, 
-       		    andDeveloperKey: String!, 
-       		      andDebuggable: Bool, 
-       		      andCustomMode: Bool
-       		     andRequestUUID: String!)
+func appRotated(_ notification:Notification){
+    // Pollfish re-init
 }
 ```
 <br/>
-
-#### Passing user attributes to skip or shorten Pollfish Demographic surveys
-
-If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
-
-| **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
-
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
- [Pollfish initAtPosition: (PollfishPosition)
-              withPadding: (int)
-	      andDeveloperKey: (NSString *)
-            andDebuggable: (BOOL) 
-	        andCustomMode: (BOOL)
-	    andUserAttributes: (NSMutableDictionary *)];
-```
-
-<span style="text-decoration: underline">Swift:</span>
-
-```
-func applicationDidBecomeActive(application: UIApplication) {
-
-   Pollfish.initAtPosition( pos: Int32, 
-       			    withPadding: Int32, 
-       		    andDeveloperKey: String!, 
-       		      andDebuggable: Bool, 
-       		      andCustomMode: Bool
-	          andUserAttributes: NSMutableDictionary!)
-}
-```
-<br/>
-
-an example of user attributes dictionary could be the following one:
-
-<span style="text-decoration: underline">Objective-C:</span>
-```
-    UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary alloc] init];
-    
-    /*included in Demographic Surveys*/
-    [userAttributesDictionary setGender: GENDER(MALE)];
-    [userAttributesDictionary setRace:RACE(WHITE)];
-    [userAttributesDictionary setYearOfBirth:YEAR_OF_BIRTH(_1984)];
-    [userAttributesDictionary setMaritalStatus:MARITAL_STATUS(MARRIED)];
-    [userAttributesDictionary setParentalStatus:PARENTAL_STATUS(THREE)];
-    [userAttributesDictionary setEducation:EDUCATION_LEVEL(UNIVERSITY)];
-    [userAttributesDictionary setEmployment:EMPLOYMENT_STATUS(EMPLOYED_FOR_WAGES)];
-    [userAttributesDictionary setCareer:CAREER(TELECOMMUNICATIONS)];
-    [userAttributesDictionary setIncome:INCOME(MIDDLE_I)];
-    
-    /*other user attributes*/
-    [userAttributesDictionary setEmail:@"user@email.com"];
-    [userAttributesDictionary setFacebookId:@"USER_FB"];
-    [userAttributesDictionary setGoogleId:@"USER_GOOGLEID"];
-    [userAttributesDictionary setTwitterId:@"USER_TWITTER"];
-    [userAttributesDictionary setLinkedInId:@"USER_LINKEDIN"];
-    [userAttributesDictionary setPhone:@"0030002221929"];
-    [userAttributesDictionary setName:@"USER_NAME"];
-    [userAttributesDictionary setSurname:@"USER_SURNAME"];
-    [userAttributesDictionary setCustomAttributeWithKey:@"my_param" andValue:@"my_value"];
-    
-```
-    
-
-<span style="text-decoration: underline">Swift:</span>
-```
-    let userAttributesDictionary:UserAttributesDictionary = [:]
-    
-    /*included in Demographic Surveys*/
-    userAttributesDictionary.setGender(GENDER(MALE));
-    userAttributesDictionary.setRace(RACE(WHITE));
-    userAttributesDictionary.setYearOfBirth(YEAR_OF_BIRTH(_1984));
-    userAttributesDictionary.setMaritalStatus(MARITAL_STATUS(MARRIED));
-    userAttributesDictionary.setParentalStatus(PARENTAL_STATUS(THREE));
-    userAttributesDictionary.setEducation(EDUCATION_LEVEL(UNIVERSITY));
-    userAttributesDictionary.setEmployment(EMPLOYMENT_STATUS(EMPLOYED_FOR_WAGES));
-    userAttributesDictionary.setCareer(CAREER(TELECOMMUNICATIONS));
-    userAttributesDictionary.setIncome(INCOME(MIDDLE_I));
-    
-    /*other user attributes*/
-    userAttributesDictionary.setEmail(@"user@email.com");
-    userAttributesDictionary.setFacebookId(@"USER_FB");
-    userAttributesDictionary.setGoogleId(@"USER_GOOGLEID");
-    userAttributesDictionary.setTwitterId(@"USER_TWITTER");
-    userAttributesDictionary.setLinkedInId(@"USER_LINKEDIN");
-    userAttributesDictionary.setPhone(@"0030002221929");
-    userAttributesDictionary.setName(@"USER_NAME");
-    userAttributesDictionary.setSurname(@"USER_SURNAME");
-    userAttributesDictionary.setCustomAttributeWithKey(@"my_param" andValue:@"my_value");
-    
-```
-### 11\. Manually show or hide Pollfish (optional)
+### 10\. Manually show or hide Pollfish (optional)
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization:  
 
@@ -993,7 +714,7 @@ override func viewWillAppear(animated: Bool)
 ```
 <br/>
 
-### 12\. Update user location (optional)
+### 11\. Update user location (optional)
 
 You can update user’s location anytime after initialization to get better fill rate on surveys by calling the following:  
 
@@ -1010,7 +731,7 @@ You can update user’s location anytime after initialization to get better fill
 ```
 <br/>
 
-### 13\. Send beacon information (optional)
+### 12\. Send beacon information (optional)
 
 You can send beacon information if available anytime after initialization to get to be eligible for receiveing beacon surveys by calling the following:  
 
@@ -1027,7 +748,7 @@ Pollfish.sendBeaconInfo(beacon: CLBeacon!);
 ```
 <br/>
 
-### 14\.Implement Pollfish event listeners (optional)
+### 13\.Implement Pollfish event listeners (optional)
 
 > **Note:** Pollfish listeners/notifications fire in an asynchronous way. Having said that it's possible that you receive them while being in a background thread and not the main UI thread. If you want to make any prompts or custom changes on the view level when you receive those notifications, please be sure to make them on the main UI thread
 
@@ -1036,42 +757,69 @@ Pollfish.sendBeaconInfo(beacon: CLBeacon!);
 
 You can be notified when a survey is received via the iOS Notification Center. Note that the observer should be already registered when a survey is received in order to run the selector.  
 
-
 <span style="text-decoration: underline">Objective-C:</span>
 
 ```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyReceived) name:@"PollfishSurveyReceived" object:nil];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishReceived:) name:@"PollfishSurveyReceived" object:nil];
 ```
 
 ```
-- (void)surveyReceived
+- (void)pollfishReceived:(NSNotification *)notification
 {
-    NSLog(@"A survey was received!");
+    int surveyPrice = [[[notification userInfo] valueForKey:@"survey_cpa"] intValue];
+    int surveyIR = [[[notification userInfo] valueForKey:@"survey_ir"] intValue];
+    int surveyLOI = [[[notification userInfo] valueForKey:@"survey_loi"] intValue];
+    
+    NSString *surveyClass =[[notification userInfo] valueForKey:@"survey_class"];
+    
+    NSString *rewardName = [[notification userInfo] valueForKey:@"reward_name"];
+    int rewardValue = [[[notification userInfo] valueForKey:@"reward_value"] intValue];
+    
+    NSLog(@"Pollfish: Survey Received - SurveyPrice:%d andSurveyIR: %d andSurveyLOI:%d andSurveyClass:%@ andRewardName:%@ andRewardValue:%d", surveyPrice,surveyIR, surveyLOI, surveyClass, rewardName, rewardValue);
 }
 ```
 
 <span style="text-decoration: underline">Swift:</span>
 
 ```
- NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishReceived) , name:
-            "PollfishSurveyReceived", object: nil)
+NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishSurveyReceived"),
+                                               object: nil,
+                                               queue: nil,
+                                               using:pollfishReceived)
 ```
 
 ```
-func pollfishReceived() 
-{
-   print("A survey was received!");
+func pollfishReceived(_ notification:Notification) {
+        
+        if let userInfo : [AnyHashable: Any] = (notification.userInfo) {
+      
+            let surveyPrice = userInfo["survey_cpa"]
+            let surveyIR =  userInfo["survey_ir"]
+            let surveyLOI =  userInfo["survey_loi"]
+            let surveyClass =  userInfo["survey_class"]
+            
+            let rewardName = userInfo["reward_name"]
+            let rewardValue = userInfo["reward_value"]
+            
+            print("Pollfish Survey  Received - SurveyPrice: \(String(describing: surveyPrice)) andSurveyIR: \(String(describing: surveyIR)) andSurveyLOI: \(String(describing: surveyLOI)) andSurveyClass: \(String(describing: surveyClass)) andRewardName: \(String(describing: rewardName)) andRewardValue:\(String(describing: rewardValue))")
+
+        }else{         
+            print("Pollfish Survey Received")
+	}
 }
 ```
 
-You can also get informed about: 
+
+As you may see in the example above you can get informed for the following values by listening and reading the relevant notification object: 
+
+| **Note:** This notification object, when offerwall mode is enabled, it returns an empty userInfo object. It just notifies that surveys are available within the offerwall.
 
 - **survey_cpa** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
 - **survey_ir** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably.
 - **survey_loi** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
 - **survey_class** :  information about the survey network and type* 
-
-by listening and reading the relevant notification object. 
+- **reward_name** :  a virtual reward name as specified on Developer Dashboard* 
+- **reward_vale** :  a virtual reward value as caluclated via a given echange rate on Developer Dashboard.* 
 
 * The syntax for survey_class values is:
 
@@ -1100,94 +848,14 @@ The whole set of values currently supported are:
 | **Pollfish/Internal**         | Pollfish internal survey created by the publisher
 | **Toluna**         | Toluna survey   
 | **Cint**         | Cint survey   
-| **Lucid**         | Lucid survey   
 | **InnovateMR**         | InnovateMR survey   
 | **SaySo**       | SaySo survey   
 | **P2Sample**       | P2Sample survey
 
 When a new mediation network enters the Pollfish network the appropriate values will be added.
 
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishReceived:) name:@"PollfishSurveyReceived" object:nil];
-```
-
-```
-- (void)pollfishReceived:(NSNotification *)notification
-{   
-    int surveyPrice = [[[notification userInfo] valueForKey:@"survey_cpa"] intValue];
-    int surveyIR = [[[notification userInfo] valueForKey:@"survey_ir"] intValue];
-    int surveyLOI = [[[notification userInfo] valueForKey:@"survey_loi"] intValue];
-    
-    NSString *surveyClass =[[notification userInfo] valueForKey:@"survey_class"];
-  
-    NSLog(@"Pollfish: Survey Received - SurveyPrice:%d andSurveyIR: %d andSurveyLOI:%d andSurveyClass:%@", surveyPrice,surveyIR, surveyLOI, surveyClass);
-    
-}
-```
-
-<span style="text-decoration: underline">Swift:</span>
-
-```
- NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(FirstViewController.pollfishReceived(_:)) , name:
-            "PollfishSurveyReceived", object: nil)
-```
-
-```
-func pollfishReceived(_ notification:Notification) {
-     
-  let tmp : [AnyHashable: Any] = notification.userInfo!
-  
-  let surveyPrice = tmp["survey_cpa"]!
-  let surveyIR =  tmp["survey_ir"]!
-  let surveyLOI =  tmp["survey_loi"]!
-  let surveyClass =  tmp["survey_class"]!
-        
-  print("Pollfish Survey  Received - SurveyPrice: \(surveyPrice) andSurveyIR: \(surveyIR) andSurveyLOI: \(surveyLOI) andSurveyClass: \(surveyClass)")
-
-
-}
-```
 <br/>
 ### 14.2 Get notified when survey is completed
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyCompleted) name:@"PollfishSurveyCompleted" object:nil];
-```
-
-```
-- (void)surveyCompleted
-{
-    NSLog(@"Pollfish Survey Completed!");
-}
-```
-<span style="text-decoration: underline">Swift:</span>
-
-```
- NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishCompleted) , name:
-            "PollfishSurveyCompleted", object: nil)
-```
-
-```
-func pollfishCompleted() 
-{
-   print("Pollfish Survey Completed!");
-}
-```
-
-
-You can also get informed about: 
-
-- **survey_cpa** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
-- **survey_ir** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR wan not computed reliably.
-- **survey_loi** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
-- **survey_class** :  information about the survey network and type*
-
-by listening and reading the relevant notification object. 
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -1197,44 +865,65 @@ by listening and reading the relevant notification object.
 
 ```
 - (void)pollfishCompleted:(NSNotification *)notification
-{ 
+{
     int surveyPrice = [[[notification userInfo] valueForKey:@"survey_cpa"] intValue];
     int surveyIR = [[[notification userInfo] valueForKey:@"survey_ir"] intValue];
-    int surveyLOI = [[[notification userInfo] valueForKey:@"survey_loi"] intValue]; 
+    int surveyLOI = [[[notification userInfo] valueForKey:@"survey_loi"] intValue];
+    
     NSString *surveyClass =[[notification userInfo] valueForKey:@"survey_class"];
     
-    NSLog(@"Pollfish Survey Completed - SurveyPrice:%d andSurveyIR: %d andSurveyLOI:%d andSurveyClass:%@", surveyPrice,surveyIR, surveyLOI, surveyClass);
+    NSString *rewardName = [[notification userInfo] valueForKey:@"reward_name"];
+    int rewardValue = [[[notification userInfo] valueForKey:@"reward_value"] intValue];
     
+    
+    NSLog(@"Pollfish: Survey Completed - SurveyPrice:%d andSurveyIR: %d andSurveyLOI:%d andSurveyClass:%@ andRewardName:%@ andRewardValue:%d", surveyPrice,surveyIR, surveyLOI, surveyClass, rewardName, rewardValue);
 }
 ```
-
 <span style="text-decoration: underline">Swift:</span>
 
 ```
- NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(FirstViewController.pollfishCompleted(_:)) , name:
-            "PollfishSurveyCompleted", object: nil)
+NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishSurveyCompleted"),
+                                               object: nil,
+                                               queue: nil,
+                                               using:pollfishCompleted)
 ```
 
 ```
 func pollfishCompleted(_ notification:Notification) {
-     
- let tmp : [AnyHashable: Any] = notification.userInfo!
-        
- let surveyPrice = tmp["survey_cpa"]!
- let surveyIR =  tmp["survey_ir"]!
- let surveyLOI =  tmp["survey_loi"]!
- let surveyClass =  tmp["survey_class"]!
-        
- print("Pollfish Survey  Completed - SurveyPrice: \(surveyPrice) andSurveyIR: \(surveyIR) andSurveyLOI: \(surveyLOI) andSurveyClass: \(surveyClass)")
-       
+
+   if let userInfo : [AnyHashable: Any] = (notification.userInfo) {
+            
+            let surveyPrice = userInfo["survey_cpa"]
+            let surveyIR =  userInfo["survey_ir"]
+            let surveyLOI =  userInfo["survey_loi"]
+            let surveyClass =  userInfo["survey_class"]
+            
+            let rewardName = userInfo["reward_name"]
+            let rewardValue = userInfo["reward_value"]
+            
+            print("Pollfish Survey  Completed - SurveyPrice: \(String(describing: surveyPrice)) andSurveyIR: \(String(describing: surveyIR)) andSurveyLOI: \(String(describing: surveyLOI)) andSurveyClass: \(String(describing: surveyClass)) andRewardName: \(String(describing: rewardName)) andRewardValue:\(String(describing: rewardValue))")
+
+        }else{
+            
+            print("Pollfish Survey Completed")
+        }
 }
 ```
 
+
+Similarly to survey received notification, upon completion you can gert informed on the following values around the completed survey
+
+- **survey_cpa** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
+- **survey_ir** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably.
+- **survey_loi** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
+- **survey_class** :  information about the survey network and type* 
+- **reward_name** :  a virtual reward name as specified on Developer Dashboard* 
+- **reward_vale** :  a virtual reward value as caluclated via a given echange rate on Developer Dashboard.* 
 <br/>
 ### 14.3 Get notified when a user is not eligible for a Pollfish survey
 
 
-You can be notified when a user is not eligible for a Pollfish survey after accepting to take it via the iOS Notification Center.  
+You can be notified when a user is not eligible for a Pollfish survey after accepting to take one, via the iOS Notification Center.  
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -1252,11 +941,14 @@ You can be notified when a user is not eligible for a Pollfish survey after acce
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishUsernotEligible), name:"PollfishUserNotEligible", object: nil)
+NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishUserNotEligible"),
+                                               object: nil,
+                                               queue: nil,
+                                               using:pollfishUsernotEligible)
 ```
 
 ```
-func pollfishUsernotEligible() 
+func pollfishUsernotEligible(_ notification:Notification) 
 {
      print("Pollfish User Not Eligible")
 }
@@ -1271,7 +963,7 @@ You can be notified when a survey is not available for a user via the iOS Notifi
 <span style="text-decoration: underline">Objective-C:</span>
 
 ```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(surveyNotAvailable) name:@"PollfishSurveyNotAvailable" object:nil];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishNotAvailable) name:@"PollfishSurveyNotAvailable" object:nil];
 ```
 
 ```
@@ -1284,11 +976,14 @@ You can be notified when a survey is not available for a user via the iOS Notifi
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishNotAvailable)  , name:"PollfishSurveyNotAvailable", object: nil)
+NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishSurveyNotAvailable"),
+                                               object: nil,
+                                               queue: nil,
+                                               using:pollfishNotAvailable)
 ```
 
 ```
-func pollfishNotAvailable() 
+func pollfishNotAvailable(_ notification:Notification) 
 {
      print("Pollfish Survey Not Available!")
 }
@@ -1316,11 +1011,14 @@ You can be notified when a user opens Pollfish survey panel via the iOS Notifica
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishOpened), name:"PollfishOpened", object: nil)
+NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishOpened"),
+                                               object: nil,
+                                               queue: nil,
+                                               using:pollfishOpened)
 ```
 
 ```
-func pollfishOpened() 
+func pollfishOpened(_ notification:Notification)
 {
      print("Pollfish is opened!")
 }
@@ -1348,11 +1046,14 @@ You can be notified when a user closes Pollfish survey panel via the iOS Notific
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishClosed) , name:"PollfishClosed", object: nil)
+NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishClosed"),
+                                               object: nil,
+                                               queue: nil,
+                                               using:pollfishClosed)
 ```
 
 ```
-func pollfishClosed() 
+func pollfishClosed(_ notification:Notification)
 {
      print("Pollfish is closed!")
 }
@@ -1381,11 +1082,14 @@ You can be notified when a user rejected a survey via the iOS Notification Cente
 <span style="text-decoration: underline">Swift:</span>
 
 ```
-NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(YOUR_CONTROLLER.pollfishUserRejectedSurvey), name:"PollfishUserRejectedSurvey", object: nil)
+NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishUserRejectedSurvey"),
+                                               object: nil,
+                                               queue: nil,
+                                               using:pollfishUserRejectedSurvey)
 ```
 
 ```
-func pollfishUserRejectedSurvey() 
+func pollfishUserRejectedSurvey(_ notification:Notification)
 {
      print("Pollfish User Rejected Survey")
 }
@@ -1410,10 +1114,6 @@ Pollfish.isPollfishPresent()
 ```
 
 <br/>
-
-### 16\. Server-to-server callbacks on survey completion (optional)
-
-If you want to reward your users for completing a survey it is common practise to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Developer Dashboard. You can read more on how to set server to server callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>. 
 
 
 
