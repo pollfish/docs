@@ -2,7 +2,7 @@ Pollfish allows publishers to turn on Offerwall mode and enable their users to c
 
 <h1>Offerwall - How it works</h1>
 
-With Pollfish Offerwall solution, users can choose and complete multiple surveys, gettting rewarded for their opinions. The flow for a user for using the Offerwall is as described below:
+With Pollfish Offerwall solution, users can choose and complete multiple surveys, gettting rewarded for their opinions. The flow that a user has to follow while using the Offerwall is as described below:
 
 <h3>1. Unlocking Surveys</h3>
 
