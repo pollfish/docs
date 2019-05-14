@@ -453,7 +453,7 @@ If not used the default value is false and Pollfish indicator is shown.
 <br/>
 You can read more on how you can use the rewardMode to incentivize users to participate to surveys at the following  <a href="https://www.pollfish.com/docs/rewarded-surveys">link</a>.
 <br/>
-#### **5.2.7 .surveyFormat(NSString \*)**
+#### **5.2.7 .surveyFormat (NSString \*)**
 
 Explicitly requesting a specific survey format for testing purposes.
 
@@ -463,13 +463,13 @@ If you want to test Pollfish different available Survey Formats you can explicit
 
 There are four different options available: 
 
-- SurveyFormatBasic
-- SurveyFormatPlayful
-- SurveyFormatRandom
-- SurveyFormatThirdParty
+* **SurveyFormatBasic**
+* **SurveyFormatPlayful**
+* **SurveyFormatRandom**
+* **SurveyFormatThirdParty**
 
-<br/>
 Below you can see an example on how you can explicitly request to test Pollfish Plaful survey format in debug mode:
+<br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
     PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
