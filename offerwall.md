@@ -12,7 +12,7 @@ Users in order to be able to participate to surveys on the very first time the w
   
   | **Note:** If a publisher knows the demographic info of the users upfront, he can pass them during initialization in code and skip those questions from being rendered to users
 
-<h3>2. Choosing & Completing a survey</h3>
+<h3>2. Choosing & Completing a Survey</h3>
 
 Once a user ulocked surveys from the previous step, he can choose from a variety of different surveys to participate.   
 If no surveys are available for that user, an empty state screen will be rendered to the user to inform him to check back later for survey opportunities.
@@ -21,7 +21,7 @@ If no surveys are available for that user, an empty state screen will be rendere
 
 <h3>3. Getting rewarded on survey completion</h3>
 
-Users will get rewarded for every succesfully completed survey on the Offerwall after it passes validation from the real-time anti-fraud mechanism. Users can visit the history section of the Offerwall at any time to get more info on rewarded surveys or surveys that they got screened out and learn more about the reasons (this transparency can decrease complains from the users as they can check the status of their responses on their own)
+Users will get rewarded for every succesfully completed survey on the Offerwall after it passes validation from the real-time anti-fraud mechanism. Users can visit the history section of the Offerwall at any time to get more info on surveys rewarded or surveys that they got screened out and learn more about the reasons (this level of transparency can decrease complains from the users as they can check the status of their responses on their own)
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/history.png" width="260" height="auto"/>
 
