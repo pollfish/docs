@@ -232,7 +232,8 @@ where <Your-Product> must be your "Product Name" as listed in your "Build Settin
 #import <Pollfish/Pollfish.h>
 ```
 <br/>
-**6\. Initializing Pollfish in App Delegate on in viewWillAppear
+
+## 5.1 Initializing Pollfish in App Delegate on in viewWillAppear
 
 The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active. (you can also initiate in viewDidLoad or viewWillAppear methods of a ViewController).
 
