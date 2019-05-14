@@ -11,6 +11,28 @@ Pollfish allows publishers to turn on Offerwall mode and enable their users to c
 
 Below, you can see a list of all logical steps needed, in order to show Pollfish Offerwall under a rewarded placement
 
+<h3>1. Customize Offerwall Settings through Pollfish Dashboard</h3>
+
+In the App Settings are of the Dashboard you should visit the Offerwall settings are and set your preferred settings.
+
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/dashboard_offerwall.png" width="320" height="auto"/>
+
+You can customize the following settings:
+
+**Reward Settings**
+
+- Name of virtual reward shown on the wall
+- Exhange rate. How much of your currency does one USD ($) worth?
+
+**Logo**
+
+- You can upload your own logo that will be displayed on the top of the wall and give some sort of familiarity to the users
+
+**Theme**
+
+- You can customize the primary colour of the wall and the background. 
+
+
 <h3>1. Initialize Pollfish in reward mode (skip Pollfish Indicator)</h3>
 
 You should initialize Pollfish SDK in reward mode. With this mode, Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) will be skipped. Pollfish in reward mode ignores Pollfish panel behaviour from Pollfish Developer Dashboard (you can read more on Pollfish panel behaviour settings on Pollfish [FAQ page](https://pollfish.zendesk.com/hc/en-us/articles/205355891--What-do-different-PollFish-Indicator-Settings-mean-])) and always hide Pollfish survey panel.
