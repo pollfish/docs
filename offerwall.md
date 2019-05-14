@@ -8,7 +8,7 @@ With Pollfish Offerwall solution, users can choose and complete multiple surveys
 
 Users in order to be able to participate to surveys on the very first time the will get introduced to the platform they will have to answer a small set of Demographic questions to unlock surveys. After all demographic questions are filled users can start completing surveys. 
 
-| **Note: If a publisher knows the demographic info of the users, those info can be passed during initialization in code and skip those questions from being rendered to the user
+| **Note:** If a publisher knows the demographic info of the users, those info can be passed during initialization in code and skip those questions from being rendered to the user
 
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/unlock_screens.png" width="500" height="auto"/>
