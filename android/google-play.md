@@ -662,6 +662,8 @@ With this notification the publisher can get informed through the SurveyInfo obj
 - **surveyIR** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably.
 - **surveyLOI** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
 - **surveyClass** :  information about the survey network and type* 
+- **rewardName** :  information about the reward name as specified on Publishers Dashboard* 
+- **rewardValue** :  information about the reward value as calculated based on exhange rate specified on Publishers Dashboard* 
 
 The syntax for surveyClass values is:
 
@@ -700,15 +702,22 @@ Below you can see an example of how you can register and listen within your code
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY").pollfishReceivedSurveyListener(new PollfishReceivedSurveyListener() {
   @Override
-  public void onPollfishSurveyReceived(SurveyInfo surveyInfo) {
+  public void onPollfishSurveyReceived(@Nullable SurveyInfo surveyInfo) {
+  if(surveyInfo!=null){
         Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
                 + " SurveyClass: " + surveyInfo.getSurveyClass()
 		+ " LOI: " + surveyInfo.getSurveyLOI()
-		+ " IR: " + surveyInfo.getSurveyIR());
+		+ " IR: " + surveyInfo.getSurveyIR()
+		+ " Reward Name: " + surveyInfo.getRewardName()
+		+ " Reward Value: " + surveyInfo.getRewardValue());
+		}
     }
   }).build();
 ```
 <br/>
+| **Note: In offerwall mode, SurveyInfo object should be empty. In that case the notification informs that surveys are available in the offerwall
+<br/>
+
 
 **10.17 .pollfishCompletedSurveyListener(PollfishCompletedSurveyListener pollfishCompletedSurveyListener)**
 
@@ -735,9 +744,7 @@ Initializes Pollfish in reward mode if set to true. By default this is set to fa
 
 *   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small Pollfish icons) and hides Pollfish survey panel view from users. This method is aimed to be used when app developers want to incentivize first somehow their users. 
 *   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
-
-![alt text](https://storage.googleapis.com/pollfish_production/multimedia/dashboard_1.png)
-<br/><br/>
+<br/>
 
 Below you can see an example of setting Pollfish to reward mode with ParamsBuilder object:  
 <br/>
