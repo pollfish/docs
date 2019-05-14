@@ -54,7 +54,7 @@ You can customize the following settings:
 
 <h3>2. Customize Mediation Network Settings</h3>
 
-In the Mediation Settings area on your Dashboard you can customize the type of surveys and from which providers, that will be displayed within the Offerwall
+In the Mediation Settings area OF your Dashboard you can customize the type of surveys you would like to see within the offerwall. You can enable or disaable providers, set price floors per network, maxiumum length of survey, minimum aceptable conversion rate and even filter out surveys based on keywords!
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_settings.png" width="460" height="auto"/>
 
