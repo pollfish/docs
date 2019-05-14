@@ -358,7 +358,7 @@ Below you can see an example on how you can pass a request id during initializat
 <br/>
 #### **5.2.3 .indicatorPadding (int)**
 
-Sets padding from top or bottom according to the Position of Pollfish indicator
+Sets padding from the top or bottom of the screen according to the Position of the Pollfish indicator. Below you can see an example on how to add padding of 50 from the bottom of the screen prior rendering Pollfish indicator.
 <br/><br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
@@ -379,10 +379,29 @@ Sets padding from top or bottom according to the Position of Pollfish indicator
         Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
+<br/>
+#### **5.2.4 .pollfishViewContainer (UIView \*)**
 
-
-
-
+Sets a UIView container where Pollfish surveys will be rendered above it. If this param is not set, the SDK will traverse the view hierarchy of the app and render Pollfish surveys on the top view of the root view controller.
+<br/><br/>
+<span style="text-decoration: underline">Objective-C:</span>
+```
+    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
+        pollfishParams.pollfishViewContainer=self.view;
+    }];
+    
+    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
+```
+<span style="text-decoration: underline">Swift:</span>
+```
+	let pollfishParams = PollfishParams ()
+        
+        pollfishParams.pollfishViewContainer=self.view;
+	
+        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
+```
+<br/>
+<br/>
 
 
 ### Pollfish init function takes the following parameters:
