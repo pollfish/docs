@@ -21,7 +21,7 @@ If no surveys are available for that user, an empty state screen will be rendere
 
 <h3>3. Getting Rewarded on Survey Completion</h3>
 
-Users will get rewarded for every succesfully completed survey on the Offerwall after it passes validation from the real-time anti-fraud mechanism. Users can visit the history section of the Offerwall at any time to get more info on surveys rewarded or surveys that they got screened out and learn more about the reasons (this level of transparency can decrease complains from the users as they can check the status of their responses on their own)
+Users will get rewarded for every succesfully completed survey on the Offerwall after it passes validation from the real-time anti-fraud mechanism. Users can visit the history section of the Offerwall at any time to get more info on surveys succesfully completed or surveys that they got screened out and learn more about the reasons (this level of transparency can decrease complains from the users as they can check the status of their responses on their own)
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/history.png" width="260" height="auto"/>
 
@@ -54,7 +54,7 @@ You can customize the following settings:
 
 <h3>2. Customize Mediation Network Settings</h3>
 
-In the Mediation Settings area of your Dashboard you can customize the type of surveys you would like to see within the offerwall. You can enable or disaable providers, set price floors per network, maxiumum length of survey, minimum aceptable conversion rate and even filter out surveys based on keywords!
+In the Mediation Settings area of your Dashboard you can customize the type of surveys you would like to see within the offerwall. You can enable or disable providers, set price floors per network, maxiumum length of survey, minimum aceptable conversion rate and even filter out surveys based on keywords!
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_settings.png" width="600" height="auto"/>
 
@@ -84,9 +84,9 @@ When you receive a notification that a survey was received on the device you can
 
 <h3>6. Open/Show the Offerwall</h3>
 
-If a user chose to get into the Offerwall (though your custom prompt for example) you should call Pollfish show function in order to open Pollfish survey panel to the user, to start completing surveys.
+If a user chose to get into the Offerwall (by clicking on your custom prompt for example) you should call Pollfish show function in order to open Pollfish survey panel to the user, to start completing surveys.
 
-<h3>7. Register & Listen for local Pollfish Survey Completed notifications</h3>
+<h3>7. Register & Listen for local Pollfish Survey Completed notifications (optional)</h3>
 
 You can register and listen for Pollfish survey completed notifications/listener. Through the Survey Completed notification, you can easily find more detailed information on each survey completed including:
 
@@ -106,14 +106,13 @@ In order to avoid user fraud it is strongly adviced to register a server-to-serv
 
 You can find detailed information on how to set up server-to-server callbacks [here](https://www.pollfish.com/docs/s2s)
 
-<h3>8. Register & Listen for Pollfish user not eligible notification</h3>
+<h3>8. Register & Listen for Pollfish User Not Eligible notification (optional)</h3>
 
-Since Pollfish is a survey platform, some times users maybe screened out once a survey is started. Having that said, you can register and listen for Pollfish user not eligible notification/listener.  If this event is fired you will not earn any money from that survey and you should not reward your users either. 
+Since Pollfish is a survey platform, some times users maybe screened out once a survey is started. Having that said, you can register and listen for Pollfish User Not Eligible notification/listener.  If this event is fired you will not earn any money from that survey and you should not reward your users either. 
 
+<h3>9. Passing a custom user id upon survey completion to the server side (optional)</h3>
 
-<h3>9. Passing custom user params on survey completion to server side (optional)</h3>
-
-If you want to pass custom params on your server side during survey completion you should follow the steps below:
+If you want to pass a custom user param on your server side during survey completion you should follow the steps below:
 
 a) Pass your custom param during Pollfish initialization (check for requestUUID param in docs)
 
@@ -121,7 +120,7 @@ b) Set your server-to-server callback as described in step 8
 
 c) Receive custom param on your server side during a survey completion
 
-This approach is usually followed by publishers when looking to send over a unique identification of a user (as it is saved on publisher side) to server side through Pollfish SDK to associate that completion with a specific user.
+This approach is usually followed by publishers when looking to send over a unique identification of a user (as it is saved on publisher's side) to their server side through Pollfish SDK to associate that completion with a specific user.
 
 <br/>
 
