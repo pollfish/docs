@@ -7,7 +7,7 @@ v.5.0.0
 - Removed deprecated interface setAttributes
 - Removed customMode and introduced rewardMode option
 - Added support for offerwall mode
-- Added option to pass a container view to renderd Pollfish overlay
+- Added option to pass a container view to rendered Pollfish overlay
 - Removed automatic re-init feature for device orientation
 - Added support for exiting faulty mediation surveys
 	
