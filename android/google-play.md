@@ -6,6 +6,7 @@ v5.0.0
 - Removed deprecated interfaces PollfishSurveyReceivedListener,PollfishSurveyCompletedListener
 - Deprecated customMode and introduced rewardMode
 - Added support for exiting faulty mediation surveys
+- Changed minimum SDK to 16
 
 v4.5.0
 	
