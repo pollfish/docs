@@ -300,7 +300,7 @@ No | Description
 9.3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to the Position of the indicator
 9.4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
 9.5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
-9.6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
+9.6 | [DEPRECATED-use 9.18] **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
 9.7 | [DEPRECATED-use 9.16] **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
 9.8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
 9.9 | DEPRECATED-use 9.17] **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
@@ -406,7 +406,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
-#### **9.6 .customMode(boolean customMode)**  
+#### **9.6 .customMode(boolean customMode)**  [DEPRECATED-use 9.18]
 
 Initializes Pollfish in custom mode if set to true. By default this is set to false.
 
