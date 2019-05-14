@@ -54,41 +54,41 @@ You can customize the following settings:
 
 <h3>2. Customize Mediation Network Settings</h3>
 
-In the Mediation Settings area OF your Dashboard you can customize the type of surveys you would like to see within the offerwall. You can enable or disaable providers, set price floors per network, maxiumum length of survey, minimum aceptable conversion rate and even filter out surveys based on keywords!
+In the Mediation Settings area of your Dashboard you can customize the type of surveys you would like to see within the offerwall. You can enable or disaable providers, set price floors per network, maxiumum length of survey, minimum aceptable conversion rate and even filter out surveys based on keywords!
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_settings.png" width="540" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_settings.png" width="600" height="auto"/>
 
 
 <h3>3. Initialize Pollfish in reward and offerwall mode </h3>
 
-You should initialize Pollfish SDK in reward and offerwall mode. With this mode, Pollfish indicator will be skipped and Pollfish survey panel will stay hidden when Offerwall is ready.
+You should initialize Pollfish SDK in reward and offerwall mode. With this mode, Pollfish indicator will be skipped and Pollfish survey panel will stay hidden when the Offerwall is ready.
 
 To sum up, initialize with the following in mind:
 
 - rewardMode: true
 - offerwallMode: true
 
-<h3>4. Register & listen to Pollfish survey received notification</h3>
+<h3>4. Register & listen to Pollfish Survey Received notification</h3>
 
-You should register and listen for Pollfish survey received notification/listener. If you receive a survey received notification you can prompt your users with a custom prompt in order to enter the Offerwall. 
+You should register and listen for Pollfish Survey Received notification/listener. If you receive a survey received notification you can prompt your users with a custom prompt in order to enter the Offerwall. 
 
-Survey received notification should be used in order to understand if the offerwall has is ready and has surveys. No further information are available through the notification and therefore no further parsing should be made to the notification object.
+Pollfish Survey Received notification should be used from publishers to check if the offerwall is available and has any surveys to be completed. No further information are available through the notification and therefore no further parsing should be made to the notification object.
 
-<h3>5. Show custom prompt for users to enter the Offerwall</h3>
+<h3>5. Show custom prompt to users to enter the Offerwall</h3>
 
-When you receive a notification that a survey was received on the device you can show a custom prompt, or a button to prompt your users to to enter the Offerwall and earn some sort of a virtual currency.
+When you receive a notification that a survey was received on the device you can show a custom prompt, or a button to prompt your users to to enter the Offerwall and earn some sort of a virtual currency (As specified in step 1).
 
 > Below you can see an example of a custom prompt created by a publisher of the platform:
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://i1.wp.com/www.pollfish.com/wp-content/uploads/2016/05/earn.png?resize=768%2C460&ssl=1" width="320" height="auto"/>
 
-<h3>6. Show Pollfish survey</h3>
+<h3>6. Open/Show the Offerwall</h3>
 
-If a user chose to get into the Offerwall (though your custom prompt for example) you should call Pollfish show function in order to open Pollfish survey panel to the user, to start completing surveys
+If a user chose to get into the Offerwall (though your custom prompt for example) you should call Pollfish show function in order to open Pollfish survey panel to the user, to start completing surveys.
 
-<h3>7. Register & Listen for local Pollfish survey completed notifications</h3>
+<h3>7. Register & Listen for local Pollfish Survey Completed notifications</h3>
 
-You can register and listen for Pollfish survey completed notifications/listener. In survey completed notification you can easily find information on each survey completed like:
+You can register and listen for Pollfish survey completed notifications/listener. Through the Survey Completed notification, you can easily find more detailed information on each survey completed including:
 
 - Money to be earned in USD cents
 - Survey Incidence Rate
@@ -97,7 +97,7 @@ You can register and listen for Pollfish survey completed notifications/listener
 - Reward Name
 - Reward Value
 
-> **Note:** It is strongly adviced that you do not reward users directly on survey completion notification within the SDK. You should register on Pollfish Dashboard a server-to-server callback as described in step 7 and reward your users upon the receiveal of that callback
+> **Note:** It is strongly adviced that you do not reward users directly on survey completion notification within the SDK. You should register on Pollfish Dashboard to receive server-to-server callbacks as described in step 8 and reward your users upon the receival of that callbacks.
 
 
 <h3>8. Register for server-to-server (s2s) callbacks on survey completion</h3>
