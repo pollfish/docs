@@ -715,7 +715,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY").pollfishReceived
   }).build();
 ```
 <br/>
-| **Note: In offerwall mode, SurveyInfo object should be empty. In that case the notification informs that surveys are available in the offerwall
+| **Note:** In offerwall mode, SurveyInfo object should be empty. In that case the notification informs that surveys are available in the offerwall
 <br/>
 
 
@@ -730,7 +730,14 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.pollfishCompletedSurveyListener(new PollfishCompletedSurveyListener() {
     @Override
     public void onPollfishSurveyCompleted(SurveyInfo surveyInfo)
-    {}
+    {
+    	Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
+                + " SurveyClass: " + surveyInfo.getSurveyClass()
+		+ " LOI: " + surveyInfo.getSurveyLOI()
+		+ " IR: " + surveyInfo.getSurveyIR()
+		+ " Reward Name: " + surveyInfo.getRewardName()
+		+ " Reward Value: " + surveyInfo.getRewardValue());
+     }
     })
 	.build();
 ```
