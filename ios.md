@@ -279,7 +279,9 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 ### 5.2.1 PollfishParams available options (optional)
 
-You can set several params to control the behaviour of Pollfish survey panel within your app wih the use PollfishParams instance. Below you can see all the available options. All the params are optional.
+You can set several params to control the behaviour of Pollfish survey panel within your app wih the use of PollfishParams instance. Below you can see all the available options. 
+<br/>
+| **Note:** All the params are optional, however you should at least use the releaseMode setting to turn your integration in release mode prior uploading to AppStore **  
 <br/>
 
 No | Description
