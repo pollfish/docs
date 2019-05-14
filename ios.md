@@ -297,7 +297,7 @@ No | Description
 5.2.9 | **.userAttributes(NSMutableDictionary \*)**  <br/> Provides user attributes during initialization
 
 <br/>
-#### **5.2.1 .indicatorPosition(PollfishPosition (int))**
+#### **5.2.1 .indicatorPosition (PollfishPosition (int))**
 This setting sets the Position where you wish to place Pollfish indicator  ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
 
 <span style="text-decoration: underline">There are six different options available: </span> 
@@ -318,16 +318,12 @@ Below you can see an example on how you can set Pollfish indicator to slide from
     PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
         pollfishParams.indicatorPosition=PollFishPositionMiddleRight;
     }];
-    
-    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
 ```
 <span style="text-decoration: underline">Swift:</span>
 ```
 	let pollfishParams = PollfishParams ()
         
         pollfishParams.indicatorPosition=Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue);
-        
-        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
 Indicator position affects also from which side the survey panel will slide-in (Right or Left).
@@ -344,16 +340,12 @@ Below you can see an example on how you can pass a request id during initializat
     PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
         pollfishParams.requestUUID=@"USER_ID";
     }];
-    
-    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
 ```
 <span style="text-decoration: underline">Swift:</span>
 ```
 	let pollfishParams = PollfishParams ()
         
         pollfishParams.requestUUID="USER_ID";
-	
-        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
 #### **5.2.3 .indicatorPadding (int)**
@@ -366,8 +358,6 @@ Sets padding from the top or bottom of the screen according to the Position of t
         pollfishParams.indicatorPadding=50;
 	pollfishParams.indicatorPosition=PollFishPositionBottomRight;
     }];
-    
-    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
 ```
 <span style="text-decoration: underline">Swift:</span>
 ```
@@ -375,8 +365,6 @@ Sets padding from the top or bottom of the screen according to the Position of t
         
         pollfishParams.indicatorPadding=50;
 	pollfishParams.indicatorPosition=Int32(PollfishPosition.PollFishPositionBottomRight.rawValue);
-	
-        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
 | **Note:** if used in MIDDLE position, padding is calculating from top.**  
@@ -390,16 +378,12 @@ Sets a UIView container where Pollfish surveys will be rendered above it. If thi
     PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
         pollfishParams.pollfishViewContainer=self.view;
     }];
-    
-    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
 ```
 <span style="text-decoration: underline">Swift:</span>
 ```
 	let pollfishParams = PollfishParams ()
         
         pollfishParams.pollfishViewContainer=self.view;
-	
-        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
 #### **5.2.5 .releaseMode (BOOL)**
@@ -418,16 +402,12 @@ Sets Pollfish SDK to Developer or Release mode. If you do not set this param it 
     PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
         pollfishParams.releaseMode=true;
     }];
-    
-    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
 ```
 <span style="text-decoration: underline">Swift:</span>
 ```
 	let pollfishParams = PollfishParams ()
         
         pollfishParams.releaseMode=true;
-	
-        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
 #### **5.2.6 .rewardMode (BOOL)**
@@ -441,16 +421,12 @@ If not used the default value is false and Pollfish indicator is shown.
     PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
         pollfishParams.rewardMode=true;
     }];
-    
-    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
 ```
 <span style="text-decoration: underline">Swift:</span>
 ```
 	let pollfishParams = PollfishParams ()
         
         pollfishParams.rewardMode=true;
-	
-        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
 You can read more on how you can use the rewardMode to incentivize users to participate to surveys at the following  <a href="https://www.pollfish.com/docs/rewarded-surveys">link</a>.
@@ -478,8 +454,6 @@ Below you can see an example on how you can explicitly request to test Pollfish 
         pollfishParams.surveyFormat=SurveyFormatBasic;
 	pollfishParams.releaseMode=false;
     }];
-    
-    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
 ```
 <span style="text-decoration: underline">Swift:</span>
 ```
@@ -487,8 +461,6 @@ Below you can see an example on how you can explicitly request to test Pollfish 
         
         pollfishParams.surveyFormat=SurveyFormatBasic;
 	pollfishParams.releaseMode=false;
-	
-        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
 
@@ -505,8 +477,6 @@ Below you can see an example on how you can intialize Pollfish in offerwall mode
 	pollfishParams.rewardMode=true;
 	pollfishParams.releaseMode=false;
     }];
-    
-    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
 ```
 <span style="text-decoration: underline">Swift:</span>
 ```
@@ -515,10 +485,62 @@ Below you can see an example on how you can intialize Pollfish in offerwall mode
 	pollfishParams.offerwallModel=true;
 	pollfishParams.rewardMode=true;
 	pollfishParams.releaseMode=false;
-	
-        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
+#### **5.2.9 .userAttributes(NSMutableDictionary \*)**
+
+Passing user attributes to skip or shorten Pollfish Demographic surveys
+
+If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and archieve better fill rate and higher priced surveys.
+
+| **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default.
+
+an example of user attributes dictionary could be the following one:
+<br/>
+<span style="text-decoration: underline">Objective-C:</span>
+
+```
+UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary alloc] init];
+    
+    [userAttributesDictionary setGender: GENDER(MALE)];
+    [userAttributesDictionary setRace:RACE(WHITE)];
+    [userAttributesDictionary setYearOfBirth:YEAR_OF_BIRTH(_1984)];
+    [userAttributesDictionary setMaritalStatus:MARITAL_STATUS(MARRIED)];
+    [userAttributesDictionary setParentalStatus:PARENTAL_STATUS(THREE)];
+    [userAttributesDictionary setEducation:EDUCATION_LEVEL(UNIVERSITY)];
+    [userAttributesDictionary setEmployment:EMPLOYMENT_STATUS(EMPLOYED_FOR_WAGES)];
+    [userAttributesDictionary setCareer:CAREER(TELECOMMUNICATIONS)];
+    [userAttributesDictionary setIncome:INCOME(MIDDLE_I)];
+    
+PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
+	pollfishParams.userAttributes=userAttributesDictionary;
+    }];
+```
+<span style="text-decoration: underline">Swift:</span>
+```
+    let userAttributesDictionary:UserAttributesDictionary = [:]
+    
+    /*included in Demographic Surveys*/
+    userAttributesDictionary.setGender(GENDER(MALE));
+    userAttributesDictionary.setRace(RACE(WHITE));
+    userAttributesDictionary.setYearOfBirth(YEAR_OF_BIRTH(_1984));
+    userAttributesDictionary.setMaritalStatus(MARITAL_STATUS(MARRIED));
+    userAttributesDictionary.setParentalStatus(PARENTAL_STATUS(THREE));
+    userAttributesDictionary.setEducation(EDUCATION_LEVEL(UNIVERSITY));
+    userAttributesDictionary.setEmployment(EMPLOYMENT_STATUS(EMPLOYED_FOR_WAGES));
+    userAttributesDictionary.setCareer(CAREER(TELECOMMUNICATIONS));
+    userAttributesDictionary.setIncome(INCOME(MIDDLE_I));
+    
+    let pollfishParams = PollfishParams ()
+	
+    pollfishParams.userAttributes=userAttributesDictionary;
+    
+```
+
+
+
+
+
 
 
 
@@ -897,48 +919,6 @@ an example of user attributes dictionary could be the following one:
     userAttributesDictionary.setCustomAttributeWithKey(@"my_param" andValue:@"my_value");
     
 ```
-
-#### Explicitly requesting a specific survey format for testing purposes
-
-If you want to test Pollfish different available Survey Formats you can explicitly request a specific survey format during initialization
-
-There are four different options available: 
-
-- SurveyFormatBasic
-- SurveyFormatPlayful
-- SurveyFormatRandom
-- SurveyFormatThirdParty
-
-
-Here is an example of how a user can explicitly request a specific survey format during initialization.
-```
- [Pollfish initAtPosition: (PollfishPosition)
-              withPadding: (int)
-	      andDeveloperKey: (NSString *)
-            andDebuggable: (BOOL) 
-	        andCustomMode: (BOOL)
-	       andRequestUUID: (NSString *)
-	    andUserAttributes: (NSMutableDictionary *)
-	    andSurveyFormat: (SurveyFormat *)];
-```
-
-<span style="text-decoration: underline">Swift:</span>
-
-```
-func applicationDidBecomeActive(application: UIApplication) {
-
-   Pollfish.initAtPosition( pos: Int32, 
-       			    withPadding: Int32, 
-       		    andDeveloperKey: String!, 
-       		      andDebuggable: Bool, 
-       		      andCustomMode: Bool
-		     andRequestUUID: String!
-	          andUserAttributes: NSMutableDictionary!
-		  andSurveyFormat: Int32)
-}
-```
-
-
 ### 11\. Manually show or hide Pollfish (optional)
 
 You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization:  
