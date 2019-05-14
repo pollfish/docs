@@ -59,7 +59,9 @@ In the Mediation Settings area on your Dashboard you can customize the type of s
 
 <h3>3. Initialize Pollfish in reward and offerwall mode </h3>
 
-You should initialize Pollfish SDK in reward and offerwall mode. With this mode, Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) will be skipped Pollfish panel will stay hidden when surveys are received. 
+You should initialize Pollfish SDK in reward and offerwall mode. With this mode, Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) will be skipped and Pollfish surveypanel will stay hidden when Offerwall is ready.
+
+To sum up, initialize with the following in mind:
 
 - rewardMode -> true
 - offerwallMode -> true
