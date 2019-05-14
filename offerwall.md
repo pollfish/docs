@@ -4,7 +4,7 @@ Pollfish allows publishers to turn on Offerwall mode and allow their users to co
 
 <h1>Implementing Pollfish Offerwall - Step by Step</h1>
 
-Below, you can see a list of all logical steps needed, in order to show Pollfish Offerwall undera rewarded placement
+Below, you can see a list of all logical steps needed, in order to show Pollfish Offerwall under a rewarded placement
 
 <h3>1. Initialize Pollfish in reward mode (skip Pollfish Indicator)</h3>
 
@@ -24,3 +24,23 @@ When you receive a notification that a survey was received on the device you can
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://i1.wp.com/www.pollfish.com/wp-content/uploads/2016/05/earn.png?resize=768%2C460&ssl=1" width="320" height="auto"/>
 
+<h3>4. Show Pollfish survey</h3>
+
+If a user chose to get into the Offerwall (though your custom prompt for example) you should call Pollfish show function in order to open Pollfish survey panel to the user, to start completing surveys
+
+<h3>5. User unlocking surveys</h3>
+
+Users in order to be able to participate to surveys on the very first time the will get introduced to the platform they will have to answer a small set of Demographic questions to unlock surveys. After all demographic questions are filled users can start completing surveys from clients.
+
+<h3>5. Register & Listen for local Pollfish survey completed notifications</h3>
+
+You can register and listen for Pollfish survey completed notifications/listener. In survey completed notification you can easily find information on each survey completed like:
+
+- Money to be earned in USD cents
+- Survey Incidence Rate
+- Survey Length of Interview
+- Survey Class
+- Reward Name
+- Reward Value
+
+> **Note:** It is strongly adviced that you do not reward users directly on survey completion notification within the SDK. You should register on Pollfish Dashboard a server-to-server callback as described in step 7 and reward your users upon the receiveal of that callback
