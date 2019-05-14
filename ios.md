@@ -233,13 +233,13 @@ where <Your-Product> must be your "Product Name" as listed in your "Build Settin
 ```
 <br/>
 
-### 5.2 Initializing Pollfish in App Delegate on in viewWillAppear
+### 5.2 Initialize Pollfish
 
 The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active. (you can also initiate in viewDidLoad or viewWillAppear methods of a ViewController).
 
 | **Note:** Init function affects the view hierarchy of the app. Therefore it shoud be called from the main thread that created the view hierarchy.
 
-In order to initialize, you need the API key of your app (step 2 above) and also create an instance of PollfishParams. PollfishParams has several params
+In order to initialize, you need the API key of your app (step 2 above) and also an instance of PollfishParams. PollfishParams has several params that affect the behaviour of Pollfish panel
 
 <span style="text-decoration: underline">Objective-C:</span>
  
@@ -257,7 +257,7 @@ In order to initialize, you need the API key of your app (step 2 above) and also
     }];
     
     [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams];
-    
+}
 ```
 
 <span style="text-decoration: underline">Swift:</span>
@@ -278,7 +278,7 @@ func applicationDidBecomeActive(application: UIApplication) {
 ```
 <br/>
 
-### 5.2 PollfishParams available options (optional)
+### 5.2.1 PollfishParams available options (optional)
 
 You can set several params to control the behaviour of Pollfish survey panel within your app wih the use PollfishParams instance. Below you can see all the available options:
 <br/>
@@ -296,13 +296,9 @@ No | Description
 5.2.9 | **.userAttributes (NSMutableDictionary *)**  <br/> Provides user attributes during initialization
 
 <br/>
-#### **10.1 .indicatorPosition(int position)**
+#### **5.2.1 .indicatorPosition(int position)**
 Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
 
-
-### Pollfish init function takes the following parameters:
-
-**1\. initAtPosition** (PollfishPosition) - Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
 
 <span style="text-decoration: underline">There are six different options available: </span> 
 
@@ -312,6 +308,40 @@ Sets Position where you wish to place  Pollfish indicator --> ![alt text](https:
 *   **PollFishPositionTopRight**  
 *   **PollFishPositionMiddleLeft** 
 *   **PollFishPositionMiddleRight**  
+
+If you do not set explicity a position for Pollfish indicator, it will appear by default at PollFishPositionMiddleRight
+<br/><br/>
+Below you can see an example on how you can set Pollfish indicator to slide from the top right middle of the screen:
+<br/>
+<span style="text-decoration: underline">Objective-C:</span>
+```
+{
+    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
+        pollfishParams.indicatorPosition=PollFishPositionMiddleRight;
+    }];
+    
+    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
+```
+<span style="text-decoration: underline">Swift:</span>
+```
+	let pollfishParams = PollfishParams ()
+        
+        pollfishParams.indicatorPosition=Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue);
+        
+        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
+```
+<br/>
+Indicator position affects also from which side the survey panel will slide-in (Right or Left).
+<br/>
+
+
+
+
+
+### Pollfish init function takes the following parameters:
+
+**1\. initAtPosition** (PollfishPosition) - Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
+
 
 **2\. withPadding** (int) - The padding from top or bottom of the screen according to PollfishPosition of the indicator (small red rectangle) specified before (0 is the default value)  
 
