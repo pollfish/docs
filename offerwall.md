@@ -5,25 +5,14 @@ Pollfish allows publishers to turn on Offerwall mode and enable their users to c
 
 <h1>Offerwall - How it works</h1>
 
+Users are getting 
+
 <h3>1. User unlocking surveys</h3>
 
 Users in order to be able to participate to surveys on the very first time the will get introduced to the platform they will have to answer a small set of Demographic questions to unlock surveys. After all demographic questions are filled users can start completing surveys from clients.
 
-<h3>5. Register & Listen for local Pollfish survey completed notifications</h3>
 
-You can register and listen for Pollfish survey completed notifications/listener. In survey completed notification you can easily find information on each survey completed like:
-
-- Money to be earned in USD cents
-- Survey Incidence Rate
-- Survey Length of Interview
-- Survey Class
-- Reward Name
-- Reward Value
-
-> **Note:** It is strongly adviced that you do not reward users directly on survey completion notification within the SDK. You should register on Pollfish Dashboard a server-to-server callback as described in step 7 and reward your users upon the receiveal of that callback
-
-
-
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/unlock_screens.png" width="500" height="auto"/>
 
 <br/>
 
@@ -33,7 +22,7 @@ Below, you can see a list of all logical steps needed, in order to show Pollfish
 
 <h3>1. Customize Offerwall Settings through Pollfish Dashboard</h3>
 
-In the App Settings are of the Dashboard you should visit the Offerwall settings are and set your preferred settings.
+In the App Settings of your Dashboard you should visit the Offerwall area and set your preferred settings.
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/dashboard_offerwall.png" width="380" height="auto"/>
 
@@ -56,7 +45,7 @@ You can customize the following settings:
 
 In the Mediation Settings area on your Dashboard you can customize the type of surveys and from which providers, that will be displayed within the Offerwall
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_settings.png" width="380" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_settings.png" width="460" height="auto"/>
 
 
 <h3>3. Initialize Pollfish in reward mode (skip Pollfish Indicator)</h3>
@@ -81,12 +70,25 @@ When you receive a notification that a survey was received on the device you can
 
 If a user chose to get into the Offerwall (though your custom prompt for example) you should call Pollfish show function in order to open Pollfish survey panel to the user, to start completing surveys
 
-<h3>7. Register for server-to-server (s2s) callbacks on survey completion</h3>
+<h3>7. Register & Listen for local Pollfish survey completed notifications</h3>
+
+You can register and listen for Pollfish survey completed notifications/listener. In survey completed notification you can easily find information on each survey completed like:
+
+- Money to be earned in USD cents
+- Survey Incidence Rate
+- Survey Length of Interview
+- Survey Class
+- Reward Name
+- Reward Value
+
+> **Note:** It is strongly adviced that you do not reward users directly on survey completion notification within the SDK. You should register on Pollfish Dashboard a server-to-server callback as described in step 7 and reward your users upon the receiveal of that callback
+
+
+<h3>8. Register for server-to-server (s2s) callbacks on survey completion</h3>
 
 In order to avoid user fraud it is strongly adviced to register a server-to-server callback on Pollfish Developer Dashboard in order to receive a relevant notification on your server side upon survey completion. Once this notification is receivedm you can reward your users.
 
 You can find detailed information on how to set up server-to-server callbacks [here](https://www.pollfish.com/docs/s2s)
-
 
 <h3>8. Register & Listen for Pollfish user not eligible notification</h3>
 
@@ -99,7 +101,7 @@ If you want to pass custom params on your server side during survey completion y
 
 a) Pass your custom param during Pollfish initialization (check for requestUUID param in docs)
 
-b) Set your server-to-server callback as described in step 7
+b) Set your server-to-server callback as described in step 8
 
 c) Receive custom param on your server side during a survey completion
 
