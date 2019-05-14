@@ -311,7 +311,7 @@ This setting sets the Position where you wish to place Pollfish indicator  ![alt
 *   **PollFishPositionMiddleLeft** 
 *   **PollFishPositionMiddleRight**  
 
-If you do not set explicity a position for Pollfish indicator, it will appear by default at PollFishPositionMiddleRight
+If you do not set explicity a position for Pollfish indicator, it will appear by default at **PollFishPositionMiddleRight**
 <br/><br/>
 Below you can see an example on how you can set Pollfish indicator to slide from the top right middle of the screen:
 <br/><br/>
@@ -328,14 +328,14 @@ Below you can see an example on how you can set Pollfish indicator to slide from
         pollfishParams.indicatorPosition=Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue);
 ```
 <br/>
-Indicator position affects also from which side the survey panel will slide-in (Right or Left).
+indicatorPosition param affects also from which side the survey panel will slide-in (Right or Left).
 <br/>
 
 #### **5.2.2 .requestUUID (NSString \*)**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>.
 <br/><br/>
-Below you can see an example on how you can pass a request id during initialization:
+Below you can see an example on how you can pass a requestUUID during initialization:
 <br/><br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
@@ -352,7 +352,7 @@ Below you can see an example on how you can pass a request id during initializat
 <br/>
 #### **5.2.3 .indicatorPadding (int)**
 
-Sets padding from the top or bottom of the screen according to the Position of the Pollfish indicator. Below you can see an example on how to add padding of 50 from the bottom of the screen prior rendering Pollfish indicator.
+Sets padding from the top or the bottom of the screen according to the Position of the Pollfish indicator. Below you can see an example on how to add padding of 50 from the bottom of the screen, prior rendering Pollfish indicator.
 <br/><br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
@@ -373,7 +373,9 @@ Sets padding from the top or bottom of the screen according to the Position of t
 <br/>
 #### **5.2.4 .pollfishViewContainer (UIView \*)**
 
-Sets a UIView container where Pollfish surveys will be rendered above it. If this param is not set, the SDK will traverse the view hierarchy of the app and render Pollfish surveys on the top view of the root view controller.
+Sets a UIView container where Pollfish surveys will be rendered above it. If this param is not set, the SDK will traverse the view hierarchy of the app and render Pollfish surveys on the top view of the root view controller. 
+
+Preferrably you should let the SDK handle the view hierarchy on its own.
 <br/><br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
@@ -397,7 +399,7 @@ Sets Pollfish SDK to Developer or Release mode. If you do not set this param it 
 *   **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing - always returns a survey).  
 *   **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
 
-| **Note:** Be careful to set andDebuggable parameter to false prior releasing to AppStore!  
+| **Note:** Be careful to set releaseMode parameter to true prior releasing to AppStore!  
 <br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
@@ -414,9 +416,9 @@ Sets Pollfish SDK to Developer or Release mode. If you do not set this param it 
 <br/>
 #### **5.2.6 .rewardMode (BOOL)**
 
-Initializes Pollfish in reward mode. This means that Pollfish Indicator will not be shown and Pollfish survey panel will be automatically hidden until the user explicitly call Pollfish show function. This behaviour enables the option to show a custom prompt (for example for a reward prompt) to incentivize the user to participate to the survey.
+Initializes Pollfish in reward mode. This means that Pollfish Indicator will not be shown and Pollfish survey panel will be automatically hidden until the publisher explicitly calls Pollfish show function. This behaviour enables the option for the publisher, to show a custom prompt to incentivize the user to participate to the survey.
 
-If not used the default value is false and Pollfish indicator is shown.
+If not set, the default value is false and Pollfish indicator is shown.
 <br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
@@ -431,15 +433,15 @@ If not used the default value is false and Pollfish indicator is shown.
         pollfishParams.rewardMode=true;
 ```
 <br/>
-You can read more on how you can use the rewardMode to incentivize users to participate to surveys at the following  <a href="https://www.pollfish.com/docs/rewarded-surveys">link</a>.
+You can read more on how you can use the rewardMode to incentivize users to participate to surveys in the following <a href="https://www.pollfish.com/docs/rewarded-surveys">link</a>.
 <br/>
 #### **5.2.7 .surveyFormat (NSString \*)**
 
-Explicitly requesting a specific survey format for testing purposes.
+Explicitly requests a specific survey format for testing purposes.
 
 | **Note:** This param is ignored when offerwall mode is true 
 
-If you want to test Pollfish different available Survey Formats you can explicitly request a specific survey format during initialization
+If you want to test Pollfish different available Survey Formats you can  request a specific survey format during initialization
 
 There are four different options available: 
 
@@ -448,7 +450,7 @@ There are four different options available:
 * **SurveyFormatRandom**
 * **SurveyFormatThirdParty**
 
-Below you can see an example on how you can explicitly request to test Pollfish Plaful survey format in debug mode:
+Below you can see an example on how you can explicitly request to test Pollfish Plaful Survey Format in debug mode:
 <br/><br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
@@ -470,7 +472,7 @@ Below you can see an example on how you can explicitly request to test Pollfish 
 
 Enables Pollfish in offerwall mode. If not specified Pollfish is shown as one survey at a time.
 
-Below you can see an example on how you can intialize Pollfish in offerwall mode:
+Below you can see an example on how you can intialize Pollfish in offerwall mode in an incentivized integration:
 <br/><br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
@@ -491,14 +493,14 @@ Below you can see an example on how you can intialize Pollfish in offerwall mode
 <br/>
 #### **5.2.9 .userAttributes(NSMutableDictionary \*)**
 
-Passing user attributes to skip or shorten Pollfish Demographic surveys
+Passing user attributes to skip or shorten Pollfish Demographic surveys.
 
 If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and archieve better fill rate and higher priced surveys.
 
 | **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default.
 
-an example of user attributes dictionary could be the following one:
-<br/>
+an example of how you can create and pass a user attributes dictionary during initialization can be the following below:
+<br/><br/>
 <span style="text-decoration: underline">Objective-C:</span>
 
 ```
@@ -608,7 +610,7 @@ When your account is verified you will be able to start receiving paid surveys f
 
 ## Optional section
 
-In this section we will list several options that can be used to control Pollfish surveys behaviour by listening and acting on different  notifications. All the steps below are optional.
+In this section we will list several options that can be used to control Pollfish surveys behaviour like listening and acting on different  notifications. All the steps below are optional.
 <br/>
 <br/>
 
