@@ -11,7 +11,7 @@ Users in order to be able to participate to surveys on the very first time the w
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/unlock_screens.png" width="500" height="auto"/>
 
-<h3>2. Choosing & compleTing a survey</h3>
+<h3>2. Choosing & completing a survey</h3>
 
 Users can choose from a variety of different surveys to participate
 
@@ -21,7 +21,7 @@ Users can choose from a variety of different surveys to participate
 
 Users will get rewarded for every succesfully completed survey on the Offerwall after it passes validation from the real-time anti-fraud mechanism. Users can visit the history section of the Offerwall at any time to get more info on rewarded surveys or surveys that they got screened out and learn more about the reasons (this transparency can decrease complains from the users as they can check the status of their responses on their own)
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/offerwall_landing.png" width="260" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/history.png" width="260" height="auto"/>
 
 <br/>
 
