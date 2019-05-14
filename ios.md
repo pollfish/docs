@@ -279,7 +279,7 @@ func applicationDidBecomeActive(application: UIApplication) {
 
 ### 5.2.1 PollfishParams available options (optional)
 
-You can set several params to control the behaviour of Pollfish survey panel within your app wih the use PollfishParams instance. Below you can see all the available options:
+You can set several params to control the behaviour of Pollfish survey panel within your app wih the use PollfishParams instance. Below you can see all the available options. All the params are optional.
 <br/>
 
 No | Description
@@ -290,12 +290,12 @@ No | Description
 5.2.4 | **.pollfishViewContainer(UIView \*)**  <br/> Sets a view container that Pollfish surveys will be rendered above it
 5.2.5 | **.releaseMode(BOOL)**  <br/> Sets Pollfish SDK to Developer or Release mode
 5.2.6 | **.rewardMode(BOOL)**  <br/> Initializes Pollfish in reward mode
-5.2.7 | **.surveyFormat(NSString *\)**  <br/> Explicitly requests a specific survey format
+5.2.7 | **.surveyFormat(NSString \*)**  <br/> Explicitly requests a specific survey format
 5.2.8 | **.offerwallModel(BOOL)**  <br/> Sets Pollfish to offerwall mode
-5.2.9 | **.userAttributes(NSMutableDictionary *)**  <br/> Provides user attributes during initialization
+5.2.9 | **.userAttributes(NSMutableDictionary \*)**  <br/> Provides user attributes during initialization
 
 <br/>
-#### **5.2.1 .indicatorPosition(int position)**
+#### **5.2.1 .indicatorPosition(PollfishPosition (int))**
 This setting sets the Position where you wish to place Pollfish indicator  ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
 
 <span style="text-decoration: underline">There are six different options available: </span> 
@@ -332,7 +332,7 @@ Indicator position affects also from which side the survey panel will slide-in (
 <br/>
 
 <br/>
-#### **5.2.2 .requestUUID( NSString *)**
+#### **5.2.2 .requestUUID(NSString \*)**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>.
 <br/><br/>
@@ -355,6 +355,32 @@ Below you can see an example on how you can pass a request id during initializat
         Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
+<br/>
+#### **5.2.3 .indicatorPadding (int)**
+
+Sets padding from top or bottom according to the Position of Pollfish indicator
+<br/><br/>
+<span style="text-decoration: underline">Objective-C:</span>
+```
+    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
+        pollfishParams.indicatorPadding=50;
+	pollfishParams.indicatorPosition=PollFishPositionBottomRight;
+    }];
+    
+    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
+```
+<span style="text-decoration: underline">Swift:</span>
+```
+	let pollfishParams = PollfishParams ()
+        
+        pollfishParams.indicatorPadding=50;
+	pollfishParams.indicatorPosition=Int32(PollfishPosition.PollFishPositionBottomRight.rawValue);
+	
+        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
+```
+<br/>
+
+
 
 
 
