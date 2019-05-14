@@ -1,4 +1,4 @@
-Pollfish allows publishers to turn on Offerwall mode and enable their users to complete multiple survey offers within the same session. Pollfish Offerwall is similar to any other ad offerwall, however it focuses exclusively on surveys and market research.
+Pollfish provides an Offerwall mode where users are allowed to complete multiple survey offers within the same session. Pollfish Offerwall is similar to any other ad offerwall, however it focuses exclusively on surveys and market research.
 
 <h1>Offerwall - How it works</h1>
 
