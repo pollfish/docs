@@ -1,4 +1,12 @@
-<div class="changelog" data-version="4.5.0">
+<div class="changelog" data-version="5.0.0">
+v5.0.0
+	
+- Added offerwall support
+- Removed deprecated init interfaces
+- Removed deprecated interfaces PollfishSurveyReceivedListener,PollfishSurveyCompletedListener
+- Deprecated customMode and introduced rewardMode
+- Added support for exiting faulty mediation surveys
+
 v4.5.0
 	
 - Moved away from Jar format in SDKs
@@ -127,7 +135,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:+:universalRelease@aar'
+  implementation 'com.pollfish:pollfish:5.0.0:universalRelease@aar'
 }
 ```
 
@@ -143,14 +151,36 @@ import com.pollfish.constants.Position;
 
 ### 5. Add permissions to AndroidManifest.xml
 
-You should also add the following lines in your AndroidManifest.xml  
+#### 5.1 Add access to internet permission
+
+You should add the following line in your AndroidManifest.xml  
 
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 ```
 
-Pollfish uses these permissions to track and send survey responses to Pollfish servers.  
+#### 5.2 Add support for cleartext http traffic
+
+If you are looking to use Pollfish mediation surveys from all the providers, in order to avoid any faulty behaviour on new Android devices we would advice that you allow cleartext http traffic. To achieve that you need to create a new file named **network_security_config.xml** under **res/xml** and add the following inside:
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
+```
+
+add in your Androidmanifest.xml reference the file above in the **android:networkSecurityConfig** tag as below:
+
+```
+ <application
+        android:networkSecurityConfig="@xml/network_security_config">
+```
 
 ### 6. Initialize Pollfish
 
@@ -282,6 +312,9 @@ No | Description
 9.15 | **.surveyFormat(SurveyFormat surveyFormat)**  <br/> Requests a specific survey format (only in debug mode)
 9.16 | **.pollfishReceivedSurveyListener(PollfishReceivedSurveyListener pollfishReceivedSurveyListener)**  <br/> Sets a notification listener when Pollfish Survey is received
 9.17 | **.pollfishCompletedSurveyListener(PollfishCompletedSurveyListener pollfishCompletedSurveyListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
+9.18 | **.rewardMode(boolean rewardMode)**  <br/> Initializes Pollfish in reward mode
+9.19 | **.offerWallMode(boolean offerWallMode)**  <br/> Sets Pollfish to offerwall mode.
+
 
 <br/>
 #### **9.1 .indicatorPosition(int position)**
@@ -396,7 +429,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 <br/>
 This mode should be used if you want to incentivize users to participate to surveys. We have a detailed guide on how to implement the rewarded approach <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a>
 <br/>
-#### **9.7 .pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)** [DEPRECATED-use 9.16]
+#### **9.7 .pollfishReceivedSurveyListener(PollfishReceivedSurveyListener pollfishReceivedSurveyListener)** [DEPRECATED-use 9.16]
 
 Sets a notification listener when a Pollfish Survey is received. With this notification, the publisher can also get informed about the type of survey (Playful or not) that was received and money to be earned if survey is completed, shown in USD cents.
 
@@ -404,13 +437,22 @@ Below you can see an example of how you can register and listen within your code
 <br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
-	.pollfishSurveyReceivedListener(new PollfishSurveyReceivedListener() {
+	.pollfishReceivedSurveyListener(new PollfishReceivedSurveyListener() {
     @Override
-    public void onPollfishSurveyReceived(final boolean playfulSurvey, final int surveyPrice)
-    {}
+    public void onPollfishSurveyReceived(SurveyInfo surveyInfo)
+    {
+    	Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
+                + " SurveyClass: " + surveyInfo.getSurveyClass()
+		+ " LOI: " + surveyInfo.getSurveyLOI()
+		+ " IR: " + surveyInfo.getSurveyIR()
+		+ " Reward Name: " + surveyInfo.getRewardName()
+		+ " Reward Value: " + surveyInfo.getRewardValue());
+	}
     })
 	.build();
 ```
+<br/>
+| **Note:** In offerwall mode, SurveyInfo object should be empty. In that case the notification informs that surveys are available in the offerwall
 <br/>
 #### **9.8 .pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener  pollfishSurveyNotAvailableListener)**
 
@@ -427,7 +469,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
-#### **9.9 .pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)** [DEPRECATED-use 9.17]
+#### **9.9 .pollfishCompletedSurveyListener(PollfishCompletedSurveyListener pollfishCompletedSurveyListener)** [DEPRECATED-use 9.17]
 
 Sets a notification listener when a Pollfish Survey is completed. With this notification, the publisher can also get informed about the type of survey (Playful or not) that was completed and money earned from that survey in USD cents.
 
@@ -435,10 +477,17 @@ Below you can see an example of how you can register and listen within your code
 <br/>
 ```java
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
-	.pollfishSurveyCompletedListener(new PollfishSurveyCompletedListener() {
+	.pollfishCompletedSurveyListener(new PollfishCompletedSurveyListener() {
     @Override
-    public void onPollfishSurveyCompleted(final boolean playfulSurvey, final int surveyPrice)
-    {}
+    public void onPollfishSurveyCompleted(SurveyInfo surveyInfo)
+    {
+    	Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
+                + " SurveyClass: " + surveyInfo.getSurveyClass()
+		+ " LOI: " + surveyInfo.getSurveyLOI()
+		+ " IR: " + surveyInfo.getSurveyIR()
+		+ " Reward Name: " + surveyInfo.getRewardName()
+		+ " Reward Value: " + surveyInfo.getRewardValue());
+    }
     })
 	.build();
 ```
@@ -585,6 +634,8 @@ With this notification the publisher can get informed through the SurveyInfo obj
 - **surveyIR** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably.
 - **surveyLOI** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
 - **surveyClass** :  information about the survey network and type* 
+- **rewardName** :  information about the reward name as specified on Publishers Dashboard* 
+- **rewardValue** :  information about the reward value as calculated based on exhange rate specified on Publishers Dashboard* 
 
 The syntax for surveyClass values is:
 
@@ -612,7 +663,6 @@ The whole set of values currently supported are:
 | **Pollfish/Internal**         | Pollfish internal survey created by the publisher
 | **Toluna**         | Toluna survey   
 | **Cint**         | Cint survey   
-| **Lucid**         | Lucid survey   
 | **InnovateMR**         | InnovateMR survey   
 | **SaySo**       | SaySo survey   
 | **P2Sample**       | P2Sample survey
@@ -649,6 +699,44 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
     })
 	.build();
 ```
+<br/>
+
+**9.18 .rewardMode(boolean rewardMode)**
+
+Initializes Pollfish in reward mode if set to true. By default this is set to false.
+
+**true Vs false**
+
+*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small Pollfish icons) and hides Pollfish survey panel view from users. This method is aimed to be used when app developers want to incentivize first somehow their users. 
+*   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
+<br/>
+
+Below you can see an example of setting Pollfish to reward mode with ParamsBuilder object:  
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+					.rewardMode(true)
+					.build();
+```
+
+<br/>
+This mode should be used if you want to incentivize users to participate to surveys. We have a detailed guide on how to implement the rewarded approach <a href="https://www.pollfish.com/docs/rewarded-surveys/">here</a>
+<br/>
+
+**9.19 .offerWallMode(boolean offerWallMode)**
+
+Enables offerwall mode. If not set, one single survey is shown each time.
+<br/>
+Below you can see an example of setting Pollfish to offerwall mode with ParamsBuilder object:  
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+					.offerWallMode(true)
+					.rewardMode(true)
+					.build();
+```
+
+
 <br/>
 <br/>
 ### 10. Handling orientation changes (optional)
@@ -704,12 +792,16 @@ and Override onPollfishSurveyReceived() function:
 ```java
 @Override
 public void onPollfishSurveyReceived(SurveyInfo surveyInfo) {
-  Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
+	Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
                 + " SurveyClass: " + surveyInfo.getSurveyClass()
 		+ " LOI: " + surveyInfo.getSurveyLOI()
-		+ " IR: " + surveyInfo.getSurveyIR());
+		+ " IR: " + surveyInfo.getSurveyIR()
+		+ " Reward Name: " + surveyInfo.getRewardName()
+		+ " Reward Value: " + surveyInfo.getRewardValue());
 }
 ```
+<br/>
+| **Note:** In offerwall mode, SurveyInfo object should be empty. In that case the notification informs that surveys are available in the offerwall
 <br/>
 #### **11.2. Get notified when a Pollfish survey is not available**
 
@@ -752,10 +844,12 @@ and Override  onPollfishSurveyCompleted() function:
 @Override
 public void onPollfishSurveyCompleted(SurveyInfo surveyInfo) {
 
-  Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
+	Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
                 + " SurveyClass: " + surveyInfo.getSurveyClass()
 		+ " LOI: " + surveyInfo.getSurveyLOI()
-		+ " IR: " + surveyInfo.getSurveyIR());
+		+ " IR: " + surveyInfo.getSurveyIR()
+		+ " Reward Name: " + surveyInfo.getRewardName()
+		+ " Reward Value: " + surveyInfo.getRewardValue());
 }
 ```
 <br/>
