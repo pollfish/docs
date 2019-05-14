@@ -57,9 +57,12 @@ In the Mediation Settings area on your Dashboard you can customize the type of s
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_settings.png" width="460" height="auto"/>
 
 
-<h3>3. Initialize Pollfish in reward mode (skip Pollfish Indicator)</h3>
+<h3>3. Initialize Pollfish in reward and offerwall mode </h3>
 
-You should initialize Pollfish SDK in reward mode. With this mode, Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) will be skipped. Pollfish in reward mode ignores Pollfish panel behaviour from Pollfish Developer Dashboard (you can read more on Pollfish panel behaviour settings on Pollfish [FAQ page](https://pollfish.zendesk.com/hc/en-us/articles/205355891--What-do-different-PollFish-Indicator-Settings-mean-])) and always hide Pollfish survey panel.
+You should initialize Pollfish SDK in reward and offerwall mode. With this mode, Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) will be skipped Pollfish panel will stay hidden when surveys are received. 
+
+- rewardMode -> true
+- offerwallMode -> true
 
 <h3>4. Register & listen to Pollfish survey received notification</h3>
 
