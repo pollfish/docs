@@ -200,7 +200,6 @@ You have to include Pollfish library headers in any file that you will use Pollf
 ```
 
 
-
 ### or if you are using Pollfish in a Swift project follow the next steps to import Pollfish
 
  <span style="text-decoration: underline">Add a Bridging-Header file:</span>
@@ -253,7 +252,7 @@ In order to initialize, you need the API key of your app (step 2 above) and also
         pollfishParams.releaseMode= false;
         pollfishParams.offerwallMode= false;
         pollfishParams.rewardMode=false;
-        pollfishParams.requestUUID=@"MY_ID";
+        pollfishParams.requestUUID=@"USER_ID";
     }];
     
     [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams];
@@ -271,7 +270,7 @@ func applicationDidBecomeActive(application: UIApplication) {
         pollfishParams.indicatorPadding=10;
         pollfishParams.releaseMode = false;
         pollfishParams.offerwallMode = false;
-        pollfishParams.requestUUID="MY_ID";
+        pollfishParams.requestUUID="USER_ID";
         
         Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 }
@@ -285,7 +284,7 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 
 No | Description
 ------------ | -------------
-5.2.1 | **.indicatorPosition (int)**  <br/> Sets the Position where you wish to place the Pollfish indicator
+5.2.1 | **.indicatorPosition (PollfishPosition (int))**  <br/> Sets the Position where you wish to place the Pollfish indicator
 5.2.2 | **.requestUUID (NSString *)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
 5.2.3 | **.indicatorPadding (int)**  <br/> Sets padding (in dp) from top or bottom according to the Position of the indicator
 5.2.4 | **.pollfishViewContainer (UIView *)**  <br/> Sets a view container that Pollfish surveys will be rendered above it
@@ -297,8 +296,7 @@ No | Description
 
 <br/>
 #### **5.2.1 .indicatorPosition(int position)**
-Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
-
+This setting sets the Position where you wish to place Pollfish indicator  ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
 
 <span style="text-decoration: underline">There are six different options available: </span> 
 
@@ -312,10 +310,9 @@ Sets Position where you wish to place  Pollfish indicator --> ![alt text](https:
 If you do not set explicity a position for Pollfish indicator, it will appear by default at PollFishPositionMiddleRight
 <br/><br/>
 Below you can see an example on how you can set Pollfish indicator to slide from the top right middle of the screen:
-<br/>
+<br/><br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
-{
     PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
         pollfishParams.indicatorPosition=PollFishPositionMiddleRight;
     }];
@@ -334,6 +331,30 @@ Below you can see an example on how you can set Pollfish indicator to slide from
 Indicator position affects also from which side the survey panel will slide-in (Right or Left).
 <br/>
 
+<br/>
+#### **5.2.2 .requestUUID( NSString *)**
+
+Sets a unique id to identify a user and be passed through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>.
+<br/><br/>
+Below you can see an example on how you can pass a request id during initialization:
+<br/><br/>
+<span style="text-decoration: underline">Objective-C:</span>
+```
+    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
+        pollfishParams.requestUUID=@"USER_ID";
+    }];
+    
+    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
+```
+<span style="text-decoration: underline">Swift:</span>
+```
+	let pollfishParams = PollfishParams ()
+        
+        pollfishParams.requestUUID="USER_ID";
+	
+        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
+```
+<br/>
 
 
 
