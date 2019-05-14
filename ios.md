@@ -859,7 +859,7 @@ The whole set of values currently supported are:
 When a new mediation network enters the Pollfish network the appropriate values will be added.
 
 <br/>
-### 14.2 Get notified when survey is completed
+### 14.2 Get notified when a survey is completed
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -915,7 +915,7 @@ func pollfishCompleted(_ notification:Notification) {
 ```
 
 
-Similarly to survey received notification, upon completion you can gert informed on the following values around the completed survey
+Similarly to survey received notification, upon completion you can get informed on the following values around the completed survey
 
 - **survey_cpa** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
 - **survey_ir** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably.
@@ -959,7 +959,7 @@ func pollfishUsernotEligible(_ notification:Notification)
 ```
 
 <br/>
-### 14.4 Get notified when survey is not available
+### 14.4 Get notified when no survey is available
 
 
 You can be notified when a survey is not available for a user via the iOS Notification Center.  
