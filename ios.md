@@ -285,7 +285,7 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 No | Description
 ------------ | -------------
 5.2.1 | **.indicatorPosition (PollfishPosition (int))**  <br/> Sets the Position where you wish to place the Pollfish indicator
-5.2.2 | **.requestUUID (NSString *)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+5.2.2 | *.requestUUID (NSString *)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
 5.2.3 | **.indicatorPadding (int)**  <br/> Sets padding (in dp) from top or bottom according to the Position of the indicator
 5.2.4 | **.pollfishViewContainer (UIView *)**  <br/> Sets a view container that Pollfish surveys will be rendered above it
 5.2.5 | **.releaseMode (BOOL)**  <br/> Sets Pollfish SDK to Developer or Release mode
