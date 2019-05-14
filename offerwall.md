@@ -126,7 +126,7 @@ This approach is usually followed by publishers when looking to send over a uniq
 
 <h1>Sample projects (Show me some code!)</h1>
 
-You can find examples in code on how to implement the rewarded approach in the links below:
+You can find examples in code on how to implement the Offerwall approach in the links below:
 
 
 - [Android Sample Project](https://github.com/pollfish/android-sdk-pollfish/blob/master/sample-project/app/src/main/java/pollfish/com/sampleproject/OfferwallActivity.java)
