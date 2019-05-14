@@ -17,7 +17,7 @@ Users in order to be able to participate to surveys on the very first time the w
 Once a user ulocked surveys from the previous step, he can choose from a variety of different surveys to participate.   
 If no surveys are available for that user, an empty state screen will be rendered to the user to inform him to check back later for survey opportunities.
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/flow.png" width="460" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/flow.png" width="800" height="auto"/>
 
 <h3>3. Getting Rewarded on Survey Completion</h3>
 
