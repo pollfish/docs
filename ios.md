@@ -331,7 +331,7 @@ Below you can see an example on how you can set Pollfish indicator to slide from
 Indicator position affects also from which side the survey panel will slide-in (Right or Left).
 <br/>
 
-#### **5.2.2 .requestUUID(NSString \*)**
+#### **5.2.2 .requestUUID (NSString \*)**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>.
 <br/><br/>
@@ -400,7 +400,6 @@ Sets a UIView container where Pollfish surveys will be rendered above it. If thi
         Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
 <br/>
-<br/>
 #### **5.2.5 .releaseMode (BOOL)**
 
 Sets Pollfish SDK to Developer or Release mode. If you do not set this param it will turn the SDK to Developer mode by default in order for the developer to be able to test with test surveys.
@@ -410,7 +409,7 @@ Sets Pollfish SDK to Developer or Release mode. If you do not set this param it 
 *   **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing - always returns a survey).  
 *   **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
 
-> **Note:** Be careful to set andDebuggable parameter to false prior releasing to AppStore!  
+| **Note:** Be careful to set andDebuggable parameter to false prior releasing to AppStore!  
 <br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
@@ -428,7 +427,6 @@ Sets Pollfish SDK to Developer or Release mode. If you do not set this param it 
 	
         Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 ```
-<br/>
 <br/>
 #### **5.2.6 .rewardMode (BOOL)**
 
@@ -455,11 +453,42 @@ If not used the default value is false and Pollfish indicator is shown.
 <br/>
 You can read more on how you can use the rewardMode to incentivize users to participate to surveys at the following  <a href="https://www.pollfish.com/docs/rewarded-surveys">link</a>.
 <br/>
+#### **5.2.7 .surveyFormat(NSString \*)**
 
+Explicitly requesting a specific survey format for testing purposes.
 
+| **Note:** This param is ignored when offerwall mode is true 
 
+If you want to test Pollfish different available Survey Formats you can explicitly request a specific survey format during initialization
 
+There are four different options available: 
 
+- SurveyFormatBasic
+- SurveyFormatPlayful
+- SurveyFormatRandom
+- SurveyFormatThirdParty
+
+<br/>
+Below you can see an example on how you can explicitly request to test Pollfish Plaful survey format in debug mode:
+<span style="text-decoration: underline">Objective-C:</span>
+```
+    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
+        pollfishParams.surveyFormat=SurveyFormatBasic;
+	pollfishParams.releaseMode=false;
+    }];
+    
+    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
+```
+<span style="text-decoration: underline">Swift:</span>
+```
+	let pollfishParams = PollfishParams ()
+        
+        pollfishParams.surveyFormat=SurveyFormatBasic;
+	pollfishParams.releaseMode=false;
+	
+        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
+```
+<br/>
 
 
 
