@@ -469,7 +469,7 @@ There are four different options available:
 * **SurveyFormatThirdParty**
 
 Below you can see an example on how you can explicitly request to test Pollfish Plaful survey format in debug mode:
-<br/>
+<br/><br/>
 <span style="text-decoration: underline">Objective-C:</span>
 ```
     PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
@@ -484,6 +484,34 @@ Below you can see an example on how you can explicitly request to test Pollfish 
 	let pollfishParams = PollfishParams ()
         
         pollfishParams.surveyFormat=SurveyFormatBasic;
+	pollfishParams.releaseMode=false;
+	
+        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
+```
+<br/>
+
+#### **5.2.8 .offerwallModel (BOOL)**
+
+Enables Pollfish in offerwall mode. If not specified Pollfish is shown as one survey at a time.
+
+Below you can see an example on how you can intialize Pollfish in offerwall mode:
+<br/><br/>
+<span style="text-decoration: underline">Objective-C:</span>
+```
+    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
+        pollfishParams.offerwallModel=true;
+	pollfishParams.rewardMode=true;
+	pollfishParams.releaseMode=false;
+    }];
+    
+    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams]
+```
+<span style="text-decoration: underline">Swift:</span>
+```
+	let pollfishParams = PollfishParams ()
+	
+	pollfishParams.offerwallModel=true;
+	pollfishParams.rewardMode=true;
 	pollfishParams.releaseMode=false;
 	
         Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
