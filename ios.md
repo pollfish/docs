@@ -994,7 +994,7 @@ func pollfishNotAvailable(_ notification:Notification)
 ```
 
 <br/>
-### 14.5 Get notified when Pollfish is opened
+### 14.5 Get notified when Pollfish panel has opened
 
 
 You can be notified when a user opens Pollfish survey panel via the iOS Notification Center.  
@@ -1029,7 +1029,7 @@ func pollfishOpened(_ notification:Notification)
 ```
 
 <br/>
-### 14.6 Get notified when Pollfish is closed
+### 14.6 Get notified when Pollfish panel has closed
 
 
 You can be notified when a user closes Pollfish survey panel via the iOS Notification Center.  
