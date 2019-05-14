@@ -1,9 +1,9 @@
-<div class="changelog" data-version="4.5.1">
+<div class="changelog" data-version="5.0.0">
 	
 v.5.0.0
 
 - Created new expandable interface initWithAPIKey(...)
-- Removed old multiple init interfaces
+- Removed old init interfaces
 - Removed deprecated interface setAttributes
 - Removed deprecated customMode and introduced rewardMode option
 - Added support for offerwall mode
@@ -112,7 +112,7 @@ v4.0.0
 1.  Download Pollfish iOS SDK and unzip it
 2.  Import pollfish.framework to your project
 3.  Import AdSupport.framework, SystemConfiguration.framework, WebKit.framework and CoreTelephony.framework to your project
-4.  Call init function of Pollfish in the App’s Delegate
+4.  Call init function of Pollfish when a view is loaded or in the App’s Delegate
 5.  Set to **Release mode** and release in AppStore
 6.  Update your privacy policy
 7.  Request your account to get verified from Pollfish Dashboard
@@ -137,7 +137,7 @@ You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapo
 5. Update your privacy policy
 6. Request your account to get verified from Pollfish Dashboard
 <br/>
-> **Requirements:** Pollfish framework works with iOS version 9.0 and above and XCode9.  
+> **Requirements:** Pollfish framework works with iOS version 9.0+ and XCode9+.  
 
 <br/><br/>
 
@@ -232,23 +232,31 @@ where <Your-Product> must be your "Product Name" as listed in your "Build Settin
 #import <Pollfish/Pollfish.h>
 ```
 <br/>
-### 5.2 Initializing Pollfish in App Delegate
+**6\. Initializing Pollfish in App Delegate on in viewWillAppear
 
-The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active.  
+The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active. (you can also initiate in viewDidLoad or viewWillAppear methods of a ViewController).
 
+| **Note:** Init function affects the view hierarchy of the app. Therefore it shoud be called from the main thread that created the view hierarchy.
 
+In order to initialize, you need the API key of your app (step 2 above) and also create an instance of PollfishParams. PollfishParams has several params
 
 <span style="text-decoration: underline">Objective-C:</span>
  
 ```
-- (void)applicationDidBecomeActive:(UIApplication *)application
+- (void)applicationDidBecomeActive:(UIApplication *)application 
 {
-  [Pollfish initAtPosition: (PollfishPosition)
-               withPadding: (int)
-	       andDeveloperKey: (NSString *)
-             andDebuggable: (BOOL) 
-	         andCustomMode: (BOOL)];
-}
+    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {
+        
+        pollfishParams.indicatorPosition=PollFishPositionMiddleRight;
+        pollfishParams.indicatorPadding=10;
+        pollfishParams.releaseMode= false;
+        pollfishParams.offerwallMode= false;
+        pollfishParams.rewardMode=false;
+        pollfishParams.requestUUID=@"MY_ID";
+    }];
+    
+    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams];
+    
 ```
 
 <span style="text-decoration: underline">Swift:</span>
@@ -256,11 +264,15 @@ The init function of Pollfish must be called in your application’s delegate ap
 ```
 func applicationDidBecomeActive(application: UIApplication) {
 
-   Pollfish.initAtPosition( pos: Int32, 
-       			    withPadding: Int32, 
-       		    andDeveloperKey: String!, 
-       		      andDebuggable: Bool, 
-       		      andCustomMode: Bool)
+  	let pollfishParams = PollfishParams ()
+        
+        pollfishParams.indicatorPosition=Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue);
+        pollfishParams.indicatorPadding=10;
+        pollfishParams.releaseMode = false;
+        pollfishParams.offerwallMode = false;
+        pollfishParams.requestUUID="MY_ID";
+        
+        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
 }
 ```
 <br/>
