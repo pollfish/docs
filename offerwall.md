@@ -1,7 +1,7 @@
 Pollfish allows publishers to turn on Offerwall mode and enable their users to complete multiple survey offers within the same session. Pollfish Offerwall is similar to any other ad offerwall, however it focuses exclusively on surveys and market research
 
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/offerwall_landing.png" width="320" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/offerwall_landing.png" width="260" height="auto"/>
 
 
 
@@ -15,7 +15,7 @@ Below, you can see a list of all logical steps needed, in order to show Pollfish
 
 In the App Settings are of the Dashboard you should visit the Offerwall settings are and set your preferred settings.
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/dashboard_offerwall.png" width="320" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/dashboard_offerwall.png" width="380" height="auto"/>
 
 You can customize the following settings:
 
