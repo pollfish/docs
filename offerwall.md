@@ -19,7 +19,7 @@ If no surveys are available for that user, an empty state screen will be rendere
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/offerwall_landing.png" width="260" height="auto"/>
 
-<h3>3. Getting rewarded on survey completion</h3>
+<h3>3. Getting Rewarded on Survey Completion</h3>
 
 Users will get rewarded for every succesfully completed survey on the Offerwall after it passes validation from the real-time anti-fraud mechanism. Users can visit the history section of the Offerwall at any time to get more info on surveys rewarded or surveys that they got screened out and learn more about the reasons (this level of transparency can decrease complains from the users as they can check the status of their responses on their own)
 
@@ -29,11 +29,11 @@ Users will get rewarded for every succesfully completed survey on the Offerwall 
 
 <h1>Implementing Pollfish Offerwall - Step by Step</h1>
 
-Below, you can see a list of all logical steps needed, in order to show Pollfish Offerwall under a rewarded placement
+Below, you can see a list of all the logical steps needed, in order to show Pollfish Offerwall under a rewarded placement:
 
 <h3>1. Customize Offerwall Settings through Pollfish Dashboard</h3>
 
-In the App Settings of your Dashboard you should visit the Offerwall area and set your preferred settings.
+In the App Settings area of your Dashboard, you should visit the Offerwall area and set your preferred settings.
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/dashboard_offerwall.png" width="460" height="auto"/>
 
@@ -42,17 +42,17 @@ You can customize the following settings:
 **Reward Settings**
 
 - Name of virtual reward shown on the wall
-- Exhange rate. How much of your currency does one USD ($) worth?
+- Exhange rate. How much of your currency worth one USD?
 
 **Logo**
 
-- You can upload your own logo that will be displayed on the top of the wall and give some sort of familiarity to the users
+- You can upload your own logo that will be displayed on the top of the wall
 
 **Theme**
 
-- You can customize the primary colour of the wall and the background. 
+- You can customize the primary colours of the wall and the background. 
 
-<h3>2. Customize Mediation Network settings</h3>
+<h3>2. Customize Mediation Network Settings</h3>
 
 In the Mediation Settings area on your Dashboard you can customize the type of surveys and from which providers, that will be displayed within the Offerwall
 
