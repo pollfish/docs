@@ -450,7 +450,7 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 					.build();
 ```
 <br/>
-#### **10.6 .customMode(boolean customMode)**  
+#### **10.6 .customMode(boolean customMode)**  [DEPRECATED-use 10.18]
 
 Initializes Pollfish in custom mode if set to true. By default this is set to false.
 
@@ -834,12 +834,16 @@ and Override onPollfishSurveyReceived() function:
 ```java
 @Override
 public void onPollfishSurveyReceived(SurveyInfo surveyInfo) {
-  Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
+	Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
                 + " SurveyClass: " + surveyInfo.getSurveyClass()
 		+ " LOI: " + surveyInfo.getSurveyLOI()
-		+ " IR: " + surveyInfo.getSurveyIR());
+		+ " IR: " + surveyInfo.getSurveyIR()
+		+ " Reward Name: " + surveyInfo.getRewardName()
+		+ " Reward Value: " + surveyInfo.getRewardValue());
 }
 ```
+<br/>
+| **Note:** In offerwall mode, SurveyInfo object should be empty. In that case the notification informs that surveys are available in the offerwall
 <br/>
 #### **12.2. Get notified when a Pollfish survey is not available**
 
@@ -882,10 +886,12 @@ and Override  onPollfishSurveyCompleted() function:
 @Override
 public void onPollfishSurveyCompleted(SurveyInfo surveyInfo) {
 
-  Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
+	Log.d(TAG, "Pollfish :: CPA: " + surveyInfo.getSurveyCPA()
                 + " SurveyClass: " + surveyInfo.getSurveyClass()
 		+ " LOI: " + surveyInfo.getSurveyLOI()
-		+ " IR: " + surveyInfo.getSurveyIR());
+		+ " IR: " + surveyInfo.getSurveyIR()
+		+ " Reward Name: " + surveyInfo.getRewardName()
+		+ " Reward Value: " + surveyInfo.getRewardValue());
 }
 ```
 <br/>
