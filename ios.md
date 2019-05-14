@@ -240,7 +240,7 @@ A good place to call Pollfish init function is in the application’s delegate a
 
 In order to initialize, you need the API key of your app (step 2 above) and also an instance of PollfishParams. PollfishParams has several params that affect the behaviour of Pollfish survey panel.
 
-Below you can see an example on how you can initialize Pollfish with the help of PollfishParams instance.
+Below you can see an example on how you can initialize Pollfish with the help of PollfishParams onject:
 
 <span style="text-decoration: underline">Objective-C:</span>
  
@@ -290,13 +290,13 @@ No | Description
 ------------ | -------------
 5.2.1 | **.indicatorPosition(PollfishPosition (int))**  <br/> Sets the Position where you wish to place the Pollfish indicator
 5.2.2 | **.requestUUID(NSString \*)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
-5.2.3 | **.indicatorPadding(int)** <br/> Sets padding (in dp) from top or bottom according to the Position of the indicator
+5.2.3 | **.indicatorPadding(int)** <br/> Sets the padding from the top or the bottom of the view, according to the Position of Pollfish indicator
 5.2.4 | **.pollfishViewContainer(UIView \*)**  <br/> Sets a view container that Pollfish surveys will be rendered above it
 5.2.5 | **.releaseMode(BOOL)**  <br/> Sets Pollfish SDK to Developer or Release mode
 5.2.6 | **.rewardMode(BOOL)**  <br/> Initializes Pollfish in reward mode
 5.2.7 | **.surveyFormat(NSString \*)**  <br/> Explicitly requests a specific survey format
 5.2.8 | **.offerwallModel(BOOL)**  <br/> Sets Pollfish to offerwall mode
-5.2.9 | **.userAttributes(NSMutableDictionary \*)**  <br/> Provides user attributes during initialization
+5.2.9 | **.userAttributes(NSMutableDictionary \*)**  <br/> Provides user attributes upfront during initialization
 
 <br/>
 #### **5.2.1 .indicatorPosition (PollfishPosition (int))**
