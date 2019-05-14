@@ -33,7 +33,7 @@ Below, you can see a list of all logical steps needed, in order to show Pollfish
 
 In the App Settings of your Dashboard you should visit the Offerwall area and set your preferred settings.
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/dashboard_offerwall.png" width="260" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/dashboard_offerwall.png" width="460" height="auto"/>
 
 You can customize the following settings:
 
