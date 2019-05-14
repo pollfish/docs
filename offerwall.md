@@ -11,7 +11,7 @@ Users in order to be able to participate to surveys on the very first time the w
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/unlock_screens.png" width="500" height="auto"/>
 
-<h3>2. Choosing & compleing a survey</h3>
+<h3>2. Choosing & compleTing a survey</h3>
 
 Users can choose from a variety of different surveys to participate
 
