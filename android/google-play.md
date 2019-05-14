@@ -197,13 +197,15 @@ import com.pollfish.constants.Position;
 
 ### 6. Add permissions to AndroidManifest.xml
 
+#### 6.1 Add access to internet permission
+
 You should add the following line in your AndroidManifest.xml  
 
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-#### 6.1 Add support for mediation
+#### 6.2 Add support for cleartext http traffic
 
 If you are looking to use Pollfish mediation surveys from all the providers, in order to avoid any faulty behaviour on new Android devices we would advice that you allow cleartext http traffic. To achieve that you need to create a new file named **network_security_config.xml** under **res/xml** and add the following inside:
 
@@ -343,7 +345,7 @@ No | Description
 10.3 | **.indicatorPadding(int padding)**  <br/> Sets padding (in dp) from top or bottom according to the Position of the indicator
 10.4 | **.userLayout(ViewGroup userLayout)**  <br/> Sets User View layout that Pollfish surveys will be rendered above it
 10.5 | **.releaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
-10.6 | **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
+10.6 | [DEPRECATED-use 10.18] **.customMode(boolean customMode)**  <br/> Initializes Pollfish in custom mode
 10.7 | [DEPRECATED-use 10.16] **.pollfishSurveyReceivedListener(PollfishSurveyReceivedListener pollfishSurveyReceivedListener)**  <br/> Sets a notification listener when Pollfish Survey is received
 10.8 | **.pollfishSurveyNotAvailableListener(PollfishSurveyNotAvailableListener pollfishSurveyNotAvailableListener)**  <br/> Sets a notification listener when Pollfish Survey is not available
 10.9 | [DEPRECATED-use 10.17] **.pollfishSurveyCompletedListener(PollfishSurveyCompletedListener pollfishSurveyCompletedListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
@@ -355,6 +357,8 @@ No | Description
 10.15 | **.surveyFormat(SurveyFormat surveyFormat)**  <br/> Requests a specific survey format (only in debug mode)
 10.16 | **.pollfishReceivedSurveyListener(PollfishReceivedSurveyListener pollfishReceivedSurveyListener)**  <br/> Sets a notification listener when Pollfish Survey is received
 10.17 | **.pollfishCompletedSurveyListener(PollfishCompletedSurveyListener pollfishCompletedSurveyListener)**  <br/> Sets a notification listener when Pollfish Survey is completed
+10.18 | **.rewardMode(boolean rewardMode)**  <br/> Initializes Pollfish in reward mode
+10.19 | **.offerWallMode(boolean offerWallMode)**  <br/> Sets Pollfish to offerwall mode.
 
 <br/>
 #### **10.1 .indicatorPosition(int position)**
@@ -685,7 +689,6 @@ The whole set of values currently supported are:
 | **Pollfish/Internal**         | Pollfish internal survey created by the publisher
 | **Toluna**         | Toluna survey   
 | **Cint**         | Cint survey   
-| **Lucid**         | Lucid survey   
 | **InnovateMR**         | InnovateMR survey   
 | **SaySo**       | SaySo survey   
 | **P2Sample**       | P2Sample survey
@@ -723,6 +726,46 @@ ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
 	.build();
 ```
 <br/>
+
+**10.18 .rewardMode(boolean rewardMode)**
+
+Initializes Pollfish in reward mode if set to true. By default this is set to false.
+
+**true Vs false**
+
+*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small Pollfish icons) and hides Pollfish survey panel view from users. This method is aimed to be used when app developers want to incentivize first somehow their users. 
+*   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
+
+![alt text](https://storage.googleapis.com/pollfish_production/multimedia/dashboard_1.png)
+<br/><br/>
+
+Below you can see an example of setting Pollfish to reward mode with ParamsBuilder object:  
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+					.rewardMode(true)
+					.build();
+```
+
+<br/>
+This mode should be used if you want to incentivize users to participate to surveys. We have a detailed guide on how to implement the rewarded approach <a href="https://www.pollfish.com/docs/rewarded-surveys/">here</a>
+<br/>
+
+**10.19 .offerWallMode(boolean offerWallMode)**
+
+Enables offerwall mode. If not set, one single survey is shown each time.
+<br/>
+Below you can see an example of setting Pollfish to offerwall mode with ParamsBuilder object:  
+<br/>
+```java
+ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
+					.offerWallMode(true)
+					.rewardMode(true)
+					.build();
+```
+
+<br/>
+
 
 ### 11. Handling orientation changes (optional)
 
