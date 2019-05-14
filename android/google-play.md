@@ -1,4 +1,12 @@
-<div class="changelog" data-version="4.5.0">
+<div class="changelog" data-version="5.0.0">
+v5.0.0
+	
+- Added offerwall support
+- Removed deprecated init interfaces
+- Removed deprecated interfaces PollfishSurveyReceivedListener,PollfishSurveyCompletedListener
+- Deprecated customMode and introduced rewardMode
+- Added support for exiting faulty mediation surveys
+
 v4.5.0
 	
 - Moved away from Jar format in SDKs
@@ -173,7 +181,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:+:googleplayRelease@aar'
+  implementation 'com.pollfish:pollfish:5.0.0:googleplayRelease@aar'
 }
 ```
 
@@ -195,7 +203,27 @@ You should add the following line in your AndroidManifest.xml
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-Pollfish uses this permission to track and send survey responses to Pollfish servers.  
+#### 6.1 Add support for mediation
+
+If you are looking to use Pollfish mediation surveys from all the providers, in order to avoid any faulty behaviour on new Android devices we would advice that you allow cleartext http traffic. To achieve that you need to create a new file named **network_security_config.xml** under **res/xml** and add the following inside:
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
+```
+
+add in your Androidmanifest.xml reference the file above in the **android:networkSecurityConfig** tag as below:
+
+```
+ <application
+        android:networkSecurityConfig="@xml/network_security_config">
+```
 
 ### 7. Initialize Pollfish
 
