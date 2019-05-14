@@ -42,7 +42,7 @@ You can customize the following settings:
 **Reward Settings**
 
 - Name of virtual reward shown on the wall
-- Exhange rate. How much of your currency worth one USD?
+- Exhange rate. How much does your currency worth compared to one USD?
 
 **Logo**
 
