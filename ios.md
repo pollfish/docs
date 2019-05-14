@@ -234,11 +234,13 @@ where <Your-Product> must be your "Product Name" as listed in your "Build Settin
 
 ### 5.2 Initialize Pollfish
 
-The init function of Pollfish must be called in your application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time your application will become active. (you can also initiate in viewDidLoad or viewWillAppear methods of a ViewController).
+A good place to call Pollfish init function is in the application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time the application will become active. (another placement could be in the viewDidLoad or viewWillAppear methods of a ViewController).
 
 | **Note:** Init function affects the view hierarchy of the app. Therefore it shoud be called from the main thread that created the view hierarchy.
 
-In order to initialize, you need the API key of your app (step 2 above) and also an instance of PollfishParams. PollfishParams has several params that affect the behaviour of Pollfish panel
+In order to initialize, you need the API key of your app (step 2 above) and also an instance of PollfishParams. PollfishParams has several params that affect the behaviour of Pollfish survey panel.
+
+Below you can see an example on how you can initialize Pollfish with the help of PollfishParams instance.
 
 <span style="text-decoration: underline">Objective-C:</span>
  
