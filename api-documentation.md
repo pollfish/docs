@@ -393,6 +393,16 @@ Server responses include http header parameters with additional information.
 The header parameter called **CPA** shows
 the money to be earned from survey received in US dollar cents.
 
+The header parameter called **reward_name** shows
+the reward name to be earned as specified from the publisher in the publisher dashboard (ie: Diamonds).
+
+The header parameter called **reward_value** will return the value of the
+conversion between the survey CPA received and the conversion that was set up in the publisher dashboard.
+
+Example: 
+
+If you set "Diamonds" as the reward name and the variable amount `1 USD = 50 Diamonds` then a survey that has a CPA of 30, will also return `reward_name=Diamonds` and `reward_value=15` (100 cents = 50 diamonds, so 30 cents is 15 diamonds) on the response
+
 The header parameter called **survey_class** is used to pass to the client information
 about the survey network and type. The syntax is
 
