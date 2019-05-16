@@ -159,7 +159,7 @@ Include the jQuery library with version greater or equal than 1.4.3 if it's not 
 
 ```html
 <!-- Include jQuery library >= 1.4.3 version -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 ```
 
 Then include the Pollfish Webplugin, as the example below:
