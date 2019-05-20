@@ -49,6 +49,12 @@ You can pass a unique id for a user (as you may use it in your own system) throu
 
 You can easily retrieve through every callback how much money were earned in USD cents, by appending and reading param with name **cpa**.
 
+#### 5.1 Retrieving reward name and value for given survey
+
+You can retrieve through every callback how much money were earned converted to provided reward name and reward value, by appending and reading param with name **reward_name** and/or **reward_value**.
+
+| **Note:** You can set these values through the publisher dashboard under section `Reward Settings`
+
 ### 6. Getting notified when a user is not eligible
 
 You can register and receive callbacks when a user was not eligible for a survey. User not eligible in that case means that either the user was screened out from a particular survey or he/she was marked as fraud by our anti-fraud system.
