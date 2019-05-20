@@ -45,15 +45,17 @@ Every user can complete only once a specific survey. You can avoid dublicates in
 
 You can pass a unique id for a user (as you may use it in your own system) through the SDK, during intiialization. You can retrieve this id through the server-to-server callback if you append **request_uuid** parameter to the call.
 
-### 5. Retrieving money to be earned
+### 5. Retrieving info around cpa and rewards
+
+#### 5.1 Retrieving CPA value for a given survey
 
 You can easily retrieve through every callback how much money were earned in USD cents, by appending and reading param with name **cpa**.
 
-#### 5.1 Retrieving reward name and value for given survey
+#### 5.2 Retrieving Reward Name and Reward Value for a given survey
 
-You can retrieve through every callback how much money were earned converted to provided reward name and reward value, by appending and reading param with name **reward_name** and/or **reward_value**.
+In every callback received, aside from money earned you can retrieve the Reward Name and Reward Value, by appending and reading params with name **reward_name** and/or **reward_value**.
 
-| **Note:** You can set these values through the publisher dashboard under section `Reward Settings`
+| **Note:** You can set those values per app, through the Publisher Dashboard under section `Reward Settings`
 
 ### 6. Getting notified when a user is not eligible
 
