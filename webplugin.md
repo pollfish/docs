@@ -73,8 +73,10 @@ var pollfishConfig = {
     - Random: 2
     - 3rd-party: 3
 7.  <span class="params">rewardName (optional)</span>
+
     Sets reward name parameter to Pollfish. You can set your own coin/point/reward name for when your respondents complete a       survey
 8.  <span class="params">rewardConversion (optional)</span>
+
     Sets reward conversion parameter to Pollfish. You can set your own conversion value for when your respondents complete a       survey. The conversion expects a string and it should contain the number of rewards the respondent will receive for every 
     dollar being payed. In example, when a survey has a CPA of 30 and a conversion of 50. Then the rewardValue property will       contain the value '15'.
 
