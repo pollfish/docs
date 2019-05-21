@@ -1,7 +1,7 @@
-<div class="changelog" data-version="5.0.1">
-v5.0.1
+<div class="changelog" data-version="5.0.2">
+v5.0.2
 	
-- Fixed conflicts with other ad networks
+- Removed installed apps functionality
 
 v5.0.0
 	
