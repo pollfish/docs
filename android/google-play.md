@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.0.0">
+<div class="changelog" data-version="5.0.1">
+v5.0.1
+	
+- Fixed conflicts with other ad networks
+
 v5.0.0
 	
 - Added offerwall support
@@ -182,7 +186,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.0.0:googleplayRelease@aar'
+  implementation 'com.pollfish:pollfish:5.0.1:googleplayRelease@aar'
 }
 ```
 
