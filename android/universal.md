@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.0.0">
+<div class="changelog" data-version="5.0.1">
+v5.0.0
+	
+- Fixed conflicts with other ad networks
+
 v5.0.0
 	
 - Added offerwall support
