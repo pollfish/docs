@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.0.1">
+<div class="changelog" data-version="5.0.2">
+v5.0.2
+	
+- Removed installed apps functionality
+
 v5.0.1
 	
 - Fixed conflicts with other ad networks
@@ -186,7 +190,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.0.1:googleplayRelease@aar'
+  implementation 'com.pollfish:pollfish:5.0.2:googleplayRelease@aar'
 }
 ```
 
