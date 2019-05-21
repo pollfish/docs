@@ -119,7 +119,9 @@ var pollfishConfig = {
   closeAndNoShowCallback: customCloseAndNoShow,
   surveyCompletedCallback: customSurveyFinished,
   surveyAvailable: customSurveyAvailable,
-  surveyNotAvailable: customSurveyNotAvailable
+  surveyNotAvailable: customSurveyNotAvailable,
+  rewardName: 'Diamonds',
+  rewardConversion: '50', // 1 USD = 50 Diamonds, ie: if survey cpa is 30, then it will return 15 diamonds
 };
 
 function customSurveyClosed(){
