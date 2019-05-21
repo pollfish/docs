@@ -1,5 +1,5 @@
 <div class="changelog" data-version="5.0.1">
-v5.0.0
+v5.0.1
 	
 - Fixed conflicts with other ad networks
 
