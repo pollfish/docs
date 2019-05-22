@@ -91,7 +91,6 @@ Please note that once the user accepts this privacy policy and agrees to partici
 * List of initial scan results of available BLE devices
 * Android ID (randomly generated number by the system)
 * Hardware serial number
-* List of installed apps
 
 Most of the above data will not be sent/received by Pollfish every time a user accepts this policy and chooses to participate in a survey. Aforementioned data may be collected only if such a collection is necessary in order to meet certain survey parameters and technical survey criteria (e.g if Pollfish needs to micro-target a survey with the help of beacon data (Bluetooth devices), Pollfish may enable retrieval of such data in order to achieve better targeting).
 
