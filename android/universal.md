@@ -109,7 +109,7 @@ v4.0.0
 7. Set to **Release mode** and publish your app at any app store
 8. Request your account to get verified from Pollfish Dashboard
 
-> **Requirements:** Pollfish Android SDK works with Android 17 (4.2) and above.  
+> **Requirements:** Pollfish Android SDK works with Android 16 and above.  
 
 <br/><br/><br/><br/>
 ## Steps Analytically
