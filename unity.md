@@ -163,15 +163,34 @@ or
 
 ### 4. Initializing Pollfish
 
-You should use a MonoBehaviour object for your scene that will enable interaction with Pollfish Unity plugin. Pollfish should be initialized when an app starts or resumes.
+You should use a MonoBehaviour object for your scene that will enable interaction with Pollfish Unity plugin. Pollfish should be initialized when an app starts or resumes (this way you will always receive new surveys when available).
+
+### Pollfish API Key
+
+In order to initialize Pollfish, you need an API Key as described in step 2
+
+**apiKey** (string)- Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
+
+### Pollfish PollfishParams object
+
+In order to initialize Pollfish you need to create a PollfishParams object:
 
 ```
-void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, bool debugMode, bool customMode);
+  Pollfish.PollfishParams pollfishParams = new Pollfish.PollfishParams();
+  
+  pollfishParams.OfferwallMode(offerwallMode);
+  pollfishParams.IndicatorPadding(indPadding);
+  pollfishParams.ReleaseMode(releaseMode);
+  pollfishParams.RewardMode(rewardMode);
+  pollfishParams.IndicatorPosition((int)pollfishPosition);
+  pollfishParams.RequestUUID(requestUUID);
+  pollfishParams.UserAttributes(userAttributes);
+}
 ```
 
-### Pollfish init function takes the following parameters:
+PollfishParams can be initialized with the following calls:
 
-**1\. pollfishPosition** (PollfishPosition) - Sets Position where you wish to place  Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
+**1\. IndicatorPosition(PollfishPosition pollfishPosition)** - Sets the Position where you wish to place Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) and from which side of the screen you would like Pollfish survey panel to slide in.
 
 <span style="text-decoration: underline">There are six different options available: </span> 
 
@@ -182,27 +201,59 @@ void PollfishInitFunction(int pollfishPosition, int indPadding, string apiKey, b
 *   **Position.MIDDLE_LEFT** 
 *   **Position.MIDDLE_RIGHT**  
 
-**2\. indPadding** (int) - The padding from top or bottom of the screen according to PollfishPosition of the indicator (small red rectangle) specified before (0 is the default value)  
+**2\. IndicatorPadding(int indPadding)** - The padding from the top or bottom of the screen according to PollfishPosition of the indicator (small icon) specified before (0 is the default value)  
 
 > **Note:** if used in MIDDLE position, padding is calculating from top.**  
 
-**3\. apiKey** (string)- Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
-
-**4\. debugMode** (bool) – Debug or Release mode  
+**3\. ReleaseMode(bool releaseMode)** – Debug or Release mode  
 
 <span style="text-decoration: underline">You can use Pollfish either in Debug or in Release mode.</span>  
 
 *   **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).  
 *   **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
 
-> **Note:** Be careful to set andDebuggable parameter to false prior releasing to Google Play or AppStore!  
+> **Note:** Be careful to set release mode parameter to true prior releasing to Google Play or AppStore!  
 
-5\. **customMode** (bool) – Initializes Pollfish in custom mode if set to true. By default this is set to false.
+4\. **RewardMode(bool rewardMode)** – Initializes Pollfish in reward mode if set to true. By default this is set to false.
 
 **true Vs false**
 
-*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish panel view to app users. This method is usually used when app developers want to incentivize first somehow their users. 
+*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small Pollfish icons) and hides Pollfish survey panel view from users. This method is aimed to be used when app developers want to incentivize first somehow their users. 
 *   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
+
+5\. **OfferwallMode(bool offerwallMode)** – Enables offerwall mode. If not set, one single survey is shown each time.
+
+6\. **RequestUUID(string requestUUID)** – Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
+
+7\. **UserAttributes(Dictionary<string, string> userAttributes)** – Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
+
+If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
+
+| **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
+
+An example of how you can pass user demographics can be found below:
+
+```
+
+Dictionary<string, string> userAttributes = new Dictionary<string, string> ();
+		
+userAttributes.Add ("gender", "1");
+userAttributes.Add ("year_of_birth", "1974");
+userAttributes.Add ("marital_status", "2");
+userAttributes.Add ("parental", "3");
+userAttributes.Add ("education", "1");
+userAttributes.Add ("employment", "1");
+userAttributes.Add ("career", "2");
+userAttributes.Add ("race", "3");
+userAttributes.Add ("income", "1");
+
+Pollfish.PollfishParams pollfishParams = new Pollfish.PollfishParams();
+
+pollfishParams.UserAttributes(userAttributes);
+		
+```
+You can check values mapping for demographic surveys in the following [section](https://www.pollfish.com/docs/demographic-surveys)
+
 
 <br/><br/>
 
@@ -230,11 +281,19 @@ public void OnEnable()
   apiKey = "IOS_API_KEY";
   
   #endif
-  
-  Pollfish.PollfishInitFunction((int) pollfishPosition, indPadding, apiKey, debugMode, customMode);
 
+  Pollfish.PollfishParams pollfishParams = new Pollfish.PollfishParams();
+
+  pollfishParams.OfferwallMode(offerwallMode);
+  pollfishParams.IndicatorPadding(indPadding);
+  pollfishParams.ReleaseMode(releaseMode);
+  pollfishParams.RewardMode(rewardMode);
+  pollfishParams.IndicatorPosition((int)pollfishPosition);
+		
+  Pollfish.PollfishInitFunction(apiKey, pollfishParams);
 }
 ```
+
 <br/>
 
 ### 5. Handling Android or iOS specific cases
@@ -366,59 +425,3 @@ When your account is verified you will be able to start receiving paid surveys f
 <br/>
 <br/>
 <br/>
-
-### 8\. Other init methods (optional)
-
-#### 8.1 Passing custom parameter for server to server postback calls
-
-If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function and receive it back with Server to Server, survey completed postback call you can use:  
-
-```
-void PollfishInitWithRequestUUID(int position, int padding, string developerKey, bool debuggable, bool customMode, string request_uuid);
-
-```
-<br/>
-
-#### 8.2 Passing user attributes to skip or shorten Pollfish Demographic surveys
-
-If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
-
-| **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
-
-
-```
-void PollfishInitWithUserAttributes(int position, int padding, string developerKey, bool debuggable, bool customMode, string request_uuid, Dictionary<string,string> attrDict);
-
-```
-for example:
-
-```
-// Send user demographic attributes to shorten or skip demographic surveys
-
-Dictionary<string, string> dict = new Dictionary<string, string> ();
-
-//used in demographic surveys
-dict.Add ("gender", "1");
-dict.Add ("year_of_birth", "1974");
-dict.Add ("marital_status", "2");
-dict.Add ("parental", "3");
-dict.Add ("education", "1");
-dict.Add ("employment", "1");
-dict.Add ("career", "2");
-dict.Add ("race", "3");
-dict.Add ("income", "1");
-
-//general user attributes
-dict.Add ("email", "user_email@gmail.com");
-dict.Add ("google_id", "USER_GOOGLE");
-dict.Add ("linkedin_id", "USER_LINKEDIN");
-dict.Add ("twitter_id", "USER_TWITTER");
-dict.Add ("facebook_id", "USER_FB");
-dict.Add ("phone", "USER_PHONE");
-dict.Add ("name", "USER_NAME");
-dict.Add ("surname", "USER_SURNAME");
-
-Pollfish.PollfishInitFunction ((int)pollfishPosition, indPadding, apiKey, debugMode, customMode, requestUUID,dict);
-
-```
-You can check values mapping for demographic surveys in the following [section](https://www.pollfish.com/docs/demographic-surveys)
