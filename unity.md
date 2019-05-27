@@ -254,8 +254,7 @@ pollfishParams.UserAttributes(userAttributes);
 ```
 You can check values mapping for demographic surveys in the following [section](https://www.pollfish.com/docs/demographic-surveys)
 
-
-<br/><br/>
+<br/>
 
 Below you can see an example of the init function. Remember to set your API key for each platform prior calling init:
 
@@ -265,10 +264,10 @@ private string apiKey;
 	
 private Position pollfishPosition = Position.MIDDLE_LEFT;
 
-private bool debugMode = true;
-private bool customMode = false;
+private bool releaseMode = true;
+private bool rewardMode = false;
 private int indPadding = 10;
-
+private int offerwallMode = false;
 
 public void OnEnable()
 {
