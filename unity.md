@@ -203,7 +203,7 @@ Also this setting sets from which side of the screen you would like Pollfish sur
 
 **2\. IndicatorPadding(int indPadding)** - The padding from the top or bottom of the screen according to PollfishPosition of the indicator (small icon) specified before (0 is the default value)  
 
-> **Note:** if used in MIDDLE position, padding is calculating from top.**  
+> **Note:** if used in MIDDLE position, padding is calculating from the top
 
 **3\. ReleaseMode(bool releaseMode)** – Debug or Release mode  
 
