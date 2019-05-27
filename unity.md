@@ -175,16 +175,15 @@ Pollfish.PollfishInitFunction(apiKey, pollfishParams);
 In order to initialize Pollfish you need to create a PollfishParams object:
 
 ```
-  Pollfish.PollfishParams pollfishParams = new Pollfish.PollfishParams();
+Pollfish.PollfishParams pollfishParams = new Pollfish.PollfishParams();
   
-  pollfishParams.OfferwallMode(offerwallMode);
-  pollfishParams.IndicatorPadding(indPadding);
-  pollfishParams.ReleaseMode(releaseMode);
-  pollfishParams.RewardMode(rewardMode);
-  pollfishParams.IndicatorPosition((int)pollfishPosition);
-  pollfishParams.RequestUUID(requestUUID);
-  pollfishParams.UserAttributes(userAttributes);
-}
+pollfishParams.OfferwallMode(offerwallMode);
+pollfishParams.IndicatorPadding(indPadding);
+pollfishParams.ReleaseMode(releaseMode);
+pollfishParams.RewardMode(rewardMode);
+pollfishParams.IndicatorPosition((int)pollfishPosition);
+pollfishParams.RequestUUID(requestUUID);
+pollfishParams.UserAttributes(userAttributes);
 ```
 
 PollfishParams can be initialized with the following calls:
