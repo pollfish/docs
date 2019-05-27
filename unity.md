@@ -82,11 +82,6 @@ Pollfish Unity Plugin works with:
 
 Please set minimum version of your project accordingly.
 
-
-
-> **Note:** There is an [issue](https://issuetracker.unity3d.com/issues/regression-android-banner-ads-are-invisible-but-clickable) with Unity 5.6 which affected Pollfish Unity Plugin, resulting to Pollfish surveys not being rendered on top of Unity's scene. That issue was fixed with [5.6.1p4 patch](https://unity3d.com/ru/unity/qa/patch-releases). If you are using a version of Unity that is still affected by that bug you can use this [version](https://storage.googleapis.com/pollfish_production/sdk/Unity/Pollfish%20Unity%20Plugin%20v4.3.4.zip) of Pollfish Unity Plugin. If you want to learn more on what happened in that bug behind the scened you can read the following [article](https://android.jlelse.eu/unity-and-android-connecting-the-dots-6368b31e86c5).
-
-
 > **Note:** Pollfish does not work on Editor, so please do try only on mobile devices
 
 
