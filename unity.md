@@ -188,7 +188,9 @@ pollfishParams.UserAttributes(userAttributes);
 
 PollfishParams can be initialized with the following calls:
 
-**1\. IndicatorPosition(PollfishPosition pollfishPosition)** - Sets the Position where you wish to place Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) and from which side of the screen you would like Pollfish survey panel to slide in.
+**1\. IndicatorPosition(PollfishPosition pollfishPosition)** - Sets the Position where you wish to place Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
+
+Also this setting sets from which side of the screen you would like Pollfish survey panel to slide in.
 
 <span style="text-decoration: underline">There are six different options available: </span> 
 
