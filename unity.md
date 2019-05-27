@@ -164,7 +164,11 @@ You should use a MonoBehaviour object for your scene that will enable interactio
 
 In order to initialize Pollfish, you need an API Key as described in step 2
 
-**apiKey** (string)- Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
+**1\. apiKey** (string)- Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
+
+```
+Pollfish.PollfishInitFunction(apiKey, pollfishParams);
+```
 
 ### Pollfish PollfishParams object
 
