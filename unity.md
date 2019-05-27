@@ -1,4 +1,10 @@
-<div class="changelog" data-version="4.5.1">
+<div class="changelog" data-version="5.0.0">
+v5.0.0
+
+- Added support for offerwall
+- New Android minimum supported version is 16
+- Updated with Pollfish Android & iOS SDKs v5.0.x
+
 v4.5.1
 
 - Fixed crash issues relevant with with AndroidManifest and UnityPlayerActivity
@@ -72,7 +78,7 @@ Pollfish Unity Plugin works with:
 
 *   Unity 4.6.8 +
 *   iOS 9.0 +
-*   Android 4.2 (17) +
+*   Android 16 +
 
 Please set minimum version of your project accordingly.
 
@@ -107,7 +113,7 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 
 *   Open your Unity project and right click on your Assets folder in your Project area or select Assets from the menu and then choose **Import Package**, then **Custom Package** and finally select **PollfishUnityPlugin.unitypackage**
 
-    ![](/homeassets/images/documentation/unity/unity1.png)
+    ![](https://storage.googleapis.com/pollfish_production/doc_images/import_unity.png)
 *   If you want to exlude demo scene please uncheck **Assets/Plugins/Pollfish/demo** folder. Have in mind that in demo folder you will find **PollfishDemo.cs file** that demonstrates Pollfish Unity Plugin usage within a scene.
 *   Review the package files and then select Import. If you are targeting only Android platform for example you can uncheck the iOS folder and vice versa.
 
