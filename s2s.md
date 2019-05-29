@@ -164,7 +164,7 @@ Includes both **tx_id** and **timestamp**.
 
 The **signature** of the callback URLs is the result of appling the  [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) hash function to the **[[parameters]]** that are included in the URL using your account's secret_key.
 
-We only sign the values that are substituted using the parameters placeholders (**[[cpa]]**, **[[device_id]]**, **[[request_uuid]]**, **[[status]]** **[[timestamp]]**, **[[tx_id]]** and **[[term_reason]]**). We do not sign any other part of the URL including any other *URL parameters* that the publisher might specify. For example in the below URL only the values that are going to be substituded in **[[request_uuid]]** and **[[tx_id]]** are used as input and not the values of the `bundle_id` and `source` URL parameters.
+We only sign the values that are substituted using the parameters placeholders (**[[cpa]]**, **[[device_id]]**, **[[request_uuid]]**, **[[reward_name]]**, **[[reward_value]]**, **[[status]]**, **[[timestamp]]**, **[[tx_id]]** and **[[term_reason]]**). We do not sign any other part of the URL including any other *URL parameters* that the publisher might specify. For example in the below URL only the values that are going to be substituded in **[[request_uuid]]** and **[[tx_id]]** are used as input and not the values of the `bundle_id` and `source` URL parameters.
 
 ```
 https://www.example.com?request_uuid=[[request_uuid]]&tx_id=[[tx_id]]&signature=[[signature]]&bundle_id=com.domain.app&source=pollfish
@@ -201,7 +201,7 @@ To verify the signature in server-to-server postback calls follow the below proc
 2. URL decode the value you extracted in (1) using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding)
 3. Extract the values of the rest of the parameters URL.
 4. URL decode the values you extracted in (3) using Percent encoding.
-5. Sort the values from (4) alphabeticaly using the names of the template parameters. The names of the template parameters in sorted order are: `cpa`, `device_id`, `request_uuid`, `status`, `term_reason`, `timestamp`, `tx_id` and not the names of any [URL parameters](https://en.wikipedia.org/wiki/Query_string) your URL may contain.
+5. Sort the values from (4) alphabeticaly using the names of the template parameters. The names of the template parameters in sorted order are: `cpa`, `device_id`, `request_uuid`, `reward_name`, `reward_value`, `status`, `term_reason`, `timestamp`, `tx_id` and not the names of any [URL parameters](https://en.wikipedia.org/wiki/Query_string) your URL may contain.
 6. Produce a string by concatenating all non-empty parameter values as sorted in the previous step using the `:` character. The only parameter that when specified in the URL template can be empty is `request_uuid`. There is a special handling for `term_reason`: If the user is non-eligible then it has one of the values described in section 6 and with that value is included in the callback url and the signature calculation. If however the user is eligible the term is included but with an empty value and must participate in the signature calculation. An example of a callback url for an eligible user is `https://mybaseurl.com?device_id=my-device-id&term_reason=&cpa=30` which gives the string `my-device-id:30:` for signature calculation. The trailing `:` is because of the empty `term_reason`
 7. Sign the string produced in (6) using the [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) algorithm and your account's **secret_key** that can be retrieved from the [Account Information](https://www.pollfish.com/dashboard/dev/account) page.
 8. Encode the value produced in (7) using [Base64](https://en.wikipedia.org/wiki/Base64)
@@ -231,6 +231,8 @@ Please note that during developer mode the `debug=true` parameter is *not includ
   $cpa = rawurldecode($_GET["cpa"]);
   $device_id = rawurldecode($_GET["device_id"]);
   $request_uuid = rawurldecode($_GET["request_uuid"]);
+  $reward_name = rawurldecode($_GET["reward_name"]);
+  $reward_value = rawurldecode($_GET["reward_value"]);
   $status = rawurldecode($_GET["status"]);
   $timestamp = rawurldecode($_GET["timestamp"]);
   $tx_id = rawurldecode($_GET["tx_id"]);
@@ -240,7 +242,7 @@ Please note that during developer mode the `debug=true` parameter is *not includ
   if (!empty($request_uuid)) { // only added when non-empty
     $data = $data . ":" . $request_uuid;
   }
-  $data = $data . ":" . $status . ":" . $timestamp . ":" . $tx_id;
+  $data = $data . ":" . $reward_name" . ":" . ":" . $reward_value . ":" . $status . ":" . $timestamp . ":" . $tx_id;
 
   $computed_signature = base64_encode(hash_hmac("sha1" , $data, $secret_key, true));
   $is_valid = $url_signature == $computed_signature;
@@ -249,6 +251,8 @@ Please note that during developer mode the `debug=true` parameter is *not includ
 <p>cpa = <?php echo($cpa); ?></p>
 <p>device_id = <?php echo($device_id); ?></p>
 <p>request_uuid = <?php echo($request_uuid); ?></p>
+<p>reward_name = <?php echo($reward_name); ?></p>
+<p>$reward_value = <?php echo($reward_value); ?></p>
 <p>status = <?php echo($status); ?></p>
 <p>timestamp = <?php echo($timestamp); ?></p>
 <p>tx_id = <?php echo($tx_id); ?></p>
