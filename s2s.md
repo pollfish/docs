@@ -242,7 +242,7 @@ Please note that during developer mode the `debug=true` parameter is *not includ
   if (!empty($request_uuid)) { // only added when non-empty
     $data = $data . ":" . $request_uuid;
   }
-  $data = $data . ":" . $reward_name" . ":" . ":" . $reward_value . ":" . $status . ":" . $timestamp . ":" . $tx_id;
+  $data = $data . ":" . $reward_name . ":" . $reward_value . ":" . $status . ":" . $timestamp . ":" . $tx_id;
 
   $computed_signature = base64_encode(hash_hmac("sha1" , $data, $secret_key, true));
   $is_valid = $url_signature == $computed_signature;
