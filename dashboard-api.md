@@ -88,14 +88,14 @@ Use Basic Authentication over HTTPS
   "third_party_surveys_enabled": true,
   "data_collection_surveys_enabled": true,
   "url": "http://www.example.com/test-app",
-  "single_survey": {
-    "reward_name": "Diamonds",
-    "reward_value": 300,
+  "rewarded_survey": {
+    "currency_name": "Diamonds",
+    "variable_amount": 300,
     "fixed_amount": true
   },
   "offerwall": {
-    "reward_name": "Points",
-    "reward_value": 100
+    "currency_name": "Points",
+    "variable_amount": 100
   }
 }
 ```
@@ -121,23 +121,23 @@ information
 |7  | behavior | number | Just indicators: 0, Dynamic (Recommended): 1, Force slide regularly: 2, Force all the time: 3 | No
 |8  | data_collection_surveys_enabled | boolean | Whether the apps should receive data collection surveys | No
 |9  | third_party_surveys_enabled | boolean | Whether the app should receive third party surveys | No
-|10  | single_survey | object | Reward information in case of single survey | No
+|10  | rewarded_survey | object | Reward information in case of single survey | No
 |11  | offerwall | object | Reward information in case of offerwall | No
 
-### JSON object single_survey
+### JSON object rewarded_survey
 
 |   | Name | JSON Type  | Description                  
 |---|:-----|:-----------|:-----------------------------
-|1  | reward_name | string     | Name of the reward             
-|2  | reward_value | float | Value of reward per survey        
+|1  | currency_name | string     | Name of the reward             
+|2  | variable_amount | float | Value of reward per survey        
 |3  | fixed_amount | boolean | Whether the app uses a fixed amount per survey 
 
 ### JSON object offerwall
 
 |   | Name | JSON Type  | Description                  
 |---|:-----|:-----------|:-----------------------------
-|1  | reward_name | string     | Name of the reward             
-|2  | reward_value | float | Value of reward per survey       
+|1  | currency_name | string     | Name of the reward             
+|2  | variable_amount | float | Value of reward per survey       
 
 ### Server Response
 
@@ -174,14 +174,14 @@ platform:=0*
   "third_party_surveys_enabled": true,
   "data_collection_surveys_enabled": true,
   "url": "https://play.google.com/store/apps/details?id=com.pollfish.demo",
-  "single_survey": {
-    "reward_name": "Diamonds",
-    "reward_value": 300,
+  "rewarded_survey": {
+    "currency_name": "Diamonds",
+    "variable_amount": 300,
     "fixed_amount": true
   },
   "offerwall": {
-    "reward_name": "Points",
-    "reward_value": 100
+    "currency_name": "Points",
+    "variable_amount": 100
   }
 }
 ```
@@ -205,7 +205,7 @@ properties that you want to update. 
 |6  | behavior | number | Just indicators: 0, Dynamic (Recommended): 1, Force slide regularly: 2, Force all the time: 3 | No
 |7  | data_collection_surveys_enabled | boolean | Whether the apps should receive data collection surveys | No
 |8  | third_party_surveys_enabled | boolean | Whether the app should receive third party surveys | No                                            No
-|9  | single_survey | object | Reward information in case of single survey | No
+|9  | rewarded_survey | object | Reward information in case of single survey | No
 |10  | offerwall | object | Reward information in case of offerwall | No
 
 ### Server Response
@@ -240,14 +240,14 @@ in the relevant document
   "third_party_surveys_enabled": false,
   "data_collection_surveys_enabled": true,
   "url": "https://play.google.com/store/apps/details?id=com.pollfish.demo",
-  "single_survey": {
-    "reward_name": "Diamonds",
-    "reward_value": 300,
+  "rewarded_survey": {
+    "currency_name": "Diamonds",
+    "variable_amount": 300,
     "fixed_amount": true
   },
   "offerwall": {
-    "reward_name": "Points",
-    "reward_value": 100
+    "currency_name": "Points",
+    "variable_amount": 100
   }
 }
 ```
@@ -293,14 +293,14 @@ in the relevant document
     "third_party_surveys_enabled": true,
     "data_collection_surveys_enabled": true,
     "url": "http://www.example.com/test-app",
-    "single_survey": {
-      "reward_name": "Diamonds",
-      "reward_value": 300,
+    "rewarded_survey": {
+      "currency_name": "Diamonds",
+      "variable_amount": 300,
       "fixed_amount": true
     },
     "offerwall": {
-      "reward_name": "Points",
-      "reward_value": 100
+      "currency_name": "Points",
+      "variable_amount": 100
     }
   }
 ]
