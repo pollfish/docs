@@ -131,7 +131,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |64 | **always_return_content** | Boolean | Applies only to server register call and sets the type of the response if no survey is found. If it is true the response will be HTTP 200 with a readable HTML page. Otherwise it will be an HTTP 204 without any content | true / false | No | No
 |65 | **offerwall** | Boolean | Returns offerwall response. If it is true the response will always be HTTP 200 with a readable HTML page that will contain the offerwall or a screen showing that no surveys were found | true / false | No | No
 |66 | **reward_name** | String | Returns provided reward name on survey completion (success or otherwise), overriding the one specified in the publisher dashboard. | ie: Diamonds | No | No
-|66 | **reward_conversion** | String | Expects a Float number as a string. Returns provided reward value on survey completion (success or otherwise), overriding the one specified in the publisher dashboard. Conversion is expecting a number matching this function ( 1 USD = X Points) where X is a float number.  | ie: 1.1 | No | No
+|67 | **reward_conversion** | String | Expects a Float number as a string. Returns provided reward value on survey completion (success or otherwise) based on the conversion provided, overriding the one specified in the publisher dashboard. Conversion is expecting a number matching this function ( 1 USD = X Points) where X is a float number.  | ie: 1.1 | No | No
 
 **Demographics**
 <table>
