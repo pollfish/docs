@@ -1,7 +1,7 @@
 <div>
 <h2 class="static-page-title">SURVEY RESPONDENTS TERMS OF SERVICE AGREEMENT AND PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 05/21/2019</div>
+<div class="updatedOn">Last updated: 06/28/2019</div>
 
 <br />
 
