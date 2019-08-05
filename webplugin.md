@@ -225,7 +225,7 @@ Pollfish.showIndicator();
 Pollfish.showFullSurvey();
 ```
 
-_If you call Pollfish.showIndicator or Pollfish.showFullSurvey and there is no available survey, they will return false._
+_If you call Pollfish.showIndicator or Pollfish.showFullSurvey and there is no available survey, they will show a no surveys found screen._
 
 **Hide the indicator and the full survey**  
 
