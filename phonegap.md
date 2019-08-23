@@ -52,24 +52,29 @@ cordova plugin remove com.pollfish.cordova
 
 ### 4. Initialize Pollfish
 
+
 Init function takes the following parameters:
 
-1.	**debugMode**: - Choose Debug or Release Mode
-2.	**customMode**: - Init or custom init
+1.	**releaseMode**: - Choose Debug or Release Mode
+2.	**rewardMode**: - Init in reward mode (skip Pollfish indicator to show a custom prompt)
 3.	**api_key**: - Your API Key (from step 2)
 4.	**pos**: - The Position where you wish to place the Pollfish indicator. There are four different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
 5.	**padding**: - The padding (in dp) from top or bottom according to Position of the indicator specified before (0 is the default value – |*if used in MIDDLE position, padding is calculating from top).
+6.	**request_uuid**: - Sets a unique id to identify a user and be passed through server-to-server callbacks
+7.	**offerwallMode**: - Sets Pollfish to offerwall mode.
 
 For example:
 
 ```
-var debugMode = true;
-var customMode = false;
+var releaseMode = false;
+var rewardMode = false;
 var api_key = "YOUR_API_KEY";
-var pos=pollfishplugin.Position.TOP_LEFT;
+var pos = pollfishplugin.Position.TOP_LEFT;
 var padding = 50;
- 
-pollfishplugin.init (debugMode,customMode,api_key,pos,padding);
+var request_uuid = "my_id";
+var offerwallMode = true; 
+
+pollfishplugin.init(releaseMode,rewardMode,api_key,pos,padding,request_uuid, offerwallMode); 
 ```
 
 #### Debug Vs Release Mode
@@ -82,33 +87,33 @@ You can use Pollfish either in Debug or in Release mode.
 
 **Note: In Android debugMode parameter is ignored. Your app turns into debug mode once it is signed with a debug key. If you sign your app with a release key it automatically turns into Release mode.**
 
-**Note: Be careful to turn the debugMode parameter to false when you release your app in a relevant app store!!**
+**Note: Be careful to turn the releaseMode parameter to true when you release your app in a relevant app store!!**
 
 
 
-#### init Vs custom init
+#### Reward Mode 
 
-*	**init function** is the standard way of using Pollfish in your apps. Using init function enables controlling the behavior of Pollfish in an app from Pollfish panel.
-
-*	**custom init function** ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small red rectangle) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates. Both init and customInit functions have the same arguments.
+Reward mode false during initialization enables controlling the behavior of Pollfish in an app from Pollfish panel. Enabling reward mode ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small button) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates.
 
 #### 4.1 Other Init functions (optional)
 
-##### Passing custom parameter for server to server postback calls
+##### Passing user attributes during initialization
 
-If you need to pass a custom parameter (for example a UUID as registered in your system) through Pollfish init function within the SDK and receive it back with Server to Server, survey completed postback call you can use
+You can send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. 
+
+
+You can see a detailed list of the user attribues you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
 
 For example:
 
 ```
-var debugMode = true;
-var customMode = false;
-var api_key = "YOUR_API_KEY";
-var pos=pollfishplugin.Position.TOP_LEFT;
-var padding = 50;
-var requestUUID = "my_uuid";
+var userAttributes = {};
 
-pollfishplugin.initWithRequestUUID (debugMode,customMode,api_key,pos,padding,requestUUID);
+userAttributes['FacebookID'] = 'My Facebook';
+userAttributes['LinkedInID'] = 'My LinkedIn';
+
+pollfishplugin.initWithUserAttributes(releaseMode,rewardMode,api_key,pos,padding,request_uuid,offerwallMode,userAttributes); 
+ 
 ```
 
 ### 5. Update your Privacy Policy
@@ -224,7 +229,7 @@ surveyReceivedEvent: function(id) {
 
 try{
 
-  console.log("Pollfish Survey Received - CPA: " + id.survey_cpa + " IR: " + id.survey_ir + " LOI: " + id.survey_loi + " Survey Class: " + id.survey_class);
+	console.log("Pollfish Survey Received - CPA: " + id.survey_cpa + " IR: " + id.survey_ir + " LOI: " + id.survey_loi + " Survey Class: " + id.survey_class+ " Reward Name: " + id.reward_name + " Reward Value: " + id.reward_value);
 
  }catch(e){}
 }
@@ -245,7 +250,7 @@ surveyCompletedEvent: function(id) {
 
 try{
 
-  console.log("Pollfish Survey Completed - CPA: " + id.survey_cpa + " IR: " + id.survey_ir + " LOI: " + id.survey_loi + " Survey Class: " + id.survey_class);
+	console.log("Pollfish Survey Completed - CPA: " + id.survey_cpa + " IR: " + id.survey_ir + " LOI: " + id.survey_loi + " Survey Class: " + id.survey_class + " Reward Name: " + id.reward_name + " Reward Value: " + id.reward_value);
 
  }catch(e){}
 }
@@ -329,22 +334,6 @@ or
 
 ```
 pollfishplugin.hidePollfish();
-```
-
-### 11. Set user attributes (optional)
-
-You can set attributes that you receive from your app regarding a user in order to receive a better fill rate and higher priced surveys. 
-
-For example:
-
-```
-var userAttributes = {};
-
-userAttributes['FacebookID'] = 'My Facebook';
-userAttributes['LinkedInID'] = 'My LinkedIn';
-
-pollfishplugin.setAttributesMap(userAttributes);
-
 ```
 
 
