@@ -191,7 +191,7 @@ document.addEventListener("orientationchange", app.updateOrientation,false);
 
 ```
 updateOrientation: function () {
-    pollfishplugin.init (debugmode,customMode,api_key,pos,padding);
+ pollfishplugin.init(releaseMode,rewardMode,api_key,pos,padding,request_uuid, offerwallMode); 
 }
 ```
 
@@ -207,7 +207,7 @@ document.addEventListener("resume", app.onResume, false);
 
 ```
 onResume: function () {
-    pollfishplugin.init (debugmode,customMode,api_key,pos,padding);
+ pollfishplugin.init(releaseMode,rewardMode,api_key,pos,padding,request_uuid, offerwallMode); 
 }
 ```
 
