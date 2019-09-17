@@ -1,5 +1,8 @@
-<div class="changelog" data-version="5.0.0">
-	
+<div class="changelog" data-version="5.1.0">
+v.5.1.0
+
+- Removed deprecated UIWebView functions
+
 v.5.0.0
 
 - Created new expandable interface initWithAPIKey(...) with a configuration PollfishParams object
