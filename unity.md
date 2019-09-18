@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.0.0">
+<div class="changelog" data-version="5.1.0">
+v5.1.0
+
+- Update with iOS SDK v5.1.0
+
 v5.0.0
 
 - Added support for offerwall
