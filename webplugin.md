@@ -79,6 +79,27 @@ var pollfishConfig = {
 
     Sets reward conversion parameter to Pollfish. You can set your own conversion value for when your respondents complete a       survey. The conversion expects a string and it should contain the number of rewards the respondent will receive for every 
     dollar being payed. In example, when a survey has a CPA of 30 and a conversion of 50. Then the rewardValue property will       contain the value '15'.
+9.  <span class="params"> user (optional)</span>
+
+    Sets users' information (gender, age, etc.) if known. Setting these values will minimise the number of questions asked         from a respondent when answering a survey for the first time. You can check the table on [our API Documentation](https://www.pollfish.com/docs/api-documentation) under the section `JSON Parameters`.
+    
+    **Expected Parameters**: 
+    
+    | Name             | Value Type
+    |:------------------|:--------------
+    | **gender**        | Number
+    | **year_of_birth** | Number
+    | **marital_status**| Number
+    | **parental**      | Number
+    | **education**     | Number
+    | **employment**    | Number
+    | **career**        | Number
+    | **race**          | Number
+    | **income**        | Number
+
+    **Note**: You can add any number of the above demographics you know. We will ask the respondent the rest if anything is missing
+    
+    **Note 2**: In order to minimize fraudulent use of this property, it will be **ignored by default**. You will need to           contact our support team and request extra authorization to send your own demographics.
 
 Below you can see an example of the pollfishConfig object:  
 
@@ -89,6 +110,28 @@ var pollfishConfig = {
   debug: true,
   offerwall: false,
   uuid: "string_uuid"
+};
+```
+
+Example of a pollfishConfig object with demographics:
+```js
+var pollfishConfig = {
+  api_key: "api_key_goes_here",
+  indicator_position: "BOTTOM_RIGHT",
+  debug: true,
+  offerwall: false,
+  uuid: "string_uuid",
+  user: {
+    gender: 0, // Zero is only used as an example, it is not a valid value for this key. Please refer to our documentation.
+    year_of_birth: 0,
+    marital_status: 0,
+    parental: 0,
+    education: 0,
+    employment: 0,
+    career: 0,
+    race: 0,
+    income: 0,
+  },
 };
 ```
 
