@@ -47,23 +47,23 @@ var pollfishConfig = {
 
 #### pollfishConfig object takes the following parameters:
 
-1.  <span class="params">api_key (required)</span>  
+1.  <span class="params"><b>api_key </b>(required)</span>  
     Your API Key (from step 2)
-2.  <span class="params">indicator_position (optional)</span>  
+2.  <span class="params"><b>indicator_position</b> (optional)</span>  
     The Position where you wish to place the Pollfish indicator.  
     There are four different positions: {TOP_LEFT, BOTTOM_LEFT, TOP_RIGHT, BOTTOM_RIGHT}  
     Defaults to BOTTOM_RIGHT
-3.  <span class="params">uuid (optional)</span>  
+3.  <span class="params"><b>uuid</b> (optional)</span>  
     Uuid for callback to your server  
-4.  <span class="params">debug (optional)</span>  
+4.  <span class="params"><b>debug</b> (optional)</span>  
     Sets Pollfish in debug mode  
     Set true to enable debug mode (for development), set false to set Pollfish in release mode.  
     Defaults to false
-5.  <span class="params">offerwall (optional)</span>  
+5.  <span class="params"><b>offerwall</b> (optional)</span>  
     Sets Pollfish in offerwall approach mode  
     Set to true to enable offerwall mode
     Defaults to false
-6.  <span class="params">survey_format (optional)</span>  
+6.  <span class="params"><b>survey_format</b> (optional)</span>  
     Works only in debug mode  
     This parameter is used during development to check integration with different survey formats.
     Acceptable values are (defaults to 0):
@@ -72,14 +72,14 @@ var pollfishConfig = {
     - Playful: 1
     - Random: 2
     - 3rd-party: 3
-7.  <span class="params">rewardName (optional)</span>
+7.  <span class="params"><b>rewardName</b> (optional)</span>
 
     Sets reward name parameter to Pollfish. You can set your own coin/point/reward name for when your respondents complete a       survey
-8.  <span class="params">rewardConversion (optional)</span>
+8.  <span class="params"><b>rewardConversion</b> (optional)</span>
 
     Sets reward conversion parameter to Pollfish. You can set your own conversion value for when your respondents complete a       survey. The conversion expects a string and it should contain the number of rewards the respondent will receive for every 
     dollar being payed. In example, when a survey has a CPA of 30 and a conversion of 50. Then the rewardValue property will       contain the value '15'.
-9.  <span class="params"> user (optional)</span>
+9.  <span class="params"><b>user </b>(optional)</span>
 
     Sets users' information (gender, age, etc.) if known. Setting these values will minimise the number of questions asked         from a respondent when answering a survey for the first time. You can check the table on [our API Documentation](https://www.pollfish.com/docs/api-documentation) under the section `JSON Parameters`.
     
