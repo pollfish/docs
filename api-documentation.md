@@ -248,20 +248,20 @@ application.
 |  |                     | MANUFACTURING_COMPUTER_AND_ELECTRONICS   | 13
 |  |                     | MANUFACTURING_OTHER                      | 14
 |  |                     | MILITARY                                 | 15
-|  |                     | MINING                                   | 16
+|  |                     | ~~MINING~~ (removed)                     | ~~16~~
 |  |                     | PROCESSING                               | 17
 |  |                     | PUBLISHING                               | 18
 |  |                     | REAL_ESTATE_RENTAL_OR_LEASING            | 19
 |  |                     | RELIGIOUS                                | 20
 |  |                     | RETAIL                                   | 21
-|  |                     | RETIRED                                  | 22
+|  |                     | ~~RETIRED~~ (removed)                    | ~~22~~
 |  |                     | SCIENTIFIC_OR_TECHNICAL_SERVICES         | 23
 |  |                     | SOFTWARE                                 | 24
-|  |                     | STUDENT                                  | 25
+|  |                     | ~~STUDENT~~ (removed)                    | ~~25~~
 |  |                     | TELECOMMUNICATIONS                       | 26
 |  |                     | TRANSPORTATION_AND_WAREHOUSING           | 27
-|  |                     | UNEMPLOYED                               | 28
-|  |                     | UTILITIES                                | 29
+|  |                     | ~~UNEMPLOYED~~ (removed)                 | ~~28~~
+|  |                     | ~~UTILITIES~~ (removed)                  | ~~29~~
 |  |                     | WHOLESALE                                | 30
 |  |                     | OTHER                                    | 31
 
