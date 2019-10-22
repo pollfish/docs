@@ -121,16 +121,19 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |54 <span class="demographics">•</span>| **career** | Int | The industry that the user is employed in | Enumeration. See below for the list of possible values | No | No
 |55 <span class="demographics">•</span>| **race** | Int | The race of the user | Enumeration. See below for the list of possible values | No | No
 |56 <span class="demographics">•</span>| **income** | Int | The level of the income of the user | Enumeration. See below for the list of possible values | No | No
-|57 | **email** | String | The email of the user | A valid email address | No | No
-|58 | **google_id** | String | The Google id of the user | | No | No
-|59 | **linkedin_id** | String | The Linkedin id of the user | | No | No
-|60 | **twitter_id** | String | The Twitter id of the user | | No | No
-|61 | **facebook_id** | String | The Facebook id of the user | | No | No
-|62 | **survey_format** | String | The format of the survey to return (only available in debug mode, should be used for testing). | Enumeration. See below for the list of possible values | No | No
-|63 | **always_return_content** | Boolean | Applies only to server register call and sets the type of the response if no survey is found. If it is true the response will be HTTP 200 with a readable HTML page. Otherwise it will be an HTTP 204 without any content | true / false | No | No
-|64 | **offerwall** | Boolean | Returns offerwall response. If it is true the response will always be HTTP 200 with a readable HTML page that will contain the offerwall or a screen showing that no surveys were found | true / false | No | No
-|65 | **reward_name** | String | Returns provided reward name on survey completion (success or otherwise), overriding the one specified in the publisher dashboard. | ie: Diamonds | No | No
-|66 | **reward_conversion** | String | Expects a Float number as a string. Returns provided reward value on survey completion (success or otherwise) based on the conversion provided, overriding the one specified in the publisher dashboard. Conversion is expecting a number matching this function ( 1 USD = X Points) where X is a float number.  | ie: 1.1 | No | No
+|57 <span class="demographics">•</span>| **spoken_languages** | Array[Int] | The spoken languages of the user | Array of Enumeration. See below for the list of possible values | No | No
+|58 <span class="demographics">•</span>| **organization_role** | Int | The organization role of the user | Enumeration. See below for the list of possible values | No | No
+|59 <span class="demographics">•</span>| **number_of_employees** | Int | The number of employees in the organization of the user | Enumeration. See below for the list of possible values | No | No
+|60 | **email** | String | The email of the user | A valid email address | No | No
+|61 | **google_id** | String | The Google id of the user | | No | No
+|62 | **linkedin_id** | String | The Linkedin id of the user | | No | No
+|63 | **twitter_id** | String | The Twitter id of the user | | No | No
+|64 | **facebook_id** | String | The Facebook id of the user | | No | No
+|65 | **survey_format** | String | The format of the survey to return (only available in debug mode, should be used for testing). | Enumeration. See below for the list of possible values | No | No
+|66 | **always_return_content** | Boolean | Applies only to server register call and sets the type of the response if no survey is found. If it is true the response will be HTTP 200 with a readable HTML page. Otherwise it will be an HTTP 204 without any content | true / false | No | No
+|67 | **offerwall** | Boolean | Returns offerwall response. If it is true the response will always be HTTP 200 with a readable HTML page that will contain the offerwall or a screen showing that no surveys were found | true / false | No | No
+|68 | **reward_name** | String | Returns provided reward name on survey completion (success or otherwise), overriding the one specified in the publisher dashboard. | ie: Diamonds | No | No
+|69 | **reward_conversion** | String | Expects a Float number as a string. Returns provided reward value on survey completion (success or otherwise) based on the conversion provided, overriding the one specified in the publisher dashboard. Conversion is expecting a number matching this function ( 1 USD = X Points) where X is a float number.  | ie: 1.1 | No | No
 
 **Demographics**
 <table>
@@ -261,9 +264,19 @@ application.
 |  |                     | TELECOMMUNICATIONS                       | 26
 |  |                     | TRANSPORTATION_AND_WAREHOUSING           | 27
 |  |                     | ~~UNEMPLOYED~~ (removed)                 | ~~28~~
-|  |                     | ~~UTILITIES~~ (removed)                  | ~~29~~
+|  |                     | ENERGY_UTILITIES_OIL_AND_GAS             | 29
 |  |                     | WHOLESALE                                | 30
 |  |                     | OTHER                                    | 31
+|  |                     | ADVERTISING                              | 32
+|  |                     | AUTOMOTIVE                               | 33
+|  |                     | CONSULTING                               | 34
+|  |                     | FASHION_APPAREL                          | 35
+|  |                     | HUMAN_RESOURCES                          | 36
+|  |                     | MARKET_RESEARCH                          | 37
+|  |                     | MARKETING_SALES                          | 38
+|  |                     | SHIPPING_DISTRIBUTION                    | 39
+|  |                     | PERSONAL_SERVICES                        | 40
+|  |                     | SECURITY                                 | 41
 
 <br>
 
@@ -330,7 +343,7 @@ Example request
 
 Example request ( with user attributes ) 
 
-[https://wss.pollfish.com/v2/device/register/true?json={"api_key":"27278f6e-4197-492a-b8e9-e6478317e253","device_id":"112123-a12331fd","timestamp":"1417149043057","encryption":"NONE","version":"5","device_descr":"IPhone%205S","os":"1","os_ver":"1","scr_h":"500","scr_w":"400","scr_size":"4","con_type":"wifi","lat":"-32452123","lon":"-32452123","accuracy":"20","ip":"8.8.8.8","provider":"T-Mobile","provider_mcc":"202","provider_mnc":"05","manufacturer":"nokia","hardware_accelerated":"true","app_api_key":"provided_by_you","request_uuid":"provided_by_you","app_name":"Quiz","app_category":"Game","email":"user@example.com","year_of_birth":"1990","gender":"1","marital_status":"0","parental":"0","education":"2","race":"0","twitter_id":"916809126","debug":"true"}&dontencrypt=true](https://wss.pollfish.com/v2/device/register/true?json={"api_key":"27278f6e-4197-492a-b8e9-e6478317e253","device_id":"112123-a12331fd","timestamp":"1417149043057","encryption":"NONE","version":"5","device_descr":"IPhone%205S","os":"1","os_ver":"1","scr_h":"500","scr_w":"400","scr_size":"4","con_type":"wifi","lat":"-32452123","lon":"-32452123","accuracy":"20","ip":"8.8.8.8","provider":"T-Mobile","provider_mcc":"202","provider_mnc":"05","manufacturer":"nokia","hardware_accelerated":"true","app_api_key":"provided_by_you","request_uuid":"provided_by_you","app_name":"Quiz","app_category":"Game","email":"user@example.com","year_of_birth":"1990","gender":"1","marital_status":"0","parental":"0","education":"2","race":"0","twitter_id":"916809126","debug":"true"}&dontencrypt=true)
+[https://wss.pollfish.com/v2/device/register/true?json={"api_key":"27278f6e-4197-492a-b8e9-e6478317e253","device_id":"112123-a12331fd","timestamp":"1417149043057","encryption":"NONE","version":"5","device_descr":"IPhone%205S","os":"1","os_ver":"1","scr_h":"500","scr_w":"400","scr_size":"4","con_type":"wifi","lat":"-32452123","lon":"-32452123","accuracy":"20","ip":"8.8.8.8","provider":"T-Mobile","provider_mcc":"202","provider_mnc":"05","manufacturer":"nokia","hardware_accelerated":"true","app_api_key":"provided_by_you","request_uuid":"provided_by_you","app_name":"Quiz","app_category":"Game","email":"user@example.com","year_of_birth":"1990","gender":"1","marital_status":"0","parental":"0","education":"2","race":"0","spoken_languages":["0","23"],twitter_id":"916809126","debug":"true"}&dontencrypt=true](https://wss.pollfish.com/v2/device/register/true?json={"api_key":"27278f6e-4197-492a-b8e9-e6478317e253","device_id":"112123-a12331fd","timestamp":"1417149043057","encryption":"NONE","version":"5","device_descr":"IPhone%205S","os":"1","os_ver":"1","scr_h":"500","scr_w":"400","scr_size":"4","con_type":"wifi","lat":"-32452123","lon":"-32452123","accuracy":"20","ip":"8.8.8.8","provider":"T-Mobile","provider_mcc":"202","provider_mnc":"05","manufacturer":"nokia","hardware_accelerated":"true","app_api_key":"provided_by_you","request_uuid":"provided_by_you","app_name":"Quiz","app_category":"Game","email":"user@example.com","year_of_birth":"1990","gender":"1","marital_status":"0","parental":"0","education":"2","race":"0","twitter_id":"916809126","debug":"true"}&dontencrypt=true)
 
 Example offerwall request
 
