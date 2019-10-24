@@ -175,8 +175,7 @@ Below you can find the list of demographic info you can send over along with the
 
 | Key | Description | Value |
 | --- | --- | --- |
-| `spoken_languages` | LOWER_I | 0
-|  | ENGLISH | 0
+| `spoken_languages` | ENGLISH | 0
 |  | ARABIC | 1
 |  | BULGARIAN | 2
 |  | CHINESE | 3
