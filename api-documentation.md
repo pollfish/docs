@@ -305,6 +305,84 @@ application.
 |  |                     | HIGH_III            | 6
 |  |                     | PREFER_NOT_TO_SAY   | 7
 
+<br>
+
+|  | Key                  | Name                | Value
+|--|:---------------------|:--------------------|:----------
+|57| **spoken_languages** | ENGLISH             | 0
+|  |                      | ARABIC              | 1
+|  |                      | BULGARIAN           | 2
+|  |                      | CHINESE             | 3
+|  |                      | CZECH               | 4
+|  |                      | DANISH              | 5
+|  |                      | DUTCH               | 6
+|  |                      | FILIPINO            | 7
+|  |                      | THAI                | 8
+|  |                      | FINNISH             | 9
+|  |                      | FRENCH              | 10
+|  |                      | GERMAN              | 11
+|  |                      | GREEK               | 12
+|  |                      | HINDI               | 13
+|  |                      | INDONESIAN          | 14
+|  |                      | ITALIAN             | 15
+|  |                      | JAPANESE            | 16
+|  |                      | POLISH              | 17
+|  |                      | PORTUGUESE          | 18
+|  |                      | ROMANIAN            | 20
+|  |                      | RUSSIAN             | 21
+|  |                      | SERBIAN             | 22
+|  |                      | SPANISH             | 23
+|  |                      | SWEDISH             | 24
+|  |                      | TURKISH             | 25
+|  |                      | VIETNAMESE          | 26
+
+<br>
+
+|  | Key                   | Name                      | Value
+|--|:----------------------|:--------------------------|:----------
+|58| **organization_role** | OWNER_PARTNER             | 0
+|  |                       | PRESIDENT_CEO_CHAIRPERSON | 1
+|  |                       | C_LEVEL_EXECUTIVE         | 2
+|  |                       | MIDDLE_MANAGEMENT         | 3
+|  |                       | CHIEF_FINANCIAL_OFFICER   | 4
+|  |                       | CHIEF_TECHNICAL_OFFICER   | 5
+|  |                       | SENIOR_MANAGEMENT         | 6
+|  |                       | DIRECTOR                  | 7
+|  |                       | HR_MANAGER                | 8
+|  |                       | PRODUCT_MANAGER           | 9
+|  |                       | SUPPLY_MANAGER            | 10
+|  |                       | PROJECT_MANAGEMENT        | 11
+|  |                       | SALES_MANAGER             | 12
+|  |                       | BUSINESS_ADMINISTRATOR    | 13
+|  |                       | SUPERVISOR                | 14
+|  |                       | ADMINISTRATIVE_CLERICAL   | 15
+|  |                       | CRAFTSMAN                 | 16
+|  |                       | FOREMAN                   | 17
+|  |                       | TECHNICAL_STAFF           | 18
+|  |                       | FACULTY_STAFF             | 19
+|  |                       | SALES_STAFF               | 20
+|  |                       | BUYER_PURCHASING_AGENT    | 21
+|  |                       | OTHER_NON_MANAGEMENT      | 22
+|  |                       | ~~NOT_WORK~~ (removed)    | 23
+|  |                       | PREFER_NOT_TO_SAY         | 24
+
+<br>
+
+|  | Key                     | Name                                      | Value
+|--|:------------------------|:------------------------------------------|:---------- 
+|59| **number_of_employees** | ONE                                       | 0
+|  |                         | TWO_TO_FIVE                               | 1
+|  |                         | SIX_TO_TEN                                | 2
+|  |                         | ELEVEN_TO_TWENTY_FIVE                     | 3
+|  |                         | TWENTY_SIX_TO_FIFTY                       | 4
+|  |                         | FIFTY_ONE_TO_HUNDREND                     | 5
+|  |                         | HUNDREND_ONE_TO_TWO_HUNDRENDS_FIFTY       | 6
+|  |                         | TWO_HUNDRENDS_FIFTY_ONE_TO_FIVE_HUNDRENDS | 7
+|  |                         | FIVE_HUNDRENDS_ONE_TO_THOUSAND            | 8
+|  |                         | THOUSAND_ONE_TO_FIVE_THOUSANDS            | 9
+|  |                         | GREATER_THAN_FIVE_THOUSANDS               | 10
+|  |                         | DO_NOT_WORK                               | 11
+|  |                         | PREFER_NOT_TO_SAY                         | 12
 
 ### JSON Objects
 
