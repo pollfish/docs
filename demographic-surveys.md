@@ -7,11 +7,11 @@ Our aim is to provide advanced targeting solutions to our customers and to do th
  
 You can see an example of how we use this info on our targeting page of the DIY survey tool below:
 
-![alt text](https://pollfish.zendesk.com/hc/article_attachments/208100469/targeting.png)
+![alt text](https://user-images.githubusercontent.com/2513939/67956229-68cb6000-fbfc-11e9-9ff3-360e8172d344.png)
 
 and in our Results page:
 
-![alt text](https://pollfish.zendesk.com/hc/article_attachments/208100489/results.png)
+![alt text](https://user-images.githubusercontent.com/2513939/67956237-6b2dba00-fbfc-11e9-8658-2fb1bbbf1d82.png)
 
 <b>Publishers have the power</b>
 
@@ -21,7 +21,7 @@ In our efforts to include publishers in this process and be as transparent as po
 
 2) By providing an option to disable Standalone Demographic Surveys through the Settings section of an app on Pollfish Developer Dashboard, without the need to make any changes in code. (Changes are effective immediately.)
 
-![alt text](https://pollfish.zendesk.com/hc/en-us/article_attachments/208795189/receiving.png)
+![alt text](https://user-images.githubusercontent.com/2513939/67956242-6c5ee700-fbfc-11e9-87bf-2d408115829d.png)
 
 3) By submitting known user attributes like gender or age, during initialization in code, you may skip some or all of the questions in our Demographic surveys.  
 
