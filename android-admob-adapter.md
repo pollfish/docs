@@ -57,6 +57,6 @@ dependencies {
 
 You need to add Pollfish to the mediation configuration for your Rewarded Ad unit. 
 
-First you need to sign in to your [AdMob account](https://apps.admob.com/). On the left side menu, click on the Mediation Tab. If you already have an existing Mediation Group you will need to modify it (click on the name of the Mediation Group and press Edit), or if you do not have a Mediation Group yet, click to create one.
+First you need to sign in to your [AdMob account](https://apps.admob.com/). On the left side menu, click on the **Mediation** and then in **Mediation Groups** Tab. If you already have an existing Mediation Group you will need to modify it (click on the name of the Mediation Group and press **Edit**), or if you do not have a Mediation Group yet, click to create one with **CREATE MEDIATION GROUP**.
 
 
