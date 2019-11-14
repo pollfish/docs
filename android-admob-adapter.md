@@ -85,6 +85,14 @@ You can add a name to differentiate Pollfish Network from your other ad sources 
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/custom_event_aa.png"/>
 <br/>
 
+You can then configure Pollfish ad unit by adding the class name of Pollfish AdMob Mediation Adapter
 
 **Class Name:** com.pollfish.mediation.PollfishAdMobAdapter<br/>
+
+Optionally users can pass Pollfish API key to the adapter from here.
+
 **Parameter:** Your Pollfish API Key (optional)
+
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/network_pollfish.png"/>
+<br/>
