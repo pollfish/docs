@@ -70,6 +70,11 @@ In the Ad Format drop down menu select **Rewarded** and for platform **Android**
 
 and then you can name the Mediation Group if you do not have one already. Next, set the mediation group status to **Enabled**
 
-Afterwards you should click **ADD AD UNITS** and associate the Mediation group with ann existing AdMob Rewarded Ad unit.
+Afterwards you should click **ADD AD UNITS** and associate the Mediation group with an existing AdMob Rewarded Ad unit.
+
+You should now see the ad units card populated with the ad units you selected, as shown below:
+
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/ad_units.png"/>
+
 
 
