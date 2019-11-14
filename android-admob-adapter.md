@@ -86,5 +86,5 @@ You can add a name to differentiate Pollfish Network from your other ad sources 
 <br/>
 
 
-**Class Name:** com.pollfish.mediation.PollfishAdMobAdapter
+**Class Name:** com.pollfish.mediation.PollfishAdMobAdapter<br/>
 **Parameter:** Your Pollfish API Key (optional)
