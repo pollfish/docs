@@ -130,7 +130,7 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a
 
 ### 3. Integrate Google Play Services to your project
 
-Applications that integrate Pollfish SDK are required to include Google Play Services library. Further details regarding integration with the Google Play services library can be found [here](//developer.android.com/google/play-services/setup.html).
+Applications that integrate Pollfish SDK are required to include Google Play Services library. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
 
 If you are using gradle you can easily add in your dependencies:
 
