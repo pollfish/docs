@@ -4,9 +4,11 @@ This guide is for publishers looking to use AdMob mediation to load and show Rew
 
 Android SDK 4.1 (API level 16) or later
 
+</br></br>
+
 ### Step 1: Implement AdMob Rewarded Ads
 
-Implement (Rewarded Ads](https://developers.google.com/admob/android/rewarded-ads) as described in AdMob.
+Implement [Rewarded Ads](https://developers.google.com/admob/android/rewarded-ads) as described in AdMob.
 
 ### Step 2: Set Up Pollfish
 
