@@ -73,10 +73,10 @@ and then you can name the Mediation Group if you do not have one already. Next, 
 Afterwards you should click **ADD AD UNITS** and associate the Mediation group with an existing AdMob Rewarded Ad unit.
 
 You should now see the ad units card populated with the ad units you selected, as shown below:
-
+<br/>
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/ad_units.png"/>
-
+<br/>
 You then have to add Pollfish Network to the Mediationn Waterfall of the group. Click on **ADD CUSTOM EVENT**
-
+<br/>
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/add_source.png/>
-
+<br/>
