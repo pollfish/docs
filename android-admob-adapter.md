@@ -73,12 +73,13 @@ and then you can name the Mediation Group if you do not have one already. Next, 
 Afterwards you should click **ADD AD UNITS** and associate the Mediation group with an existing AdMob Rewarded Ad unit.
 
 You should now see the ad units card populated with the ad units you selected, as shown below:
+
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/ad_units.png"/>
 <br/>
 You then have to add Pollfish Network to the Mediationn Waterfall of the group. Click on **ADD CUSTOM EVENT**
 
-You can add a name to differentiate Pollfish Network from your other sources and an estimated eCPM. Pollfish surveys average eCPMs, range betweenn $70-$80.
+You can add a name to differentiate Pollfish Network from your other ad sources (for example Pollfish Netowrk) and an estimated eCPM. Pollfish surveys average eCPMs, range betweenn $70-$80.
 
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/custom_event_aa.png"/>
