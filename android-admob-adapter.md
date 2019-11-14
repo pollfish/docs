@@ -78,7 +78,6 @@ You should now see the ad units card populated with the ad units you selected, a
 <br/>
 You then have to add Pollfish Network to the Mediationn Waterfall of the group. Click on **ADD CUSTOM EVENT**
 
-<br/>
 You can add a name to differentiate Pollfish Network from your other sources and an estimated eCPM. Pollfish surveys average eCPMs, range betweenn $70-$80.
 
 <br/>
