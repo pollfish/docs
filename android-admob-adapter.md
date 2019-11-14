@@ -81,6 +81,9 @@ You then have to add Pollfish Network to the Mediationn Waterfall of the group. 
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/add_source.png"/>
 <br/>
 You can add a name to differentiate Pollfish Network from your other sources and an estimated eCPM. Pollfish surveys average eCPMs, range betweenn $70-$80.
+
+<br/>
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/custom_event.png"/>
+<br/>
 <br/>
