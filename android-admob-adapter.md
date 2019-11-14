@@ -85,3 +85,6 @@ You can add a name to differentiate Pollfish Network from your other ad sources 
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/custom_event_aa.png"/>
 <br/>
 
+
+**Class Name:** com.pollfish.mediation.PollfishAdMobAdapter
+**Parameter:** Your Pollfish API Key (optional)
