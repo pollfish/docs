@@ -1,6 +1,6 @@
 This guide is for publishers looking to use AdMob mediation to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.
 
-### Prerequisites
+##### Prerequisites
 
 Android SDK 4.1 (API level 16) or later
 
@@ -41,4 +41,17 @@ dependencies {
   implementation 'com.pollfish:pollfish:5.0.2:googleplayRelease@aar'
 }
 ```
+
+#### 2.4\. Integrate Google Play Services to your project
+
+Applications that integrate Pollfish SDK are required to include Google Play Services library in order to give access to the Advertising ID of a device to the SDK. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
+
+```java
+dependencies {
+    implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
+    implementation 'com.google.android.gms:play-services-base:16.0.1'
+}
+```
+
+
 
