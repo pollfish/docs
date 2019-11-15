@@ -14,11 +14,14 @@ If you have not implemented [Rewarded Ads](https://developers.google.com/admob/a
 
 > **Note:** If you have already implemented Rewarded Ads in your app you can skip this step
 
-In your app you can click on **Ad Units** and then **ADD AD UNITS** and select Rewarded Ads
+Create a new Ad Unit of **Rewarded Ads**
 
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/create_ad_unit.png"/>
 <br/>
+
+In your app you can click on **Ad Units** and then **ADD AD UNITS** and select Rewarded Ads
+
 
 In the configuration of the Ad Unit popup you can specify a name for your rewarded placement and then a name for the reward and a value. If you want to apply the same reward to the user no matter which ad network is served, check the **Apply to all networks in Mediation Groups** box.
 
