@@ -137,10 +137,10 @@ dependencies {
 
 ### Step 5: Use and control Pollfish AdMob Adapter in your Rewarded Ad Unit 
 
-Pollfish AdMob Adapter provides different options that you can use to control the behaviour od Pollfish SDK.
+Pollfish AdMob Adapter provides different options that you can use to control the behaviour of Pollfish SDK.
 
 <br/>
-Below you can see all the available options of ParamsBuilder instance. All these functions can be called in any order consequently prior calling build() to ParamsBuilder instance.
+Below you can see all the available options of **PollfishExtrasBundleBuilder** instance that is used to configure the behaviour of Pollfish SDK.
 <br/>
 
 No | Description
