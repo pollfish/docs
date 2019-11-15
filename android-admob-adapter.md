@@ -14,7 +14,7 @@ If you have not implemented [Rewarded Ads](https://developers.google.com/admob/a
 
 > **Note:** If you have already implemented Rewarded Ads in your app you can skip this step
 
-In your app you can click on **Ad Units** and then **ADD AD UNITS** and select **Rewarded** Ads
+First you need to sign in to your [AdMob account](https://apps.admob.com/). In your app you can click on **Ad Units** and then **ADD AD UNITS** and select **Rewarded** Ads
 
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/create_ad_unit.png"/>
@@ -34,7 +34,7 @@ If you don't apply this setting, the Pollfish adapter will provide a dynamic val
 
 You need to add Pollfish to the mediation configuration for your Rewarded Ad unit. 
 
-First you need to sign in to your [AdMob account](https://apps.admob.com/). On the left side menu, click on the **Mediation** and then in **Mediation Groups** Tab. If you already have an existing Mediation Group you will need to modify it (click on the name of the Mediation Group and press **Edit**).
+Log in to your AdMob account. On the left side menu, click on the **Mediation** and then in **Mediation Groups** Tab. If you already have an existing Mediation Group you will need to modify it (click on the name of the Mediation Group and press **Edit**).
 
 if you do not have a Mediation Group yet, click to create one with **CREATE MEDIATION GROUP**.
 
