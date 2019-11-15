@@ -6,9 +6,27 @@ Android SDK 4.1 (API level 16) or later
 
 </br></br>
 
-### Step 1: Implement AdMob Rewarded Ads
+### Step 1: Implement AdMob Rewarded Ads in your app 
 
-Implement [Rewarded Ads](https://developers.google.com/admob/android/rewarded-ads) as described in AdMob.
+If you have not implemented [Rewarded Ads](https://developers.google.com/admob/android/rewarded-ads) in your app yet, you can follow the documentation Implement as described by AdMob. 
+
+> **Note:** If you have already implemented Rewarded Ads in your app you can skip this step
+
+In your app you can click on **Ad Units** and then **ADD AD UNITS** and select Rewarded Ads
+
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/create_ad_unit.png"/>
+<br/>
+
+In the configuration of the Ad Unit popup you can specify a name for your rewarded placement and then a name for the reward and a value. If you want to apply the same reward to the user no matter which ad network is served, check the **Apply to all networks in Mediation Groups** box.
+
+<br/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/configure_ads.png"/>
+<br/>
+
+If you don't apply this setting, the Pollfish adapter will provide a dynamic value as you specified it on your Pollfish Dashboard, in the App Settings area, based on the actual price of each survey completed.
+
+
 
 ### Step 2: Set Up Pollfish
 
