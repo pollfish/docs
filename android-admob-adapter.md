@@ -132,7 +132,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.0.2:googleplayRelease@aar'
+  implementation 'com.pollfish.mediation:pollfish-admob:5.0.2.1'
 }
 ```
 
