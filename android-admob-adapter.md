@@ -77,7 +77,7 @@ Optionally users can pass Pollfish API key to the adapter from here. Pollfish SD
 
 ### Step 3: Set Up Pollfish
 
-#### 3.1\.. Obtain a Developer Account
+#### 3.1\. Obtain a Developer Account
 
 Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
 
