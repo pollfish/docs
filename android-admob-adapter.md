@@ -151,12 +151,10 @@ No | Description
 5.3 | **.setReleaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
 
 
-<br/>
 #### 5.1 .setAPIKey(String apiKey)
 
 Pollfish API Key as provided by Pollfish on  Pollfish Dashboard. If you did not specify the API Key in AdMob's UI as desribed in step 2. If you have already specified Pollfish API Key on AdMob's UI, this param will be ignored.
 
-<br/>
 #### 5.2 .setRequestUUID(String requestUUID)
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
@@ -165,12 +163,11 @@ In order to register for such callbacks you can set up your server URL on your a
 
 If you would like to read more on Pollfish s2s cllab
 
-<br/>
 #### 5.3 .setReleaseMode(boolean releaseMode)
 
 Sets Pollfish SDK to Developer or Release mode.
 
-   **Developer mode** is used to show to the developer how Pollfish surveys will be shown through an app (useful during development and testing).
+*   **Developer mode** is used to show to the developer how Pollfish surveys will be shown through an app (useful during development and testing).
 *   **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
 
 Pollfish AdMob Adapter runs Pollfish SDK in release mode by default. If you would like to test with Test survey, you should set release mode to fasle.
