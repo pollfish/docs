@@ -92,8 +92,39 @@ Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/pu
 
 Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
-#### 3.3\. Add Pollfish aar library to your project
+#### 3.3\.  Add Pollfish framework to your project
 
+Download Pollfish iOS SDK from the website and then in Xcode, select the target that you want to use and in the Build Phases tab expand the Link Binary With Libraries section. Press the + button, and press Add other… In the dialog box that appears, go to the Pollfish framework’s location and select it.  
+
+The project will appear at the top of the Link Binary With Libraries section and will also be added to your project files (left-hand pane).  
+
+**Note: The framework is a folder and you should add the whole folder into your project.**
+
+### 4\. Add the following frameworks (if you don’t already have them) in your project
+
+- AdSupport.framework  
+- CoreTelephony.framework
+- SystemConfiguration.framework 
+- WebKit.framework (added in Pollfish v4.4.0)
+
+**Note: If your deployment target is less than iOS 7.0, change the AdSupport.framework from Required to Optional.**
+
+<br/>
+
+### or skip steps 3\. and 4\. and go through CocoaPods
+
+Add a Podfile with Pollfish framework as a pod reference:
+
+```
+platform :ios, '9.0'
+pod 'Pollfish'
+```
+
+You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapods.org/pods/Pollfish)  
+
+Run **pod install** on the command line to install  Pollfish cocoapod.
+
+<br/>
 
 ### Step 4: Add Pollfish AdMob Adapter to your project
 
