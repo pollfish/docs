@@ -202,7 +202,7 @@ AdRequest request = new AdRequest.Builder()
                 .build();
 ```
 
-### Step 6: Publish 
+### Step 6: Publish your app on the store
 
 If you everything worked fine during the previous steps, you should turn Pollfish to release mode and publish your app.
 
