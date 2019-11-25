@@ -208,3 +208,5 @@ If you everything worked fine during the previous steps, you should turn Pollfis
 
 > **Note:** After you take your app live, you should request your account to get verified through Pollfish Dashboard in the App Settings area.
 
+> **Note:** There is an option to show **Standalone Demographic Questions** needed for Pollfish to target users with surveys even when no actually surveys are available. Those surveys do not deliver any revenue to the publisher (but they can increase fill rate) and therefore if you do not want to show such surveys in the Waterfall you should visit your **App Settings** are and disable that option.
+
