@@ -76,7 +76,7 @@ You can then configure Pollfish ad unit by adding the class name of Pollfish AdM
 
 **Class Name:** com.pollfish.mediation.PollfishAdMobAdapter<br/>
 
-Optionally users can pass Pollfish API key to the adapter from here. Pollfish SDK works by default in production mode. If you would like to test with test surveys we will explain below how to achieve that.
+Optionally users can pass Pollfish API key (check section below 3.2) to the adapter from here. Pollfish SDK works by default in production mode. If you would like to test with test surveys we will explain below how to achieve that.
 
 **Parameter:** Your Pollfish API Key (optional)
 
