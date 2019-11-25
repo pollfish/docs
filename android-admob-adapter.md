@@ -171,7 +171,7 @@ Sets a unique id to identify a user and be passed through server-to-server callb
 
 In order to register for such callbacks you can set up your server URL on your app's page on Pollfish Developer Dashboard and then pass your requestUUID through ParamsBuilder object during initialization. On each survey completion you will receive a callback to your server including the requestUUID param passed.
 
-If you would like to read more on Pollfish s2s cllab
+If you would like to read more on Pollfish s2s callbacks you can read the documentation [here](https://www.pollfish.com/docs/s2s)
 
 #### 5.3 .setReleaseMode(boolean releaseMode)
 
@@ -182,6 +182,8 @@ Sets Pollfish SDK to Developer or Release mode.
 
 Pollfish AdMob Adapter runs Pollfish SDK in release mode by default. If you would like to test with Test survey, you should set release mode to fasle.
 
+Below you can see an example on how you can initialize a request for PollfishAdMobAdapter:
+
 ```
 import com.pollfish.mediation.PollfishAdMobAdapter;
 import com.pollfish.mediation.PollfishExtrasBundleBuilder;
@@ -189,7 +191,7 @@ import com.pollfish.mediation.PollfishExtrasBundleBuilder;
 </br>
 ```
 Bundle pollfishBundle = new PollfishExtrasBundleBuilder()
-    .setAPIKey(""YOUR_POLLFISH_API_KEY")
+    .setAPIKey("YOUR_POLLFISH_API_KEY")
     .setReleaseMode(false)
     .setRequestUUID("MY_ID")
     .build();
@@ -203,3 +205,6 @@ AdRequest request = new AdRequest.Builder()
 ### Step 6: Publish 
 
 If you everything worked fine during the previous steps, you should turn Pollfish to release mode and publish your app.
+
+> **Note:** After you take your app live, you should request your account to get verified through Pollfish Dashboard in the App Settings area.
+
