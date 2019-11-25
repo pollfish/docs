@@ -71,7 +71,7 @@ You can add a name to differentiate Pollfish Network from your other ad sources 
 
 You can then configure Pollfish ad unit by adding the class name of Pollfish AdMob Mediation Adapter
 
-**Class Name:** com.pollfish.mediation.PollfishAdMobAdapter<br/>
+**Class Name:** GADMediationAdapterPollfish<br/>
 
 Optionally users can pass Pollfish API key to the adapter from here. Pollfish SDK works by default in production mode. If you would like to test with test surveys we will explain below how to achieve that.
 
