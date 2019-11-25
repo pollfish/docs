@@ -1,3 +1,12 @@
+<div class="changelog" data-version="5.0.2.1">
+v5.0.2
+	
+- Initial Release
+
+</div>
+
+</br>
+
 This guide is for publishers looking to use AdMob mediation to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.
 
 ##### Prerequisites
