@@ -78,7 +78,7 @@ Optionally users can pass Pollfish API key to the adapter from here. Pollfish SD
 **Parameter:** Your Pollfish API Key (optional)
 
 <br/>
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/network_pollfish.png"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/configure_ad_ios.png"/>
 <br/>
 
 
