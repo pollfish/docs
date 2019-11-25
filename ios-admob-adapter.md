@@ -170,7 +170,7 @@ Sets a unique id to identify a user and be passed through server-to-server callb
 
 In order to register for such callbacks you can set up your server URL on your app's page on Pollfish Developer Dashboard and then pass your requestUUID through ParamsBuilder object during initialization. On each survey completion you will receive a callback to your server including the requestUUID param passed.
 
-If you would like to read more on Pollfish s2s cllab
+If you would like to read more on Pollfish s2s callbacks you can read the documentation [here](https://www.pollfish.com/docs/s2s)
 
 #### 5.3 .releaseMode
 
