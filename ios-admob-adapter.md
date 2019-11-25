@@ -24,7 +24,7 @@ If you have not implemented [Rewarded Ads](https://developers.google.com/admob/i
 First you need to sign in to your [AdMob account](https://apps.admob.com/). In your app you can click on **Ad Units** and then **ADD AD UNITS** and select **Rewarded** Ads
 
 <br/>
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/create_ad_unit.png"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/ad_unit_ios.png"/>
 <br/>
 
 
