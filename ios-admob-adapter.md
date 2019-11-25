@@ -59,7 +59,7 @@ Afterwards you should click **ADD AD UNITS** and associate the Mediation group w
 You should now see the ad units card populated with the ad units you selected, as shown below:
 
 <br/>
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/ad_units.png"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/ad_units_ios.png"/>
 <br/>
 You then have to add Pollfish Network to the Mediationn Waterfall of the group. Click on **ADD CUSTOM EVENT**
 
