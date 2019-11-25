@@ -197,7 +197,6 @@ Bundle pollfishBundle = new PollfishExtrasBundleBuilder()
     .build();
 
 AdRequest request = new AdRequest.Builder()
-                .addTestDevice("xxxxx-xxxx-xxxxxxx")
                 .addNetworkExtrasBundle(PollfishAdMobAdapter.class, pollfishBundle)
                 .build();
 ```
