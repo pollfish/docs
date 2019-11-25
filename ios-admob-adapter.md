@@ -100,7 +100,7 @@ The project will appear at the top of the Link Binary With Libraries section and
 
 **Note: The framework is a folder and you should add the whole folder into your project.**
 
-### 4\. Add the following frameworks (if you don’t already have them) in your project
+#### 3.4\. Add the following frameworks (if you don’t already have them) in your project
 
 - AdSupport.framework  
 - CoreTelephony.framework
@@ -111,7 +111,7 @@ The project will appear at the top of the Link Binary With Libraries section and
 
 <br/>
 
-### or skip steps 3\. and 4\. and go through CocoaPods
+#### or skip steps 3.3 and 3.4 and go through CocoaPods
 
 Add a Podfile with Pollfish framework as a pod reference:
 
