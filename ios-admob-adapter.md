@@ -94,75 +94,46 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a
 
 #### 3.3\. Add Pollfish aar library to your project
 
-Download Pollfish Android SDK or reference it through jCenter().
-
-#### **Download Pollfish Android SDK**
-
-Import Pollfish **.AAR** file to your project libraries  
-
-If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate Pollfish aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
-
-**OR**
-
-#### **Retrieve Pollfish Android SDK through jCenter()**
-
-Retrieve Pollfish through **jCenter()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
-
-```
-dependencies {
-  implementation 'com.pollfish:pollfish:5.0.2:googleplayRelease@aar'
-}
-```
-
-#### 3.4\. Integrate Google Play Services to your project
-
-Applications that integrate Pollfish SDK are required to include Google Play Services library in order to give access to the Advertising ID of a device to the SDK. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
-
-```java
-dependencies {
-    implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
-    implementation 'com.google.android.gms:play-services-base:16.0.1'
-}
-```
 
 ### Step 4: Add Pollfish AdMob Adapter to your project
 
-Import Pollfish AdMob adater **.AAR** file to your project libraries  
-
-If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate Pollfish aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
+Download Pollfish iOS AdMob Adapter framework and then in Xcode, select the target that you want to use and in the Build Phases tab expand the Link Binary With Libraries section. Press the + button, and press Add other… In the dialog box that appears, go to the Pollfish framework’s location and select it.
 
 **OR**
 
-#### **Retrieve Pollfish AdMob Adapter through jCenter()**
+#### **Retrieve Pollfish AdMob Adapter through CocoaPods**
 
-Retrieve Pollfish through **jCenter()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
+Add a Podfile with Pollfish framework as a pod reference:
 
 ```
-dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:5.0.2.1'
-}
+pod 'PollfishAdMobAdapter'
 ```
+You can find latest Pollfish iOS SDK version on CocoaPods here
+
+Run pod install on the command line to install Pollfish cocoapod.
+
 
 ### Step 5: Use and control Pollfish AdMob Adapter in your Rewarded Ad Unit 
 
 Pollfish AdMob Adapter provides different options that you can use to control the behaviour of Pollfish SDK.
 
 <br/>
-Below you can see all the available options of **PollfishExtrasBundleBuilder** instance that is used to configure the behaviour of Pollfish SDK.
+Below you can see all the available options of **GADPollfishRewardedNetworkExtras** instance that is used to configure the behaviour of Pollfish SDK.
+
 <br/>
 
 No | Description
 ------------ | -------------
-5.1 | **.setAPIKey(String apiKey)**  <br/> Sets Pollfish SDK API key as provided on Pollfish
-5.2 | **.setRequestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
-5.3 | **.setReleaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
+5.1 | **.pollfishAPIKey**  <br/> Sets Pollfish SDK API key as provided by Pollfish
+5.2 | **.requestUUID**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+5.3 | **.releaseMode**  <br/> Sets Pollfish SDK to Developer or Release mode
 
 
-#### 5.1 .setAPIKey(String apiKey)
+#### 5.1 .pollfishAPIKey
 
-Pollfish API Key as provided by Pollfish on  Pollfish Dashboard. If you did not specify the API Key in AdMob's UI as desribed in step 2. If you have already specified Pollfish API Key on AdMob's UI, this param will be ignored.
+Pollfish API Key as provided by Pollfish on  [Pollfish Dashboard](https://www.pollfish.com/publisher/) after you sign up to the platform.  If you have already specified Pollfish API Key on AdMob's UI, this param will be ignored.
 
-#### 5.2 .setRequestUUID(String requestUUID)
+#### 5.2 .requestUUID
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
 
@@ -170,7 +141,7 @@ In order to register for such callbacks you can set up your server URL on your a
 
 If you would like to read more on Pollfish s2s cllab
 
-#### 5.3 .setReleaseMode(boolean releaseMode)
+#### 5.3 .releaseMode
 
 Sets Pollfish SDK to Developer or Release mode.
 
@@ -178,19 +149,28 @@ Sets Pollfish SDK to Developer or Release mode.
 *   **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
 
 Pollfish AdMob Adapter runs Pollfish SDK in release mode by default. If you would like to test with Test survey, you should set release mode to fasle.
-```
-Bundle pollfishBundle = new PollfishExtrasBundleBuilder()
-    .setAPIKey(""YOUR_POLLFISH_API_KEY")
-    .setReleaseMode(false)
-    .setRequestUUID("MY_ID")
-    .build();
 
-AdRequest request = new AdRequest.Builder()
-                .addTestDevice("xxxxx-xxxx-xxxxxxx")
-                .addNetworkExtrasBundle(PollfishAdMobAdapter.class, pollfishBundle)
-                .build();
+Below you can see an example on how you can use GADPollfishRewardedNetworkExtras to pass info to Pollfish AdMob Adapter:
+```
+#import <PollfishAdMobAdapter/GADPollfishRewardedNetworkExtras.h>
+```
+</br>
+```
+GADRequest *request = [GADRequest request];
+    
+GADPollfishRewardedNetworkExtras *pollfishNetworkExtras = [[GADPollfishRewardedNetworkExtras alloc] init];
+    
+pollfishNetworkExtras.pollfishAPIKey = @"POLLFISH_API_KEY";
+pollfishNetworkExtras.releaseMode = false;
+pollfishNetworkExtras.requestUUID = @"YOUR_USER_ID";
+    
+[request registerAdNetworkExtras:pollfishNetworkExtras];
 ```
 
-### Step 6: Publish 
+### Step 6: Publish your app on the store
 
 If you everything worked fine during the previous steps, you should turn Pollfish to release mode and publish your app.
+
+> **Note:** After you take your app live, you should request your account to get verified through Pollfish Dashboard in the App Settings area.
+
+> **Note:** There is an option to show **Standalone Demographic Questions** needed for Pollfish to target users with surveys even when no actually surveys are available. Those surveys do not deliver any revenue to the publisher (but they can increase fill rate) and therefore if you do not want to show such surveys in the Waterfall you should visit your **App Settings** are and disable that option.
