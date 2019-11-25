@@ -45,11 +45,11 @@ Log in to your AdMob account. On the left side menu, click on the **Mediation** 
 
 if you do not have a Mediation Group yet, click to create one with **CREATE MEDIATION GROUP**.
 
-In the Ad Format drop down menu select **Rewarded** and for platform **Android**
+In the Ad Format drop down menu select **Rewarded** and for platform **iOS**
 
 
 <br/>
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/new_mediation_group.png"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/created_ios.png"/>
 <br/>
 
 and then you can name the Mediation Group if you do not have one already. Next, set the mediation group status to **Enabled**
