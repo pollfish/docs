@@ -37,7 +37,7 @@ In the configuration of the Ad Unit popup you can specify a name for your reward
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/configure_ads.png"/>
 <br/>
 
-If you don't apply this setting, the Pollfish adapter will provide a dynamic value as you specified it on your Pollfish Dashboard, in the App Settings area, based on the actual price of each survey completed.
+If you don't apply this setting, the Pollfish adapter will provide a dynamic value as you specified it on your Pollfish Dashboard, in the **App Settings** area, based on the actual price of each survey completed.
 
 
 ### Step 2: Configure Mediation Settings for your AdMob Rewarded Ad unit
