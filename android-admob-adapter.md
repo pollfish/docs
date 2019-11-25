@@ -156,14 +156,14 @@ Below you can see all the available options of **PollfishExtrasBundleBuilder** i
 
 No | Description
 ------------ | -------------
-5.1 | **.setAPIKey(String apiKey)**  <br/> Sets Pollfish SDK API key as provided on Pollfish
+5.1 | **.setAPIKey(String apiKey)**  <br/> Sets Pollfish SDK API key as provided by Pollfish
 5.2 | **.setRequestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
 5.3 | **.setReleaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
 
 
 #### 5.1 .setAPIKey(String apiKey)
 
-Pollfish API Key as provided by Pollfish on  Pollfish Dashboard. If you did not specify the API Key in AdMob's UI as desribed in step 2. If you have already specified Pollfish API Key on AdMob's UI, this param will be ignored.
+Pollfish API Key as provided by Pollfish on Pollfish Dashboard. This value will be used only if you did not specify the API Key in AdMob's UI as desribed in step 2. If you have already specified Pollfish API Key on AdMob's UI, this param will be ignored.
 
 #### 5.2 .setRequestUUID(String requestUUID)
 
@@ -181,6 +181,12 @@ Sets Pollfish SDK to Developer or Release mode.
 *   **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
 
 Pollfish AdMob Adapter runs Pollfish SDK in release mode by default. If you would like to test with Test survey, you should set release mode to fasle.
+
+```
+import com.pollfish.mediation.PollfishAdMobAdapter;
+import com.pollfish.mediation.PollfishExtrasBundleBuilder;
+```
+</br>
 ```
 Bundle pollfishBundle = new PollfishExtrasBundleBuilder()
     .setAPIKey(""YOUR_POLLFISH_API_KEY")
