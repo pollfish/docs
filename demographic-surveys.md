@@ -30,15 +30,11 @@ In our efforts to include publishers in this process and be as transparent as po
 
 If you know upfront some user attributes like gender, age, education and others you can pass them during initialization.
 
-Below you can find the list of demographic info you can send over along with the relevant keys and mappings:
+Below you can find the list of demographic info you can send over along with the relevant keys and mappings.
 
-### Keys
-
-![alt text](https://storage.googleapis.com/pollfish-images/demographic.png)
+### Keys && Mappings
 
  **Note:** Both key and values should be eventually converted to strings prior sending over through the relevant functions within the library
-
-### Mappings
 
 | Key | Description | Value |
 | --- | --- | --- |
