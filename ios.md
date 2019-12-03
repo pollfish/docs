@@ -1,4 +1,9 @@
-<div class="changelog" data-version="5.1.0">
+<div class="changelog" data-version="5.2.0">
+v.5.2.0
+
+- Fixed bugs for issues with panel not visible at all times and crashes relevant with UI thread 
+- Added support for new demographics (spoken languages, organization role, organization number of employees)
+
 v.5.1.0
 
 - Removed deprecated UIWebView functions
