@@ -1,7 +1,7 @@
 <div class="changelog" data-version="5.2.0">
 v.5.2.0
 
-- Fixed bugs for issues with panel not visible at all times and crashes relevant with UI thread 
+- Fixed issues around panel visibility and concurrency
 - Added support for new demographics (spoken languages, organization role, organization number of employees)
 
 v.5.1.0
