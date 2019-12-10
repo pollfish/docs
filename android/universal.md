@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.0.2">
+<div class="changelog" data-version="5.1.0">
+v5.1.0
+	
+- Fixed conflicts with other ad SDKs
+
 v5.0.2
 	
 - Removed installed apps functionality
@@ -585,22 +589,18 @@ UserProperties userProperties = new UserProperties()
                       .setCareer(Career.TELECOMMUNICATIONS)
                       .setRace(Race.WHITE)
                       .setIncome(Income.MIDDLE_I)
-		       /*other user attributes*/
-                      .setEmail("user_email@test.com")
-                      .setFacebookId("USER_FB")
-                      .setGoogleId("USER_GOOGLE")
-                      .setTwitterId("USER_TWITTER")
-                      .setLinkedInId("USER_LINKEDIN")
-                      .setPhone("USER_PHONE")
-                      .setName("USER_NAME")
-                      .setSurname("USER_SURNAME")
+		      .setNumberOfEmployees(NumberOfEmployees.GREATER_THAN_FIVE_THOUSANDS)
+                      .setSpokenLanguages(SpokenLanguages.FRENCH)
+                      .setOrganizationRole(OrganizationRole.C_LEVEL_EXECUTIVE)
                       .setCustomAttributes("MY_PARAM", "MY_VALUE");
 			    
 ParamsBuilder paramsBuilder = new ParamsBuilder("YOUR_API_KEY")
-	.userProperties(userProperties);
+	.userProperties(userProperties)
 	.build();
 ```
 <br/>
+A detailed list of all the required demographics can be found at the following [link](https://www.pollfish.com/docs/demographic-surveys)
+
 #### **9.15 .surveyFormat(SurveyFormat surveyFormat)**
 
 Explicitly requests a specific survey format.
