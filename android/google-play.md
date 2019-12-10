@@ -645,7 +645,6 @@ There are four different options available:
 - SurveyFormat.THIRD_PARTY
 - SurveyFormat.RANDOM
 
-
 Here is an example of how a user can explicitly request a specific survey format during initialization.
 
 Just import:
