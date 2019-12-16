@@ -139,7 +139,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 <table>
   <tr>
     <td><span class="demographics">•</span></td>
-    <td>Parameters from #48 to #56 are used in demographic surveys. If you already know this information you can provide them during register call and minimize or avoid demographic surveys.</td>
+    <td>Parameters from #48 to #59 are used in demographic surveys. If you already know this information you can provide them during register call and minimize or avoid demographic surveys.</td>
   </tr>
 </table>
 
