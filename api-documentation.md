@@ -666,7 +666,7 @@ window.onmessage = function(e){
 }
 ```
 You can check out our sample project on how to implement an API
-integration here : <https://github.com/pollfish/api-offerwall-pollfish>
+integration here : <https://github.com/pollfish/api-offerwall-example>
 
 
 <style>
