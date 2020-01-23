@@ -79,7 +79,7 @@ Users can pass a **JSON string** to provide the necessary params for Pollfish SD
 No | Key | Type
 ------------ | -------------| -------------
 2.1 | **api_key**  <br/> Sets Pollfish SDK API key as provided by Pollfish | String
-2.2 | **release_mode**  <br/> Sets Pollfish SDK to Developer or Release mode | Boolean
+2.2 | **release_mode**  <br/> Sets Pollfish SDK to Developer or Release mode | Bool
 2.3 | **request_uuid**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks | String
 
 Example:
