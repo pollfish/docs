@@ -1,5 +1,5 @@
-<div class="changelog" data-version="5.1.0.1">
-v.5.1.0.1
+<div class="changelog" data-version="5.1.0.2">
+v.5.1.0.2
 
 - Initial release
 
@@ -72,13 +72,26 @@ You can add a name to differentiate Pollfish Network from your other ad sources 
 You can then configure Pollfish ad unit by adding the class name of Pollfish AdMob Mediation Adapter
 
 **Class Name:** GADMediationAdapterPollfish<br/>
+**Parameter:** JSON with Pollfish SDK configuration prams (optional)
 
-Optionally users can pass Pollfish API key to the adapter from here. Pollfish SDK works by default in production mode. If you would like to test with test surveys we will explain below how to achieve that.
+Users can pass a **JSON string** to provide the necessary params for Pollfish SDK to work (similarly they can pass those params as described in Step 5. 
 
-**Parameter:** Your Pollfish API Key (optional)
+No | Description
+------------ | -------------
+5.1 | **.api_key**  <br/> Sets Pollfish SDK API key as provided by Pollfish
+5.2 | **.release_mode**  <br/> Sets Pollfish SDK to Developer or Release mode 
+5.3 | **.request_uuid**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+
+Example:
+
+```
+{"api_key":"Pollfish API Key", "release_mode":true, "request_uuid":"My user id"}
+```
+
+> **Note:** Pollfish SDK works by default in production mode. If you would like to test with test surveys you should use release_mode false or explicitly request that in code as described in Step 5.
 
 <br/>
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/configure_ad_ios.png"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/pollfish_ios_mediation.png"/>
 <br/>
 
 
