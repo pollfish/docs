@@ -132,7 +132,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.0.2:googleplayRelease@aar'
+  implementation 'com.pollfish:pollfish:5.1.0:googleplayRelease@aar'
 }
 ```
 
@@ -161,7 +161,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:5.0.2.1'
+  implementation 'com.pollfish.mediation:pollfish-admob:5.1.0.1'
 }
 ```
 
@@ -219,6 +219,8 @@ AdRequest request = new AdRequest.Builder()
                 .addNetworkExtrasBundle(PollfishAdMobAdapter.class, pollfishBundle)
                 .build();
 ```
+
+> **Note:** You can pass those params either through PollfishExtrasBundleBuilder or through AdMob's UI as described in Step 2
 
 ### Step 6: Publish your app on the store
 
