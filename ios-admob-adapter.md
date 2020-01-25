@@ -1,4 +1,12 @@
-<div class="changelog" data-version="5.1.0.2">
+<div class="changelog" data-version="5.2.2.1">
+v.5.2.2.1
+
+- Updated with Pollfish iOS SDK 5.2.2
+
+v.5.2.1.1
+
+- Updated with Pollfish iOS SDK 5.2.1
+
 v.5.1.0.2
 
 - Initial release
