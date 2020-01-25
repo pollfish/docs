@@ -2,7 +2,7 @@
 
 v5.1.0.1.
 	
-- Update to Pollfish SDK v5.1.0.1
+- Updated to Pollfish SDK v5.1.0.1
 - Added check to dismiss multiple initializations when Pollfish panel is open
 - Added JSON support for parameter retrieved from AdMob's UI
 
