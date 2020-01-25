@@ -100,7 +100,7 @@ Example:
 > **Note:** Pollfish SDK works by default in production mode. If you would like to test with test surveys you should use release_mode false or explicitly request that in code as described in Step 5.
 
 <br/>
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/network_pollfish.png"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/sdk/iOS/add_android_class.png"/>
 <br/>
 
 
