@@ -1,4 +1,12 @@
-<div class="changelog" data-version="5.2.0">
+<div class="changelog" data-version="5.2.2">
+v.5.2.2
+
+- Added backwards compatibility support for XCode 10.x
+
+v.5.2.1
+
+- Added isPollfishPanelOpen public interface
+
 v.5.2.0
 
 - Fixed issues around panel visibility and concurrency
