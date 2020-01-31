@@ -1,4 +1,9 @@
-<div class="changelog" data-version="5.2.2.1">
+<div class="changelog" data-version="5.2.3.1">
+v.5.2.3.1
+
+- Updated with Pollfish iOS SDK 5.2.3
+- Updated User Rejection listener behaviour
+
 v.5.2.2.1
 
 - Updated with Pollfish iOS SDK 5.2.2
