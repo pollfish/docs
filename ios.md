@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.2.2">
+<div class="changelog" data-version="5.2.3">
+v.5.2.3
+
+- Ensure the Pollfish overlay view is always on top
+
 v.5.2.2
 
 - Added backwards compatibility support for XCode 10.x
