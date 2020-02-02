@@ -1,4 +1,12 @@
-<div class="changelog" data-version="5.2.3">
+<div class="changelog" data-version="5.2.5">
+v.5.2.5
+
+- Added functionality if overlay views are not attached to top view controller, re-attach
+
+v.5.2.4
+
+- Fixed overlay visibilty in modular views in iOS<13
+
 v.5.2.3
 
 - Ensure the Pollfish overlay view is always on top
