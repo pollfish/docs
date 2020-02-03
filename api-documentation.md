@@ -537,7 +537,7 @@ integration here : <https://github.com/pollfish/api-offerwall-example>
 
 ## 6. Request your account to get verified
 
-After you take live the API in release mode (set "debug":false or remove debug param from the URL), you should request your account to get verified from your Pollfish Developer Dashboard.
+After you take live the API in release mode (set **"debug":false** or remove debug param from the URL), you should request your account to get verified from your Pollfish Developer Dashboard.
 
 <br/>
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/verify_account.png"/>
