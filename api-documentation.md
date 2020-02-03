@@ -199,6 +199,8 @@ not null. Do not send system apps.
 |2 | **fi**          | Long                | First installed date        | false
 |3 | **lm**          | Long                | Last modified date          | false
 
+</br>
+
 
 |  | Key                 | Name                | Value
 |--|:--------------------|:--------------------|:----------
