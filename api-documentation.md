@@ -462,7 +462,7 @@ integration here : <https://github.com/pollfish/api-pollfish>
     }
 </style>
 
-## 5. Events (Optional) - Offerwall Approach
+## 5. Events (Optional) - Offerwall
 
 When the html file loads on the user side, there are
 several javascript events that can be fired through the lifetime of a
