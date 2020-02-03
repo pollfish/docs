@@ -181,11 +181,11 @@ This way you can retrieve a longer list of surveys than the html version (limite
 
 When the necessary demographics are not know for a specific device id (a user) then the the response will contain one "Demographic Survey" and the flag **"hasDemographics"** will be set to false. This Demographic survey (survey_class "Pollfish/Demographics"), is part of the onboarding process of the use and it does not deliver any revenue to the user when it gets completed (CPA =0). When a Demograaphic survey is presented, the users has to answer all the demographic questions in order to unlock the list of surveys from clients. Until all required demographic questions are answered the user will not be able to get any paid surveys.
 
-There is one special case , where user has answered age, gender and language demographics where the response will contain mediation surveys (that require only those demographics) and a demographic survey to fill the remaining questions.
+There is one special case, where user has answered age, gender and language demographics and then abandoned the demographic survey. In that case, in a future request the response will contain Mediation surveys (that require only those basic demographics) and a demographic survey to fill the remaining questions (to unlock Pollfish surveys).
 
 If the **"content_type"** parameter is set to **"html"** or is ommited then the request will be served like an ordinary offerwall request, returning an html page  with the surveys matched for each device_id (user).
 
-### Example requests/responses:
+### Example requests/responses with content_type param:
 
 #### a. JSON offerwall request with unknown demographics:
 
