@@ -174,18 +174,18 @@ Example generation of hash using the PHP programming language:
 $reward_conversion_hash = base64_encode(hash_hmac("sha1" , $reward_conversion, $secret_key, true));
 ```
 
-### Notes on `content_type`
+### 71 - Notes on `content_type`
 
-In order to get a list of surveys for the json offerwall integration you are required to set **"offerwall"** parameter to **true** and **"content_type"** parameter to **"json"**.
+In order to get a list of surveys for the json offerwall integration you are required to set **"offerwall"** parameter to **"true"** and **"content_type"** parameter to **"json"**.
 This way you can retrieve a longer list of surveys than the html version (limited to 60), along with an HTTP responce code of 200. If no matching surveys are found then the response body will be empty with an HTTP response code of 204.
 
-When the necessary demographics are not know for a specific device id (a user) then the the response will contain one "Demographic Survey" and the flag **"hasDemographics"** will be set to false. This Demographic survey (survey_class "Pollfish/Demographics"), is part of the onboarding process of the use and it does not deliver any revenue to the user when it gets completed (CPA =0). When a Demograaphic survey is presented, the users has to answer all the demographic questions in order to unlock the list of surveys from clients. Until all required demographic questions are answered the user will not be able to get any paid surveys.
+When the necessary demographics are not know for a specific device id (a user) then the the response will contain one "Demographic Survey" and the flag **"hasDemographics"** will be set to false. This Demographic survey (survey_class "Pollfish/Demographics"), is part of the onboarding process of the user and it does not deliver any revenue when it gets completed (CPA =0). When a Demograaphic survey is presented, the users has to answer all the demographic questions in order to unlock the list of surveys from clients. Until all required demographic questions are answered the user will not be able to get any paid surveys.
 
 There is one special case, where user has answered age, gender and language demographics and then abandoned the demographic survey. In that case, in a future request the response will contain Mediation surveys (that require only those basic demographics) and a demographic survey to fill the remaining questions (to unlock Pollfish surveys).
 
 If the **"content_type"** parameter is set to **"html"** or is ommited then the request will be served like an ordinary offerwall request, returning an html page  with the surveys matched for each device_id (user).
 
-### Example requests/responses with content_type param:
+### 71 - Example requests/responses with content_type param:
 
 #### a. JSON offerwall request with unknown demographics:
 
@@ -195,7 +195,7 @@ reponse: HTTP 200
 
 with body:
 
-```javascript
+```js
 {
 surveys: [
     {
@@ -219,7 +219,7 @@ hasDemographics: false
 <https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={%22offerwall%22:%22true%22,%22api_key%22:%222ad6e857-2995-4668-ab95-39e068faa558%22,%22device_id%22:%22AA%22,%22timestamp%22:1551350478,%22debug%22:false,%22ip%22:%2272.229.28.185%22,%22encryption%22:%22NONE%22,%22version%22:7,%22os%22:3,%22locale%22:%22en%22,%22always_return_content%22:false,%22content_type%22:%22json%22}>
 
 
-```javascript
+```js
 {
 surveys: [
     {
