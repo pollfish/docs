@@ -254,7 +254,7 @@ hasDemographics: true
 }
 ```
 
-### Notes dor Demographics (48-59)
+### Notes for Demographics (48-59)
 
 <table>
   <tr>
