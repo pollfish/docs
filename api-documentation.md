@@ -268,7 +268,7 @@ The appropriate enumeration values for Demographics can be found [here](https://
 
 ## Example Requests
 
-#### Example Rewarded Survey request
+#### Example Single Survey request
 
 [https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"debug\":\"true\"}&dontencrypt=true](https://wss.pollfish.com/v2/device/register/true?json={\"api\_key\":\"27278f6e-4197-492a-b8e9-e6478317e253\",\"device\_id\":\"112123-a12331fd\",\"timestamp\":\"1417149043057\",\"encryption\":\"NONE\",\"version\":\"5\",\"device\_descr\":\"IPhone%205S\",\"os\":\"1\",\"os\_ver\":\"1\",\"scr\_h\":\"500\",\"scr\_w\":\"400\",\"scr\_size\":\"4\",\"con\_type\":\"wifi\",\"lat\":\"-32452123\",\"lon\":\"-32452123\",\"accuracy\":\"20\",\"ip\":\"8.8.8.8\",\"provider\":\"T-Mobile\",\"provider\_mcc\":\"202\",\"provider\_mnc\":\"05\",\"manufacturer\":\"nokia\",\"hardware\_accelerated\":\"true\",\"app\_api\_key\":\"provided\_by\_you\",\"request\_uuid\":\"provided\_by\_you\",\"app\_name\":\"Quiz\",\"app\_category\":\"Game\",\"debug\":\"true\"}&dontencrypt=true)
 
@@ -391,7 +391,7 @@ that param to the callback structure as explained in the link above.
   </tr>
 </table>
 
-## 5. Events (Optional) - Single Survey At A Time Approach
+## 5. Events (Optional) - Single Survey
 
 When the html file loads on the user side, there are
 several javascript events that can be fired through the lifetime of a
