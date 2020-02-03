@@ -717,9 +717,9 @@ and a demographic survey to fill the remaining questions.
     If the "content_type" parameter is set to "html" or is ommited then the request will be served like an ordinary offerwall request, returning an html page 
 with the surveys matched for each "device_id".
 
-Example requests:
+__Example requests__:
 a. json offerwall request with unknown device_id
-https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={"offerwall":"true","api_key":"2ad6e857-2995-4668-ab95-39e068faa558","device_id":"UNKNOWN_DEVICE_ID","timestamp":1551350478,"debug":false,"ip":"72.229.28.185","encryption":"NONE","version":7,"os":3,"locale":"en","always_return_content":false,"content_type":"json"}
+<https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={"offerwall":"true","api_key":"2ad6e857-2995-4668-ab95-39e068faa558","device_id":"UNKNOWN_DEVICE_ID","timestamp":1551350478,"debug":false,"ip":"72.229.28.185","encryption":"NONE","version":7,"os":3,"locale":"en","always_return_content":false,"content_type":"json"}>
 
 reponse: HTTP 200
 with body
@@ -744,7 +744,7 @@ hasDemographics: false
 ```
 
 b. Json offerwall request with known device_id
-https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={%22offerwall%22:%22true%22,%22api_key%22:%222ad6e857-2995-4668-ab95-39e068faa558%22,%22device_id%22:%22AA%22,%22timestamp%22:1551350478,%22debug%22:false,%22ip%22:%2272.229.28.185%22,%22encryption%22:%22NONE%22,%22version%22:7,%22os%22:3,%22locale%22:%22en%22,%22always_return_content%22:false,%22content_type%22:%22json%22}
+<https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={%22offerwall%22:%22true%22,%22api_key%22:%222ad6e857-2995-4668-ab95-39e068faa558%22,%22device_id%22:%22AA%22,%22timestamp%22:1551350478,%22debug%22:false,%22ip%22:%2272.229.28.185%22,%22encryption%22:%22NONE%22,%22version%22:7,%22os%22:3,%22locale%22:%22en%22,%22always_return_content%22:false,%22content_type%22:%22json%22}>
 
 ```javascript
 {
