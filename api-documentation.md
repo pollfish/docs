@@ -174,6 +174,103 @@ Example generation of hash using the PHP programming language:
 $reward_conversion_hash = base64_encode(hash_hmac("sha1" , $reward_conversion, $secret_key, true));
 ```
 
+### Notes on `content_type`
+
+In order to get a list of surveys for the json offerwall integration you are required to set **"offerwall"** parameter to **true** and **"content_type"** parameter to **"json"**.
+This way you can retrieve a longer list of surveys than the html version (limited to 60), along with an HTTP responce code of 200. If no matching surveys are found then the response body will be empty with an HTTP response code of 204.
+
+When the necessary demographics are not know for a specific device id (a user) then the the response will contain one "Demographic Survey" and the flag **"hasDemographics"** will be set to false. This Demographic survey (survey_class "Pollfish/Demographics"), is part of the onboarding process of the use and it does not deliver any revenue to the user when it gets completed (CPA =0). When a Demograaphic survey is presented, the users has to answer all the demographic questions in order to unlock the list of surveys from clients. Until all required demographic questions are answered the user will not be able to get any paid surveys.
+
+There is one special case , where user has answered age, gender and language demographics where the response will contain mediation surveys (that require only those demographics) and a demographic survey to fill the remaining questions.
+
+If the **"content_type"** parameter is set to **"html"** or is ommited then the request will be served like an ordinary offerwall request, returning an html page  with the surveys matched for each device_id (user).
+
+### Example requests/responses:
+
+#### a. JSON offerwall request with unknown demographics:
+
+<https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={"offerwall":"true","api_key":"2ad6e857-2995-4668-ab95-39e068faa558","device_id":"UNKNOWN_DEVICE_ID","timestamp":1551350478,"debug":false,"ip":"72.229.28.185","encryption":"NONE","version":7,"os":3,"locale":"en","always_return_content":false,"content_type":"json"}>
+
+reponse: HTTP 200
+
+with body:
+
+```javascript
+{
+surveys: [
+    {
+        survey_id: 1878494,
+        survey_cpa: 0,
+        survey_class: "Pollfish/Demographics",
+        survey_ir: 0,
+        survey_loi: 5,
+        survey_lang: "en",
+        reward_name: "Diamonds",
+        reward_value: 0,
+        survey_link: "https://wss.pollfish.com/v2/device/survey/1878494?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AB%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
+    }
+],
+hasDemographics: false
+}
+```
+
+#### JSON offerwall request with all demographic info already known
+
+<https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={%22offerwall%22:%22true%22,%22api_key%22:%222ad6e857-2995-4668-ab95-39e068faa558%22,%22device_id%22:%22AA%22,%22timestamp%22:1551350478,%22debug%22:false,%22ip%22:%2272.229.28.185%22,%22encryption%22:%22NONE%22,%22version%22:7,%22os%22:3,%22locale%22:%22en%22,%22always_return_content%22:false,%22content_type%22:%22json%22}>
+
+
+```javascript
+{
+surveys: [
+    {
+        survey_id: 4747803,
+        survey_cpa: 44,
+        survey_class: "Cint",
+        survey_ir: 0,
+        survey_loi: 7,
+        survey_lang: "en",
+        reward_name: "Diamonds",
+        reward_value: 22,
+        survey_link: "https://wss.pollfish.com/v2/device/survey/4747803?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
+    },
+    {
+        survey_id: 2503522,
+        survey_cpa: 35,
+        survey_class: "Toluna",
+        survey_ir: 21,
+        survey_loi: 8,
+        survey_lang: "en",
+        reward_name: "Diamonds",
+        reward_value: 18,
+        survey_link: "https://wss.pollfish.com/v2/device/survey/2503522?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
+    },
+    {
+        survey_id: 4684225,
+        survey_cpa: 30,
+        survey_class: "Cint",
+        survey_ir: 6,
+        survey_loi: 8,
+        survey_lang: "en",
+        reward_name: "Diamonds",
+        reward_value: 15,
+        survey_link: "https://wss.pollfish.com/v2/device/survey/4684225?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
+    },
+    {
+        survey_id: 4809114,
+        survey_cpa: 47,
+        survey_class: "Cint",
+        survey_ir: 0,
+        survey_loi: 20,
+        survey_lang: "en",
+        reward_name: "Diamonds",
+        reward_value: 24,
+        survey_link: "https://wss.pollfish.com/v2/device/survey/4809114?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
+    }
+],
+hasDemographics: true
+}
+```
+
 ### Demographics Enumerations (48-59)
 
 The appropriate enumeration values for Demographics as listed above for points 48-59 can be found [here](https://www.pollfish.com/docs/demographic-surveys)
@@ -209,7 +306,7 @@ not null. Do not send system apps.
 |  |                     | Random              | 2
 |  |                     | Third Party         | 3
 
-### Example Requests
+## Example Requests
 
 Example request
 
@@ -488,98 +585,4 @@ When your account is verified you will be able to start receiving paid surveys f
 <br/>
 
 <br/>
-
-## 7. Notes on `content_type`
-
-In order to get a list of surveys for the json offerwall integration you are required to set "offerwall" parameter to true and "content_type" parameter to "json".
-This way you can retrieve a longer list of surveys (limited to 60) than the html version along with an HTTP responce code of 200. If no matching surveys are found then the response 
-body will be empty with an HTTP response code of 204.
-    When a "device_id" passed in json, along with offerwall and content_type, is not known
-then the the response will contain one "Demographic survey" and the flag "hasDemographics" will be set to false. In the later case the user will 
-have to answer the demographic questions. Until all required demographic questions are answered the user will not be able to get any regular surveys.
-There is one special case , where user has answered age, gender and language demographics where the response will contain mediation surveys (that require only those demographics)
-and a demographic survey to fill the remaining questions.
-    If the "content_type" parameter is set to "html" or is ommited then the request will be served like an ordinary offerwall request, returning an html page 
-with the surveys matched for each "device_id".
-
-__Example requests__:
-a. json offerwall request with unknown device_id
-<https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={"offerwall":"true","api_key":"2ad6e857-2995-4668-ab95-39e068faa558","device_id":"UNKNOWN_DEVICE_ID","timestamp":1551350478,"debug":false,"ip":"72.229.28.185","encryption":"NONE","version":7,"os":3,"locale":"en","always_return_content":false,"content_type":"json"}>
-
-reponse: HTTP 200
-with body
-
-```javascript
-{
-surveys: [
-    {
-        survey_id: 1878494,
-        survey_cpa: 0,
-        survey_class: "Pollfish/Demographics",
-        survey_ir: 0,
-        survey_loi: 5,
-        survey_lang: "en",
-        reward_name: "Diamonds",
-        reward_value: 0,
-        survey_link: "https://wss.pollfish.com/v2/device/survey/1878494?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AB%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
-    }
-],
-hasDemographics: false
-}
-```
-
-b. Json offerwall request with known device_id
-<https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={%22offerwall%22:%22true%22,%22api_key%22:%222ad6e857-2995-4668-ab95-39e068faa558%22,%22device_id%22:%22AA%22,%22timestamp%22:1551350478,%22debug%22:false,%22ip%22:%2272.229.28.185%22,%22encryption%22:%22NONE%22,%22version%22:7,%22os%22:3,%22locale%22:%22en%22,%22always_return_content%22:false,%22content_type%22:%22json%22}>
-
-```javascript
-{
-surveys: [
-    {
-        survey_id: 4747803,
-        survey_cpa: 44,
-        survey_class: "Cint",
-        survey_ir: 0,
-        survey_loi: 7,
-        survey_lang: "en",
-        reward_name: "Diamonds",
-        reward_value: 22,
-        survey_link: "https://wss.pollfish.com/v2/device/survey/4747803?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
-    },
-    {
-        survey_id: 2503522,
-        survey_cpa: 35,
-        survey_class: "Toluna",
-        survey_ir: 21,
-        survey_loi: 8,
-        survey_lang: "en",
-        reward_name: "Diamonds",
-        reward_value: 18,
-        survey_link: "https://wss.pollfish.com/v2/device/survey/2503522?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
-    },
-    {
-        survey_id: 4684225,
-        survey_cpa: 30,
-        survey_class: "Cint",
-        survey_ir: 6,
-        survey_loi: 8,
-        survey_lang: "en",
-        reward_name: "Diamonds",
-        reward_value: 15,
-        survey_link: "https://wss.pollfish.com/v2/device/survey/4684225?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
-    },
-    {
-        survey_id: 4809114,
-        survey_cpa: 47,
-        survey_class: "Cint",
-        survey_ir: 0,
-        survey_loi: 20,
-        survey_lang: "en",
-        reward_name: "Diamonds",
-        reward_value: 24,
-        survey_link: "https://wss.pollfish.com/v2/device/survey/4809114?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
-    }
-],
-hasDemographics: true
-}
-```
     
