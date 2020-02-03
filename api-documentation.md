@@ -165,6 +165,19 @@ subject to the following recommendations:
 These rules help Pollfish provide good conversion rates for an
 application.
 
+
+### Notes on `survey_format` (63)
+
+Below you can see the different enumeration for requesting a survey of a specific survey format. It is strongly advised not to use this param and control which type of surveys you would like ot allow withing your account through Pollfish Mediation Settings area.
+
+|  | Key                 | Name                | Value
+|--|:--------------------|:--------------------|:----------
+|63| **survey_format**   | Basic               | 0
+|  |                     | Short               | 1
+|  |                     | Random              | 2
+|  |                     | Third Party         | 3
+
+
 ### Notes for `reward_conversion_hash` (70)
 ___________________________
 In order to prevent tampering of the `reward_conversion` parameter, the platform supports validation by requiring a hash of the `reward_conversion` value. You can sign the `reward_conversion` parameter using the [HMAC-SHA1](https://en.wikipedia.org/wiki/HMAC) algorithm and your account's secret_key that can be retrieved from the [Account Information](//www.pollfish.com/dashboard/dev/account/information) page. The value should be then encoded using [Base64](https://en.wikipedia.org/wiki/Base64) and provided in the `reward_conversion_hash` parameter. Note that when providing `reward_conversion`, `reward_conversion_hash` must be set too.
@@ -183,9 +196,9 @@ When the necessary demographics are not know for a specific device id (a user) t
 
 If the **"content_type"** parameter is set to **"html"** or is ommited then the request will be served like an ordinary offerwall request, returning an html page with the surveys matched for each device_id (user).
 
-### 71 - Example requests/responses with content_type param:
+#### Example requests/responses with content_type param:
 
-#### a. JSON offerwall request with unknown demographics:
+##### a. JSON offerwall request with unknown demographics:
 
 <https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={"offerwall":"true","api_key":"2ad6e857-2995-4668-ab95-39e068faa558","device_id":"UNKNOWN_DEVICE_ID","timestamp":1551350478,"debug":false,"ip":"72.229.28.185","encryption":"NONE","version":7,"os":3,"locale":"en","always_return_content":false,"content_type":"json"}>
 
@@ -212,7 +225,7 @@ hasDemographics: false
 }
 ```
 
-#### JSON offerwall request with all demographic info already known
+##### JSON offerwall request with all demographic info already known
 
 <https://wss.pollfish.com/v2/device/register/true?dontencrypt=true&json={%22offerwall%22:%22true%22,%22api_key%22:%222ad6e857-2995-4668-ab95-39e068faa558%22,%22device_id%22:%22AA%22,%22timestamp%22:1551350478,%22debug%22:false,%22ip%22:%2272.229.28.185%22,%22encryption%22:%22NONE%22,%22version%22:7,%22os%22:3,%22locale%22:%22en%22,%22always_return_content%22:false,%22content_type%22:%22json%22}>
 
@@ -251,36 +264,6 @@ hasDemographics: true
 
 The appropriate enumeration values for Demographics as listed above for points 48-59 can be found [here](https://www.pollfish.com/docs/demographic-surveys)
 
-### JSON Objects
-
-#### \*\* installed apps JSON Array (iap)
-
-<table>
-  <tr>
-    <td>47</td>
-    <td><b>iap</b></td>
-  </tr>
-</table>
-
-
-An installed app's JSON object should be added only if package name is
-not null. Do not send system apps.
-
-|  | Name            | Type                | Description                 | Required
-|--|:----------------|:--------------------|:----------------------------|:------------------
-|1 | **pn**          | String              | Package name                | true
-|2 | **fi**          | Long                | First installed date        | false
-|3 | **lm**          | Long                | Last modified date          | false
-
-</br>
-
-
-|  | Key                 | Name                | Value
-|--|:--------------------|:--------------------|:----------
-|63| **survey_format**   | Basic               | 0
-|  |                     | Short               | 1
-|  |                     | Random              | 2
-|  |                     | Third Party         | 3
 
 ## Example Requests
 
