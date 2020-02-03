@@ -223,17 +223,6 @@ hasDemographics: false
 {
 surveys: [
     {
-        survey_id: 4747803,
-        survey_cpa: 44,
-        survey_class: "Cint",
-        survey_ir: 0,
-        survey_loi: 7,
-        survey_lang: "en",
-        reward_name: "Diamonds",
-        reward_value: 22,
-        survey_link: "https://wss.pollfish.com/v2/device/survey/4747803?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
-    },
-    {
         survey_id: 2503522,
         survey_cpa: 35,
         survey_class: "Toluna",
@@ -254,17 +243,6 @@ surveys: [
         reward_name: "Diamonds",
         reward_value: 15,
         survey_link: "https://wss.pollfish.com/v2/device/survey/4684225?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
-    },
-    {
-        survey_id: 4809114,
-        survey_cpa: 47,
-        survey_class: "Cint",
-        survey_ir: 0,
-        survey_loi: 20,
-        survey_lang: "en",
-        reward_name: "Diamonds",
-        reward_value: 24,
-        survey_link: "https://wss.pollfish.com/v2/device/survey/4809114?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AA%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
     }
 ],
 hasDemographics: true
