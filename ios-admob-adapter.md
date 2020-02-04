@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.2.5.1">
+<div class="changelog" data-version="5.2.5.2">
+v.5.2.5.2
+
+- Updated User Not Eligible listener behaviour
+
 v.5.2.5.1
 
 - Updated with Pollfish iOS SDK 5.2.5
