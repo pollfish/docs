@@ -208,3 +208,4 @@ The present Agreement and its interpretation shall be governed by and construed 
 Pollfish reserves the right to modify the terms and conditions of the present Agreement or alter or end its Services at any time at its sole discretion. You are responsible for ensuring that you will regularly review the present Agreement. If you choose to continue using Pollfish Services after any modifications to the present terms are made, you will be considered to have fully and unconditionally accepted the aforementioned modifications to this Agreement.
 
 </div>
+</div>
