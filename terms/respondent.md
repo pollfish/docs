@@ -82,7 +82,7 @@ The automatically received data/information, as described above, are collected a
 
 Please note that once the user accepts this privacy policy and agrees to participate in a survey, Pollfish may be able to collect, additionally, only in Android, the following data:
 * Connectable networks
-* Device IMEI (only when the app publisher has obtained permission of the user to access such data
+* Device IMEI (only when the app publisher has obtained permission of the user to access such data)
 * Mac address (only on Android Lollipop and below)
 * List of running services
 * Memory information
