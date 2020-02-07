@@ -1,4 +1,12 @@
-<div class="changelog" data-version="5.1.0">
+<div class="changelog" data-version="5.3.0">
+v5.3.0
+	
+- Exposed a new public interface showOnTopOfActivity
+
+v5.2.0
+	
+- Fixed issues with view hierarchy on multiple activities
+
 v5.1.0
 	
 - Fixed conflicts with other ad SDKs
@@ -194,7 +202,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.1.0:googleplayRelease@aar'
+  implementation 'com.pollfish:pollfish:5.3.0:googleplayRelease@aar'
 }
 ```
 
