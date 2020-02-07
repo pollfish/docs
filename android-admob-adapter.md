@@ -1,4 +1,14 @@
-<div class="changelog" data-version="5.1.0.3">
+<div class="changelog" data-version="5.3.0.1">
+v5.3.0.1
+	
+- Added functionality to render on top of called Activity 
+- Updated with Android SDK v5.3.0
+
+v5.2.0.1
+	
+- Fixed issues with view hierarchy
+- Updated with Android SDK v5.2.0
+
 v5.1.0.3
 	
 - Updated User Not Eligible listener behaviour	
@@ -139,7 +149,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.1.0:googleplayRelease@aar'
+  implementation 'com.pollfish:pollfish:5.3.0:googleplayRelease@aar'
 }
 ```
 
@@ -168,7 +178,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:5.1.0.3'
+  implementation 'com.pollfish.mediation:pollfish-admob:5.3.0.1'
 }
 ```
 
