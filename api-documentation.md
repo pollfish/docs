@@ -162,7 +162,7 @@ application.
 
 ### Notes for `os` (9)
 
-Below you can see the different enumeration values for operating system value
+Below you can see the different enumeration values for operating system param
 
 |  | Key      | Name            | Value
 |--|:---------|:---------------|:----------
