@@ -160,6 +160,19 @@ These rules help Pollfish provide good conversion rates for an
 application.
 
 
+### Notes for `os` (9)
+
+Below you can see the different enumeration values for operating system value
+
+|  | Key      | Name            | Value
+|--|:---------|:---------------|:----------
+| 9| **os**   | Android        | 0
+|  |          | iOS            | 1
+|  |          | Windows Phone  | 2
+|  |          | Web            | 3
+
+
+
 ### Notes for `survey_format` (63)
 
 Below you can see the different enumeration for requesting a survey of a specific survey format. It is strongly advised not to use this param and control which type of surveys you would like ot allow withing your account through Pollfish Mediation Settings area.
