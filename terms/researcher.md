@@ -4,11 +4,6 @@
 
 <div class="updatedOn">Last updated: 02/21/2020</div>
 
-
-**RESEARCHER TERMS OF SERVICE &amp; PRIVACY POLICY**
-
-Last updated: 02/21/2020
-
 **WHO WE ARE**
 
 Pollfish Inc. is a US company seated at 1460 Broadway New York, NY 10036, USA. Pollfish operates a Greek Branch (hereinafter &quot;the Branch&quot;) located at Pirri 5 Athens, Attica 11527, GR.
@@ -17,7 +12,7 @@ Pollfish Inc. (&quot;Pollfish&quot; or &quot;we&quot; &quot;our&quot; or &quot;u
 
 **THIS AGREEMENT**
 
-**PART A**** [Terms of Service]** of this Researcher Terms of Service and Privacy Policy (this &quot;Agreement&quot;) governs your use of the Pollfish Website and Services as made available to you by Pollfish.
+**PART A [Terms of Service]** of this Researcher Terms of Service and Privacy Policy (this &quot;Agreement&quot;) governs your use of the Pollfish Website and Services as made available to you by Pollfish.
 
 **PART B [Privacy Policy]** of this Agreement discloses the ways we process your personal information, the purposes of processing and your Privacy rights.
 
