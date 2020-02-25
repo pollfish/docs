@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.3.0.1">
+<div class="changelog" data-version="5.3.2.1">
+v5.3.2.1
+	
+- Updated with Android SDK v5.3.2 
+
 v5.3.0.1
 	
 - Added functionality to render on top of called Activity 
