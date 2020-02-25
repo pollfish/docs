@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.3.0">
+<div class="changelog" data-version="5.3.2">
+v5.3.2
+	
+- Exposed functionality to render overlay on top of a new Activity
+	
 v5.3.0
 	
 - Exposed a new public interface showOnTopOfActivity
@@ -152,7 +156,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.3.0:universalRelease@aar'
+  implementation 'com.pollfish:pollfish:5.3.2:universalRelease@aar'
 }
 ```
 
