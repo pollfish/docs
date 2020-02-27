@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.3.2">
+<div class="changelog" data-version="5.3.3">
+v5.3.3
+	
+- Added option to fire both Pollfish Closed local notifications (if provided both through ParamsBuilder and implemented by the Activity)
+
 v5.3.2
 	
 - Exposed functionality to render overlay on top of a new Activity
