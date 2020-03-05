@@ -187,7 +187,7 @@ Below you can see the different enumeration for requesting a survey of a specifi
 
 ### Notes for `reward_conversion_hash` (70)
 ___________________________
-In order to prevent tampering of the `reward_conversion` parameter, the platform supports validation by requiring a hash of the `reward_conversion` value. You can sign the `reward_conversion` parameter using the [HMAC-SHA1](https://en.wikipedia.org/wiki/HMAC) algorithm and your account's secret_key that can be retrieved from the [Account Information](//www.pollfish.com/dashboard/dev/account/information) page. The value should be then encoded using [Base64](https://en.wikipedia.org/wiki/Base64) and provided in the `reward_conversion_hash` parameter. Note that when providing `reward_conversion`, `reward_conversion_hash` must be set too.
+In order to prevent tampering of the `reward_conversion` parameter, the platform supports validation by requiring a hash of the `reward_conversion` value. You can sign the `reward_conversion` parameter using the [HMAC-SHA1](https://en.wikipedia.org/wiki/HMAC) algorithm and your account's secret_key that can be retrieved from the [Account Information](//www.pollfish.com/dashboard/dev/account/information) page. The value should be then encoded using [Base64](https://en.wikipedia.org/wiki/Base64), then URL encoded using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding) and provided in the `reward_conversion_hash` parameter. Note that when providing `reward_conversion`, `reward_conversion_hash` must be set too.
 
 Example generation of hash using the PHP programming language:
 ```php
