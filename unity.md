@@ -142,22 +142,29 @@ Imported files will be listed in the following directories:
 
 </div>
 
-- **Assets/PlayServicesResolver** – Files to help with Goolge Play Services Setup
+- **Assets/ExternalDependencyManager** – Files to help with Goolge Play Services Setup
 <div style="margin-left: 40px;">
 
 **If you target Android** ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
 
-* **PlayServicesResolver** folder contains files to allow automatically add Google Play Services in your Android project from Unity menu.
+* **ExternalDependencyManager** folder contains files to allow automatically add Google Play Services in your Android project from Unity menu.
 
-> **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can easily do that by selecting **Assets –> Play Services Resolver -> Android Resolver -> Resolve Client Jars**. If you do not have Google Play Services you can install them through Android SDK Manager.
+> **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can easily do that by selecting **Assets –> External Dependency Manager -> Android Resolver -> Resolve**. If you do not have Google Play Services you can install them through Android SDK Manager.
 
-![alt text](https://storage.googleapis.com/pollfish_production/doc_images/services.png)
+![alt text](https://storage.googleapis.com/pollfish_production/doc_images/resolve1.png)
 
 or
 
-![alt text](https://storage.googleapis.com/pollfish-images/new_unity_menu.png)
+![alt text](https://storage.googleapis.com/pollfish_production/doc_images/resolve2.png)
 
 </div>
+
+If you do not want to use ExternalDepencyManager you need to manually add the following dependencies to your project:
+
+```  
+    implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
+    implementation 'com.google.android.gms:play-services-base:16.0.1'
+```
 
 - **Assets/Plugins/Android** – Android Pollfish libraries and resources
 
