@@ -159,7 +159,12 @@ or
 
 </div>
 
-If you do not want to use ExternalDepencyManager you need to manually add the following dependencies to your project:
+You can customize the seetings of Android Resolver. By selecting **Assets –> External Dependency Manager -> Android Resolver -> Settings** be sure to unselect **Patch AndroidManifest.xml**
+
+![alt text](https://storage.googleapis.com/pollfish_production/doc_images/settings_resolver.png)
+
+
+| **Note:** If you do not want to use ExternalDepencyManager you need to manually add the following dependencies to your project in order for Pollfish to wrok properly:
 
 ```  
     implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
