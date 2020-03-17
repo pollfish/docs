@@ -1,11 +1,17 @@
-<div class="changelog" data-version="5.2.0">
+<div class="changelog" data-version="5.3.0">
+v5.3.0
+
+- Added support for Unity 2019.3+
+- Updated with the latest External Dependency Manager from Google Ads
+- Updated with iOS SDK (v5.2.5) and Android SDK (v5.3.0)
+
 v5.2.0
 
-- Update with latest iOS (v5.2.0) and Android SDKs (v5.1.0)
+- Updated with iOS SDK (v5.2.0) and Android SDK (v5.1.0)
 
 v5.1.0
 
-- Update with iOS SDK v5.1.0
+- Updated with iOS SDK v5.1.0
 
 v5.0.0
 
