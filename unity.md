@@ -159,7 +159,7 @@ or
 
 </div>
 
-You can customize the seetings of Android Resolver. By selecting **Assets –> External Dependency Manager -> Android Resolver -> Settings** be sure to unselect **Patch AndroidManifest.xml**
+You can customize the seetings of Android Resolver. By selecting **Assets –> External Dependency Manager -> Android Resolver -> Settings**. Be sure to unselect **Patch AndroidManifest.xml**
 
 ![alt text](https://storage.googleapis.com/pollfish_production/doc_images/settings_resolver.png)
 
