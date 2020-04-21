@@ -121,7 +121,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |54 <span class="demographics">•</span>| **career** | Int | The industry that the user is employed in | Enumeration. See below for the list of possible values | No | No
 |55 <span class="demographics">•</span>| **race** | Int | The race of the user | Enumeration. See below for the list of possible values | No | No
 |56 <span class="demographics">•</span>| **income** | Int | The level of the income of the user | Enumeration. See below for the list of possible values | No | No
-|57 <span class="demographics">•</span>| **spoken_languages** | Array[Int] | The spoken languages of the user | Array of Enumeration. See below for the list of possible values | No | No
+|57 <span class="demographics">•</span>| **spoken_languages** | Array[String] | The spoken languages of the user | Array of Enumeration. See below for the list of possible values | No | No
 |58 <span class="demographics">•</span>| **organization_role** | Int | The organization role of the user | Enumeration. See below for the list of possible values | No | No
 |59 <span class="demographics">•</span>| **number_of_employees** | Int | The number of employees in the organization of the user | Enumeration. See below for the list of possible values | No | No
 |60 | **email** | String | The email of the user | A valid email address | No | No
