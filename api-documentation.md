@@ -226,6 +226,7 @@ surveys: [
         reward_name: "Diamonds",
         reward_value: 0,
         survey_link: "https://wss.pollfish.com/v2/device/survey/1878494?dontencrypt=true&json=%7B%22offerwall%22%3A%22true%22%2C%22api_key%22%3A%222ad6e857-2995-4668-ab95-39e068faa558%22%2C%22device_id%22%3A%22AB%22%2C%22timestamp%22%3A1551350478%2C%22debug%22%3Afalse%2C%22ip%22%3A%2272.229.28.185%22%2C%22encryption%22%3A%22NONE%22%2C%22version%22%3A7%2C%22os%22%3A3%2C%22locale%22%3A%22en%22%2C%22always_return_content%22%3Afalse%2C%22content_type%22%3A%22json%22%7D"
+        remaining_completes: 600
     }
 ],
 hasDemographics: false
@@ -269,6 +270,7 @@ surveys: [
 hasDemographics: true
 }
 ```
+note: The **remaining_completes** field is returned only on Pollfish surveys.
 
 ##### c. JSON offerwall request for a user, with all the demographic info already known (no surveys are available)
 
@@ -338,6 +340,9 @@ the reward name to be earned as specified from the publisher in the publisher da
 
 The header parameter called **reward_value** will return the value of the
 conversion between the survey CPA received and the conversion that was set up in the publisher dashboard.
+
+The header parameter called **remaining_completes** will return the value of the remaining completes for the survey surved. 
+It is an optional header and it is return only for Pollfish surveys.
 
 Example: 
 
