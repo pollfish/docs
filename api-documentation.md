@@ -1,4 +1,4 @@
-# Pollfish API Documentation
+omp# Pollfish API Documentation
 
 This document describes Pollfish API Documentation. Pollfish API is an
 alternative to SDK and web plugin integration for publishers looking to
@@ -270,7 +270,7 @@ surveys: [
 hasDemographics: true
 }
 ```
-note: The **remaining_completes** field is returned only on Pollfish surveys.
+note: The **remaining_completes** field is returned only on Pollfish surveys for the moment.
 
 ##### c. JSON offerwall request for a user, with all the demographic info already known (no surveys are available)
 
@@ -342,7 +342,7 @@ The header parameter called **reward_value** will return the value of the
 conversion between the survey CPA received and the conversion that was set up in the publisher dashboard.
 
 The header parameter called **remaining_completes** will return the value of the remaining completes for the survey. 
-It is an optional header and it is return only for Pollfish surveys.
+This is an optional header and it is returned only for Pollfish surveys.
 
 Example: 
 
