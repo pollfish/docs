@@ -212,6 +212,7 @@ function customSurveyAvailable(data){
       survey_loi: ${data.survey_loi},
       survey_ir: ${data.survey_ir},
       survey_class: ${data.survey_class},
+      remaining_completes: ${data.remaining_completes},
     `);
 }
 
