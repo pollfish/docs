@@ -87,56 +87,54 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |20 | **provider_mnc** | String | MNC of current registered network operator | | No | No
 |21 | **manufacturer** | String | Device's manufacturer | Android: android.os.Build.MANUFACTURER <br>iOS: "Apple" | No | No
 |22 | **google_play** | Boolean | API used for google play app (“true”) or other market “false” (Android) | true / false | No | No
-|23 | **applications** | String | List of installed applications (Android) | Package names comma separated "com.app1,com.app2” | No | No
-|24 | **imei** | String | Device's IMEI (Android) | | No | No
-|25 | **mac** | String | Device MAC address | | No | No
-|26 | **nfc_exists** | Boolean | If NFC exists (Android) | | No | No
-|27 | **nfc_enabled** | Boolean | If NFC is enabled (Android) | | No | No
-|28 | **locale** | String | Device language code | Required from version 7 | No | Yes
-|29 | **app_version** | String | App's version | Android: packageInfo.versionName + packageInfo.versionCode <br>iOS: "CFBundleShortVersionString"."CFBundleVersion" | No | No
-|30 | **is_roaming** | Boolean | If device is roaming on current network | true / false | No | No
-|31 | **hardware_accelerated** | Boolean | If hardware acceleration is on | true | Yes | No
-|32 | **accessibility_enabled** | Boolean | If accessibility is enabled | | No | No
-|33 | **developer_enabled** | Boolean | If developer options enabled on device (Android) | true / false | No | No
-|34 | **install_non_market_apps** | Boolean | Check if install non market apps is enabled (Android) | true / false | No | No
-|35 | **app_api_key** | String | App’s API key as registered in third party provider’s system | | No | No
-|36 | **request_uuid** | String | Param passed through s2s postback calls to dev server | | No | No
-|37 | **app_id** | String | App's package name | Android: Package name <br> iOS: Bundle ID | No | No
-|38 | **app_name** | String | App's name | | No | No
-|39 | **app_category** | String | App's category | | No | No
-|40 | **app_subcategory** | String | App's subcategory | | No | No
-|41 | **survey_id** | Int | Explicitly request a survey based on its id (only for on demand surveys) | | No | No
-|42 | **opt_out** | Bool | Opt out from Interest-based advertising | true / false (defaults to false) | No | No
-|43 | **usr_agent** | String | User agent | Android: System.getProperty("http.agent") <br>iOS: @"navigator.userAgent" | No | No
-|44 | **target** | Int | Target SDK (Android) | | No | No
-|45 | **board** | String | The name of the underlying board | Android: like "goldfish" <br>iOS: [[UIDevice currentDevice] model] | No | No
-|46 | **serial** | String | A hardware serial number, if available. Alphanumeric only, case-insensitive (Android) | | No | No
-|47 | **iap\*\*** | JSON Array | List of installed apps objects (Android) | See below | No | No
-|48 <span class="demographics">•</span>| **gender** | Int | The gender of the user | Enumeration. See below for the list of possible values | No | No
-|49 <span class="demographics">•</span>| **year_of_birth** | Int | The birth year of the user | A positive integer | No | No
-|50 <span class="demographics">•</span>| **marital_status** | Int | The marital status of the user | Enumeration. See below for the list of possible values | No | No
-|51 <span class="demographics">•</span>| **parental** | Int | How many kids the user has | Enumeration. See below for the list of possible values | No | No
-|52 <span class="demographics">•</span>| **education** | Int | The education level of the user | Enumeration. See below for the list of possible values | No | No
-|53 <span class="demographics">•</span>| **employment** | Int | The employment status of the user | Enumeration. See below for the list of possible values | No | No
-|54 <span class="demographics">•</span>| **career** | Int | The industry that the user is employed in | Enumeration. See below for the list of possible values | No | No
-|55 <span class="demographics">•</span>| **race** | Int | The race of the user | Enumeration. See below for the list of possible values | No | No
-|56 <span class="demographics">•</span>| **income** | Int | The level of the income of the user | Enumeration. See below for the list of possible values | No | No
-|57 <span class="demographics">•</span>| **spoken_languages** | Array[String] | The spoken languages of the user | Array of Enumeration. See below for the list of possible values | No | No
-|58 <span class="demographics">•</span>| **organization_role** | Int | The organization role of the user | Enumeration. See below for the list of possible values | No | No
-|59 <span class="demographics">•</span>| **number_of_employees** | Int | The number of employees in the organization of the user | Enumeration. See below for the list of possible values | No | No
-|60 <span class="demographics">•</span>| **postal_code** | String | The postal code of the location where the user currently resides in | | No | No
-|61 | **email** | String | The email of the user | A valid email address | No | No
-|62 | **google_id** | String | The Google id of the user | | No | No
-|63 | **linkedin_id** | String | The Linkedin id of the user | | No | No
-|64 | **twitter_id** | String | The Twitter id of the user | | No | No
-|65 | **facebook_id** | String | The Facebook id of the user | | No | No
-|66 | **survey_format** | String | The format of the survey to return (only available in debug mode, should be used for testing). | Enumeration. See below for the list of possible values | No | No
-|67 | **always_return_content** | Boolean | Applies only to server register call and sets the type of the response if no survey is found. If it is true the response will be HTTP 200 with a readable HTML page. Otherwise it will be an HTTP 204 without any content | true / false | No | No
-|68 | **offerwall** | Boolean | Returns offerwall response. If it is true the response will always be HTTP 200 with a readable HTML page that will contain the offerwall or a screen showing that no surveys were found | true / false | No | No
-|69 | **reward_name** | String | Returns provided reward name on survey completion (success or otherwise), overriding the one specified in the publisher dashboard. | ie: Diamonds | No | No
-|70 | **reward_conversion** | String | Expects a Float number as a string. Returns provided reward value on survey completion (success or otherwise) based on the conversion provided, overriding the one specified in the publisher dashboard. Conversion is expecting a number matching this function ( 1 USD = X Points) where X is a float number.  | ie: 1.1 | No | No
-|71 | **reward_conversion_hash** | String | The Base64 HMAC-SHA1 generated by hashing and encoding `reward_conversion` with your secret key | ie: C0tmcEk34otAlKcWdCiX2GC2sFg= | No | When `reward_conversion` exists
-|72 | **content_type** | String | If it is set to "json", it returns offerwall response with HTTP 200 in json format. If no surveys are found, it returns 204 with an empty body. This param, requires `offerwall` parameter to be set to true. If is set to "html" or ommited, it defaults to Offerwall html behavior. |  "json" / "html" | No | No
+|23 | **imei** | String | Device's IMEI (Android) | | No | No
+|24 | **nfc_exists** | Boolean | If NFC exists (Android) | | No | No
+|25 | **nfc_enabled** | Boolean | If NFC is enabled (Android) | | No | No
+|26 | **locale** | String | Device language code | Required from version 7 | No | Yes
+|27 | **app_version** | String | App's version | Android: packageInfo.versionName + packageInfo.versionCode <br>iOS: "CFBundleShortVersionString"."CFBundleVersion" | No | No
+|28 | **is_roaming** | Boolean | If device is roaming on current network | true / false | No | No
+|29 | **hardware_accelerated** | Boolean | If hardware acceleration is on | true | Yes | No
+|30 | **accessibility_enabled** | Boolean | If accessibility is enabled | | No | No
+|31 | **developer_enabled** | Boolean | If developer options enabled on device (Android) | true / false | No | No
+|32 | **install_non_market_apps** | Boolean | Check if install non market apps is enabled (Android) | true / false | No | No
+|33 | **app_api_key** | String | App’s API key as registered in third party provider’s system | | No | No
+|34 | **request_uuid** | String | Param passed through s2s postback calls to dev server | | No | No
+|35 | **app_id** | String | App's package name | Android: Package name <br> iOS: Bundle ID | No | No
+|36 | **app_name** | String | App's name | | No | No
+|37 | **app_category** | String | App's category | | No | No
+|38 | **app_subcategory** | String | App's subcategory | | No | No
+|39 | **survey_id** | Int | Explicitly request a survey based on its id (only for on demand surveys) | | No | No
+|40 | **opt_out** | Bool | Opt out from Interest-based advertising | true / false (defaults to false) | No | No
+|41 | **usr_agent** | String | User agent | Android: System.getProperty("http.agent") <br>iOS: @"navigator.userAgent" | No | No
+|42 | **target** | Int | Target SDK (Android) | | No | No
+|43 | **board** | String | The name of the underlying board | Android: like "goldfish" <br>iOS: [[UIDevice currentDevice] model] | No | No
+|44 | **serial** | String | A hardware serial number, if available. Alphanumeric only, case-insensitive (Android) | | No | No
+|45 | **iap\*\*** | JSON Array | List of installed apps objects (Android) | See below | No | No
+|46 <span class="demographics">•</span>| **gender** | Int | The gender of the user | Enumeration. See below for the list of possible values | No | No
+|47 <span class="demographics">•</span>| **year_of_birth** | Int | The birth year of the user | A positive integer | No | No
+|48 <span class="demographics">•</span>| **marital_status** | Int | The marital status of the user | Enumeration. See below for the list of possible values | No | No
+|49 <span class="demographics">•</span>| **parental** | Int | How many kids the user has | Enumeration. See below for the list of possible values | No | No
+|50 <span class="demographics">•</span>| **education** | Int | The education level of the user | Enumeration. See below for the list of possible values | No | No
+|51 <span class="demographics">•</span>| **employment** | Int | The employment status of the user | Enumeration. See below for the list of possible values | No | No
+|52 <span class="demographics">•</span>| **career** | Int | The industry that the user is employed in | Enumeration. See below for the list of possible values | No | No
+|53 <span class="demographics">•</span>| **race** | Int | The race of the user | Enumeration. See below for the list of possible values | No | No
+|54 <span class="demographics">•</span>| **income** | Int | The level of the income of the user | Enumeration. See below for the list of possible values | No | No
+|55 <span class="demographics">•</span>| **spoken_languages** | Array[String] | The spoken languages of the user | Array of Enumeration. See below for the list of possible values | No | No
+|56 <span class="demographics">•</span>| **organization_role** | Int | The organization role of the user | Enumeration. See below for the list of possible values | No | No
+|57 <span class="demographics">•</span>| **number_of_employees** | Int | The number of employees in the organization of the user | Enumeration. See below for the list of possible values | No | No
+|58 <span class="demographics">•</span>| **postal_code** | String | The postal code of the location where the user currently resides in | | No | No
+|59 | **email** | String | The email of the user | A valid email address | No | No
+|60 | **google_id** | String | The Google id of the user | | No | No
+|61 | **linkedin_id** | String | The Linkedin id of the user | | No | No
+|62 | **twitter_id** | String | The Twitter id of the user | | No | No
+|63 | **facebook_id** | String | The Facebook id of the user | | No | No
+|64 | **survey_format** | String | The format of the survey to return (only available in debug mode, should be used for testing). | Enumeration. See below for the list of possible values | No | No
+|65 | **always_return_content** | Boolean | Applies only to server register call and sets the type of the response if no survey is found. If it is true the response will be HTTP 200 with a readable HTML page. Otherwise it will be an HTTP 204 without any content | true / false | No | No
+|66 | **offerwall** | Boolean | Returns offerwall response. If it is true the response will always be HTTP 200 with a readable HTML page that will contain the offerwall or a screen showing that no surveys were found | true / false | No | No
+|67 | **reward_name** | String | Returns provided reward name on survey completion (success or otherwise), overriding the one specified in the publisher dashboard. | ie: Diamonds | No | No
+|68 | **reward_conversion** | String | Expects a Float number as a string. Returns provided reward value on survey completion (success or otherwise) based on the conversion provided, overriding the one specified in the publisher dashboard. Conversion is expecting a number matching this function ( 1 USD = X Points) where X is a float number.  | ie: 1.1 | No | No
+|69 | **reward_conversion_hash** | String | The Base64 HMAC-SHA1 generated by hashing and encoding `reward_conversion` with your secret key | ie: C0tmcEk34otAlKcWdCiX2GC2sFg= | No | When `reward_conversion` exists
+|70 | **content_type** | String | If it is set to "json", it returns offerwall response with HTTP 200 in json format. If no surveys are found, it returns 204 with an empty body. This param, requires `offerwall` parameter to be set to true. If is set to "html" or ommited, it defaults to Offerwall html behavior. |  "json" / "html" | No | No
 
 </br>
 
@@ -174,7 +172,7 @@ Below you can see the different enumeration values for operating system param
 
 
 
-### Notes for `survey_format` (63)
+### Notes for `survey_format` (64)
 
 Below you can see the different enumeration for requesting a survey of a specific survey format. It is strongly advised not to use this param and control which type of surveys you would like ot allow withing your account through Pollfish Mediation Settings area.
 
@@ -186,7 +184,7 @@ Below you can see the different enumeration for requesting a survey of a specifi
 |  |                     | Third Party         | 3
 
 
-### Notes for `reward_conversion_hash` (70)
+### Notes for `reward_conversion_hash` (69)
 ___________________________
 In order to prevent tampering of the `reward_conversion` parameter, the platform supports validation by requiring a hash of the `reward_conversion` value. You can sign the `reward_conversion` parameter using the [HMAC-SHA1](https://en.wikipedia.org/wiki/HMAC) algorithm and your account's secret_key that can be retrieved from the [Account Information](//www.pollfish.com/dashboard/dev/account/information) page. The value should be then encoded using [Base64](https://en.wikipedia.org/wiki/Base64), then URL encoded using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding) and provided in the `reward_conversion_hash` parameter. Note that when providing `reward_conversion`, `reward_conversion_hash` must be set too.
 
@@ -195,7 +193,7 @@ Example generation of hash using the PHP programming language:
 $reward_conversion_hash = base64_encode(hash_hmac("sha1" , $reward_conversion, $secret_key, true));
 ```
 
-### Notes for `content_type` (71)
+### Notes for `content_type` (70)
 
 In order to get a list of surveys for the json offerwall integration you are required to set **"offerwall"** parameter to **"true"** and **"content_type"** parameter to **"json"**.
 This way you can retrieve a longer list of surveys than the html version (limited to 60), along with an HTTP responce code of 200. If no matching surveys are found then the response body will be empty with an HTTP response code of 204.
@@ -281,7 +279,7 @@ reponse: **HTTP 204**
 
 with body: 
 
-### Notes for Demographics (48-60)
+### Notes for Demographics (46-58)
 
 <table>
   <tr>
