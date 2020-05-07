@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.3.3">
+<div class="changelog" data-version="5.4.0">
+v5.4.0	
+
+- Removed updated restricted non-SDK interface list usages, as described [here](https://developer.android.com/distribute/best-practices/develop/restrictions-non-sdk-interfaces?authuser=1)
+
 v5.3.3
 	
 - Added option to fire both Pollfish Closed local notifications (if provided both through ParamsBuilder and implemented by the Activity)
@@ -160,7 +164,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.3.3:universalRelease@aar'
+  implementation 'com.pollfish:pollfish:5.4.0:universalRelease@aar'
 }
 ```
 
