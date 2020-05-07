@@ -1,4 +1,9 @@
-<div class="changelog" data-version="5.3.0">
+<div class="changelog" data-version="5.4.0">
+v5.4.0
+
+- Updated with Android SDK (v5.4.0)
+
+	
 v5.3.0
 
 - Added support for Unity 2019.3+
