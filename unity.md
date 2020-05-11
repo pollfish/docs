@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.4.0">
+<div class="changelog" data-version="5.4.1">
+v5.4.1
+
+- Updated with Android SDK (v5.4.1)
+
 v5.4.0
 
 - Updated with Android SDK (v5.4.0)
