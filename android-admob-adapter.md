@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.3.3.2">
+<div class="changelog" data-version="5.4.1.0">
+v5.4.1.0
+	
+- Updated with Pollfish Android SDK v5.4.1
+
 v5.3.3.2
 	
 - Removed close notifications from User Rejected and User Not Eligible callbacks
@@ -190,7 +194,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:5.3.3.2'
+  implementation 'com.pollfish.mediation:pollfish-admob:5.4.1.0'
 }
 ```
 
