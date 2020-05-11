@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.4.0">
+<div class="changelog" data-version="5.4.1">
+v5.4.1	
+
+- Updated functionality of rendering Pollfish overlay panel above complex Activity and Fragments hirarchies
+
 v5.4.0	
 
 - Removed updated restricted non-SDK interface list usages, as described [here](https://developer.android.com/distribute/best-practices/develop/restrictions-non-sdk-interfaces?authuser=1)
