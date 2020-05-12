@@ -1,4 +1,9 @@
-<div class="changelog" data-version="5.4.1">
+<div class="changelog" data-version="5.5.0">
+v5.5.0
+
+- Removed functionality to align with stores policies
+
+
 v5.4.1	
 
 - Updated functionality of rendering Pollfish overlay panel above complex Activity and Fragments hirarchies
@@ -168,7 +173,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.4.0:universalRelease@aar'
+  implementation 'com.pollfish:pollfish:5.5.0:universalRelease@aar'
 }
 ```
 
