@@ -1,7 +1,11 @@
-<div class="changelog" data-version="5.5.0">
-v5.5.0	
+<div class="changelog" data-version="5.5.1">
+v5.5.1
 
 - Updated functionality to align with the latest Google Play policy changes
+
+v5.5.0	
+
+- Improved performance
 	
 v5.4.1	
 
@@ -222,7 +226,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.5.0:googleplayRelease@aar'
+  implementation 'com.pollfish:pollfish:5.5.1:googleplayRelease@aar'
 }
 ```
 
