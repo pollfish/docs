@@ -1,7 +1,11 @@
-<div class="changelog" data-version="5.5.0">
+<div class="changelog" data-version="5.5.1">
+v5.5.1
+
+- Removed functionality to to align with the latest stores policies
+
 v5.5.0
 
-- Removed functionality to align with stores policies
+- Improved performance
 
 
 v5.4.1	
@@ -173,7 +177,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.5.0:universalRelease@aar'
+  implementation 'com.pollfish:pollfish:5.5.1:universalRelease@aar'
 }
 ```
 
