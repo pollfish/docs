@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.4.1">
+<div class="changelog" data-version="5.5.0">
+v5.5.0
+
+- Updated with Android SDK (v5.5.0) that aligns with the latest Google Play policy changes
+
 v5.4.1
 
 - Updated with Android SDK (v5.4.1)
