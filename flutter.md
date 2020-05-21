@@ -11,6 +11,8 @@ Pollfish Flutter Plugin can be found on Dart Packages [website](https://pub.dart
 *	Android 16+ using Google Play Services
 *	iOS version 9.0+
 
+> **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old    
+
 ## Quick Guide
 
 * Sign Up for a Pollfish Publisher account, create a new app and grap it's API key
