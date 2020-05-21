@@ -57,6 +57,8 @@ This guide is for publishers looking to use AdMob mediation to load and show Rew
 
 Android SDK 4.1 (API level 16) or later
 
+> **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old    
+
 </br>
 
 Below you can find a step by step guide on how to incorporate Pollfish surveys with AdMob mediation:
