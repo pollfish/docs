@@ -53,7 +53,7 @@ v5.0.2.1
 
 This guide is for publishers looking to use AdMob mediation to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.
 
-##### Prerequisites
+### Prerequisites
 
 Android SDK 4.1 (API level 16) or later
 
