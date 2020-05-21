@@ -9,6 +9,8 @@ Pollfish is a mobile monetization platform delivering surveys instead of ads thr
 *	iOS version 9.0+
 *	Apache Cordova v3.0.4+
 
+> **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old    
+
 ## Quick Guide
 
 * Create Pollfish developer account, create new app and grap it's API key
