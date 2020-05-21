@@ -152,6 +152,7 @@ v4.0.0
 9. Request your account to get verified from Pollfish Dashboard
 
 > **Requirements:** Pollfish Android SDK works with Android 16 and above.  
+> **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old    
 
 <br/><br/>
 ## Steps Analytically
