@@ -197,8 +197,23 @@ Below you can find the list of demographic info you can send over along with the
 |  | SWEDISH | 24
 |  | TURKISH | 25
 |  | VIETNAMESE | 26
-
-</br>
+|  | KOREAN | 27
+|  | HUNGARIAN | 28
+|  | CHINESE_TRANDITIONAL | 29
+|  | NORWEGIAN | 30
+|  | EGYPTIAN | 31
+|  | UKRANIAN | 32
+|  | HEBREW | 33
+|  | BENGALI | 34
+|  | SLOVAK | 35
+|  | PERSIAN | 36
+|  | AZERBAIJANI | 37
+|  | GEORGIAN | 38
+|  | LITHUANIAN | 39
+|  | PUNJABI | 40
+|  | PASHTO | 41
+|  | ESTONIAN | 42
+|  | UZBEK | 43
 
 | Key | Description | Value |
 | --- | --- | --- |
