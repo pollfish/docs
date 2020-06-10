@@ -297,3 +297,5 @@ with an example body:
 ```
 
 Please note that because we will make the request if the user answers all the demographic question or if he/she answers some of the questions and quits the survey you might receive multiple requests for the same user.
+
+**NOTE!:** This is only working for production surveys. When debugging (and flag debug is true) these events will not fire
