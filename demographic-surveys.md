@@ -202,7 +202,7 @@ Below you can find the list of demographic info you can send over along with the
 |  | CHINESE_TRANDITIONAL | 29
 |  | NORWEGIAN | 30
 |  | EGYPTIAN | 31
-|  | UKRANIAN | 32
+|  | UKRAINIAN | 32
 |  | HEBREW | 33
 |  | BENGALI | 34
 |  | SLOVAK | 35
