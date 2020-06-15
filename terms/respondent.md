@@ -1,7 +1,7 @@
 <div>
 <h2 class="static-page-title">SURVEY RESPONDENTS PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 02/21/2020</div>
+<div class="updatedOn">Last updated: 06/15/2020</div>
 
 <br />
 
@@ -279,7 +279,11 @@ Pollfish designates as its representative in the EU, who acts on Pollfish&#39;s 
 
 Pollfish appoints as a Data Protection Officer Mr Zissis Bellas, who can be contacted at the following zissis@pollfish.com
 
-**15. CHANGES AND UPDATES TO THIS POLICY**
+**16. YOUR CONFIDENTIALITY OBLIGATIONS.**
+
+You understand that, when you agree to take a survey, any such survey shown to you will include information, in content and form (including but not limited to the survey concept, ideas, questions, designs,  features,  question  sequence,  Researcher  logos,  names,  marks,  brand  and  product  info, potential offers, Researcher contact info etc.) which is proprietary information of the Researcher. All rights to such information are vested in the Researcher and are confidential information of such Researcher (hereinafter the “Confidential Information”). For the avoidance of doubt, Confidential Information includes also the existence and distribution of a survey (i.e. the fact that a Researcher has opted to engage in marketing research activity) and all and any accompanying information of such survey, directly or indirectly inferred (e.g. Researcher’s brand strategy, product development etc.)  from  the  survey,  without  any  restriction  whatsoever,  and  including  but  not  limited  to  the Researcher’s  identity,  the  duration  of  the  survey,  the  survey  date,  the  answers  you  provided  to certain questions, the distribution channels of the survey such as web, mobile phone etc. You hereby explicitly agree to keep the Confidential Information strictly confidential and not, whether orally or in writing or by any other means, directly or indirectly, use in any manner and form (except from limited  use  strictly  necessary  in  order  to  take  the  survey,  such  permitted  use  ending  with  the submission  of  your  answers  to  the  survey  shown  to  you)  disclose,  divulge,  provide  or  make accessible  to  any  other  person  (the  term  "person/s"  being  broadly  interpreted  to  include,  without limitation,  any  corporation,  company,  partnership  and  individual  as  well),  any  Confidential Information. Your confidentiality obligations set-out in this clause shall be in addition to any further obligations  you  may  have  regarding  the  confidential  and  non-infringing  treatment  of  such information, stemming directly from any applicable Intellectual Property, Trade-Secrets and non-competition Laws, rules and regulations. You further understand and agree that, in case of breach of this clause 16, Researcher shall have all legal right to directly protect his Confidential Information and all his legal interests attached thereto, including direct enforcement of such rights against you or any third-party which has gained unauthorized access to Confidential Information.
+
+**17. CHANGES AND UPDATES TO THIS POLICY**
 
 Pollfish reserves the right to modify the terms and conditions of this Policy or alter or end its Services at any time at its sole discretion. You are responsible for ensuring that you will regularly review the present Policy. If you choose to continue using Pollfish Services after any modifications to the present Policy is made, you will be considered to have fully and unconditionally accepted the aforementioned modifications to this Agreement.
 
