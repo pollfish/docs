@@ -1,4 +1,4 @@
-omp# Pollfish API Documentation
+# Pollfish API Documentation
 
 This document describes Pollfish API Documentation. Pollfish API is an
 alternative to SDK and web plugin integration for publishers looking to
