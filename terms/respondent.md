@@ -226,6 +226,7 @@ Please note that, whenever an app-user declines to take a survey or declines acc
 | Automatically received data <br/>sociodemographic data <br/>Content Data <br/>communication data | Pollfish Headquarters located in the US, Affiliates | Internal business organization and management |
 | communication data | Mailing and communication service providers | Communication |
 
+
 **7.2** Pollfish Researcher Clients, Mediation Partners and Other Pollfish Clients (collectively &quot;the Pollfish Clients&quot;) with which Pollfish may share your Device ID and/or Advertising ID along with certain automatically collected data and sociodemographic data, may use this information for the purposes set-out in Section 2.4 of this Policy, including direct electronic marketing (for which these parties are obliged to obtain your further consent according to their policies and legal obligations under applicable law).  
 Insofar as and to the extent that we share with Pollfish Clients your Device and/or Advertising ID, such Pollfish Clients may be able to re-target you with surveys, ads, or marketing campaigns and offers. 
 
@@ -330,6 +331,7 @@ Information we collect is described in detail in section 3 of this Policy. We wi
 | J. Non-public education information (per the Family Educational Rights and Privacy Act (20 U.S.C. Section 1232g, 34 C.F.R. Part 99)). <br/>Education records directly related to a student maintained by an educational institution or party acting on its behalf, such as grades, transcripts, class lists, student schedules, student identification codes, student financial information, or student disciplinary records. | NO | N/A | N/A | N/A | N/A | N/A | N/A |
 | K. Inferences drawn from other personal information. <br/>Profile reflecting a person&#39;s preferences, characteristics, psychological trends, predispositions, behavior, attitudes, intelligence, abilities, and aptitudes. | YES (only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions)  | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients  | YES | Suppliers of following services:<br/>- Cloud hosting<br/>- Analytics services<br/>- Anti-fraud services<br/>- affiliates  |
 
+
 Sharings marked with an Asterisk in column 6 of table above (under heading: &quot;SOLD TO WITHIN THE PRECEDING 12 MONTHS&quot;) refers only to **Automatically Received Data and Sociodemographic Data** and does not include any Content Data, i.e. does not include information from answers derived from a Pollfish Researcher Client Survey.
 
 Please note that in the preceding 12 months we have not sold any personal information to any &quot;Other Pollfish Client&quot; other than that described in the relevant column above.
@@ -375,7 +377,7 @@ Pollfish is subject to the investigatory and enforcement powers of the U.S. Fede
 
 **14. YOUR PRIVACY RIGHTS**
 
-**14.1**** In addition to the opt-out options provided to you under section 8 of this Policy**, and In your capacity as a data subject whose data is collected and processed by Pollfish, we inform you that you have the following rights:
+**14.1 In addition to the opt-out options provided to you under section 8 of this Policy**, and In your capacity as a data subject whose data is collected and processed by Pollfish, we inform you that you have the following rights:
 
 (a) the right to withdraw your consent at any time and without detriment, without affecting the lawfulness of processing based on consent before its withdrawal, by notifying such withdrawal to us.
 
