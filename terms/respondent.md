@@ -1,4 +1,4 @@
-<div>
+<div class="terms-of-service">
 <h2 class="static-page-title">SURVEY RESPONDENTS PRIVACY POLICY</h2>
 
 <div class="updatedOn">Last updated: 06/15/2020</div>
@@ -226,6 +226,7 @@ Please note that, whenever an app-user declines to take a survey or declines acc
 | Automatically received data <br/>sociodemographic data <br/>Content Data <br/>communication data | Pollfish Headquarters located in the US, Affiliates | Internal business organization and management |
 | communication data | Mailing and communication service providers | Communication |
 
+
 **7.2** Pollfish Researcher Clients, Mediation Partners and Other Pollfish Clients (collectively &quot;the Pollfish Clients&quot;) with which Pollfish may share your Device ID and/or Advertising ID along with certain automatically collected data and sociodemographic data, may use this information for the purposes set-out in Section 2.4 of this Policy, including direct electronic marketing (for which these parties are obliged to obtain your further consent according to their policies and legal obligations under applicable law).  
 Insofar as and to the extent that we share with Pollfish Clients your Device and/or Advertising ID, such Pollfish Clients may be able to re-target you with surveys, ads, or marketing campaigns and offers. 
 
@@ -329,6 +330,7 @@ Information we collect is described in detail in section 3 of this Policy. We wi
 | I. Professional or employment-related information. <br/>Current or past job history or performance evaluations. | YES (only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions and/or a Pollfish Internal Sociodemographic survey) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients<br/>- to Mediation Partners<br/>- To one certain &quot;Other Client&quot; engaging in Digital Threat Management *<br/>- To a certain 3rd party data marketplace/data exchanger * | YES | Suppliers of following services:<br/>- Cloud hosting<br/>- Analytics services<br/>- Anti-fraud services<br/>- affiliates   |
 | J. Non-public education information (per the Family Educational Rights and Privacy Act (20 U.S.C. Section 1232g, 34 C.F.R. Part 99)). <br/>Education records directly related to a student maintained by an educational institution or party acting on its behalf, such as grades, transcripts, class lists, student schedules, student identification codes, student financial information, or student disciplinary records. | NO | N/A | N/A | N/A | N/A | N/A | N/A |
 | K. Inferences drawn from other personal information. <br/>Profile reflecting a person&#39;s preferences, characteristics, psychological trends, predispositions, behavior, attitudes, intelligence, abilities, and aptitudes. | YES (only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions)  | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients  | YES | Suppliers of following services:<br/>- Cloud hosting<br/>- Analytics services<br/>- Anti-fraud services<br/>- affiliates  |
+
 
 Sharings marked with an Asterisk in column 6 of table above (under heading: &quot;SOLD TO WITHIN THE PRECEDING 12 MONTHS&quot;) refers only to **Automatically Received Data and Sociodemographic Data** and does not include any Content Data, i.e. does not include information from answers derived from a Pollfish Researcher Client Survey.
 
