@@ -1,4 +1,4 @@
-<div class="terms-of-service">
+<div>
 <h2 class="static-page-title">SURVEY RESPONDENTS PRIVACY POLICY</h2>
 
 <div class="updatedOn">Last updated: 06/15/2020</div>
@@ -377,7 +377,7 @@ Pollfish is subject to the investigatory and enforcement powers of the U.S. Fede
 
 **14. YOUR PRIVACY RIGHTS**
 
-**14.1**** In addition to the opt-out options provided to you under section 8 of this Policy**, and In your capacity as a data subject whose data is collected and processed by Pollfish, we inform you that you have the following rights:
+**14.1 In addition to the opt-out options provided to you under section 8 of this Policy**, and In your capacity as a data subject whose data is collected and processed by Pollfish, we inform you that you have the following rights:
 
 (a) the right to withdraw your consent at any time and without detriment, without affecting the lawfulness of processing based on consent before its withdrawal, by notifying such withdrawal to us.
 
