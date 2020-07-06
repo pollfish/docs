@@ -104,6 +104,9 @@ gibberish | The respondent answered with gibberish text in at least one open-end
 captcha | The respondent failed one of our CAPTCHA tests
 third_party_termination | Generic reason for terminations that happen in mediation survey providers
 user_rejection | The respondent rejected the survey
+vpn | The respondent answered the survey using VPN or an IP address that characterized as suspicious
+survey_expired | The respondent was prevented from entering a survey that would have resulted in "survey closed" or "quota full"
+
  
  > **Important:** These responses might change in the future
 
