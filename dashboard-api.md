@@ -24,6 +24,7 @@ create, update, delete or retrieve stats of Pollfish apps.
 |11|    **GET /api/public/v3/apps/:api_key/users_log**    |   returns the user logs for a given device_id or request_uuid
 |12|    **GET** **/api/public/v3/apps/revenuePerCountry**           |   returns the revenue per country for all the apps of the developer
 |13|    **GET /api/public/v3/apps/:api_key/revenuePerCountry**      |   returns the revenue per country of the specified app of the developer
+|14|    **GET /api/public/v3/apps/:api_key/performanceByCountry**  |   returns the performance metrics of the specified app of the developer grouped by country
 
 ### Removed Endpoints
 
@@ -762,3 +763,73 @@ designated time period
 
 Same as above (section 4.12) but include the revenue only for the specified app.
 
+## `4.14 GET /api/public/v3/apps/:api_key/performanceByCountry`
+
+returns the performance metrics of the specified app for a designated
+time period grouped by country
+
+### Server Response
+
+|   | Code      | Description
+|---|:----------|:----------------------------------------------------------------------------------------------------------
+|1  | 200       | Successful response
+|2  | 400       | Missing or invalid parameters <br>- **from** not is ISO 8601 format <br>- **to** not in ISO 8601 format <br>- The **api_key** is invalid or does not belong to the user
+
+
+### Example Requests
+
+*http -a <test@gmail.com>:e1ecf034-ee26-4945-8db9-e5e8e0d22e53 [https://www.pollfish.com/api/public/v3/apps/84e1a754-a261-40cf-b566-baa375b64e21/performanceByCountry?from=2018-07-01&to=2018-07-10](https://www.pollfish.com/api/public/v2/apps)*
+
+### Example Response
+
+```
+[
+   {
+      "countryISO" : "US",
+      "data" : [
+         {
+            "network" : "Pollfish",
+            "data" : [
+               {
+                  "accepted" : 0,
+                  "date" : "2020-07-10",
+                  "seen" : 0,
+                  "served" : 0,
+                  "completed" : 0
+               },
+               {
+                  "completed" : 0,
+                  "served" : 0,
+                  "date" : "2020-07-11",
+                  "seen" : 0,
+                  "accepted" : 0
+               }
+               ...
+            ]
+         },
+         {
+            "network" : "Cint",
+            "data" : [
+               {
+                  "accepted" : 0,
+                  "seen" : 0,
+                  "date" : "2020-07-10",
+                  "served" : 0,
+                  "completed" : 0
+               },
+               {
+                  "seen" : 0,
+                  "date" : "2020-07-11",
+                  "accepted" : 0,
+                  "served" : 0,
+                  "completed" : 0
+               }
+              ...
+            ]
+         },
+         ...
+      ]
+   },
+   ...
+]
+```
