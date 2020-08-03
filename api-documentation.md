@@ -352,7 +352,7 @@ about the survey network and type. The syntax is
 
 ```
 survey_class: provider["/"type]
-provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "P2Sample"
+provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "P2Sample"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
@@ -375,7 +375,6 @@ The whole set of values currently supported are:
 | **Pollfish/Internal**         | Pollfish internal survey created by the publisher
 | **Toluna**         | Toluna survey   
 | **Cint**         | Cint survey   
-| **Lucid**         | Lucid survey   
 | **InnovateMR**         | InnovateMR survey   
 | **SaySo**       | SaySo survey   
 | **P2Sample**       | P2Sample survey
