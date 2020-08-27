@@ -185,7 +185,7 @@ To continue using Pollfish surveys in your app you’ll need to make the followi
 
 3. Initialize Pollfish only after the AppTrackingTransparency permission is granted
 
-Both of these steps are required for your apps to continue monetizing with Pollfish surveys on iOS 14. 
+All of these steps are required for your apps to continue monetizing with Pollfish surveys on iOS 14. 
 
 <br/><br/>
 
