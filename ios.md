@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.3.0">
+<div class="changelog" data-version="5.3.1">	
+v.5.3.1
+
+- Added a modulemap for Swift interoperability
+	
 	
 v.5.3.0
 
