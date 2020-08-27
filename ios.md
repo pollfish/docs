@@ -182,7 +182,7 @@ To continue using Pollfish surveys in your app you’ll need to make the followi
 
 1. Install the latest Pollfish iOS SDK (version 5.3.0 or later)
 
-2. Add the AppTrackingTransparency permission request to your iOS apps and ask your users to grant access to IDFA
+2. Add the AppTrackingTransparency permission request to your iOS apps and ask your users to grant access to the IDFA
 
 3. Initialize Pollfish only after the AppTrackingTransparency permission is granted
 
