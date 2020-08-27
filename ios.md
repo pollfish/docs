@@ -1,4 +1,5 @@
 <div class="changelog" data-version="5.3.0">
+	
 v.5.3.0
 
 - Added support for iOS 14. Pollfish SDK utilizes the IDFA and therefore it should initialized in iOS 14 only when the IDFA tracking permission is granted by the user.
