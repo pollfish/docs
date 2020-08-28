@@ -263,6 +263,13 @@ Below you can find the list of demographic info you can send over along with the
 
 If you need to find household income mapping for a specific country you can have a look at the following [link](https://www.pollfish.com/pf/household-income-mapping)
 
+
+</br>
+
+| Key | Description | Value |
+| --- | --- | --- |
+| `posta_data` | The postal data of the location where the user currently resides in	 | Contains postal code and country 2 letter ISO code seperated by pipe. ie: "11527|GR", "10017|US"	
+
 ### Server-to-server callbacks for demographics
 
 Publishers can get all the demographic data that we collect from their users via server-to-server callbacks. This feature can be enabled per app by specifying a "Demographics URL" in the app's settings in the Pollfish dashboard.
