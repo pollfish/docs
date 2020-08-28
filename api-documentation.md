@@ -123,7 +123,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 |56 <span class="demographics">•</span>| **organization_role** | Int | The organization role of the user | Enumeration. See below for the list of possible values | No | No
 |57 <span class="demographics">•</span>| **number_of_employees** | Int | The number of employees in the organization of the user | Enumeration. See below for the list of possible values | No | No
 |58 <span class="demographics">•</span>| **postal_code** | String | *deprecated* The postal code of the location where the user currently resides in | | No | No
-|59 <span class="demographics">•</span>| **postal_data** | String | The postal data of the location where the user currently resides in | Contains postal code and country 2 letter ISO code seperated by pipe. ie: <code>11527\|GR</code>, <code>10017\|US</code> | No | No
+|59 <span class="demographics">•</span>| **postal_data** | String | The postal data of the location where the user currently resides in | Contains postal code and country 2 letter ISO code seperated by pipe. ie: "11527&vert;GR", "10017&vert;US" | No | No
 |60 | **email** | String | The email of the user | A valid email address | No | No
 |61 | **google_id** | String | The Google id of the user | | No | No
 |62 | **linkedin_id** | String | The Linkedin id of the user | | No | No
