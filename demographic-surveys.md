@@ -268,7 +268,7 @@ If you need to find household income mapping for a specific country you can have
 
 | Key | Description | Value |
 | --- | --- | --- |
-| `posta_data` | The postal data of the location where the user currently resides in	 | Contains postal code and country 2 letter ISO code seperated by pipe. ie: "11527|GR", "10017|US"	
+| `posta_data` | The postal data of the location where the user currently resides in	 | Contains postal code and country 2 letter ISO code seperated by pipe. ie: "11527&vert;GR", "10017&vert;US"
 
 ### Server-to-server callbacks for demographics
 
