@@ -292,7 +292,7 @@ with an example body:
   "spoken_languages":[0,23],
   "organization_role":15,
   "number_of_employees":3,
-  "postal_code":"11527"
+  "postal_data":"11527|GR"
 }
 ```
 
