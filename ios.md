@@ -188,7 +188,7 @@ To continue using Pollfish surveys in your app you’ll need to make the followi
 
 2. Add the AppTrackingTransparency permission request to your iOS apps and ask your users to grant access to the IDFA
 
-3. Initialize Pollfish only after the AppTrackingTransparency permission is granted
+3. Initialize Pollfish ONLY after the AppTrackingTransparency permission is granted
 
 All of these steps are required for your apps to continue monetizing with Pollfish surveys on iOS 14. 
 
