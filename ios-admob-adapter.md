@@ -42,7 +42,7 @@ iOS 9.0 or later
 
 </br>
 
-#### Important note on iOS 14 upcoming release
+### Important note on iOS 14 upcoming release
 
 Apple announced a new [transparency framework](https://developer.apple.com/documentation/apptrackingtransparency) that requires changes to iOS apps with the release of iOS 14. Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. Therefore Pollfish iOS SDK should only be initialized after the relevant tracking permission is granted by the users. You can see an example in code on how to do that in Pollfish Sample Project code [here](https://github.com/pollfish/ios-sdk-pollfish/blob/master/SampleProjectSwift/SampleProjectSwift/FirstViewController.swift)
 
