@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.2.5.2">
+<div class="changelog" data-version="5.3.1.1">
+v.5.3.1.1
+
+- Updated with Pollfish iOS SDK 5.3.1
+
 v.5.2.5.2
 
 - Updated User Not Eligible listener behaviour
@@ -37,6 +41,22 @@ This guide is for publishers looking to use AdMob mediation to load and show Rew
 iOS 9.0 or later
 
 </br>
+
+#### Important note on iOS 14 upcoming release
+
+Apple announced a new [transparency framework](https://developer.apple.com/documentation/apptrackingtransparency) that requires changes to iOS apps with the release of iOS 14. Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. Therefore Pollfish iOS SDK should only be initialized after the relevant tracking permission is granted by the users. You can see an example in code on how to do that in Pollfish Sample Project code [here](https://github.com/pollfish/ios-sdk-pollfish/blob/master/SampleProjectSwift/SampleProjectSwift/FirstViewController.swift)
+
+To continue using Pollfish surveys in your app you’ll need to make the following changes prior to the release of iOS 14:
+
+1. Install the latest Pollfish iOS SDK (version 5.3.0 or later)
+
+2. Add the AppTrackingTransparency permission request to your iOS apps and ask your users to grant access to the IDFA
+
+3. Initialize Pollfish ONLY after the AppTrackingTransparency permission is granted
+
+All of these steps are required for your apps to continue monetizing with Pollfish surveys on iOS 14. 
+
+<br/><br/>
 
 Below you can find a step by step guide on how to incorporate Pollfish surveys with AdMob mediation:
 
