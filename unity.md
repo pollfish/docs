@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.5.1">
+<div class="changelog" data-version="5.6.0">
+v5.6.0
+
+- Updated with iOS SDK (v5.6.0)
+
 v5.5.1
 
 - Updated with Android SDK (v5.5.1) that aligns with the latest Google Play policy changes
@@ -114,7 +118,9 @@ Pollfish Unity Plugin works with:
 Please set minimum version of your project accordingly.
 
 > **Note:** Pollfish does not work on Editor, so please do try only on mobile devices
+<br/>
 
+> **Note:** Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. As of iOS 14 you should initialize Pollfish iOS AdMob Adapter only if the relevant IDFA permission was granted by the user
 
 <br/><br/>
 
