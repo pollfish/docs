@@ -120,7 +120,7 @@ Please set minimum version of your project accordingly.
 > **Note:** Pollfish does not work on Editor, so please do try only on mobile devices
 <br/>
 
-> **Note:** Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. As of iOS 14 you should initialize Pollfish iOS AdMob Adapter only if the relevant IDFA permission was granted by the user
+> **Note:** Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. As of iOS 14 you should initialize Pollfish Unity plugin in iOS only if the relevant IDFA permission was granted by the user
 
 <br/><br/>
 
