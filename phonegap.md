@@ -9,6 +9,8 @@ Pollfish is a mobile monetization platform delivering surveys instead of ads thr
 *	iOS version 9.0+
 *	Apache Cordova v3.0.4+
 
+> **Note:** Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. As of iOS 14 you should initialize Pollfish Cordova/Ionic plugin in iOS only if the relevant IDFA permission was granted by the user
+
 ## Quick Guide
 
 * Create Pollfish developer account, create new app and grap it's API key
