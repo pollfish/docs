@@ -182,15 +182,7 @@ You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapo
 
 Apple announced a new [transparency framework](https://developer.apple.com/documentation/apptrackingtransparency) that requires changes to iOS apps with the release of iOS 14. Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. Therefore Pollfish iOS SDK should only be initialized after the relevant tracking permission is granted by the users. You can see an example in code on how to do that in Pollfish Sample Project code [here](https://github.com/pollfish/ios-sdk-pollfish/blob/master/SampleProjectSwift/SampleProjectSwift/FirstViewController.swift)
 
-To continue using Pollfish surveys in your app you’ll need to make the following changes prior to the release of iOS 14:
-
-1. Install the latest Pollfish iOS SDK (version 5.3.0 or later)
-
-2. Add the AppTrackingTransparency permission request to your iOS apps and ask your users to grant access to the IDFA
-
-3. Initialize Pollfish ONLY after the AppTrackingTransparency permission is granted
-
-All of these steps are required for your apps to continue monetizing with Pollfish surveys on iOS 14. 
+To continue using Pollfish surveys with iOS 14 you’ll need to update to the latest Pollfish iOS SDK (version 5.3.0 or later)!
 
 <br/><br/>
 
