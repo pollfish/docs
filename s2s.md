@@ -14,7 +14,7 @@ You can set a Server-to-Server webhook URL through Pollfish developer dashboard,
 
 Server-to-server callbacks can be used to retrieve several different params on publisher's server side.
 
-<img src="https://storage.googleapis.com/pollfish-images/s2s_status_form_o.png">
+<img src="https://storage.googleapis.com/pollfish_production/doc_images/click_id.png">
 
 In general, we advice to monitor all these parameters on your server side.
 
