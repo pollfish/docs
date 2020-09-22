@@ -29,10 +29,6 @@ Structure:
 ```shell
 https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 ```
-or (optionally - for extra security when submitting reward conversion values too)
-```
-https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true&sig="a sig"
-```
 
 -   This is a GET request
 
@@ -42,6 +38,12 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true&sig="a
 
 -   `sig=""` is an optional parameter used to secure the `reward_conversion` and 
      `reward_name` parameters passed on `json`
+     
+     example:
+```
+https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true&sig="signature"
+```
+     
 
 -   All JSON parameters must be of type String but able to be converted
     in the required type. 
