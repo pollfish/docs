@@ -29,6 +29,7 @@ Structure:
 ```shell
 https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 or
+```
 https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true&sig="a sig"
 ```
 
