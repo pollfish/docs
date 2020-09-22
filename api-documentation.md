@@ -29,7 +29,7 @@ Structure:
 ```shell
 https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
 ```
-or (optionally)
+or (optionally - for extra security when submitting reward conversion values too)
 ```
 https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true&sig="a sig"
 ```
