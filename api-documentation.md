@@ -200,9 +200,14 @@ $reward_conversion_hash = base64_encode(hash_hmac("sha1" , $reward_conversion, $
 ```
 
 ### Notes for `sig` query parameter
-In order to prevent any tampering on the `reward_conversion` and `reward_name` parameters, the platform supports validation by requiring a hash of the `reward_conversion`, `reward_name`, and `click_id` values passed on `json` parameter on register device. You can sign the combination of `reward_conversion`+`reward_name`+`click_id` parameter using the [HMAC-SHA1](https://en.wikipedia.org/wiki/HMAC) algorithm and your account's secret_key that can be retrieved from the [Account Information](//www.pollfish.com/dashboard/dev/account/information) page. The value should be then encoded using [Base64](https://en.wikipedia.org/wiki/Base64), then URL encoded using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding) and provided in the `sig` parameter. Note that when providing `reward_conversion` and the hashing option is enabled on your app `sig` must be set too.
+This parameter can be used optionally to prevent tampering around reward conversion hash parameter if passed within the register call. The platform supports url validation by requiring a hash of the `reward_conversion`, `reward_name`, and `click_id` values passed through the json parameter of the register device request. Failure to pass validation will return a status of Bad Request Response (http status: 400) with body "Hash check failed"
+In order to generate the sig field you should sign the combination of reward_conversion+reward_name+click_id parameter using the HMAC-SHA1 algorithm and your account's secret_key that can be retrieved from the Account Information page.
+
+The sig value should be then encoded using Base64, then URL encoded using Percent encoding and provided in the sig parameter.
+
 Note that although `reward_conversion` is mandatory for the hashing to work, the `reward_name` and `click_id` parameters are optional and you should add them for 
 extra security.
+
 Example generation of hash using the PHP programming language:
 ```php
 $sig = base64_encode(hash_hmac("sha1" , "$reward_conversion$reward_name$click_id", $secret_key, true));
