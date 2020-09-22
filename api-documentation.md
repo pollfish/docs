@@ -27,6 +27,8 @@ This call requests a new survey from Pollfish servers
 Structure:
 
 ```shell
+https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true
+or
 https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true&sig="a sig"
 ```
 
@@ -36,8 +38,8 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true&sig="a
 
 -   Include `dontencrypt=true` in every request
 
--   `sig=""` is an optional parameter and you have to reach out to us to enable 
-     this hashing option.
+-   `sig=""` is an optional parameter used to secure the `reward_conversion` and 
+     `reward_name` parameters passed on `json`
 
 -   All JSON parameters must be of type String but able to be converted
     in the required type. 
@@ -188,13 +190,22 @@ Below you can see the different enumeration for requesting a survey of a specifi
 |  |                     | Third Party         | 3
 
 
-### Notes for `reward_conversion_hash` (69)
+### Notes for `reward_conversion_hash` (69) [Deprecated, see section below <Notes for `sig` query parameter>]
 ___________________________
 In order to prevent tampering of the `reward_conversion` parameter, the platform supports validation by requiring a hash of the `reward_conversion` value. You can sign the `reward_conversion` parameter using the [HMAC-SHA1](https://en.wikipedia.org/wiki/HMAC) algorithm and your account's secret_key that can be retrieved from the [Account Information](//www.pollfish.com/dashboard/dev/account/information) page. The value should be then encoded using [Base64](https://en.wikipedia.org/wiki/Base64), then URL encoded using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding) and provided in the `reward_conversion_hash` parameter. Note that when providing `reward_conversion`, `reward_conversion_hash` must be set too.
 
 Example generation of hash using the PHP programming language:
 ```php
 $reward_conversion_hash = base64_encode(hash_hmac("sha1" , $reward_conversion, $secret_key, true));
+```
+
+### Notes for `sig` query parameter
+In order to prevent any tampering on the `reward_conversion` and `reward_name` parameters, the platform supports validation by requiring a hash of the `reward_conversion`, `reward_name`, and `click_id` values passed on `json` parameter on register device. You can sign the combination of `reward_conversion`+`reward_name`+`click_id` parameter using the [HMAC-SHA1](https://en.wikipedia.org/wiki/HMAC) algorithm and your account's secret_key that can be retrieved from the [Account Information](//www.pollfish.com/dashboard/dev/account/information) page. The value should be then encoded using [Base64](https://en.wikipedia.org/wiki/Base64), then URL encoded using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding) and provided in the `sig` parameter. Note that when providing `reward_conversion` and the hashing option is enabled on your app `sig` must be set too.
+Note that although `reward_conversion` is mandatory for the hashing to work, the `reward_name` and `click_id` parameters are optional and you should add them for 
+extra security.
+Example generation of hash using the PHP programming language:
+```php
+$sig = base64_encode(hash_hmac("sha1" , "$reward_conversion$reward_name$click_id", $secret_key, true));
 ```
 
 ### Notes for `content_type` (70)
@@ -205,16 +216,6 @@ This way you can retrieve a longer list of surveys than the html version (limite
 When the necessary demographics are not know for a specific device id (a user) then the the response will contain one "Demographic Survey" and the flag **"hasDemographics"** will be set to false. This Demographic survey (**"survey_class":"Pollfish/Demographics"** ), is part of the onboarding process of the user and it does not deliver any revenue when it gets completed (CPA =0). When a Demographic survey is presented, the users has to answer all the demographic questions in order to unlock the list of Pollfish and Mediation surveys. New demographic questions might be added from time to time (or re-asked) and surveys might be locked again until those are answered in the relevant demographic survey.
 
 If the **"content_type"** parameter is set to **"html"** or is ommited then the request will be served like an ordinary offerwall request, returning an html page with the surveys matched for each device_id (user).
-
-
-### Notes for `sig` query parameter
-In order to prevent any tampering on the `reward_conversion` and `reward_name` parameters, the platform supports validation by requiring a hash of the `reward_conversion`, `reward_name`, and `click_id` values passed on `json` parameter on register device. You can sign the combination of `reward_conversion`+`reward_name`+`click_id` parameter using the [HMAC-SHA1](https://en.wikipedia.org/wiki/HMAC) algorithm and your account's secret_key that can be retrieved from the [Account Information](//www.pollfish.com/dashboard/dev/account/information) page. The value should be then encoded using [Base64](https://en.wikipedia.org/wiki/Base64), then URL encoded using [Percent encoding](https://en.wikipedia.org/wiki/Percent-encoding) and provided in the `reward_conversion_hash` parameter. Note that when providing `reward_conversion` and we have enabled the hashing option on your app `sig` must be set too.
-Note that although `reward_conversion` is mandatory for the hashing to work, the `reward_name` and `click_id` parameters are optional and you should add them for 
-extra security.
-Example generation of hash using the PHP programming language:
-```php
-$sig = base64_encode(hash_hmac("sha1" , "$reward_conversion$reward_name$click_id", $secret_key, true));
-```
 
 #### Example requests/responses with content_type param:
 
