@@ -1,7 +1,7 @@
 <div>
 <h2 class="static-page-title">SURVEY RESPONDENTS PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 06/15/2020</div>
+<div class="updatedOn">Last updated: 10/01/2020</div>
 
 <br />
 
