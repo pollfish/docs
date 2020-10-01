@@ -291,7 +291,8 @@ You can at all times delete cookies from your browser. If you choose to do so, P
 **8.5 (for iOS) Disable Pollfish operation using iOS device settings**
 
 You can use certain iOS device settings in order to disable Pollfish operation. These settings allow you to withdraw your consent from being tracked and targeted for personalized ads. Although Pollfish does not serve ads but surveys, if you choose to use such opt-out options, Pollfish shall be technically unable to send to you any surveys in the future and shall stop collecting or processing any further data about you.
--On iOS version 13 and earlier only, you can enable the “Limit Ad Tracking” setting in your iOS settings (or similar setting, depending on the iOS version).
+
+- On iOS version 13 and earlier only, you can enable the “Limit Ad Tracking” setting in your iOS settings (or similar setting, depending on the iOS version).
 - On iOS version 14 and later only, you may disable the “Allow Apps to Request to Track” setting in your iOS settings (or similar setting, depending on the iOS version).
 
 
