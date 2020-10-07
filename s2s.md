@@ -106,6 +106,7 @@ third_party_termination | Generic reason for terminations that happen in mediati
 user_rejection | The respondent rejected the survey
 vpn | The respondent answered the survey using VPN or an IP address that characterized as suspicious
 survey_expired | The respondent was prevented from entering a survey that would have resulted in "survey closed" or "quota full"
+underage_profiling | The respondent is below the allowed age of participation
 
  
  > **Important:** These responses might change in the future
