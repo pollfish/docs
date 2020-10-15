@@ -19,7 +19,7 @@ Publishers can also change through their Dashboard per mediation network the fol
 - **Minimum Incidence Rate (IR)** - Publisher can set the minimum IR of accepted surveys. IR is calculated as a percentage of successful completes over the total surveys served.
 - **Desktop Vs Mobile Surveys (when available)** - Publishers can enable and allow surveys that are not mobile optimized (ideal for websites)
 
-<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_settings.png" width="600" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_new.png" width="600" height="auto"/>
 </p>
 
 <br/>
@@ -93,8 +93,7 @@ InnovateMR is a fiercely independent sampling company that delivers faster answe
 Research for Good Inc. (SaySo Rewards),is an online sample company that provides online market research surveys. It connects nonprofits with the market research industry as a new donation development channel. The company was incorporated in 2010 and is based in Redmond, Washington.
 
 
-<h3> <img src="https://storage.googleapis.com/pollfish_production/other/P2Sample.png" width="40" height="auto"/></h3>
+<h3> <img src="https://storage.googleapis.com/pollfish_production/doc_images/dynata.png" width="40" height="auto"/></h3>
 
-P2Sample, Inc. provides online sample and market research services. The company uses a sampling technology and provide sample in various areas, including Hispanic/ethnic targets, millennial/teens, and multinational audiences. P2Sample, Inc. was founded in 2007 and is based in Alpharetta, Georgia.
-
+Dynata is an online sample and market research services provider. Dynata serves nearly 6,000 market research, media and advertising agencies, publishers, consulting and investment firms and corporate customers in North America, South America, Europe, and Asia-Pacific.
 
