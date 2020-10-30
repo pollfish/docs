@@ -187,6 +187,18 @@ You hereby agree and warrant that any shared data, if and when shared with you b
 
 (vii) You can enable or disable Pollfish surveys in your apps/websites.
 
+(viii) Prohibition on Targeting of Certain Handheld Communications Devices for Survey Responses
+
+Section 889 of the John S. McCain National Defense Authorization Act for Fiscal Year 2019 (Pub. L. No. 115-232) places restrictions on any U.S. Government contractors’ ability to contract with or use certain Chinese telecommunications equipment or services based on U.S. national security concerns. Section 889(a)(1)(A) prohibits the head of a U.S. executive agency from procuring or obtaining any “covered telecommunications equipment or services” and Section 889(a)(1)(B) prohibits the head of an executive agency from contracting with (or extending or renewing a contract with) any “entity” that “uses” “covered telecommunications equipment or services as a substantial or essential component of any system or as a critical technology of any system.”  Relevant to this contract, "Covered telecommunications equipment or services" are defined as all telecommunications equipment or services produced and provided by Huawei Technologies Company or ZTE Corporation or any subsidiaries or affiliates of those entities.
+
+
+A)   It is prohibited for you to intervene or alter Pollfish’s targeting to intentionally target handheld communications devices, including mobile phones or tablets, manufactured or designed by Huawei Technologies Company or ZTE Corporation for survey respondents in work  you perform for Pollfish, Inc. under this contract.
+
+(B) If any intentional tampering with the Pollfish targeting system is discovered by you during your performance of this contract with Pollfish, Inc., you shall notify Pollfish, Inc. immediately by making a report to Andreas Vourkos, COO.  
+
+(C) It would not constitute a breach of contract for a survey to reach ZTE or Huawei devices unintentionally through a Pollfish survey in a manner that was not caused by you  intervening with the Pollfish targeting system in order to target those devices.
+
+
 **10. TERMINATION**
 
 Pollfish reserves the right to terminate this Agreement at any time, without prior notice and without liability, at its sole discretion. Pollfish will prohibit you from using its services if you misuse Pollfish service, if your application does not comply with Google Android or Apple iOS system and Policies (in case your application is uploaded to the relevant stores), is incompatible with the Laws and does not abide to the Rules – Obligations set forth in this Agreement or if you breach this Agreement in any way. If your application/website is suspended for any reason whatsoever, you acknowledge that you will not receive any payment from Pollfish.
