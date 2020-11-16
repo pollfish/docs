@@ -32,7 +32,7 @@ Below, you can see a list of all logical steps needed, in order to archieve the 
 
 <h3>1. Initialize Pollfish in reward mode (skip Pollfish Indicator)</h3>
 
-You should initialize Pollfish SDK in reward mode. With this mode, Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) will be skipped. Pollfish in reward mode ignores Pollfish panel behaviour from Pollfish Developer Dashboard (you can read more on Pollfish panel behaviour settings on Pollfish [FAQ page](https://pollfish.zendesk.com/hc/en-us/articles/205355891--What-do-different-PollFish-Indicator-Settings-mean-])). Reward mode always skips showing Pollfish indicator and hides Pollfish survey panel view from app users.
+You should initialize Pollfish SDK in reward mode. With this mode, Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) will be skipped. Pollfish in reward mode ignores Pollfish panel behaviour from Pollfish Developer Dashboard (you can read more on Pollfish panel behaviour settings on Pollfish [FAQ page](https://help.pollfish.com/en/collections/24867-faq-publishers). Reward mode always skips showing Pollfish indicator and hides Pollfish survey panel view from app users.
 
 <h3>2. Register & listen to Pollfish survey received notification</h3>
 
