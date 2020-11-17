@@ -585,17 +585,21 @@ and in App Store Connect in the App's Privacy Policy update the relevant Data Co
 | Type | Description | Tracking | Explanation 
 | --- | --- | --- | --- |
 |  **Contact Info** |
-| Name | Such as first or last name | NO | --- |
-| Email Address | Including but not limited to a hashed email address | NO | --- |
-| Phone Number | Including but not limited to a hashed phone number | NO | --- |
-| Physical Addrress | Such as home address, physical address, or mailing address | NO | --- |
-| Other User Contact Info | Any other information that can be used to contact the user outside the app | NO | --- |
+| Name | Such as first or last name | NO |  |
+| Email Address | Including but not limited to a hashed email address | NO |  |
+| Phone Number | Including but not limited to a hashed phone number | NO |  |
+| Physical Addrress | Such as home address, physical address, or mailing address | NO |  |
+| Other User Contact Info | Any other information that can be used to contact the user outside the app | NO |  |
 |  **Health & Fitness** |
 | Health | Health and medical data, including but not limited to from the Clinical Health Records API, HealthKit API, MovementDisorderAPIs, or health-related human subject research or any other user provided health or medical data | YES | Pollfish does not directly collect any health data. However some clients might create surveys that might be asking some general health questions |
 | Fitness | Fitness and exercise data, including but not limited to the Motion and Fitness API | YES | Pollfish does not directly collect any fitness data. However some clients might create surveys that might be asking some general health questions |
-
-
-
+|  **Financial Info** |
+| Payment Info | Such as form of payment, payment card number, or bank account number | NO |  |
+| Credit Info | Such as credit score | NO |  |
+| Other Financial Info | Such as salary, income, assets, debts, or any other financial information | YES | Income demographic data question in Demographic Data as part of the onboarding process|
+|  **Location** |
+| Precise Location | Information that describes the location of a user or device with the same or greater resolution as a latitude and longitude with three or more decimal places | NO |  |
+| Coarse Location | Information that describes the location of a user or device with lower resolution than a latitude and longitude with three or more decimal places, such as approximate location services | NO |  |
 
 
 ---
