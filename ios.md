@@ -584,9 +584,12 @@ and in App Store Connect in the App's Privacy Policy update the relevant Data Co
 
 | Type | Description | Tracking | Explanation 
 | --- | --- | --- | --- |
-
-
-
+| Contact Info  |
+| Name | Such as first or last name | NO | --- |
+| Email Address | Including but not limited to a hashed email address | NO | --- |
+| Phone Number | Including but not limited to a hashed phone number | NO | --- |
+| Physical Addrress | Such as home address, physical address, or mailing address | NO | --- |
+| Other User Contact Info | Any other information that can be used to contact the user outside the app | NO | --- |
 
 ---
 <br/>
