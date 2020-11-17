@@ -171,7 +171,7 @@ You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapo
 2. Run **pod install** on the command line to install  Pollfish cocoapod.
 3. Call init function of Pollfish in the App’s Delegate
 4. Set to **Release mode** and release in AppStore
-5. Update your privacy policy
+5. Update your Privacy Policy both in the app and on AppStore Connect
 6. Request your account to get verified from Pollfish Dashboard
 <br/>
 > **Requirements:** Pollfish framework works with iOS version 9.0+ and XCode9+.  
@@ -570,17 +570,15 @@ Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefor
 
 <br/>
 
-### 7\.  Update your App's Privacy Policy & Update Data Collection questionnaire on App Store Connect
+### 7\.  Update your App's Privacy Policy in the app and on AppStore Connect
 
-Add the following paragraph to your app's privacy policy:
+Add the following paragraph to your **App's Privacy Policy**:
 
 *“Survey Serving Technology*  
 
 *This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Developers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user’s device data (including Advertising ID which will may be processed by Pollfish only in strict compliance with google play policies- and/or other device data) and response meta-data is automatically sent to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. For a full list of data received by Pollfish through this app, please read carefully Pollfish respondent terms located at https://www.pollfish.com/terms/respondent. These data will be associated with your answers to the questionnaires whenever Pollfish sents such questionnaires to eligible users. By downloading the application you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by using the Pollfish “opt out section” available on Pollfish website . We once more invite you to check the respondent’s terms of use, if you wish to have more detailed view of the way Pollfish works.*  
-
 <br/>
-
-and in App Store Connect in the App's Privacy Policy update the relevant Data Collection questionnaire with the following:
+and on **App Store Connect** in the App's Privacy Policy, update the relevant data collection questionnaire with the following choices as suggested by the latest [https://developer.apple.com/app-store/app-privacy-details/](AppStore's policies):
 
 | Type | Description | Tracking | Explanation 
 | --- | --- | --- | --- |
@@ -591,8 +589,8 @@ and in App Store Connect in the App's Privacy Policy update the relevant Data Co
 | Physical Addrress | Such as home address, physical address, or mailing address | NO |  |
 | Other User Contact Info | Any other information that can be used to contact the user outside the app | NO |  |
 |  **Health & Fitness** | --- | --- | --- |
-| Health | Health and medical data, including but not limited to from the Clinical Health Records API, HealthKit API, MovementDisorderAPIs, or health-related human subject research or any other user provided health or medical data | YES | Pollfish does not directly collect any health data. However some clients might create surveys that might be asking some general health questions |
-| Fitness | Fitness and exercise data, including but not limited to the Motion and Fitness API | YES | Pollfish does not directly collect any fitness data. However some clients might create surveys that might be asking some general health questions |
+| Health | Health and medical data, including but not limited to from the Clinical Health Records API, HealthKit API, MovementDisorderAPIs, or health-related human subject research or any other user provided health or medical data | YES | Pollfish does not directly collect any health data. However some clients might create surveys that could be asking some general health questions |
+| Fitness | Fitness and exercise data, including but not limited to the Motion and Fitness API | YES | Pollfish does not directly collect any fitness data. However some clients might create surveys that could be asking some general fitness questions |
 |  **Financial Info** | --- | --- | --- |
 | Payment Info | Such as form of payment, payment card number, or bank account number | NO |  |
 | Credit Info | Such as credit score | NO |  |
@@ -601,7 +599,7 @@ and in App Store Connect in the App's Privacy Policy update the relevant Data Co
 | Precise Location | Information that describes the location of a user or device with the same or greater resolution as a latitude and longitude with three or more decimal places | NO |  |
 | Coarse Location | Information that describes the location of a user or device with lower resolution than a latitude and longitude with three or more decimal places, such as approximate location services | NO |  |
 |  **Sensitive Info** | --- | --- | --- |
-| Sensitive Info | Such as racial or ethnic data, sexual orientation, pregnancy or childbirth information, disability, religious or philosophical beliefs, trade union membership, political opinion, genetic information, or biometric data | YES | Number of children and race are asked during the demographic data collection process  |
+| Sensitive Info | Such as racial or ethnic data, sexual orientation, pregnancy or childbirth information, disability, religious or philosophical beliefs, trade union membership, political opinion, genetic information, or biometric data | YES | Number of children and race are asked during the demographic data collection process when onboarding the user |
 |  **Contacts** | --- | --- | --- |
 | Contacts | Such as a list of contacts in the user’s phone, address book, or social graph | NO | |
 |  **User Content** | --- | --- | --- |
@@ -616,13 +614,13 @@ and in App Store Connect in the App's Privacy Policy update the relevant Data Co
 |  **Search History** | --- | --- | --- |
 | Search History | Information about searches the user has performed | NO |  |
 |  **Identifiers** | --- | --- | --- |
-| User ID | Such as screen name, handle, account ID, assigned user ID, customer number, or other user- or account-level ID that can be used to identify a particular user or account | --- | --- |
-| Device ID | Such as the device’s advertising identifier, or other device-level ID |  |  |
+| User ID | Such as screen name, handle, account ID, assigned user ID, customer number, or other user- or account-level ID that can be used to identify a particular user or account | YES | Publishers can pass a unique user if and receive it back in s2s callbacks |
+| Device ID | Such as the device’s advertising identifier, or other device-level ID | YES | Pollfish SDK works upon the IDFA |
 |  **Purchases** | --- | --- | --- |
 | Purchase History | An account’s or individual’s purchases or purchase tendencies | NO | |
 |  **Usage Data** | --- | --- | --- |
 | Product Interaction | Such as app launches, taps, clicks, scrolling information, music listening data, video views, saved place in a game, video, or song, or other information about how the user interacts with the app | NO |  |
-| Advertising Data | Such as information about the advertisements the user has seen | NO | |
+| Advertising Data | Such as information about the advertisements the user has seen | NO | Pollfish monitors the number of surveys the user has seen but not any advertisement outside within or outside it's context |
 | Other Usage Data | Any other data about user activity in the app | NO | |
 |  **Diagnostics** | --- | --- | --- |
 | Crash Data | Such as crash logs | NO | |
