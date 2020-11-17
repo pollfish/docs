@@ -581,8 +581,8 @@ Add the following paragraph to your **App's Privacy Policy**:
 and on **App Store Connect** in the App's Privacy Policy section, update the relevant data collection questionnaire with the following choices as suggested by the latest AppStore's policies:
 <br/>
 
- | |Type | Description | Tracking | Explanation 
- | |--- | --- | --- | --- |
+ | | Type | Description | Tracking | Explanation 
+ | | --- | --- | --- | --- |
  | | **Contact Info** | --- | --- | --- |
  | | Name | Such as first or last name | NO |  |
  | | Email Address | Including but not limited to a hashed email address | NO |  |
