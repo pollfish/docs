@@ -584,12 +584,19 @@ and in App Store Connect in the App's Privacy Policy update the relevant Data Co
 
 | Type | Description | Tracking | Explanation 
 | --- | --- | --- | --- |
-| Contact Info  |
+|  **Contact Info** |
 | Name | Such as first or last name | NO | --- |
 | Email Address | Including but not limited to a hashed email address | NO | --- |
 | Phone Number | Including but not limited to a hashed phone number | NO | --- |
 | Physical Addrress | Such as home address, physical address, or mailing address | NO | --- |
 | Other User Contact Info | Any other information that can be used to contact the user outside the app | NO | --- |
+|  **Health & Fitness** |
+| Health | Health and medical data, including but not limited to from the Clinical Health Records API, HealthKit API, MovementDisorderAPIs, or health-related human subject research or any other user provided health or medical data | YES | Pollfish does not directly collect any health data. However some clients might create surveys that might be asking some general health questions |
+| Fitness | Fitness and exercise data, including but not limited to the Motion and Fitness API | YES | Pollfish does not directly collect any fitness data. However some clients might create surveys that might be asking some general health questions |
+
+
+
+
 
 ---
 <br/>
