@@ -784,28 +784,11 @@ override func viewWillAppear(animated: Bool)
 ```
 <br/>
 
-### 11\. Send beacon information (optional)
-
-You can send beacon information if available anytime after initialization to get to be eligible for receiveing beacon surveys by calling the following:  
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
-[Pollfish sendBeaconInfo:(CLBeacon *)beacon];
-```
-
-<span style="text-decoration: underline">Swift:</span>
-
-```
-Pollfish.sendBeaconInfo(beacon: CLBeacon!);
-```
-<br/>
-
-### 12\.Implement Pollfish event listeners (optional)
+### 11\.Implement Pollfish event listeners (optional)
 
 > **Note:** Pollfish listeners/notifications fire in an asynchronous way. Having said that it's possible that you receive them while being in a background thread and not the main UI thread. If you want to make any prompts or custom changes on the view level when you receive those notifications, please be sure to make them on the main UI thread
 
-### 12.1 Get notified when a survey is received
+### 11.1 Get notified when a survey is received
 
 
 You can be notified when a survey is received via the iOS Notification Center. Note that the observer should be already registered when a survey is received in order to run the selector.  
@@ -908,7 +891,7 @@ The whole set of values currently supported are:
 When a new mediation network enters the Pollfish network the appropriate values will be added.
 
 <br/>
-### 12.2 Get notified when a survey is completed
+### 11.2 Get notified when a survey is completed
 
 <span style="text-decoration: underline">Objective-C:</span>
 
@@ -973,7 +956,7 @@ Similarly to survey received notification, upon completion you can get informed 
 - **reward_name** :  a virtual reward name as specified on Developer Dashboard* 
 - **reward_vale** :  a virtual reward value as caluclated via a given echange rate on Developer Dashboard.* 
 <br/>
-### 12.3 Get notified when a user is not eligible for a Pollfish survey
+### 11.3 Get notified when a user is not eligible for a Pollfish survey
 
 
 You can be notified when a user is not eligible for a Pollfish survey after accepting to take one, via the iOS Notification Center.  
@@ -1008,7 +991,7 @@ func pollfishUsernotEligible(_ notification:Notification)
 ```
 
 <br/>
-### 12.4 Get notified when no survey is available
+### 11.4 Get notified when no survey is available
 
 
 You can be notified when a survey is not available for a user via the iOS Notification Center.  
@@ -1043,7 +1026,7 @@ func pollfishNotAvailable(_ notification:Notification)
 ```
 
 <br/>
-### 12.5 Get notified when Pollfish panel has opened
+### 11.5 Get notified when Pollfish panel has opened
 
 
 You can be notified when a user opens Pollfish survey panel via the iOS Notification Center.  
@@ -1078,7 +1061,7 @@ func pollfishOpened(_ notification:Notification)
 ```
 
 <br/>
-### 12.6 Get notified when Pollfish panel has closed
+### 11.6 Get notified when Pollfish panel has closed
 
 
 You can be notified when a user closes Pollfish survey panel via the iOS Notification Center.  
@@ -1114,7 +1097,7 @@ func pollfishClosed(_ notification:Notification)
 
 <br/>
 
-### 12.7 Get notified when a user rejected a survey (added in Pollfish v4.4.0)
+### 11.7 Get notified when a user rejected a survey (added in Pollfish v4.4.0)
 
 
 You can be notified when a user rejected a survey via the iOS Notification Center.  
@@ -1150,7 +1133,7 @@ func pollfishUserRejectedSurvey(_ notification:Notification)
 
 <br/>
 
-### 13\. Check if Pollfish survey is still available on your device (optional)
+### 12\. Check if Pollfish survey is still available on your device (optional)
 
 It happens that time had past since you initialized Pollfish and a survey is received. If you want to check if survey is still avaialble on your device and has not expired you can check by calling:
 
