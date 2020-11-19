@@ -1,7 +1,11 @@
-<div class="changelog" data-version="5.6.0">
+<div class="changelog" data-version="5.6.1">
+v5.6.1
+
+- Updated with iOS SDK (v5.4.1) and Android SDK (v5.6.0)
+
 v5.6.0
 
-- Updated with iOS SDK (v5.6.0)
+- Updated with iOS SDK (v5.3.0)
 
 v5.5.1
 
