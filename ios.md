@@ -1,4 +1,12 @@
-<div class="changelog" data-version="5.3.1">	
+<div class="changelog" data-version="5.4.1">
+v.5.4.1
+
+- Removed from user attributes the ability to send social ids and other user info aside from demographics
+
+v.5.4.0
+
+- Removed public interfaces for sending location and beacon info
+
 v.5.3.1
 
 - Added a modulemap for Swift interoperability
