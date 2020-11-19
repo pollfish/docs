@@ -1063,8 +1063,6 @@ If you wish to receive highly targeted surveys in your app and increase your cha
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
-
-If you want to be eligible for beacon based surveys for your app you can include the following permsissions in your AndroidManifest.xml file:  
 <br/><br/>
 ### 16\. Server-to-server callbacks on survey completion (optional)
 
