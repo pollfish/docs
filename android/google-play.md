@@ -1,9 +1,9 @@
 <div class="changelog" data-version="5.6.0">
 v5.6.0
 
-- Updated functionality to align with the latest Google Play policy changes. 
-- Location and bluetooth info retrieval functionality was removed. 
-- Removed users properties options around social ids and other user info aside from demographics
+- Updated functionality to align with the latest Google Play policy changes
+- Location and bluetooth info retrieval functionality was removed
+- Removed option from UserProperties to send info around social ids and other user info aside from demographics
 
 v5.5.1
 
