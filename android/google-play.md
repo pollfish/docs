@@ -1,4 +1,10 @@
-<div class="changelog" data-version="5.5.1">
+<div class="changelog" data-version="5.6.0">
+v5.6.0
+
+- Updated functionality to align with the latest Google Play policy changes. 
+- Location and bluetooth info retrieval functionality was removed. 
+- Removed users properties options around social ids and other user info aside from demographics
+
 v5.5.1
 
 - Updated functionality to align with the latest Google Play policy changes
@@ -1055,18 +1061,10 @@ If you wish to receive highly targeted surveys in your app and increase your cha
 
 ```java
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
 
 If you want to be eligible for beacon based surveys for your app you can include the following permsissions in your AndroidManifest.xml file:  
-
-```java
-<uses-permission android:name="android.permission.BLUETOOTH" />
-<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-```
 <br/><br/>
 ### 16\. Server-to-server callbacks on survey completion (optional)
 
