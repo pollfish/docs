@@ -1,7 +1,7 @@
 <div>
 <h2 class="static-page-title">SURVEY RESPONDENTS PRIVACY POLICY</h2>
 
-<div class="updatedOn">Last updated: 10/01/2020</div>
+<div class="updatedOn">Last updated: 20/11/2020</div>
 
 <br />
 
@@ -71,33 +71,19 @@ These are the data received automatically by Pollfish when a user connects to a 
 8. device manufacturer
 9. version of Pollfish-enabled app
 10. type of connection - e.g. wifi
-11. last saved location, latitude, longitude, accuracy- only if the current app has permission to use location services
-12. device language
-13. if roaming is used
-14. if accessibility is enabled
-15. if the user is an app publisher
-16. if installation of third party apps is allowed
-17. if the Device is hardware accelerated
-18. exact time of communication with server
-19. Pollfish api key for the application used
-20. if the application used runs the sdk version of google play or universal
-21. **user&#39;s ip address (retrieved when connecting to the server)**
-22. device brand info
-23. device board info
-24. android web view user agent
-25. further location info (latitude, longitude, accuracy, altitude etc.)
-
-Please note that once an app-user accepts our privacy policy and agrees to participate in a survey, Pollfish may be able to collect, additionally, only in Android, the following data: 
-- Connectable networks
-- **Device IMEI (only when the app publisher has obtained permission of the user to access such data)** 
-- Mac address (only on Android Lollipop and below)
-- List of running services
-- Memory information
-- CPU information
-- Bluetooth information
-- List of initial scan results of available BLE devices
-- **Android ID (randomly generated number by the system)**
-- **Hardware serial number**
+11. device language
+12. if roaming is used
+13. if accessibility is enabled
+14. if the user is an app publisher
+15. if installation of third party apps is allowed
+16. if the Device is hardware accelerated
+17. exact time of communication with server
+18. Pollfish api key for the application used
+19. if the application used runs the sdk version of google play or universal
+20. **user&#39;s ip address (retrieved when connecting to the server)**
+21. device brand info
+22. device board info
+23. android web view user agent
 
 **3.1.1.2 For iOS**
 
@@ -112,9 +98,8 @@ Please note that once an app-user accepts our privacy policy and agrees to parti
 9. MNC
 10. exact time of communication with server
 11. web view user agent
-12. location or Bluetooth data (if provided by the Publisher) 
-13. Pollfish api key for the application used
-14. **user&#39;s IP address** (retrieved when connecting to the server),
+12. Pollfish api key for the application used
+13. **user&#39;s IP address** (retrieved when connecting to the server),
 
 **3.1.2 Web-app user automatically received data**
 
@@ -333,7 +318,8 @@ Information we collect is described in detail in section 3 of this Policy. We wi
 | D. Commercial information. <br/>Records of personal property, products or services purchased, obtained, or considered, or other purchasing or consuming histories or tendencies. | YES only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients  | YES | Suppliers of following services:<br/>- Cloud hosting<br/>- Analytics services<br/>- Anti-fraud services<br/>- affiliates  |
 | E. Biometric information. <br/>Genetic, physiological, behavioral, and biological characteristics, or activity patterns used to extract a template or other identifier or identifying information, such as, fingerprints, faceprints, and voiceprints, iris or retina scans, keystroke, gait, or other physical patterns, and sleep, health, or exercise data. | NO | N/A | N/A | N/A | N/A | N/A | N/A |
 | F. Internet or other similar network activity. <br/>Browsing history, search history, information on a consumer&#39;s interaction with a website, application, or advertisement. | NO | N/A | N/A | N/A | N/A | N/A | N/A |
-| G. Geolocation data. <br/>Physical location or movements. | YES(only general-approximate physical location) | - From App-Publishers<br/>- Directly from Pollfish Respondents answering a survey | YES | YES | -to Researcher Clients<br/>- to Mediation Partners *<br/>- To one certain &quot;Other Client&quot; engaging in Digital Threat Management *<br/>- To a certain 3rd party data marketplace/data exchanger * | YES | Suppliers of following services:<br/>- Cloud hosting<br/>- Analytics services<br/>- Anti-fraud services<br/>- affiliates |
+| G. Geo
+on data. <br/>Physical location or movements. | YES(only general-approximate physical location) | - From App-Publishers<br/>- Directly from Pollfish Respondents answering a survey | YES | YES | -to Researcher Clients<br/>- to Mediation Partners *<br/>- To one certain &quot;Other Client&quot; engaging in Digital Threat Management *<br/>- To a certain 3rd party data marketplace/data exchanger * | YES | Suppliers of following services:<br/>- Cloud hosting<br/>- Analytics services<br/>- Anti-fraud services<br/>- affiliates |
 | H. Sensory data. <br/>Audio, electronic, visual, thermal, olfactory, or similar information.  | NO | N/A | N/A | N/A | N/A | N/A | N/A |
 | I. Professional or employment-related information. <br/>Current or past job history or performance evaluations. | YES (only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions and/or a Pollfish Internal Sociodemographic survey) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients<br/>- to Mediation Partners<br/>- To one certain &quot;Other Client&quot; engaging in Digital Threat Management *<br/>- To a certain 3rd party data marketplace/data exchanger * | YES | Suppliers of following services:<br/>- Cloud hosting<br/>- Analytics services<br/>- Anti-fraud services<br/>- affiliates   |
 | J. Non-public education information (per the Family Educational Rights and Privacy Act (20 U.S.C. Section 1232g, 34 C.F.R. Part 99)). <br/>Education records directly related to a student maintained by an educational institution or party acting on its behalf, such as grades, transcripts, class lists, student schedules, student identification codes, student financial information, or student disciplinary records. | NO | N/A | N/A | N/A | N/A | N/A | N/A |
