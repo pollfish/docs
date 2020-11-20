@@ -107,7 +107,7 @@ Reward mode false during initialization enables controlling the behavior of Poll
 You can send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. 
 
 
-You can see a detailed list of the user attribues you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
+You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
 
 For example:
 
