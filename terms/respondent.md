@@ -308,47 +308,13 @@ Information we collect is described in detail in section 3 of this Policy. We wi
 | **CCPA CATEGORY OF DATA** | **COLLECTED BY POLLFISH** | **Source of collection** | **COLLECTED WITHIN THE PRECEDING 12 MONTHS** | **SOLD WITHIN THE PRECEDING 12 MONTHS** | **SOLD TO WITHIN THE PRECEDING 12 MONTHS** | **SHARED FOR BUSINESS PURPOSES** | **SHARED WITH FOR BUSINESS PURPOSES** |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | A. Identifiers.
- Examples: A real name, alias, postal address, unique personal identifier, online identifier, Internet Protocol address, email address, account name, Social Security number, driver&#39;s license number, passport number, or other similar identifiers. | YES (only automatically received data and sociodemographic data) | - From App-Publishers (as regards automatically received data)
- - Directly from Pollfish Respondents answering a Pollfish Internal Sociodemographic Survey (as regards sociodemographic data) | YES | YES | - to Researcher Clients
- - to Mediation Partners
- - To a certain &quot;Other Client&quot; engaging in Digital threat management
- - To a certain 3rd party data marketplace/data exchanger | YES | Suppliers of following services:
- - Cloud hosting
- - legal services
- - Analytics services
- - Anti-fraud services
- - mailing and communication services
- - affiliates |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+ Examples: A real name, alias, postal address, unique personal identifier, online identifier, Internet Protocol address, email address, account name, Social Security number, driver&#39;s license number, passport number, or other similar identifiers. | YES (only automatically received data and sociodemographic data) | - From App-Publishers (as regards automatically received data)  - Directly from Pollfish Respondents answering a Pollfish Internal Sociodemographic Survey (as regards sociodemographic data) | YES | YES | - to Researcher Clients - to Mediation Partners - To a certain &quot;Other Client&quot; engaging in Digital threat management - To a certain 3rd party data marketplace/data exchanger | YES | Suppliers of following services: - Cloud hosting - legal services - Analytics services - Anti-fraud services - mailing and communication services - affiliates |
 | B. Personal information categories listed in the California Customer Records statute (Cal. Civ. Code § 1798.80(e)).
- A name, signature, Social Security number, physical characteristics or description, address, telephone number, passport number, driver&#39;s license or state identification card number, insurance policy number, education, employment, employment history, bank account number, credit card number, debit card number, or any other financial information, medical information, or health insurance information.
- Some personal information included in this category may overlap with other categories. | YES(only as regards  **anonymous**  education, medical info, financial info, health insurance info and employment info and only insofar and to the extent that the Pollfish Respondents answers related Pollifsh Researcher Client Survey questions and/or a Pollfish Internal Sociodemographic Survey) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients
- - to Mediation Partners \*
- - To a certain &quot;Other Client&quot; engaging in Digital threat management \*
- - To a certain 3rd party data marketplace/data exchanger \* | YES | Suppliers of following services:
- - Cloud hosting
- - legal services
- - Analytics services
- - Anti-fraud services
- - mailing and communication services
- - affiliates |
+ A name, signature, Social Security number, physical characteristics or description, address, telephone number, passport number, driver&#39;s license or state identification card number, insurance policy number, education, employment, employment history, bank account number, credit card number, debit card number, or any other financial information, medical information, or health insurance information. Some personal information included in this category may overlap with other categories. | YES(only as regards  **anonymous**  education, medical info, financial info, health insurance info and employment info and only insofar and to the extent that the Pollfish Respondents answers related Pollifsh Researcher Client Survey questions and/or a Pollfish Internal Sociodemographic Survey) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients - to Mediation Partners \* - To a certain &quot;Other Client&quot; engaging in Digital threat management \* - To a certain 3rd party data marketplace/data exchanger \* | YES | Suppliers of following services: - Cloud hosting - legal services - Analytics services - Anti-fraud services - mailing and communication services - affiliates |
 | C. Protected classification characteristics under California or federal law.
- Age (40 years or older), race, color, ancestry, national origin, citizenship, religion or creed, marital status, medical condition, physical or mental disability, sex (including gender, gender identity, gender expression, pregnancy or childbirth and related medical conditions), sexual orientation, veteran or military status, genetic information (including familial genetic information). | YES (only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions and/or a Pollfish Internal Sociodemographic survey) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients
- - to Mediation Partners
- - To a certain &quot;Other Client&quot; engaging in Digital threat management \*
- - To a certain 3rd party data marketplace/data exchanger \* | YES | Suppliers of following services:
- - Cloud hosting
- - Analytics services
- - Anti-fraud services
- - affiliates |
-| D. Commercial information.
- Records of personal property, products or services purchased, obtained, or considered, or other purchasing or consuming histories or tendencies. | YES only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients | YES | Suppliers of following services:
- - Cloud hosting
- - Analytics services
- - Anti-fraud services
- - affiliates |
-| E. Biometric information.
- Genetic, physiological, behavioral, and biological characteristics, or activity patterns used to extract a template or other identifier or identifying information, such as, fingerprints, faceprints, and voiceprints, iris or retina scans, keystroke, gait, or other physical patterns, and sleep, health, or exercise data. | NO | N/A | N/A | N/A | N/A | N/A | N/A |
+ Age (40 years or older), race, color, ancestry, national origin, citizenship, religion or creed, marital status, medical condition, physical or mental disability, sex (including gender, gender identity, gender expression, pregnancy or childbirth and related medical conditions), sexual orientation, veteran or military status, genetic information (including familial genetic information). | YES (only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions and/or a Pollfish Internal Sociodemographic survey) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients - to Mediation Partners - To a certain &quot;Other Client&quot; engaging in Digital threat management \* - To a certain 3rd party data marketplace/data exchanger \* | YES | Suppliers of following services: - Cloud hosting - Analytics services - Anti-fraud services - affiliates |
+| D. Commercial information. Records of personal property, products or services purchased, obtained, or considered, or other purchasing or consuming histories or tendencies. | YES only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients | YES | Suppliers of following services: - Cloud hosting - Analytics services - Anti-fraud services - affiliates |
+| E. Biometric information. Genetic, physiological, behavioral, and biological characteristics, or activity patterns used to extract a template or other identifier or identifying information, such as, fingerprints, faceprints, and voiceprints, iris or retina scans, keystroke, gait, or other physical patterns, and sleep, health, or exercise data. | NO | N/A | N/A | N/A | N/A | N/A | N/A |
 | F. Internet or other similar network activity.
  Browsing history, search history, information on a consumer&#39;s interaction with a website, application, or advertisement. | NO | N/A | N/A | N/A | N/A | N/A | N/A |
 | G. Geo |
@@ -359,35 +325,15 @@ Information we collect is described in detail in section 3 of this Policy. We wi
  |
  |
  |
-| on data.
- Physical location or movements. | YES(only general-approximate physical location) | - From App-Publishers
- - Directly from Pollfish Respondents answering a survey | YES | YES | -to Researcher Clients
- - to Mediation Partners \*
- - To one certain &quot;Other Client&quot; engaging in Digital Threat Management \*
- - To a certain 3rd party data marketplace/data exchanger \* | YES | Suppliers of following services:
- - Cloud hosting
- - Analytics services
- - Anti-fraud services
- - affiliates |
+| on data. Physical location or movements. | YES(only general-approximate physical location) | - From App-Publishers - Directly from Pollfish Respondents answering a survey | YES | YES | -to Researcher Clients - to Mediation Partners \* - To one certain &quot;Other Client&quot; engaging in Digital Threat Management \* - To a certain 3rd party data marketplace/data exchanger \* | YES | Suppliers of following services: - Cloud hosting - Analytics services - Anti-fraud services - affiliates |
 | H. Sensory data.
  Audio, electronic, visual, thermal, olfactory, or similar information. | NO | N/A | N/A | N/A | N/A | N/A | N/A |
 | I. Professional or employment-related information.
- Current or past job history or performance evaluations. | YES (only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions and/or a Pollfish Internal Sociodemographic survey) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients
- - to Mediation Partners
- - To one certain &quot;Other Client&quot; engaging in Digital Threat Management \*
- - To a certain 3rd party data marketplace/data exchanger \* | YES | Suppliers of following services:
- - Cloud hosting
- - Analytics services
- - Anti-fraud services
- - affiliates |
+ Current or past job history or performance evaluations. | YES (only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions and/or a Pollfish Internal Sociodemographic survey) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients - to Mediation Partners - To one certain &quot;Other Client&quot; engaging in Digital Threat Management \* - To a certain 3rd party data marketplace/data exchanger \* | YES | Suppliers of following services: - Cloud hosting - Analytics services - Anti-fraud services - affiliates |
 | J. Non-public education information (per the Family Educational Rights and Privacy Act (20 U.S.C. Section 1232g, 34 C.F.R. Part 99)).
  Education records directly related to a student maintained by an educational institution or party acting on its behalf, such as grades, transcripts, class lists, student schedules, student identification codes, student financial information, or student disciplinary records. | NO | N/A | N/A | N/A | N/A | N/A | N/A |
 | K. Inferences drawn from other personal information.
- Profile reflecting a person&#39;s preferences, characteristics, psychological trends, predispositions, behavior, attitudes, intelligence, abilities, and aptitudes. | YES (only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients | YES | Suppliers of following services:
- - Cloud hosting
- - Analytics services
- - Anti-fraud services
- - affiliates |
+ Profile reflecting a person&#39;s preferences, characteristics, psychological trends, predispositions, behavior, attitudes, intelligence, abilities, and aptitudes. | YES (only insofar and to the extent that the Pollfish Respondents answer related Pollifsh Researcher Client Survey questions) | - Directly from Pollfish Respondents answering a related survey question | YES | YES | -to Researcher Clients | YES | Suppliers of following services: - Cloud hosting - Analytics services - Anti-fraud services - affiliates |
 
 Sharings marked with an Asterisk in column 6 of table above (under heading: &quot;SOLD TO WITHIN THE PRECEDING 12 MONTHS&quot;) refers only to  **Automatically Received Data and Sociodemographic Data**  and does not include any Content Data, i.e. does not include information from answers derived from a Pollfish Researcher Client Survey.
 
