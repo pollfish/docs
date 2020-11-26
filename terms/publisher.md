@@ -315,7 +315,6 @@ If you choose to communicate with us, we may collect and store such communicatio
 | **DATA-RECIPIENT** | **PURPOSE** |
 | --- | --- |
 | Cloud Service Providers | Data Hosting and Data Management |
-| --- | --- |
 | Suppliers of Analytics Services (such as Google analytics) | Analytics |
 | Lawyers | Protection of legal interests |
 | State Authorities | Compliance with regulatory and legal obligations |
