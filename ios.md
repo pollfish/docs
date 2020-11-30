@@ -1,4 +1,9 @@
-<div class="changelog" data-version="5.4.1">
+<div class="changelog" data-version="5.5.0">
+v.5.5.0
+
+- Changed packaging to .xcframework
+- Added support for arm64 devices
+	
 v.5.4.1
 
 - Removed from user attributes the ability to send social ids and other user info aside from demographics
@@ -155,7 +160,7 @@ v4.0.0
 ## Quick Guide
 
 1.  Download Pollfish iOS SDK and unzip it
-2.  Import pollfish.framework to your project
+2.  Import pollfish.xcframework to your project
 3.  Import AdSupport.framework, SystemConfiguration.framework, WebKit.framework and CoreTelephony.framework to your project
 4.  Call init function of Pollfish when a view is loaded or in the App’s Delegate
 5.  Set to **Release mode** and release in AppStore
