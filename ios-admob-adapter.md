@@ -1,4 +1,9 @@
-<div class="changelog" data-version="5.4.1.1">
+<div class="changelog" data-version="5.5.0.0">
+v.5.5.0.0
+
+- Changed packaging to .xcframework
+- Added support for arm64 devices
+    
 v.5.4.1.1
 
 - Updated with Pollfish iOS SDK 5.4.1
