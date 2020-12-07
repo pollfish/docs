@@ -162,56 +162,48 @@ Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin zip fi
 <br/>
 Imported files will be listed in the following directories:
 
-![alt text](https://storage.googleapis.com/pollfish_production/doc_images/import_un.png)
+![alt text](https://storage.googleapis.com/pollfish_production/doc_images/import_unity_new.png)
 
-- **Assets/Editor** – Files to help with initial setup
-
+- **Assets/ExternalDependencyManager** – Files to help with plugin dependencies retrieval using <a href="https://github.com/googlesamples/unity-jar-resolver">unity-jar-resolver</a>.
 <div style="margin-left: 40px;">
 
 **If you target iOS** ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
-* **PollfishBuildPostprocessor.cs** IS used to automatically add Pollfish necessary frameworks in your XCode project. If you do not want to have to link each time the necessary frameworks in your XCode project you can deselect them during importing.
+**External Dependency Manager** will automatically create a **Pod** XCode workspace with Pollfish SDK dependency.
 
-</div>
-
-- **Assets/ExternalDependencyManager** – Files to help with Goolge Play Services Setup
-<div style="margin-left: 40px;">
+> **Note**: Make sure that you use the *.xcworkspace and **NOT** the *.xcodeproj for any additional changes after the iOS project build through Unity.
 
 **If you target Android** ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
 
-* **ExternalDependencyManager** folder contains files to allow automatically add Google Play Services in your Android project from Unity menu.
+**External Dependency Manager** will automatically add Google Play Services in your Android project.
 
 > **Note:** Please have in mind that in order to use Pollfish you have to include Google Play Services in your Unity project. You can easily do that by selecting **Assets –> External Dependency Manager -> Android Resolver -> Resolve**. If you do not have Google Play Services you can install them through Android SDK Manager.
 
-![alt text](https://storage.googleapis.com/pollfish_production/doc_images/resolve1.png)
 
-or
+![alt text](https://storage.googleapis.com/pollfish_production/doc_images/resolve_new.png)
 
-![alt text](https://storage.googleapis.com/pollfish_production/doc_images/resolve2.png)
+
+
+> **Note:** If you do not want to use External Depency Manager you need to manually add the following dependencies to your Android project:
+>
+>```  
+>    implementation 'com.google.android.>gms:play-services-ads-identifier:16.0.0'
+>    implementation 'com.google.android.gms:play-services-base:16.0.1'
+>```
+>
+>and the include the Pollfish iOS SDK framework in you iOS XCode project in order for Pollfish to work properly. 
+>Please visit this <a href="https://www.pollfish.com/docs/ios">guide</a> to download the latest framework version and import it on a XCode project.
 
 </div>
 
-You can customize the seetings of Android Resolver. By selecting **Assets –> External Dependency Manager -> Android Resolver -> Settings**. Be sure to unselect **Patch AndroidManifest.xml**
+- **Assets/Plugins/Android** – Android Pollfish libraries and resources.
 
-![alt text](https://storage.googleapis.com/pollfish_production/doc_images/settings_resolver.png)
-
-
-| **Note:** If you do not want to use ExternalDepencyManager you need to manually add the following dependencies to your project in order for Pollfish to wrok properly:
-
-```  
-    implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
-    implementation 'com.google.android.gms:play-services-base:16.0.1'
-```
-
-- **Assets/Plugins/Android** – Android Pollfish libraries and resources
-
-- **Assets/Plugins/iOS** – Pollfish framework and bridge files.
+- **Assets/Plugins/iOS** – Pollfish bridge file.
 
 - **Assets/Plugins/Pollfish** – Pollfish C# bridge files that allow communication between Unity and Java for Android and Unity and Objective-C for iOS.
 
-- **Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration
+- **Assets/Plugins/Pollfish/demo** – A simple scene that demonstrates Pollfish plugin integration.
 <br/><br/><br/>
-
 
 
 ### 4. Initializing Pollfish
@@ -287,7 +279,7 @@ Also this setting sets from which side of the screen you would like Pollfish sur
 
 If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
 
-| **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
+> **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
 
 An example of how you can pass user demographics can be found below:
 
@@ -449,7 +441,7 @@ Add the following paragraph to your App's Privacy Policy:
 You can have a look for some integration tips <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a> or if have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://help.pollfish.com/en/collections/24867-faq-publishers">FAQ page</a>
 <br/><br/><br/>
 
-| **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Bear in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this new type of targeting.
+> **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Bear in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this new type of targeting.
 
 <br/>
 
