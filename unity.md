@@ -187,7 +187,7 @@ Imported files will be listed in the following directories:
 > **Note:** If you do not want to use External Depency Manager you need to manually add the following dependencies to your Android project:
 >
 >```  
->    implementation 'com.google.android.>gms:play-services-ads-identifier:16.0.0'
+>    implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
 >    implementation 'com.google.android.gms:play-services-base:16.0.1'
 >```
 >
