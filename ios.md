@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.5.0">
+<div class="changelog" data-version="5.5.1">
+v.5.5.1
+
+- Added support for Pollfish Unity Plugin integration with Pods.
+
 v.5.5.0
 
 - Changed packaging to .xcframework
