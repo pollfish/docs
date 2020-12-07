@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.5.0.0">
+<div class="changelog" data-version="5.5.1.0">
+v.5.5.1.0
+
+- Updated with Pollfish iOS SDK 5.5.1
+
 v.5.5.0.0
 
 - Changed packaging to .xcframework
