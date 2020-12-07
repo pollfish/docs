@@ -1,4 +1,9 @@
-<div class="changelog" data-version="5.6.1">
+<div class="changelog" data-version="5.6.2">
+v5.6.2
+
+- Updated Google Jar Resolver. 
+- Added Pod support for iOS builds.
+
 v5.6.1
 
 - Updated with iOS SDK (v5.4.1) and Android SDK (v5.6.0)
