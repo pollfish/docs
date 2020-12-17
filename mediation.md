@@ -93,7 +93,7 @@ InnovateMR is a fiercely independent sampling company that delivers faster answe
 Research for Good Inc. (SaySo Rewards),is an online sample company that provides online market research surveys. It connects nonprofits with the market research industry as a new donation development channel. The company was incorporated in 2010 and is based in Redmond, Washington.
 
 
-<h3> <img src="https://storage.googleapis.com/pollfish_production/doc_images/dynata.png" width="60" height="auto"/></h3>
+<h3> <img src="https://storage.googleapis.com/pollfish_production/doc_images/Peanutlabs_logo.png" width="60" height="auto"/></h3>
 
 Dynata (under the brand of PeanutLabs on the Dashboard) is an online sample and market research services provider. Dynata serves nearly 6,000 market research, media and advertising agencies, publishers, consulting and investment firms and corporate customers in North America, South America, Europe, and Asia-Pacific.
 
