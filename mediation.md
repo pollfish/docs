@@ -95,5 +95,5 @@ Research for Good Inc. (SaySo Rewards),is an online sample company that provides
 
 <h3> <img src="https://storage.googleapis.com/pollfish_production/doc_images/Peanutlabs_logo.png" width="60" height="auto"/></h3>
 
-Dynata (under the brand of PeanutLabs on the Dashboard) is an online sample and market research services provider. Dynata serves nearly 6,000 market research, media and advertising agencies, publishers, consulting and investment firms and corporate customers in North America, South America, Europe, and Asia-Pacific.
+Dynata (under the brand of PeanutLabs) is an online sample and market research services provider. Dynata serves nearly 6,000 market research, media and advertising agencies, publishers, consulting and investment firms and corporate customers in North America, South America, Europe, and Asia-Pacific.
 
