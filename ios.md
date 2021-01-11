@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.5.1">
+<div class="changelog" data-version="5.5.2">
+v.5.5.2
+
+- Fixed crashes on iOS 14.
+
 v.5.5.1
 
 - Added support for Pollfish Unity Plugin integration with Pods.
