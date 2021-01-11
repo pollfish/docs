@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.6.2">
+<div class="changelog" data-version="5.6.3">
+v5.6.3
+
+- Updated with iOS SDK (v5.5.2)
+
 v5.6.2
 
 - Updated Google Jar Resolver. 
