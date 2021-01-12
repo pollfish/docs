@@ -170,7 +170,7 @@ Pollfish Webplugin provides some callback functions to call when specific action
 4.  <span class="params">surveyCompletedCallback</span>  
     Called when the user finishes the survey. Also contains revenue, survey format, estimated LOI, [survey_class](https://www.pollfish.com/docs/api-documentation) (surveyProvider + type) and IR survey information on offerwall integrations.
 5.  <span class="params">surveyAvailable</span>  
-    Called when there is an availble survey for the user. Also contains revenue, survey format, estimated LOI, [survey_class](https://www.pollfish.com/docs/api-documentation) (surveyProvider + type) and IR survey information. 
+    Called when there is an availble survey for the user. Also contains revenue, survey format, estimated LOI, [survey_class](https://www.pollfish.com/docs/api-documentation) (surveyProvider + type), reward name, reward value and IR survey information. 
 6.  <span class="params">surveyNotAvailable</span>  
     Called when there is no available survey for the user
 
@@ -218,6 +218,8 @@ function customSurveyAvailable(data){
       survey_loi: ${data.survey_loi},
       survey_ir: ${data.survey_ir},
       survey_class: ${data.survey_class},
+      reward_name: ${data.reward_name},
+      reward_value: ${data.reward_value},
       remaining_completes: ${data.remaining_completes},
     `);
 }
