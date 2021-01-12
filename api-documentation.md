@@ -485,6 +485,18 @@ window.onmessage = function(e){
         if(data.type === 'surveyInfo'){
             // Get revenue of survey
             console.log(data.revenue);   
+            // expected JSON
+            // {
+            //   revenue: data.revenue,
+            //   playful: data.playful,
+            //   survey_loi: data.survey_loi,
+            //   survey_ir: data.survey_ir,
+            //   survey_class: data.survey_class,
+            //   reward_name: data.reward_name,
+            //   reward_value: data.reward_value,
+            //   remaining_completes: data.remaining_completes,
+            // }
+            
         }
    }
 }
