@@ -602,7 +602,7 @@ Add the following paragraph to your **App's Privacy Policy**:
 and on **App Store Connect** in the App's Privacy Policy section, update the relevant data collection questionnaire with the following choices as suggested by the latest AppStore's policies:
 <br/>
 
-| Type | Description | Tracking          | Explanation 
+| Type | Description | Tracking | Explanation 
 | --- | --- | --- | --- |
 | **Contact Info** | --- | --- | --- |
 | Name | Such as first or last name | NO |  |
@@ -611,7 +611,7 @@ and on **App Store Connect** in the App's Privacy Policy section, update the rel
 | Physical Addrress | Such as home address, physical address, or mailing address | NO |  |
 | Other User Contact Info | Any other information that can be used to contact the user outside the app | NO |  |
 | **Health & Fitness** | --- | --- | --- |
-| Health | Health and medical data, including but not limited to from the Clinical Health Records API, HealthKit API, MovementDisorderAPIs, or health-related human subject research or any other user provided health or medical data | 1. Data use: Third-Party Advertising <br/>2. Linked to user: YES<br/> 3. Tracking: No | Pollfish does not directly collect any health data. However some clients might create surveys that could be asking some general health questions |
+| Health | Health and medical data, including but not limited to from the Clinical Health Records API, HealthKit API, MovementDisorderAPIs, or health-related human subject research or any other user provided health or medical data | **Data use:** Third-Party Advertising **Linked to user:** YES **Tracking:** No | Pollfish does not directly collect any health data. However some clients might create surveys that could be asking some general health questions |
 | Fitness | Fitness and exercise data, including but not limited to the Motion and Fitness API | YES | Pollfish does not directly collect any fitness data. However some clients might create surveys that could be asking some general fitness questions |
 | **Financial Info** | --- | --- | --- |
 | Payment Info | Such as form of payment, payment card number, or bank account number | NO |  |
