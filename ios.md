@@ -602,7 +602,7 @@ Add the following paragraph to your **App's Privacy Policy**:
 and on **App Store Connect** in the App's Privacy Policy section, update the relevant data collection questionnaire with the following choices as suggested by the latest AppStore's policies:
 <br/>
 
-| Type | Description | Tracking | Explanation 
+| Type | Description | App Tracking | Explanation 
 | --- | --- | --- | --- |
 | **Contact Info** | --- | --- | --- |
 | Name | Such as first or last name | NO |  |
@@ -612,16 +612,16 @@ and on **App Store Connect** in the App's Privacy Policy section, update the rel
 | Other User Contact Info | Any other information that can be used to contact the user outside the app | NO |  |
 | **Health & Fitness** | --- | --- | --- |
 | Health | Health and medical data, including but not limited to from the Clinical Health Records API, HealthKit API, MovementDisorderAPIs, or health-related human subject research or any other user provided health or medical data | **Data use:** Third-Party Advertising **Linked to user:** YES **Tracking:** No | Pollfish does not directly collect any health data. However some clients might create surveys that could be asking some general health questions |
-| Fitness | Fitness and exercise data, including but not limited to the Motion and Fitness API | YES | Pollfish does not directly collect any fitness data. However some clients might create surveys that could be asking some general fitness questions |
+| Fitness | Fitness and exercise data, including but not limited to the Motion and Fitness API | **Data use:** Third-Party Advertising **Linked to user:** YES **Tracking:** No | Pollfish does not directly collect any fitness data. However some clients might create surveys that could be asking some general fitness questions |
 | **Financial Info** | --- | --- | --- |
 | Payment Info | Such as form of payment, payment card number, or bank account number | NO |  |
 | Credit Info | Such as credit score | NO |  |
-| Other Financial Info | Such as salary, income, assets, debts, or any other financial information | YES | Income data are collected as part of the demographic data during the onboarding process|
+| Other Financial Info | Such as salary, income, assets, debts, or any other financial information | **Data use:** Third-Party Advertising **Linked to user:** YES **Tracking:** Yes | Income data are collected as part of the demographic data during the onboarding process|
 | **Location** | --- | --- | --- |
 | Precise Location | Information that describes the location of a user or device with the same or greater resolution as a latitude and longitude with three or more decimal places | NO |  |
 | Coarse Location | Information that describes the location of a user or device with lower resolution than a latitude and longitude with three or more decimal places, such as approximate location services | NO |  |
 |  **Sensitive Info** | --- | --- | --- |
-| Sensitive Info | Such as racial or ethnic data, sexual orientation, pregnancy or childbirth information, disability, religious or philosophical beliefs, trade union membership, political opinion, genetic information, or biometric data | YES | Demographic data such as the number of children or race are asked during the demographic data collection process when onboarding a user |
+| Sensitive Info | Such as racial or ethnic data, sexual orientation, pregnancy or childbirth information, disability, religious or philosophical beliefs, trade union membership, political opinion, genetic information, or biometric data | **Data use:** Third-Party Advertising **Linked to user:** YES **Tracking:** Yes | Demographic data such as the number of children or race are asked during the demographic data collection process when onboarding a user |
 |  **Contacts** | --- | --- | --- |
 | Contacts | Such as a list of contacts in the user’s phone, address book, or social graph | NO | |
 |  **User Content** | --- | --- | --- |
@@ -636,8 +636,8 @@ and on **App Store Connect** in the App's Privacy Policy section, update the rel
 |  **Search History** | --- | --- | --- |
 | Search History | Information about searches the user has performed | NO |  |
 |  **Identifiers** | --- | --- | --- |
-| User ID | Such as screen name, handle, account ID, assigned user ID, customer number, or other user- or account-level ID that can be used to identify a particular user or account | YES | Publishers can pass a unique user ID and receive it back in s2s callbacks |
-| Device ID | Such as the device’s advertising identifier, or other device-level ID | YES | Pollfish SDK works upon the IDFA |
+| User ID | Such as screen name, handle, account ID, assigned user ID, customer number, or other user- or account-level ID that can be used to identify a particular user or account | **Data use:** Third-Party Advertising **Linked to user:** YES **Tracking:** Yes | Publishers can pass a unique user ID and receive it back in s2s callbacks |
+| Device ID | Such as the device’s advertising identifier, or other device-level ID | **Data use:** Third-Party Advertising **Linked to user:** YES **Tracking:** Yes | Pollfish SDK works upon the IDFA |
 |  **Purchases** | --- | --- | --- |
 | Purchase History | An account’s or individual’s purchases or purchase tendencies | NO | |
 |  **Usage Data** | --- | --- | --- |
@@ -649,7 +649,7 @@ and on **App Store Connect** in the App's Privacy Policy section, update the rel
 | Performance Data | Such as launch time, hang rate, or energy use | NO | |
 | Other Diagnostic Data | Any other data collected for the purposes of measuring technical diagnostics related to the app | NO | |
 |  **Other Data** | --- | --- | --- |
-| Other Data Types | Any other data types not mentioned | YES | Different types of data can be collected through surveys |
+| Other Data Types | Any other data types not mentioned | **Data use:** Third-Party Advertising **Linked to user:** YES **Tracking:** Yes | Different types of data can be collected through surveys |
 
 <br/>
 ---
