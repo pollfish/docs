@@ -168,7 +168,7 @@ Includes both **tx_id** and **timestamp**.
 
 The **signature** of the callback URLs is the result of appling the  [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) hash function to the **[[parameters]]** that are included in the URL using your account's secret_key.
 
-We only sign the values that are substituted using the parameters placeholders (**[[cpa]]**, **[[device_id]]**, **[[request_uuid]]**, **[[reward_name]]**, **[[reward_value]]**, **[[status]]**, **[[timestamp]]**, **[[tx_id]]** and **[[term_reason]]**). We do not sign any other part of the URL including any other *URL parameters* that the publisher might specify. For example in the below URL only the values that are going to be substituded in **[[request_uuid]]** and **[[tx_id]]** are used as input and not the values of the `bundle_id` and `source` URL parameters.
+We only sign the values that are substituted using the parameters placeholders (**[[click_id]]**, **[[cpa]]**, **[[device_id]]**, **[[request_uuid]]**, **[[reward_name]]**, **[[reward_value]]**, **[[status]]**, **[[timestamp]]**, **[[tx_id]]** and **[[term_reason]]**). We do not sign any other part of the URL including any other *URL parameters* that the publisher might specify. For example in the below URL only the values that are going to be substituded in **[[request_uuid]]** and **[[tx_id]]** are used as input and not the values of the `bundle_id` and `source` URL parameters.
 
 ```
 https://www.example.com?request_uuid=[[request_uuid]]&tx_id=[[tx_id]]&signature=[[signature]]&bundle_id=com.domain.app&source=pollfish
