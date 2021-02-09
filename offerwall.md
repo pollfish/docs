@@ -56,7 +56,7 @@ You can customize the following settings:
 
 In the Mediation Settings area of your Dashboard you can customize the type of surveys you would like to see within the offerwall. You can enable or disable providers, set price floors per network, maxiumum length of survey, minimum aceptable conversion rate and even filter out surveys based on keywords!
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_settings.png" width="600" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_latest.png" width="600" height="auto"/>
 
 
 <h3>3. Initialize Pollfish in reward and offerwall mode </h3>
