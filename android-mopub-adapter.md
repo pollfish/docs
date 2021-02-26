@@ -57,7 +57,7 @@ In the **Create Order** form, fill the required fields and press **Save & Create
 
 <br/>
 
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mopub-new-order.png"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mopub-android-new-order.png"/>
 
 <br/>
 
@@ -106,7 +106,7 @@ If you want to configure those params in code (section 6) fill the **Custom even
 
 <br/>
 
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mopub-new-line-item-1.png"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mopub-android-new-line-1.png"/>
 
 <br/>
 
@@ -122,7 +122,7 @@ Click next to proceed on the next step where you will select the Ad Unit on whic
 
 <br/>
 
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mopub-new-line-item-2.png"/>
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mopub-android-new-line-2.png"/>
 
 <br/>
 
