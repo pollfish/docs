@@ -15,8 +15,6 @@ This guide is for publishers looking to use MoPub mediation to load and show Rew
 * [Pollfish SDK](https://www.pollfish.com/docs/ios)
 * [MoPub SDK](https://github.com/mopub/mopub-ios-sdk#manual-integration-with-dynamic-framework)
 
-## 
-
 > **Note:** Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. As of iOS 14 you should initialize Pollfish iOS MoPub Adapter only if the relevant IDFA permission was granted by the user
 
 </br>
@@ -336,11 +334,11 @@ No | Description
 
 <br/>
 
-#### **3.1 `api_key`**
+#### **6.1 `api_key`**
 
 Pollfish API Key as provided by Pollfish on [Pollfish Dashboard](https://www.pollfish.com/publisher/) after you sign up to the platform.  If you have already specified Pollfish API Key on MoPub's Web UI, this param will be ignored.
 
-#### **3.2 `request_uuid`**
+#### **6.2 `request_uuid`**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
 
@@ -348,7 +346,7 @@ In order to register for such callbacks you can set up your server URL on your a
 
 If you would like to read more on Pollfish s2s callbacks you can read the documentation [here](https://www.pollfish.com/docs/s2s)
 
-#### **3.3 `release_mode`**
+#### **6.3 `release_mode`**
 
 Sets Pollfish SDK to Developer or Release mode.
 
@@ -356,6 +354,12 @@ Sets Pollfish SDK to Developer or Release mode.
 *   **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
 
 > **Note:** Pollfish MoPub Adapter runs Pollfish SDK in release mode by default. If you would like to test with Test survey, you should set release mode to fasle.
+
+### **6.4 `offerwall_mode`**
+
+Enables offerwall mode. If not set, one single survey is shown each time.
+
+<br>
 
 Below you can see an example on how you can pass info to Pollfish MoPub Adapter connfiguration:
 
