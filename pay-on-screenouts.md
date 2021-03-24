@@ -58,7 +58,7 @@ An example of a callback of a payable screenout can be seen below:
 
 **Note:** <i>It is important to reward your users only when the relevant CPA and/or reward value are above zero since screenouts can happen also for other reasons (fraud, quality etc) which are not payable and their CPA will be zero</i>
 
-<h2>Local in-app Callbacks</h2>
+<h3>Local in-app Callbacks</h3>
 
 Pollfish provides different notifications/callbacks in-app, to inform publishers on different events within the survey flow. 
 
