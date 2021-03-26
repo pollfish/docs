@@ -5,9 +5,9 @@ Pay on Screenouts is a feature provided by Pollfish in order to allow partners t
 
 With focus on providing an optimal user experience, respecting users' time and ensuring revenue in every session, partners can enable Pay on Screenouts feature per Mediation Network per app through their Dashboard. Pay on Screenouts feature distributes in a more fair way, revenue from successful survey completes, in every session including on screenouts with a small compromise in the payout in survey completion. No minimum payouts or price floors are applied in that case.
 
-> **Note:**  <i>Payable screenouts are screenouts that happened because the user got screened out for different reasons such as profiling, screenout on a screening question, quota full, survey closed and other reasons that took time from the user who was trying to answer honestly but did not manage to successfully complete the survey. Screenouts due to fraud, quality, VPN or security are not payable. </i>
+> **Note:**  Payable screenouts are screenouts that happened because the user got screened out for different reasons such as profiling, screenout on a screening question, quota full, survey closed and other reasons that took time from the user who was trying to answer honestly but did not manage to successfully complete the survey. Screenouts due to fraud, quality, VPN or security are not payable. 
 
-> **Note:**  <i>Payable screenouts are disabled by default in all new apps.</i>
+> **Note:**  Payable screenouts are disabled by default in all new apps.
 
 <h2>Activating Pay on Screenouts</h2>
 
@@ -17,9 +17,9 @@ Publishers can visit their Dashboard in the <i>Settings-Mediation Settings</i> a
 
 In the same section the publisher can  review the current rates on payments for completes or screenouts if the feature is enabled. 
 
-> **Note:**  <i>Keep in mind that prices shared in this section are just informative and reflect the prices seen on the platform the previous minutes.</i>
+> **Note:**  Keep in mind that prices shared in this section are just informative and reflect the prices seen on the platform the previous minutes
 
-> **Note:**  <i>Activating Pay on Screenouts might result to lower inventory due to limitations on low payouts </i>
+> **Note:**  Activating Pay on Screenouts might result to lower inventory due to limitations on low payouts 
 
 
 <h2>User Experience</h2>
@@ -34,8 +34,8 @@ When Reward Settings are enabled, if a user gets screened out with a payable scr
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/partial_reward.png" width="320" height="auto"/>
 
-> **Note:**  <i>Publishers can also specify a minimum Reward in case that they have a minimum reward in place to round up if a price falls below a specific price point
-Performance </i>
+> **Note:**  Publishers can also specify a minimum Reward in case that they have a minimum reward in place to round up if a price falls below a specific price point
+Performance 
 
 Publishers can review the performance of Payable Screenouts through their Dashboard in the <i>Mediation-Performance</i> area. When payable screenouts happen and are within the filters applied in that view, they can be seen in the funnel events of the relevant graph or table view in that section.
 
@@ -63,13 +63,13 @@ An example of a callback of a payable screenout can be seen below:
 <i>https://my-domain.com/my-path?device_id=test_device_id&cpa=2&request_uuid=test_id&timestamp=1614854263963&tx_id=bP7atzvMf1mNcWC3cHc6aAmuY3D&signature=FwAcnySqCUoAxymVaeGBSgXk2E&status=noteligible&reason=screenout&reward_name=Diamonds&reward_value=120</i>
 ```
 
-> **Note:**  <i>It is important to reward your users only when the relevant CPA and/or reward value are above zero since screenouts can happen also for other reasons too (fraud, quality etc), which are not payable and their CPA will be zero</i>
+> **Note:**  It is important to reward your users only when the relevant CPA and/or reward value are above zero since screenouts can happen also for other reasons too (fraud, quality etc), which are not payable and their CPA will be zero
 
 <h3>Local in-app Callbacks</h3>
 
 Pollfish provides different notifications/callbacks in-app, to inform publishers on different events within the survey flow. 
 
-> **Note:**  <i>Local callbacks can be easily compromised so we strongly suggest publishers to trust only s2s callbacks to reward their users. Local in-app notifications are usually used to adjust the UI of the app while waiting for an s2s callback to verify a conversion.</i>
+> **Note:**  Local callbacks can be easily compromised so we strongly suggest publishers to trust only s2s callbacks to reward their users. Local in-app notifications are usually used to adjust the UI of the app while waiting for an s2s callback to verify a conversion.
 
 When Pay on Screenouts feature is enabled:
 
@@ -79,4 +79,4 @@ When Pay on Screenouts feature is enabled:
 <li>On a non payable screenout, User Not Eligible local callback will fire </li>
 </ul>
 
-> **Note:**  <i> Firing Survey Completed local callbacks on payable screenouts, when the feature is enabled, is not currently supported in the old mobile SDKs. Publishers should update to the latest SDKs (v6) if they would like to rely on the Survey Completed callback on payable screenouts</i>
+> **Note:**  Firing Survey Completed local callbacks on payable screenouts, when the feature is enabled, is not currently supported in the old mobile SDKs. Publishers should update to the latest SDKs (v6) if they would like to rely on the Survey Completed callback on payable screenouts
