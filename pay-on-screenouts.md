@@ -52,7 +52,7 @@ S2S callbacks are the only secure way for publishers to reward their users. If p
 
 When publishers enable tha setting for s2s notifications, they will be able to start receiving s2s callbacks on screenouts too. Paybale screenouts will have <i>CPA>0</i> but <i>status=noteligible</i>. 
 
-**Note:** <i>If there is a screenout which is not payable (for example due to fraud) the s2s notification will still fire with <i>CPA=0</i> and <i>status=noteligible</i>
+**Note:** <i>If a screenout happens, which is not payable (for example due to fraud) the s2s notification will still fire with <i>CPA=0</i> and <i>status=noteligible</i>
 
 An example of a callback of a payable screenout can be seen below:
 
