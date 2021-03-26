@@ -24,20 +24,20 @@ In the same section the publisher can  review the current rates on payments for 
 
 <h2>User Experience</h2>
 
-If publishers would like to deliver a reward to their users on screenouts and prompt them within the survey's UI, they should enable the Reward Settings setting, depending on their integration approach, in the <i>Settings-App Settings</i> area of their app.
+If publishers would like to deliver a reward to their users on screenouts and prompt them within the survey's UI, they should enable the <i>Reward Settings</i> setting, depending on their integration approach, in the <i>Settings-App Settings</i> area of their app.
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/reward_settings.png" width="320" height="auto"/>
 
-In that section publisher can specify the Reward Name and a elevant Exchange Rate. 
+In that section, the publishers can specify the Reward Name and a elevant Exchange Rate. 
 
-When reward settings are enabled, if a user gets screened out with a payable screenout reason, the user will see a screen similar to the one below, referencing the partial reward provided.
+When Reward Settings are enabled, if a user gets screened out with a payable screenout reason, the user will see a screen similar to the one below, referencing the partial reward awarded.
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/partial_reward.png" width="320" height="auto"/>
 
 **Note:** <i>Publishers can also specify a minimum Reward in case that they have a minimum reward in place to round up if a price falls below a specific price point
 Performance </i>
 
-Publishers can review the performance of Payable Screenouts through their Dashboard in the <i>Mediation-Settings</i> area. When payable screenouts happen and are within the filters applied in that view, they can be seen in the funnel events of the relevant graph or table view.
+Publishers can review the performance of Payable Screenouts through their Dashboard in the <i>Mediation-Performance</i> area. When payable screenouts happen and are within the filters applied in that view, they can be seen in the funnel events of the relevant graph or table view in that section.
 
 
 <h2>Monitoring</h2>
