@@ -35,7 +35,8 @@ When Reward Settings are enabled, if a user gets screened out with a payable scr
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/partial_reward.png" width="320" height="auto"/>
 
 > **Note:**  Publishers can also specify a minimum Reward in case that they have a minimum reward in place to round up if a price falls below a specific price point
-Performance 
+
+<h2>Performance</h2>
 
 Publishers can review the performance of Payable Screenouts through their Dashboard in the <i>Mediation-Performance</i> area. When payable screenouts happen and are within the filters applied in that view, they can be seen in the funnel events of the relevant graph or table view in that section.
 
