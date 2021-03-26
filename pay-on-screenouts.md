@@ -60,7 +60,7 @@ When publishers enable the setting to get notified when a user is not eligible, 
 An example of a callback of a payable screenout can be seen below:
 
 ```
-<i>https://my-domain.com/my-path?device_id=test_device_id&cpa=2&request_uuid=test_id&timestamp=1614854263963&tx_id=bP7atzvMf1mNcWC3cHc6aAmuY3D&signature=FwAcnySqCUoAxymVaeGBSgXk2E&status=noteligible&reason=screenout&reward_name=Diamonds&reward_value=120</i>
+https://my-domain.com/my-path?device_id=test_device_id&cpa=2&request_uuid=test_id&timestamp=1614854263963&tx_id=bP7atzvMf1mNcWC3cHc6aAmuY3D&signature=FwAcnySqCUoAxymVaeGBSgXk2E&status=noteligible&reason=screenout&reward_name=Diamonds&reward_value=120
 ```
 
 > **Note:**  It is important to reward your users only when the relevant CPA and/or reward value are above zero since screenouts can happen also for other reasons too (fraud, quality etc), which are not payable and their CPA will be zero
