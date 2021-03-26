@@ -72,9 +72,9 @@ Pollfish provides different notifications/callbacks in-app, to inform publishers
 When Pay on Screenouts feature is enabled:
 
 <ul>
-<li>On a successful complete, the relevant Survey Completed local callback will fire. </li>
-<li>On a payable screenout, the relevant Survey Completed local callback will fire with the relevant info.</li>
+<li>On a successful complete, the relevant Survey Completed local callback will fire with the relevant info around the reward and earnings.</li>
+<li>On a payable screenout, the relevant Survey Completed local callback will fire with the relevant info around the reward and earnings.</li>
 <li>On a non payable screenout, User Not Eligible local callback will fire </li>
 </ul>
 
-**Note:** <i> Firing Survey Completed local callbacks on payable screenouts, when the feature is enabled, is not currently supported in the old mobile SDKs. Publishers should update to the latest SDKs if they would like to rely on the Survey Completed callback </i>
+**Note:** <i> Firing Survey Completed local callbacks on payable screenouts, when the feature is enabled, is not currently supported in the old mobile SDKs. Publishers should update to the latest SDKs (v6) if they would like to rely on the Survey Completed callback on payable screenouts</i>
