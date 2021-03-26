@@ -50,10 +50,13 @@ S2S callbacks are the only secure way for publishers to reward their users. If p
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/s2s_settings_not_eligible.png" width="600" height="auto"/>
 
-When publishers enable tha setting for s2s notifications, they will be able to start receiving s2s callbacks on screenouts too. Paybale screenouts will have <i>CPA>0</i> but <i>status=noteligible</i>. 
+When publishers enable tha setting to get notified whehn user is not eligible, they will be able to start receiving s2s callbacks on screenouts too: 
 
-**Note:** <i>If a screenout happens, which is not payable (for example due to fraud) the s2s notification will still fire with <i>CPA=0</i> and <i>status=noteligible</i>
-
+<ul>
+<li>Paybale screenouts will have <b>CPA>0</b> but <b>status=noteligible</b></li>
+<li>Non payable screenouts (for example due to fraud) will still fire with <b>CPA=0</b> and <b>status=noteligible</b></li>
+</ul>
+  
 An example of a callback of a payable screenout can be seen below:
 
 <i>ht<span>tps://</span>my-domain.com/my-path?device_id=test_device_id&<b>cpa=2</b>&request_uuid=test_id&timestamp=1614854263963&tx_id=bP7atzvMf1mNcWC3cHc6aAmuY3D&signature=FwAcnySqCUoAxymVaeGBSgXk2E&<b>status=noteligible&reason=screenout&reward_name=Diamonds&reward_value=120</b></i>
