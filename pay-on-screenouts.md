@@ -50,18 +50,18 @@ S2S callbacks are the only secure way for publishers to reward their users. If p
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/s2s_settings_not_eligible.png" width="600" height="auto"/>
 
-When publishers enable tha setting to get notified whehn user is not eligible, they will be able to start receiving s2s callbacks on screenouts too: 
+When publishers enable the setting to get notified when a user is not eligible, they will be able to start receiving s2s callbacks on screenouts too: 
 
 <ul>
-<li>Paybale screenouts will have <b>CPA>0</b> but <b>status=noteligible</b></li>
-<li>Non payable screenouts (for example due to fraud) will still fire with <b>CPA=0</b> and <b>status=noteligible</b></li>
+<li>Paybale screenouts will fire with <b>CPA>0</b> and <b>status=noteligible</b></li>
+<li>Non payable screenouts (for example due to fraud) will fire with <b>CPA=0</b> and <b>status=noteligible</b></li>
 </ul>
   
 An example of a callback of a payable screenout can be seen below:
 
 <i>ht<span>tps://</span>my-domain.com/my-path?device_id=test_device_id&<b>cpa=2</b>&request_uuid=test_id&timestamp=1614854263963&tx_id=bP7atzvMf1mNcWC3cHc6aAmuY3D&signature=FwAcnySqCUoAxymVaeGBSgXk2E&<b>status=noteligible&reason=screenout&reward_name=Diamonds&reward_value=120</b></i>
 
-**Note:** <i>It is important to reward your users only when the relevant CPA and/or reward value are above zero since screenouts can happen also for other reasons (fraud, quality etc) which are not payable and their CPA will be zero</i>
+**Note:** <i>It is important to reward your users only when the relevant CPA and/or reward value are above zero since screenouts can happen also for other reasons too (fraud, quality etc), which are not payable and their CPA will be zero</i>
 
 <h3>Local in-app Callbacks</h3>
 
