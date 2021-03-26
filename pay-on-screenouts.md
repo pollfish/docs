@@ -5,7 +5,7 @@ Pay on Screenouts is a feature provided by Pollfish in order to allow partners t
 
 With focus on providing an optimal user experience, respecting users' time and ensuring revenue in every session, partners can enable Pay on Screenouts feature per Mediation Network per app through their Dashboard. Pay on Screenouts feature distributes in a more fair way, revenue from successful survey completes, in every session including on screenouts with a small compromise in the payout in survey completion. No minimum payouts or price floors are applied in that case.
 
-**Note:** <i>Payable screenouts are screenouts that happened because the user got screened out for different reasons such as profiling, screenout on a screening question, quota full, survey closed and other reasons that are not user's fault. Screenouts due to fraud, quality, VPN or security are not payable. </i>
+**Note:** <i>Payable screenouts are screenouts that happened because the user got screened out for different reasons such as profiling, screenout on a screening question, quota full, survey closed and other reasons that took time from the user who was trying to answer honestly but did not manage to successfully complete the survey. Screenouts due to fraud, quality, VPN or security are not payable. </i>
 
 **Note:** <i>Payable screenouts are disabled by default in all new apps.</i>
 
