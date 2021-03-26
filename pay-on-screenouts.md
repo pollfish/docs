@@ -24,7 +24,7 @@ In the same section the publisher can  review the current rates on payments for 
 
 <h2>User Experience</h2>
 
-If publishers would like to deliver a reward to their users on screenouts and prompt them within the survey's UI, they should enable the Reward Settings depending on their integration approach in the <i>Settings-App Settings</i> area of their app.
+If publishers would like to deliver a reward to their users on screenouts and prompt them within the survey's UI, they should enable the Reward Settings setting, depending on their integration approach, in the <i>Settings-App Settings</i> area of their app.
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/reward_settings.png" width="320" height="auto"/>
 
