@@ -15,7 +15,7 @@ Publishers can visit their Dashboard in the <i>Settings-Mediation Settings</i> a
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/enable_pay.png" width="650" height="auto"/>
 
-In the same section the publisher can  review the current rates on payments for completes or screenouts if the relevant feature is enabled. 
+In the same section the publisher can  review the current rates on payments for completes or screenouts if the feature is enabled. 
 
 **Note:** <i>Keep in mind that prices shared in this section are just informative and reflect the prices seen on the platform the previous minutes.</i>
 
