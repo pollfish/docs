@@ -46,11 +46,13 @@ Publishers can monitor real time the conversions on payable screenouts, to rewar
 
 <h3>S2S Callbacks</h3>
 
-S2S callbacks are the only secure way for publishers to reward their users. If publishers would like to reward their users on screenouts with payable screenouts, they should enable to get notified on screen-outs too (<b>Notify me when the user is not eligible</b>) through their Dashboards in the App Settings area.
+S2S callbacks are the only secure way for publishers to reward their users. If publishers would like to reward their users on screenouts with payable screenouts, they should enable to get notified on screenouts too (<b>Notify me when the user is not eligible</b>) through their Dashboards in the App Settings area.
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/s2s_settings_not_eligible.png" width="600" height="auto"/>
 
-When publishers do that they will be able to start receiving s2s allbacks on screenouts too, but with CPA>0 (which refer to payable screenouts)
+When publishers enable tha setting for s2s notifications, they will be able to start receiving s2s callbacks on screenouts too. Paybale screenouts will have <i>CPA>0</i> but <i>status=noteligible</i>. 
+
+**Note:** <i>If there is a screenout which is not payable (for example due to fraud) the s2s notification will still fire with <i>CPA=0</i> and <i>status=noteligible</i>
 
 An example of a callback of a payable screenout can be seen below:
 
