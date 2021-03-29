@@ -103,6 +103,8 @@ hasty_answers | The respondent completed the survey too fast or used straightlin
 gibberish | The respondent answered with gibberish text in at least one open-ended question
 captcha | The respondent failed one of our CAPTCHA tests
 third_party_termination | Generic reason for terminations that happen in mediation survey providers
+third_party_termination_-_fraud | The respondent was marked as fraud in the mediation survey provider
+third_party_termination_-_quality | The respondent was marked as low quality in the mediation survey provider
 user_rejection | The respondent rejected the survey
 vpn | The respondent answered the survey using VPN or an IP address that characterized as suspicious
 survey_expired | The respondent was prevented from entering a survey that would have resulted in "survey closed" or "quota full"
