@@ -9,11 +9,6 @@ v6.0.0
 - Android SDK 21 or higher
 - Java verion 1.8
 - Create [Pollfish Developer Account](https://pollfish.com/login/publisher) and register an App
-- Google Play Services 17 or higher
-
-<br/>
-
-> **Note:** Pollfish SDK utillizes the Google Advertising ID.
 
 </br>
 
@@ -320,12 +315,9 @@ PollFish.showOnTopOfActivity(activity);
 1. Obtain a Publisher Account
 2. Register a new App on on Pollfish Dashboard and copy the given API key
 3. Download and import Pollfish .aar file
-4. Import Google Play Services into your project
-5. Embed Pollfish in your code and call init
-6. Update your privacy policy, enable **releaseMode** and publish on Google Play
+4. Embed Pollfish in your code and call init
+6. Update your privacy policy, enable **releaseMode** and publish
 7. Request your account to get verified from Pollfish Team
-
-> **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old
 
 <br/>
 
@@ -377,26 +369,9 @@ Retrieve Pollfish through **maven** with gradle by adding the following line in 
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish:6.0.0:googleplayRelease@aar'
+    implementation 'com.pollfish:pollfish:6.0.0:universalRelease@aar'
 }
 ```
-
-### 4. Import Google Play Services into your project
-
-Applications that integrate Pollfish SDK are required to include Google Play Services Ads Identifier library. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
-
-If you are using gradle you can easily add in your dependencies:
-
-```groovy
-dependencies {
-    ...
-    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
-}
-```
-
-> **Note:** If you cannot see surveys even in developer mode, please do check your logs to see if this is related with your current version of Google Play Services
-
-<br/>
 
 ### 5. Embed Pollfish in your code
 
@@ -447,7 +422,7 @@ add in your Androidmanifest.xml reference the file above in the **android:networ
 
 ### 5.3 Initialize Pollfish
 
-After linking your project to Google Play Services you can easily initialize Pollfish. In order to initialize, you will need to build an instance of Params using `Params.Builder`. The `Params.Builder` has only one mandatory parameter which is the API key of your app (step 2 above). 
+In order to initialize, you will need to build an instance of Params using `Params.Builder`. The `Params.Builder` has only one mandatory parameter which is the API key of your app (step 2 above). 
 
 <span style="text-decoration: underline">Kotlin:</span>
 
@@ -498,7 +473,7 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 
 <br/>
 
-> **Note:** All the params are optional, except the **`releaseMode`** setting that turns your integration in release mode prior publishing to the Google Play store
+> **Note:** All the params are optional, except the **`releaseMode`** setting that turns your integration in release mode prior publishing to any Android App store
 
 <br/>
 
@@ -663,7 +638,7 @@ Sets Pollfish SDK to Developer or Release mode. If you do not set this param it 
 <span style="text-decoration: underline">You can use Pollfish either in Debug or in Release mode.</span>  
 
 * **Debug/Developer mode** is used to show to the publisher how Pollfish will be shown through an app (useful during development and testing - always returns a survey).  
-* **Release mode** is the mode to be used for a released app on the Google Play (start receiving paid surveys).  
+* **Release mode** is the mode to be used for a released app on any Android App store (start receiving paid surveys).  
 
 <br/>
 
@@ -921,11 +896,11 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-**At this point you are ready to go live! Turn your app to Release mode by setting `.releaseMode(true)` and submit your app to the Google Play.**
+**At this point you are ready to go live! Turn your app to Release mode by setting `.releaseMode(true)` and submit your app to any Android App stroe.**
 
 <br/>
 
-## 6. Update your privacy policy, enable releaseMode and publish on Google Play
+## 6. Update your privacy policy, enable releaseMode and publish
 
 Add the following paragraph to your app's privacy policy:
 
@@ -936,7 +911,7 @@ Add the following paragraph to your app's privacy policy:
 
 <br/>
 
-> **Note:** It's important that you include this disclosure both in the privacy policy posted on Google Play but also in the privacy policy included in your app, as described in [Google's Developer Privacy Policy](https://play.google.com/about/privacy-security/personal-sensitive/)  
+> **Note:** It's important that you include this disclosure both in the privacy policy posted on your App Store but also in the privacy policy included in your app. 
 
 <br/>
 
