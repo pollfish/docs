@@ -40,7 +40,7 @@ When Reward Settings are enabled, if a user gets screened out with a payable scr
 
 Publishers can review the performance of Payable Screenouts through their Dashboard in the <i>Mediation-Performance</i> area. When payable screenouts happen and are within the filters applied in that view, they can be seen in the funnel events of the relevant graph or table view in that section.
 
-<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/dash_pay.png" width="620" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/dash_pay.png" width="740" height="auto"/>
 
 <h2>Monitoring</h2>
 
