@@ -413,14 +413,14 @@ dependencies {
 
 **OR**
 
-#### **Retrieve Pollfish Android SDK through maven (Temporarily unavailable, comming shortly)**
+#### **Retrieve Pollfish Android SDK through mavenCentral()
 
-Retrieve Pollfish through **maven** with gradle by adding the following line in your app level **build.gradle** in dependencies section:
+Retrieve Pollfish through **mavenCentral()** with gradle by adding the following line in your app level **build.gradle** in dependencies section:
 
 ```groovy
 dependencies {
     ...
-    // implementation 'com.pollfish:pollfish:6.0.0:universalRelease@aar'
+    implementation 'com.pollfish:pollfish-universal:6.0.0'
 }
 ```
 
