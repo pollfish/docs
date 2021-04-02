@@ -413,7 +413,7 @@ dependencies {
 
 **OR**
 
-#### **Retrieve Pollfish Android SDK through mavenCentral()
+#### **Retrieve Pollfish Android SDK through mavenCentral()**
 
 Retrieve Pollfish through **mavenCentral()** with gradle by adding the following line in your app level **build.gradle** in dependencies section:
 
