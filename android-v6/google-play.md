@@ -1547,9 +1547,9 @@ Pollfish.isPollfishPanelOpen();
 
 <br/>
 
-### 12. Proguard (optional)
+## 12. Proguard
 
-If you use proguard with your app, please insert the following line in your proguard configuration file:  
+If you use proguard with your app, please insert the following lines in your proguard configuration file:  
 
 ```java
 -dontwarn com.pollfish.**
