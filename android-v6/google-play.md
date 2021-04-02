@@ -34,6 +34,32 @@ In this guide you can see the changes on the Pollfish public interface
 
 <td>
 
+#### **Gradle** <br/>
+
+```groovy
+implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```groovy
+implementation 'com.pollfish:pollfish-googleplay:6.0.0'
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
 #### **Import** <br/>
 
 ```kotlin
@@ -171,6 +197,31 @@ PollFish.showOnTopOfActivity(activity)
 
 <details><summary>Java</summary>
 <table>
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Gradle** <br/>
+
+```groovy
+implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```groovy
+implementation 'com.pollfish:pollfish-googleplay:6.0.0'
+```
 
 <tr>
 <td>
