@@ -1,7 +1,10 @@
-<div class="changelog" data-version="6.0.0">
+<div class="changelog" data-version="6.0.1">
 v6.0.0
 
 - New Android SDK
+
+v6.0.1
+- Fix Id retrieval issue
 </div>
 
 ## Prerequisites
@@ -44,7 +47,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.0.0'
+implementation 'com.pollfish:pollfish-universal:6.0.1'
 ```
 
 <tr>
@@ -215,7 +218,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.0.0'
+implementation 'com.pollfish:pollfish-universal:6.0.1'
 ```
 
 <tr>
@@ -420,7 +423,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.0.0'
+    implementation 'com.pollfish:pollfish-universal:6.0.1'
 }
 ```
 
