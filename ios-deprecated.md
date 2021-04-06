@@ -165,6 +165,8 @@ v4.0.0
 - Added various bug fixes and optimizations
 </div>
 
+> **Note:** This version of the SDK is deprecated. Please use the latest SDK
+
 ## Quick Guide
 
 1.  Download Pollfish iOS SDK and unzip it
