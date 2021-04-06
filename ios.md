@@ -5,11 +5,6 @@ v.6.0.0
 
 </div>
 
-# <span style="color:red">Beta version of the upcoming Pollfish iOS SDK v6</span>
-
-
-Please read the migration guide below.
-
 ## Prerequisites
 
 * Use XCode 12 or higher
