@@ -1,4 +1,4 @@
-<div class="changelog" data-version="6.0.0-beta">
+<div class="changelog" data-version="6.0.0">
 v6.0.0
 
 - New Pollfish Swift framework
