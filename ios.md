@@ -1,589 +1,960 @@
-<div class="changelog" data-version="5.5.2">
-v.5.5.2
+<div class="changelog" data-version="6.0.0-beta">
+v.6.0.0
 
-- Fixed crashes on iOS 14.
+- New Pollfish Swift framework
 
-v.5.5.1
-
-- Added support for Pollfish Unity Plugin integration with Pods.
-
-v.5.5.0
-
-- Changed packaging to .xcframework
-- Added support for arm64 devices
-	
-v.5.4.1
-
-- Removed from user attributes the ability to send social ids and other user info aside from demographics
-
-v.5.4.0
-
-- Removed public interfaces for sending location and beacon info
-
-v.5.3.1
-
-- Added a modulemap for Swift interoperability
-	
-	
-v.5.3.0
-
-- Added support for iOS 14. Pollfish SDK utilizes the IDFA and therefore it should initialized in iOS 14 only when the IDFA tracking permission is granted by the user.
-	
-v.5.2.5
-
-- Added functionality if overlay views are not attached to top view controller, re-attach
-
-v.5.2.4
-
-- Fixed overlay visibilty in modular views in iOS<13
-
-v.5.2.3
-
-- Ensure the Pollfish overlay view is always on top
-
-v.5.2.2
-
-- Added backwards compatibility support for XCode 10.x
-
-v.5.2.1
-
-- Added isPollfishPanelOpen public interface
-
-v.5.2.0
-
-- Fixed issues around panel visibility and concurrency
-- Added support for new demographics (spoken languages, organization role, organization number of employees)
-
-v.5.1.0
-
-- Removed deprecated UIWebView functions
-
-v.5.0.0
-
-- Created new expandable interface initWithAPIKey(...) with a configuration PollfishParams object
-- Removed old init interfaces
-- Removed deprecated interface setAttributes
-- Removed customMode and introduced rewardMode option
-- Added support for offerwall mode
-- Added option to pass a container view to rendered Pollfish overlay
-- Removed automatic re-init feature for device orientation
-- Added support for exiting faulty mediation surveys
-	
-v4.5.1
-
-- Fixed bug with user locale
-
-v4.5.0
-
-- Added support for retrieving survey info in callbacks (CPA, IR, LOI, Survey Class)
-
-v4.4.0
-
-- Added support for iOS 12
-- New iOS minimum is 9.0
-- Added dependency on WebKit.framework
-- Added the ability to render surveys from Mediation within the app
-- Added notification for user rejecting a survey
-- Improved performance
-- Fixed bugs
-
-
-v4.3.5
-
-- Added ability to test survey formats in debug mode
-
-v4.3.4
-
-- Deprecated destroy function
-- Added dynamic caching
-- Drastically decreased sdk size
-- Updated Pollfish indicator
-- Improved performance
-- Fixed memory leaks
-- XCode 9 support (required)
-
-v4.2.4
-
-- Fixed bitcode issue
-
-v4.2.3
-
-- Added support for sending user attributes during init
-- Deprecated setAttributeDictionary function
-- Fixed bug for multiple notifications and url encoding
-- Fixed isPollfishPresent bug
-
-v4.2.2
-
-- Fixed bug on survey view
-
-v4.2.1
-
-- ATS compliance
-- improved performance
-
-v4.2.0
-
-- Fixed bitcode issue
-- New API functions to support beacon and location relevant surveys 
-- Added support for new type of questions in surveys, including video surveys
-- Added new framework dependency (SystemConfiguration.framework)
-
-v4.1.2
-
-- Fixed ARM64 issue
-
-
-v4.1.1
-
-- support Bitcode
-- support Xcode 7
-
-v4.1.0
-
-- Fixed bug on orientation changes
-- Converted lib to ARC
-
-v4.0.3
-
-- Fixed bug in init function with Request UUID in release mode
-
-v4.0.2
-
-- Weak link of AdSupport framework
-- Added init function with option to pass a custom param and receive it on server-to-server callback
-- Added UserAttributesDictionary class for passing attributes around user
-- Added various bug fixes and optimizations
-
-v4.0.1
-
-- Added support of circle questions
-- Added various bug fixes and optimizations
-
-v4.0.0
-
-- Added various bug fixes and optimizations
 </div>
+
+# <span style="color:red">Beta version of the upcoming Pollfish iOS SDK v6</span>
+
+
+Please read the migration guide below.
+
+## Prerequisites
+
+* Use XCode 12 or higher
+* Target iOS 9.0 or higher
+* Create [Pollfish Developer Account](https://pollfish.com/login/publisher) and register an App
+* IDFA tracking permission (iOS 14+)
+
+> **Note:** Pollfish cannot function without the usage of IDFA. Insructions on how to request permission can be found in section 5.
+
+</br>
+
+
+## Migration guide
+
+In this guide you can see the changes on the Pollfish public interface 
+
+<br/>
+
+<details><summary>Swift</summary>
+
+<table>
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Initialisation** <br/>
+
+```swift
+Pollfish.initWithAPIKey("API_KEY", andParams: params)
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```swift
+Pollfish.initWith(params, delegate: self)
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Pollfish Params** <br/>
+
+```swift
+let pollfishParams = PollfishParams()
+
+pollfishParams.indicatorPadding = 10;
+pollfishParams.releaseMode = true;
+...
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```swift
+let params = PollfishParams("API_KEY")
+    .indicatorPadding(10)
+    .releaseMode(true)
+    ...
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **User Properties** <br/>
+
+```swift
+let userAttributes = UserAttributesDictionary()
+
+userAttributes?.setGender(GENDER(MALE))
+userAttributes?.setRace(RACE(WHITE))
+userAttributes?.setYearOfBirth(YEAR_OF_BIRTH(_1984))
+
+params.userAttributes = userAttributes
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```swift
+let userProperties = UserProperties([
+    .gender(.male),
+    .race(.white),
+    .yearOfBirth(1984)
+])
+
+params.userProperties(userProperties)
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Pollfish Lifecycle callbacks** <br/>
+
+```swift
+NotificationCenter.default.addObserver(
+    forName: NSNotification.Name(rawValue: "PollfishSurveyNotAvailable"),
+    object: nil,
+    queue: nil,
+     using:pollfishNotAvailable)
+
+func pollfishNotAvailable(_ notification:Notification) {
+    ...
+}
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```swift
+Pollfish.initWith(params, delegate: self)
+
+extension ViewController: PollfishDelegate {
+
+    func pollfishSurveyNotAvailable() {
+        ...
+    }
+
+}
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Rotation handling** <br/>
+
+> **Note:** Rotation changes are handled by the SDK
+
+```swift
+NotificationCenter.default.addObserver(
+    forName: UIDevice.orientationDidChangeNotification,
+    object: nil,
+    queue: nil,
+    using:rotateApp)
+
+func rotateApp(_ notification:Notification){
+    initPollfish();
+}
+```
+
+</table>
+</details>
+
+<br/>
+
+
+<details><summary>Objective C</summary>
+<table>
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Initialisation** <br/>
+
+```objc
+[Pollfish initWithAPIKey:@"API_KEY" andParams:params];
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```objc
+[Pollfish initWith:params delegate:nil];
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Pollfish Params** <br/>
+
+```objc
+PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {
+    pollfishParams.indicatorPadding=10;
+    pollfishParams.releaseMode=true;
+    ...
+}
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+[params indicatorPadding:10];
+[params releaseMode:true];
+...
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **User Properties** <br/>
+
+```objc
+UserAttributesDictionary *userAttributesDictionary = [UserAttributesDictionary alloc] init];
+    
+[userAttributesDictionary setGender: GENDER(MALE)];
+[userAttributesDictionary setRace:RACE(WHITE)];
+[userAttributesDictionary setYearOfBirth:YEAR_OF_BIRTH(_1984)];
+
+params.userAttributes=userAttributesDictionary;
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```objc
+UserProperties *userProperties = [[UserProperties alloc] init];
+])
+
+[userProperties gender:GenderMale];
+[userProperties race:RaceWhite];
+[userProperties yearOfBirth:1995];
+
+params.userProperties(userProperties)
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Pollfish Lifecycle callbacks** <br/>
+
+```objc
+[[NSNotificationCenter defaultCenter] addObserver:self 
+    selector:@selector(pollfishNotAvailable) name:@"PollfishSurveyNotAvailable" 
+    object:nil];
+
+- (void)pollfishNotAvailable
+{
+   ...
+}
+
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```objc
+// ViewController.h
+@interface ViewController : UIViewController<PollfishDelegate>
+
+@end
+
+// ViewController.m
+...
+
+- (void) pollfishSurveyNotAvailable
+{
+    ...
+}
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Rotation handling** <br/>
+
+> **Note:** Rotation changes are handled by the SDK
+
+```objc
+[[NSNotificationCenter defaultCenter] addObserver:self 
+    selector:@selector(didRotate:) 
+    name:UIDeviceOrientationDidChangeNotification 
+    object:nil];
+
+- (void) didRotate:(NSNotification *)notification
+{
+    [self initPollfish];
+}
+```
+
+</table>
+</details>
+
+<br/>
 
 ## Quick Guide
 
-1.  Download Pollfish iOS SDK and unzip it
-2.  Import pollfish.xcframework to your project
-3.  Import AdSupport.framework, SystemConfiguration.framework, WebKit.framework and CoreTelephony.framework to your project
-4.  Call init function of Pollfish when a view is loaded or in the App’s Delegate
-5.  Set to **Release mode** and release in AppStore
-6.  Update your privacy policy
-7.  Request your account to get verified from Pollfish Dashboard
+1. Obtain a Developer Account
+2. Register a new App on Pollfish Developer Dashboard and copy the given API Key
+3. Download and import Pollfish.xcframework to your project
+4. Add AdSupport.framework, AppTackingTransparency.framework, SystemConfiguration.framework and CoreTelephony.framework to your project
+5. Request IDFA tracking permission
+6. Embed pollfish in your code and call init
+7. Set to **Release mode** and release in AppStore
+8. Update your privacy policy
+9. Request your account to get verified from Pollfish Team
 
-**or** 
-
-Through CocoaPods:
----
-
-1.  Add a Podfile with Pollfish framework as a pod reference:
-
-```
-platform :ios, '9.0'
-pod 'Pollfish'
-```
-
-You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapods.org/pods/Pollfish)  
-
-2. Run **pod install** on the command line to install  Pollfish cocoapod.
-3. Call init function of Pollfish in the App’s Delegate
-4. Set to **Release mode** and release in AppStore
-5. Update your Privacy Policy both in the app and on AppStore Connect
-6. Request your account to get verified from Pollfish Dashboard
 <br/>
-> **Requirements:** Pollfish framework works with iOS version 9.0+ and XCode9+.  
-
-<br/><br/>
-
-#### Important note on iOS 14
-
-To continue using Pollfish surveys with iOS 14 you’ll need to update to the latest Pollfish iOS SDK (version 5.3.0 or later)!
-
-<br/><br/>
 
 ## Steps Analytically
 
 ### 1. Obtain a Developer Account
 
-Register as a Publisher at [www.pollfish.com](//www.pollfish.com/login/publisher)
+Register as a Publisher at [www.pollfish.com](https://pollfish.com/login/publisher)
 
-### 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
+<br/>
 
-Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
+### 2. Register a new App on Pollfish Developer Dashboard and copy the given API Key
 
+Login at [www.pollfish.com](https://pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
-### 3\. Add Pollfish framework to your project
+<br/>
+
+### 3. Download and import Pollfish.xcframework to your project
 
 Download Pollfish iOS SDK from the website and then in Xcode, select the target that you want to use and in the Build Phases tab expand the Link Binary With Libraries section. Press the + button, and press Add other… In the dialog box that appears, go to the Pollfish framework’s location and select it.  
 
 The project will appear at the top of the Link Binary With Libraries section and will also be added to your project files (left-hand pane).  
 
-**Note: The framework is a folder and you should add the whole folder into your project.**
+<br/>
 
-### 4\. Add the following frameworks (if you don’t already have them) in your project
+### 4. Add the following frameworks (if you don’t already have them) in your project
 
 - AdSupport.framework  
 - CoreTelephony.framework
 - SystemConfiguration.framework 
-- WebKit.framework (added in Pollfish v4.4.0)
-
-**Note: If your deployment target is less than iOS 7.0, change the AdSupport.framework from Required to Optional.**
 
 <br/>
 
-### or skip steps 3\. and 4\. and go through CocoaPods
+### 5. Request IDFA Tracking permission
 
-Add a Podfile with Pollfish framework as a pod reference:
+To display the App Tracking Transparency authorization request for accessing the IDFA, update your `Info.plist` to add the `NSUserTrackingUsageDescription` key with a custom message describing your usage. Below is an example description text:
 
+```xml
+<key>NSUserTrackingUsageDescription</key>
+<string>This identifier will be used to deliver personalized surveys to you.</string>
 ```
-platform :ios, '9.0'
-pod 'Pollfish'
+
+To present the authorization request, call `requestTrackingAuthorization`. We recommend waiting for the completion callback prior to initializing.
+
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+#import <AdSupport/AdSupport.h>
+
+- (void) requestIDFA {
+    [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+        if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
+            // Tracking authorization completed. 
+            // Initialize Pollfish here.
+            [self initPollfish];
+        }
+    }];
+}
 ```
 
-You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapods.org/pods/Pollfish)  
+<span style="text-decoration: underline">Swift</span>
+```swift
+import AppTrackingTransparency
+import AdSupport
 
-Run **pod install** on the command line to install  Pollfish cocoapod.
+func requestIDFA() {
+    ATTrackingManager.requestTrackingAuthorization { status in
+        if status == .authorized {
+            // Tracking authorization completed. 
+            // Initialize Pollfish here.
+            self.initPollfish()
+        }
+    }
+}
+```
+
+> **Note:** This step is required only for iOS 14+ targeting. If you sould like to see an example in code visit this [repository](https://github.com/pollfish/ios-sdk-pollfish)
 
 <br/>
 
-
-### 5\. Embedding Pollfish into your code
+### 6. Embedding Pollfish into your code
 
 <br/>
 
-### 5.1 If you are using Pollfish in Objective C, import Pollfish header
+### 6.1 Import Pollfish Module
 
-You have to include Pollfish library headers in any file that you will use Pollfish.  
+You have to import Pollfish Module in any file that you will use Pollfish.
 
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+@import Pollfish;
 ```
-#import <Pollfish/Pollfish.h>
-```
 
-### or if you are using Pollfish in a Swift project just import the Module
-
-```
+<span style="text-decoration: underline">Swift</span>
+```swift
 import Pollfish
 ```
 <br/>
 
-### 5.2 Initialize Pollfish
+### 6.2 Initialize Pollfish
 
-A good place to call Pollfish init function is in the application’s delegate applicationDidBecomeActive method. This way it is ensured that Pollfish surveys will be refreshed each time the application will become active. (another placement could be in the viewDidLoad or viewWillAppear methods of a ViewController).
+A good place to call Pollfish init function is in the application’s delegate `applicationDidBecomeActive` method. This way it is ensured that Pollfish surveys will be refreshed each time the application will become active. (another placement could be in the `viewDidLoad` or `viewWillAppear` methods of a `ViewController`).
 
-| **Note:** Init function affects the view hierarchy of the app. Therefore it shoud be called from the main thread that created the view hierarchy.
+In order to initialize, you need an instance of `PollfishParams` on which you will pass the API key of your app (step 2 above). `PollfishParams` has several params that affect the behaviour of Pollfish survey panel.
 
-In order to initialize, you need the API key of your app (step 2 above) and also an instance of PollfishParams. PollfishParams has several params that affect the behaviour of Pollfish survey panel.
+Below you can see an example on how you can initialize Pollfish with the help of `PollfishParams` object:
 
-Below you can see an example on how you can initialize Pollfish with the help of PollfishParams onject:
+> **Note:** In order to receive Pollfish lifecycle events see section 11.
 
 <span style="text-decoration: underline">Objective-C:</span>
- 
-```
-- (void)applicationDidBecomeActive:(UIApplication *)application 
+```objc
+- (void) applicationDidBecomeActive:(UIApplication *)application 
 {
-    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {
-        
-        pollfishParams.indicatorPosition=PollFishPositionMiddleRight;
-        pollfishParams.indicatorPadding=10;
-        pollfishParams.releaseMode= false;
-        pollfishParams.offerwallMode= false;
-        pollfishParams.rewardMode=false;
-        pollfishParams.requestUUID=@"USER_ID";
-    }];
-    
-    [Pollfish initWithAPIKey:@"YOUR_API_KEY" andParams:pollfishParams];
+    PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+    [params rewardMode:BOOL];
+    [params releaseMode:BOOL];
+    [params offerwallMode:BOOL];
+
+    [Pollfish initWith:params delegate:self];
 }
 ```
 
 <span style="text-decoration: underline">Swift:</span>
-
-```
+```swift
 func applicationDidBecomeActive(application: UIApplication) {
 
-  	let pollfishParams = PollfishParams ()
-        
-        pollfishParams.indicatorPosition=Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue);
-        pollfishParams.indicatorPadding=10;
-        pollfishParams.releaseMode = false;
-        pollfishParams.offerwallMode = false;
-        pollfishParams.requestUUID="USER_ID";
-        
-        Pollfish.initWithAPIKey("YOUR_API_KEY", andParams: pollfishParams);
+    let params = PollfishParams("API_KEY")
+        .rewardMode(Bool)
+        .releaseMode(Bool)
+        .offerwallMode(Bool)
+    
+    Pollfish.initWith(params)
 }
 ```
+
+<span style="text-decoration: underline">SwiftUI</span>
+```swift
+struct ContentView: View {
+    var pollfishView = PollfishView()
+    
+    var body: some View {
+        NavigationView {
+            pollfishView
+        }.onAppear() {
+            self.initPollfish()
+        }
+    }
+
+    func initPollfish() {
+        let params = PollfishParams("API_KEY")
+            .rewardMode(Bool)
+            .releaseMode(Bool)
+            .offerwallMode(Bool)
+            .viewContainer(PollfishView.view)
+            
+        Pollfish.initWith(params)
+    }
+}
+```
+
+> **Note:** For instructions on how to define a ```SwiftUI``` ```PollfishView``` see section 6.2.4
+
 <br/>
 
-### 5.2.1 PollfishParams available options (optional)
+### 6.2.1 PollfishParams available options (optional)
 
 You can set several params to control the behaviour of Pollfish survey panel within your app wih the use of PollfishParams instance. Below you can see all the available options. 
-<br/><br/>
-| **Note:** All the params are optional, however you should at least use the **releaseMode** setting to turn your integration in release mode prior uploading to AppStore 
+
+<br/>
+
+> **Note:** All the params are optional, except the **`releaseMode`** setting that turns your integration in release mode prior publishing to the AppStore 
+
 <br/>
 
 No | Description
 ------------ | -------------
-5.2.1 | **.indicatorPosition(PollfishPosition (int))**  <br/> Sets the Position where you wish to place the Pollfish indicator
-5.2.2 | **.requestUUID(NSString \*)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
-5.2.3 | **.indicatorPadding(int)** <br/> Sets the padding from the top or the bottom of the view, according to the Position of Pollfish indicator
-5.2.4 | **.pollfishViewContainer(UIView \*)**  <br/> Sets a view container that Pollfish surveys will be rendered above it
-5.2.5 | **.releaseMode(BOOL)**  <br/> Sets Pollfish SDK to Developer or Release mode
-5.2.6 | **.rewardMode(BOOL)**  <br/> Initializes Pollfish in reward mode
-5.2.7 | **.surveyFormat(NSString \*)**  <br/> Explicitly requests a specific survey format
-5.2.8 | **.offerwallModel(BOOL)**  <br/> Sets Pollfish to offerwall mode
-5.2.9 | **.userAttributes(NSMutableDictionary \*)**  <br/> Provides user attributes upfront during initialization
+6.2.1 | **`.indicatorPosition(IndicatorPosition)`** <br/> Sets the Position where you wish to place the Pollfish indicator
+6.2.2 | **`.requestUUID(String)`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+6.2.3 | **`.indicatorPadding(Int)`** <br/> Sets the padding from the top or the bottom of the view, according to the Position of Pollfish indicator
+6.2.4 | **`.viewContainer(UIView)`** <br/> Sets a view container that Pollfish surveys will be rendered above it
+6.2.5 | **`.releaseMode(Bool)`** <br/> Sets Pollfish SDK to Developer or Release mode
+6.2.6 | **`.rewardMode(Bool)`** <br/> Initializes Pollfish in reward mode
+6.2.7 | **`.offerwallMode(Bool)`** <br/> Sets Pollfish to offerwall mode
+6.2.8 | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
+6.2.9| **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward
+6.2.10| **`.clickId(String)`** <br/> A pass throught param that will be passed back through server-to-server callback
+6.2.11| **`.singnature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
 
 <br/>
-#### **5.2.1 .indicatorPosition (PollfishPosition (int))**
-This setting sets the Position where you wish to place Pollfish indicator  ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
 
-<span style="text-decoration: underline">There are six different options available: </span> 
+#### **6.2.1 `.indicatorPosition(IndicatorPosition)`**
+This setting sets the Position where you wish to place Pollfish indicator  ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) <br/> Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
 
-*   **PollFishPositionBottomLeft**  
-*   **PollFishPositionBottomRight**  
-*   **PollFishPositionTopLeft**  
-*   **PollFishPositionTopRight**  
-*   **PollFishPositionMiddleLeft** 
-*   **PollFishPositionMiddleRight**  
+There are six different options available:
 
-If you do not set explicity a position for Pollfish indicator, it will appear by default at **PollFishPositionMiddleRight**
-<br/><br/>
+* `.topLeft`
+* `.middleLeft`
+* `.bottomLeft`
+* `.topRight`
+* `.middleRight`
+* `.bottomRight`
+
+<br/>
+
+If you do not set explicity a position for Pollfish indicator, it will appear by default at **`.topLeft`**
+
+> **Note:** If you would like to skip the Pollfish Indicator please se the `rewardMode` to `true`
+
+<br/>
+
 Below you can see an example on how you can set Pollfish indicator to slide from the top right middle of the screen:
-<br/><br/>
+
+</br>
+
 <span style="text-decoration: underline">Objective-C:</span>
-```
-    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
-        pollfishParams.indicatorPosition=PollFishPositionMiddleRight;
-    }];
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params indicatorPosition:IndicatorPositionMiddleRight];
 ```
 <span style="text-decoration: underline">Swift:</span>
+```swift
+let params = PollfishParams("API_KEY")
+    .indicatorPosition(.middleRight);
 ```
-	let pollfishParams = PollfishParams ()
-        
-        pollfishParams.indicatorPosition=Int32(PollfishPosition.PollFishPositionMiddleRight.rawValue);
-```
-<br/>
-indicatorPosition param affects also from which side the survey panel will slide-in (Right or Left).
+
 <br/>
 
-#### **5.2.2 .requestUUID (NSString \*)**
+`IndicatorPosition` param affects also from which side the survey panel will slide-in (Right or Left).
+
+<br/>
+
+#### **6.2.2 `.requestUUID(String)`**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>.
-<br/><br/>
+
+<br/>
+
 Below you can see an example on how you can pass a requestUUID during initialization:
-<br/><br/>
+
+<br/>
+
 <span style="text-decoration: underline">Objective-C:</span>
-```
-    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
-        pollfishParams.requestUUID=@"USER_ID";
-    }];
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params requestUUID:@"USER_ID"];
 ```
 <span style="text-decoration: underline">Swift:</span>
+```swift
+let pollfishParams = PollfishParams("API_KEY")
+    .requestUUID="USER_ID";
 ```
-	let pollfishParams = PollfishParams ()
-        
-        pollfishParams.requestUUID="USER_ID";
-```
+
 <br/>
-#### **5.2.3 .indicatorPadding (int)**
+
+#### **6.2.3 `.indicatorPadding(Int)`**
 
 Sets padding from the top or the bottom of the screen according to the Position of the Pollfish indicator. Below you can see an example on how to add padding of 50 from the bottom of the screen, prior rendering Pollfish indicator.
-<br/><br/>
+
+<br/>
+
 <span style="text-decoration: underline">Objective-C:</span>
-```
-    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
-        pollfishParams.indicatorPadding=50;
-	pollfishParams.indicatorPosition=PollFishPositionBottomRight;
-    }];
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params indicatorPadding:50];
+[params indicatorPosition:IndicatorPositionBottomRight];
 ```
 <span style="text-decoration: underline">Swift:</span>
+```swift
+let pollfishParams = PollfishParams("API_KEY")
+    .indicatorPadding(50)
+    .indicatorPosition(.bottomRight)
 ```
-	let pollfishParams = PollfishParams ()
-        
-        pollfishParams.indicatorPadding=50;
-	pollfishParams.indicatorPosition=Int32(PollfishPosition.PollFishPositionBottomRight.rawValue);
-```
-<br/>
-| **Note:** if used in MIDDLE position, padding is calculating from top.**  
-<br/>
-#### **5.2.4 .pollfishViewContainer (UIView \*)**
 
-Sets a UIView container where Pollfish surveys will be rendered above it. If this param is not set, the SDK will traverse the view hierarchy of the app and render Pollfish surveys on the top view of the root view controller. 
+<br/>
 
-Preferrably you should let the SDK handle the view hierarchy on its own.
-<br/><br/>
+> **Note:** If  the pollfish indicator is used in the middle position, padding is calculated from the top
+
+<br/>
+
+#### **6.2.4 `.pollfishViewContainer(UIView)`**
+
+Sets a UIView container where Pollfish survey panel will be rendered. If this param is not set, the SDK will render Pollfish surveys on a new `UIViewController` on top of everything. 
+
+Preferrably you should let the SDK handle the render on its own.
+
+<br/>
+
 <span style="text-decoration: underline">Objective-C:</span>
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params viewContainer:self.view];
 ```
-    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
-        pollfishParams.pollfishViewContainer=self.view;
-    }];
-```
+
 <span style="text-decoration: underline">Swift:</span>
+```swift
+let pollfishParams = PollfishParams("API_KEY")
+    .viewContainer(self.view)
 ```
-	let pollfishParams = PollfishParams ()
-        
-        pollfishParams.pollfishViewContainer=self.view;
+
+For **SwiftUI** based projects, you have to define a struct comforming to  ```UIViewRepresentable``` protocol and expose a UIView field to Pollfish initialisation. The following example demonstrates how to create a custom ```View``` and handle rendering on it's on.
+
+```swift
+struct PollfishView: UIViewRepresentable {
+    let view = UIView()
+
+    func makeUIView(context: Context) -> UIView {
+       view
+    }
+
+    func updateUIView(_ uiView: UIView, context: Context) {}
+}
 ```
+For instructions on how to initialize with a custom ```View``` see section 6.2
+
 <br/>
-#### **5.2.5 .releaseMode (BOOL)**
+
+#### **6.2.5 `.releaseMode(Bool)`**
 
 Sets Pollfish SDK to Developer or Release mode. If you do not set this param it will turn the SDK to Developer mode by default in order for the developer to be able to test with test surveys.
 
 <span style="text-decoration: underline">You can use Pollfish either in Debug or in Release mode.</span>  
 
 *   **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing - always returns a survey).  
-*   **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
+*   **Release mode** is the mode to be used for a released app on the AppStore (start receiving paid surveys).  
 
-| **Note:** Be careful to set releaseMode parameter to true prior releasing to AppStore!  
 <br/>
+
+> **Note:** Be careful to set releaseMode parameter to true prior releasing to the AppStore!  
+
+<br/>
+
 <span style="text-decoration: underline">Objective-C:</span>
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params releaseMode:true];
 ```
-    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
-        pollfishParams.releaseMode=true;
-    }];
-```
+
 <span style="text-decoration: underline">Swift:</span>
-```
-	let pollfishParams = PollfishParams ()
-        
-        pollfishParams.releaseMode=true;
+```swift
+let pollfishParams = PollfishParams("API_KEY")
+    .releaseMode(true)
 ```
 <br/>
-#### **5.2.6 .rewardMode (BOOL)**
 
-Initializes Pollfish in reward mode. This means that Pollfish Indicator will not be shown and Pollfish survey panel will be automatically hidden until the publisher explicitly calls Pollfish show function. This behaviour enables the option for the publisher, to show a custom prompt to incentivize the user to participate to the survey.
+#### **6.2.6 `.rewardMode(Bool)`**
 
-If not set, the default value is false and Pollfish indicator is shown.
+Initializes Pollfish in reward mode. This means that Pollfish Indicator will not be shown and Pollfish survey panel will be automatically hidden until the publisher explicitly calls Pollfish show function (The publisher should wait for the pollfish survey received callbacks). This behaviour enables the option for the publisher, to show a custom prompt to incentivize the user to participate to the survey.
+
+> **Note:** If not set, the default value is false and Pollfish indicator is shown.
+
+You can view an example on how to achieve this behaviour [here](https://github.com/pollfish/ios-sdk-pollfish)
+
 <br/>
+
 <span style="text-decoration: underline">Objective-C:</span>
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params rewardMode:true];
 ```
-    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
-        pollfishParams.rewardMode=true;
-    }];
-```
+
 <span style="text-decoration: underline">Swift:</span>
+```swift
+let pollfishParams = PollfishParams("API_KEY")
+    .rewardMode(true)
 ```
-	let pollfishParams = PollfishParams ()
-        
-        pollfishParams.rewardMode=true;
-```
+
 <br/>
+
 You can read more on how you can use the rewardMode to incentivize users to participate to surveys in the following <a href="https://www.pollfish.com/docs/rewarded-surveys">link</a>.
-<br/>
-#### **5.2.7 .surveyFormat (NSString \*)**
 
-Explicitly requests a specific survey format for testing purposes.
-
-| **Note:** This param is ignored when offerwall mode is true 
-
-If you want to test Pollfish different available Survey Formats you can  request a specific survey format during initialization
-
-There are four different options available: 
-
-* **SurveyFormatBasic**
-* **SurveyFormatPlayful**
-* **SurveyFormatRandom**
-* **SurveyFormatThirdParty**
-
-Below you can see an example on how you can explicitly request to test Pollfish Plaful Survey Format in debug mode:
-<br/><br/>
-<span style="text-decoration: underline">Objective-C:</span>
-```
-    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
-        pollfishParams.surveyFormat=SurveyFormatBasic;
-	pollfishParams.releaseMode=false;
-    }];
-```
-<span style="text-decoration: underline">Swift:</span>
-```
-	let pollfishParams = PollfishParams ()
-        
-        pollfishParams.surveyFormat=SurveyFormatBasic;
-	pollfishParams.releaseMode=false;
-```
 <br/>
 
-#### **5.2.8 .offerwallModel (BOOL)**
+#### **6.2.7 `.offerwallMode(Bool)`**
 
 Enables Pollfish in offerwall mode. If not specified Pollfish is shown as one survey at a time.
 
-Below you can see an example on how you can intialize Pollfish in offerwall mode in an incentivized integration:
-<br/><br/>
-<span style="text-decoration: underline">Objective-C:</span>
-```
-    PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
-        pollfishParams.offerwallModel=true;
-	pollfishParams.rewardMode=true;
-	pollfishParams.releaseMode=false;
-    }];
-```
-<span style="text-decoration: underline">Swift:</span>
-```
-	let pollfishParams = PollfishParams ()
-	
-	pollfishParams.offerwallModel=true;
-	pollfishParams.rewardMode=true;
-	pollfishParams.releaseMode=false;
-```
+Below you can see an example on how you can intialize Pollfish in Offerwall mode:
+
 <br/>
-#### **5.2.9 .userAttributes(NSMutableDictionary \*)**
+
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params offerwallMode:true];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+```swift
+let pollfishParams = PollfishParams("API_KEY")
+    .offerwallMode(true)
+```
+
+<br/>
+
+#### **6.2.8 `.userProperties(UserProperties)`**
 
 Passing user attributes to skip or shorten Pollfish Demographic surveys.
 
 If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and archieve better fill rate and higher priced surveys.
 
-| **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default.
+> **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default.
 
-an example of how you can create and pass a user attributes dictionary during initialization can be the following below:
-<br/><br/>
-<span style="text-decoration: underline">Objective-C:</span>
+> **Note:** You can read more on demographic surveys and list of available options <a href="https://www.pollfish.com/docs/demographic-surveys">here</a>. 
 
-```
-UserAttributesDictionary *userAttributesDictionary = [[UserAttributesDictionary alloc] init];
-    
-    [userAttributesDictionary setGender: GENDER(MALE)];
-    [userAttributesDictionary setRace:RACE(WHITE)];
-    [userAttributesDictionary setYearOfBirth:YEAR_OF_BIRTH(_1984)];
-    [userAttributesDictionary setMaritalStatus:MARITAL_STATUS(MARRIED)];
-    [userAttributesDictionary setParentalStatus:PARENTAL_STATUS(THREE)];
-    [userAttributesDictionary setEducation:EDUCATION_LEVEL(UNIVERSITY)];
-    [userAttributesDictionary setEmployment:EMPLOYMENT_STATUS(EMPLOYED_FOR_WAGES)];
-    [userAttributesDictionary setCareer:CAREER(TELECOMMUNICATIONS)];
-    [userAttributesDictionary setIncome:INCOME(MIDDLE_I)];
-    
-PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {        
-	pollfishParams.userAttributes=userAttributesDictionary;
-    }];
-```
-<span style="text-decoration: underline">Swift:</span>
-```
-    let userAttributesDictionary:UserAttributesDictionary = [:]
-    
-    /*included in Demographic Surveys*/
-    userAttributesDictionary.setGender(GENDER(MALE));
-    userAttributesDictionary.setRace(RACE(WHITE));
-    userAttributesDictionary.setYearOfBirth(YEAR_OF_BIRTH(_1984));
-    userAttributesDictionary.setMaritalStatus(MARITAL_STATUS(MARRIED));
-    userAttributesDictionary.setParentalStatus(PARENTAL_STATUS(THREE));
-    userAttributesDictionary.setEducation(EDUCATION_LEVEL(UNIVERSITY));
-    userAttributesDictionary.setEmployment(EMPLOYMENT_STATUS(EMPLOYED_FOR_WAGES));
-    userAttributesDictionary.setCareer(CAREER(TELECOMMUNICATIONS));
-    userAttributesDictionary.setIncome(INCOME(MIDDLE_I));
-    
-    let pollfishParams = PollfishParams ()
-	
-    pollfishParams.userAttributes=userAttributesDictionary;
-    
-```
-
+An example of how you can create and pass a `UserProperties` object during initialization can be the following below:
 
 <br/>
-**At this point you are ready to go live! Turn your app to Release mode by setting releaseMode:true and submit your app to AppStore.**
-<br/><br/>
-### 6\. Distributing your app to AppStore
+
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+UserProperties *userProperties = [[UserProperties alloc] init];
+
+[userProperties gender:GenderMale];
+[userProperties race:RaceWhite];
+[userProperties yearOfBirth:1984];
+[userProperties maritalStatus:MaritalStatusMarried];
+[userProperties parental:ParentalThree];
+[userProperties education:EducationUniversity];
+[userProperties employment:EmploymentEmployedForWages];
+[userProperties career:CareerTelecommunications];
+[userProperties income:IncomeMiddleI];
+[userProperties spokenLanguages:@[
+    [NSNumber numberWithInt:SpokenLanguageGreek],
+    [NSNumber numberWithInt:SpokenLanguageEnglish]
+]];
+[userProperties organizationRole:OrganizationRoleTechnicalStaff];
+[userProperties numberOfEmployees:NumberOfEmployeesFiftyOneToHundrend];
+[userProperties postalData:@"10017|US"];
+[userProperties customAttribute:@"value" forKey:@"key"];
+
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+[params userProperties:userProperties];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+```swift
+let userProperties = UserProperties([
+    .gender(.male),
+    .race(.white),
+    .yearOfBirth(1984),
+    .maritalStatus(.married),
+    .parental(.three),
+    .education(.university),
+    .employment(.employedForWages),
+    .career(.telecommunications),
+    .income(.middleI),
+    .spokenLanguages([
+        .greek,
+        .english
+    ])
+    .organizationRole(.technicalStaff)
+    .numberOfEmployees(.fiftyOneToHundrend)
+    .postalData("10017|US")
+    .customProperty("key", "value")
+])
+    
+let pollfishParams = PollfishParams("API_KEY")
+    .userProperties(userProperties)
+```
+
+<br/>
+
+#### **6.2.9 `rewardInfo(RewardInfo)`**
+
+An object holding information regarding the reward settings, overriding the values as speciefied in the Publisher's Dashboard
+
+<br/>
+
+```swift
+struct RewardInfo {
+    let rewardName: String
+    let rewardConversion: Float
+}
+```
+
+Field | Description
+------------ | -------------
+**`rewardName`**      | Overrides the reward name as specified in the Publisher's Dashboard
+**`rewardConversion`** | Overrides the reward conversion as specified in the Publisher's Dashboard. Conversion is expecting a number matching this function ( ```1 USD = X Points``` ) where ```X``` is a ```Float``` number.
+
+<br/>
+
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+RewardInfo *rewardInfo = [[RewardInfo alloc]
+                          initWithRewardName:@"Diamonds"
+                          rewardConversion:1.1];
+
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+[params rewardInfo:rewardInfo];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+```swift
+let rewardInfo = RewardInfo(rewardName: "Diamonds",
+                            rewardConversion: 1.1f)
+
+let pollfishParams = PollfishParams("API_KEY")
+    .rewardInfo(rewardInfo)
+```
+
+> **Note:** It's preferable to handle the reward settings through the Publisher's Dashboard
+
+<br/>
+
+#### **6.2.10 `clickId(String)`**
+
+A pass through param that will be passed back through server-to-server callbacks as specified [here](https://www.pollfish.com/docs/s2s)
+
+<br/>
+
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params clickId:@"CLICK_ID"];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+```swift
+et pollfishParams = PollfishParams("API_KEY")
+    .clickId("CLICK_ID")
+```
+
+<br/>
+
+#### **6.2.11 `signature(String)`**
+
+An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as passed through the `RewardInfo` object (5.2.10)
+
+This parameter can be used optionally to prevent tampering around reward conversion, if passed during initialisation. The platform supports url validation by requiring a hash of the `rewardConversion`, `rewardName`, and `clickId`. Failure to pass validation will result in firing **`PollfishSurveyNotAvailable`** callback.
+
+In order to generate the `signature` field you should sign the combination of `rewardConversion+rewardName+clickId` parameters using the HMAC-SHA1 algorithm and your account's secret_key that can be retrieved from the Account Information page on your Pollfish Dashboard.
+
+The `signature` value should then be encoded using Base64.
+
+> **Note:** Although `rewardConversion` is mandatory for the hashing to work, the `rewardName` and `clickId` parameters are optional and you should add them for extra security.
+
+<br/>
+
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params signature:@"SIGNATURE"];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+```swift
+et pollfishParams = PollfishParams("API_KEY")
+    .signature("SIGNATURE")
+```
+
+---
+
+<br/>
+
+**At this point you are ready to go live! Turn your app to Release mode by setting `.releaseMode(true)` and submit your app to the AppStore.**
+
+<br/>
+
+### 7. Distributing your app to AppStore
 
 Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefore when submitting your app to the App you should select the following options as seen in the image below:  
 
@@ -591,16 +962,21 @@ Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefor
 
 <br/>
 
-### 7\.  Update your App's Privacy Policy in the app and on AppStore Connect
+### 8. Update your App's Privacy Policy in the app and on AppStore Connect
 
 Add the following paragraph to your **App's Privacy Policy**:
 
 *“Survey Serving Technology*  
 
 *This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user's device data (including Advertising ID, Device ID, other available electronic identifiers and further response meta-data is automatically sent, via our app, to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. For a full list of data received by Pollfish through this app, please read carefully the Pollfish respondent terms located at [https://www.pollfish.com/terms/respondent](https://www.pollfish.com/terms/respondent). These data will be associated with your answers to the questionnaires whenever Pollfish sends such questionnaires to eligible users. Pollfish may share such data with third parties, clients and business partners, for commercial purposes. By downloading the application, you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link [https://www.pollfish.com/respondent/opt-out](https://www.pollfish.com/respondent/opt-out). We once more invite you to check the Pollfish respondent's terms of use, if you wish to have more detailed view of the way Pollfish works and with whom Pollfish may further share your data."*  
-<br/><br/>
-and on **App Store Connect** in the App's Privacy Policy section, update the relevant data collection questionnaire with the following choices as suggested by the latest AppStore's policies:
+
 <br/>
+
+and on the **App Store Connect** in the App's Privacy Policy section, update the relevant data collection questionnaire with the following choices as suggested by the latest AppStore's policies:
+
+<br/>
+
+<details><summary>Questionnaire Answers</summary>
 
 | Type | Description | App Tracking | Explanation 
 | --- | --- | --- | --- |
@@ -611,17 +987,17 @@ and on **App Store Connect** in the App's Privacy Policy section, update the rel
 | Physical Addrress | Such as home address, physical address, or mailing address | NO |  |
 | Other User Contact Info | Any other information that can be used to contact the user outside the app | NO |  |
 | **Health & Fitness** | --- | --- | --- |
-| Health | Health and medical data, including but not limited to from the Clinical Health Records API, HealthKit API, MovementDisorderAPIs, or health-related human subject research or any other user provided health or medical data | **Data use:** Third-Party Advertising **Linked to user:** Yes **Tracking:** No | Pollfish does not directly collect any health data. However some clients might create surveys that could be asking some general health questions |
-| Fitness | Fitness and exercise data, including but not limited to the Motion and Fitness API | **Data use:** Third-Party Advertising **Linked to user:** Yes **Tracking:** No | Pollfish does not directly collect any fitness data. However some clients might create surveys that could be asking some general fitness questions |
+| Health | Health and medical data, including but not limited to from the Clinical Health Records API, HealthKit API, MovementDisorderAPIs, or health-related human subject research or any other user provided health or medical data | <ul> <li> **Data use:** Third-Party Advertising </li> <li> **Linked to user:** Yes </li> <li> **Tracking:** No </li> </ul> | Pollfish does not directly collect any health data. However some clients might create surveys that could be asking some general health questions |
+| Fitness | Fitness and exercise data, including but not limited to the Motion and Fitness API | <ul> <li> **Data use:** <br> Third-Party Advertising </li> <li> **Linked to user:** Yes </li> <li> **Tracking:** No </li> </ul> | Pollfish does not directly collect any fitness data. However some clients might create surveys that could be asking some general fitness questions |
 | **Financial Info** | --- | --- | --- |
 | Payment Info | Such as form of payment, payment card number, or bank account number | NO |  |
 | Credit Info | Such as credit score | NO |  |
-| Other Financial Info | Such as salary, income, assets, debts, or any other financial information | **Data use:** Third-Party Advertising **Linked to user:** Yes **Tracking:** Yes | Income data are collected as part of the demographic data during the onboarding process|
+| Other Financial Info | Such as salary, income, assets, debts, or any other financial information | <ul> <li> **Data use:** Third-Party Advertising </li> <li> **Linked to user:** Yes </li> <li> **Tracking:** Yes </li> </ul> | Income data are collected as part of the demographic data during the onboarding process|
 | **Location** | --- | --- | --- |
 | Precise Location | Information that describes the location of a user or device with the same or greater resolution as a latitude and longitude with three or more decimal places | NO |  |
 | Coarse Location | Information that describes the location of a user or device with lower resolution than a latitude and longitude with three or more decimal places, such as approximate location services | NO |  |
 |  **Sensitive Info** | --- | --- | --- |
-| Sensitive Info | Such as racial or ethnic data, sexual orientation, pregnancy or childbirth information, disability, religious or philosophical beliefs, trade union membership, political opinion, genetic information, or biometric data | **Data use:** Third-Party Advertising **Linked to user:** Yes **Tracking:** Yes | Demographic data such as the number of children or race are asked during the demographic data collection process when onboarding a user |
+| Sensitive Info | Such as racial or ethnic data, sexual orientation, pregnancy or childbirth information, disability, religious or philosophical beliefs, trade union membership, political opinion, genetic information, or biometric data | <ul> <li> **Data use:** Third-Party Advertising </li> <li> **Linked to user:** Yes </li> <li> **Tracking:** Yes </li> </ul> | Demographic data such as the number of children or race are asked during the demographic data collection process when onboarding a user |
 |  **Contacts** | --- | --- | --- |
 | Contacts | Such as a list of contacts in the user’s phone, address book, or social graph | NO | |
 |  **User Content** | --- | --- | --- |
@@ -630,14 +1006,14 @@ and on **App Store Connect** in the App's Privacy Policy section, update the rel
 | Audio Data | The user’s voice or sound recordings | NO | |
 | Gameplay Content | Such as user-generated content in-game | NO |  |
 | Customer Support | Data generated by the user during a customer support request | NO |  |
-| Other User Content | Any other user-generated content | **Data use:** Third-Party Advertising **Linked to user:** Yes **Tracking:** Yes | Different types of open ended questions might be asked within surveys |
+| Other User Content | Any other user-generated content | <ul> <li> **Data use:** Third-Party Advertising </li> <li> **Linked to user:** Yes </li> <li> **Tracking:** Yes </li> </ul> | Different types of open ended questions might be asked within surveys |
 |  **Browsing History** | --- | --- | --- |
 | Browsing History | Information about the content the user has viewed | NO |  |
 |  **Search History** | --- | --- | --- |
 | Search History | Information about searches the user has performed | NO |  |
 |  **Identifiers** | --- | --- | --- |
-| User ID | Such as screen name, handle, account ID, assigned user ID, customer number, or other user- or account-level ID that can be used to identify a particular user or account | **Data use:** Third-Party Advertising **Linked to user:** Yes **Tracking:** Yes | Publishers can pass a unique user ID and receive it back in s2s callbacks |
-| Device ID | Such as the device’s advertising identifier, or other device-level ID | **Data use:** Third-Party Advertising **Linked to user:** Yes **Tracking:** Yes | Pollfish SDK works upon the IDFA |
+| User ID | Such as screen name, handle, account ID, assigned user ID, customer number, or other user- or account-level ID that can be used to identify a particular user or account | <ul> <li> **Data use:** Third-Party Advertising </li> <li> **Linked to user:** Yes </li> <li> **Tracking:** Yes </li> </ul> | Publishers can pass a unique user ID and receive it back in s2s callbacks |
+| Device ID | Such as the device’s advertising identifier, or other device-level ID | <ul> <li> **Data use:** Third-Party Advertising </li> <li> **Linked to user:** Yes </li> <li> **Tracking:** Yes </li> </ul> | Pollfish SDK works upon the IDFA |
 |  **Purchases** | --- | --- | --- |
 | Purchase History | An account’s or individual’s purchases or purchase tendencies | NO | |
 |  **Usage Data** | --- | --- | --- |
@@ -649,19 +1025,25 @@ and on **App Store Connect** in the App's Privacy Policy section, update the rel
 | Performance Data | Such as launch time, hang rate, or energy use | NO | |
 | Other Diagnostic Data | Any other data collected for the purposes of measuring technical diagnostics related to the app | NO | |
 |  **Other Data** | --- | --- | --- |
-| Other Data Types | Any other data types not mentioned | **Data use:** Third-Party Advertising **Linked to user:** Yes **Tracking:** Yes | Different types of data can be collected through surveys |
+| Other Data Types | Any other data types not mentioned | <ul> <li> **Data use:** Third-Party Advertising </li> <li> **Linked to user:** Yes </li> <li> **Tracking:** Yes </li> </ul> | Different types of data can be collected through surveys |
+
+</details>
 
 <br/>
+
 ---
+
 <br/>
+
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/basic-format.gif"/>
+
 <br/>
 
-You can have a look for some integration tips <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a> or if have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
-<br/><br/><br/>
+You can have a look for some integration tips <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a> or if have any question, like why you do not see surveys on your own device in release mode, please have a look at our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
 
-| **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process that users need to go through, in order to join the platform. If a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this type of targeting.
+<br/>
 
+> **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process that users need to go through, in order to join the platform. If a paid survey is available at that point of time, the demographic questions will be preappended at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this type of targeting.
 
 <br/>
 
@@ -671,29 +1053,33 @@ You can have a look for some integration tips <a href="https://www.pollfish.com/
 <td><img src="https://storage.googleapis.com/pollfish-images/results.png" style="padding:4px"/></td>
 </tr>
 </table>
-<br/>
-
-
-In our efforts to include publishers in this process and be as transparent as possible we provide full control over the process. We let publishers decide if their users are served these standalone surveys or not, in 2 different ways. Firstly by monitoring the process in code and excluding any users by listening to the relevant noitifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) field which will be 0 USD cents. Secondly, publishers can disable the standalone demographic surveys through the Pollfish Developer Dashboard in the Settings area of an app. You can read more on demographic surveys <a href="https://www.pollfish.com/docs/demographic-surveys">here</a>. 
-
-If you know attributes about a user like gender, age and others, you can provide them during initialization as described in section 9 - "Passing user attributes to skip or shorten Pollfish Demographic surveys" and skip or shorten this way, Pollfish Demographic surveys.
-
-
 
 <br/>
 
-### 8\.  Request your account to get verified
 
-After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
+In our efforts to include publishers in this process and be as transparent as possible we provide full control over the process. We let publishers decide if their users are served these standalone surveys or not, in 2 different ways. Firstly by monitoring the process in code and excluding any users by listening to the relevant noitifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) field which will be 0 USD cents or by checking the survey class which will be `Pollfish\Demographics`. Secondly, publishers can disable the standalone demographic surveys through the Pollfish Developer Dashboard in the Settings area of an app. 
+
+You can read more on demographic surveys <a href="https://www.pollfish.com/docs/demographic-surveys">here</a>. 
+
+If you know attributes about a user like gender, age and others, you can provide them during initialization as described in section 6.2.8 - "Passing user properties to skip or shorten Pollfish Demographic surveys" and skip or shorten this way, Pollfish Demographic surveys.
 
 <br/>
+
+### 9. Request your account to get verified
+
+After your app is published on the AppStore you should request your account to get verified from your Pollfish Publisher Dashboard.
+
+<br/>
+
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/verify_account.png"/>
+
 <br/>
 
-When your account is verified you will be able to start receiving paid surveys from Pollfish clients.
-<br/>
-<br/>
+When your account is verified you will be able to start receiving paid surveys from Pollfish clients. At that point, the live version of your app should have Pollfish SDK in release mode.
 
+> **Note:** In order to be able to request your account to get verified you need to provide a url of your app on the AppStore
+
+<br/>
 
 ## Optional section
 
@@ -701,192 +1087,139 @@ In this section we will list several options that can be used to control Pollfis
 <br/>
 <br/>
 
-### 9\. Handling orientation changes (optional)
+### 10. Manually show or hide Pollfish (optional)
 
-Pollfish SDK does not handle by default different orientation changes. If your app supports more than one orientations you should register and get notified when a device is roated and re-init Pollfish.
-
-For example:
+You can manually hide or show Pollfish survey panel by calling anywhere after initialization:  
 
 <span style="text-decoration: underline">Objective-C:</span>
-
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appRotated) name:UIDeviceOrientationDidChangeNotification object:nil];
-```
-```
--(void) appRotated{
-    // Pollfish re-init
-}
-```
-<span style="text-decoration: underline">Swift:</span>
- 
-```
-NotificationCenter.default.addObserver(forName: UIDevice.orientationDidChangeNotification,
-                                               object: nil,
-                                               queue: nil,
-                                               using:appRotated)
-```
-```
-func appRotated(_ notification:Notification){
-    // Pollfish re-init
-}
-```
-<br/>
-### 10\. Manually show or hide Pollfish (optional)
-
-You can manually hide and show Pollfish from your various UIVIewControllers. by calling anywhere after initialization:  
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
+```objc
 [Pollfish show];
 ```
 
 <span style="text-decoration: underline">Swift:</span>
-
-```
+```swift
 Pollfish.show()
 ```
 
-or  
+**or** 
 
 <span style="text-decoration: underline">Objective-C:</span>
-
-```
+```objc
 [Pollfish hide];
 ```
 
 <span style="text-decoration: underline">Swift:</span>
-
-```
+```swift
 Pollfish.hide()
 ```
 
-
-For example:  
-
-<span style="text-decoration: underline">Objective-C:</span>
-
-```
-// MyViewController1
-- (void)viewWillAppear:(BOOL)animated
-{
-    // ...
-    [Pollfish hide];
-}
-
-// MyViewController2
-- (void)viewWillAppear:(BOOL)animated
-{
-    // ...
-    [Pollfish show];
-}
-```
-
-<span style="text-decoration: underline">Swift:</span>
-
-```
-// MyViewController1
-override func viewWillAppear(animated: Bool) 
-{
-    super.viewWillAppear(animated)
-  
-    // ...
-    Pollfish.hide()
-}
-
-// MyViewController2
-override func viewWillAppear(animated: Bool) 
-{
-    super.viewWillAppear(animated)
-    
-    // ...
-    Pollfish.hide()
-}
-```
 <br/>
 
-### 11\.Implement Pollfish event listeners (optional)
+### 11. Listen for Pollfish lifecycle events (optional)
 
-> **Note:** Pollfish listeners/notifications fire in an asynchronous way. Having said that it's possible that you receive them while being in a background thread and not the main UI thread. If you want to make any prompts or custom changes on the view level when you receive those notifications, please be sure to make them on the main UI thread
+In order to get notified for Pollfish lifecycle events you will have to comform to the `PollfishDelegate` and override the methods of your choice. All methods are optional.
 
-### 11.1 Get notified when a survey is received
-
-
-You can be notified when a survey is received via the iOS Notification Center. Note that the observer should be already registered when a survey is received in order to run the selector.  
+Below you can see an example of comformance to the `PollfishDelegate`
 
 <span style="text-decoration: underline">Objective-C:</span>
+```objc
+// ViewController.h
 
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishReceived:) name:@"PollfishSurveyReceived" object:nil];
-```
+@interface ViewController : UIViewController<PollfishDelegate>
 
-```
-- (void)pollfishReceived:(NSNotification *)notification
-{
-    int surveyPrice = [[[notification userInfo] valueForKey:@"survey_cpa"] intValue];
-    int surveyIR = [[[notification userInfo] valueForKey:@"survey_ir"] intValue];
-    int surveyLOI = [[[notification userInfo] valueForKey:@"survey_loi"] intValue];
-    
-    NSString *surveyClass =[[notification userInfo] valueForKey:@"survey_class"];
-    
-    NSString *rewardName = [[notification userInfo] valueForKey:@"reward_name"];
-    int rewardValue = [[[notification userInfo] valueForKey:@"reward_value"] intValue];
-    
-    NSLog(@"Pollfish: Survey Received - SurveyPrice:%d andSurveyIR: %d andSurveyLOI:%d andSurveyClass:%@ andRewardName:%@ andRewardValue:%d", surveyPrice,surveyIR, surveyLOI, surveyClass, rewardName, rewardValue);
-}
+@end
+
+
+// ViewController.m
+
+@interface ViewController()
+
+@end
+
+@implementation ViewController
+
+...
+
+// Override here the methods of your choice
+
+@end
 ```
 
 <span style="text-decoration: underline">Swift:</span>
+```swift
 
-```
-NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishSurveyReceived"),
-                                               object: nil,
-                                               queue: nil,
-                                               using:pollfishReceived)
-```
+class ViewController: UIViewController {
+   ...
+}
 
-```
-func pollfishReceived(_ notification:Notification) {
-        
-        if let userInfo : [AnyHashable: Any] = (notification.userInfo) {
-      
-            let surveyPrice = userInfo["survey_cpa"]
-            let surveyIR =  userInfo["survey_ir"]
-            let surveyLOI =  userInfo["survey_loi"]
-            let surveyClass =  userInfo["survey_class"]
-            
-            let rewardName = userInfo["reward_name"]
-            let rewardValue = userInfo["reward_value"]
-            
-            print("Pollfish Survey  Received - SurveyPrice: \(String(describing: surveyPrice)) andSurveyIR: \(String(describing: surveyIR)) andSurveyLOI: \(String(describing: surveyLOI)) andSurveyClass: \(String(describing: surveyClass)) andRewardName: \(String(describing: rewardName)) andRewardValue:\(String(describing: rewardValue))")
-
-        }else{         
-            print("Pollfish Survey Received")
-	}
+extension ViewController: PollfishDelegate {
+    // Override here the methods of your choice
 }
 ```
 
+Please make sure you pass the conforming class durring initialisation
 
-As you may see in the example above you can get informed for the following values by listening and reading the relevant notification object: 
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+[Pollfish initWith:params delegate:self];
+```
 
-| **Note:** This notification object, when offerwall mode is enabled, it returns an empty userInfo object. It just notifies that surveys are available within the offerwall.
+<span style="text-decoration: underline">Swift:</span>
+```swift
+Pollfish.initWith(params, delegate: self)
+```
 
-- **survey_cpa** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
-- **survey_ir** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably.
-- **survey_loi** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
-- **survey_class** :  information about the survey network and type* 
-- **reward_name** :  a virtual reward name as specified on Developer Dashboard* 
-- **reward_vale** :  a virtual reward value as caluclated via a given echange rate on Developer Dashboard.* 
+There are seven methods available to override:
 
-* The syntax for survey_class values is:
+No | Delegate Method
+------------ | -------------
+11.1 | **`pollfishSurveyReceived(SurveyInfo?)`** <br/> Get notified when a survey is received
+11.2 | **`pollfishSurveyCompleted(SurveyInfo)`** <br/> Get notified when a survey is completed
+11.3 | **`pollfishUserNotEligible`** <br/> Get notified when a user is not eligible for a Pollfish survey
+11.4 | **`pollfishSurveyNotAvailable`** <br/> Get notified when no survey is available
+11.5 | **`pollfishOpened`** <br/> Get notified when Pollfish panel has opened
+11.6 | **`pollfishClosed`** <br/> Get notified when Pollfish panel has closed
+11.7 | **`pollfishUserRejectedSurvey`** <br/> Get notified when a user rejected a survey
+
+<br/>
+
+**`SurveyInfo`** 
+
+This object contains information regarding the survey that has been received or completed by the user.
+
+```swift
+struct SurveyInfo {
+    let cpa: Int?
+    let loi: Int?
+    let ir: Int?
+    let surveyClass: String?
+    let rewardName: String?
+    let rewardValue: Int?
+    let remainingCompletes: Int?
+}
+```
+
+Field | Description
+------------ | -------------
+**`cpa`**                | Money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
+**`ir`**                 | The current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably
+**`loi`**                | The expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably
+**`surveyClass`**        | Information about the survey network and type
+**`rewardName`**         | A virtual reward name as specified on Publisher Dashboard 
+**`rewardValue`**        | A virtual reward value as caluclated via a given echange rate on Publisher Dashboard 
+**`remainingCompletes`** | The number of remaining completes for the survey
+
+<br/>
+
+The syntax for survey_class values is:
 
 ```
 survey_class: provider["/"type]
-provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "P2Sample"
+provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "Dynata"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
-that is a network name followed by an optional slash and survey type.
+which is the network name followed by an optional slash and survey type.
 
 The provider is the network that provides the survey. The syntax rule has all the networks currently supported by Pollfish.
 
@@ -897,281 +1230,210 @@ The whole set of values currently supported are:
 
 | Value              | Description
 |:------------------|:----------------
-| **Pollfish**           | Pollfish Basic survey
-| **Pollfish/Basic**           |  Pollfish Basic survey (another name)
-| **Pollfish/Playful**         | Pollfish Playful survey 
-| **Pollfish/ThirdParty**         | Pollfish 3rd party survey
-| **Pollfish/Demographics**         | Pollfish Demographic survey
-| **Pollfish/Internal**         | Pollfish internal survey created by the publisher
-| **Toluna**         | Toluna survey   
-| **Cint**         | Cint survey   
-| **InnovateMR**         | InnovateMR survey   
-| **SaySo**       | SaySo survey   
-| **P2Sample**       | P2Sample survey
-
-When a new mediation network enters the Pollfish network the appropriate values will be added.
+| **`Pollfish`**              | Pollfish Basic survey
+| **`Pollfish/Basic`**        | Pollfish Basic survey (another name)
+| **`Pollfish/Playful`**      | Pollfish Playful survey 
+| **`Pollfish/ThirdParty`**   | Pollfish 3rd party survey
+| **`Pollfish/Demographics`** | Pollfish Demographic survey
+| **`Pollfish/Internal`**     | Pollfish internal survey created by the publisher
+| **`Toluna`**                | Toluna survey   
+| **`Cint`**                  | Cint survey   
+| **`InnovateMR`**            | InnovateMR survey   
+| **`SaySo`**                 | SaySo survey   
+| **`Dynata`**                | Dynata survey
 
 <br/>
+
+> **Note:** When a new mediation network enters the Pollfish network the appropriate values will be added.
+
+<br/>
+
+### 11.1 Get notified when a survey is received
+
+You can be notified when a survey is received via the `PollfishDelegate`.
+
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+- (void) pollfishSurveyReceivedWithSurveyInfo:(SurveyInfo *)surveyInfo
+{
+    if (surveyInfo != nil) {
+        NSLog(@"Pollfish Survey Received - %@", surveyInfo);
+    } else {
+        NSLog(@"Pollfish Survey Offerwall Received");
+    }
+}
+```
+
+<span style="text-decoration: underline">Swift:</span>
+```swift
+func pollfishSurveyReceived(surveyInfo: SurveyInfo?) {
+    guard let surveyInfo = surveyInfo else { 
+        print("Pollfish Survey Offerwall Received")
+        return 
+    }
+
+    print("Pollfish Survey Received - \(surveyInfo)")
+}
+```
+
+<br/>
+
+As you may see in the example above you can get informed for the following values by overriding `pollfishSurveyReceived` method: 
+
+> **Note:** When offerwall mode is enabled, it returns a `nil` object. It just notifies that surveys are available within the offerwall.
+
+<br/>
+
 ### 11.2 Get notified when a survey is completed
 
 <span style="text-decoration: underline">Objective-C:</span>
-
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishCompleted:) name:@"PollfishSurveyCompleted" object:nil];
-```
-
-```
-- (void)pollfishCompleted:(NSNotification *)notification
+```objc
+- (void) pollfishSurveyCompletedWithSurveyInfo:(SurveyInfo *)surveyInfo
 {
-    int surveyPrice = [[[notification userInfo] valueForKey:@"survey_cpa"] intValue];
-    int surveyIR = [[[notification userInfo] valueForKey:@"survey_ir"] intValue];
-    int surveyLOI = [[[notification userInfo] valueForKey:@"survey_loi"] intValue];
-    
-    NSString *surveyClass =[[notification userInfo] valueForKey:@"survey_class"];
-    
-    NSString *rewardName = [[notification userInfo] valueForKey:@"reward_name"];
-    int rewardValue = [[[notification userInfo] valueForKey:@"reward_value"] intValue];
-    
-    
-    NSLog(@"Pollfish: Survey Completed - SurveyPrice:%d andSurveyIR: %d andSurveyLOI:%d andSurveyClass:%@ andRewardName:%@ andRewardValue:%d", surveyPrice,surveyIR, surveyLOI, surveyClass, rewardName, rewardValue);
+    NSLog(@"Pollfish Survey Completed - %@", surveyInfo);
 }
 ```
+
 <span style="text-decoration: underline">Swift:</span>
-
-```
-NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishSurveyCompleted"),
-                                               object: nil,
-                                               queue: nil,
-                                               using:pollfishCompleted)
-```
-
-```
-func pollfishCompleted(_ notification:Notification) {
-
-   if let userInfo : [AnyHashable: Any] = (notification.userInfo) {
-            
-            let surveyPrice = userInfo["survey_cpa"]
-            let surveyIR =  userInfo["survey_ir"]
-            let surveyLOI =  userInfo["survey_loi"]
-            let surveyClass =  userInfo["survey_class"]
-            
-            let rewardName = userInfo["reward_name"]
-            let rewardValue = userInfo["reward_value"]
-            
-            print("Pollfish Survey  Completed - SurveyPrice: \(String(describing: surveyPrice)) andSurveyIR: \(String(describing: surveyIR)) andSurveyLOI: \(String(describing: surveyLOI)) andSurveyClass: \(String(describing: surveyClass)) andRewardName: \(String(describing: rewardName)) andRewardValue:\(String(describing: rewardValue))")
-
-        }else{
-            
-            print("Pollfish Survey Completed")
-        }
+```swift
+func pollfishSurveyCompleted(surveyInfo: SurveyInfo) {
+    print("Pollfish Survey Completed - \(surveyInfo)")
 }
 ```
 
-
-Similarly to survey received notification, upon completion you can get informed on the following values around the completed survey
-
-- **survey_cpa** : money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
-- **survey_ir** : the current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably.
-- **survey_loi** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
-- **survey_class** :  information about the survey network and type* 
-- **reward_name** :  a virtual reward name as specified on Developer Dashboard* 
-- **reward_vale** :  a virtual reward value as caluclated via a given echange rate on Developer Dashboard.* 
 <br/>
+
 ### 11.3 Get notified when a user is not eligible for a Pollfish survey
 
 
-You can be notified when a user is not eligible for a Pollfish survey after accepting to take one, via the iOS Notification Center.  
+You can be notified when a user is not eligible for a Pollfish survey after accepting to take one, via the `PollfishDelegate`.  
 
 <span style="text-decoration: underline">Objective-C:</span>
-
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishUsernotEligible) name:@"PollfishUserNotEligible" object:nil];
-```
-
-```
-- (void)pollfishUsernotEligible
+```objc
+- (void) pollfishUserNotEligible
 {
-    NSLog(@"Pollfish User Not Eligible");
+    NSLog(@"Pollfish User Not Eligible!");
 }
 ```
 
 <span style="text-decoration: underline">Swift:</span>
-
-```
-NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishUserNotEligible"),
-                                               object: nil,
-                                               queue: nil,
-                                               using:pollfishUsernotEligible)
-```
-
-```
-func pollfishUsernotEligible(_ notification:Notification) 
-{
-     print("Pollfish User Not Eligible")
+```swift
+func pollfishUserNotEligible() {
+     print("Pollfish User Not Eligible!")
 }
 ```
 
 <br/>
-### 11.4 Get notified when no survey is available
 
+### 11.4 Get notified when no surveys are available for that user
 
-You can be notified when a survey is not available for a user via the iOS Notification Center.  
+You can be notified when surveys are not available for that user via the `PollfishDelegate`.  
 
 <span style="text-decoration: underline">Objective-C:</span>
-
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishNotAvailable) name:@"PollfishSurveyNotAvailable" object:nil];
-```
-
-```
-- (void) surveyNotAvailable
+```objc
+- (void) pollfishSurveyNotAvailable
 {
     NSLog(@"Pollfish Survey Not Available!");
 }
 ```
 
 <span style="text-decoration: underline">Swift:</span>
-
-```
-NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishSurveyNotAvailable"),
-                                               object: nil,
-                                               queue: nil,
-                                               using:pollfishNotAvailable)
-```
-
-```
-func pollfishNotAvailable(_ notification:Notification) 
-{
+```swift
+func pollfishSurveyNotAvailable() {
      print("Pollfish Survey Not Available!")
 }
 ```
 
 <br/>
+
 ### 11.5 Get notified when Pollfish panel has opened
 
-
-You can be notified when a user opens Pollfish survey panel via the iOS Notification Center.  
+You can be notified when a user opens Pollfish survey panel via the `PollfishDelegate`.  
 
 <span style="text-decoration: underline">Objective-C:</span>
-
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishOpened) name:@"PollfishOpened" object:nil];
-```
-
-```
-- (void)pollfishOpened
+```objc
+- (void) pollfishOpened
 {
-    NSLog(@"Pollfish is opened!");
+    NSLog(@"Pollfish has opened!");
 }
 ```
 
 <span style="text-decoration: underline">Swift:</span>
-
-```
-NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishOpened"),
-                                               object: nil,
-                                               queue: nil,
-                                               using:pollfishOpened)
-```
-
-```
-func pollfishOpened(_ notification:Notification)
-{
-     print("Pollfish is opened!")
+```swift
+func pollfishOpened() {
+     print("Pollfish has opened!")
 }
 ```
 
 <br/>
+
 ### 11.6 Get notified when Pollfish panel has closed
 
-
-You can be notified when a user closes Pollfish survey panel via the iOS Notification Center.  
+You can be notified when a user closes Pollfish survey panel via the `PollfishDelegate`.  
 
 <span style="text-decoration: underline">Objective-C:</span>
-
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishClosed) name:@"PollfishClosed" object:nil];
-```
-
-```
-- (void)pollfishClosed
+```objc
+- (void) pollfishClosed
 {
-    NSLog(@"Pollfish is closed!");
+    NSLog(@"Pollfish has closed!");
 } 
 ```
 
 <span style="text-decoration: underline">Swift:</span>
-
-```
-NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishClosed"),
-                                               object: nil,
-                                               queue: nil,
-                                               using:pollfishClosed)
-```
-
-```
-func pollfishClosed(_ notification:Notification)
-{
-     print("Pollfish is closed!")
+```swift
+func pollfishClosed() {
+     print("Pollfish has closed!")
 }
 ```
 
 <br/>
 
-### 11.7 Get notified when a user rejected a survey (added in Pollfish v4.4.0)
+### 11.7 Get notified when a user rejected a survey
 
 
-You can be notified when a user rejected a survey via the iOS Notification Center.  
+You can be notified when a user rejected a survey via the `PollfishDelegate`.  
 
 <span style="text-decoration: underline">Objective-C:</span>
-
-```
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pollfishUserRejectedSurvey) name:@"PollfishUserRejectedSurvey" object:nil];
-```
-
-```
-- (void)pollfishUserRejectedSurvey
+```objc
+- (void) pollfishUserRejectedSurvey
 {
     NSLog(@"Pollfish User Rejected Survey");
 }
 ```
 
 <span style="text-decoration: underline">Swift:</span>
-
-```
-NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "PollfishUserRejectedSurvey"),
-                                               object: nil,
-                                               queue: nil,
-                                               using:pollfishUserRejectedSurvey)
-```
-
-```
-func pollfishUserRejectedSurvey(_ notification:Notification)
-{
+```swift
+func pollfishUserRejectedSurvey() {
      print("Pollfish User Rejected Survey")
 }
 ```
 
 <br/>
 
-### 12\. Check if Pollfish survey is still available on your device (optional)
+### 12. Check if Pollfish survey is still available on your device (optional)
 
-It happens that time had past since you initialized Pollfish and a survey is received. If you want to check if survey is still avaialble on your device and has not expired you can check by calling:
+After you initialize Pollfish and a survey is received you can check at any time if the survey is available at the device.
 
 <span style="text-decoration: underline">Objective-C:</span>
-
-```
-[Pollfish isPollfishPresent]
+```objc
+[Pollfish isPollfishPresent];
 ```
 
 <span style="text-decoration: underline">Swift:</span>
-
-```
+```swift
 Pollfish.isPollfishPresent()
 ```
 
-<br/>
+### 13. Check if Pollfish survey panel is open (optional)
 
+You can check at any time if the survey panel is visible.
 
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+[Pollfish isPollfishPanelOpen];
+```
 
-
+<span style="text-decoration: underline">Swift:</span>
+```swift
+Pollfish.isPollfishPanelOpen()
+```
