@@ -140,7 +140,7 @@ v4.0.0
 </div>
 
 > **Note:** This version of the SDK is deprecated. Please use the latest SDK
-> 
+
 > **Note:** Do not use this SDK for distribution on Google Play Store!
 
 ## Quick Guide of Universal SDK
