@@ -3,12 +3,14 @@ v6.0.2
 
 - Fix indicator not appearing in Unity
 
+v6.0.1
+
+- Fix Id retrieval issue
+
 v6.0.0
 
 - New Android SDK
 
-v6.0.1
-- Fix Id retrieval issue
 </div>
 
 ## Prerequisites
