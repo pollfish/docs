@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.0.1">
+<div class="changelog" data-version="6.0.2">
+v6.0.2
+
+- Fix indicator not appearing in Unity
+
 v6.0.0
 
 - New Android SDK
