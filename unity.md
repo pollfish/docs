@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.6.3">
+<div class="changelog" data-version="5.7.0">
+v5.7.0
+	
+- Update with Android SDK v6.0.2 and iOS SDK v6.0.0
+
 v5.6.3
 
 - Updated with iOS SDK (v5.5.2)
@@ -124,9 +128,9 @@ v4.0.0
 
 Pollfish Unity Plugin works with:
 
-*   Unity 4.6.8 +
+*   Unity 2020 +
 *   iOS 9.0 +
-*   Android 16 +
+*   Android 21 +
 
 Please set minimum version of your project accordingly.
 
