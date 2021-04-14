@@ -23,7 +23,7 @@ In this guide you can see the changes on the Pollfish public interface
 
 <br/>
 
-<details><summary>Swift</summary>
+<details><summary>Swift (Click to expand)</summary>
 
 <table>
 <tr>
@@ -195,7 +195,7 @@ func rotateApp(_ notification:Notification){
 <br/>
 
 
-<details><summary>Objective C</summary>
+<details><summary>Objective C (Click to expand)</summary>
 <table>
 <tr>
 <td>
