@@ -1,7 +1,8 @@
 <div class="changelog" data-version="6.0.2">
 v6.0.2
 
-- Fix indicator not appearing in Unity
+- Fixed overlay on Unity
+- Fixed issues with date formatting on old Android devices
 
 v6.0.1
 
@@ -27,7 +28,7 @@ In this guide you can see the changes on the Pollfish public interface
 
 <br/>
 
-<details><summary>Kotlin</summary>
+<details><summary>Kotlin (Click to expand)</summary>
 
 <table>
 <tr>
@@ -53,7 +54,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.0.1'
+implementation 'com.pollfish:pollfish-universal:6.0.2'
 ```
 
 <tr>
@@ -199,7 +200,7 @@ PollFish.showOnTopOfActivity(activity)
 
 <br/>
 
-<details><summary>Java</summary>
+<details><summary>Java (Click to expand)</summary>
 <table>
 <tr>
 <td>
@@ -224,7 +225,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.0.1'
+implementation 'com.pollfish:pollfish-universal:6.0.2'
 ```
 
 <tr>
@@ -414,7 +415,7 @@ android {
 
 dependencies {
     ...
-    implemetation "org.jetbrains.kotlin:kotlin-stdlib:1.4.31"
+    implemetation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
 }
 ```
 
@@ -429,7 +430,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.0.1'
+    implementation 'com.pollfish:pollfish-universal:6.0.2'
 }
 ```
 
