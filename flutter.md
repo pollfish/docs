@@ -8,7 +8,7 @@ Pollfish Flutter Plugin can be found on Dart Packages [website](https://pub.dart
 
 ## Prerequisites
 
-*	Android 16+ using Google Play Services
+*	Android 21+ using Google Play Services
 *	iOS version 9.0+
 
 > **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old    
@@ -44,7 +44,7 @@ Add this to your package's pubspec.yaml file:
 
 ```
 dependencies:
-  flutter_pollfish: ^1.2.3
+  flutter_pollfish: ^2.0.0
 ```
 You can install then the package from the command line:
 
@@ -183,9 +183,9 @@ A notification that informs that Pollfish Survey panel opened
 
 
 ```dart
-FlutterPollfish.instance.setPollfishSurveyOpenedListener(onPollfishSurveyOpened);
+FlutterPollfish.instance.setPollfishSurveyOpenedListener(onPollfishOpened);
 
-void onPollfishSurveyOpened() => setState(() {
+void onPollfishOpened() => setState(() {
 
    String _logText = 'Survey Panel Open';
 }
@@ -198,9 +198,9 @@ A notification that informs that Pollfish Survey panel closed
 
 
 ```dart
-FlutterPollfish.instance.setPollfishSurveyClosedListener(onPollfishSurveyClosed);
+FlutterPollfish.instance.setPollfishSurveyClosedListener(onPollfishClosed);
 
-void onPollfishSurveyClosed() => setState(() {
+void onPollfishClosed() => setState(() {
 
    String _logText = 'Survey Panel Closed';
 }
@@ -213,7 +213,7 @@ A notification that informs that no survey is available for that user
 
 
 ```dart
-FlutterPollfish.instance.setPollfishSurveyNotAvailableSurveyListener(onPollfishSurveyNotAvailable);
+FlutterPollfish.instance.setPollfishSurveyNotAvailableListener(onPollfishSurveyNotAvailable);
 
 void onPollfishSurveyNotAvailable() => setState(() {
 
@@ -265,7 +265,7 @@ limitations:
 
 - You cannot pass custom attributes during initialization
 - No tests implemented yet
-- Minimum iOS is 9.0 and minimum Android version is 16
+- Minimum iOS is 9.0 and minimum Android version is 21
 
 
 ## Example
