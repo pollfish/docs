@@ -44,7 +44,7 @@ Add this to your package's pubspec.yaml file:
 
 ```
 dependencies:
-  flutter_pollfish: ^2.0.0
+  flutter_pollfish: ^2.0.1
 ```
 You can install then the package from the command line:
 
@@ -136,7 +136,7 @@ Once a survey is received, Pollish Survey Received notification is fired to info
 - Reward Value: Reward value based on exchange rate as specified on Pollfish Dashboard
 
 ```dart
-FlutterPollfish.instance.setPollfishReceivedSurveyListener(onPollfishSurveyReveived);
+FlutterPollfish.instance.setPollfishSurveyReceivedListener(onPollfishSurveyReveived);
 
 void onPollfishSurveyReveived(String result) => setState(() {
 
@@ -162,7 +162,7 @@ Once a survey is completed, Pollish Survey Completed notification is fired to in
 
 
 ```dart
-FlutterPollfish.instance.setPollfishCompletedSurveyListener(onPollfishSurveyCompleted);
+FlutterPollfish.instance.setPollfishSurveyCompletedListener(onPollfishSurveyCompleted);
 
 void onPollfishSurveyCompleted(String result) => setState(() {
 
@@ -183,7 +183,7 @@ A notification that informs that Pollfish Survey panel opened
 
 
 ```dart
-FlutterPollfish.instance.setPollfishSurveyOpenedListener(onPollfishOpened);
+FlutterPollfish.instance.setPollfishOpenedListener(onPollfishOpened);
 
 void onPollfishOpened() => setState(() {
 
@@ -198,7 +198,7 @@ A notification that informs that Pollfish Survey panel closed
 
 
 ```dart
-FlutterPollfish.instance.setPollfishSurveyClosedListener(onPollfishClosed);
+FlutterPollfish.instance.setPollfishClosedListener(onPollfishClosed);
 
 void onPollfishClosed() => setState(() {
 
