@@ -1,5 +1,8 @@
-<div class="changelog" data-version="5.6.0.0">
-v.5.6.0.0
+<div class="changelog" data-version="6.0.2.0">
+v6.0.1.0
+- Updating adapter with the new Pollfish Android SDK v6.0.2.0
+    
+v5.6.0.0
 
 - New PollfishMoPubAdapter
 
@@ -9,7 +12,7 @@ This guide is for publishers looking to use MoPub mediation to load and show Rew
 
 # Prerequisites
 
-* Android API 21 or later
+* Android API 19 or later
 * [Pollfish Publisher Account](https://www.pollfish.com/dashboard/dev/)
 * [MoPub Developer Account](https://app.mopub.com/login)
 * [Pollfish SDK](https://www.pollfish.com/docs/android)
@@ -164,7 +167,7 @@ Retrieve Pollfish through **jCenter()** with gradle by adding the following line
 
 ```
 dependencies {
-    implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
+    implementation 'com.pollfish:pollfish-googleplay:6.0.2'
 }
 ```
 
@@ -184,7 +187,7 @@ Retrieve MoPub SDK through **jCenter()** with gradle by adding the following lin
 
 ```
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-mopub:5.6.0.0'
+    implementation 'com.pollfish.mediation:pollfish-mopub:6.0.2.0'
 }
 ```
 
@@ -200,13 +203,13 @@ If you are using Android Studio, right click on your project and select New Modu
 
 **OR**
 
-**Retrieve Pollfish MoPub Adapter through jCenter()**
+**Retrieve Pollfish MoPub Adapter through maven()**
 
 Retrieve Pollfish MoPub Adapter through **jCenter()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
 ```
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-mopub:5.6.0.0'
+    implementation 'com.pollfish.mediation:pollfish-mopub:6.0.2.0'
 }
 ```
 
