@@ -152,7 +152,7 @@ Login at [www.pollfish.com](www.pollfish.com/login/publisher) and click "Add a n
 
 ## 4.1. Add Pollfish aar library to your project
 
-Download Pollfish Android SDK or reference it through jCenter().
+Download Pollfish Android SDK or reference it through maven().
 
 **Download Pollfish Android SDK**
 
@@ -162,9 +162,9 @@ If you are using Android Studio, right click on your project and select New Modu
 
 **OR**
 
-**Retrieve Pollfish Android SDK through jCenter()**
+**Retrieve Pollfish Android SDK through maven()**
 
-Retrieve Pollfish through **jCenter()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
+Retrieve Pollfish through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
 ```
 dependencies {
@@ -184,7 +184,7 @@ dependencies {
 
 ## 4.3: Add MoPub SDK to your porject
 
-Retrieve MoPub SDK through **jCenter()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
+Retrieve MoPub SDK through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
 ```
 dependencies {
@@ -206,7 +206,7 @@ If you are using Android Studio, right click on your project and select New Modu
 
 **Retrieve Pollfish MoPub Adapter through maven()**
 
-Retrieve Pollfish MoPub Adapter through **jCenter()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
+Retrieve Pollfish MoPub Adapter through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
 ```
 dependencies {
