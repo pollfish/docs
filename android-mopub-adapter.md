@@ -1,5 +1,6 @@
 <div class="changelog" data-version="6.0.2.0">
-v6.0.1.0
+v6.0.2.0
+
 - Updating adapter with the new Pollfish Android SDK v6.0.2.0
     
 v5.6.0.0
