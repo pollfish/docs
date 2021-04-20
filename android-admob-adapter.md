@@ -3,7 +3,7 @@ v6.0.2.0
 	
 - Updated with Pollfish Android SDK v6.0.2
 - Added build support for Android SDK lower than 21
-- Updated with Google Play Ads v8.3.0
+- Updated with Google Play Ads v20
 
 v5.6.0.1
 	
