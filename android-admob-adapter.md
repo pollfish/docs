@@ -255,7 +255,9 @@ Below you can see an example on how you can initialize a request for PollfishAdM
 import com.pollfish.mediation.PollfishAdMobAdapter;
 import com.pollfish.mediation.PollfishExtrasBundleBuilder;
 ```
+
 </br>
+
 ```
 Bundle pollfishBundle = new PollfishExtrasBundleBuilder()
     .setAPIKey("YOUR_POLLFISH_API_KEY")
