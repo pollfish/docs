@@ -1,5 +1,9 @@
-<div class="changelog" data-version="5.5.2.0">
-v.5.5.2.0
+<div class="changelog" data-version="6.0.0.0">
+v6.0.0.0
+
+- Updated with Pollfish iOS SDK v6.0.0.0
+
+v5.5.2.0
 
 - New PollfishMoPubAdapter
 
