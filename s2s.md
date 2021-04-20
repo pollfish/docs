@@ -109,6 +109,7 @@ user_rejection | The respondent rejected the survey
 vpn | The respondent answered the survey using VPN or an IP address that characterized as suspicious
 survey_expired | The respondent was prevented from entering a survey that would have resulted in "survey closed" or "quota full"
 underage_profiling | The respondent is below the allowed age of participation
+banned_phrase | The respondent entered in open ended questions a banned phrase
 
  
  > **Important:** These responses might change in the future
