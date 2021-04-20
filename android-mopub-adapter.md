@@ -13,7 +13,7 @@ This guide is for publishers looking to use MoPub mediation to load and show Rew
 
 # Prerequisites
 
-* Android API 19 or later
+* Android API 21 or later
 * [Pollfish Publisher Account](https://www.pollfish.com/dashboard/dev/)
 * [MoPub Developer Account](https://app.mopub.com/login)
 * [Pollfish SDK](https://www.pollfish.com/docs/android)
