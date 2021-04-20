@@ -1,4 +1,10 @@
-<div class="changelog" data-version="5.6.0.1">
+<div class="changelog" data-version="6.0.2.0">
+v6.0.2.0
+	
+- Updated with Pollfish Android SDK v6.0.2
+- Added build support for Android SDK lower than 21
+- Updated with Google Play Ads v8.3.0
+
 v5.6.0.1
 	
 - Updated with Pollfish Android SDK v5.6.0
@@ -59,7 +65,7 @@ This guide is for publishers looking to use AdMob mediation to load and show Rew
 
 ### Prerequisites
 
-Android SDK 4.1 (API level 16) or later
+Android SDK 21 or later
 
 > **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old    
 
@@ -169,13 +175,13 @@ If you are using Android Studio, right click on your project and select New Modu
 
 **OR**
 
-#### **Retrieve Pollfish Android SDK through jCenter()**
+#### **Retrieve Pollfish Android SDK through maven()**
 
-Retrieve Pollfish through **jCenter()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
+Retrieve Pollfish through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
+  implementation 'com.pollfish:pollfish-googleplay:6.0.2'
 }
 ```
 
@@ -185,8 +191,7 @@ Applications that integrate Pollfish SDK are required to include Google Play Ser
 
 ```java
 dependencies {
-    implementation 'com.google.android.gms:play-services-ads-identifier:16.0.0'
-    implementation 'com.google.android.gms:play-services-base:16.0.1'
+    implementation 'com.google.android.gms:play-services-ads:20.0.0'
 }
 ```
 
@@ -198,13 +203,13 @@ If you are using Android Studio, right click on your project and select New Modu
 
 **OR**
 
-#### **Retrieve Pollfish AdMob Adapter through jCenter()**
+#### **Retrieve Pollfish AdMob Adapter through maven()**
 
-Retrieve Pollfish through **jCenter()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
+Retrieve Pollfish through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
 ```
 dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:5.6.0.1'
+  implementation 'com.pollfish.mediation:pollfish-admob:6.0.2.0'
 }
 ```
 
