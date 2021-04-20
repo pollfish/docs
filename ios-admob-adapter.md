@@ -1,4 +1,9 @@
-<div class="changelog" data-version="5.5.2.0">
+<div class="changelog" data-version="6.0.0.0">
+v6.0.0.0
+    
+- Updated with Pollfish iOS SDK 6.0.0
+- Updated with Google-Mobile-SDK v8.3.0
+    
 v.5.5.2.0
 
 - Updated with Pollfish iOS SDK 5.5.2
@@ -244,10 +249,13 @@ Sets Pollfish SDK to Developer or Release mode.
 Pollfish AdMob Adapter runs Pollfish SDK in release mode by default. If you would like to test with Test survey, you should set release mode to fasle.
 
 Below you can see an example on how you can use GADPollfishRewardedNetworkExtras to pass info to Pollfish AdMob Adapter:
+
 ```
 #import <PollfishAdMobAdapter/GADPollfishRewardedNetworkExtras.h>
 ```
+
 </br>
+
 ```
 GADRequest *request = [GADRequest request];
     
