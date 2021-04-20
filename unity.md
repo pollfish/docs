@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.7.0">
+<div class="changelog" data-version="5.7.1">
+v5.7.1
+	
+- Fixed issue with empty UserProperties dictionary
+	
 v5.7.0
 	
 - Update with Android SDK v6.0.2 and iOS SDK v6.0.0
@@ -135,11 +139,12 @@ Pollfish Unity Plugin works with:
 Please set minimum version of your project accordingly.
 
 > **Note:** Pollfish does not work on Editor, so please do try only on mobile devices
+> 
 <br/>
 
 > **Note:** Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. As of iOS 14 you should initialize Pollfish Unity plugin in iOS only if the relevant IDFA permission was granted by the user
 
-<br/><br/>
+<br/>
 
 ## Steps Analytically
 <br/>
