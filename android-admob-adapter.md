@@ -165,7 +165,7 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a
 
 #### 3.3\. Add Pollfish aar library to your project
 
-Download Pollfish Android SDK or reference it through jCenter().
+Download Pollfish Android SDK or reference it through maven().
 
 #### **Download Pollfish Android SDK**
 
