@@ -20,6 +20,52 @@ v6.0.0
 
 > **Note:** Pollfish SDK utillizes the Google Advertising ID.
 
+> **Note:** Pollfish SDK requires minSdk 21. If your app supports a lower minSdk you can still build your app and exlude Pollfish invocations from targets lower than 21 by adding the following blocks on your code.
+
+**AndroidManifest.xml**
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    ... >
+
+    <uses-sdk tools:overrideLibrary="com.pollfish.pollfish" />
+
+    <application
+	... >
+        ...
+    </application>
+```
+
+**app/build.gradle**
+
+```groovy
+defaultConfig {
+    ...
+    multiDexEnabled true
+}
+
+dependencies {
+    ...
+    implementation 'androidx.multidex:multidex:2.0.1'
+}
+```
+
+**Wrap All Pollfish invocations**
+
+Apply a version check before Pollfish invocations. Below you can see an example on `Pollfish.initWith(activity, params)` invocation.
+
+```java
+if (Build.VERSION.SDK_INT >= 21) {
+    // Invoke Pollfish.<method>
+    Params params = new Params.Builder("YOUR_API_KEY")
+        ...
+        .build();
+        
+    Pollfish.initWith(activity, params);
+}
+```
+
 </br>
 
 ## Migration guide
