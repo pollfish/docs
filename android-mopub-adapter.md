@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.0.2.0">
+<div class="changelog" data-version="6.0.3.0">
+v6.0.3.0
+
+- Update with Pollfish Android SDK V6.0.3
+
 v6.0.2.0
 
 - Updating adapter with the new Pollfish Android SDK v6.0.2.0
@@ -199,7 +203,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```
 dependencies {
-    implementation 'com.pollfish:pollfish-googleplay:6.0.2'
+    implementation 'com.pollfish:pollfish-googleplay:6.0.3'
 }
 ```
 
@@ -219,7 +223,7 @@ Retrieve MoPub SDK through **maven()** with gradle by adding the following line 
 
 ```
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-mopub:6.0.2.0'
+    implementation 'com.pollfish.mediation:pollfish-mopub:6.0.3.0'
 }
 ```
 
@@ -241,7 +245,7 @@ Retrieve Pollfish MoPub Adapter through **maven()** with gradle by adding the fo
 
 ```
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-mopub:6.0.2.0'
+    implementation 'com.pollfish.mediation:pollfish-mopub:6.0.3.0'
 }
 ```
 

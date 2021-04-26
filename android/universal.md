@@ -1,4 +1,9 @@
-<div class="changelog" data-version="6.0.2">
+<div class="changelog" data-version="6.0.3">
+v6.0.3
+
+- Remove Pollfish termination when app goes on background
+- Internal fixes
+
 v6.0.2
 
 - Fixed overlay on Unity
@@ -100,7 +105,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.0.2'
+implementation 'com.pollfish:pollfish-universal:6.0.3'
 ```
 
 <tr>
@@ -271,7 +276,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.0.2'
+implementation 'com.pollfish:pollfish-universal:6.0.3'
 ```
 
 <tr>
@@ -476,7 +481,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.0.2'
+    implementation 'com.pollfish:pollfish-universal:6.0.3'
 }
 ```
 
