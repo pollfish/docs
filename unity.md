@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.7.1">
+<div class="changelog" data-version="5.7.2">
+v5.7.2
+
+- Updated with Android SDK v6.0.3
+
 v5.7.1
 	
 - Fixed issue with empty UserProperties dictionary
@@ -139,7 +143,24 @@ Pollfish Unity Plugin works with:
 Please set minimum version of your project accordingly.
 
 > **Note:** Pollfish does not work on Editor, so please do try only on mobile devices
-> 
+
+> **Note:** Pollfish SDK requires minSdk 21. If your app supports a lower minSdk you can still build your app and exlude Pollfish from targets lower than 21 by exporting an Android project from the Unity's Build Settings and adding the following block on the `AndroidManifest.xml` of the `unityLibrary` module.
+
+**AndroidManifest.xml**
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    ... >
+
+    <uses-sdk tools:overrideLibrary="com.pollfish.pollfish" />
+
+    <application
+	... >
+        ...
+    </application>
+```
+
 <br/>
 
 > **Note:** Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. As of iOS 14 you should initialize Pollfish Unity plugin in iOS only if the relevant IDFA permission was granted by the user
