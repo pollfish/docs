@@ -51,6 +51,8 @@ You can pass a unique id for a user (as you may use it in your own system) throu
 
 You can easily retrieve through every callback how much money were earned in USD cents, by appending and reading param with name **cpa**.
 
+| **Note:** Demographic collection surveys will fire an s2s with CPA=0  and deliver no revenue to the publisher in all the different integration approaches since this is part of the onboarind process for the users. You can enable and provide a reward for the users for these surveys, through the App Settings area of the Dashboard to increase engagement.
+
 #### 5.2 Retrieving Reward Name and Reward Value for a given survey
 
 In every callback received, aside from money earned you can retrieve the Reward Name and Reward Value, by appending and reading params with name **reward_name** and/or **reward_value**.
@@ -78,6 +80,7 @@ For example:
 
 > **Important:** If you have selected checkbox "Notify me when the user is not eligible" you should add "status" param in your url. If you uncheck this option you should remove "status" param from your url.
 
+| **Note:**  If you would like to enabled payouts on screenouts too, you should keep that setting enabled as described in the [docs](https://www.pollfish.com/docs/pay-on-screenouts) and put relevant logic around the CPA value
 
 #### Get informed about the reason a user was not eligible (optional) 
 As before, you will need to select the **Notify me when the user is not eligible** checkbox and provide a new parameter for the termination reason called **[[term_reason]]**
