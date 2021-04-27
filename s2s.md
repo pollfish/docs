@@ -51,7 +51,7 @@ You can pass a unique id for a user (as you may use it in your own system) throu
 
 You can easily retrieve through every callback how much money were earned in USD cents, by appending and reading param with name **cpa**.
 
-| **Note:** Demographic collection surveys will fire an s2s with CPA=0  and deliver no revenue to the publisher in all the different integration approaches since this is part of the onboarind process for the users. You can enable and provide a reward for the users for these surveys, through the App Settings area of the Dashboard to increase engagement.
+| **Note:** Demographic collection surveys will fire an s2s with CPA=0  and deliver no revenue to the publisher in all the different integration approaches since this is part of the onboarding process for the users. You can enable and provide a reward for the users for these surveys, through the App Settings area of the Dashboard to increase engagement.
 
 #### 5.2 Retrieving Reward Name and Reward Value for a given survey
 
