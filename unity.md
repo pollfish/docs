@@ -427,11 +427,9 @@ Finally, Pollfish requires Internet permission in order to work, so please do no
 
 ### Using Proguard
 
-If you use proguard with your app, please insert the following lines in your proguard configuration file:
+If you use proguard with your app, please insert the following lines in the proguard configuration file under the unityLibrary module:
 
 ```
--libraryjars libs/pollfish_unity_bridge.jar
-
 -keep class com.pollfish.** { *; }
 -keep class com.pollfish_unity.** { *; }
 -dontwarn com.pollfish.**
