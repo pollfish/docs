@@ -1,4 +1,8 @@
-<div class="changelog" data-version="5.7.2">
+<div class="changelog" data-version="5.7.3">
+v5.7.3
+	
+- Fixed issue with builds on Windows
+
 v5.7.2
 
 - Updated with Android SDK v6.0.3
