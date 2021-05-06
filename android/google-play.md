@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.0.3">
+<div class="changelog" data-version="6.0.4">
+v6.0.4
+
+- Fixed ThreadPoolScheduler issue
+
 v6.0.3
 
 - Remove Pollfish termination when app goes on background
@@ -34,7 +38,7 @@ v6.0.0
     xmlns:tools="http://schemas.android.com/tools"
     ... >
 
-    <uses-sdk tools:overrideLibrary="com.pollfish.pollfish" />
+    <uses-sdk tools:overrideLibrary="com.pollfish" />
 
     <application
 	... >
@@ -105,7 +109,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.0.3'
+implementation 'com.pollfish:pollfish-googleplay:6.0.4'
 ```
 
 <tr>
@@ -276,7 +280,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.0.3'
+implementation 'com.pollfish:pollfish-googleplay:6.0.4'
 ```
 
 <tr>
@@ -484,7 +488,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-googleplay:6.0.3'
+    implementation 'com.pollfish:pollfish-googleplay:6.0.4'
 }
 ```
 
