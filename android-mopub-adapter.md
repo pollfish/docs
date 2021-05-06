@@ -1,11 +1,15 @@
-<div class="changelog" data-version="6.0.3.0">
+<div class="changelog" data-version="6.0.4.0">
+v6.0.4.0
+
+- Updated with Pollfish Android SDK v6.0.4
+	
 v6.0.3.0
 
-- Update with Pollfish Android SDK V6.0.3
+- Updated with Pollfish Android SDK v6.0.3
 
 v6.0.2.0
 
-- Updating adapter with the new Pollfish Android SDK v6.0.2.0
+- Updated adapter with the new Pollfish Android SDK v6.0.2.0
     
 v5.6.0.0
 
@@ -34,7 +38,7 @@ This guide is for publishers looking to use MoPub mediation to load and show Rew
     xmlns:tools="http://schemas.android.com/tools"
     ... >
 
-    <uses-sdk tools:overrideLibrary="com.pollfish.pollfish" />
+    <uses-sdk tools:overrideLibrary="com.pollfish" />
 
     <application
 	... >
@@ -203,7 +207,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```
 dependencies {
-    implementation 'com.pollfish:pollfish-googleplay:6.0.3'
+    implementation 'com.pollfish:pollfish-googleplay:6.0.4'
 }
 ```
 
@@ -223,7 +227,7 @@ Retrieve MoPub SDK through **maven()** with gradle by adding the following line 
 
 ```
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-mopub:6.0.3.0'
+    implementation 'com.pollfish.mediation:pollfish-mopub:6.0.4.0'
 }
 ```
 
@@ -245,7 +249,7 @@ Retrieve Pollfish MoPub Adapter through **maven()** with gradle by adding the fo
 
 ```
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-mopub:6.0.3.0'
+    implementation 'com.pollfish.mediation:pollfish-mopub:6.0.4.0'
 }
 ```
 
