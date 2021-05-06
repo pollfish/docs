@@ -1,4 +1,10 @@
-<div class="changelog" data-version="5.7.3">
+<div class="changelog" data-version="5.7.4">
+v5.7.4
+
+- Updated with Android SDK v6.0.4
+- Updated with unity-jar-resolver v1.2.165
+- Fixed XCode build `Multiple commands produce` issue
+
 v5.7.3
 	
 - Fixed issue with builds on Windows
