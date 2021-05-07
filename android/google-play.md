@@ -1661,3 +1661,9 @@ If you use proguard with your app, please insert the following lines in your pro
 ## 13. Server-to-server callbacks on survey completion
 
 If you want to reward your users for completing a survey it is common practice to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Dashboard. You can read more on how to set server to server callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>. 
+
+
+## 14. Payouts on Screenouts
+
+In Market Research monetization users can get screened out within the survey since the Researcher might be looking a different user based on the provided answers. Screenouts do not deliver any revenue for the publisher nor any reward for the users. If you would like to activate payouts on screenouts too please follow the steps as described <a href="https://www.pollfish.com/docs/pay-on-screenouts">here</a>. 
+
