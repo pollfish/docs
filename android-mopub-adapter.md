@@ -29,7 +29,9 @@ This guide is for publishers looking to use MoPub mediation to load and show Rew
 
 > **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old    
 
-> **Note:** Pollfish SDK requires minSdk 21. If your app supports a lower minSdk you can still use the adapter by adding the following blocks on your code.
+> **Note:** Pollfish SDK requires minSdk 21. If your app supports a lower minSdk you can still build your app.
+
+<details><summary> ➤ For apps with minSDK lower than 21 please follow the steps here (Click to expand)</summary>
 
 **AndroidManifest.xml**
 
@@ -59,7 +61,8 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
 }
 ```
-
+</details>
+	
 </br>
 
 Below you can find a step by step guide on how to incorporate Pollfish surveys with MoPub mediation:
