@@ -418,7 +418,7 @@ PollFish.showOnTopOfActivity(activity);
 ## Quick Guide
 
 1. Obtain a Publisher Account
-2. Register a new App on on Pollfish Dashboard and copy the given API key
+2. Register a new App on the Pollfish Dashboard and copy the given API key
 3. Download and import Pollfish .aar file
 4. Import Google Play Services into your project
 5. Embed Pollfish in your code and call init
