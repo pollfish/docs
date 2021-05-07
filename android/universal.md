@@ -31,9 +31,9 @@ v6.0.0
 
 </br>
 
-> **Note:** Pollfish SDK requires minSdk 21. If your app supports a lower minSdk you can still build your app and exlude Pollfish invocations from targets lower than 21 by adding the following blocks on your code.
+> **Note:** Pollfish SDK requires minSdk 21. If your app supports a lower minSdk you can still build your app.
 
-<details><summary>Support builds with targets lower than 21 (Click to expand)</summary>
+<details><summary> ➤ For apps with minSDK lower than 21 please follow the steps here (Click to expand)</summary>
 
 **AndroidManifest.xml**
 
@@ -70,11 +70,11 @@ dependencies {
 
 ## Migration guide
 
-In this guide you can see the changes on the Pollfish public interface
+In this guide you can see the changes on the Pollfish public interface from previous Android SDK versions (prior v6)
 
 <br/>
 
-<details><summary>Kotlin (Click to expand)</summary>
+<details><summary>➤ <b>Kotlin</b> (Click to expand)</summary>
 
 <table>
 <tr>
@@ -246,7 +246,7 @@ PollFish.showOnTopOfActivity(activity)
 
 <br/>
 
-<details><summary>Java (Click to expand)</summary>
+<details><summary>➤ <b>Java</b> (Click to expand)</summary>
 <table>
 <tr>
 <td>
@@ -420,7 +420,7 @@ PollFish.showOnTopOfActivity(activity);
 ## Quick Guide
 
 1. Obtain a Publisher Account
-2. Register a new App on on Pollfish Dashboard and copy the given API key
+2. Register a new App on the Pollfish Dashboard and copy the given API key
 3. Download and import Pollfish .aar file
 4. Embed Pollfish in your code and call init
 6. Update your privacy policy, enable **releaseMode** and publish
@@ -480,11 +480,11 @@ dependencies {
 }
 ```
 
-### 5. Embed Pollfish in your code
+### 4. Embed Pollfish in your code
 
 <br/>
 
-### 5.1 Import Pollfish classes
+### 4.1 Import Pollfish classes
 
 Import Pollfish classes with the following lines at the top of your Activity’s class file:
 
@@ -504,7 +504,7 @@ import com.pollfish.callback.*;
 
 <br/>
 
-### 5.2 Add support for cleartext http traffic (Optional)
+### 4.2 Add support for cleartext http traffic (Optional)
 
 If you are looking to use Pollfish Mediation surveys from all the providers, in order to avoid any faulty behaviour on new Android devices we would advice that you allow cleartext http traffic. To achieve that you need to create a new file named **network_security_config.xml** under **res/xml** and add the following inside:
 
@@ -527,7 +527,7 @@ add in your Androidmanifest.xml reference the file above in the **android:networ
     android:networkSecurityConfig="@xml/network_security_config">
 ```
 
-### 5.3 Initialize Pollfish
+### 4.3 Initialize Pollfish
 
 In order to initialize, you will need to build an instance of Params using `Params.Builder`. The `Params.Builder` has only one mandatory parameter which is the API key of your app (step 2 above). 
 
@@ -574,7 +574,7 @@ public void onResume() {
 }
 ```
 
-### 5.3.1 Pollfish initialization Params available options (Optional)
+### 4.3.1 Pollfish initialization Params available options (Optional)
 
 You can set several params to control the behaviour of Pollfish survey panel within your app with the use of `Params` instance. Below you can see all the available options.
 
@@ -602,7 +602,7 @@ No          | Description
 
 <br/>
 
-#### **5.3.1.1 `.indicatorPosition(Position)`**
+#### **4.3.1.1 `.indicatorPosition(Position)`**
 This setting sets the position where you wish to place Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) <br/> Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
 
 There are six different options available:
@@ -648,7 +648,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.2 `.requestUUID(String)`**
+#### **4.3.1.2 `.requestUUID(String)`**
 
 Sets a unique id to identify a user or a request and be passed back to the publisher through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
 
@@ -676,7 +676,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.3 `.indicatorPadding(Int)`** 
+#### **4.3.1.3 `.indicatorPadding(Int)`** 
 
 Sets padding (in dp) of Pollfish indicator, from top or bottom of the screen according to the specified Position of the indicator. Default value is 8. 
 
@@ -710,7 +710,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.4 `.userLayout(ViewGroup)`**
+#### **4.3.1.4 `.userLayout(ViewGroup)`**
 
 Sets user's View layout that Pollfish surveys will be rendered above it. If Pollfish regular init function affects the UI of your app by creating flings or any other issues you can try passing a view layout of your app that can be used to render Pollfish surveys above it.
 
@@ -738,7 +738,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.5 `.releaseMode(Boolean)`** 
+#### **4.3.1.5 `.releaseMode(Boolean)`** 
 
 Sets Pollfish SDK to Developer or Release mode. If you do not set this param it will turn the SDK to Developer mode by default in order for the publisher to be able to test the survey flow.
 
@@ -773,7 +773,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.6 `.rewardMode(Boolean)`**
+#### **4.3.1.6 `.rewardMode(Boolean)`**
 
 Initializes Pollfish in reward mode. This means that Pollfish Indicator (section 5.3.1.1) will not be shown and Pollfish survey panel will be automatically hidden until the publisher explicitly calls Pollfish `show` function (The publisher should wait for the Pollfish Survey Received Callback). This behaviour enables the option for the publishers, to show a custom prompt to incentivize the users to participate in a survey.
 
@@ -809,7 +809,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.7 `.offerwallMode(Boolean)`
+#### **4.3.1.7 `.offerwallMode(Boolean)`
 
 Enables Pollfish in offerwall mode. If not specified Pollfish shows one survey at a time.
 
@@ -841,7 +841,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.8 `.userProperties(UserProperties)`** 
+#### **4.3.1.8 `.userProperties(UserProperties)`** 
 
 Passing user attributes to skip or shorten Pollfish Demographic surveys.
 
@@ -903,7 +903,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.9 `.rewardInfo(RewardInfo)`**
+#### **4.3.1.9 `.rewardInfo(RewardInfo)`**
 
 An object passing information during initialization regarding the reward settings, overriding the values as speciefied on the Publisher's Dashboard
 
@@ -947,7 +947,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.10 `.clickId(String)`**
+#### **4.3.1.10 `.clickId(String)`**
 
 A pass through parameter that will be returned back to the publisher through server-to-server callbacks as specified [here](https://www.pollfish.com/docs/s2s)
 
@@ -971,7 +971,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.11 `.signature(String)`**
+#### **4.3.1.11 `.signature(String)`**
 
 An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as provided in the `RewardInfo` object (5.3.1.9)
 
@@ -1007,7 +1007,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-## 6. Update your privacy policy, enable releaseMode and publish
+## 5. Update your privacy policy, enable releaseMode and publish
 
 Add the following paragraph to your app's privacy policy:
 
@@ -1050,7 +1050,7 @@ If you know attributes about a user like gender, age and others, you can provide
 
 <br/>
 
-## 7. Request your account to get verified from Pollfish Team
+## 6. Request your account to get verified from Pollfish Team
 
 After your app is published on an app store you should request your account to get verified from your Pollfish Dashboard.
 
@@ -1070,7 +1070,7 @@ In this section we will list several options that can be used to control Pollfis
 
 <br/>
 
-## 8. Manually show or hide Pollfish
+## 7. Manually show or hide Pollfish
 
 You can manually show or hide Pollfish survey panel by calling anywhere after initialization and when a survey is received:  
 
@@ -1102,7 +1102,7 @@ Pollfish.hide();
 
 <br/>
 
-## 9. Listening for Pollfish Survey lifecycle events
+## 8. Listening for Pollfish Survey lifecycle events
 
 In order to get notified for Pollfish Survey lifecycle events you will have to register and listen to the appropriate listeners either by:
 * implementing the relevant interfaces on the Activity level 
@@ -1114,13 +1114,13 @@ There are seven available interfaces to implement:
 
 No  | Interface | Method
 ----|-----------|-------------
-9.1 | `PollfishSurveyReceivedListener` | **`pollfishSurveyReceived(SurveyInfo?)`** <br/> Get notified when a survey is received
-9.2 | `PollfishSurveyCompletedListener` | **`pollfishSurveyCompleted(SurveyInfo)`** <br/> Get notified when a survey is completed
-9.3 | `PollfishUserNotEligibleListener` | **`pollfishUserNotEligible`** <br/> Get notified when a user is not eligible for a Pollfish survey
-9.4 | `PollfishSurveyNotAvailableListener` | **`pollfishSurveyNotAvailable`** <br/> Get notified when no survey is available
-9.5 | `PollfishOpenedListener` | **`pollfishOpened`** <br/> Get notified when Pollfish panel has opened
-9.6 | `PollfishClosedListener` | **`pollfishClosed`** <br/> Get notified when Pollfish panel has closed
-9.7 | `PollfishUserRejectedSurveyListener` | **`pollfishUserRejectedSurvey`** <br/> Get notified when a user rejected a survey
+8.1 | `PollfishSurveyReceivedListener` | **`pollfishSurveyReceived(SurveyInfo?)`** <br/> Get notified when a survey is received
+8.2 | `PollfishSurveyCompletedListener` | **`pollfishSurveyCompleted(SurveyInfo)`** <br/> Get notified when a survey is completed
+8.3 | `PollfishUserNotEligibleListener` | **`pollfishUserNotEligible`** <br/> Get notified when a user is not eligible for a Pollfish survey
+8.4 | `PollfishSurveyNotAvailableListener` | **`pollfishSurveyNotAvailable`** <br/> Get notified when no survey is available
+8.5 | `PollfishOpenedListener` | **`pollfishOpened`** <br/> Get notified when Pollfish panel has opened
+8.6 | `PollfishClosedListener` | **`pollfishClosed`** <br/> Get notified when Pollfish panel has closed
+8.7 | `PollfishUserRejectedSurveyListener` | **`pollfishUserRejectedSurvey`** <br/> Get notified when a user rejected a survey
 
 <br/>
 
@@ -1189,7 +1189,7 @@ The whole set of values currently supported are:
 
 <br/>
 
-### 9.1. Get notified when a Pollfish survey is received
+### 8.1. Get notified when a Pollfish survey is received
 
 You can be notified when a Pollfish survey is received. With this notification publisher can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
 
@@ -1250,7 +1250,7 @@ new Params.Builder("API_KEY")
 
 <br/>
 
-### 9.2. Get notified when a Pollfish survey is completed
+### 8.2. Get notified when a Pollfish survey is completed
 
 You can be notified when a user completed a survey. With this notification, publisher can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
 
@@ -1307,7 +1307,7 @@ new Params.Builder("API_KEY")
 
 <br/>
 
-### 9.3. Get notified when a user is not eligible for a Pollfish survey
+### 8.3. Get notified when a user is not eligible for a Pollfish survey
 
 You can be notified when a user is not eligible for a Pollfish survey. In market research monetization users can get screened out while completing a survey because they are not relevant with audience that the market researcher was looking for. In that case the user not eligible notification will fire and the publisher will make no money from that survey. User not eligible notification will fire after survey received when user starts completing the survey.
 
@@ -1364,7 +1364,7 @@ new Params.Builder("API_KEY")
 
 <br/>
 
-### 9.4. Get notified when no surveys are available for that user
+### 8.4. Get notified when no surveys are available for that user
 
 You can be notified when Pollfish survey is not available. 
 
@@ -1421,7 +1421,7 @@ new Params.Builder("API_KEY")
 
 <br/>
 
-### 9.5. Get notified when Pollfish Survey panel has opened
+### 8.5. Get notified when Pollfish Survey panel has opened
 
 You can register and get notified when a Pollfish survey panel has opened. Publishers usually use this notification to pause a game until Pollfish panel is closed again.
 
@@ -1478,7 +1478,7 @@ new Params.Builder("API_KEY")
 
 <br/>
 
-### 9.6. Get notified when Pollfish Survey panel has closed
+### 8.6. Get notified when Pollfish Survey panel has closed
 
 You can register and get notified when a Pollfish survey panel has closed. Publishers usually use this notification to resume a game that they have previously paused when Pollfish panel opened.
 
@@ -1535,7 +1535,7 @@ new Params.Builder("API_KEY")
 
 <br/>
 
-### 9.7 Get notified when a user rejected a survey
+### 8.7 Get notified when a user rejected a survey
 
 You can register and get notified when a user rejected a survey
 
@@ -1592,7 +1592,7 @@ new Params.Builder("API_KEY")
 
 <br/>
 
-## 10. Check if Pollfish survey is still available on your device
+## 9. Check if Pollfish survey is still available on your device
 
 After you initialize Pollfish and a survey is received you can check at any time if the survey is available at the device by calling the following function.
 
@@ -1611,7 +1611,7 @@ Pollfish.isPollfishPresent();
 <br/>
 
 
-## 11. Check if Pollfish survey panel is open
+## 10. Check if Pollfish survey panel is open
 
 You can check at any time if the survey panel is open by calling the following function.
 
@@ -1629,7 +1629,7 @@ Pollfish.isPollfishPanelOpen();
 
 <br/>
 
-## 12. Proguard
+## 11. Proguard
 
 If you use proguard with your app, please insert the following lines in your proguard configuration file:  
 
@@ -1640,6 +1640,10 @@ If you use proguard with your app, please insert the following lines in your pro
 
 <br/>
 
-## 13. Server-to-server callbacks on survey completion
+## 12. Server-to-server callbacks on survey completion
 
 If you want to reward your users for completing a survey it is common practice to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Dashboard. You can read more on how to set server to server callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>. 
+
+## 13. Payouts on Screenouts
+
+In Market Research monetization users can get screened out within the survey since the Researcher might be looking a different user based on the provided answers. Screenouts do not deliver any revenue for the publisher nor any reward for the users. If you would like to activate payouts on screenouts too please follow the steps as described <a href="https://www.pollfish.com/docs/pay-on-screenouts">here</a>. 
