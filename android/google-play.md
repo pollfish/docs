@@ -68,11 +68,11 @@ dependencies {
 
 ## Migration guide
 
-In this guide you can see the changes on the Pollfish public interface
+In this guide you can see the changes on the Pollfish public interface from previous Android SDK versions
 
 <br/>
 
-<details><summary>Kotlin (Click to expand)</summary>
+<details><summary>➤ Kotlin (Click to expand)</summary>
 
 <table>
 <tr>
