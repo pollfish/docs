@@ -1418,7 +1418,7 @@ After you initialize Pollfish and a survey is received you can check at any time
 ```swift
 Pollfish.isPollfishPresent()
 ```
-
+<br/>
 ### 13. Check if Pollfish survey panel is open (optional)
 
 You can check at any time if the survey panel is visible.
@@ -1432,8 +1432,8 @@ You can check at any time if the survey panel is visible.
 ```swift
 Pollfish.isPollfishPanelOpen()
 ```
-
-## 14. Server-to-server callbacks on survey completion
+<br/>
+## 14. Server-to-server callbacks on survey completion  (optional)
 
 If you want to reward your users for completing a survey it is common practice to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Dashboard. You can read more on how to set server to server callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>. 
 
