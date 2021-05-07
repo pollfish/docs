@@ -472,7 +472,7 @@ dependencies {
 
 #### **Retrieve Pollfish Android SDK through mavenCentral()**
 
-Retrieve Pollfish through **mavenCentral()** with gradle by adding the following line in your app level **build.gradle** in dependencies section:
+Retrieve Pollfish through **mavenCentral()** with gradle by adding the following line in your app level **build.gradle** in the dependencies section:
 
 ```groovy
 dependencies {
@@ -588,7 +588,7 @@ override fun onResume() {
 public void onResume() {
     super.onResume();
  
-    PollFish.initWith(this, params);
+    Pollfish.initWith(this, params);
 }
 ```
 
@@ -827,7 +827,7 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **5.3.1.7 `.offerwallMode(Boolean)`
+#### **5.3.1.7 `.offerwallMode(Boolean)`**
 
 Enables Pollfish in offerwall mode. If not specified Pollfish shows one survey at a time.
 
@@ -1050,7 +1050,7 @@ Add the following paragraph to your app's privacy policy:
 You can have a look for some integration tips <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a> or if have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
 <br/><br/>
 
-> **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a Standalone Demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process that users need to go through, in order to join the platform. If a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market research. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this type of targeting.
+> **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a Standalone Demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process that users need to go through, in order to join the platform.  Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market research. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this type of targeting. Demographic surveys fire s2s callbacks with CPA=0. Publishers can provide rewards for users to incentivize them in completing the demographic surveys to get access to actual surveys.
 
 <br/>
 <table style="border:0 !important;">
