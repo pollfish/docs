@@ -408,3 +408,7 @@ If you everything worked fine during the previous steps, you should turn Pollfis
 
 > **Note:** If you would like help on filling the App's privacy questionnaire please have a look at section 7 [here](https://www.pollfish.com/docs/ios)
 
+
+## Step 8: Payouts on Screenouts (optional)
+
+In Market Research monetization users can get screened out within the survey since the Researcher might be looking a different user based on the provided answers. Screenouts do not deliver any revenue for the publisher nor any reward for the users. If you would like to activate payouts on screenouts too please follow the steps as described <a href="https://www.pollfish.com/docs/pay-on-screenouts">here</a>. 
