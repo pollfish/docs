@@ -72,7 +72,7 @@ In this guide you can see the changes on the Pollfish public interface from prev
 
 <br/>
 
-<details><summary>➤ Kotlin (Click to expand)</summary>
+<details><summary>➤ <b>Kotlin</b> (Click to expand)</summary>
 
 <table>
 <tr>
@@ -244,7 +244,7 @@ PollFish.showOnTopOfActivity(activity)
 
 <br/>
 
-<details><summary>Java (Click to expand)</summary>
+<details><summary> ➤ <b>Java</b> (Click to expand)</summary>
 <table>
 <tr>
 <td>
