@@ -586,17 +586,17 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 
 No          | Description
 ------------|------------
-5.3.1.1     | **`.indicatorPosition(Position)`** <br/> Sets the Position where you wish to place the Pollfish indicator
-5.3.1.2     | **`.requestUUID(String)`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
-5.3.1.3     | **`.indicatorPadding(Int)`** <br/> Sets the padding (in dp) from top or bottom according to the Position of the indicator
-5.3.1.4     | **`.userLayout(ViewGroup)`** <br/> Sets a layout container that Pollfish surveys will be rendered above it
-5.3.1.5     | **`.releaseMode(Boolean)`** <br/>  Sets Pollfish SDK to Developer or Release mode
-5.3.1.6     | **`.rewardMode(Boolean)`** <br/> Initializes Pollfish in reward mode
-5.3.1.7     | **`.offerwallMode(Boolean)`** <br/> Sets Pollfish to offerwall mode
-5.3.1.8     | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
-5.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward
-5.3.1.10    | **`.clickId(String)`** <br/> A pass through param that will be passed back through server-to-server callback
-5.3.1.11    | **`.signature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
+4.3.1.1     | **`.indicatorPosition(Position)`** <br/> Sets the Position where you wish to place the Pollfish indicator
+4.3.1.2     | **`.requestUUID(String)`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+4.3.1.3     | **`.indicatorPadding(Int)`** <br/> Sets the padding (in dp) from top or bottom according to the Position of the indicator
+4.3.1.4     | **`.userLayout(ViewGroup)`** <br/> Sets a layout container that Pollfish surveys will be rendered above it
+4.3.1.5     | **`.releaseMode(Boolean)`** <br/>  Sets Pollfish SDK to Developer or Release mode
+4.3.1.6     | **`.rewardMode(Boolean)`** <br/> Initializes Pollfish in reward mode
+4.3.1.7     | **`.offerwallMode(Boolean)`** <br/> Sets Pollfish to offerwall mode
+4.3.1.8     | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
+4.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward
+4.3.1.10    | **`.clickId(String)`** <br/> A pass through param that will be passed back through server-to-server callback
+4.3.1.11    | **`.signature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
 
 > **Note:** You can also register and listen for different callbacks that fire during a survey lifecycle through the `Params.Builder`. You can read more in section 9.
 
