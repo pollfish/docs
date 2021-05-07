@@ -971,7 +971,7 @@ and on the **App Store Connect** in the App's Privacy Policy section, update the
 
 <br/>
 
-<details><summary>Questionnaire Answers</summary>
+<details><summary>➤ <b>Questionnaire Answers</b> (Click to expand)</summary>
 
 | Type | Description | App Tracking | Explanation 
 | --- | --- | --- | --- |
