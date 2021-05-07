@@ -19,7 +19,7 @@ v5.6.0.0
 
 This guide is for publishers looking to use MoPub mediation to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.
 
-# Prerequisites
+## Prerequisites
 
 * Android API 21 or later
 * [Pollfish Publisher Account](https://www.pollfish.com/dashboard/dev/)
@@ -67,7 +67,7 @@ dependencies {
 
 Below you can find a step by step guide on how to incorporate Pollfish surveys with MoPub mediation:
 
-# Step 1: Add MoPub Rewarded Ads in your app 
+## Step 1: Add MoPub Rewarded Ads in your app 
 
 If you have not implemented [Rewarded Ads](https://developers.mopub.com/publishers/android/rewarded-ad/) in your app yet, you can follow the documentation implementation as described by MoPub. 
 
@@ -92,7 +92,7 @@ If you don't apply this setting, the Pollfish adapter will provide a dynamic val
 
 <br/>
 
-# Step 2: Configure Ad Sources for your Rewarded Ad unit
+## Step 2: Configure Ad Sources for your Rewarded Ad unit
 
 You need to add Pollfish Network as a **Custom Native Network**
 line item and link it with your Rewarded Ad unit. 
@@ -180,19 +180,19 @@ Click next to proceed on the next step where you will select the audience target
 
 <br/>
 
-# Step 3: Set Up Pollfish
+## Step 3: Set Up Pollfish
 
-## 3.1. Obtain a Publisher Account
+### 3.1. Obtain a Publisher Account
 
 Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
 
-## 3.2. Add new app on Pollfish Publisher Dashboard and copy the given API Key
+### 3.2. Add new app on Pollfish Publisher Dashboard and copy the given API Key
 
 Login at [www.pollfish.com](www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Publisher Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
-# Step 4: Add PollfishMoPubAdapter to your project
+## Step 4: Add PollfishMoPubAdapter to your project
 
-## 4.1. Add Pollfish aar library to your project
+### 4.1. Add Pollfish aar library to your project
 
 Download Pollfish Android SDK or reference it through maven().
 
@@ -214,7 +214,7 @@ dependencies {
 }
 ```
 
-## 4.2. Integrate Google Play Services to your project
+### 4.2. Integrate Google Play Services to your project
 
 Applications that integrate Pollfish SDK are required to include Google Play Services library in order to give access to the Advertising ID of a device to the SDK. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
 
@@ -224,7 +224,7 @@ dependencies {
 }
 ```
 
-## 4.3: Add MoPub SDK to your porject
+### 4.3: Add MoPub SDK to your porject
 
 Retrieve MoPub SDK through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
@@ -238,7 +238,7 @@ dependencies {
 
 Visit MoPub SDK [GitHub page](https://github.com/mopub/mopub-android-sdk#download) for more info and alternative ways of downloading and integrating their SDK in your app.
 
-## 4.4: Add Pollfish MoPub Adapter to your project
+### 4.4: Add Pollfish MoPub Adapter to your project
 
 Import Pollfish MoPub Adapter **.AAR** file to your project libraries  
 
@@ -258,7 +258,7 @@ dependencies {
 
 <br/>
 
-# Step 5: Request for a RewardedAd
+## Step 5: Request for a RewardedAd
 
 Import `com.mopub.common` and `com.mopub.mobileads` packages
 
@@ -413,7 +413,7 @@ MoPubRewardedAds.showRewardedAd("AD_UNIT_ID");
 
 <br/>
 
-# Step 6: Create PollfishMoPubMediationSettings object (Optional)
+## Step 6: Create PollfishMoPubMediationSettings object (Optional)
 
 Pollfish MoPub Adapter provides different options that you can use to control the behaviour of Pollfish SDK.
 
@@ -502,7 +502,7 @@ SdkConfiguration configuration = new SdkConfiguration.Builder(adUnitId)
 MoPub.initializeSdk(this, configuration, this);
 ```
 
-# Step 7: Publish your app on the store
+## Step 7: Publish your app on the store
 
 If you everything worked fine during the previous steps, you should turn Pollfish to release mode and publish your app.
 
