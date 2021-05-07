@@ -68,7 +68,7 @@ dependencies {
 
 ## Migration guide
 
-In this guide you can see the changes on the Pollfish public interface from previous Android SDK versions
+In this guide you can see the changes on the Pollfish public interface from previous Android SDK versions (prior v6)
 
 <br/>
 
