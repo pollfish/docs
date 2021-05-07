@@ -33,6 +33,8 @@ v6.0.0
 
 > **Note:** Pollfish SDK requires minSdk 21. If your app supports a lower minSdk you can still build your app and exlude Pollfish invocations from targets lower than 21 by adding the following blocks on your code.
 
+<details><summary>Support builds with targets lower than 21 (Click to expand)</summary>
+
 **AndroidManifest.xml**
 
 ```xml
@@ -62,20 +64,9 @@ dependencies {
 }
 ```
 
-**Wrap All Pollfish invocations**
+</details>
 
-Apply a version check before Pollfish invocations. Below you can see an example on `Pollfish.initWith(activity, params)` invocation.
-
-```java
-if (Build.VERSION.SDK_INT >= 21) {
-    // Invoke Pollfish.<method>
-    Params params = new Params.Builder("YOUR_API_KEY")
-        ...
-        .build();
-        
-    Pollfish.initWith(activity, params);
-}
-```
+</br>
 
 ## Migration guide
 
