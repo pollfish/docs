@@ -19,11 +19,11 @@ v6.0.0
 
 ## Migration guide
 
-In this guide you can see the changes on the Pollfish public interface 
+In this guide you can see the changes on the Pollfish public interface from previous iOS SDK versions (prior v6)
 
 <br/>
 
-<details><summary>Swift (Click to expand)</summary>
+<details><summary>➤ <b>Swift</b> (Click to expand)</summary>
 
 <table>
 <tr>
@@ -195,7 +195,7 @@ func rotateApp(_ notification:Notification){
 <br/>
 
 
-<details><summary>Objective C (Click to expand)</summary>
+<details><summary>➤ <b>Objective</b> C (Click to expand)</summary>
 <table>
 <tr>
 <td>
