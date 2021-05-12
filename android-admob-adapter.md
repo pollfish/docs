@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.0.4.0">
+<div class="changelog" data-version="6.1.0.0">
+v6.1.0.0
+
+- Updated with Pollfish Android SDK v6.1.0
+
 v6.0.4.0
 
 - Updated with Pollfish Android SDK v6.0.4
@@ -220,7 +224,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```
 dependencies {
-  implementation 'com.pollfish:pollfish-googleplay:6.0.4'
+  implementation 'com.pollfish:pollfish-googleplay:6.1.0'
 }
 ```
 
@@ -248,7 +252,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```
 dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:6.0.4.0'
+  implementation 'com.pollfish.mediation:pollfish-admob:6.1.0.0'
 }
 ```
 
