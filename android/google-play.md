@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.0.4">
+<div class="changelog" data-version="6.1.0">
+v6.1.0
+
+- Fixed Pollfish failing to initialize when app returns from Stop state
+
 v6.0.4
 
 - Fixed ThreadPoolScheduler issue
@@ -98,7 +102,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.0.4'
+implementation 'com.pollfish:pollfish-googleplay:6.1.0'
 ```
 
 <tr>
@@ -269,7 +273,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.0.4'
+implementation 'com.pollfish:pollfish-googleplay:6.1.0'
 ```
 
 <tr>
@@ -477,7 +481,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-googleplay:6.0.4'
+    implementation 'com.pollfish:pollfish-googleplay:6.1.0'
 }
 ```
 
