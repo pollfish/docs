@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.1.0">
+<div class="changelog" data-version="6.1.1">
+v6.1.1
+
+- Fixed `NullPointerException` on `imageView.animate()`
+
 v6.1.0
 
 - Fixed Pollfish failing to initialize when app returns from Stop state
@@ -102,7 +106,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.1.0'
+implementation 'com.pollfish:pollfish-googleplay:6.1.1'
 ```
 
 <tr>
@@ -273,7 +277,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.1.0'
+implementation 'com.pollfish:pollfish-googleplay:6.1.1'
 ```
 
 <tr>
@@ -481,7 +485,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-googleplay:6.1.0'
+    implementation 'com.pollfish:pollfish-googleplay:6.1.1'
 }
 ```
 
