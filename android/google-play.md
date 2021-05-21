@@ -1055,7 +1055,7 @@ Add the following paragraph to your app's privacy policy:
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/basic-format.gif"/>
 <br/>
 
-You can have a look for some integration tips <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a> or if have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://pollfish.zendesk.com/hc/en-us/sections/201328652-Publishers">FAQ page</a>
+You can have a look for some integration tips <a href="https://www.pollfish.com/blog/2017/08/22/10-facts-about-mobile-rewarded-surveys/">here</a> or if have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://help.pollfish.com/en/articles/1163768-why-i-cannot-see-any-surveys-on-my-app">FAQ page</a>
 <br/><br/>
 
 > **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a Standalone Demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process that users need to go through, in order to join the platform.  Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market research. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this type of targeting. Demographic surveys fire s2s callbacks with CPA=0. Publishers can provide rewards for users to incentivize them in completing the demographic surveys to get access to actual surveys.
@@ -1170,7 +1170,7 @@ Field | Description
 ------------ | -------------
 **`surveyCPA`**                | Money to be earned from survey received in US dollar cents (estimated based on daily exchange currency)
 **`surveyIR`**                 | The current estimation for the survey incidence rate as an integer number in the range 0-100. This param is optional and will have as default the value -1 if it was not set and the IR was not computed reliably
-**`surveyLOI`**                | The expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably
+**`surveyLOI`**                | The expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI was not computed reliably
 **`surveyClass`**        | Information about the survey network and type
 **`rewardName`**         | A virtual reward name as specified on Publisher Dashboard 
 **`rewardValue`**        | A virtual reward value as caluclated via a given echange rate on Publisher Dashboard 
