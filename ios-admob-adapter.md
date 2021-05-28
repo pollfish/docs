@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.0.0.0">
+<div class="changelog" data-version="6.0.1.0">
+v6.0.1.0
+    
+- Updated with Pollfish iOS SDK 6.0.1
+    
 v6.0.0.0
     
 - Updated with Pollfish iOS SDK 6.0.0
