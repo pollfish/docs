@@ -46,15 +46,27 @@ cordova plugin add https://github.com/pollfish/cordova-plugin-pollfish.git
 To remove Pollfish plugin type:
 
 ```
-cordova plugin remove com.pollfish.cordova
+cordova plugin remove com.pollfish.cordova_plugin
 ```
-
-
 
 *In iOS if pollfish framework is not added automatically you may need to add it manually to your XCode project. In Xcode, select the target that you want to use and in the Build Phases tab expand the Link Binary With Libraries section. Press the + button, and press Add other… In the dialog box that appears, go to the Pollfish framework’s location (located in /src/ios/framework) and select it. The project will appear at the top of the Link Binary With Libraries section and will also be added to your project files (left-hand pane). The framework is a folder and you should add the whole folder into your project.*
 
 
+**Ionic**
 
+For Ionic based projects please use the following commands based on your Cross-platform runtime:
+
+Cordova
+```
+ionic cordova plugin add https://github.com/pollfish/cordova-plugin-pollfish.git
+ionic cordova plugin com.pollfish.cordova_plugin
+```
+
+Capacitor
+```
+npm i https://github.com/pollfish/cordova-plugin-pollfish.git
+npm r com.pollfish.cordova_plugin
+```
 
 ### 4. Initialize Pollfish
 
