@@ -2,6 +2,8 @@ React Native plugin to allow integration of Pollfish surveys into Android and iO
 
 Pollfish is a mobile monetization platform delivering surveys instead of ads through mobile apps. Developers get paid per completed surveys through their apps.
 
+Pollfish React Native Plugin can be found on [npm Registry](https://www.npmjs.com/package/react-native-plugin-pollfish). The source code and an example app can be found on [Github](https://github.com/pollfish/react-native-plugin-pollfish).
+
 <br/>
 
 # Prerequisites
