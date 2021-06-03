@@ -93,8 +93,9 @@ import RNPollfish from 'react-native-pollfish';
 Initialize Pollfish
 
 ```js
-var params = new RNPollfish.Builder('API_KEY')
-    .indicatorPosition(RNPollfish.Position.topLeft)
+var params = new RNPollfish.Builder('API_KEY');
+
+params.indicatorPosition(RNPollfish.Position.topLeft)
     .indicatorPadding(10)
     .offerwallMode(true)
     .rewardMode(false)
