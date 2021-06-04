@@ -174,7 +174,7 @@ Pollfish Webplugin provides some callback functions to call when specific action
 3.  <span class="params">closeAndNoShowCallback</span>  
     Called when the survey is closed and the indicator hides permanently (e.g. when finishing the survey)
 4.  <span class="params">surveyCompletedCallback</span>  
-    Called when the user finishes the survey. Also contains revenue, survey format, estimated LOI, [survey_class](https://www.pollfish.com/docs/api-documentation) (surveyProvider + type) and IR survey information on offerwall integrations.
+    Called when the user finishes the survey. Also contains revenue, estimated LOI, [survey_class](https://www.pollfish.com/docs/api-documentation) (surveyProvider + type), reward name, reward value and IR survey information.
 5.  <span class="params">surveyAvailable</span>  
     Called when there is an availble survey for the user. Also contains revenue, survey format, estimated LOI, [survey_class](https://www.pollfish.com/docs/api-documentation) (surveyProvider + type), reward name, reward value and IR survey information. 
 6.  <span class="params">surveyNotAvailable</span>  
@@ -210,8 +210,15 @@ function customUserNotEligible(){
   console.log("user is not eligible");
 }
 
-function customSurveyFinished(){
-  console.log("user finished the survey");
+function customSurveyFinished(data){
+  console.log(`
+      pollfish survey has finished with revenue: ${data.survey_price},
+      survey_loi: ${data.survey_loi},
+      survey_ir: ${data.survey_ir},
+      survey_class: ${data.survey_class},
+      reward_name: ${data.reward_name},
+      reward_value: ${data.reward_value},
+    `);
 }
 
 function customCloseAndNoShow(){
