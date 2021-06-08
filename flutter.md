@@ -197,7 +197,7 @@ FlutterPollfish.instance.init(apiKey: 'YOUR_API_KEY')
 During initialization you can pass different optional params:
 
 
-1. **pollfishPosition**: Position - `Position.topLeft`, `.topRight`, `.middleLeft`, `.middleRight`, `.bottomLeft`, `.bottomRight` (defines the side of the Pollfish panel, and position of Pollfish indicator)
+1. **indicatorPosition**: Position - `Position.topLeft`, `.topRight`, `.middleLeft`, `.middleRight`, `.bottomLeft`, `.bottomRight` (defines the side of the Pollfish panel, and position of Pollfish indicator)
 2. **indicatorPadding**: int - Sets padding from the top or bottom according to Position of the indicator
 3. **releaseMode**: bool - Sets Pollfish SDK to Debug or Release mode. Use Developer mode to test your implementation with demo surveys
 4. **rewardMode**: bool - Initializes Pollfish in reward mode (used when implementing a Rewarded approach)
