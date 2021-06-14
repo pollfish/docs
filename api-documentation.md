@@ -471,8 +471,8 @@ window.onmessage = function(e){
 }
 ```
 ```js
-// currently used by old integrations, use surveyCompletedWithData instead
 window.onmessage = function(e){
+    // currently used by old integrations, use surveyCompletedWithData instead
     if(e.data === 'setSurveyCompleted'){
         // Handle the event when a user sucessfully completes the survey
     }
