@@ -444,13 +444,14 @@ When the html file loads on the user side, there are
 several javascript events that can be fired through the lifetime of a
 Pollfish survey:
 
-|  | Event                  | Description
-|--|:-----------------------|:----------------
-|1 | **close**              | When a user clicks on close button
-|2 | **closeAndNoShow**     | When a user clicks on close button
-|3 | **setSurveyCompleted** | When a user successfully completed a survey <br>(NOTICE: Further investigation of the response will be done on the server side to detect e.g fraudulent activites, so make sure to use the server-to-server callbacks, as described in section 4 to track valid responses prior crediting users)
-|4 | **userNotEligible**    | When a user was not qualified to complete the survey (screened-out)         
-|5 | **userRejectedSurvey** | When a user selected the "No thanks" option on the homescreen, or when a user selected the "I will not participate in this survey" button when on the GDPR page
+|  | Event                         | Description
+|--|:------------------------------|:----------------
+|1 | **close**                     | When a user clicks on close button
+|2 | **closeAndNoShow**            | When a user clicks on close button
+|3 | **setSurveyCompleted**        | (Deprecated) When a user successfully completed a survey <br>(NOTICE: Further investigation of the response will be done on the server side to detect e.g fraudulent activites, so make sure to use the server-to-server callbacks, as described in section 4 to track valid responses prior crediting users)
+|4 | **surveyCompletedWithData**   | When a user successfully completed a survey. Also contains revenue, estimated LOI, survey_class (surveyProvider + type), reward name, reward value and IR survey information. <br>(NOTICE: Further investigation of the response will be done on the server side to detect e.g fraudulent activites, so make sure to use the server-to-server callbacks, as described in section 4 to track valid responses prior crediting users)
+|5 | **userNotEligible**           | When a user was not qualified to complete the survey (screened-out)         
+|6 | **userRejectedSurvey**        | When a user selected the "No thanks" option on the homescreen, or when a user selected the "I will not participate in this survey" button when on the GDPR page
 
 Below you can find some examples of how to catch and handle the events
 described above:
@@ -471,8 +472,28 @@ window.onmessage = function(e){
 ```
 ```js
 window.onmessage = function(e){
+    // currently used by old integrations, use surveyCompletedWithData instead
     if(e.data === 'setSurveyCompleted'){
         // Handle the event when a user sucessfully completes the survey
+    }
+}
+```
+```js
+window.onmessage = function(e){
+    if(e && e.data && e.data.indexOf && e.data.indexOf('surveyCompletedWithData') > -1){
+        var data = JSON.parse(e.data);
+        if(data.type === 'surveyCompletedWithData'){
+            console.log(data);
+            // expected JSON
+            // {
+            //   revenue: data.survey_price,
+            //   survey_loi: data.survey_loi,
+            //   survey_ir: data.survey_ir,
+            //   survey_class: data.survey_class,
+            //   reward_name: data.reward_name,
+            //   reward_value: data.reward_value,
+            // }
+        }
     }
 }
 ```
@@ -498,7 +519,7 @@ window.onmessage = function(e){
             // }
             
         }
-   }
+    }
 }
 ```
 ```js
