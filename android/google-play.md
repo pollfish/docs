@@ -1,7 +1,11 @@
-<div class="changelog" data-version="6.1.2">
+<div class="changelog" data-version="6.1.3">
+v6.1.3
+
+- Internal fixes
+
 v6.1.2
 
-- Internal Bug Fixes
+- Internal fixes
 
 v6.1.1
 
@@ -110,7 +114,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.1.2'
+implementation 'com.pollfish:pollfish-googleplay:6.1.3'
 ```
 
 <tr>
@@ -281,7 +285,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.1.2'
+implementation 'com.pollfish:pollfish-googleplay:6.1.3'
 ```
 
 <tr>
@@ -489,7 +493,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-googleplay:6.1.2'
+    implementation 'com.pollfish:pollfish-googleplay:6.1.3'
 }
 ```
 

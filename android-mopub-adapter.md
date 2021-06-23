@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.1.2.0">
+<div class="changelog" data-version="6.1.3.0">
+v6.1.3.0
+
+- Updated with Pollfish Android SDK v6.1.3
+
 v6.1.2.0
 
 - Updated with Pollfish Andorid SDK v6.1.2
@@ -220,9 +224,9 @@ If you are using Android Studio, right click on your project and select New Modu
 
 Retrieve Pollfish through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
-```
+```groovy
 dependencies {
-    implementation 'com.pollfish:pollfish-googleplay:6.1.2'
+    implementation 'com.pollfish:pollfish-googleplay:6.1.3'
 }
 ```
 
@@ -264,9 +268,9 @@ If you are using Android Studio, right click on your project and select New Modu
 
 Retrieve Pollfish MoPub Adapter through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
-```
+```groovy
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-mopub:6.1.2.0'
+    implementation 'com.pollfish.mediation:pollfish-mopub:6.1.3.0'
 }
 ```
 
