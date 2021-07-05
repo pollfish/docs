@@ -169,7 +169,7 @@ Add this to your package's pubspec.yaml file:
 
 ```
 dependencies:
-  flutter_pollfish: ^3.0.2
+  flutter_pollfish: ^3.0.3
 ```
 You can install then the package from the command line:
 

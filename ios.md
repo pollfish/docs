@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.0.3">
+<div class="changelog" data-version="6.1.0">
+v6.1.0
+
+- Added support for non personalised surveys when no IDFA permission is granted
+
 v6.0.3
 
 - Internal fixes
@@ -22,9 +26,10 @@ v6.0.0
 * Use XCode 12 or higher
 * Target iOS 9.0 or higher
 * Create [Pollfish Developer Account](https://pollfish.com/login/publisher) and register an App
-* IDFA tracking permission (iOS 14+)
 
-> **Note:** Pollfish cannot function without the usage of IDFA. Insructions on how to request permission can be found in section 5.
+> **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
+
+> **Note:** Insructions on how to request IDFA permission can be found in section 5.
 
 </br>
 
@@ -387,7 +392,7 @@ params.userProperties(userProperties)
 2. Register a new App on Pollfish Developer Dashboard and copy the given API Key
 3. Download and import Pollfish.xcframework to your project
 4. Add AdSupport.framework, AppTackingTransparency.framework, SystemConfiguration.framework and CoreTelephony.framework to your project
-5. Request IDFA tracking permission
+5. Request IDFA tracking permission 
 6. Embed pollfish in your code and call init
 7. Set to **Release mode** and release in AppStore
 8. Update your privacy policy
@@ -443,11 +448,8 @@ To present the authorization request, call `requestTrackingAuthorization`. We re
 
 - (void) requestIDFA {
     [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
-        if (status == ATTrackingManagerAuthorizationStatusAuthorized) {
-            // Tracking authorization completed. 
-            // Initialize Pollfish here.
-            [self initPollfish];
-        }
+        // Initialize Pollfish here.
+        [self initPollfish];
     }];
 }
 ```
@@ -459,16 +461,15 @@ import AdSupport
 
 func requestIDFA() {
     ATTrackingManager.requestTrackingAuthorization { status in
-        if status == .authorized {
-            // Tracking authorization completed. 
-            // Initialize Pollfish here.
-            self.initPollfish()
-        }
+        // Initialize Pollfish here.
+        self.initPollfish()
     }
 }
 ```
 
-> **Note:** This step is required only for iOS 14+ targeting. If you sould like to see an example in code visit this [repository](https://github.com/pollfish/ios-sdk-pollfish)
+> **Note:** This step should be preferably followed when targeting iOS 14+. If you sould like to see an example in code visit this [repository](https://github.com/pollfish/ios-sdk-pollfish)
+
+> **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
 
 <br/>
 
@@ -963,7 +964,7 @@ et pollfishParams = PollfishParams("API_KEY")
 
 ### 7. Distributing your app to AppStore
 
-Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefore when submitting your app to the App you should select the following options as seen in the image below:  
+Pollfish uses Advertising Identifier (IDFA) for survey distribution (if permission granted) and therefore when submitting your app to the App you should select the following options as seen in the image below:  
 
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/idfa_3.png"/>
 

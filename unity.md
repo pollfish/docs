@@ -199,8 +199,10 @@ Please set minimum version of your project accordingly.
 
 <br/>
 
-> **Note:** Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. As of iOS 14 you should initialize Pollfish Unity plugin in iOS only if the relevant IDFA permission was granted by the user
+> **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
+
 <br/>
+
 You can find instructions on how to install ios-support package and request for IDFA permission from a Unity script [here](https://github.com/Unity-Technologies/com.unity.ads.ios-support)
 
 > **Note:** If you are updating from version 5.7.6 or lower to 6.0.0 or higher we recommend to clean your project from any of Pollfish Unity Plugin files and then import the lastest version. A comparisson between the v5 and v6 public API can be found on the following migration guide
@@ -596,7 +598,7 @@ If you use proguard with your app, please insert the following lines in the prog
 
 ### Distributing your app to AppStore
 
-Pollfish uses Advertising Identifier (IDFA) for survey distribution and therefore when submitting your app to the App you should select the following options as seen in the image below:  
+Pollfish uses Advertising Identifier (IDFA) for survey distribution (if permission granted) and therefore when submitting your app to the App you should select the following options as seen in the image below:  
 
 ![](/homeassets/images/documentation/idfa_2.jpg)
 

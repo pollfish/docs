@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.0.3.0">
+<div class="changelog" data-version="6.1.0.0">
+v6.1.0.0
+
+- Updated with Pollfish iOS SDK v6.1.0
+
 v6.0.3.0
 
 - Updated with Pollfish iOS SDK v6.0.3
@@ -75,7 +79,8 @@ This guide is for publishers looking to use AdMob mediation to load and show Rew
 iOS 9.0 or later
 
 
-> **Note:** Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. As of iOS 14 you should initialize Pollfish iOS AdMob Adapter only if the relevant IDFA permission was granted by the user
+> **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
+
 
 </br>
 
