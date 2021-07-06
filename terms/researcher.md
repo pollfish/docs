@@ -88,7 +88,7 @@ XII. You will not process the Shared Personal Data for direct marketing, promoti
 
 **5.1**  Subject to the Terms and Conditions described in this Agreement, Pollfish grants to Researcher a revocable, non-exclusive, worldwide, fee-bearing, non-assignable license to access and use the Pollfish Platform.
 
-**5.2**  Data we collect from Survey Respondents through Pollfish-enabled apps/websites and what Survey Respondent data we may share with you as included in the Reporting Deliverables, are designated in our Survey Respondent Privacy Policy which constitutes part of this Agreement and is located at https://www.pollfish.com/terms/respondent. You understand and agree that Pollfish may share with you only such data as are designated in the aforementioned Privacy Policy, as may be amended from time to time, and no other.
+**5.2**  Data we collect from Survey Respondents through Pollfish-enabled apps/websites and what Survey Respondent data we may share with you as included in the Reporting Deliverables, are designated in our Survey Respondent Privacy Policy which constitutes part of this Agreement and is located at [https://www.pollfish.com/terms/respondent](https://www.pollfish.com/terms/respondent). You understand and agree that Pollfish may share with you only such data as are designated in the aforementioned Privacy Policy, as may be amended from time to time, and no other.
 
 **6. OWNERSHIP OF REPORTING DELIVERABLES**
 
@@ -126,15 +126,15 @@ XII. You will not process the Shared Personal Data for direct marketing, promoti
 
 (a) all United States Federal Trade Commission (&quot;FTC&quot;) rules and guidelines regarding the collection, use or disclosure of information from or about a unique user of a website, application or mobile website and/or the device associated with such user;
 
-(b) the Self-Regulatory Principles of the Digital Advertising Alliance (&quot;DAA&quot;), currently available at http://www.aboutads.info/principles, as each set of principles may be amended from time to time by the DAA or any successor entity to the DAA, and all interpretations of the DAA&#39;s Self-Regulatory Principles, whether by the DAA itself or by the Council of Better Business Bureaus in an accountability proceeding or otherwise;
+(b) the Self-Regulatory Principles of the Digital Advertising Alliance (&quot;DAA&quot;), currently available at [http://www.aboutads.info/principles](http://www.aboutads.info/principles), as each set of principles may be amended from time to time by the DAA or any successor entity to the DAA, and all interpretations of the DAA&#39;s Self-Regulatory Principles, whether by the DAA itself or by the Council of Better Business Bureaus in an accountability proceeding or otherwise;
 
-(c) the Code of Conduct of the Network Advertising Initiative (&quot;NAI&quot;), currently available at http://www.networkadvertising.org/code-enforcement/code, as the Code may be amended from time to time by the NAI or any successor entity to the NAI, and all interpretations of the NAI&#39;s Code of Conduct by the NAI itself or any successor entity to the NAI;
+(c) the Code of Conduct of the Network Advertising Initiative (&quot;NAI&quot;), currently available at [http://www.networkadvertising.org/code-enforcement/code](http://www.networkadvertising.org/code-enforcement/code), as the Code may be amended from time to time by the NAI or any successor entity to the NAI, and all interpretations of the NAI&#39;s Code of Conduct by the NAI itself or any successor entity to the NAI;
 
-(e) the Principles of the European Interactive Digital Alliance (&quot;EDAA&quot;), currently available at http://www.edaa.eu/european-principles/, as each set of principles may be amended from time to time by the EDAA or any successor entity to the EDAA.
+(e) the Principles of the European Interactive Digital Alliance (&quot;EDAA&quot;), currently available at [http://www.edaa.eu/european-principles/](http://www.edaa.eu/european-principles/), as each set of principles may be amended from time to time by the EDAA or any successor entity to the EDAA.
 
 (f) any other relevant FTC, NAI or DAA code, principles or other guidance relating to the collection and use of data or serving of advertising or other Targeted content in the mobile environment.
 
-**7.3.7**  In case a Pollfish Responden tmakes to Pollfish any request regarding erasure of his data, you will promptly comply with a Pollfish request to delete all Pollfish Respondent Personal Data from your databases providing also proof of such deletion. You will also immediately conform with all calls for action requested by you from Pollfish regarding Pollfish Respondent Personal Data, in relation to any data subject request and exercise of data-subject right, as such rights are described in the Pollfish Respondent Privacy Policy.
+**7.3.7**  In case a Pollfish Respondent makes to Pollfish any request regarding erasure of his data, you will promptly comply with a Pollfish request to delete all Pollfish Respondent Personal Data from your databases providing also proof of such deletion. You will also immediately conform with all calls for action requested by you from Pollfish regarding Pollfish Respondent Personal Data, in relation to any data subject request and exercise of data-subject right, as such rights are described in the Pollfish Respondent Privacy Policy.
 
 **8. TERMINATION**
 
@@ -365,11 +365,11 @@ All California residents may exercise their rights and choices under the CCPA, a
 
 **8. POLLFISH AND THE GDPR**
 
-Pollfish processes Personal Data in accordance with the GDPR requirements. In particular, Pollfish processes personal data only in accordance with GDPR data protection principles and GDPR data protection provisions. Pollfish also implements appropriate technical and organisational measures and demonstrates compliance and ensures that both in the planning and implementation of processing activities, data protection principles and appropriate safeguards are addressed and implemented (data protection by design and default). For more information you can visit our specially GDPR-dedicated page: https://www.pollfish.com/lp/gdpr/.
+Pollfish processes Personal Data in accordance with the GDPR requirements. In particular, Pollfish processes personal data only in accordance with GDPR data protection principles and GDPR data protection provisions. Pollfish also implements appropriate technical and organisational measures and demonstrates compliance and ensures that both in the planning and implementation of processing activities, data protection principles and appropriate safeguards are addressed and implemented (data protection by design and default). For more information you can visit our specially GDPR-dedicated page: [https://www.pollfish.com/lp/gdpr/](https://www.pollfish.com/lp/gdpr/).
 
 **9. PRIVACY - POLLFISH AND THE EU-US PRIVACY SHIELD/SWISS-U.S. PRIVACY SHIELD**
 
-Although the EU-U.S. Privacy Shield Framework is no longer a valid mechanism to comply with EU data protection requirements when transferring personal data from the European Union to the United States, Pollfish continues to comply with the EU-U.S. Privacy Shield Framework and the Swiss – U.S. Privacy Shield Framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information transferred from the European Union and Switzerland to the United States. Pollfish has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. If there is any conflict between the terms in this PART B of this Agreement (Privacy Policy) and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification, please visit https://www.privacyshield.gov/.
+Although the EU-U.S. Privacy Shield Framework is no longer a valid mechanism to comply with EU data protection requirements when transferring personal data from the European Union to the United States, Pollfish continues to comply with the EU-U.S. Privacy Shield Framework and the Swiss – U.S. Privacy Shield Framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information transferred from the European Union and Switzerland to the United States. Pollfish has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. If there is any conflict between the terms in this PART B of this Agreement (Privacy Policy) and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification, please visit [https://www.privacyshield.gov/](https://www.privacyshield.gov/).
 
 Pollfish&#39;s participation in the Privacy Shield applies to all personal data that is subject to the Pollfish Privacy Statement and is received from the European Union, European Economic Area, and Switzerland. Pollfish will comply with the Privacy Shield Principles in respect of such personal data. Pollfish is also affirmatively committed to comply with the Swiss – U.S. Privacy Shield Framework.
 
@@ -429,7 +429,7 @@ We do not charge a fee to process or respond to your verifiable request unless i
 
 Please contact us with any questions or comments about our Privacy Policy, your personal information, our third-party disclosure practices, or your consent choices by email: support@pollfish.com
 
-Pollfish designates as its representative in the EU, who acts on Pollfish&#39;s behalf and who may be addressed by any supervisory authority and be subject to enforcement proceedings in the event of non-compliance with the GDPR by Pollifish, Mr Zissis Bellas, who can be contacted at the following address: gdpr@pollfish.com Pollfish remains fully liable under the GDPR.
+Pollfish designates as its representative in the EU, who acts on Pollfish&#39;s behalf and who may be addressed by any supervisory authority and be subject to enforcement proceedings in the event of non-compliance with the GDPR by Pollfish, Mr Zissis Bellas, who can be contacted at the following address: gdpr@pollfish.com Pollfish remains fully liable under the GDPR.
 
 Pollfish appoints as a Data Protection Officer Mr Zissis Bellas, who can be contacted at the following addressgdpr@pollfish.com
 
@@ -665,7 +665,7 @@ _Pollfish Survey Respondents_
 _Market research_
 
 **Categories of data**
-As specified in the Pollfish Respondents Terms located at https://www.pollfish.com/terms/respondent
+As specified in the Pollfish Respondents Terms located at [https://www.pollfish.com/terms/respondent](https://www.pollfish.com/terms/respondent)
 
 **Recipients**
 
@@ -755,7 +755,7 @@ Encryption: use of encryption methods at rest and at transit.
 
 **4.2**  Where the Processor, with the consent of the Controller, appoints a sub-processor and sub-contracts its obligations under this agreement it shall do so only by way of a written agreement with the sub-processor which imposes the same obligations in relation to the security of the processing on the sub-processor as are imposed on the Processor under this Agreement.
 
-**4.3**  For the avoidance of doubt, where the sub-processor fails to fulfil its obligations under any sub-processing agreement, the Processor shall remain fully liable to the Controller for the fulfilment of its obligations under this Agreement.
+**4.3**  For the avoidance of doubt, where the sub-processor fails to fulfil its obligations under any sub-processing agreement, the Processor shall remain fully liable to the Controller for the fulfillment of its obligations under this Agreement.
 
 **5. DATA-SUBJECT RIGHTS**
 
@@ -765,7 +765,7 @@ Encryption: use of encryption methods at rest and at transit.
 
 **6.1**  Any processing of Data outside the territory of the European Economic Area shall require the prior written consent of Controller and may only be carried out if all legal requirements under Applicable Data Protection Law for such processing are fulfilled. Such measures may include (without limitation) transferring the Data to a recipient in a country that the European Commission has decided provides adequate protection for personal data, to a recipient that has achieved binding corporate rules authorisation in accordance with Applicable Data Protection Law, or to a recipient that has executed standard contractual clauses adopted or approved by the European Commission.
 
-**7. PERSONAL DATA BREACH, DATA PROTECTION IMPACT ASSESSEMENT AND PRIOR CONSULTATION**
+**7. PERSONAL DATA BREACH, DATA PROTECTION IMPACT ASSESSMENT AND PRIOR CONSULTATION**
 
 **7.1**  Processor shall notify Controller without undue delay upon it becoming aware of a Personal Data Breach, providing Controller with sufficient information to allow it to meet any obligations to report or inform Data Subjects of the Personal Data Breach. Processor shall cooperate with Controller and take such reasonable commercial steps as are directed by Controller to assist in the investigation, mitigation and remediation of each such Personal Data Breach.
 
@@ -983,7 +983,7 @@ Data subjects
 
 The personal data transferred concern the following categories of data subjects:
 
-Any subject of the Researcher Personal Data as defined in section 7.1(b) of the Pollfish Researcher Terms located at [https://www.pollfish.com/terms/researcher](https://www.pollfish.com/terms/researcher). Subjects may include Researcher employees, clientele, existing or prospective users of Reseacher Services, and/or specified persons to whom Researcher has instructed Pollfish to target with a survey.
+Any subject of the Researcher Personal Data as defined in section 7.1(b) of the Pollfish Researcher Terms located at [https://www.pollfish.com/terms/researcher](https://www.pollfish.com/terms/researcher). Subjects may include Researcher employees, clientele, existing or prospective users of Researcher Services, and/or specified persons to whom Researcher has instructed Pollfish to target with a survey.
 
 Categories of data
 
@@ -1005,6 +1005,6 @@ Description of the technical and organisational security measures implemented by
 
 See section 2.3 of the Data Processing Addendum between Data Exporter and Data Importer.
 
-[1](#sdfootnote1anc) &quot;Relevant provisions&quot; means those provisions of any authorisation or decision except for the enforcement provisions of any authorisation or decision (which shall be governed by these clauses).
+1. &quot;Relevant provisions&quot; means those provisions of any authorisation or decision except for the enforcement provisions of any authorisation or decision (which shall be governed by these clauses).
 
-[2](#sdfootnote2anc) However, the provisions of Annex A.5 concerning rights of access, rectification, deletion and objection must be applied when this option is chosen and take precedence over any comparable provisions of the Commission Decision selected.
+2. However, the provisions of Annex A.5 concerning rights of access, rectification, deletion and objection must be applied when this option is chosen and take precedence over any comparable provisions of the Commission Decision selected.
