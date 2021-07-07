@@ -21,9 +21,12 @@ More specifically, cooperating App-Publishers integrate in their apps a Pollfish
  (a) The Researcher&#39;s survey questions and the responses to such questions
  (b) Certain anonymous statistical and socio-demographic data pertaining to the statistical and socio-demographic profile of anonymous Pollfish Survey Respondents who have participated successfully in the Survey Process.
 
-Following specific request by the Researcher Client, and where the Survey Respondent is reached via mobile (such option not being available for website app-users) Pollfish may also provide the Researcher Client with a Pollfish Survey Respondent electronic identifier which may consist of:
- (a) the Survey Respondent Device ID and/or
- (b) the Survey Respondent Advertising ID.
+If 
+ (a) if the Survey Respondent is reached via mobile apps using Pollfish SDK (such option not being available for website app-users), and
+ (b) the Survey Respondent has enabled access to his Advertising and/or Device ID (either through his system&#39;s settings or via a consent-prompt shown to him by the publisher of the app he is using), and
+ (c) following specific request by the Researcher Client, Pollfish may also provide the Researcher Client with a Pollfish Survey Respondent electronic identifier which may consist of: 
+   (a) the Survey Respondent Device ID and/or
+   (b) the Survey Respondent Advertising ID.
 
 **2.3**  Pollfish also cooperates with third-party survey-research partners (the &quot;Mediation Partners&quot;), which may target Pollfish Respondents on behalf of their own clients, by tendering third-party administered and operated surveys (the &quot;Mediation Surveys&quot;) to Pollfish Survey Respondents.
 
@@ -55,7 +58,7 @@ These are the data received automatically by Pollfish when a user connects to a 
 
 **3.1.1.1 For Android**
 
-1. The Advertising ID
+1. The Advertising ID, only if the Survey Respondent has enabled access to his Advertising ID either through his system&#39;s settings or via a consent-prompt shown to him by the publisher of the app he is using. Please note that in case access is not enabled or consent provided, Pollfish shall still be able to render Surveys to the user/Survey Respondent, by assigning to such user a random, non persistent, one-off user generated id, each time a user is targeted with a Survey. However in such a case, all data previously collected about the user cannot be correlated or associated with any data collected from the same user when possibly retargeted by Pollfish, and each time the user may be targeted by Pollfish, this user shall be a “new” Survey Respondent for Pollfish, meaning that Pollfish cannot retrieve any information previously collected about such user.
 2. Device Description
 3. Network Provider
 4. MCC and MNC (numbers indicating the country of user location and the Network Provider)
@@ -81,7 +84,7 @@ These are the data received automatically by Pollfish when a user connects to a 
 
 **3.1.1.2 For iOS**
 
-1. **The Advertising ID (IDFA)**
+1. **The Advertising ID (IDFA), only if the Survey Respondent has enabled access to his Advertising ID either through his system&#39;s settings or via a consent-prompt shown to him by the publisher of the app he is using.** Please note that in case access is not enabled or consent provided, Pollfish shall still be able torender Surveys to the user/Survey Respondent, by assigning to such user a random, non persistent, one-off user generated id, each time a user is targeted with a Survey. However in such a case, all data previously collected about the user cannot be correlated or associated with any data collected from the same user when possibly retargeted by Pollfish and each time the user may be targeted by Pollfish, this user shall be a “new” Survey Respondent for Pollfish, meaning that Pollfish cannot retrieve any information previously collected about such user.
 2. device description
 3. operating system version
 4. screen size
@@ -135,7 +138,7 @@ If you choose to communicate with us (e.g. when you choose to exercise your Righ
 
 All data collected and processed under section 3 of this Policy is anonymous.
 
-Despite the fact that Pollfish, by collecting and processing the app-user&#39;s Device and/or Advertising ID identifiers and by correlating/associating such data with the other categories of data collected, is considered, under law, to process &quot;Personal Data&quot; of the Pollfish Respondents, Pollfish takes additional measures, in a best effort basis, to ensure and protect the anonymity of such data.
+Despite the fact that Pollfish, by collecting and processing the app-user&#39;s Device and/or Advertising ID identifiers (only if the Survey Respondent has enabled access to his Advertising ID/Device ID either through his system&#39;s settings or via a consent-prompt shown to him by the publisher of the app he is using) and by correlating/associating such data with the other categories of data collected, is considered, under law, to process &quot;Personal Data&quot; of the Pollfish Respondents, Pollfish takes additional measures, in a best effort basis, to ensure and protect the anonymity of such data.
  In that sense, Pollfish  **does not**  collect or process and  **does not allow**  Researcher Clients (through the survey questionnaires drafted by them) to ask questions about and/or collect real identifiers or direct personally identifiable information of a Pollfish Respondent, such as
 
 - surname or full nameaddress
@@ -156,10 +159,13 @@ Please note that if you choose to communicate with us for any reason (e.g. for e
 
 We collect and process your personal data only after you have provided clear opt-in consent to us for such collection and processing. Your consent is the main legal basis of collection and processing, however, depending on the processing activity, (please see section 6 of this Policy) we may further process your data under legal bases other than your consent.
 
+We collect Advertising/Device IDs, only if the Survey Respondent has enabled access to his Advertising/Device ID, either through his system&#39;s settings or via a consent-prompt shown to him by the publisher of the app he is using. 
+
 By accepting this Privacy Policy, you grant to us your (revocable at any time) consent for the collection and processing of your Personal Data in accordance to this Policy. Furthermore, your explicit opt-in consent is provided to us in all stages of Pollfish interaction with you, and more specifically in the following circumstances and under the following procedures:
 
-**(a) Automatically received data.** Automatically received data is collected and processed by us under your consent. When you choose to use an app which cooperates with Pollfish, you are informed, in such app&#39;s privacy policy, that the app interoperates with Pollfish and you are further informed about the categories of data collected about you by Pollfish and the purposes of such data processing by us.
- The aforementioned data are, therefore, collected by Pollfish under your permission and consent, which has already been granted by you by accepting the app&#39;s terms and conditions/privacy policy provided by the App Publisher. Please note that, as regards collection of the above data by Pollfish, Pollfish collects such automatically received data (or portion thereof) only insofar as, by accepting the app-publisher&#39;s terms of use, you have consented to the collection and processing of such data (or portion thereof). If you have blocked collection of such data (or parts of such data) either by withholding consent in the process of accepting the App Publisher&#39;s ToS (according to the privacy options provided to you by the App Publisher), or by disabling relevant device settings, Pollfish shall not be able to collect such withheld data.
+**(a) Automatically received data.** Automatically received data is collected and processed by us under your consent. When you choose to use an app which cooperates with Pollfish, you are informed, in such app&#39;s privacy policy, that the app interoperates with Pollfish and you are further informed about the categories of data collected about you by Pollfish and the purposes of such data processing by us. As regards specifically the collection of Advertising/Device IDs, these are collected only if the Survey Respondent has enabled access to his Advertising/Device ID, either through his system&#39;s settings or via a consent-prompt shown to him by the publisher of the app he is using. 
+
+Any of the above data, are therefore, collected by Pollfish under your permission and consent, which has already been granted by you by accepting the app's terms and conditions/privacy policy provided by the App Publisher or (for the Advertising/Device ID) by permitting access to your Advertising/Device ID. Please note that, as regards collection of the above data by Pollfish, Pollfish collects such automatically received data (or portion thereof) only insofar as, by accepting the app-publisher's terms of use or by permitting access to your Advertising/Device ID.  , you have consented to the collection and processing of such data (or portion thereof). If you have blocked collection of such data (or parts of such data) either by withholding consent in the process of accepting the App Publisher's ToS (according to the privacy options provided to you by the App Publisher), or by disabling relevant device settings, or by declining access to your Advertising/Device ID, Pollfish shall not be able to collect such withheld data.
 
 **(b) Sociodemographic data.** Whenever an app-user is served a Pollfish Internal Sociodemographic Survey, Pollfish asks for the user&#39;s consent with regards to the collection and processing of his data. The app-user is presented with a brief but accurate description of what data we collect, the purposes of processing and the recipients of data. Furthermore, the app-user is also referred to this Privacy Policy for more detailed information and is then asked to provide clear opt-in consent in order to take the survey. Subject to this opt-in consent, Pollfish collects and processes the Pollfish Respondent sociodemographic data according to this Policy.
 
@@ -173,9 +179,9 @@ Please note that, whenever an app-user declines to take a survey or declines acc
 
 **(a)** to be able to discern survey tendering eligibility. For this purpose, we collect, store and process automatically received data and sociodemographic data about your person, we correlate, associate and analyse this data and proceed to market profiling or other statistical processing and sociodemographic grouping. [Legal basis of processing activity: Your Consent].
 
-**(b)** to provide services and execute our contractual obligations towards our Researcher Clients. For this purpose we collect, store and process the automatically received data, the sociodemographic data and the content data about your person and provide our Researcher Clients with Survey Reports which may include your Device ID/Advertising ID (only for mobile users, and only if specifically requested by the Researcher Client), the sociodemographic data and the Content Data (the answers to the Researcher Client tendered questionnaires). [Legal basis of processing activity: Your Consent].
+**(b)** to provide services and execute our contractual obligations towards our Researcher Clients. For this purpose we collect, store and process the automatically received data, the sociodemographic data and the content data about your person and provide our Researcher Clients with Survey Reports which may include your Device ID/Advertising ID (only for mobile users, only if you have permitted access to your Device ID/Advertising ID and only if specifically requested by the Researcher Client), the sociodemographic data and the Content Data (the answers to the Researcher Client tendered questionnaires). [Legal basis of processing activity: Your Consent].
 
-**(c)** to provide services and execute our contractual obligations towards our Mediation Partners. For this purpose, we share with our Mediation Partners your Device ID/Advertising ID, along with the sociodemographic data, in order for them to be able to discern survey tendering eligibility of a Pollfish Respondent and then serve Mediation Surveys to Pollfish Respondents. [Legal basis of processing: Your Consent]
+**(c)** to provide services and execute our contractual obligations towards our Mediation Partners. For this purpose, we share with our Mediation Partners your Device ID/Advertising ID (under the same circumstances described in (b) above), along with the sociodemographic data, in order for them to be able to discern survey tendering eligibility of a Pollfish Respondent and then serve Mediation Surveys to Pollfish Respondents. [Legal basis of processing: Your Consent]
 
 **(d)** to provide services and execute our contractual obligations towards the &quot;Other Pollfish Clients&quot;. Such other Pollfish clients may consist of data brokers, data aggregators, advertisers, marketeers or data analysts, interested in obtaining anonymous information about you, for purposes such as: conducting marketing campaigns, re-conducting data analyses, data matching, data validation, data append and coding, data segmentation, user incentivation, conduct of promotional campaigns, conducting internet security or anti-fraud analyses, serving you advertisements which may be of specific interest to you, conducting consumer profiling analyses, developing audience insights and/or look-alike models, performing analytics, providing marketing intelligence. [legal basis of processing: Your Consent]
 
