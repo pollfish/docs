@@ -103,7 +103,7 @@ In order to be entitled to use or continue to use our services, you acknowledge,
 5. Your application/website does not include content that: is defamatory, fraudulent, deceptive, racial, abusive, threatening, harassing; or may infringe intellectual property rights of others such as Copyright, Trademarks, trade secrets, patents or may harm the right of privacy or any other right of any party; or is unlawful or encourages or supports illegal activities; or does not respect and is not in accordance with all standing Laws (including data protection and Protection of Privacy laws as well as COPPA and Protection of Minors Laws and Regulations); or invades privacy of the others; or. competes with Pollfish&#39;s activity and interests; You also declare and warrant that (a) your app is not directed to children under the age of 16 (b) your app complies and shall at all times be compliant with the Children&#39;s Online Privacy Protection Act (&quot;COPPA&quot;) and shall provide respective information in its Privacy Policy (c) you shall make all due efforts to identify the age of your users and refrain from collecting information from children under the age of 16 (d) you shall not knowingly share data of children under the age of 16 with Pollfish. You understand and agree that Pollfish does not knowingly direct any services to children under the age of 16. If Pollfish detects through its own audience screening procedures that an eligible respondent is under the age of 16, Pollfish will block such respondent from any survey tendering Pollfish and shall mark such respondent as ineligible, with the aim of safeguarding that no child under the age of 16 is ever knowingly targeted by Pollfish in the future. Furthermore, any breach of the above declarations and warranties shall be a violation of this Agreement and Pollfish shall be able to block your app from our service.
 6. Your application, if uploaded to the relevant stores, is compatible with Google Android and/or Apple iOS system and respects the Policies set by Google and/or Apple.
 7. You will provide your users with detailed information on how and if you collect, store, use, process and disclose information collected through the installation and use of your application on the users&#39; mobile phone (or through the use of your website), by setting your app&#39;s/website&#39;s privacy policy and asking the users to accept such policy when the application is downloaded or when someone visits your website. \*\*The information should expressively mention interoperation of your application/website with Pollfish and you will set a link permitting users to access Pollfish&#39;s Respondent Privacy Policy located at \*\*[http://www.pollfish.com/terms/respondent](http://www.pollfish.com/terms/respondent);\*\*\*\*
-8. You will specifically notify users of your app/website that by accepting your app&#39;s/website&#39;s privacy policy, they give to you as well as Pollfish their consent for (a) in the mobile environment: the collection of data pertaining to Device Information, such as Device Ids and Advertising IDs (if and where the app-user has enabled access to his Advertising and/or Device ID, either through his system’s settings or via a consent-prompt shown to him by you), as well as further response meta-data, automatically collected by Pollfish through its interoperation with your app &amp; (b) in the web environment: the use and placement by Pollfish of a Pollfish cookie as well as the collection by Pollfish of other response metadata collected through the Pollfish plugin operating through your Website. You shall also notify users that they can at all times disable Pollfish&#39;s operation platform by visiting the following link: [https://www.pollfish.com/respondent/opt-out](https://www.pollfish.com/respondent/opt-out).
+8. You will specifically notify users of your app/website that by accepting your app&#39;s/website&#39;s privacy policy, they give to you as well as Pollfish their consent for (a) in the mobile environment: the collection of data pertaining to Device Information, such as Device Ids and Advertising IDs (if and where the app-user has enabled access to his Advertising and/or Device ID, either through his system&#39;s settings or via a consent-prompt shown to him by you), as well as further response meta-data, automatically collected by Pollfish through its interoperation with your app &amp; (b) in the web environment: the use and placement by Pollfish of a Pollfish cookie as well as the collection by Pollfish of other response metadata collected through the Pollfish plugin operating through your Website. You shall also notify users that they can at all times disable Pollfish&#39;s operation platform by visiting the following link: [https://www.pollfish.com/respondent/opt-out](https://www.pollfish.com/respondent/opt-out).
 9. You will not and you ensure that third parties using your application/website will not introduce viruses, worms, harmful code and/or Trojan horses on our services;
 10. Your Application-website will be compliant with Data Privacy and Data Protection Laws applicable to your business and at any case shall be compliant: (a) regarding processing of EU/Swiss citizens&#39; personal data, the GDPR (b) regarding processing California Residents&#39; personal Information, with the CCPA. Your site&#39;s/app&#39;s privacy policies shall be consistent with the principles set-out in the above-mentioned Laws and Regulations as well as to any further Personal Data Protection Laws and regulations applicable in your jurisdiction. Your application/website is compatible with all further applicable Laws (IP laws and regulations, laws on protection of Minors etc.) and (if uploaded to the relevant stores) the policies of Google Android and/or Apple iOS systems;you will provide all notices required by the CCPA, including a link by which a user may opt out of any sales of his personal information; you must specifically notify users that they may withdraw their consent and opt-out from personalized ad tracking and ad-tendering by using their mobile platform settings (on iOS, by enabling the &quot;Limit Ad Tracking&quot; setting (iOS version 13 and earlier only) or by disabling the &quot;Allow Apps to Request to Track&quot; setting (iOS version 14 and later only), and on Android devices, by enabling the &quot;Opt out of Ads Personalization&quot; setting).
 11. By enabling Pollfish in your application/website you gain no control whatsoever over the survey&#39;s content, the data collected through our surveys, the content displayed through your applications, the rewards offered to the final users who are taking part in the surveys. You are not allowed to access, use or process the information deriving from our services;
@@ -141,7 +141,7 @@ You, or any third party, will not:
 
 &quot;_Survey Serving Technology_
 
-_This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user&#39;s device data (including Advertising ID, Device ID, if and where the app-user has enabled access to his Advertising and/or Device ID, either through his system’s settings or via a consent-prompt shown to him) and further response meta-data is automatically sent, via our app, to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. Pollfish is a US based entity, therefore you specifically agree and consent to the transfer of such data to the US. Pollfish collects and processes your Data in accordance with all applicable GDPR requirements. For a full list of data received by Pollfish through this app, and for further information on how Pollfish processes such data please read carefully the Pollfish respondent terms located at _[_https://www.pollfish.com/terms/respondent_](https://www.pollfish.com/terms/respondent)_. These data will be associated with your answers to the questionnaires whenever Pollfish sends such questionnaires to eligible users. Your data may be transferred by Pollfish to non  EEA countries in accordance with all applicable GDPR requirements, including use of EU Commission Standard Contractual Clauses. Pollfish may share such data with third parties, clients and business partners, for commercial purposes. By downloading the application, you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link _[_https://www.pollfish.com/respondent/opt-out_](https://www.pollfish.com/respondent/opt-out)_. We once more invite you to check the Pollfish respondent&#39;s terms of use, if you wish to have more detailed view of the way Pollfish works and with whom Pollfish may further share your data.&quot;_
+_This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user&#39;s device data (including Advertising ID, Device ID, if and where the app-user has enabled access to his Advertising and/or Device ID, either through his system&#39;s settings or via a consent-prompt shown to him) and further response meta-data is automatically sent, via our app, to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. Pollfish is a US based entity, therefore you specifically agree and consent to the transfer of such data to the US. Pollfish collects and processes your Data in accordance with all applicable GDPR requirements. For a full list of data received by Pollfish through this app, and for further information on how Pollfish processes such data please read carefully the Pollfish respondent terms located at _[_https://www.pollfish.com/terms/respondent_](https://www.pollfish.com/terms/respondent)_. These data will be associated with your answers to the questionnaires whenever Pollfish sends such questionnaires to eligible users. Your data may be transferred by Pollfish to non  EEA countries in accordance with all applicable GDPR requirements, including use of EU Commission Standard Contractual Clauses. Pollfish may share such data with third parties, clients and business partners, for commercial purposes. By downloading the application, you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link _[_https://www.pollfish.com/respondent/opt-out_](https://www.pollfish.com/respondent/opt-out)_. We once more invite you to check the Pollfish respondent&#39;s terms of use, if you wish to have more detailed view of the way Pollfish works and with whom Pollfish may further share your data.&quot;_
 
 **If you are a website owner:**
 
@@ -465,11 +465,11 @@ Purpose and scope
 
 (b) The Parties:
 
-(i) the legal person transferring the personal data, as listed in Annex I.A (hereinafter each ‘data exporter’), and
+(i) the legal person transferring the personal data, as listed in Annex I.A (hereinafter each &#8216;data exporter&#39;), and
 
-(ii) the entity/ies in a third country receiving the personal data from the data exporter, directly or indirectly via another entity also Party to these Clauses, as listed in Annex I.A (hereinafter each ‘data importer’)
+(ii) the entity/ies in a third country receiving the personal data from the data exporter, directly or indirectly via another entity also Party to these Clauses, as listed in Annex I.A (hereinafter each &#8216;data importer&#39;)
 
-have agreed to these standard contractual clauses (hereinafter: ‘Clauses’).
+have agreed to these standard contractual clauses (hereinafter: &#8216;Clauses&#39;).
 
 (c) These Clauses apply with respect to the transfer of personal data as specified in Annex I.B.
 
@@ -549,7 +549,7 @@ The data exporter warrants that it has used reasonable efforts to determine that
 
 The data importer shall process the personal data only for the specific purpose(s) of the transfer, as set out in Annex I.B. It may only process the personal data for another purpose:
 
-(i) where it has obtained the data subject’s prior consent;
+(i) where it has obtained the data subject&#39;s prior consent;
 
 (ii )where necessary for the establishment, exercise or defence of legal claims in the context of specific administrative, regulatory or judicial proceedings; or
 
@@ -587,7 +587,7 @@ The data importer shall retain the personal data for no longer than necessary fo
 
 8.5 Security of processing
 
-(a)The data importer and, during transmission, also the data exporter shall implement appropriate technical and organisational measures to ensure the security of the personal data, including protection against a breach of security leading to accidental or unlawful destruction, loss, alteration, unauthorised disclosure or access (hereinafter ‘personal data breach’). In assessing the appropriate level of security, they shall take due account of the state of the art, the costs of implementation, the nature, scope, context and purpose(s) of processing and the risks involved in the processing for the data subject. The Parties shall in particular consider having recourse to encryption or pseudonymisation, including during transmission, where the purpose of processing can be fulfilled in that manner.
+(a)The data importer and, during transmission, also the data exporter shall implement appropriate technical and organisational measures to ensure the security of the personal data, including protection against a breach of security leading to accidental or unlawful destruction, loss, alteration, unauthorised disclosure or access (hereinafter &#8216;personal data breach&#39;). In assessing the appropriate level of security, they shall take due account of the state of the art, the costs of implementation, the nature, scope, context and purpose(s) of processing and the risks involved in the processing for the data subject. The Parties shall in particular consider having recourse to encryption or pseudonymisation, including during transmission, where the purpose of processing can be fulfilled in that manner.
 
 (b) The Parties have agreed on the technical and organisational measures set out in Annex II. The data importer shall carry out regular checks to ensure that these measures continue to provide an appropriate level of security.
 
@@ -603,11 +603,11 @@ The data importer shall retain the personal data for no longer than necessary fo
 
 8.6 Sensitive data
 
-Where the transfer involves personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, genetic data, or biometric data for the purpose of uniquely identifying a natural person, data concerning health or a person’s sex life or sexual orientation, or data relating to criminal convictions or offences (hereinafter ‘sensitive data’), the data importer shall apply specific restrictions and/or additional safeguards adapted to the specific nature of the data and the risks involved. This may include restricting the personnel permitted to access the personal data, additional security measures (such as pseudonymisation) and/or additional restrictions with respect to further disclosure.
+Where the transfer involves personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, genetic data, or biometric data for the purpose of uniquely identifying a natural person, data concerning health or a person&#39;s sex life or sexual orientation, or data relating to criminal convictions or offences (hereinafter &#8216;sensitive data&#39;), the data importer shall apply specific restrictions and/or additional safeguards adapted to the specific nature of the data and the risks involved. This may include restricting the personnel permitted to access the personal data, additional security measures (such as pseudonymisation) and/or additional restrictions with respect to further disclosure.
 
 8.7 Onward transfers
 
-The data importer shall not disclose the personal data to a third party located outside the European Union  (in the same country as the data importer or in another third country, hereinafter ‘onward transfer’) unless the third party is or agrees to be bound by these Clauses. Otherwise, an onward transfer by the data importer may only take place if:
+The data importer shall not disclose the personal data to a third party located outside the European Union  (in the same country as the data importer or in another third country, hereinafter &#8216;onward transfer&#39;) unless the third party is or agrees to be bound by these Clauses. Otherwise, an onward transfer by the data importer may only take place if:
 
 (i) it is to a country benefitting from an adequacy decision pursuant to Article 45 of Regulation (EU) 2016/679 that covers the onward transfer;
 
@@ -645,7 +645,7 @@ Data subject rights
 
 (c) Where the data importer processes the personal data for direct marketing purposes, it shall cease processing for such purposes if the data subject objects to it.
 
-(d) The data importer shall not make a decision based solely on the automated processing of the personal data transferred (hereinafter ‘automated decision’), which would produce legal effects concerning the data subject or similarly significantly affect him/her, unless with the explicit consent of the data subject or if authorised to do so under the laws of the country of destination, provided that such laws lays down suitable measures to safeguard the data subject’s rights and legitimate interests. In this case, the data importer shall, where necessary in cooperation with the data exporter:
+(d) The data importer shall not make a decision based solely on the automated processing of the personal data transferred (hereinafter &#8216;automated decision&#39;), which would produce legal effects concerning the data subject or similarly significantly affect him/her, unless with the explicit consent of the data subject or if authorised to do so under the laws of the country of destination, provided that such laws lays down suitable measures to safeguard the data subject&#39;s rights and legitimate interests. In this case, the data importer shall, where necessary in cooperation with the data exporter:
 
 (i) inform the data subject about the envisaged automated decision, the envisaged consequences and the logic involved; and
 
@@ -653,9 +653,9 @@ Data subject rights
 
 (e) Where requests from a data subject are excessive, in particular because of their repetitive character, the data importer may either charge a reasonable fee taking into account the administrative costs of granting the request or refuse to act on the request.
 
-(f) The data importer may refuse a data subject’s request if such refusal is allowed under the laws of the country of destination and is necessary and proportionate in a democratic society to protect one of the objectives listed in Article 23(1) of Regulation (EU) 2016/679.
+(f) The data importer may refuse a data subject&#39;s request if such refusal is allowed under the laws of the country of destination and is necessary and proportionate in a democratic society to protect one of the objectives listed in Article 23(1) of Regulation (EU) 2016/679.
 
-(g) If the data importer intends to refuse a data subject’s request, it shall inform the data subject of the reasons for the refusal and the possibility of lodging a complaint with the competent supervisory authority and/or seeking judicial redress.
+(g) If the data importer intends to refuse a data subject&#39;s request, it shall inform the data subject of the reasons for the refusal and the possibility of lodging a complaint with the competent supervisory authority and/or seeking judicial redress.
 
 Clause 10
 
@@ -805,7 +805,7 @@ Data exporter(s): Publisher (as per further details provided in the Pollfish reg
 
 Address: as per the Publisher Registration form
 
-Contact person’s name, position and contact details: as per the Publisher's registration form
+Contact person&#39;s name, position and contact details: as per the Publisher's registration form
 
 Activities relevant to the data transferred under these Clauses: App owner
 
@@ -815,7 +815,7 @@ Data importer(s): Pollfish Inc.
 
 Address: 1460 Broadway, New York, NY 10036, USA
 
-Contact person’s name, position and contact details: Zissis Bellas, DPO, zissis@pollfish.com
+Contact person&#39;s name, position and contact details: Zissis Bellas, DPO, zissis@pollfish.com
 
 Activities relevant to the data transferred under these Clauses: Online Survey Platform
 
@@ -849,7 +849,7 @@ Online Survey Tendering
 
 The period for which the personal data will be retained, or, if that is not possible, the criteria used to determine that period
 
-Storage limits: no less than 3years and/or as necessary for the performance of the contractual obligations of the parties, the protection of Data Importer’s legitimate interests and the full enjoyment by Data Importer of the rights afforded to Data Importer under the contract between Data Importer and Data Exporter, compliance with legal obligations, tax record keeping and further business record keeping and business management.
+Storage limits: no less than 3years and/or as necessary for the performance of the contractual obligations of the parties, the protection of Data Importer&#39;s legitimate interests and the full enjoyment by Data Importer of the rights afforded to Data Importer under the contract between Data Importer and Data Exporter, compliance with legal obligations, tax record keeping and further business record keeping and business management.
 
 C. COMPETENT SUPERVISORY AUTHORITY
 
@@ -861,7 +861,8 @@ ANNEX II
 
 TECHNICAL AND ORGANISATIONAL MEASURES INCLUDING TECHNICAL AND ORGANISATIONAL MEASURES TO ENSURE THE SECURITY OF THE DATA
 
-- pseudonymisation and encryption of personal data•ongoing confidentiality, integrity, availability and resilience of processing systems and services
+- pseudonymisation and encryption of personal data
+- ongoing confidentiality, integrity, availability and resilience of processing systems and services
 - ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident
 - regularly testing, assessing and evaluating the effectiveness of technical and organisational measures in order to ensure the security of the processing
 - user identification and authorisation
@@ -870,5 +871,6 @@ TECHNICAL AND ORGANISATIONAL MEASURES INCLUDING TECHNICAL AND ORGANISATIONAL MEA
 - ensuring physical security of locations at which personal data are processed Measures for ensuring events logging
 - ensuring system configuration, including default configuration Measures for internal IT and IT security governance and management certification/assurance of processes and products
 - ensuring data minimisation Measures for ensuring data quality
-- limited data retention •ensuring accountability
+- limited data retention
+- ensuring accountability
 - allowing data portability and ensuring erasure
