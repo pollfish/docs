@@ -465,11 +465,11 @@ Purpose and scope
 
 (b) The Parties:
 
-(i) the legal person transferring the personal data, as listed in Annex I.A (hereinafter each &#8216;data exporter&#39;), and
+(i) the legal person transferring the personal data, as listed in Annex I.A (hereinafter each &#39;data exporter&#39;), and
 
-(ii) the entity/ies in a third country receiving the personal data from the data exporter, directly or indirectly via another entity also Party to these Clauses, as listed in Annex I.A (hereinafter each &#8216;data importer&#39;)
+(ii) the entity/ies in a third country receiving the personal data from the data exporter, directly or indirectly via another entity also Party to these Clauses, as listed in Annex I.A (hereinafter each &#39;data importer&#39;)
 
-have agreed to these standard contractual clauses (hereinafter: &#8216;Clauses&#39;).
+have agreed to these standard contractual clauses (hereinafter: &#39;Clauses&#39;).
 
 (c) These Clauses apply with respect to the transfer of personal data as specified in Annex I.B.
 
@@ -587,7 +587,7 @@ The data importer shall retain the personal data for no longer than necessary fo
 
 8.5 Security of processing
 
-(a)The data importer and, during transmission, also the data exporter shall implement appropriate technical and organisational measures to ensure the security of the personal data, including protection against a breach of security leading to accidental or unlawful destruction, loss, alteration, unauthorised disclosure or access (hereinafter &#8216;personal data breach&#39;). In assessing the appropriate level of security, they shall take due account of the state of the art, the costs of implementation, the nature, scope, context and purpose(s) of processing and the risks involved in the processing for the data subject. The Parties shall in particular consider having recourse to encryption or pseudonymisation, including during transmission, where the purpose of processing can be fulfilled in that manner.
+(a)The data importer and, during transmission, also the data exporter shall implement appropriate technical and organisational measures to ensure the security of the personal data, including protection against a breach of security leading to accidental or unlawful destruction, loss, alteration, unauthorised disclosure or access (hereinafter &#39;personal data breach&#39;). In assessing the appropriate level of security, they shall take due account of the state of the art, the costs of implementation, the nature, scope, context and purpose(s) of processing and the risks involved in the processing for the data subject. The Parties shall in particular consider having recourse to encryption or pseudonymisation, including during transmission, where the purpose of processing can be fulfilled in that manner.
 
 (b) The Parties have agreed on the technical and organisational measures set out in Annex II. The data importer shall carry out regular checks to ensure that these measures continue to provide an appropriate level of security.
 
@@ -603,11 +603,11 @@ The data importer shall retain the personal data for no longer than necessary fo
 
 8.6 Sensitive data
 
-Where the transfer involves personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, genetic data, or biometric data for the purpose of uniquely identifying a natural person, data concerning health or a person&#39;s sex life or sexual orientation, or data relating to criminal convictions or offences (hereinafter &#8216;sensitive data&#39;), the data importer shall apply specific restrictions and/or additional safeguards adapted to the specific nature of the data and the risks involved. This may include restricting the personnel permitted to access the personal data, additional security measures (such as pseudonymisation) and/or additional restrictions with respect to further disclosure.
+Where the transfer involves personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, genetic data, or biometric data for the purpose of uniquely identifying a natural person, data concerning health or a person&#39;s sex life or sexual orientation, or data relating to criminal convictions or offences (hereinafter &#39;sensitive data&#39;), the data importer shall apply specific restrictions and/or additional safeguards adapted to the specific nature of the data and the risks involved. This may include restricting the personnel permitted to access the personal data, additional security measures (such as pseudonymisation) and/or additional restrictions with respect to further disclosure.
 
 8.7 Onward transfers
 
-The data importer shall not disclose the personal data to a third party located outside the European Union  (in the same country as the data importer or in another third country, hereinafter &#8216;onward transfer&#39;) unless the third party is or agrees to be bound by these Clauses. Otherwise, an onward transfer by the data importer may only take place if:
+The data importer shall not disclose the personal data to a third party located outside the European Union  (in the same country as the data importer or in another third country, hereinafter &#39;onward transfer&#39;) unless the third party is or agrees to be bound by these Clauses. Otherwise, an onward transfer by the data importer may only take place if:
 
 (i) it is to a country benefitting from an adequacy decision pursuant to Article 45 of Regulation (EU) 2016/679 that covers the onward transfer;
 
@@ -645,7 +645,7 @@ Data subject rights
 
 (c) Where the data importer processes the personal data for direct marketing purposes, it shall cease processing for such purposes if the data subject objects to it.
 
-(d) The data importer shall not make a decision based solely on the automated processing of the personal data transferred (hereinafter &#8216;automated decision&#39;), which would produce legal effects concerning the data subject or similarly significantly affect him/her, unless with the explicit consent of the data subject or if authorised to do so under the laws of the country of destination, provided that such laws lays down suitable measures to safeguard the data subject&#39;s rights and legitimate interests. In this case, the data importer shall, where necessary in cooperation with the data exporter:
+(d) The data importer shall not make a decision based solely on the automated processing of the personal data transferred (hereinafter &#39;automated decision&#39;), which would produce legal effects concerning the data subject or similarly significantly affect him/her, unless with the explicit consent of the data subject or if authorised to do so under the laws of the country of destination, provided that such laws lays down suitable measures to safeguard the data subject&#39;s rights and legitimate interests. In this case, the data importer shall, where necessary in cooperation with the data exporter:
 
 (i) inform the data subject about the envisaged automated decision, the envisaged consequences and the logic involved; and
 
