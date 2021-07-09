@@ -103,7 +103,7 @@ In order to be entitled to use or continue to use our services, you acknowledge,
 5. Your application/website does not include content that: is defamatory, fraudulent, deceptive, racial, abusive, threatening, harassing; or may infringe intellectual property rights of others such as Copyright, Trademarks, trade secrets, patents or may harm the right of privacy or any other right of any party; or is unlawful or encourages or supports illegal activities; or does not respect and is not in accordance with all standing Laws (including data protection and Protection of Privacy laws as well as COPPA and Protection of Minors Laws and Regulations); or invades privacy of the others; or. competes with Pollfish&#39;s activity and interests; You also declare and warrant that (a) your app is not directed to children under the age of 16 (b) your app complies and shall at all times be compliant with the Children&#39;s Online Privacy Protection Act (&quot;COPPA&quot;) and shall provide respective information in its Privacy Policy (c) you shall make all due efforts to identify the age of your users and refrain from collecting information from children under the age of 16 (d) you shall not knowingly share data of children under the age of 16 with Pollfish. You understand and agree that Pollfish does not knowingly direct any services to children under the age of 16. If Pollfish detects through its own audience screening procedures that an eligible respondent is under the age of 16, Pollfish will block such respondent from any survey tendering Pollfish and shall mark such respondent as ineligible, with the aim of safeguarding that no child under the age of 16 is ever knowingly targeted by Pollfish in the future. Furthermore, any breach of the above declarations and warranties shall be a violation of this Agreement and Pollfish shall be able to block your app from our service.
 6. Your application, if uploaded to the relevant stores, is compatible with Google Android and/or Apple iOS system and respects the Policies set by Google and/or Apple.
 7. You will provide your users with detailed information on how and if you collect, store, use, process and disclose information collected through the installation and use of your application on the users&#39; mobile phone (or through the use of your website), by setting your app&#39;s/website&#39;s privacy policy and asking the users to accept such policy when the application is downloaded or when someone visits your website. \*\*The information should expressively mention interoperation of your application/website with Pollfish and you will set a link permitting users to access Pollfish&#39;s Respondent Privacy Policy located at \*\*[http://www.pollfish.com/terms/respondent](http://www.pollfish.com/terms/respondent);\*\*\*\*
-8. You will specifically notify users of your app/website that by accepting your app&#39;s/website&#39;s privacy policy, they give to you as well as Pollfish their consent for (a) in the mobile environment: the collection of data pertaining to Device Information, such as Device Ids and similar data as well as all response meta-data, automatically collected by Pollfish through its interoperation with your app &amp; (b) in the web environment: the use and placement by Pollfish of a Pollfish cookie as well as the collection by Pollfish of other response metadata collected through the Pollfish plugin operating through your Website. You shall also notify users that they can at all times disable Pollfish&#39;s operation platform by visiting the following link: [https://www.pollfish.com/respondent/opt-out](https://www.pollfish.com/respondent/opt-out).
+8. You will specifically notify users of your app/website that by accepting your app&#39;s/website&#39;s privacy policy, they give to you as well as Pollfish their consent for (a) in the mobile environment: the collection of data pertaining to Device Information, such as Device Ids and Advertising IDs (if and where the app-user has enabled access to his Advertising and/or Device ID, either through his system&#39;s settings or via a consent-prompt shown to him by you), as well as further response meta-data, automatically collected by Pollfish through its interoperation with your app &amp; (b) in the web environment: the use and placement by Pollfish of a Pollfish cookie as well as the collection by Pollfish of other response metadata collected through the Pollfish plugin operating through your Website. You shall also notify users that they can at all times disable Pollfish&#39;s operation platform by visiting the following link: [https://www.pollfish.com/respondent/opt-out](https://www.pollfish.com/respondent/opt-out).
 9. You will not and you ensure that third parties using your application/website will not introduce viruses, worms, harmful code and/or Trojan horses on our services;
 10. Your Application-website will be compliant with Data Privacy and Data Protection Laws applicable to your business and at any case shall be compliant: (a) regarding processing of EU/Swiss citizens&#39; personal data, the GDPR (b) regarding processing California Residents&#39; personal Information, with the CCPA. Your site&#39;s/app&#39;s privacy policies shall be consistent with the principles set-out in the above-mentioned Laws and Regulations as well as to any further Personal Data Protection Laws and regulations applicable in your jurisdiction. Your application/website is compatible with all further applicable Laws (IP laws and regulations, laws on protection of Minors etc.) and (if uploaded to the relevant stores) the policies of Google Android and/or Apple iOS systems;you will provide all notices required by the CCPA, including a link by which a user may opt out of any sales of his personal information; you must specifically notify users that they may withdraw their consent and opt-out from personalized ad tracking and ad-tendering by using their mobile platform settings (on iOS, by enabling the &quot;Limit Ad Tracking&quot; setting (iOS version 13 and earlier only) or by disabling the &quot;Allow Apps to Request to Track&quot; setting (iOS version 14 and later only), and on Android devices, by enabling the &quot;Opt out of Ads Personalization&quot; setting).
 11. By enabling Pollfish in your application/website you gain no control whatsoever over the survey&#39;s content, the data collected through our surveys, the content displayed through your applications, the rewards offered to the final users who are taking part in the surveys. You are not allowed to access, use or process the information deriving from our services;
@@ -141,13 +141,13 @@ You, or any third party, will not:
 
 &quot;_Survey Serving Technology_
 
-_This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user&#39;s device data (including Advertising ID, Device ID, other available electronic identifiers and further response meta-data is automatically sent, via our app, to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. For a full list of data received by Pollfish through this app, please read carefully the Pollfish respondent terms located at _[_https://www.pollfish.com/terms/respondent_](https://www.pollfish.com/terms/respondent)_. These data will be associated with your answers to the questionnaires whenever Pollfish sends such questionnaires to eligible users. Pollfish may share such data with third parties, clients and business partners, for commercial purposes. By downloading the application, you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link _[_https://www.pollfish.com/respondent/opt-out_](https://www.pollfish.com/respondent/opt-out)_. We once more invite you to check the Pollfish respondent&#39;s terms of use, if you wish to have more detailed view of the way Pollfish works and with whom Pollfish may further share your data.&quot;_
+_This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user&#39;s device data (including Advertising ID, Device ID, if and where the app-user has enabled access to his Advertising and/or Device ID, either through his system&#39;s settings or via a consent-prompt shown to him) and further response meta-data is automatically sent, via our app, to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. Pollfish is a US based entity, therefore you specifically agree and consent to the transfer of such data to the US. Pollfish collects and processes your Data in accordance with all applicable GDPR requirements. For a full list of data received by Pollfish through this app, and for further information on how Pollfish processes such data please read carefully the Pollfish respondent terms located at _[_https://www.pollfish.com/terms/respondent_](https://www.pollfish.com/terms/respondent)_. These data will be associated with your answers to the questionnaires whenever Pollfish sends such questionnaires to eligible users. Your data may be transferred by Pollfish to non  EEA countries in accordance with all applicable GDPR requirements, including use of EU Commission Standard Contractual Clauses. Pollfish may share such data with third parties, clients and business partners, for commercial purposes. By downloading the application, you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link _[_https://www.pollfish.com/respondent/opt-out_](https://www.pollfish.com/respondent/opt-out)_. We once more invite you to check the Pollfish respondent&#39;s terms of use, if you wish to have more detailed view of the way Pollfish works and with whom Pollfish may further share your data.&quot;_
 
 **If you are a website owner:**
 
 &quot;_Survey Serving Technology_
 
-_This website uses Pollfish web plugin. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones and website owners in order to have access to users of such applications/websites and address survey questionnaires to them. This website uses and enables Pollfish cookies. When a user connects to this website, Pollfish detects whether the user is eligible for a survey. Data collected by Pollfish will be associated with your answers to the questionnaires whenever Pollfish sends such questionnaires to eligible users. Pollfish may share such data with third parties, clients and business partners, for commercial purposes. For a full list of data received by Pollfish through this website, please read carefully Pollfish respondent terms located at [https://www.pollfish.com/terms/respondent](https://www.pollfish.com/terms/respondent). By using this website you accept this privacy policy document and you hereby give your explicit consent for the placement of a Pollfish cookie in your system and the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link [https://www.pollfish.com/respondent/opt-out](https://www.pollfish.com/respondent/opt-out) We once more invite you to check the respondent&#39;s terms of use, if you wish to have more detailed view of the way Pollfish works and with whom Pollfish may further share your data&quot;_
+_This website uses Pollfish web plugin. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones and website owners in order to have access to users of such applications/websites and address survey questionnaires to them. This website uses and enables Pollfish cookies. When a user connects to this website, Pollfish detects whether the user is eligible for a survey. Data collected by Pollfish will be associated with your answers to the questionnaires whenever Pollfish sends such questionnaires to eligible users. Pollfish is a US based entity, therefore you specifically agree and consent to the transfer of such data to the US. Pollfish collects and processes your Data in accordance with all applicable GDPR requirements. Pollfish may share such data with third parties, clients and business partners, for commercial purposes. Your Data may be transferred by Pollfish to non- EEA countries, in accordance with all applicable GDPR requirements, including use of EU Commission Standard Contractual Clauses. For a full list of data received by Pollfish through this website, and for further information on how Pollfish processes such data please read carefully Pollfish respondent terms located at [https://www.pollfish.com/terms/respondent](https://www.pollfish.com/terms/respondent). By using this website you accept this privacy policy document and you hereby give your explicit consent for the placement of a Pollfish cookie in your system and the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link [https://www.pollfish.com/respondent/opt-out](https://www.pollfish.com/respondent/opt-out) We once more invite you to check the respondent&#39;s terms of use, if you wish to have more detailed view of the way Pollfish works and with whom Pollfish may further share your data&quot;_
 
 **8. SHARING OF POLLFISH COLLECTED APP-USER DATA.**
 
@@ -445,197 +445,432 @@ The present Agreement and its interpretation shall be governed by and construed 
 
 APPENDIX A
 
-**Standard Contractual Clauses**** for the transfer of personal data from the European Union to third countries (controller to controller transfers)**
+STANDARD CONTRACTUAL CLAUSES
 
-**Data transfer agreement**
+Pursuant to  COMMISSION IMPLEMENTING DECISION (EU) 2021/914
 
-**Between**
+of 4 June 2021
 
-(1) &quot;) **Publisher** (hereinafter &quot; **data exporter**&quot;),
+on standard contractual clauses for the transfer of personal data to third countries pursuant to Regulation (EU) 2016/679 of the European Parliament and of the Council
 
-**and**
+(controller-to-controller transfers)
 
-(2) **Pollfish Inc**. a US company seated at 1460 Broadway New York, NY 10036 (hereinafter **&quot;data importer&quot;)**
+SECTION I
 
-each referred to as a **&quot;party&quot;** and together as **&quot;the parties&quot;.**
+Clause 1
 
-**Definitions**
+Purpose and scope
 
-For the purposes of the clauses:
+(a) The purpose of these standard contractual clauses is to ensure compliance with the requirements of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data (General Data Protection Regulation) for the transfer of personal data to a third country.
 
-1. &quot;personal data&quot;, &quot;special categories of data/sensitive data&quot;, &quot;process/processing&quot;, &quot;controller&quot;, &quot;processor&quot;, &quot;data subject&quot; and &quot;supervisory authority/authority&quot; shall have the same meaning as in the General Data Protection Regulation 2016/679 - GDPR (whereby &quot;the authority&quot; shall mean the competent data protection authority in the territory in which the data exporter is established);
-2. &quot;the data exporter&quot; shall mean the controller who transfers the personal data;
-3. &quot;the data importer&quot; shall mean the controller who agrees to receive from the data exporter personal data for further processing in accordance with the terms of these clauses and who is not subject to a third country&#39;s system ensuring adequate protection;
-4. &quot;clauses&quot; shall mean these contractual clauses, which are a free-standing document that does not incorporate commercial business terms established by the parties under separate commercial arrangements.
+(b) The Parties:
 
-The details of the transfer (as well as the personal data covered) are specified in Annex B, which forms an integral part of the clauses.
+(i) the legal person transferring the personal data, as listed in Annex I.A (hereinafter each &#39;data exporter&#39;), and
 
-**I. Obligations of the data exporter**
+(ii) the entity/ies in a third country receiving the personal data from the data exporter, directly or indirectly via another entity also Party to these Clauses, as listed in Annex I.A (hereinafter each &#39;data importer&#39;)
 
-The data exporter warrants and undertakes that:
+have agreed to these standard contractual clauses (hereinafter: &#39;Clauses&#39;).
 
-1. The personal data have been collected, processed and transferred in accordance with the laws applicable to the data exporter.
+(c) These Clauses apply with respect to the transfer of personal data as specified in Annex I.B.
 
-1. It has used reasonable efforts to determine that the data importer is able to satisfy its legal obligations under these clauses.
+(d) The Appendix to these Clauses containing the Annexes referred to therein forms an integral part of these Clauses.
 
-1. It will provide the data importer, when so requested, with copies of relevant data protection laws or references to them (where relevant, and not including legal advice) of the country in which the data exporter is established.
+Clause 2
 
-1. It will respond to enquiries from data subjects and the authority concerning processing of the personal data by the data importer, unless the parties have agreed that the data importer will so respond, in which case the data exporter will still respond to the extent reasonably possible and with the information reasonably available to it if the data importer is unwilling or unable to respond. Responses will be made within a reasonable time.
+Effect and invariability of the Clauses
 
-1. It will make available, upon request, a copy of the clauses to data subjects who are third party beneficiaries under clause III, unless the clauses contain confidential information, in which case it may remove such information. Where information is removed, the data exporter shall inform data subjects in writing of the reason for removal and of their right to draw the removal to the attention of the authority. However, the data exporter shall abide by a decision of the authority regarding access to the full text of the clauses by data subjects, as long as data subjects have agreed to respect the confidentiality of the confidential information removed. The data exporter shall also provide a copy of the clauses to the authority where required.
+(a) These Clauses set out appropriate safeguards, including enforceable data subject rights and effective legal remedies, pursuant to Article 46(1) and Article 46(2)(c) of Regulation (EU) 2016/679 and, with respect to data transfers from controllers to processors and/or processors to processors, standard contractual clauses pursuant to Article 28(7) of Regulation (EU) 2016/679, provided they are not modified, except to select the appropriate Module(s) or to add or update information in the Appendix. This does not prevent the Parties from including the standard contractual clauses laid down in these Clauses in a wider contract and/or to add other clauses or additional safeguards, provided that they  do not contradict, directly or indirectly, these Clauses or prejudice the fundamental rights or freedoms of data subjects.
 
-**II. Obligations of the data importer**
+(b) These Clauses are without prejudice to obligations to which the data exporter is subject by virtue of Regulation (EU) 2016/679.
 
-The data importer warrants and undertakes that:
+Clause 3
 
-1. It will have in place appropriate technical and organisational measures to protect the personal data against accidental or unlawful destruction or accidental loss, alteration, unauthorised disclosure or access, and which provide a level of security appropriate to the risk represented by the processing and the nature of the data to be protected.
+Third-party beneficiaries
 
-1. It will have in place procedures so that any third party it authorises to have access to the personal data, including processors, will respect and maintain the confidentiality and security of the personal data. Any person acting under the authority of the data importer, including a data processor, shall be obligated to process the personal data only on instructions from the data importer. This provision does not apply to persons authorised or required by law or regulation to have access to the personal data.
+(a) Data subjects may invoke and enforce these Clauses, as third-party beneficiaries, against the data exporter and/or data importer, with the following exceptions:
 
-1. It has no reason to believe, at the time of entering into these clauses, in the existence of any local laws that would have a substantial adverse effect on the guarantees provided for under these clauses, and it will inform the data exporter (which will pass such notification on to the authority where required) if it becomes aware of any such laws.
+(i) Clause 1, Clause 2, Clause 3, Clause 6, Clause 7;
 
-1. It will process the personal data for purposes described in Annex B, and has the legal authority to give the warranties and fulfil the undertakings set out in these clauses.
+(ii) Clause 8.5 (e) and Clause 8.9(b);
 
-1. It will identify to the data exporter a contact point within its organisation authorised to respond to enquiries concerning processing of the personal data, and will cooperate in good faith with the data exporter, the data subject and the authority concerning all such enquiries within a reasonable time. In case of legal dissolution of the data exporter, or if the parties have so agreed, the data importer will assume responsibility for compliance with the provisions of clause I(e).
+(iii) Clause 11(a) and (d);
 
-1. At the request of the data exporter, it will provide the data exporter with evidence of financial resources sufficient to fulfil its responsibilities under clause III (which may include insurance coverage).
+(iv) Clause 12;
 
-1. Upon reasonable request of the data exporter, it will submit its data processing facilities, data files and documentation needed for processing to reviewing, auditing and/or certifying by the data exporter (or any independent or impartial inspection agents or auditors, selected by the data exporter and not reasonably objected to by the data importer) to ascertain compliance with the warranties and undertakings in these clauses, with reasonable notice and during regular business hours. The request will be subject to any necessary consent or approval from a regulatory or supervisory authority within the country of the data importer, which consent or approval the data importer will attempt to obtain in a timely fashion.
+(v) Clause 14.1(c), (d) and (e);
 
-1. It will process the personal data, at its option, in accordance with:
+(vi) Clause 15(e);
 
-(i) the data protection laws of the country in which the data exporter is established, or
+(vii) Clause 17(a) and (b);
 
-(ii) the relevant provisions of any Commission decision pursuant to Article 25(6) of Directive 95/46/EC (corresponding Article 45 of the GDPR), where the data importer complies with the relevant provisions of such an authorisation or decision and is based in a country to which such an authorisation or decision pertains, but is not covered by such authorisation or decision for the purposes of the transfer(s) of the personal data, or
+(b) Paragraph (a) is without prejudice to rights of data subjects under Regulation (EU) 2016/679.
 
-(iii) the data processing principles set forth in Annex A.
+Clause 4
 
-Data importer to indicate which option it selects: \_\_\_\_\_\_(iii)\_(selected)\_\_\_\_\_\_\_\_\_\_\_\_
+Interpretation
 
-Initials of data importer: Pollfish Inc. ;
+(a) Where these Clauses use terms that are defined in Regulation (EU) 2016/679, those terms shall have the same meaning as in that Regulation.
 
-1. It will not disclose or transfer the personal data to a third-party data controller located outside the European Economic Area (EEA) unless it notifies the data exporter about the transfer and
+(b) These Clauses shall be read and interpreted in the light of the provisions of Regulation (EU) 2016/679.
 
-1. the third-party data controller processes the personal data in accordance with a Commission decision finding that a third country provides adequate protection, or
+(c) These Clauses shall not be interpreted in a way that conflicts with rights and obligations provided for in Regulation (EU) 2016/679.
 
-(ii) the third-party data controller becomes a signatory to these clauses or another data transfer agreement approved by a competent authority in the EU, or
+Clause 5
 
-(iii) data subjects have been given the opportunity to object, after having been informed of the purposes of the transfer, the categories of recipients and the fact that the countries to which data is exported may have different data protection standards, or
+Hierarchy
 
-(iv) with regard to onward transfers of sensitive data, data subjects have given their unambiguous consent to the onward transfer.
+In the event of a contradiction between these Clauses and the provisions of related agreements between the Parties, existing at the time these Clauses are agreed or entered into thereafter, these Clauses shall prevail.
 
-**III. Liability and third party rights**
+Clause 6
 
-(a) Each party shall be liable to the other parties for damages it causes by any breach of these clauses. Liability as between the parties is limited to actual damage suffered. Punitive damages (i.e. damages intended to punish a party for its outrageous conduct) are specifically excluded. Each party shall be liable to data subjects for damages it causes by any breach of third-party rights under these clauses. This does not affect the liability of the data exporter under its data protection law.
+Description of the transfer(s)
 
-(b) Each party shall perform its obligations under these clauses at its own cost.
+The details of the transfer(s), and in particular the categories of personal data that are transferred and the purpose(s) for which they are transferred, are specified in Annex I.B.
 
-(c) The parties will indemnify each other and hold each other harmless from any cost, charge, damages, expense or loss which they cause each other as a result of their breach of any of the provisions of these clauses. Indemnification hereunder is contingent upon (a) the party(ies) to be indemnified (the &quot;indemnified party(ies)&quot;) promptly notifying the other party(ies) (the &quot;indemnifying party(ies)&quot;) of a claim, (b) the indemnifying party(ies) having sole control of the defence and settlement of any such claim, and (c) the indemnified party(ies) providing reasonable cooperation and assistance to the indemnifying party(ies) in defence of such claim
+Clause 7 
 
-(d) The parties agree that a data subject shall have the right to enforce as a third party beneficiary this clause and clauses I(b), I(d), I(e), II(a), II(c), II(d), II(e), II(h), II(i), III(a), V, VI(d) and VII against the data importer or the data exporter, for their respective breach of their contractual obligations, with regard to his personal data, and accept jurisdiction for this purpose in the data exporter&#39;s country of establishment. In cases involving allegations of breach by the data importer, the data subject must first request the data exporter to take appropriate action to enforce his rights against the data importer; if the data exporter does not take such action within a reasonable period (which under normal circumstances would be one month), the data subject may then enforce his rights against the data importer directly. A data subject is entitled to proceed directly against a data exporter that has failed to use reasonable efforts to determine that the data importer is able to satisfy its legal obligations under these clauses (the data exporter shall have the burden to prove that it took reasonable efforts).
+Docking clause
 
-**IV. Law applicable to the clauses**
+(a) An entity that is not a Party to these Clauses may, with the agreement of the Parties, accede to these Clauses at any time, either as a data exporter or as a data importer, by completing the Appendix and signing Annex I.A.
 
-These clauses shall be governed by the law of the country in which the data exporter is established, with the exception of the laws and regulations relating to processing of the personal data by the data importer under clause II(h), which shall apply only if so selected by the data importer under that clause. In the event of a dispute between the data importer and the data exporter concerning any alleged breach of any provision of these clauses, such dispute shall be finally settled under the rules of arbitration of the International Chamber of Commerce by one or more arbitrators appointed in accordance with the said rules. The place of arbitration shall be New York, US. The number of arbitrators shall be 3.
+(b) Once it has completed the Appendix and signed Annex I.A, the acceding entity shall become a Party to these Clauses and have the rights and obligations of a data exporter or data importer in accordance with its designation in Annex I.A.
 
-**V. Resolution of disputes with data subjects or the authority**
+(c) The acceding entity shall have no rights or obligations arising under these Clauses from the period prior to becoming a Party.
 
-1. In the event of a dispute or claim brought by a data subject or the authority concerning the processing of the personal data against either or both of the parties, the parties will inform each other about any such disputes or claims, and will cooperate with a view to settling them amicably in a timely fashion.
+SECTION II – OBLIGATIONS OF THE PARTIES
 
-1. The parties agree to respond to any generally available non-binding mediation procedure initiated by a data subject or by the authority. If they do participate in the proceedings, the parties may elect to do so remotely (such as by telephone or other electronic means). The parties also agree to consider participating in any other arbitration, mediation or other dispute resolution proceedings developed for data protection disputes.
+Clause 8
 
-1. Each party shall abide by a decision of a competent court of the data exporter&#39;s country of establishment or of the authority which is final and against which no further appeal is possible.
+Data protection safeguards
 
-**VI. Termination**
+The data exporter warrants that it has used reasonable efforts to determine that the data importer is able, through the implementation of appropriate technical and organisational measures, to satisfy its obligations under these Clauses.
 
-1. In the event that the data importer is in breach of its obligations under these clauses, then the data exporter may temporarily suspend the transfer of personal data to the data importer until the breach is repaired or the contract is terminated.
+8.1 Purpose limitation
 
-1. In the event that:
+The data importer shall process the personal data only for the specific purpose(s) of the transfer, as set out in Annex I.B. It may only process the personal data for another purpose:
 
-(i) the transfer of personal data to the data importer has been temporarily suspended by the data exporter for longer than one month pursuant to paragraph (a);
+(i) where it has obtained the data subject&#39;s prior consent;
 
-1. compliance by the data importer with these clauses would put it in breach of its legal or regulatory obligations in the country of import;
+(ii )where necessary for the establishment, exercise or defence of legal claims in the context of specific administrative, regulatory or judicial proceedings; or
 
-1. the data importer is in substantial or persistent breach of any warranties or undertakings given by it under these clauses;
+(iii) where necessary in order to protect the vital interests of the data subject or of another natural person.
 
-1. a final decision against which no further appeal is possible of a competent court of the data exporter&#39;s country of establishment or of the authority rules that there has been a breach of the clauses by the data importer or the data exporter; or
+8.2 Transparency
 
-1. a petition is presented for the administration or winding up of the data importer, whether in its personal or business capacity, which petition is not dismissed within the applicable period for such dismissal under applicable law; a winding up order is made; a receiver is appointed over any of its assets; a trustee in bankruptcy is appointed, if the data importer is an individual; a company voluntary arrangement is commenced by it; or any equivalent event in any jurisdiction occurs
+(a)In order to enable data subjects to effectively exercise their rights pursuant to Clause 9, the data importer shall inform them, either directly or through the data exporter:
 
-then the data exporter, without prejudice to any other rights which it may have against the data importer, shall be entitled to terminate these clauses, in which case the authority shall be informed where required. In cases covered by (i), (ii), or (iv) above the data importer may also terminate these clauses.
+(i) of its identity and contact details;
 
-1. Either party may terminate these clauses if (i) any Commission positive adequacy decision under Article 25(6) of Directive 95/46/EC (or any superseding text, i.e. under Article 45 of the GDPR) is issued in relation to the country (or a sector thereof) to which the data is transferred and processed by the data importer, or (ii) Directive 95/46/EC (or any superseding text, i.e. the GDPR) becomes directly applicable in such country.
+(ii) of the categories of personal data processed;
 
-1. The parties agree that the termination of these clauses at any time, in any circumstances and for whatever reason (except for termination under clause VI(c)) does not exempt them from the obligations and/or conditions under the clauses as regards the processing of the personal data transferred.
+(iii) of the right to obtain a copy of these Clauses;
 
-**VII. Variation of these clauses**
+(iv) where it intends to onward transfer the personal data to any third party/ies, of the recipient or categories of recipients (as appropriate with a view to providing meaningful information), the purpose of such onward transfer and the ground therefore pursuant to Clause 8.7.
 
-The parties may not modify these clauses except to update any information in Annex B, in which case they will inform the authority where required. This does not preclude the parties from adding additional commercial clauses where required.
+(b) Paragraph (a) shall not apply where the data subject already has the information, including when such information has already been provided by the data exporter, or providing the information proves impossible or would involve a disproportionate effort for the data importer. In the latter case, the data importer shall, to the extent possible, make the information publicly available.
 
-**VIII. Description of the Transfer**
+(c) On request, the Parties shall make a copy of these Clauses, including the Appendix as completed by them, available to the data subject free of charge. To the extent necessary to protect business secrets or other confidential information, including personal data, the Parties may redact part of the text of the Appendix prior to sharing a copy, but shall provide a meaningful summary where the data subject would otherwise not be able to understand its content or exercise his/her rights. On request, the Parties shall provide the data subject with the reasons for the redactions, to the extent possible without revealing the redacted information.
 
-The details of the transfer and of the personal data are specified in Annex B. The parties agree that Annex B may contain confidential business information which they will not disclose to third parties, except as required by law or in response to a competent regulatory or government agency, or as required under clause I(e). The parties may execute additional annexes to cover additional transfers, which will be submitted to the authority where required. Annex B may, in the alternative, be drafted to cover multiple transfers.
+(d) Paragraphs (a) to (c) are without prejudice to the obligations of the data exporter under Articles 13 and 14 of Regulation (EU) 2016/679.
 
-**ANNEX A**
+8.3 Accuracy and data minimisation
 
-**DATA PROCESSING PRINCIPLES**
+(a) Each Party shall ensure that the personal data is accurate and, where necessary, kept up to date. The data importer shall take every reasonable step to ensure that personal data that is inaccurate, having regard to the purpose(s) of processing, is erased or rectified without delay.
 
-1. **Purpose limitation:** Personal data may be processed and subsequently used or further communicated only for purposes described in Annex B or subsequently authorised by the data subject.
+(b) If one of the Parties becomes aware that the personal data it has transferred or received is inaccurate, or has become outdated, it shall inform the other Party without undue delay.
 
-1. **Data quality and proportionality** : Personal data must be accurate and, where necessary, kept up to date. The personal data must be adequate, relevant and not excessive in relation to the purposes for which they are transferred and further processed.
+(c) The data importer shall ensure that the personal data is adequate, relevant and limited to what is necessary in relation to the purpose(s) of processing.
 
-1. **Transparency:** Data subjects must be provided with information necessary to ensure fair processing (such as information about the purposes of processing and about the transfer), unless such information has already been given by the data exporter.
+8.4 Storage limitation
 
-1. **Security and confidentiality:** Technical and organisational security measures must be taken by the data controller that are appropriate to the risks, such as against accidental or unlawful destruction or accidental loss, alteration, unauthorised disclosure or access, presented by the processing. Any person acting under the authority of the data controller, including a processor, must not process the data except on instructions from the data controller.
+The data importer shall retain the personal data for no longer than necessary for the purpose(s) for which it is processed. It shall put in place appropriate technical or organisational measures to ensure compliance with this obligation, including erasure or anonymisation of the data and all back-ups at the end of the retention period.
 
-1. **Rights of access, rectification, deletion and objection:** As provided in Article 12 of Directive 95/46/EC (corresponding Article 15 of the GDPR), data subjects must, whether directly or via a third party, be provided with the personal information about them that an organisation holds, except for requests which are manifestly abusive, based on unreasonable intervals or their number or repetitive or systematic nature, or for which access need not be granted under the law of the country of the data exporter. Provided that the authority has given its prior approval, access need also not be granted when doing so would be likely to seriously harm the interests of the data importer or other organisations dealing with the data importer and such interests are not overridden by the interests for fundamental rights and freedoms of the data subject. The sources of the personal data need not be identified when this is not possible by reasonable efforts, or where the rights of persons other than the individual would be violated. Data subjects must be able to have the personal information about them rectified, amended, or deleted where it is inaccurate or processed against these principles. If there are compelling grounds to doubt the legitimacy of the request, the organisation may require further justifications before proceeding to rectification, amendment or deletion. Notification of any rectification, amendment or deletion to third parties to whom the data have been disclosed need not be made when this involves a disproportionate effort. A data subject must also be able to object to the processing of the personal data relating to him if there are compelling legitimate grounds relating to his particular situation. The burden of proof for any refusal rests on the data importer, and the data subject may always challenge a refusal before the authority.
+8.5 Security of processing
 
-1. **Sensitive data:** The data importer shall take such additional measures (e.g. relating to security) as are necessary to protect such sensitive data in accordance with its obligations under clause II.
+(a)The data importer and, during transmission, also the data exporter shall implement appropriate technical and organisational measures to ensure the security of the personal data, including protection against a breach of security leading to accidental or unlawful destruction, loss, alteration, unauthorised disclosure or access (hereinafter &#39;personal data breach&#39;). In assessing the appropriate level of security, they shall take due account of the state of the art, the costs of implementation, the nature, scope, context and purpose(s) of processing and the risks involved in the processing for the data subject. The Parties shall in particular consider having recourse to encryption or pseudonymisation, including during transmission, where the purpose of processing can be fulfilled in that manner.
 
-1. **Data used for marketing purposes:** Where data are processed for the purposes of direct marketing, effective procedures should exist allowing the data subject at any time to &quot;opt-out&quot; from having his data used for such purposes.
+(b) The Parties have agreed on the technical and organisational measures set out in Annex II. The data importer shall carry out regular checks to ensure that these measures continue to provide an appropriate level of security.
 
-1. **Automated decisions:** For purposes hereof &quot;automated decision&quot; shall mean a decision by the data exporter or the data importer which produces legal effects concerning a data subject or significantly affects a data subject and which is based solely on automated processing of personal data intended to evaluate certain personal aspects relating to him, such as his performance at work, creditworthiness, reliability, conduct, etc. The data importer shall not make any automated decisions concerning data subjects, except when:
+(c) The data importer shall ensure that persons authorised to process the personal data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality.
 
-1. (i) such decisions are made by the data importer in entering into or performing a contract with the data subject, and
+(d) In the event of a personal data breach concerning personal data processed by the data importer under these Clauses, the data importer shall take appropriate measures to address the personal data breach, including measures to mitigate its possible adverse effects.
 
-(ii) the data subject is given an opportunity to discuss the results of a relevant automated decision with a representative of the parties making such decision or otherwise to make representations to that parties.
+(e) In case of a personal data breach that is likely to result in a risk to the rights and freedoms of natural persons, the data importer shall without undue delay notify both the data exporter and the competent supervisory authority pursuant to Clause 12. Such notification shall contain i) a description of the nature of the breach (including, where possible, categories and approximate number of data subjects and personal data records concerned), ii) its likely consequences, iii) the measures taken or proposed to address the breach, and iv) the details of a contact point from whom more information can be obtained. To the extent it is not possible for the data importer to provide all the information at the same time, it may do so in phases without undue further delay.
 
-or
+(f) In case of a personal data breach that is likely to result in a high risk to the rights and freedoms of natural persons, the data importer shall also notify without undue delay the data subjects concerned of the personal data breach and its nature, if necessary in cooperation with the data exporter, together with the information referred to in paragraph (e), points ii) to iv), unless the data importer has implemented measures to significantly reduce the risk to the rights or freedoms of natural persons, or notification would involve disproportionate efforts. In the latter case, the data importer shall instead issue a public communication or take a similar measure to inform the public of the personal data breach.
 
-1. where otherwise provided by the law of the data exporter.
+(g) The data importer shall document all relevant facts relating to the personal data breach, including its effects and any remedial action taken, and keep a record thereof.
 
-**ANNEX B**
+8.6 Sensitive data
 
-**DESCRIPTION OF THE TRANSFER**
+Where the transfer involves personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, genetic data, or biometric data for the purpose of uniquely identifying a natural person, data concerning health or a person&#39;s sex life or sexual orientation, or data relating to criminal convictions or offences (hereinafter &#39;sensitive data&#39;), the data importer shall apply specific restrictions and/or additional safeguards adapted to the specific nature of the data and the risks involved. This may include restricting the personnel permitted to access the personal data, additional security measures (such as pseudonymisation) and/or additional restrictions with respect to further disclosure.
 
-(To be completed by the parties upon conclusion)
+8.7 Onward transfers
 
-**Data subjects**
-The personal data transferred concern the following categories of data subjects:
+The data importer shall not disclose the personal data to a third party located outside the European Union  (in the same country as the data importer or in another third country, hereinafter &#39;onward transfer&#39;) unless the third party is or agrees to be bound by these Clauses. Otherwise, an onward transfer by the data importer may only take place if:
 
-_App-users/website visitors of Publisher_
+(i) it is to a country benefitting from an adequacy decision pursuant to Article 45 of Regulation (EU) 2016/679 that covers the onward transfer;
 
-**Purposes of the transfer(s)**
- The transfer is made for the following purposes:
+(ii) the third party otherwise ensures appropriate safeguards pursuant to Articles 46 or 47 of Regulation (EU) 2016/679 with respect to the processing in question;
 
-_Survey Tendering for market research._
+(iii) the third party enters into a binding instrument with the data importer ensuring the same level of data protection as under these Clauses, and the data importer provides a copy of these safeguards to the data exporter;
 
-**Categories of data**
-As specified in sections 3.1 and 5(a) of Pollfish Respondents Terms located at [https://www.pollfish.com/terms/respondent](https://www.pollfish.com/terms/respondent)
+(iv) it is necessary for the establishment, exercise or defence of legal claims in the context of specific administrative, regulatory or judicial proceedings;(v)it is necessary in order to protect the vital interests of the data subject or of another natural person; or(vi)where none of the other conditions apply, the data importer has obtained the explicit consent of the data subject for an onward transfer in a specific situation, after having informed him/her of its purpose(s), the identity of the recipient and the possible risks of such transfer to him/her due to the lack of appropriate data protection safeguards. In this case, the data importer shall inform the data exporter and, at the request of the latter, shall transmit to it a copy of the information provided to the data subject.
 
-**Recipients**
- As specified in section 7.1 of the Pollfish Respondents Terms located at [https://www.pollfish.com/terms/respondent](https://www.pollfish.com/terms/respondent)
+Any onward transfer is subject to compliance by the data importer with all the other safeguards under these Clauses, in particular purpose limitation.
 
-**Sensitive data**
+8.8 Processing under the authority of the data importer
 
-_None_
+The data importer shall ensure that any person acting under its authority, including a processor, processes the data only on its instructions.
 
-**Data protection registration information of data exporter** (where applicable)
-_N/A_
+8.9 Documentation and compliance
 
-**Additional useful information** (storage limits and other relevant information)
-_Storage limits: not less than 3 years and as long as further needed for the performance of the contractual obligations of the parties, the protection of Data Importer&#39;s legitimate interests and the full enjoyment by Data Importer of the rights afforded to Data Importer under the contract between Data Importer and Data Exporter, compliance with legal obligations, tax record keeping and further business record keeping and business management._
+(a) Each Party shall be able to demonstrate compliance with its obligations under these Clauses. In particular, the data importer shall keep appropriate documentation of the processing activities carried out under its responsibility.
 
-1. &quot;Relevant provisions&quot; means those provisions of any authorisation or decision except for the enforcement provisions of any authorisation or decision (which shall be governed by these clauses).
+(b) The data importer shall make such documentation available to the competent supervisory authority on request.
 
-2. However, the provisions of Annex A.5 concerning rights of access, rectification, deletion and objection must be applied when this option is chosen and take precedence over any comparable provisions of the Commission Decision selected.
+Clause 9
+
+Data subject rights
+
+(a) The data importer, where relevant with the assistance of the data exporter, shall deal with any enquiries and requests it receives from a data subject relating to the processing of his/her personal data and the exercise of his/her rights under these Clauses without undue delay and at the latest within one month of the receipt of the enquiry or request. The data importer shall take appropriate measures to facilitate such enquiries, requests and the exercise of data subject rights. Any information provided to the data subject shall be in an intelligible and easily accessible form, using clear and plain language.
+
+(b) In particular, upon request by the data subject the data importer shall, free of charge:
+
+(i) provide confirmation to the data subject as to whether personal data concerning him/her is being processed and, where this is the case, a copy of the data relating to him/her and the information in Annex I; if personal data has been or will be onward transferred, provide information on recipients or categories of recipients (as appropriate with a view to providing meaningful information) to which the personal data has been or will be onward transferred, the purpose of such onward transfers and their ground pursuant to Clause 8.7; and provide information on the right to lodge a complaint with a supervisory authority in accordance with Clause 10(c)(i);
+
+(ii) rectify inaccurate or incomplete data concerning the data subject;
+
+(iii) erase personal data concerning the data subject if such data is being or has been processed in violation of any of these Clauses ensuring third-party beneficiary rights, or if the data subject withdraws the consent on which the processing is based.
+
+(c) Where the data importer processes the personal data for direct marketing purposes, it shall cease processing for such purposes if the data subject objects to it.
+
+(d) The data importer shall not make a decision based solely on the automated processing of the personal data transferred (hereinafter &#39;automated decision&#39;), which would produce legal effects concerning the data subject or similarly significantly affect him/her, unless with the explicit consent of the data subject or if authorised to do so under the laws of the country of destination, provided that such laws lays down suitable measures to safeguard the data subject&#39;s rights and legitimate interests. In this case, the data importer shall, where necessary in cooperation with the data exporter:
+
+(i) inform the data subject about the envisaged automated decision, the envisaged consequences and the logic involved; and
+
+(ii) implement suitable safeguards, at least by enabling the data subject to contest the decision, express his/her point of view and obtain review by a human being.
+
+(e) Where requests from a data subject are excessive, in particular because of their repetitive character, the data importer may either charge a reasonable fee taking into account the administrative costs of granting the request or refuse to act on the request.
+
+(f) The data importer may refuse a data subject&#39;s request if such refusal is allowed under the laws of the country of destination and is necessary and proportionate in a democratic society to protect one of the objectives listed in Article 23(1) of Regulation (EU) 2016/679.
+
+(g) If the data importer intends to refuse a data subject&#39;s request, it shall inform the data subject of the reasons for the refusal and the possibility of lodging a complaint with the competent supervisory authority and/or seeking judicial redress.
+
+Clause 10
+
+Redress
+
+(a) The data importer shall inform data subjects in a transparent and easily accessible format, through individual notice or on its website, of a contact point authorised to handle complaints. It shall deal promptly with any complaints it receives from a data subject.
+
+(b) In case of a dispute between a data subject and one of the Parties as regards compliance with these Clauses, that Party shall use its best efforts to resolve the issue amicably in a timely fashion. The Parties shall keep each other informed about such disputes and, where appropriate, cooperate in resolving them.
+
+(c) Where the data subject invokes a third-party beneficiary right pursuant to Clause 3, the data importer shall accept the decision of the data subject to:
+
+(i) lodge a complaint with the supervisory authority in the Member State of his/her habitual residence or place of work, or the competent supervisory authority pursuant to Clause 12;
+
+(ii) refer the dispute to the competent courts within the meaning of Clause 17.
+
+(d) The Parties accept that the data subject may be represented by a not-for-profit body, organisation or association under the conditions set out in Article 80(1) of Regulation (EU) 2016/679.
+
+(e) The data importer shall abide by a decision that is binding under the applicable EU or Member State law.
+
+(f) The data importer agrees that the choice made by the data subject will not prejudice his/her substantive and procedural rights to seek remedies in accordance with applicable laws.
+
+Clause 11
+
+Liability
+
+(a) Each Party shall be liable to the other Party/ies for any damages it causes the other Party/ies by any breach of these Clauses.
+
+(b) Each Party shall be liable to the data subject, and the data subject shall be entitled to receive compensation, for any material or non-material damages that the Party causes the data subject by breaching the third-party beneficiary rights under these Clauses. This is without prejudice to the liability of the data exporter under Regulation (EU) 2016/679.
+
+(c) Where more than one Party is responsible for any damage caused to the data subject as a result of a breach of these Clauses, all responsible Parties shall be jointly and severally liable and the data subject is entitled to bring an action in court against any of these Parties.
+
+(d) The Parties agree that if one Party is held liable under paragraph (c), it shall be entitled to claim back from the other Party/ies that part of the compensation corresponding to its/their responsibility for the damage.
+
+(e) The data importer may not invoke the conduct of a processor or sub-processor to avoid its own liability.
+
+Clause 12
+
+Supervision
+
+(a) (i) Where the data exporter is established in an EU Member State: The supervisory authority with responsibility for ensuring compliance by the data exporter with Regulation (EU) 2016/679 as regards the data transfer, as indicated in Annex I.C, shall act as competent supervisory authority.
+
+(ii) Where the data exporter is not established in an EU Member State, but falls within the territorial scope of application of Regulation (EU) 2016/679 in accordance with its Article 3(2) and has appointed a representative pursuant to Article 27(1) of Regulation (EU) 2016/679: The supervisory authority of the Member State in which the representative within the meaning of Article 27(1) of Regulation (EU) 2016/679 is established, as indicated in Annex I.C, shall act as competent supervisory authority.
+
+(iii) Where the data exporter is not established in an EU Member State, but falls within the territorial scope of application of Regulation (EU) 2016/679 in accordance with its Article 3(2) without however having to appoint a representative pursuant to Article 27(2) of Regulation (EU) 2016/679: The supervisory authority of one of the Member States in which the data subjects whose personal data is transferred under these Clauses in relation to the offering of goods or services to them, or whose behaviour is monitored, are located, as indicated in Annex I.C, shall act as competent supervisory authority.
+
+(b)The data importer agrees to submit itself to the jurisdiction of and cooperate with the competent supervisory authority in any procedures aimed at ensuring compliance with these Clauses. In particular, the data importer agrees to respond to enquiries, submit to audits and comply with the measures adopted by the supervisory authority, including remedial and compensatory measures. It shall provide the supervisory authority with written confirmation that the necessary actions have been taken.
+
+SECTION III – LOCAL LAWS AND OBLIGATIONS IN CASE OF ACCESS BY PUBLIC AUTHORITIES
+
+Clause 13
+
+Local laws and practices affecting compliance with the Clauses
+
+(a) The Parties warrant that they have no reason to believe that the laws and practices in the third country of destination applicable to the processing of the personal data by the data importer, including any requirements to disclose personal data or measures authorising access by public authorities, prevent the data importer from fulfilling its obligations under these Clauses. This is based on the understanding that laws and practices that respect the essence of the fundamental rights and freedoms and do not exceed what is necessary and proportionate in a democratic society to safeguard one of the objectives listed in Article 23(1) of Regulation (EU) 2016/679, are not in contradiction with these Clauses.
+
+(b) The Parties declare that in providing the warranty in paragraph (a), they have taken due account in particular of the following elements:
+
+(i) the specific circumstances of the transfer, including the length of the processing chain, the number of actors involved and the transmission channels used; intended onward transfers; the type of recipient; the purpose of processing; the categories and format of the transferred personal data; the economic sector in which the transfer occurs; the storage location of the data transferred;
+
+(ii) the laws and practices of the third country of destination– including those requiring the disclosure of data to public authorities or authorising access by such authorities – relevant in light of the specific circumstances of the transfer, and the applicable limitations and safeguards;
+
+(iii) any relevant contractual, technical or organisational safeguards put in place to supplement the safeguards under these Clauses, including measures applied during transmission and to the processing of the personal data in the country of destination.
+
+(c) The data importer warrants that, in carrying out the assessment under paragraph (b), it has made its best efforts to provide the data exporter with relevant information and agrees that it will continue to cooperate with the data exporter in ensuring compliance with these Clauses.
+
+(d) The Parties agree to document the assessment under paragraph (b) and make it available to the competent supervisory authority on request.
+
+(e) The data importer agrees to notify the data exporter promptly if, after having agreed to these Clauses and for the duration of the contract, it has reason to believe that it is or has become subject to laws or practices not in line with the requirements under paragraph (a), including following a change in the laws of the third country or a measure (such as a disclosure request) indicating an application of such laws in practice that is not in line with the requirements in paragraph (a). 
+
+(f) Following a notification pursuant to paragraph (e), or if the data exporter otherwise has reason to believe that the data importer can no longer fulfil its obligations under these Clauses, the data exporter shall promptly identify appropriate measures (e.g. technical or organisational measures to ensure security and confidentiality) to be adopted by the data exporter and/or data importer to address the situation. The data exporter shall suspend the data transfer if it considers that no appropriate safeguards for such transfer can be ensured, or if instructed the competent supervisory authority to do so. In this case, the data exporter shall be entitled to terminate the contract, insofar as it concerns the processing of personal data under these Clauses. If the contract involves more than two Parties, the data exporter may exercise this right to termination only with respect to the relevant Party, unless the Parties have agreed otherwise. Where the contract is terminated pursuant to this Clause, Clause 15 (d) and (e) shall apply.
+
+Clause 14
+
+Obligations of the data importer in case of access by public authorities
+
+14.1 Notification
+
+(a) The data importer agrees to notify the data exporter and, where possible, the data subject promptly (if necessary with the help of the data exporter) if it:
+
+(i) receives a legally binding request from a public authority, including judicial authorities, under the laws of the country of destination for the disclosure of personal data transferred pursuant to these Clauses; such notification shall include information about the personal data requested, the requesting authority, the legal basis for the request and the response provided; or
+
+(ii) becomes aware of any direct access by public authorities to personal data transferred pursuant to these Clauses in accordance with the laws of the country of destination; such notification shall include all information available to the importer.
+
+(b) If the data importer is prohibited from notifying the data exporter and/or the data subject under the laws of the country of destination, the data importer agrees to use its best efforts to obtain a waiver of the prohibition, with a view to communicating as much information as possible, as soon as possible. The data importer agrees to document its best efforts in order to be able to demonstrate them on request of the data exporter.
+
+(c) Where permissible under the laws of the country of destination, the data importer agrees to provide the data exporter, at regular intervals for the duration of the contract, with as much relevant information as possible on the requests received (in particular, number of requests, type of data requested, requesting authority/ies, whether requests have been challenged and the outcome of such challenges, etc.).
+
+(d) The data importer agrees to preserve the information pursuant to paragraphs (a) to (c) for the duration of the contract and make it available to the competent supervisory authority on request.
+
+(e) Paragraphs (a) to (c) are without prejudice to the obligation of the data importer pursuant to Clause 13(e) and Clause 15 to inform the data exporter promptly where it is unable to comply with these Clauses.
+
+14.2 Review of legality and data minimisation
+
+(a) The data importer agrees to review the legality of the request for disclosure, in particular whether it remains within the powers granted to the requesting public authority, and to challenge the request if, after careful assessment, it concludes that there are reasonable grounds to consider that the request is unlawful under the laws of the country of destination, applicable obligations under international law and principles of international comity. The data importer shall, under the same conditions, pursue possibilities of appeal. When challenging a request, the data importer shall seek interim measures with a view to suspending the effects of the request until the competent judicial authority has decided on its merits. It shall not disclose the personal data requested until required to do so under the applicable procedural rules. These requirements are without prejudice to the obligations of the data importer under Clause 13(e).
+
+(b) The data importer agrees to document its legal assessment and any challenge to the request for disclosure and, to the extent permissible under the laws of the country of destination, make the documentation available to the data exporter. It shall also make it available to the competent supervisory authority on request. 
+
+(c) The data importer agrees to provide the minimum amount of information permissible when responding to a request for disclosure, based on a reasonable interpretation of the request.
+
+SECTION IV – FINAL PROVISIONS
+
+Clause 15
+
+Non-compliance with the Clauses and termination
+
+(a) The data importer shall promptly inform the data exporter if it is unable to comply with these Clauses, for whatever reason.
+
+(b) In the event that the data importer is in breach of these Clauses or unable to comply with these Clauses, the data exporter shall suspend the transfer of personal data to the data importer until compliance is again ensured or the contract is terminated. This is without prejudice to Clause 13(f).
+
+(c) The data exporter shall be entitled to terminate the contract, insofar as it concerns the processing of personal data under these Clauses, where:
+
+(i) the data exporter has suspended the transfer of personal data to the data importer pursuant to paragraph (b) and compliance with these Clauses is not restored within a reasonable time and in any event within one month of suspension;
+
+(ii) the data importer is in substantial or persistent breach of these Clauses; or
+
+(iii) the data importer fails to comply with a binding decision of a competent court or supervisory authority regarding its obligations under these Clauses.
+
+In these cases, it shall inform the competent supervisory authority of such non- compliance. Where the contract involves more than two Parties, the data exporter may exercise this right to termination only with respect to the relevant Party, unless the Parties have agreed otherwise.
+
+(d) Personal data that has been transferred prior to the termination of the contract pursuant to paragraph (c) shall at the choice of the data exporter immediately be returned to the data exporter or deleted in its entirety. The same shall apply to any copies of the data. The data importer shall certify the deletion of the data to the data exporter. Until the data is deleted or returned, the data importer shall continue to ensure compliance with these Clauses. In case of local laws applicable to the data importer that prohibit the return or deletion of the transferred personal data, the data importer warrants that it will continue to ensure compliance with these Clauses and will only process the data to the extent and for as long as required under that local law.
+
+(e) Either Party may revoke its agreement to be bound by these Clauses where (i) the European Commission adopts a decision pursuant to Article 45(3) of Regulation (EU) 2016/679 that covers the transfer of personal data to which these Clauses apply; or (ii) Regulation (EU) 2016/679 becomes part of the legal framework of the country to which the personal data is transferred. This is without prejudice to other obligations applying to the processing in question under Regulation (EU) 2016/679.
+
+Clause 16
+
+Governing law
+
+These Clauses shall be governed by the law of one of the EU Member State, provided such law allows for third-party beneficiary rights. The parties agree that this shall be the law of Greece.
+
+Clause 17
+
+Choice of forum and jurisdiction
+
+(a) Any dispute arising from these Clauses shall be resolved by the courts of an EU Member State.
+
+(b) The Parties agree that those shall be the courts of Athens, Greece.
+
+(c) A data subject may also bring legal proceedings against the data exporter and/or data importer before the courts of the Member State in which he/she has his/her habitual residence.
+
+(d) The Parties agree to submit themselves to the jurisdiction of such courts.
+
+ANNEX I
+
+A. LIST OF PARTIES
+
+Data exporter(s): Publisher (as per further details provided in the Pollfish registration form for Publishers)
+
+Address: as per the Publisher Registration form
+
+Contact person&#39;s name, position and contact details: as per the Publisher's registration form
+
+Activities relevant to the data transferred under these Clauses: App owner
+
+Role: Controller
+
+Data importer(s): Pollfish Inc.
+
+Address: 1460 Broadway, New York, NY 10036, USA
+
+Contact person&#39;s name, position and contact details: Zissis Bellas, DPO, zissis@pollfish.com
+
+Activities relevant to the data transferred under these Clauses: Online Survey Platform
+
+Role: Controller
+
+B. DESCRIPTION OF TRANSFER
+
+Categories of data subjects whose personal data is transferred:
+
+App-users/website visitors of Publisher
+
+Categories of personal data transferred:
+
+As per the Pollfish Respondent Privacy Policy
+
+Sensitive data transferred (if applicable) and applied restrictions or safeguards that fully take into consideration the nature of the data and the risks involved, such as for instance strict purpose limitation, access restrictions (including access only for staff having followed specialised training), keeping a record of access to the data, restrictions for onward transfers or additional security measures.
+
+NONE
+
+frequency of the transfer (e.g. whether the data is transferred on a one-off or continuous basis).
+
+As per Term of agreement between Pollfish and Publisher
+
+Nature of the processing
+
+Online Survey Tendering
+
+Purpose(s) of the data transfer and further processing
+
+Online Survey Tendering
+
+The period for which the personal data will be retained, or, if that is not possible, the criteria used to determine that period
+
+Storage limits: no less than 3years and/or as necessary for the performance of the contractual obligations of the parties, the protection of Data Importer&#39;s legitimate interests and the full enjoyment by Data Importer of the rights afforded to Data Importer under the contract between Data Importer and Data Exporter, compliance with legal obligations, tax record keeping and further business record keeping and business management.
+
+C. COMPETENT SUPERVISORY AUTHORITY
+
+Identify the competent supervisory authority/ies in accordance with Clause 12.
+
+For cases under 12 (a) (i) and/or (ii), as per Clause 12 (a) and/or (ii) as applicable. For case under Clause 12 (a) (iii) the Hellenic Data Protection Authority.
+
+ANNEX II
+
+TECHNICAL AND ORGANISATIONAL MEASURES INCLUDING TECHNICAL AND ORGANISATIONAL MEASURES TO ENSURE THE SECURITY OF THE DATA
+
+- pseudonymisation and encryption of personal data
+- ongoing confidentiality, integrity, availability and resilience of processing systems and services
+- ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident
+- regularly testing, assessing and evaluating the effectiveness of technical and organisational measures in order to ensure the security of the processing
+- user identification and authorisation
+- protection of data during transmission
+- protection of data during storage
+- ensuring physical security of locations at which personal data are processed Measures for ensuring events logging
+- ensuring system configuration, including default configuration Measures for internal IT and IT security governance and management certification/assurance of processes and products
+- ensuring data minimisation Measures for ensuring data quality
+- limited data retention
+- ensuring accountability
+- allowing data portability and ensuring erasure
