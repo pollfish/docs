@@ -1433,7 +1433,9 @@ N/A.
 
 **Identify the competent supervisory authority/ies in accordance with Clause 13**
 
-For cases under 13 (a) (i) and/or (ii), as per Clause 13 (a) and/or (ii) as applicable. For case under Clause 13 (a) (iii) the Hellenic Data Protection Authority.  
+For cases under 13 (a) (i) and/or (ii), as per Clause 13 (a) and/or (ii) as applicable. For case under Clause 13 (a) (iii) the Hellenic Data Protection Authority.
+
+
 **ANNEX II**
 
 **TECHNICAL AND ORGANISATIONAL MEASURES INCLUDING TECHNICAL AND ORGANISATIONAL MEASURES TO ENSURE THE SECURITY OF THE DATA**
