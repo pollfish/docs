@@ -196,7 +196,7 @@ Below you can see the different enumeration for requesting a survey of a specifi
 
 
 ### Notes for `sig` query parameter
-This parameter can be used optionally to prevent tampering around reward conversion parameter if passed within the register call (therefore if you are passing the reward conversion param you should sig parameter too in the URL). The platform supports url validation by requiring a hash of the `reward_conversion`, `reward_name`, and `click_id` values passed through the json parameter of the register device request. Failure to pass validation will return a status of Bad Request Response (http status: 400) with body "Hash check failed".
+This parameter should be passed to prevent tampering around the reward conversion parameter if passed within the register call (therefore if you are passing the reward conversion param you should sig parameter too in the URL). The platform supports url validation by requiring a hash of the `reward_conversion`, `reward_name`, and `click_id` values passed through the json parameter of the register device request. Failure to pass validation will return a status of Bad Request Response (http status: 400) with body "Hash check failed".
 
 In order to generate the sig field you should sign the combination of reward_conversion+reward_name+click_id parameter using the HMAC-SHA1 algorithm and your account's secret_key that can be retrieved from the Account Information page on your Pollfish Dashboard.
 
