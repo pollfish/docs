@@ -905,20 +905,22 @@ These Clauses shall be governed by the law of one of the EU Member States, provi
 *Hellenic Data Protection Authority*
 
 **ANNEX II**
+
 **TECHNICAL AND ORGANISATIONAL MEASURES INCLUDING TECHNICAL AND ORGANISATIONAL MEASURES TO ENSURE THE SECURITY OF THE DATA**
--pseudonymisation and encryption of personal data
--ongoing confidentiality, integrity, availability and resilience of processing systems and services
--ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident
--regularly testing, assessing and evaluating the effectiveness of technical and organisational measures in order to ensure the security of the processing
--user identification and authorisation 
--protection of data during transmission  
--protection of data during storage
--ensuring physical security of locations at which personal data are processed Measures for ensuring events logging
--ensuring system configuration, including default configuration Measures for internal IT and IT security governance and management certification/assurance of processes and products
--ensuring data minimisation Measures for ensuring data quality 
--limited data retention 
--ensuring accountability
--allowing data portability and ensuring erasure
+
+- pseudonymisation and encryption of personal data
+- ongoing confidentiality, integrity, availability and resilience of processing systems and services
+- ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident
+- regularly testing, assessing and evaluating the effectiveness of technical and organisational measures in order to ensure the security of the processing
+- user identification and authorisation 
+- protection of data during transmission  
+- protection of data during storage
+- ensuring physical security of locations at which personal data are processed Measures for ensuring events logging
+- ensuring system configuration, including default configuration Measures for internal IT and IT security governance and management certification/assurance of processes and products
+- ensuring data minimisation Measures for ensuring data quality 
+- limited data retention 
+- ensuring accountability
+- allowing data portability and ensuring erasure
 
 
 **APPENDIX B**
