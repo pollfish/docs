@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.1.0">
+<div class="changelog" data-version="6.2.0">
+v6.2.0
+
+- Added option to toggle on/off reinitializion on device rotation
+
 v6.1.0
 
 - Added support for non personalised surveys when no IDFA permission is granted
@@ -581,6 +585,7 @@ No | Description
 6.2.9| **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward
 6.2.10| **`.clickId(String)`** <br/> A pass throught param that will be passed back through server-to-server callback
 6.2.11| **`.singnature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
+6.2.12| **`.monitorOrientationChanges(Bool)`** <br/> Toggle SDK reinitalization when device orientation changes
 
 <br/>
 
@@ -921,7 +926,7 @@ PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
 
 <span style="text-decoration: underline">Swift:</span>
 ```swift
-et pollfishParams = PollfishParams("API_KEY")
+let pollfishParams = PollfishParams("API_KEY")
     .clickId("CLICK_ID")
 ```
 
@@ -950,8 +955,31 @@ PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
 
 <span style="text-decoration: underline">Swift:</span>
 ```swift
-et pollfishParams = PollfishParams("API_KEY")
+let pollfishParams = PollfishParams("API_KEY")
     .signature("SIGNATURE")
+```
+
+<br/>
+
+#### **6.2.12 `monitorOrientationChanges(Bool)`**
+
+An optional parameter used to toggle SDK reinitalization when device orientation changes. By default the SDK initializes when a device orientation changes.
+
+> **Note:** Setting this option to `false` will force survey panel to render at full screen size on iPad.
+
+<br/>
+
+<span style="text-decoration: underline">Objective-C:</span>
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params monitorOrientationChanges:true];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+```swift
+let pollfishParams = PollfishParams("API_KEY")
+    .monitorOrientationChanges(true)
 ```
 
 ---
