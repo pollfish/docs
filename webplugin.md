@@ -364,7 +364,7 @@ const config = {
 After a user successfully completes a survey or gets screened out, you might want to allow your user to receive another survey.
 This could be achieved by calling Pollfish.restart which will request a new survey for the user.
 
-| **Note:** It is recommended to not call Pollfish.restart while the user answering a survey since it will remove the current survey page. 
+| **Note:** It is recommended to not call Pollfish.restart while the user is answering a survey since it will remove the current survey page. 
 
 ```js
   Pollfish.restart(pollfishConfig);
