@@ -45,6 +45,13 @@ Login at [www.pollfish.com](http://www.pollfish.com) and add a new app at Pollfi
 <span style="text-decoration: underline">Cordova</span>
 
 ```
+# Install Core library (once per project)
+npm install @ionic-native/core
+
+# Install Pollfish Ionic Native TypeScript wrapper
+npm install @ionic-native/pollfish
+
+# Install Pollfish Cordova plugin
 ionic cordova plugin add com.pollfish.cordova_plugin
 ```
 
@@ -73,6 +80,10 @@ npx ionic cap sync
 <span style="text-decoration: underline">Cordova</span>
 
 ```
+# Uninstall Pollfish Ionic Native TypeScript wrapper
+npm r @ionic-native/pollfish
+
+# Uninstall Pollfish Cordova plugin
 ionic cordova plugin remove com.pollfish.cordova_plugin
 ```
 
@@ -93,7 +104,7 @@ npx ionic cap sync
 
 ## 4. Initialize Pollfish
 
-### 4.1 Import Pollfish in Capacitor projects
+### 4.1 Inject and import Pollfish
 
 Inject Pollfish dependency. Navigate to `src/app/app.module.ts` 
 
@@ -122,7 +133,7 @@ export class HomePage {
 }
 ```
 
-### 4.2 Initialize function
+### 4.2 Initialize
 
 Init function takes the following parameters:
 
@@ -144,24 +155,7 @@ var postion = pollfishplugin.Position.TOP_LEFT;
 var padding = 50;
 var requestUUID = "my_id";
 var offerwallMode = true; 
-```
 
-<span style="text-decoration: underline">Cordova</span>
-
-```js
-pollfishplugin.init(
-	releaseMode,
-	rewardMode,
-	apiKey,
-	position,
-	padding,
-	requestUUID, 
-	offerwallMode); 
-```
-
-<span style="text-decoration: underline">Capacitor</span>
-
-```js
 pollfish.init(
     releaseMode, 
     rewardMode, 
@@ -205,24 +199,7 @@ var userAttributes = {
     'gender': '1',
     'education': '2'
 }
-```
-<span style="text-decoration: underline">Cordova</span>
 
-```js
-pollfishplugin.initWithUserAttributes(
-	releaseMode,
-	rewardMode,
-	apiKey,
-    position,
-	padding,
-	requestUUID,
-	offerwallMode,
-	userAttributes); 
-```
-
-<span style="text-decoration: underline">Capacitor</span>
-
-```js
 pollfish.initWithUserAttributes(
     releaseMode, 
     rewardMode, 
@@ -303,16 +280,6 @@ In this section we will list several options that can be used to control Pollfis
 
 You can be notified when a Pollfish survey is received.
 
-<span style="text-decoration: underline">Cordova</span>
-
-```js
-pollfishplugin.setEventCallback(pollfishplugin.EventListener.OnPollfishSurveyReceived, (result) => {
-    console.log("Survey Received: " + JSON.stringify(result));
-});
-```
-
-<span style="text-decoration: underline">Capacitor</span>
-
 ```js
 pollfish.setEventCallback(pollfish.EventListener.OnPollfishSurveyReceived, (result) => {
     console.log("Survey Received: " + JSON.stringify(result));
@@ -324,16 +291,6 @@ pollfish.setEventCallback(pollfish.EventListener.OnPollfishSurveyReceived, (resu
 ### 7.2 Get notified when a Pollfish survey is completed
 
 You can be notified when a Pollfish survey is completed.
-
-<span style="text-decoration: underline">Cordova</span>
-
-```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishSurveyCompleted, (result) => {
-    console.log("Survey Completed: " + JSON.stringify(result));
-});
-```
-
-<span style="text-decoration: underline">Capacitor</span>
 
 ```js
 pollfish.setEventCallback(pollfish.EventListener.OnPollfishSurveyCompleted, (result) => {
@@ -347,16 +304,6 @@ pollfish.setEventCallback(pollfish.EventListener.OnPollfishSurveyCompleted, (res
 
 You can be notified when a user is not eligible for a Pollfish survey.
 
-<span style="text-decoration: underline">Cordova</span>
-
-```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishUserNotEligible, (_) => {
-    console.log("Pollfish User Not Eligible");
-});
-```
-
-<span style="text-decoration: underline">Capacitor</span>
-
 ```js
 pollfish.setEventCallback(pollfish.EventListener.OnPollfishUserNotEligible, (_) => {
     console.log("Pollfish User Not Eligible");
@@ -368,16 +315,6 @@ pollfish.setEventCallback(pollfish.EventListener.OnPollfishUserNotEligible, (_) 
 ### 7.4 Get notified when a Pollfish survey is not available
 
 You can be notified when a Pollfish survey is not available
-
-<span style="text-decoration: underline">Cordova</span>
-
-```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishSurveyNotAvailable, (_) => {
-    console.log("Pollfish Survey not available");
-});
-```
-
-<span style="text-decoration: underline">Capacitor</span>
 
 ```js
 pollfish.setEventCallback(pollfish.EventListener.OnPollfishSurveyNotAvailable, (_) => {
@@ -391,16 +328,6 @@ pollfish.setEventCallback(pollfish.EventListener.OnPollfishSurveyNotAvailable, (
 
 You can be notified when Pollfish survey panel is open
 
-<span style="text-decoration: underline">Cordova</span>
-
-```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishOpened, (_) => {
-    console.log("Pollfish Survey panel is open");
-});
-```
-
-<span style="text-decoration: underline">Capacitor</span>
-
 ```js
 pollfish.setEventCallback(pollfish.EventListener.OnPollfishOpened, (_) => {
     console.log("Pollfish Survey panel is open");
@@ -413,16 +340,6 @@ pollfish.setEventCallback(pollfish.EventListener.OnPollfishOpened, (_) => {
 
 You can be notified when Pollfish survey panel is closed
 
-<span style="text-decoration: underline">Cordova</span>
-
-```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishClosed, (_) => {
-    console.log("Pollfish Survey panel is closed");
-});
-```
-
-<span style="text-decoration: underline">Capacitor</span>
-
 ```js
 pollfish.setEventCallback(pollfish.EventListener.OnPollfishClosed, (_) => {
     console.log("Pollfish Survey panel is closed");
@@ -434,16 +351,6 @@ pollfish.setEventCallback(pollfish.EventListener.OnPollfishClosed, (_) => {
 ### 7.7 Get notified when a user rejected a survey
 
 You can be notified when use has rejected a Pollfish survey
-
-<span style="text-decoration: underline">Cordova</span>
-
-```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishUserRejectedSurvey, (_) => {
-    console.log("Pollfish User Rejected Survey");
-});
-```
-
-<span style="text-decoration: underline">Capacitor</span>
 
 ```js
 pollfish.setEventCallback(pollfish.EventListener.OnPollfishUserRejectedSurvey, (_) => {
@@ -459,27 +366,11 @@ You can manually hide and show Pollfish by calling anywhere after initialization
 
 For example:
 
-<span style="text-decoration: underline">Cordova</span>
-
-```js
-pollfishplugin.showPollfish();
-```
-
-<span style="text-decoration: underline">Capacitor</span>
-
 ```js
 pollfish.showPollfish();
 ```
 
 or
-
-<span style="text-decoration: underline">Cordova</span>
-
-```js
-pollfishplugin.hidePollfish();
-```
-
-<span style="text-decoration: underline">Capacitor</span>
 
 ```js
 pollfish.hidePollfish();
