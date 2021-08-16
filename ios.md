@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.0">
+<div class="changelog" data-version="6.2.1">
+v6.2.1
+
+- Fixed issue with iOS 13 Simulator
+
 v6.2.0
 
 - Added option to toggle on/off reinitializion on device rotation
