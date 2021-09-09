@@ -1,4 +1,12 @@
-<div class="changelog" data-version="6.1.4.0">
+<div class="changelog" data-version="6.1.5.1">
+v6.1.5.1
+
+- Internal fixes
+
+v6.1.5.0
+
+- Updated with Pollfish Android SDK v6.1.5
+
 v6.1.4.0
 
 - Updated with Pollfish Android SDK v6.1.4
@@ -91,7 +99,16 @@ v5.0.2.1
 
 This guide is for publishers looking to use AdMob mediation to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.
 
-### Prerequisites
+<br/>
+
+# Prerequisites
+
+* [Pollfish Developer Account](https://www.pollfish.com/dashboard/dev/)
+* [AdMob Account](https://apps.admob.com/)
+* Android API 21 or later
+* Java version 1.8
+
+<br/>
 
 > **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old    
 
@@ -128,11 +145,25 @@ dependencies {
 }
 ```
 </details>
+
 </br>
+
+# Quick Guide
+
+* Set up AdMob Rewarded Ads
+* Set up Pollfish
+* Add Pollfish AdMob Adapter to your project
+* Publish your app
+
+<br/>
+
+# Analytical Steps
 
 Below you can find a step by step guide on how to incorporate Pollfish surveys with AdMob mediation:
 
-### Step 1: Implement AdMob Rewarded Ads in your app 
+## 1. Set up AdMob Rewarded Ads
+
+### 1.1. Create a Rewarded Ad Unit
 
 If you have not implemented [Rewarded Ads](https://developers.google.com/admob/android/rewarded-ads) in your app yet, you can follow the documentation Implement as described by AdMob. 
 
@@ -141,20 +172,24 @@ If you have not implemented [Rewarded Ads](https://developers.google.com/admob/a
 First you need to sign in to your [AdMob account](https://apps.admob.com/). In your app you can click on **Ad Units** and then **ADD AD UNITS** and select **Rewarded** Ads
 
 <br/>
-<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/create_ad_unit.png"/>
-<br/>
 
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/create_ad_unit.png"/>
+
+<br/>
 
 In the configuration of the Ad Unit popup you can specify a name for your rewarded placement and then a name for the reward and a value. If you want to apply the same reward to the user no matter which ad network is served, check the **Apply to all networks in Mediation Groups** box.
 
 <br/>
+
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/configure_ads.png"/>
+
 <br/>
 
 If you don't apply this setting, the Pollfish adapter will provide a dynamic value as you specified it on your Pollfish Dashboard, in the **App Settings** area, based on the actual price of each survey completed.
 
+<br/>
 
-### Step 2: Configure Mediation Settings for your AdMob Rewarded Ad unit
+### 1.2 Configure Mediation Settings for your AdMob Rewarded Ad unit
 
 You need to add Pollfish to the mediation configuration for your Rewarded Ad unit. 
 
@@ -164,9 +199,10 @@ if you do not have a Mediation Group yet, click to create one with **CREATE MEDI
 
 In the Ad Format drop down menu select **Rewarded** and for platform **Android**
 
-
 <br/>
+
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/new_mediation_group.png"/>
+
 <br/>
 
 and then you can name the Mediation Group if you do not have one already. Next, set the mediation group status to **Enabled**
@@ -176,14 +212,19 @@ Afterwards you should click **ADD AD UNITS** and associate the Mediation group w
 You should now see the ad units card populated with the ad units you selected, as shown below:
 
 <br/>
+
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/ad_units.png"/>
+
 <br/>
+
 You then have to add Pollfish Network to the Mediation Waterfall of the group. Click on **ADD CUSTOM EVENT**
 
 You can add a name, in the **Label** section, to differentiate Pollfish Network from your other ad sources (for example Pollfish Netowrk) and an estimated eCPM. Pollfish surveys average eCPMs, range usually betweenn $70-$80.
 
 <br/>
+
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish-images/custom_event_aa.png"/>
+
 <br/>
 
 You can then configure Pollfish ad unit by adding the class name of Pollfish AdMob Mediation Adapter
@@ -193,36 +234,57 @@ You can then configure Pollfish ad unit by adding the class name of Pollfish AdM
 
 Users can pass a **JSON string** to provide the necessary params for Pollfish SDK to work (similarly they can pass those params as described in Step 5. 
 
-No | Key | Type
------------- | -------------| -------------
-2.1 | **api_key**  <br/> Sets Pollfish SDK API key as provided by Pollfish | String
-2.2 | **release_mode**  <br/> Sets Pollfish SDK to Developer or Release mode | Bool
-2.3 | **request_uuid**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks | String
+Key | Type
+------------ | -------------
+**`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish | String
+**`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Bool
+**`request_uuid`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks | String
 
 Example:
 
-```
-{"api_key":"Pollfish API Key", "release_mode":true, "request_uuid":"My user id"}
+```json
+{
+    "api_key": "Pollfish API Key", 
+    "release_mode": true, 
+    "request_uuid": "My user id"
+}
 ```
 
 > **Note:** Pollfish SDK works by default in production mode. If you would like to test with test surveys you should use release_mode false or explicitly request that in code as described in Step 5.
 
 <br/>
+
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/sdk/iOS/add_android_class.png"/>
+
 <br/>
 
+### 1.3 Add Google Play Ads to your project
 
-### Step 3: Set Up Pollfish
+Applications that integrate Pollfish SDK are required to include Google Play Services library in order to give access to the Advertising ID of a device to the SDK. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
 
-#### 3.1\. Obtain a Developer Account
+```java
+dependencies {
+    implementation 'com.google.android.gms:play-services-ads:20.0.0'
+}
+```
+
+<br/>
+
+## 2. Set Up Pollfish
+
+### 2.1. Obtain a Developer Account
 
 Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
 
-#### 3.2\. Add new app on Pollfish Developer Dashboard and copy the given API Key
+<br/>
+
+### 2.2. Add new app on Pollfish Developer Dashboard and copy the given API Key
 
 Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Developer Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
-#### 3.3\. Add Pollfish aar library to your project
+<br/>
+
+### 2.3. Add Pollfish SDK to your project
 
 Download Pollfish Android SDK or reference it through maven().
 
@@ -240,21 +302,13 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-  implementation 'com.pollfish:pollfish-googleplay:6.1.4'
+  implementation 'com.pollfish:pollfish-googleplay:6.1.5'
 }
 ```
 
-#### 3.4\. Integrate Google Play Services to your project
+<br/>
 
-Applications that integrate Pollfish SDK are required to include Google Play Services library in order to give access to the Advertising ID of a device to the SDK. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
-
-```java
-dependencies {
-    implementation 'com.google.android.gms:play-services-ads:20.0.0'
-}
-```
-
-### Step 4: Add Pollfish AdMob Adapter to your project
+## 3. Add Pollfish AdMob Adapter to your project
 
 Import Pollfish AdMob Adapter **.AAR** file to your project libraries  
 
@@ -266,32 +320,61 @@ If you are using Android Studio, right click on your project and select New Modu
 
 Retrieve Pollfish through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
-```
+```groovy
 dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:6.1.4.0'
+  implementation 'com.pollfish.mediation:pollfish-admob:6.1.5.1'
 }
 ```
 
-### Step 5: Use and control Pollfish AdMob Adapter in your Rewarded Ad Unit 
+<br/>
+
+## 4. Request for a RewardedAd
+
+```java
+import com.pollfish.mediation.PollfishAdMobAdapter;
+
+AdRequest request = new AdRequest.Builder()
+                .build();
+```
+<br/>
+
+## 5. Publish your app on the store
+
+If you everything worked fine during the previous steps, you should turn Pollfish to release mode and publish your app.
+
+> **Note:** After you take your app live, you should request your account to get verified through Pollfish Dashboard in the App Settings area.
+
+> **Note:** There is an option to show **Standalone Demographic Questions** needed for Pollfish to target users with surveys even when no actually surveys are available. Those surveys do not deliver any revenue to the publisher (but they can increase fill rate) and therefore if you do not want to show such surveys in the Waterfall you should visit your **App Settings** are and disable that option.
+
+<br/>
+
+# Optional section
+
+## 6. Create Pollfish AdMob Mediation Bundle object
 
 Pollfish AdMob Adapter provides different options that you can use to control the behaviour of Pollfish SDK.
 
 <br/>
-Below you can see all the available options of **PollfishExtrasBundleBuilder** instance that is used to configure the behaviour of Pollfish SDK.
+
+Below you can see all the available options of **`PollfishExtrasBundleBuilder`** instance that is used to configure the behaviour of Pollfish SDK.
+
 <br/>
 
 No | Description
 ------------ | -------------
-5.1 | **.setAPIKey(String apiKey)**  <br/> Sets Pollfish SDK API key as provided by Pollfish
-5.2 | **.setRequestUUID(String requestUUID)**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
-5.3 | **.setReleaseMode(boolean releaseMode)**  <br/> Sets Pollfish SDK to Developer or Release mode
+6.1 | **.`setAPIKey(String apiKey)`**  <br/> Sets Pollfish SDK API key as provided by Pollfish
+6.2 | **`.setRequestUUID(String requestUUID)`**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+6.3 | **`.setReleaseMode(boolean releaseMode)`**  <br/> Sets Pollfish SDK to Developer or Release mode
 
+<br/>
 
-#### 5.1 .setAPIKey(String apiKey)
+### **6.1. `.setAPIKey(String apiKey)`**
 
 Pollfish API Key as provided by Pollfish on Pollfish Dashboard. This value will be used only if you did not specify the API Key in AdMob's UI as desribed in step 2. If you have already specified Pollfish API Key on AdMob's UI, this param will be ignored.
 
-#### 5.2 .setRequestUUID(String requestUUID)
+<br/>
+
+### **6.2. `.setRequestUUID(String requestUUID)`**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
 
@@ -299,25 +382,22 @@ In order to register for such callbacks you can set up your server URL on your a
 
 If you would like to read more on Pollfish s2s callbacks you can read the documentation [here](https://www.pollfish.com/docs/s2s)
 
-#### 5.3 .setReleaseMode(boolean releaseMode)
+<br/>
+
+### **6.3 `.setReleaseMode(boolean releaseMode)`**
 
 Sets Pollfish SDK to Developer or Release mode.
 
-*   **Developer mode** is used to show to the developer how Pollfish surveys will be shown through an app (useful during development and testing).
-*   **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
+* **Developer mode** is used to show to the developer how Pollfish surveys will be shown through an app (useful during development and testing).
+* **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
 
 Pollfish AdMob Adapter runs Pollfish SDK in release mode by default. If you would like to test with Test survey, you should set release mode to fasle.
 
-Below you can see an example on how you can initialize a request for PollfishAdMobAdapter:
-
-```
+```java
 import com.pollfish.mediation.PollfishAdMobAdapter;
 import com.pollfish.mediation.PollfishExtrasBundleBuilder;
-```
 
-</br>
 
-```
 Bundle pollfishBundle = new PollfishExtrasBundleBuilder()
     .setAPIKey("YOUR_POLLFISH_API_KEY")
     .setReleaseMode(false)
@@ -329,18 +409,18 @@ AdRequest request = new AdRequest.Builder()
                 .build();
 ```
 
-> **Note:** You can pass those params either through PollfishExtrasBundleBuilder or through AdMob's UI as described in Step 2
+<br/>
 
-### Step 6: Publish your app on the store
+## 7. Payouts on Screenouts
 
-If you everything worked fine during the previous steps, you should turn Pollfish to release mode and publish your app.
+In Market Research monetization users can get screened out within the survey since the Researcher might be looking a different user based on the provided answers. Screenouts do not deliver any revenue for the publisher nor any reward for the users. If you would like to activate payouts on screenouts too please follow the steps as described [here](https://www.pollfish.com/docs/pay-on-screenouts).
 
-> **Note:** After you take your app live, you should request your account to get verified through Pollfish Dashboard in the App Settings area.
+<br/>
 
-> **Note:** There is an option to show **Standalone Demographic Questions** needed for Pollfish to target users with surveys even when no actually surveys are available. Those surveys do not deliver any revenue to the publisher (but they can increase fill rate) and therefore if you do not want to show such surveys in the Waterfall you should visit your **App Settings** are and disable that option.
-> 
+# More info
 
-## Step 7: Payouts on Screenouts (optional)
+You can read more info on how the Pollfish SDKs work or how to get started with Google AdMob at the following links:
 
-In Market Research monetization users can get screened out within the survey since the Researcher might be looking a different user based on the provided answers. Screenouts do not deliver any revenue for the publisher nor any reward for the users. If you would like to activate payouts on screenouts too please follow the steps as described <a href="https://www.pollfish.com/docs/pay-on-screenouts">here</a>. 
+[Pollfish Android SDK](https://pollfish.com/docs/android/google-play)
 
+[AdMob Android SDK](https://developers.google.com/admob/android/quick-start)

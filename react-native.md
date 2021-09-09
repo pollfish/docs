@@ -1,4 +1,4 @@
-React Native plugin to allow integration of Pollfish surveys into Android and iOS apps.
+Pollfish React Native plugin, allows integration of Pollfish surveys into Android and iOS apps.
 
 Pollfish is a mobile monetization platform delivering surveys instead of ads through mobile apps. Developers get paid per completed surveys through their apps.
 
@@ -8,10 +8,10 @@ Pollfish React Native Plugin can be found on [npm Registry](https://www.npmjs.co
 
 # Prerequisites
 
-* Android 21+ using Google Play Services
-* iOS version 9.0+
-* React Native v0.40+
-* CocoaPods
+* Android SDK 21 or higher using Google Play Services
+* iOS 9.0 or higher
+* React Native v0.40 or higher
+* CocoaPods v1.10.0 or higher
 
 <br/>
 
@@ -23,11 +23,49 @@ Pollfish React Native Plugin can be found on [npm Registry](https://www.npmjs.co
 
 # Quick Guide
 
-* Create Pollfish Developer account, create a new app and grap it's API key
+* Create Pollfish Developer account
+* Create new apps for each targeting platform (Android & iOS) and grap the API keys
 * Install Pollfish plugin and call init function
-* Set to Release mode and release in AppStore and Google Play
+* Set to Release mode and publish on app store
 * Update your app's privacy policy
-* Request your account to get verified from the Pollfish Dashboard
+* Request your account to get verified from Pollfish Dashboard
+
+<br/>
+
+# Migrate to v2
+
+Pollfish React Native Plugin v2 introduces a different API with added customization options during initialization. If you have already integrated Pollfish React Native Plugin < v2 in you app, please take some time reading the migration guide below.
+
+<details><summary>➤ <b>Migration Guide</b> (Click to expand)</summary>
+<table>
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Initialization** <br/>
+
+```js
+var params = new RNPollfish.Builder('API_KEY');
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```js
+var params = new RNPollfish.Builder('ANDRPOD_API_KEY', 'IOS_API_KEY');
+```
+
+</table>
+</details>
 
 <br/>
 
@@ -39,7 +77,7 @@ Register as a Developer at [www.pollfish.com](http://www.pollfish.com)
 
 <br/>
 
-## 2. Add new app in Pollfish panel and copy the given API Key
+## 2. Add new apps in Pollfish panel and copy the given API Keys
 
 Login at [www.pollfish.com](http://www.pollfish.com) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your init function in your app.
 
@@ -69,18 +107,21 @@ cd ios && pod install && cd ..
 
 ## 4. Initialize Pollfish
 
-You can set several params to control the behaviour of Pollfish survey panel within your app with the use of the RNPollfish.Builder instance. Below you can see all the available options. Apart from the constructor all the other methods are optional.
+You can set several params to control the behaviour of Pollfish survey panel within your app with the use of the `RNPollfish.Builder` instance. Below you can see all the available options. Apart from the constructor all the other methods are optional.
 
 Param               | Description
 --------------------|:---------
-**`constructor(String)`**                   | Sets Your API Key (from step 2)
-**`indicatorPosition(RNPollfish.Position)`**| Sets the Position where you wish to place the Pollfish indicator. There are six different options RNPollfish.Position.{topLeft, topRight, middleLeft, middleRight, bottomLeft, bottom Right}: 
-**`indicatorPadding(Int)`**                 | Sets the padding from top or bottom depending on the position of the indicator specified before (if used in middle position, padding is calculated from the top).
-**`offerwallMode(Boolean)`**                | Sets Pollfish to offerwall mode
-**`releaseMode(Boolean)`**                  | Choose Debug or Release Mode
-**`rewardMode(Boolean)`**                   | Init in reward mode (skip Pollfish indicator to show a custom prompt)
-**`requestUUID(String)`**                   | Sets a unique id to identify a user and be passed through server-to-server callbacks
-**`userProperties(Json)`**                  | Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
+**`constructor(String, String)`**           | Sets Your Android and iOS API Keys (from step 2)
+**`.indicatorPosition(RNPollfish.Position)`**| Sets the Position where you wish to place the Pollfish indicator. There are six different options RNPollfish.Position.{topLeft, topRight, middleLeft, middleRight, bottomLeft, bottom Right}: 
+**`.indicatorPadding(Int)`**                 | Sets the padding from top or bottom depending on the position of the indicator specified before (if used in middle position, padding is calculated from the top).
+**`.offerwallMode(Boolean)`**                | Sets Pollfish to offerwall mode
+**`.releaseMode(Boolean)`**                  | Choose Debug or Release Mode
+**`.rewardMode(Boolean)`**                   | Init in reward mode (skip Pollfish indicator to show a custom prompt)
+**`.requestUUID(String)`**                   | Sets a unique id to identify a user and be passed through server-to-server callbacks
+**`.userProperties(Json)`**                  | Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
+**`.rewardInfo(Json)`**                      | An object holding information regarding the survey completion reward
+**`.clickId`**                               | A pass throught param that will be passed back through server-to-server callback
+**`.signature`**                             | An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object
 
 <br/>
 
@@ -93,21 +134,37 @@ import RNPollfish from 'react-native-plugin-pollfish';
 Initialize Pollfish
 
 ```js
-var params = new RNPollfish.Builder('API_KEY');
+var params = new RNPollfish.Builder('ANDROID_API_KEY', 'IOS_API_KEY'); // Android & iOS
+```
 
+```js
+var params = new RNPollfish.Builder('ANDROID_API_KEY', null); // Android only
+```
+
+```js
+var params = new RNPollfish.Builder(null, 'IOS_API_KEY'); // iOS only
+```
+
+```js
 params.indicatorPosition(RNPollfish.Position.topLeft)
     .indicatorPadding(10)
-    .offerwallMode(true)
+    .offerwallMode(false)
     .rewardMode(false)
     .releaseMode(false)
-    .requestUUID('UUID')
+    .requestUUID('REQUEST_UUID')
     .userProperties({
-        'gender': '1',
-        'education': '1',
+        gender: '1',
+        education: '1',
         ... 
     })
+    .clickId('CLICK_ID')
+    .signature('SINGNATURE')
+    .rewardInfo({
+        rewardName: 'Points',
+        rewardConversion: 1.3
+    })
     .build();
-    
+
 RNPollfish.init(params);
 ```
 
@@ -120,7 +177,7 @@ You can use Pollfish either in Debug or in Release mode.
 * **Debug mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
 * **Release mode** is the mode to be used for a released app (start receiving paid surveys).
 
-> **Note:** Be careful to set the `releaseMode` parameter to `true` when you release your app in a relevant app store!!**
+> **Note:** Be careful to set the `releaseMode` parameter to `true` when you release your app in a relevant app store!!
 
 <br/>
 
@@ -183,7 +240,7 @@ When your account is verified you will be able to start receiving paid surveys f
 
 <br/>
 
-## Optional Section
+# Optional Section
 
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
 
@@ -195,7 +252,7 @@ In this section we will list several options that can be used to control Pollfis
 
 ### 7.1. Get notified when a Pollfish survey is received
 
-You can be notified when a Pollfish survey is received. With this notification, you can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
+You can get notified when a Pollfish survey is received. With this notification, you can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
 
 <br/>
 
@@ -217,7 +274,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishSurveyReceivedListener, (event) =
 
 ### 7.2. Get notified when a Pollfish survey is completed
 
-You can be notified when a user completed a survey. With this notification, you can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
+You can get notified when a user completed a survey. With this notification, you can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
 
 ```js
 RNPollfish.addEventListener(RNPollfish.PollfishSurveyCompletedListener, (event) => {
@@ -229,7 +286,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishSurveyCompletedListener, (event) 
 
 ### 7.3. Get notified when a user is not eligible for a Pollfish survey
 
-You can be notified when a user is not eligible for a Pollfish survey. In market research monetization, users can get screened out while completing a survey beucase they are not relevant with the audience that the market researcher was looking for. In that case the user not eligible notification will fire and the publisher will make no money from that survey. The user not eligible notification will fire after the surveyReceived event, when the user starts completing the survey.
+You can get notified when a user is not eligible for a Pollfish survey. In market research monetization, users can get screened out while completing a survey beucase they are not relevant with the audience that the market researcher was looking for. In that case the user not eligible notification will fire and the publisher will make no money from that survey. The user not eligible notification will fire after the surveyReceived event, when the user starts completing the survey.
 
 ```js
 RNPollfish.addEventListener(RNPollfish.PollfishUserNotEligibleListener, (_) => {
@@ -241,7 +298,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishUserNotEligibleListener, (_) => {
 
 ### 7.4. Get notified when a Pollfish survey is not available
 
-You can be notified when a Pollfish survey is not available.
+You can get notified when a Pollfish survey is not available.
 
 ```js
 RNPollfish.addEventListener(RNPollfish.PollfishSurveyNotAvailableListener, (_) => {
@@ -253,7 +310,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishSurveyNotAvailableListener, (_) =
 
 ### 7.5. Get notified when a user has rejected a Pollfish survey
 
-You can be notified when a user has rejected a Pollfish survey.
+You can get notified when a user has rejected a Pollfish survey.
 
 ```js
 RNPollfish.addEventListener(RNPollfish.PollfishUserRejectedSurveyListener, (_) => {
@@ -325,7 +382,13 @@ RNPollfish.isPollfishPanelOpen((isPollfishPanelOpen) => {
 
 <br/>
 
-## More Info
+# Example
+
+If you would like to implement the Rewarded approach or just review an example in code, you can review the example app on [Github](https://github.com/pollfish/react-native-plugin-pollfish/tree/main/example).
+
+<br/>
+
+# More info
 
 You can read more info on how the Native Pollfish SDKs work on Android and iOS or how to set up properly a React Native environment at the following links:
 

@@ -1,4 +1,12 @@
-<div class="changelog" data-version="6.1.4.0">
+<div class="changelog" data-version="6.1.5.1">
+v6.1.5.1
+
+- Internal fixes
+
+v6.1.5.0
+
+- Updated with Pollfish Android SDK v6.1.5
+
 v6.1.4.0
 
 - Updated with Pollfish Android SDK v6.1.4
@@ -39,13 +47,14 @@ v5.6.0.0
 
 This guide is for publishers looking to use MoPub mediation to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.
 
-## Prerequisites
+<br/>
 
-* Android API 21 or later
-* [Pollfish Publisher Account](https://www.pollfish.com/dashboard/dev/)
+# Prerequisites
+
+* [Pollfish Developer Account](https://www.pollfish.com/dashboard/dev/)
 * [MoPub Developer Account](https://app.mopub.com/login)
-* [Pollfish SDK](https://www.pollfish.com/docs/android)
-* [MoPub SDK](https://github.com/mopub/mopub-android-sdk#download)
+* Android API 21 or later
+* Java version 1.8
 
 > **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old    
 
@@ -85,9 +94,22 @@ dependencies {
 	
 </br>
 
+# Quick Guide
+
+* Set up AdMob Rewarded Ads
+* Set up Pollfish
+* Add Pollfish AdMob Adapter to your project
+* Publish your app
+
+<br/>
+
+# Analytical Steps
+
 Below you can find a step by step guide on how to incorporate Pollfish surveys with MoPub mediation:
 
-## Step 1: Add MoPub Rewarded Ads in your app 
+## 1. Set up MoPub Rewarded Ads
+
+### 1.1. Create a Rewarded Ad Unit
 
 If you have not implemented [Rewarded Ads](https://developers.mopub.com/publishers/android/rewarded-ad/) in your app yet, you can follow the documentation implementation as described by MoPub. 
 
@@ -106,13 +128,14 @@ In the configuration of the Ad Unit you can specify a name for your rewarded pla
 <br/>
 
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mopub-add-reward.png"/>
+
 <br/>
 
 If you don't apply this setting, the Pollfish adapter will provide a dynamic value as you specified it on your Pollfish Dashboard, in the App Settings area, based on the actual price of each survey completed.
 
 <br/>
 
-## Step 2: Configure Ad Sources for your Rewarded Ad unit
+### 1.2. Configure Ad Sources for your Rewarded Ad unit
 
 You need to add Pollfish Network as a **Custom Native Network**
 line item and link it with your Rewarded Ad unit. 
@@ -144,12 +167,12 @@ Field | Value
 
 JSON configuration structure
 
-No | Key | Type
------------- | -------------| -------------
-2.1 | **`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish | String
-2.2 | **`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Bool
-2.4 | **`oferrwall_mode`** <br/> Sets Pollfish SDK to Oferwall Mode | Bool
-2.4 | **`request_uuid`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks | String
+Key | Type
+-------------| -------------
+**`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish | String
+**`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Bool
+**`oferrwall_mode`** <br/> Sets Pollfish SDK to Oferwall Mode | Bool
+**`request_uuid`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks | String
 
 Example:
 
@@ -200,51 +223,7 @@ Click next to proceed on the next step where you will select the audience target
 
 <br/>
 
-## Step 3: Set Up Pollfish
-
-### 3.1. Obtain a Publisher Account
-
-Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
-
-### 3.2. Add new app on Pollfish Publisher Dashboard and copy the given API Key
-
-Login at [www.pollfish.com](www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Publisher Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
-
-## Step 4: Add PollfishMoPubAdapter to your project
-
-### 4.1. Add Pollfish aar library to your project
-
-Download Pollfish Android SDK or reference it through maven().
-
-**Download Pollfish Android SDK**
-
-Import Pollfish **.AAR** file to your project libraries  
-
-If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate Pollfish aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
-
-**OR**
-
-**Retrieve Pollfish Android SDK through maven()**
-
-Retrieve Pollfish through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
-
-```groovy
-dependencies {
-    implementation 'com.pollfish:pollfish-googleplay:6.1.4'
-}
-```
-
-### 4.2. Integrate Google Play Services to your project
-
-Applications that integrate Pollfish SDK are required to include Google Play Services library in order to give access to the Advertising ID of a device to the SDK. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
-
-```java
-dependencies {
-    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
-}
-```
-
-### 4.3: Add MoPub SDK to your porject
+### 1.3. Add MoPub SDK to your porject
 
 Retrieve MoPub SDK through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
@@ -260,7 +239,57 @@ dependencies {
 
 Visit MoPub SDK [GitHub page](https://github.com/mopub/mopub-android-sdk#download) for more info and alternative ways of downloading and integrating their SDK in your app.
 
-### 4.4: Add Pollfish MoPub Adapter to your project
+<br/>
+
+## 2 Set Up Pollfish
+
+### 2.1. Obtain a Developer Account
+
+Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
+
+<br/>
+
+### 2.2. Add new app on Pollfish Publisher Dashboard and copy the given API Key
+
+Login at [www.pollfish.com](www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Publisher Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
+
+<br/>
+
+## 2.3. Add Pollfish SDK to your project
+
+Download Pollfish Android SDK or reference it through maven().
+
+**Download Pollfish Android SDK**
+
+**Import Pollfish `.aar` file to your project libraries**
+
+If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate Pollfish aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
+
+**Integrate Google Play Services to your project**
+
+Applications that integrate Pollfish SDK are required to include Google Play Services library in order to give access to the Advertising ID of a device to the SDK. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
+
+```java
+dependencies {
+    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
+}
+```
+
+**OR**
+
+**Retrieve Pollfish Android SDK through maven()**
+
+Retrieve Pollfish through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
+
+```groovy
+dependencies {
+    implementation 'com.pollfish:pollfish-googleplay:6.1.5'
+}
+```
+
+<br/>
+
+## 3. Add Pollfish MoPub Adapter to your project
 
 Import Pollfish MoPub Adapter **.AAR** file to your project libraries  
 
@@ -274,13 +303,13 @@ Retrieve Pollfish MoPub Adapter through **maven()** with gradle by adding the fo
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-mopub:6.1.4.0'
+    implementation 'com.pollfish.mediation:pollfish-mopub:6.1.5.1'
 }
 ```
 
 <br/>
 
-## Step 5: Request for a RewardedAd
+## 4. Request for a RewardedAd
 
 Import `com.mopub.common` and `com.mopub.mobileads` packages
 
@@ -435,7 +464,19 @@ MoPubRewardedAds.showRewardedAd("AD_UNIT_ID");
 
 <br/>
 
-## Step 6: Create PollfishMoPubMediationSettings object (Optional)
+## 5. Publish your app on the store
+
+If you everything worked fine during the previous steps, you should turn Pollfish to release mode and publish your app.
+
+> **Note:** After you take your app live, you should request your account to get verified through Pollfish Dashboard in the App Settings area.
+
+> **Note:** There is an option to show **Standalone Demographic Questions** needed for Pollfish to target users with surveys even when no actually surveys are available. Those surveys do not deliver any revenue to the publisher (but they can increase fill rate) and therefore if you do not want to show such surveys in the Waterfall you should visit your **App Settings** are and disable that option. You can read more [here](https://www.pollfish.com/docs/demographic-surveys)
+
+<br/>
+
+# Optional section
+
+## 6. Create PollfishMoPubMediationSettings object
 
 Pollfish MoPub Adapter provides different options that you can use to control the behaviour of Pollfish SDK.
 
@@ -444,14 +485,6 @@ Pollfish MoPub Adapter provides different options that you can use to control th
 Below you can see how to initialise **`PollfishMoPubMediationSettings`**  that is used to configure the behaviour of Pollfish SDK.
 
 <br/>
-
-```kotlin
-PollfishMoPubAdapter.PollfishMoPubMediationSettings
-    .create(apiKey: "API_KEY", 
-        requestUUID: "REQUEST_UUID", 
-        releaseMode: true,
-        offerwallMode: true)
-```
 
 No | Description
 ------------ | -------------
@@ -466,6 +499,8 @@ No | Description
 
 Pollfish API Key as provided by Pollfish on  [Pollfish Dashboard](https://www.pollfish.com/publisher/) after you sign up to the platform. If you have already specified Pollfish API Key on MoPub's UI, this param will override the one defined on Web UI.
 
+<br/>
+
 ### **6.2 `requestUUID`**
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
@@ -473,6 +508,8 @@ Sets a unique id to identify a user and be passed through server-to-server callb
 In order to register for such callbacks you can set up your server URL on your app's page on Pollfish Developer Dashboard and then pass your requestUUID through ParamsBuilder object during initialization. On each survey completion you will receive a callback to your server including the requestUUID param passed.
 
 If you would like to read more on Pollfish s2s callbacks you can read the documentation [here](https://www.pollfish.com/docs/s2s)
+
+<br/>
 
 ### **6.3 `releaseMode`**
 
@@ -482,6 +519,8 @@ Sets Pollfish SDK to Developer or Release mode.
 *   **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
 
 Pollfish MoPub Adapter runs Pollfish SDK in release mode by default. If you would like to test with Test survey, you should set release mode to fasle.
+
+<br/>
 
 ### **6.4 `offerwall_mode`**
 
@@ -524,15 +563,18 @@ SdkConfiguration configuration = new SdkConfiguration.Builder(adUnitId)
 MoPub.initializeSdk(this, configuration, this);
 ```
 
-## Step 7: Publish your app on the store
+<br/>
 
-If you everything worked fine during the previous steps, you should turn Pollfish to release mode and publish your app.
+## 7. Payouts on Screenouts
 
-> **Note:** After you take your app live, you should request your account to get verified through Pollfish Dashboard in the App Settings area.
+In Market Research monetization users can get screened out within the survey since the Researcher might be looking a different user based on the provided answers. Screenouts do not deliver any revenue for the publisher nor any reward for the users. If you would like to activate payouts on screenouts too please follow the steps as described [here](https://www.pollfish.com/docs/pay-on-screenouts).
 
-> **Note:** There is an option to show **Standalone Demographic Questions** needed for Pollfish to target users with surveys even when no actually surveys are available. Those surveys do not deliver any revenue to the publisher (but they can increase fill rate) and therefore if you do not want to show such surveys in the Waterfall you should visit your **App Settings** are and disable that option. You can read more [here](https://www.pollfish.com/docs/demographic-surveys)
+<br/>
 
+# More info
 
-## Step 8: Payouts on Screenouts (optional)
+You can read more info on how the Pollfish SDKs work or how to get started with MoPub at the following links:
 
-In Market Research monetization users can get screened out within the survey since the Researcher might be looking a different user based on the provided answers. Screenouts do not deliver any revenue for the publisher nor any reward for the users. If you would like to activate payouts on screenouts too please follow the steps as described <a href="https://www.pollfish.com/docs/pay-on-screenouts">here</a>. 
+[Pollfish Android SDK](https://pollfish.com/docs/android/google-play)
+
+[MoPub Android SDK](https://developers.mopub.com/publishers/android/integrate/)

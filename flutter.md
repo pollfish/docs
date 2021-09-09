@@ -1,4 +1,3 @@
-
 Pollfish Flutter plugin, allows integration of Pollfish surveys into Flutter Android and iOS apps. 
 
 Pollfish is a mobile monetization platform delivering surveys instead of ads through mobile apps. Developers get paid per completed surveys through their apps.
@@ -6,26 +5,40 @@ Pollfish is a mobile monetization platform delivering surveys instead of ads thr
 
 Pollfish Flutter Plugin can be found on Dart Packages [website](https://pub.dartlang.org/packages/flutter_pollfish). The source code and an example app can be found on [Github](https://github.com/pollfish/flutter-plugin-pollfish).
 
-## Prerequisites
+<br/>
 
-*	Android 21+ using Google Play Services
-*	iOS version 9.0+
+# Prerequisites
+
+*	Android SDK 21 or higher using Google Play Services
+*	iOS version 9.0 or higher
+* Flutter version 1.20.0 or higher
+* Dart SDK version 2.12.0 or higher
+* CocoaPods version 1.10.0 or higher
+
+<br/>
 
 > **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old    
 
 > **Note:** Pollfish iOS SDK utilizes Apple's Advertising ID (IDFA) to identify and retarget users with Pollfish surveys. As of iOS 14 you should initialize Pollfish Flutter plugin in iOS only if the relevant IDFA permission was granted by the user
 
-## Quick Guide
+<br/>
 
-* Sign Up for a Pollfish Publisher account, create a new app and grap it's API key
-* Install and integrate Pollfish plugin and call the init function
+# Quick Guide
+
+* Sign Up for a Pollfish Developer account,
+* Create new apps for each targeting platform (Android & iOS) and grap the API keys
+* Install Pollfish plugin and call init function
 * Set to Release mode and publish on app store
 * Update your app's privacy policy
 * Request your account to get verified from Pollfish Dashboard
 
-Pollfish Flutter Plugin v3.0.0 introduces a different API with added customization options during initialization, new exposed methods and slighly different callbacks. If you have already integrated Pollfish Flutter Plugin < v3.0.0 in you app, please take some time reading the migration guide below.
+<br/>
 
-<details><summary>➤ <b>Kotlin</b> (Click to expand)</summary>
+# Migrate to v4
+
+Pollfish Flutter Plugin v4 introduces a different API with added customization options during initialization. If you have already integrated Pollfish Flutter Plugin < v4 in you app, please take some time reading the migration guide below.
+
+<details><summary>➤ <b>Migration Guide</b> (Click to expand)</summary>
 <table>
 <tr>
 <td>
@@ -39,13 +52,18 @@ Pollfish Flutter Plugin v3.0.0 introduces a different API with added customizati
 
 ```dart
 FlutterPollfish.instance.init(
-     apiKey: 'YOUR_API_KEY',
-     pollfishPosition: 5,
-     indPadding: 40,
-     rewardMode: false,
-     releaseMode: true,
-     requestUUID: 'USER_INTERNAL_ID',
-     offerwallMode: false);
+    apiKey: 'YOUR_API_KEY',
+    pollfishPosition: 5,
+    indicatorPadding: 40,
+    rewardMode: false,
+    releaseMode: true,
+    requestUUID: 'REQUEST_UUID',
+    offerwallMode: false,
+    userProperties: <String, dynamic>{ 
+      'gender': '1',
+      'education': '1',
+      ...
+    });
 ```
 
 <tr>
@@ -58,12 +76,13 @@ FlutterPollfish.instance.init(
 
 ```dart
 FlutterPollfish.instance.init(
-    apiKey: 'YOUR_API_KEY',
-    pollfishPosition: 5,
+    androidApiKey: 'ANDROID_API_KEY', // Required
+    iOSApiKey: 'IOS_API_KEY',         // Required
+    pollfishPosition: Position.bottomRight,
     indicatorPadding: 40,
     rewardMode: false,
     releaseMode: true,
-    requestUUID: 'USER_INTERNAL_ID',
+    requestUUID: 'REQUEST_UUID',
     offerwallMode: false,
     userProperties: <String, dynamic>{ 
       'gender': '1',
@@ -72,138 +91,85 @@ FlutterPollfish.instance.init(
     });
 ```
 
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **Survey Received Notification** <br/>
-
-```dart
-void onPollfishSurveyReveived(String result) => setState(() {
-  List<String> surveyCharacteristics = result.split(',');
-        
-  if (surveyCharacteristics.length >= 4) {
-    print('Survey Received: - SurveyInfo with CPA: ${surveyCharacteristics[0]} and IR: ${surveyCharacteristics[1]} and LOI: ${surveyCharacteristics[2]} and SurveyClass: ${surveyCharacteristics[3]} and RewardName: ${surveyCharacteristics[4]}  and RewardValue: ${surveyCharacteristics[5]}');
-  } else {
-    print('Offerwall Ready');
-  }
-});
-```
-
-<tr>
-<td>
-
-<span style="color:green">+</span>
-
-<td>
-<br/>
-
-```dart
-void onPollfishSurveyReceived(SurveyInfo? surveyInfo) => setState(() {
-  if (surveyInfo == null) {
-    _logText = 'Offerwall Ready'; // Offerwall
-  } else {
-    print('Survey Received: - ${surveyInfo.toString()}');
-  }
-});
-```
-
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **Survey Completed Notififation** <br/>
-
-```dart
-void onPollfishSurveyCompleted(String result) => setState(() {
-  List<String> surveyCharacteristics = result.split(',');
-  if (surveyCharacteristics.length >= 4) {
-    print('Survey Completed: - SurveyInfo with CPA: ${surveyCharacteristics[0]} and IR: ${surveyCharacteristics[1]} and LOI: ${surveyCharacteristics[2]} and SurveyClass: ${surveyCharacteristics[3]} and RewardName: ${surveyCharacteristics[4]}  and RewardValue: ${surveyCharacteristics[5]}');
-  }
-});
-```
-
-<tr>
-<td>
-
-<span style="color:green">+</span>
-
-<td>
-<br/>
-
-```dart
-void onPollfishSurveyCompleted(SurveyInfo? surveyInfo) => setState(() {
-  print('Survey Completed: - ${surveyInfo?.toString()}');
-});
-```
-
 </table>
 </details>
 
-
-<br/>
-<img style="margin:auto;  width:230px; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/basic-format.gif"/>
 <br/>
 
-## Steps Analytically
+# Analytical Steps
 
-### 1. Obtain a Developer Account
+## 1. Obtain a Developer Account
 
 Register as a Developer at [www.pollfish.com](http://www.pollfish.com)
 
-### 2. Add new app in Pollfish panel and copy the given API Key
+<br/>
 
-Login at [www.pollfish.com](http://www.pollfish.com) and add a new app on Pollfish Dashboard. Copy the given API key for this app in order use it later on, in your init function in your app.
+## 2. Add new apps in Pollfish panel and copy the given API Keys
 
-### 3. Installing and importing the plugin
+Login at [www.pollfish.com](http://www.pollfish.com), add a new app for each targeting platform (Android & iOS) at Pollfish panel in section My Apps and copy the given API keys to use later in your init function in your app.
+
+<br/>
+
+## 3. Install the plugin
 
 Add this to your package's pubspec.yaml file:
 
-```
+```yaml
 dependencies:
-  flutter_pollfish: ^3.0.5
+  ...
+  flutter_pollfish: ^4.0.0
 ```
-You can install then the package from the command line:
 
-```
+Execute the following command
+
+```bash
 flutter packages get
 ```
-You can import then in your Dart code the plugin, as below:
 
-```
+<br/>
+
+## 4. Initialize Pollfish
+
+Import Pollfish
+
+```dart
 import 'package:flutter_pollfish/flutter_pollfish.dart';
 ```
 
-
-### 4. Initializing Pollfish
-
-When you initialize Pollfish you should pass the API Key of the app  (from step 2) which is a mandatory param:
+Initialize Pollfish using the Api keys from step 2. If your are targing only one platform (eg iOS) you can set the other's platform api key (Android) to `null`.
 
 For example:
 
+```dart
+FlutterPollfish.instance.init(androidApiKey: 'ANDROID_API_KEY', iOSApiKey: 'IOS_API_KEY'); // Android and iOS
 ```
-FlutterPollfish.instance.init(apiKey: 'YOUR_API_KEY')
+
+```dart
+FlutterPollfish.instance.init(androidApiKey: 'ANDROID_API_KEY', iOSApiKey: null); // Android only
 ```
-#### 4.1 Other Init params (optional)
+
+```dart
+FlutterPollfish.instance.init(androidApiKey: null, iOSApiKey: 'IOS_API_KEY'); // iOS only
+```
+
+<br/>
+
+### 4.1 Other Init params (optional)
 
 During initialization you can pass different optional params:
 
+1. **`indicatorPosition`**: Position - `Position.topLeft`, `.topRight`, `.middleLeft`, `.middleRight`, `.bottomLeft`, `.bottomRight` (defines the side of the Pollfish panel, and position of Pollfish indicator)
+2. **`indicatorPadding`**: int - Sets padding from the top or bottom according to Position of the indicator
+3. **`releaseMode`**: bool - Sets Pollfish SDK to Debug or Release mode. Use Developer mode to test your implementation with demo surveys
+4. **`rewardMode`**: bool - Initializes Pollfish in reward mode (used when implementing a Rewarded approach)
+5. **`requestUUID`**: String - Sets a unique id to identify a user. This param will be passed back through server-to-server callbacks
+5. **`offerwallMode`**: bool - Sets Pollfish to Offerwall mode
+6. **`userProperties`**: Map<String, Object> - Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
+7. **`clickId`**: String - A pass throught param that will be passed back through server-to-server callback
+8. **`signature`**: String - An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
+9. **`rewardInfo`**: RewardInfo - An object holding information regarding the survey completion reward
 
-1. **indicatorPosition**: Position - `Position.topLeft`, `.topRight`, `.middleLeft`, `.middleRight`, `.bottomLeft`, `.bottomRight` (defines the side of the Pollfish panel, and position of Pollfish indicator)
-2. **indicatorPadding**: int - Sets padding from the top or bottom according to Position of the indicator
-3. **releaseMode**: bool - Sets Pollfish SDK to Debug or Release mode. Use Developer mode to test your implementation with demo surveys
-4. **rewardMode**: bool - Initializes Pollfish in reward mode (used when implementing a Rewarded approach)
-5. **requestUUID**: String - Sets a unique id to identify a user. This param will be passed back through server-to-server callbacks
-5. **offerwallMode**: bool - Sets Pollfish to Offerwall mode
-6. **userProperties**: Map<String, Object> - Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
+<br/>
 
 #### Debug Vs Release Mode
 
@@ -212,79 +178,110 @@ You can use Pollfish either in Debug or in Release mode.
 * **Debug mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
 * **Release mode** is the mode to be used for a released app (start receiving paid surveys).
 
+> **Note:** In Android debugMode parameter is ignored. Your app turns into debug mode once it is signed with a debug key. If you sign your app with a release key it automatically turns into Release mode.
 
-#### rewardMode
+> **Note:** Be careful to turn the `releaseMode` parameter to `true` when you release your app in a relevant app store!!
 
-*	**rewardMode = false** is the standard way of using Pollfish in your apps. Using init function with reward mode disabled, enables controlling the behavior of Pollfish in an app from Pollfish panel.
+<br/>
 
-*	**rewardMode = true** ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small Pollfish icon) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users, before completing surveys to increase completion rates.
+### Reward Mode 
 
-For example:
+Reward mode false during initialization enables controlling the behavior of Pollfish in an app from Pollfish panel. Enabling reward mode ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small button) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates.
+
+<br/>
 
 ```dart
 FlutterPollfish.instance.init(
-    apiKey: 'YOUR_API_KEY',
-    pollfishPosition: 5,
-    indicatorPadding: 40,
-    rewardMode: false,
-    releaseMode: true,
-    requestUUID: 'USER_INTERNAL_ID',
-    offerwallMode: false,
-    userProperties: <String, dynamic>{ 
-      'gender': '1',
-      'education': '1',
-      ...
-    });
+  androidApiKey: 'ANDROID_API_KEY',
+  iOSApiKey: 'IOS_API_KEY',
+  pollfishPosition: 5,
+  indicatorPadding: 40,
+  rewardMode: false,
+  releaseMode: true,
+  requestUUID: 'REQUEST_UUID',
+  offerwallMode: false,
+  userProperties: <String, dynamic>{ 
+    'gender': '1',
+    'education': '1',
+    ...
+  }),
+  signature: 'SIGNATURE',
+  clickId: 'CLICK_ID',
+  rewardInfo: RewardInfo('Point', 1.3));
 ```
 
-## Manually showing or hiding Pollfish panel
+<br/>
 
-During the lifetime of a survey, publisher can manually show or hide survey panel by calling the following functions.
+## 5. Update your Privacy Policy
 
-```dart
-FlutterPollfish.instance.show();
-```
+### Add the following paragraph to your app's privacy policy
 
-or
+<br/>
 
-```dart
-FlutterPollfish.instance.hide();
-```
+*“Survey Serving Technology*  
 
-## Check if Pollfish Surveys are available on your device
+*This app uses Pollfish SDK. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Publishers of applications for smartphones in order to have access to users of such applications and address survey questionnaires to them. When a user connects to this app, a specific set of user's device data (including Advertising ID, Device ID, other available electronic identifiers and further response meta-data is automatically sent, via our app, to Pollfish servers, in order for Pollfish to discern whether the user is eligible for a survey. For a full list of data received by Pollfish through this app, please read carefully the Pollfish respondent terms located at [https://www.pollfish.com/terms/respondent](https://www.pollfish.com/terms/respondent). These data will be associated with your answers to the questionnaires whenever Pollfish sends such questionnaires to eligible users. Pollfish may share such data with third parties, clients and business partners, for commercial purposes. By downloading the application, you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link [https://www.pollfish.com/respondent/opt-out](https://www.pollfish.com/respondent/opt-out). We once more invite you to check the Pollfish respondent's terms of use, if you wish to have more detailed view of the way Pollfish works and with whom Pollfish may further share your data."*  
 
-Publishers can check if Pollfish Surveys are available on your device by calling the following function.
+---
 
-```dart
-FlutterPollfish.instance.isPollfishPresent().then((isPresent) => {
-  print("isPresent: $isPresent");
-});
-```
+<br/>
 
-## Check if Pollfish Panel is open
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/multimedia/basic-format.gif"/>
 
-Publishers can check if Pollfish Survey Panel is open by calling the following function.
+<br/>
 
-```dart
-FlutterPollfish.instance.isPollfishPanelOpen().then((isOpen) => {
-  print("isOpen: $isOpen");
-});
-```
+If you have any question, like why you do not see surveys on your own device in release mode, please have a look in our <a href="https://help.pollfish.com/en/collections/24867-faq-publishers">FAQ page</a>
 
-## Listening to Pollfish notifications
+<br/>
 
-Publishers can register and receive notifications on different events during the lifetime of a survey
+> **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Bear in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this new type of targeting.
 
-### Pollfish Survey Received notification
+<br/>
 
-Once a survey is received, Pollfish Survey Received notification is fired to inform the publisher. The notification includes several info around the survey such as:
+<table style="border:0 !important;">
+<tr>
+<td><img src="https://storage.googleapis.com/pollfish-images/targeting.png" style="padding:4px"/></td>
+<td><img src="https://storage.googleapis.com/pollfish-images/results.png" style="padding:4px"/></td>
+</tr>
+</table>
+<br/>
 
-- CPA: money to be earned in USD cents
-- LOI: length of the survey is minutes
-- IR: incidence rate (conversion)
-- Survey Class: survey provider (Pollfish, Toluna, Cint etc)
-- Reward Name: Reward name as specified on Pollfish Dashboard
-- Reward Value: Reward value based on exchange rate as specified on Pollfish Dashboard
+
+In our efforts to include publishers in this process and be as transparent as possible we provide full control over the process. We let publishers decide if their users are served these standalone surveys or not, in 2 different ways. Firstly by monitoring the process in code and excluding any users by listening to the relevant noitifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) field which will be 0 USD cents. Secondly, publishers can disable the standalone demographic surveys through the Pollfish Developer Dashboard in the Settings area of an app. You can read more on demographic surveys <a href="https://www.pollfish.com/docs/demographic-surveys">here</a>. 
+
+<br/>
+
+## 6. Request your account to get verified
+
+After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
+
+<br/>
+
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/verify_account.png"/>
+
+<br/>
+
+When your account is verified you will be able to start receiving paid surveys from Pollfish clients.
+
+<br/>
+
+# Optional Section
+
+In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how to be eligible to more targeted (high-paid) surveys. All these steps are optional.
+
+<br/>
+
+## 7. Implement Pollfish Event Listeners
+
+<br/>
+
+### 7.1. Get notified when a Pollfish survey is received
+
+You can get notified when a Pollfish survey is received. With this notification, you can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
+
+<br/>
+
+> **Note:** If Pollfish is initialized in offerwall mode then the event parameter will be `null`, otherwise it will include info around the received survey.
 
 ```dart
 FlutterPollfish.instance.setPollfishSurveyReceivedListener(onPollfishSurveyReceived);
@@ -298,80 +295,25 @@ void onPollfishSurveyReceived(SurveyInfo? surveyInfo) => setState(() {
 });
 ```
 
-### Pollfish Survey Completed notification
+<br/>
 
-Once a survey is completed, Pollfish Survey Completed notification is fired to inform the publisher. The notification includes several info around the survey such as:
+### 7.2. Get notified when a Pollfish survey is completed
 
-- CPA: money to be earned in USD cents
-- LOI: length of the survey is minutes
-- IR: incidence rate (conversion)
-- Survey Class: survey provider (Pollfish, Toluna, Cint etc)
-
+You can get notified when a user completed a survey. With this notification, you can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
 
 ```dart
 FlutterPollfish.instance.setPollfishSurveyCompletedListener(onPollfishSurveyCompleted);
 
-void onPollfishSurveyCompleted(SurveyInfo? sureyInfo) => setState(() {
-    print('Survey Completed: - ${surveyInfo?.toString()}');
+void onPollfishSurveyCompleted(SurveyInfo sureyInfo) => setState(() {
+    print('Survey Completed: - ${surveyInfo.toString()}');
 });
 ```
 
-### Pollfish Survey Panel Opened notification
+<br/>
 
-A notification that informs that Pollfish Survey panel opened
+### 7.3. Get notified when a user is not eligible for a Pollfish survey
 
-
-```dart
-FlutterPollfish.instance.setPollfishOpenedListener(onPollfishOpened);
-
-void onPollfishOpened() => setState(() {
-   print('Survey Panel Open');
-}
-```
-
-### Pollfish Survey Panel Closed notification
-
-A notification that informs that Pollfish Survey panel closed
-
-
-```dart
-FlutterPollfish.instance.setPollfishClosedListener(onPollfishClosed);
-
-void onPollfishClosed() => setState(() {
-   print('Survey Panel Closed');
-}
-```
-
-### Pollfish Survey Not Available notification
-
-A notification that informs that no survey is available for that user
-
-
-```dart
-FlutterPollfish.instance.setPollfishSurveyNotAvailableListener(onPollfishSurveyNotAvailable);
-
-void onPollfishSurveyNotAvailable() => setState(() {
-   print('Survey Not Available');
-}
-```
-
-### Pollfish User Reject Survey notification
-
-A notification that informs that the user rejected the survey
-
-
-```dart
-FlutterPollfish.instance.setPollfishUserRejectedSurveyListener(onPollfishUserRejectedSurvey);
-
-void onPollfishUserRejectedSurvey() => setState(() {
-   print('User Rejected Survey');
-}
-```
-
-### Pollfish User Not Eligible notification
-
-A notification that informs that the user got screened out from the survey
-
+You can get notified when a user is not eligible for a Pollfish survey. In market research monetization, users can get screened out while completing a survey beucase they are not relevant with the audience that the market researcher was looking for. In that case the user not eligible notification will fire and the publisher will make no money from that survey. The user not eligible notification will fire after the surveyReceived event, when the user starts completing the survey.
 
 ```dart
 FlutterPollfish.instance.setPollfishUserNotEligibleListener(onPollfishUserNotEligible);
@@ -381,9 +323,67 @@ void onPollfishUserNotEligible() => setState(() {
 }
 ```
 
-### Unsubscribe from Pollfish Listeners
+<br/>
 
-Publishers should ensure to unsubscribe from Pollfish Notification listeners at the end of the state's lifecycle
+### 7.4. Get notified when a Pollfish survey is not available
+
+You can be notified when a Pollfish survey is not available.
+
+```dart
+FlutterPollfish.instance.setPollfishSurveyNotAvailableListener(onPollfishSurveyNotAvailable);
+
+void onPollfishSurveyNotAvailable() => setState(() {
+   print('Survey Not Available');
+}
+```
+
+<br/>
+
+### 7.5. Get notified when a user has rejected a Pollfish survey
+
+You can be notified when a user has rejected a Pollfish survey.
+
+```dart
+FlutterPollfish.instance.setPollfishUserRejectedSurveyListener(onPollfishUserRejectedSurvey);
+
+void onPollfishUserRejectedSurvey() => setState(() {
+   print('User Rejected Survey');
+}
+```
+
+<br/>
+
+### 7.6. Get notified when a Pollfish survey panel has opened
+
+You can register and get notified when a Pollfish survey panel has opened. Publishers usually use this notification to pause a game until the pollfish panel is closed again.
+
+```dart
+FlutterPollfish.instance.setPollfishOpenedListener(onPollfishOpened);
+
+void onPollfishOpened() => setState(() {
+   print('Survey Panel Open');
+}
+```
+
+<br/>
+
+### 7.7. Get notified when a Pollfish survey panel has closed
+
+You can register and get notified when a Pollfish survey panel has closed. Publishers usually use this notification to resume a game that they have previously paused when the Pollfish panel was opened.
+
+```dart
+FlutterPollfish.instance.setPollfishClosedListener(onPollfishClosed);
+
+void onPollfishClosed() => setState(() {
+   print('Survey Panel Closed');
+}
+```
+
+<br/>
+
+### 7.8 Unsubscribe from Pollfish Listeners
+
+Please ensure you unsubscribe from Pollfish notification listeners at the end of the state's lifecycle
 
 ```dart
 @override
@@ -393,26 +393,62 @@ void dispose() {
 }
 ```
 
-
-## Following the Rewarded and/or the Offerwall approach
-
-An example is provided on [Github](https://github.com/pollfish/flutter-plugin-pollfish) that demonstrates how a publisher can implement the rewarded and/or the Offerwall approach. Publisher has to initialize Pollfish in reward mode = true and specify if Offerwall mode should be on. When a survey is received, the publisher can show a custom prompt, to incentivize user to participate to the survey. If the user clicks on the prompt, the publisher can call Pollfish show to show the questioanniare. Upon survey completion, the publisher can reward the user.
-
-
-## Limitations / Minimum Requirements
-
-This is just an initial version of the plugin. There are still some
-limitations:
-
-- Minimum iOS is 9.0 and minimum Android version is 21
-
-
-## Example
-
-If you would like to implement the Rewarded approach or just review an example in code, you can review the example app on [Github](https://github.com/pollfish/flutter-plugin-pollfish).
-
-
-<br/>
-<img style="margin:auto;  width:230px; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/flutter_example.gif"/>
 <br/>
 
+## 8. Manually show/hide Pollfish panel
+
+During the lifetime of a survey, you can manually hide and show Pollfish by calling the following functions.
+
+```dart
+FlutterPollfish.instance.show();
+```
+
+or
+
+```dart
+FlutterPollfish.instance.hide();
+```
+
+<br/>
+
+## 9. Check if Pollfish surveys are available on your device
+
+After a Pollish survey is received you can check at any time if the survey is available at the device by calling the following function.
+
+```dart
+FlutterPollfish.instance.isPollfishPresent().then((isPresent) => {
+  print("isPresent: $isPresent");
+});
+```
+
+<br/>
+
+## 10. Check if Pollfish panel is open
+
+You can check at any time if the survey panel is open by calling the following function.
+
+```dart
+FlutterPollfish.instance.isPollfishPanelOpen().then((isOpen) => {
+  print("isOpen: $isOpen");
+});
+```
+
+<br/>
+
+# Example
+
+If you would like to implement the Rewarded approach or just review an example in code, you can review the example app on [Github](https://github.com/pollfish/flutter-plugin-pollfish/tree/master/example).
+
+<br/>
+
+# More info
+
+You can read more info on how the Native Pollfish SDKs work on Android and iOS or how to set up properly a Flutter environment at the following links:
+
+<br/>
+
+[Pollfish Android SDK Integration Guide](https://pollfish.com/docs/android)
+
+[Pollfish iOS SDK Integration Guide](https://pollfish.com/docs/ios)
+
+[Flutter Starting Guide](https://flutter.dev/docs/get-started)

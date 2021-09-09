@@ -1,4 +1,12 @@
-<div class="changelog" data-version="6.0.5">
+<div class="changelog" data-version="6.1.1">
+v6.1.1
+
+- Updated with Pollfish Android SDK v6.1.5
+
+v6.1.0
+
+- Updated with Pollfish iOS SDK v6.2.2
+
 v6.0.5
 
 - Updated with Pollfish iOS SDK v6.2.1
@@ -61,7 +69,7 @@ v5.7.0
 
 v5.6.3
 
-- Updated with iOS SDK (v5.5.2)
+- Updated with Pollfish iOS SDK v5.5.2
 
 v5.6.2
 
@@ -70,48 +78,48 @@ v5.6.2
 
 v5.6.1
 
-- Updated with iOS SDK (v5.4.1) and Android SDK (v5.6.0)
+- Updated with Pollfish iOS SDK v5.4.1 and Pollfish Android SDK v5.6.0
 
 v5.6.0
 
-- Updated with iOS SDK (v5.3.0)
+- Updated with Pollfish iOS SDK v5.3.0
 
 v5.5.1
 
-- Updated with Android SDK (v5.5.1) that aligns with the latest Google Play policy changes
+- Updated with Pollfish Android SDK v5.5.1 that aligns with the latest Google Play policy changes
 
 v5.5.0
 
-- Updated with Android SDK (v5.5.0)
+- Updated with Pollfish Android SDK v5.5.0
 
 v5.4.1
 
-- Updated with Android SDK (v5.4.1)
+- Updated with Pollfish Android SDK v5.4.1
 
 v5.4.0
 
-- Updated with Android SDK (v5.4.0)
+- Updated with Pollfish Android SDK v5.4.0
 
 	
 v5.3.0
 
 - Added support for Unity 2019.3+
 - Updated with the latest External Dependency Manager from Google Ads
-- Updated with iOS SDK (v5.2.5) and Android SDK (v5.3.0)
+- Updated with Pollfish iOS SDK v5.2.5 and Pollfish Android SDK v5.3.0
 
 v5.2.0
 
-- Updated with iOS SDK (v5.2.0) and Android SDK (v5.1.0)
+- Updated with Pollfish iOS SDK v5.2.0 and Pollfish Android SDK v5.1.0
 
 v5.1.0
 
-- Updated with iOS SDK v5.1.0
+- Updated with Pollfish iOS SDK v5.1.0
 
 v5.0.0
 
 - Added support for offerwall
 - New Android minimum supported version is 16
-- Updated with Pollfish Android & iOS SDKs v5.0.x
+- Updated with Pollfish Android and Pollfish iOS SDK v5.0.0
 
 v4.5.1
 
@@ -178,50 +186,46 @@ v4.0.0
 - Initial Release
 - Support for Lollipop
 </div>
+
+Pollfish Unity plugin, allows integration of Pollfish surveys into Unity Android and iOS apps. 
+
+Pollfish is a mobile monetization platform delivering surveys instead of ads through mobile apps. Developers get paid per completed surveys through their apps.
+
 <br/>
 
-#### **Requirements**
+# Prerequisites
 
 Pollfish Unity Plugin works with:
 
-*   Unity 2020 +
-*   iOS 9.0 +
-*   Android 21 +
+* Android SDK 21 or higher using Google Play Services
+* iOS 9.0 or higher
+* Unity 2019 or higher
+* CocoaPods version 1.10.0 or higher
 
-Please set minimum version of your project accordingly.
-
-> **Note:** Pollfish does not work on Editor, so please do try only on mobile devices
-
-> **Note:** Pollfish SDK requires minSdk 21. If your app supports a lower minSdk you can still build your app and exlude Pollfish from targets lower than 21 by exporting an Android project from the Unity's Build Settings and adding the following block on the `AndroidManifest.xml` of the `unityLibrary` module.
-
-**AndroidManifest.xml**
-
-```xml
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    ... >
-
-    <uses-sdk tools:overrideLibrary="com.pollfish.pollfish" />
-
-    <application
-	... >
-        ...
-    </application>
-```
-
-<br/>
+> **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old   
 
 > **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
+
+> **Note:** Pollfish does not work on Editor, so please do try only on mobile devices
 
 <br/>
 
 You can find instructions on how to install ios-support package and request for IDFA permission from a Unity script [here](https://github.com/Unity-Technologies/com.unity.ads.ios-support)
 
-> **Note:** If you are updating from version 5.7.6 or lower to 6.0.0 or higher we recommend to clean your project from any of Pollfish Unity Plugin files and then import the lastest version. A comparisson between the v5 and v6 public API can be found on the following migration guide
+# Quick Guide
+
+* Create Pollfish Developer account
+* Create new apps for each targeting platform (Android & iOS) and grap the API keys
+* Install Pollfish plugin and call init function
+* Set to Release mode and publish on app store
+* Update your app's privacy policy
+* Request your account to get verified from Pollfish Dashboard
+
+> **Note:** If you are updating from version v5 or lower to v6 or higher we recommend to clean your project from any of Pollfish Unity Plugin files and then import the lastest version. A comparisson between the v5 and v6 public API can be found on the following migration guide
 
 <br/>
 
-## Migrate from to v6
+## Migrate to v6
 
 <details><summary>➤ <b>Usage Diff</b> (Click to expand)</summary>
 <table>
@@ -342,7 +346,7 @@ Register as a Publisher at [www.pollfish.com](www.pollfish.com/login/publisher)
 
 <br/>
 
-## 2. Add new app on Pollfish Developer Dashboard and copy the given API Key
+## 2. Add new apps on Pollfish Developer Dashboard and copy the given API Keys
 
 Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click **"Add a new app"** on Pollfish Developer Dashboard in section **"My Apps"**. Copy then the given API key for this app, in order to use later on, when initializing Pollfish within your code.
 
@@ -350,7 +354,7 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click **"Add
 
 <br/>
 
-## 3. Import Pollfish in your project
+## 3. Install Pollfish in your project
 
 Download Pollfish Unity Plugin from the website. In Pollfish Unity Plugin .zip file you will find the **PollfishUnityPlugin.unitypackage** file. You can use this file to easily import plugin’s necessary files.
 
@@ -387,14 +391,24 @@ Imported files will be listed in the following directories:
 
 ![alt text](https://storage.googleapis.com/pollfish_production/doc_images/resolve_new.png)
 
+> **Note:** If you are using gradle templates in your Unity project unity-jar-resolver will not resolve any Android dependencies nor handle class duplications. In such case you will need to handle class duplication by excluding the duplicating group from Pollfish Android SDK gradle dependency.
+> 
+> For example if a class from `com.google.android.gms` package is duplicated:
+>```groovy
+>implementation 'com.pollfish:pollfish-googleplay:6.1.5' {
+>   exclude group: 'com.google.android.gms'
+>}
+>```
+> <br/>
 
+<br/>
 
 > **Note:** If you do not want to use External Depency Manager you need to manually add the following dependencies to your Android project:
 >
 >```groovy  
 >dependencies {
 >  ...
->  implementation 'com.pollfish:pollfish-googleplay:6.1.2'
+>  implementation 'com.pollfish:pollfish-googleplay:6.1.5'
 >}
 >```
 >
@@ -413,7 +427,7 @@ Imported files will be listed in the following directories:
 
 <br/>
 
-## 4. Initializing Pollfish
+## 4. Initialize Pollfish
 
 You should use a MonoBehaviour object for your scene that will enable interaction with Pollfish Unity plugin. Pollfish should be initialized when an app starts or resumes (this way you will always receive new surveys when available).
 
@@ -544,258 +558,7 @@ public void OnEnable()
 
 <br/>
 
-## 5. Handling Android or iOS specific cases
-
-###  5.1 If you are targeting Android ![alt text](https://storage.googleapis.com/pollfish-images/android-icon.png)
-
-### Android Back Event
-
-Since Pollfish uses Android back button to close its panel if open, if you want to replicate this behavior you should capture  back button event and call Pollfish.ShouldQuit(); to inform the library and act accordingly.
-
-```csharp
-public void Update ()
-{        
-	/* handling Android back event */	
-
-	if (Input.GetKeyDown (KeyCode.Escape)) {
-
-		Pollfish.ShouldQuit();
-
-	}
-}
-```
-
-<br/>
-
-### AndroidManifest file
-
-We have included an AndroidManifest.xml file that will work for most of user cases However if you need to include your own AndroidManifest file remember to add the following lines:
-
-```xml
-<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
-```
-
-within your Activity <activity></activity> that holds the following intent filters:
-
-```xml
-<intent-filter>
-  <action android:name="android.intent.action.MAIN" />
-  <category android:name="android.intent.category.LAUNCHER" />
-</intent-filter>
-```
-
-This line enable touch events to pass through Pollfish SDK.
-
-Finally, Pollfish requires Internet permission in order to work, so please do not forget to add the following line if you do not already have it.
-
-```xml
-<uses-permission android:name="android.permission.INTERNET"/>
-```
-
-<br/>
-
-### Using Proguard
-
-If you use proguard with your app, please insert the following lines in the proguard configuration file under the unityLibrary module:
-
-```
--keep class com.pollfish.** { *; }
--keep class com.pollfish_unity.** { *; }
--dontwarn com.pollfish.**
-```
-
-<br/>
-
-###  5.2 If you are targeting iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
-
-### Distributing your app to AppStore
-
-Pollfish uses Advertising Identifier (IDFA) for survey distribution (if permission granted) and therefore when submitting your app to the App you should select the following options as seen in the image below:  
-
-![](/homeassets/images/documentation/idfa_2.jpg)
-
-<br/>
-
-## Optional Section
-
-In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
-
-<br/>
-
-## 6. Implement Pollfish Event Listeners
-
-<br/>
-
-### 6.1. Get notified when a Pollfish survey is received
-
-You can be notified when a Pollfish survey is received. With this notification, you can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
-
-<br/>
-
-> **Note:** If Pollfish is initialized in offerwall mode then the event parameter will be `null`, otherwise it will include info around the received survey.
-
-<br/>
-
-```csharp
-Pollfish.SurveyReceivedEvent += SurveyReceived;
-
-public void SurveyReceived(SurveyInfo surveyInfo)
-{
-  if (surveyInfo == null)
-  {
-    Debug.Log("PollfishDemo: Survey Offerwall received");
-  }
-  else
-  {
-    Debug.Log("PollfishDemo: Survey was completed - " + surveyInfo.ToString());
-  }
-}
-```
-
-<br/>
-
-### 6.2. Get notified when a Pollfish survey is completed
-
-You can be notified when a user completed a survey. With this notification, you can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
-
-```csharp
-Pollfish.SurveyCompletedEvent += SurveyCompleted;
-
-public void SurveyCompleted(SurveyInfo surveyInfo)
-{
-  Debug.Log("PollfishDemo: Survey was Completed - " + surveyInfo.ToString());
-}
-```
-
-<br/>
-
-### 6.3. Get notified when a user is not eligible for a Pollfish survey
-
-You can be notified when a user is not eligible for a Pollfish survey. In market research monetization, users can get screened out while completing a survey beucase they are not relevant with the audience that the market researcher was looking for. In that case the user not eligible notification will fire and the publisher will make no money from that survey. The user not eligible notification will fire after the surveyReceived event, when the user starts completing the survey.
-
-```csharp
-Pollfish.UserNotEligibleEvent += UserNotEligible;
-
-public void UserNotEligible()
-	{
-		Debug.Log("PollfishDemo: User not eligible");
-	}
-```
-
-<br/>
-
-### 6.4. Get notified when a Pollfish survey is not available
-
-You can be notified when a Pollfish survey is not available.
-
-```csharp
-Pollfish.SurveyNotAvailableEvent += SurveyNotAvailable;
-
-public void SurveyNotAvailable()
-{
-  Debug.Log("PollfishDemo: Survey not available");
-}
-```
-
-<br/>
-
-### 6.5. Get notified when a user has rejected a Pollfish survey
-
-You can be notified when a user has rejected a Pollfish survey.
-
-```csharp
-Pollfish.UserRejectedSurveyEvent += UserRejectedSurvey;
-
-public void UserRejectedSurvey()
-{
-  Debug.Log("PollfishDemo: User rejected survey");
-}
-```
-
-<br/>
-
-### 6.6. Get notified when a Pollfish survey panel has opened
-
-You can register and get notified when a Pollfish survey panel has opened. Publishers usually use this notification to pause a game until the pollfish panel is closed again.
-
-```csharp
-Pollfish.SurveyOpenedEvent += SurveyOpened;
-
-public void SurveyOpened()
-{
-  Debug.Log("PollfishDemo: Survey was opened");
-}
-```
-
-<br/>
-
-### 6.7. Get notified when a Pollfish survey panel has closed
-
-You can register and get notified when a Pollfish survey panel has closed. Publishers usually use this notification to resume a game that they have previously paused when the Pollfish panel was opened.
-
-```csharp
-Pollfish.SurveyClosedEvent += SurveyClosed;
-
-public void SurveyClosed()
-{
-  Debug.Log("PollfishDemo: Survey was closed");
-}
-```
-
-### Unsubsribe from Pollfish Event Listeners
-
-Please make sure you unsubscribe from Pollfish Event Listeners, preferably on the scene destruction to avoid duplicated events.
-
-```csharp
-public void OnDisable()
-{
-  Pollfish.SurveyCompletedEvent -= SurveyCompleted;
-  Pollfish.SurveyOpenedEvent -= SurveyOpened;
-  Pollfish.SurveyClosedEvent -= SurveyClosed;
-  Pollfish.SurveyReceivedEvent -= SurveyReceived;
-  Pollfish.SurveyNotAvailableEvent -= SurveyNotAvailable;
-  Pollfish.UserNotEligibleEvent -= UserNotEligible;
-  Pollfish.UserRejectedSurveyEvent -= UserRejectedSurvey;
-}
-```
-
-<br/>
-
-## 7. Manually show/hide Pollfish panel
-
-You can manually hide and show Pollfish by calling the functions below, after initialization.
-
-```csharp
-Pollfish.show();
-```
-
-```csharp
-Pollfish.hide();
-```
-
-<br/>
-
-## 8. Check if Pollfish Surveys are available on your device
-
-After you initialize Pollfish and a survey is received you can check at any time if the survey is available at the device by calling the following function.
-
-```csharp
-bool isPresent = Pollfish.isPollfishPresent():
-```
-
-<br/>
-
-## 9. Check if Pollfish Panel is open
-
-You can check at any time if the survey panel is open by calling the following function.
-
-```csharp
-bool isOpen = Pollfish.isPollfishPanelOpen();
-```
-
-<br/>
-
-## 10\.  Update your Privacy Policy
+## 5.  Update your Privacy Policy
 
 Add the following paragraph to your App's Privacy Policy:
 
@@ -839,11 +602,12 @@ If you know attributes about a user like gender, age and others, you can provide
 
 <br/>
 
-### 11\.  Request your account to get verified
+## 6.  Request your account to get verified
 
 After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
 
 <br/>
+
 <img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/verify_account.png"/>
 
 <br/>
@@ -852,7 +616,279 @@ When your account is verified you will be able to start receiving paid surveys f
 
 <br/>
 
-## More Info
+## 7. Handle platform specific cases
+
+### 7.1 Android targeting
+
+<br/>
+
+#### **If you are targeting Android SDK < 21**
+
+Pollfish SDK requires minSdk 21. If your app supports a lower minSdk you can still build your app and exlude Pollfish from targets lower than 21 by exporting an Android project from the Unity's Build Settings and adding the following block on the `AndroidManifest.xml` of the `unityLibrary` module.
+
+**AndroidManifest.xml**
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    ... >
+
+    <uses-sdk tools:overrideLibrary="com.pollfish.pollfish" />
+
+    <application
+	... >
+        ...
+    </application>
+```
+
+<br/>
+
+#### **Android Back Event**
+
+Since Pollfish uses Android back button to close its panel if open, if you want to replicate this behavior you should capture  back button event and call Pollfish.ShouldQuit(); to inform the library and act accordingly.
+
+```csharp
+public void Update ()
+{        
+	/* handling Android back event */	
+  
+	if (Input.GetKeyDown (KeyCode.Escape)) {
+		Pollfish.ShouldQuit();
+	}
+}
+```
+
+<br/>
+
+#### **AndroidManifest.xml file**
+
+We have included an AndroidManifest.xml file that will work for most of user cases However if you need to include your own AndroidManifest file remember to add the following lines:
+
+```xml
+<meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+```
+
+within your Activity <activity></activity> that holds the following intent filters:
+
+```xml
+<intent-filter>
+  <action android:name="android.intent.action.MAIN" />
+  <category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+```
+
+This line enable touch events to pass through Pollfish SDK.
+
+Finally, Pollfish requires Internet permission in order to work, so please do not forget to add the following line if you do not already have it.
+
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+```
+
+<br/>
+
+#### **Proguard**
+
+If you use proguard with your app, please insert the following lines in the proguard configuration file under the unityLibrary module:
+
+```
+-keep class com.pollfish.** { *; }
+-keep class com.pollfish_unity.** { *; }
+-dontwarn com.pollfish.**
+```
+
+<br/>
+
+###  7.2 If you are targeting iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
+
+### Distributing your app to AppStore
+
+Pollfish uses Advertising Identifier (IDFA) for survey distribution (if permission granted) and therefore when submitting your app to the App you should select the following options as seen in the image below:  
+
+![](/homeassets/images/documentation/idfa_2.jpg)
+
+<br/>
+
+# Optional Section
+
+In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
+
+<br/>
+
+## 8. Implement Pollfish Event Listeners
+
+<br/>
+
+### 8.1. Get notified when a Pollfish survey is received
+
+You can be notified when a Pollfish survey is received. With this notification, you can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
+
+<br/>
+
+> **Note:** If Pollfish is initialized in offerwall mode then the event parameter will be `null`, otherwise it will include info around the received survey.
+
+<br/>
+
+```csharp
+Pollfish.SurveyReceivedEvent += SurveyReceived;
+
+public void SurveyReceived(SurveyInfo surveyInfo)
+{
+  if (surveyInfo == null)
+  {
+    Debug.Log("PollfishDemo: Survey Offerwall received");
+  }
+  else
+  {
+    Debug.Log("PollfishDemo: Survey was completed - " + surveyInfo.ToString());
+  }
+}
+```
+
+<br/>
+
+### 8.2. Get notified when a Pollfish survey is completed
+
+You can be notified when a user completed a survey. With this notification, you can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
+
+```csharp
+Pollfish.SurveyCompletedEvent += SurveyCompleted;
+
+public void SurveyCompleted(SurveyInfo surveyInfo)
+{
+  Debug.Log("PollfishDemo: Survey was Completed - " + surveyInfo.ToString());
+}
+```
+
+<br/>
+
+### 8.3. Get notified when a user is not eligible for a Pollfish survey
+
+You can be notified when a user is not eligible for a Pollfish survey. In market research monetization, users can get screened out while completing a survey beucase they are not relevant with the audience that the market researcher was looking for. In that case the user not eligible notification will fire and the publisher will make no money from that survey. The user not eligible notification will fire after the surveyReceived event, when the user starts completing the survey.
+
+```csharp
+Pollfish.UserNotEligibleEvent += UserNotEligible;
+
+public void UserNotEligible()
+	{
+		Debug.Log("PollfishDemo: User not eligible");
+	}
+```
+
+<br/>
+
+### 8.4. Get notified when a Pollfish survey is not available
+
+You can be notified when a Pollfish survey is not available.
+
+```csharp
+Pollfish.SurveyNotAvailableEvent += SurveyNotAvailable;
+
+public void SurveyNotAvailable()
+{
+  Debug.Log("PollfishDemo: Survey not available");
+}
+```
+
+<br/>
+
+### 8.5. Get notified when a user has rejected a Pollfish survey
+
+You can be notified when a user has rejected a Pollfish survey.
+
+```csharp
+Pollfish.UserRejectedSurveyEvent += UserRejectedSurvey;
+
+public void UserRejectedSurvey()
+{
+  Debug.Log("PollfishDemo: User rejected survey");
+}
+```
+
+<br/>
+
+### 8.6. Get notified when a Pollfish survey panel has opened
+
+You can register and get notified when a Pollfish survey panel has opened. Publishers usually use this notification to pause a game until the pollfish panel is closed again.
+
+```csharp
+Pollfish.SurveyOpenedEvent += SurveyOpened;
+
+public void SurveyOpened()
+{
+  Debug.Log("PollfishDemo: Survey was opened");
+}
+```
+
+<br/>
+
+### 8.7. Get notified when a Pollfish survey panel has closed
+
+You can register and get notified when a Pollfish survey panel has closed. Publishers usually use this notification to resume a game that they have previously paused when the Pollfish panel was opened.
+
+```csharp
+Pollfish.SurveyClosedEvent += SurveyClosed;
+
+public void SurveyClosed()
+{
+  Debug.Log("PollfishDemo: Survey was closed");
+}
+```
+
+### 8.8. Unsubsribe from Pollfish Event Listeners
+
+Please make sure you unsubscribe from Pollfish Event Listeners, preferably on the scene destruction to avoid duplicated events.
+
+```csharp
+public void OnDisable()
+{
+  Pollfish.SurveyCompletedEvent -= SurveyCompleted;
+  Pollfish.SurveyOpenedEvent -= SurveyOpened;
+  Pollfish.SurveyClosedEvent -= SurveyClosed;
+  Pollfish.SurveyReceivedEvent -= SurveyReceived;
+  Pollfish.SurveyNotAvailableEvent -= SurveyNotAvailable;
+  Pollfish.UserNotEligibleEvent -= UserNotEligible;
+  Pollfish.UserRejectedSurveyEvent -= UserRejectedSurvey;
+}
+```
+
+<br/>
+
+## 9. Manually show/hide Pollfish panel
+
+You can manually hide and show Pollfish by calling the functions below, after initialization.
+
+```csharp
+Pollfish.show();
+```
+
+```csharp
+Pollfish.hide();
+```
+
+<br/>
+
+## 10. Check if Pollfish Surveys are available on your device
+
+After you initialize Pollfish and a survey is received you can check at any time if the survey is available at the device by calling the following function.
+
+```csharp
+bool isPresent = Pollfish.isPollfishPresent():
+```
+
+<br/>
+
+## 11. Check if Pollfish Panel is open
+
+You can check at any time if the survey panel is open by calling the following function.
+
+```csharp
+bool isOpen = Pollfish.isPollfishPanelOpen();
+```
+
+<br/>
+
+# More info
 
 You can read more info on how the Native Pollfish SDKs work on Android and iOS at the following links:
 

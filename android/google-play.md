@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.1.4">
+<div class="changelog" data-version="6.1.5">
+v6.1.5
+
+- Internal fixes
+
 v6.1.4
 
 - Internal fixes
@@ -38,7 +42,7 @@ v6.0.0
 - New Android SDK
 </div>
 
-## Prerequisites
+# Prerequisites
 
 - Android SDK 21 or higher
 - Java verion 1.8
@@ -86,7 +90,7 @@ dependencies {
 
 </br>
 
-## Migration guide
+# Migration guide
 
 In this guide you can see the changes on the Pollfish public interface from previous Android SDK versions (prior v6)
 
@@ -118,7 +122,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.1.4'
+implementation 'com.pollfish:pollfish-googleplay:6.1.5'
 ```
 
 <tr>
@@ -289,7 +293,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.1.4'
+implementation 'com.pollfish:pollfish-googleplay:6.1.5'
 ```
 
 <tr>
@@ -435,7 +439,7 @@ PollFish.showOnTopOfActivity(activity);
 
 <br/>
 
-## Quick Guide
+# Quick Guide
 
 1. Obtain a Publisher Account
 2. Register a new App on the Pollfish Dashboard and copy the given API key
@@ -449,17 +453,21 @@ PollFish.showOnTopOfActivity(activity);
 
 <br/>
 
-## Steps Analytically
+# Steps Analytically
 
-### 1. Obtain a Publisher Account
+## 1. Obtain a Publisher Account
 
 Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
 
-### 2. Add new app on Pollfish Dashboard and copy the given API Key
+<br/>
+
+## 2. Add new app on Pollfish Dashboard and copy the given API Key
 
 Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
-### 3. Download and import Pollfish .aar file
+<br/>
+
+## 3. Download and import Pollfish .aar file
 
 Download Pollfish Android SDK or reference it through the maven repository.
 
@@ -497,11 +505,13 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-googleplay:6.1.4'
+    implementation 'com.pollfish:pollfish-googleplay:6.1.5'
 }
 ```
 
-### 4. Import Google Play Services into your project
+<br/>
+
+## 4. Import Google Play Services into your project
 
 Applications that integrate Pollfish SDK are required to include Google Play Services Ads Identifier library. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
 
@@ -518,7 +528,7 @@ dependencies {
 
 <br/>
 
-### 5. Embed Pollfish in your code
+## 5. Embed Pollfish in your code
 
 <br/>
 
@@ -564,6 +574,8 @@ add in your Androidmanifest.xml reference the file above in the **android:networ
     ...
     android:networkSecurityConfig="@xml/network_security_config">
 ```
+
+<br/>
 
 ### 5.3 Initialize Pollfish
 
@@ -611,6 +623,8 @@ public void onResume() {
     Pollfish.initWith(this, params);
 }
 ```
+
+<br/>
 
 ### 5.3.1 Pollfish initialization Params available options (Optional)
 
@@ -1102,7 +1116,7 @@ When your account is verified you will be able to start receiving paid surveys f
 
 <br/>
 
-## Optional section
+# Optional section
 
 In this section we will list several options that can be used to control Pollfish surveys behaviour like listening and acting on different callbacks. All the steps below are optional.
 
@@ -1682,6 +1696,7 @@ If you use proguard with your app, please insert the following lines in your pro
 
 If you want to reward your users for completing a survey it is common practice to verify this through server to server callbacks in order to introduce an enhanced security layer to your system. You can easily add your postback  url on your app's page on Pollfish Dashboard. You can read more on how to set server to server callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>. 
 
+<br/>
 
 ## 14. Payouts on Screenouts
 

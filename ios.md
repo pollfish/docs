@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.1">
+<div class="changelog" data-version="6.2.2">
+v6.2.2
+
+- Fix issue with unresponsive host app upon survey completion on iOS 13.7 devices
+
 v6.2.1
 
 - Fixed issue with iOS 13 Simulator
@@ -40,359 +44,6 @@ v6.0.0
 > **Note:** Insructions on how to request IDFA permission can be found in section 5.
 
 </br>
-
-
-## Migration guide
-
-In this guide you can see the changes on the Pollfish public interface from previous iOS SDK versions (prior v6)
-
-<br/>
-
-<details><summary>➤ <b>Swift</b> (Click to expand)</summary>
-
-<table>
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **Initialisation** <br/>
-
-```swift
-Pollfish.initWithAPIKey("API_KEY", andParams: params)
-```
-
-<tr>
-<td>
-
-<span style="color:green">+</span>
-
-<td>
-<br/>
-
-```swift
-Pollfish.initWith(params, delegate: self)
-```
-
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **Pollfish Params** <br/>
-
-```swift
-let pollfishParams = PollfishParams()
-
-pollfishParams.indicatorPadding = 10;
-pollfishParams.releaseMode = true;
-...
-```
-
-<tr>
-<td>
-
-<span style="color:green">+</span>
-
-<td>
-<br/>
-
-```swift
-let params = PollfishParams("API_KEY")
-    .indicatorPadding(10)
-    .releaseMode(true)
-    ...
-```
-
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **User Properties** <br/>
-
-```swift
-let userAttributes = UserAttributesDictionary()
-
-userAttributes?.setGender(GENDER(MALE))
-userAttributes?.setRace(RACE(WHITE))
-userAttributes?.setYearOfBirth(YEAR_OF_BIRTH(_1984))
-
-params.userAttributes = userAttributes
-```
-
-<tr>
-<td>
-
-<span style="color:green">+</span>
-
-<td>
-<br/>
-
-```swift
-let userProperties = UserProperties([
-    .gender(.male),
-    .race(.white),
-    .yearOfBirth(1984)
-])
-
-params.userProperties(userProperties)
-```
-
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **Pollfish Lifecycle callbacks** <br/>
-
-```swift
-NotificationCenter.default.addObserver(
-    forName: NSNotification.Name(rawValue: "PollfishSurveyNotAvailable"),
-    object: nil,
-    queue: nil,
-     using:pollfishNotAvailable)
-
-func pollfishNotAvailable(_ notification:Notification) {
-    ...
-}
-```
-
-<tr>
-<td>
-
-<span style="color:green">+</span>
-
-<td>
-<br/>
-
-```swift
-Pollfish.initWith(params, delegate: self)
-
-extension ViewController: PollfishDelegate {
-
-    func pollfishSurveyNotAvailable() {
-        ...
-    }
-
-}
-```
-
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **Rotation handling** <br/>
-
-> **Note:** Rotation changes are handled by the SDK
-
-```swift
-NotificationCenter.default.addObserver(
-    forName: UIDevice.orientationDidChangeNotification,
-    object: nil,
-    queue: nil,
-    using:rotateApp)
-
-func rotateApp(_ notification:Notification){
-    initPollfish();
-}
-```
-
-</table>
-</details>
-
-<br/>
-
-
-<details><summary>➤ <b>Objective</b> C (Click to expand)</summary>
-<table>
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **Initialisation** <br/>
-
-```objc
-[Pollfish initWithAPIKey:@"API_KEY" andParams:params];
-```
-
-<tr>
-<td>
-
-<span style="color:green">+</span>
-
-<td>
-<br/>
-
-```objc
-[Pollfish initWith:params delegate:nil];
-```
-
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **Pollfish Params** <br/>
-
-```objc
-PollfishParams *pollfishParams =  [PollfishParams initWith:^(PollfishParams *pollfishParams) {
-    pollfishParams.indicatorPadding=10;
-    pollfishParams.releaseMode=true;
-    ...
-}
-```
-
-<tr>
-<td>
-
-<span style="color:green">+</span>
-
-<td>
-<br/>
-
-```objc
-PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
-[params indicatorPadding:10];
-[params releaseMode:true];
-...
-```
-
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **User Properties** <br/>
-
-```objc
-UserAttributesDictionary *userAttributesDictionary = [UserAttributesDictionary alloc] init];
-    
-[userAttributesDictionary setGender: GENDER(MALE)];
-[userAttributesDictionary setRace:RACE(WHITE)];
-[userAttributesDictionary setYearOfBirth:YEAR_OF_BIRTH(_1984)];
-
-params.userAttributes=userAttributesDictionary;
-```
-
-<tr>
-<td>
-
-<span style="color:green">+</span>
-
-<td>
-<br/>
-
-```objc
-UserProperties *userProperties = [[UserProperties alloc] init];
-])
-
-[userProperties gender:GenderMale];
-[userProperties race:RaceWhite];
-[userProperties yearOfBirth:1995];
-
-params.userProperties(userProperties)
-```
-
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **Pollfish Lifecycle callbacks** <br/>
-
-```objc
-[[NSNotificationCenter defaultCenter] addObserver:self 
-    selector:@selector(pollfishNotAvailable) name:@"PollfishSurveyNotAvailable" 
-    object:nil];
-
-- (void)pollfishNotAvailable
-{
-   ...
-}
-
-```
-
-<tr>
-<td>
-
-<span style="color:green">+</span>
-
-<td>
-<br/>
-
-```objc
-// ViewController.h
-@interface ViewController : UIViewController<PollfishDelegate>
-
-@end
-
-// ViewController.m
-...
-
-- (void) pollfishSurveyNotAvailable
-{
-    ...
-}
-```
-
-<tr>
-<td>
-<br/>
-
-<span style="color:red">-</span>
-
-<td>
-
-#### **Rotation handling** <br/>
-
-> **Note:** Rotation changes are handled by the SDK
-
-```objc
-[[NSNotificationCenter defaultCenter] addObserver:self 
-    selector:@selector(didRotate:) 
-    name:UIDeviceOrientationDidChangeNotification 
-    object:nil];
-
-- (void) didRotate:(NSNotification *)notification
-{
-    [self initPollfish];
-}
-```
-
-</table>
-</details>
-
-<br/>
 
 ## Quick Guide
 
@@ -586,7 +237,7 @@ No | Description
 6.2.6 | **`.rewardMode(Bool)`** <br/> Initializes Pollfish in reward mode
 6.2.7 | **`.offerwallMode(Bool)`** <br/> Sets Pollfish to offerwall mode
 6.2.8 | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
-6.2.9| **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward
+6.2.9 | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward
 6.2.10| **`.clickId(String)`** <br/> A pass throught param that will be passed back through server-to-server callback
 6.2.11| **`.singnature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
 6.2.12| **`.monitorOrientationChanges(Bool)`** <br/> Toggle SDK reinitalization when device orientation changes
@@ -646,12 +297,15 @@ Below you can see an example on how you can pass a requestUUID during initializa
 <br/>
 
 <span style="text-decoration: underline">Objective-C:</span>
+
 ```objc
 PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
 
 [params requestUUID:@"USER_ID"];
 ```
+
 <span style="text-decoration: underline">Swift:</span>
+
 ```swift
 let pollfishParams = PollfishParams("API_KEY")
     .requestUUID="USER_ID";
@@ -666,13 +320,16 @@ Sets padding from the top or the bottom of the screen according to the Position 
 <br/>
 
 <span style="text-decoration: underline">Objective-C:</span>
+
 ```objc
 PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
 
 [params indicatorPadding:50];
 [params indicatorPosition:IndicatorPositionBottomRight];
 ```
+
 <span style="text-decoration: underline">Swift:</span>
+
 ```swift
 let pollfishParams = PollfishParams("API_KEY")
     .indicatorPadding(50)

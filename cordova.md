@@ -1,12 +1,19 @@
-Cordova/PhoneGap plugin to allow integration of Pollfish surveys into Android and iOS apps. 
+Pollfish Cordova plugin, allows integration of Pollfish surveys into Cordova Android and iOS apps. 
 
 Pollfish is a mobile monetization platform delivering surveys instead of ads through mobile apps. Developers get paid per completed surveys through their apps.
 
+Pollfish Cordova Plugin can be found on [npm Registry](https://www.npmjs.com/package/cordova-plugin-pollfish). The source code and an example app can be found on [Github](https://github.com/pollfish/cordova-plugin-pollfish).
+
+<br/>
+
 # Prerequisites
 
-*	Android 21+ using Google Play Services
-*	iOS version 9.0+
-*	Apache Cordova v3.0.4+
+* Android SDK 21 or higher using Google Play Services
+* iOS 9.0 or higher
+* Apache Cordova v3.0.0 or higher
+* CocoaPods v1.10.0 or higher
+
+<br/>
 
 > **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old   
 
@@ -16,44 +23,211 @@ Pollfish is a mobile monetization platform delivering surveys instead of ads thr
 
 # Quick Guide
 
-* Create Pollfish developer account, create new app and grap it's API key
+* Create Pollfish Developer account
+* Create new apps for each targeting platform (Android & iOS) and grap the API keys
 * Install Pollfish plugin and call init function
-* Set to Release mode and release in Store
+* Set to Release mode and publish on app store
 * Update your app's privacy policy
 * Request your account to get verified from Pollfish Dashboard
 
 <br/>
 
-![alt tag](https://www.pollfish.com/homeassets/images/rocketMobile.png)
+# Migrate to v2
+
+Pollfish Cordova Plugin v2 introduces a new package name and different API with added customization options during initialization. If you have already integrated Pollfish Cordova Plugin < v2 in you app, please
+
+**1\. Remove the old deprecated package name**
+
+```bash
+cordova plugin remove com.pollfish.cordova_plugin
+```
+
+**2\. Add the new package name**
+
+```bash
+cordova plugin add cordova-plugin-pollfish
+```
+
+**3\. Take some time reading the migration guide below**
+
+<details><summary>➤ <b>Migration Guide</b> (Click to expand)</summary>
+<table>
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Installation** <br/>
+
+```bash
+cordova plugin add com.pollfish.cordova_plugin
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```bash
+cordova plugin add cordova-plugin-pollfish
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Plugin reference** <br/>
+
+```js
+pollfishplugin.<method>
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```js
+pollfish.<method>
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Initialization** <br/>
+
+```js
+pollfishplugin.init(
+    releaseMode,
+    rewardMode,
+    apiKey,
+    position,
+    padding,
+    requestUUID, 
+    offerwallMode); 
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```js
+var params = new pollfish.Builder('ANDROID_API_KEY', 'IOS_API_KEY')
+	.rewardMode(false)
+	.offerwallMode(false)
+	.releaseMode(false)
+	...
+	.build();
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Show/Hide** <br/>
+
+```js
+pollfishplugin.showPollfish();
+
+pollfishplugin.hidePollfish(); 
+```
+
+<tr>
+<td>
+
+<span style="color:green">+</span>
+
+<td>
+<br/>
+
+```js
+pollfish.show();
+
+pollfish.hide();
+```
+
+<tr>
+<td>
+<br/>
+
+<span style="color:red">-</span>
+
+<td>
+
+#### **Initialization with User Properties** <br/>
+
+```js
+pollfishplugin.initWithUserAttributes(
+    false, 
+    false, 
+    'API_KEY',
+    5,
+    10, 
+    'REQUEST_UUID', 
+    false,
+    {
+		gender: '1',
+		education: '1'
+	});
+```
+
+</table>
+</details>
 
 <br/>
 
-# Steps Analytically
+# Analytical Steps
 
 ## 1. Obtain a Developer Account
 
-Register as a Developer at [www.pollfish.com](http://www.pollfish.com)
+Register as a Developer at [www.pollfish.com](https://www.pollfish.com)
 
 <br/>
 
-## 2. Add new app in Pollfish panel and copy the given API Key
+## 2. Add new apps in Pollfish panel and copy the given API Keys
 
-Login at [www.pollfish.com](http://www.pollfish.com) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your init function in your app.
+Login at [www.pollfish.com](http://www.pollfish.com), add a new app for each targeting platform (Android & iOS) at Pollfish panel in section My Apps and copy the given API keys to use later in your init function in your app.
 
 <br/>
 
-## 3. Installing the plugin
+## 3. Install the plugin
 
 To add Pollfish plugin just type:
 
-```
-cordova plugin add com.pollfish.cordova_plugin
+```bash
+cordova plugin add cordova-plugin-pollfish
 ```
 
 To remove Pollfish plugin type:
 
-```
-cordova plugin remove com.pollfish.cordova_plugin
+```bash
+cordova plugin remove cordova-plugin-pollfish
 ```
 
 *In iOS if pollfish framework is not added automatically you may need to add it manually to your XCode project. In Xcode, select the target that you want to use and in the Build Phases tab expand the Link Binary With Libraries section. Press the + button, and press Add other… In the dialog box that appears, go to the Pollfish framework’s location (located in /src/ios/framework) and select it. The project will appear at the top of the Link Binary With Libraries section and will also be added to your project files (left-hand pane). The framework is a folder and you should add the whole folder into your project.*
@@ -62,79 +236,77 @@ cordova plugin remove com.pollfish.cordova_plugin
 
 ## 4. Initialize Pollfish
 
-Init function takes the following parameters:
+You can set several params to control the behaviour of Pollfish survey panel within your app with the use of the `pollfish.Builder` instance. Below you can see all the available options. Apart from the constructor all the other methods are optional.
 
-1.	**releaseMode**: - Choose Debug or Release Mode
-2.	**rewardMode**: - Init in reward mode (skip Pollfish indicator to show a custom prompt)
-3.	**apiKey**: - Your API Key (from step 2)
-4.	**position**: - The Position where you wish to place the Pollfish indicator. There are four different options {Position.TOP_LEFT, Position.BOTTOM_LEFT, Position.MIDDLE_LEFT, Position.TOP_RIGHT, Position.BOTTOM_RIGHT, Position.MIDDLE_RIGHT}
-5.	**padding**: - The padding (in dp) from top or bottom according to Position of the indicator specified before (0 is the default value – |*if used in MIDDLE position, padding is calculating from top).
-6.	**requestUUID**: - Sets a unique id to identify a user and be passed through server-to-server callbacks
-7.	**offerwallMode**: - Sets Pollfish to offerwall mode.
+Param               | Description
+--------------------|:---------
+**`constructor(String, String)`**           		| Sets Your Android and iOS API Keys (from step 2)
+**`.indicatorPosition(pollfish.Position)`**	| Sets the Position where you wish to place the Pollfish indicator. There are six different options RNPollfish.Position.{topLeft, topRight, middleLeft, middleRight, bottomLeft, bottom Right}: 
+**`.indicatorPadding(Int)`**                		| Sets the padding from top or bottom depending on the position of the indicator specified before (if used in middle position, padding is calculated from the top).
+**`.offerwallMode(Boolean)`**	                	| Sets Pollfish to offerwall mode
+**`.releaseMode(Boolean)`**      	            	| Choose Debug or Release Mode
+**`.rewardMode(Boolean)`**           		        | Init in reward mode (skip Pollfish indicator to show a custom prompt)
+**`.requestUUID(String)`**               		    | Sets a unique id to identify a user and be passed through server-to-server callbacks
+**`.userProperties(Json)`**                  		| Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
+**`.rewardInfo(Json)`**                     	 	| An object holding information regarding the survey completion reward
+**`.clickId`**         		                      	| A pass throught param that will be passed back through server-to-server callback
+**`.signature`**            	                 	| An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object. 
 
-For example:
+<br/>
 
 ```js
-var releaseMode = false;
-var rewardMode = false;
-var apiKey = "YOUR_API_KEY";
-var position = pollfishplugin.Position.TOP_LEFT;
-var padding = 50;
-var requestUUID = "my_id";
-var offerwallMode = true; 
-
-pollfishplugin.init(
-	releaseMode,
-	rewardMode,
-	apiKey,
-	position,
-	padding,
-	requestUUID, 
-	offerwallMode); 
+var params = new pollfish.Builder('ANDROID_API_KEY', 'IOS_API_KEY'); // Android & iOS
 ```
 
-#### Debug Vs Release Mode
+```js
+var params = new pollfish.Builder('ANDROID_API_KEY', null); // Android only
+```
+
+```js
+var params = new pollfish.Builder(null, 'IOS_API_KEY'); // iOS only
+```
+
+```js
+params.rewardMode(false)
+	.offerwallMode(false)
+	.releaseMode(false)
+	.indicatorPadding(50)
+	.indicatorPosition(pollfish.Position.BOTTOM_RIGHT)
+	.requestUUID('REQUEST_UUID')
+	.userProperties({
+		gender: '1',
+		education: '1',
+		...
+	})
+	.clickId('CLICK_ID')
+	.signature('SIGNATURE')
+	.rewardInfo({
+		rewardName: 'Points',
+		rewardConversion: 1.3
+	})
+	.build();
+
+pollfish.init(params); 
+```
+
+<br/>
+
+### Debug Vs Release Mode
 
 You can use Pollfish either in Debug or in Release mode. 
   
 * **Debug mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
 * **Release mode** is the mode to be used for a released app (start receiving paid surveys).
 
+> **Note:** In Android debugMode parameter is ignored. Your app turns into debug mode once it is signed with a debug key. If you sign your app with a release key it automatically turns into Release mode.
 
-**Note: In Android debugMode parameter is ignored. Your app turns into debug mode once it is signed with a debug key. If you sign your app with a release key it automatically turns into Release mode.**
+> **Note:** Be careful to turn the `releaseMode` parameter to `true` when you release your app in a relevant app store!!
 
-**Note: Be careful to turn the releaseMode parameter to true when you release your app in a relevant app store!!**
+<br/>
 
-#### Reward Mode 
+### Reward Mode 
 
 Reward mode false during initialization enables controlling the behavior of Pollfish in an app from Pollfish panel. Enabling reward mode ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small button) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates.
-
-### 4.1 Other Init functions (optional)
-
-##### Passing user attributes during initialization
-
-You can send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. 
-
-
-You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
-
-For example:
-
-```js
-var userAttributes = {
-	'gender': '1',
-	'year_of_birth': '1974'
-};
-
-pollfishplugin.initWithUserAttributes(
-	releaseMode,
-	rewardMode,
-	api_key,pos,
-	padding,
-	request_uuid,
-	offerwallMode,
-	userAttributes);
-```
 
 <br/>
 
@@ -158,7 +330,7 @@ If you have any question, like why you do not see surveys on your own device in 
 
 <br/>
 
-| **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Bear in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this new type of targeting.
+> **Note:** Please bear in mind that the first time a user is introduced to the platform, when no paid surveys are available, a standalone demographic survey will be shown, as a way to increase the user's exposure in our clients' survey inventory. This survey returns no payment to app publishers, since it is part of the process users need to go through in order to join the platform. Bear in mind that if a paid survey is available at that point of time, the demographic questions will be inserted at the begining of the survey, before the actual survey questions. Our aim is to provide advanced targeting solutions to our customers and to do that we need to have this information on the available users. Targeting by marital status or education etc. are highly popular options in the survey world and we need to keep up with the market. A vast majority of our clients are looking for this option when using the platform. Based on previous data, over 80% of the surveys designed on the platform require this new type of targeting.
 
 <br/>
 
@@ -191,11 +363,11 @@ When your account is verified you will be able to start receiving paid surveys f
 
 # Optional section
 
-In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how be eligible to more targeted (high-paid) surveys. All these steps are optional.
+In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how to be eligible to more targeted (high-paid) surveys. All these steps are optional.
 
 <br/>
 
-## 7. Handling application entering to foreground (optional)
+## 7. Handling application entering to foreground
 
 You should handle the event when your app is entering to foreground in order to initialise Pollfish again by listening to the relevant event.
 
@@ -203,16 +375,8 @@ For example:
 
 ```js
 document.addEventListener("resume", () => {
-	pollfishplugin.init(
-		releaseMode, 
-		rewardMode, 
-		apiKey,
-		position,
-		padding,
-		requestUUID,
-		offerwallMode); 
+	pollfish.init(pollfishParams); 
 }, false);
-
 ```
 
 ## 8. Implement Pollfish event listeners
@@ -221,10 +385,14 @@ document.addEventListener("resume", () => {
 
 ### 8.1 Get notified when a Pollfish survey is received
 
-You can be notified when a Pollfish survey is received.
+You can get notified when a Pollfish survey is received. With this notification, you can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
+
+<br/>
+
+> **Note:** If Pollfish is initialized in offerwall mode then the event parameter will be `undefined`, otherwise it will include info around the received survey.
 
 ```js
-pollfishplugin.setEventCallback(pollfishplugin.EventListener.OnPollfishSurveyReceived, (result) => {
+pollfish.setEventCallback(pollfish.EventListener.OnPollfishSurveyReceived, (result) => {
     console.log("Survey Received: " + JSON.stringify(result));
 });
 ```
@@ -233,10 +401,10 @@ pollfishplugin.setEventCallback(pollfishplugin.EventListener.OnPollfishSurveyRec
 
 ### 8.2 Get notified when a Pollfish survey is completed
 
-You can be notified when a Pollfish survey is completed.
+You can get notified when a user completed a survey. With this notification, you can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
 
 ```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishSurveyCompleted, (result) => {
+pollfish.setEventCallback(pollfish.EventListener.OnPollfishSurveyCompleted, (result) => {
     console.log("Survey Completed: " + JSON.stringify(result));
 });
 ```
@@ -245,10 +413,10 @@ pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishSurveyCompleted
 
 ### 8.3 Get notified when a user is not eligible for a Pollfish survey
 
-You can be notified when a user is not eligible for a Pollfish survey.
+You can get notified when a user is not eligible for a Pollfish survey. In market research monetization, users can get screened out while completing a survey beucase they are not relevant with the audience that the market researcher was looking for. In that case the user not eligible notification will fire and the publisher will make no money from that survey. The user not eligible notification will fire after the surveyReceived event, when the user starts completing the survey.
 
 ```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishUserNotEligible, (_) => {
+pollfish.setEventCallback(pollfish.EventListener.OnPollfishUserNotEligible, (_) => {
     console.log("Pollfish User Not Eligible");
 });
 ```
@@ -257,34 +425,35 @@ pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishUserNotEligible
 
 ### 8.4 Get notified when a Pollfish survey is not available
 
-You can be notified when a Pollfish survey is not available
+You can get notified when a Pollfish survey is not available
 
 ```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishSurveyNotAvailable, (_) => {
+pollfish.setEventCallback(pollfish.EventListener.OnPollfishSurveyNotAvailable, (_) => {
     console.log("Pollfish Survey not available");
 });
 ```
 
 <br/>
 
-### 8.5 Get notified when a Pollfish survey panel is open
+### 8.5 Get notified when a Pollfish survey panel has opened
 
-You can be notified when Pollfish survey panel is open
+You can register and get notified when a Pollfish survey panel has opened. Publishers usually use this notification to pause a game until the pollfish panel is closed again.
+
 
 ```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishOpened, (_) => {
+pollfish.setEventCallback(pollfish.EventListener.OnPollfishOpened, (_) => {
     console.log("Pollfish Survey panel is open");
 });
 ```
 
 <br/>
 
-### 8.6 Get notified when a Pollfish survey panel is closed
+### 8.6 Get notified when a Pollfish survey panel has closed
 
-You can be notified when Pollfish survey panel is closed
+You can register and get notified when a Pollfish survey panel has closed. Publishers usually use this notification to resume a game that they have previously paused when the Pollfish panel was opened.
 
 ```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishClosed, (_) => {
+pollfish.setEventCallback(pollfish.EventListener.OnPollfishClosed, (_) => {
     console.log("Pollfish Survey panel is closed");
 });
 ```
@@ -296,38 +465,70 @@ pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishClosed, (_) => 
 You can be notified when use has rejected a Pollfish survey
 
 ```js
-pollfishplugin.setEventCallback(pollfish.EventListener.OnPollfishUserRejectedSurvey, (_) => {
+pollfish.setEventCallback(pollfish.EventListener.OnPollfishUserRejectedSurvey, (_) => {
     console.log("Pollfish User Rejected Survey");
 });
 ```
 
 <br/>
 
-## 9. Manually show/hide Pollfish panel (optional)
+## 9. Manually show/hide Pollfish panel 
 
 You can manually hide and show Pollfish by calling anywhere after initialization: 
 
 For example:
 
 ```js
-pollfishplugin.showPollfish();
+pollfish.show();
 ```
 
 or
 
 ```js
-pollfishplugin.hidePollfish();
+pollfish.hide();
 ```
 
 <br/>
 
-## Example
+## 10. Check if Pollfish surveys are available on your device
 
-If you want to have a look at sample code on how you can call and use Pollfish plugin in your app, you can a review files located at test/index.js and test/index.html
+After you initialize Pollfish and a survey is received you can check at any time if the survey is available at the device by calling the following function.
+
+```js
+pollfish.isPollfishPresent((result) => {
+	console.log(result)
+});
+```
 
 <br/>
 
-## More Info
+## 11. Check if Pollfish panel is open
 
-For more information on setting up Cordova see [the documentation](http://cordova.apache.org/docs/en/latest/guide/cli/index.html)
+You can check at any time if the survey panel is open by calling the following function.
+
+```js
+pollfish.isPollfishPanelOpen((result) => {
+	console.log(result)
+});
+```
+
+<br/>
+
+# Example
+
+If you want to have a look at sample code on how you can call and use Pollfish plugin in your app, you can a review files located [here](https://github.com/pollfish/cordova-plugin-pollfish/tree/master/test)
+
+<br/>
+
+# More info
+
+You can read more info on how the Native Pollfish SDKs work on Android and iOS or how to set up properly a Cordova environment at the following links:
+
+<br/>
+
+[Pollfish Android SDK Integration Guide](https://pollfish.com/docs/android)
+
+[Pollfish iOS SDK Integration Guide](https://pollfish.com/docs/ios)
+
+[Cordova Starting Guide](http://cordova.apache.org/docs/en/latest/guide/cli/index.html)
 
