@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.2">
+<div class="changelog" data-version="6.2.3">
+v6.2.3
+
+- Internal fixes
+
 v6.2.2
 
 - Fix issue with unresponsive host app upon survey completion on iOS 13.7 devices
