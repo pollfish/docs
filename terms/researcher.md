@@ -1,6 +1,6 @@
 **RESEARCHER TERMS OF SERVICE &amp; PRIVACY POLICY**
 
-Last updated: 07/05/2021
+Last updated: 09/23/2021
 
 **WHO WE ARE**
 
