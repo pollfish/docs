@@ -101,6 +101,6 @@ Dynata (under the brand of PeanutLabs) is an online sample and market research s
 
 Latana Brand Tracking (Yuno) is a machine learning technology platform that helps brands make better marketing decisions by delivering scalable brand management insights.
 
-<h3> <img src="https://storage.googleapis.com/pollfish_production/doc_images/yuno.png" width="60" height="auto"/></h3>
+<h3> <img src="https://storage.googleapis.com/pollfish_production/doc_images/PureSpectrum.png" width="60" height="auto"/></h3>
 
 PureSpectrum is a rapidly growing market research and insights platform. We simplify technology for researchers so they can gather and use consumer data the way they want – without disruption.
