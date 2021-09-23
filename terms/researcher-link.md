@@ -245,7 +245,6 @@ If you choose to communicate with us, we may collect and store such communicatio
 | **DATA-RECIPIENT** | **PURPOSE** |
 | --- | --- |
 | Cloud Service Providers | Data Hosting and Data Management |
-| --- | --- |
 | Suppliers of Analytics Services (such as Google analytics) | Analytics |
 | Lawyers | Protection of legal interests |
 | State Authorities | Compliance with regulatory and legal obligations |
@@ -279,7 +278,6 @@ Information we collect is described in detail in section 1 of Part B of this Agr
 | **CCPA CATEGORY OF DATA** | **COLLECTED BY POLLFISH** | **Source of collection** | **COLLECTED WITHIN THE PRECEDING 12 MONTHS** | **SOLD WITHIN THE PRECEDING 12 MONTHS** | **SHARED FOR BUSINESS PURPOSES** | **SHARED WITH FOR BUSINESS PURPOSES** |
 | --- | --- | --- | --- | --- | --- | --- |
 | A. Identifiers.Examples:A real name, alias, postal address, unique personal identifier, online identifier, Internet Protocol address, email address, account name, Social Security number, driver&#39;s license number, passport number, or other similar identifiers. | YES (only data according to PART B section 1 of this Agreement) | Researcher | YES | NO | YES | Suppliers of following services:- Cloud hosting- legal services- Analytics services- mailing and communication services- affiliates |
-| --- | --- | --- | --- | --- | --- | --- |
 | B. Personal information categories listed in the California Customer Records statute (Cal. Civ. Code § 1798.80(e)). A name, signature, Social Security number, physical characteristics or description, address, telephone number, passport number, driver&#39;s license or state identification card number, insurance policy number, education, employment, employment history, bank account number, credit card number, debit card number, or any other financial information, medical information, or health insurance information. Some personal information included in this category may overlap with other categories. | YES (only data according to PART B section 1 of this Agreement | Researcher | YES | NO | YES | Suppliers of following services:- Cloud hosting- legal services- Analytics services- mailing and communication services- affiliates |
 | C. Protected classification characteristics under California or federal law. Age (40 years or older), race, color, ancestry, national origin, citizenship, religion or creed, marital status, medical condition, physical or mental disability, sex (including gender, gender identity, gender expression, pregnancy or childbirth and related medical conditions), sexual orientation, veteran or military status, genetic information (including familial genetic information). | NO | N/A | N/A | N/A | N/A | N/A |
 | D. Commercial information. Records of personal property, products or services purchased, obtained, or considered, or other purchasing or consuming histories or tendencies. | YES (only for products or services purchased according to the Researcher use of our Services) | Researcher | YES | NO | YES | Suppliers of following services:- Cloud hosting- Analytics services- affiliates |
