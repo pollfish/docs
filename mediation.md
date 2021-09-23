@@ -103,4 +103,4 @@ Latana Brand Tracking (Yuno) is a machine learning technology platform that help
 
 <h3> <img src="https://storage.googleapis.com/pollfish_production/doc_images/PureSpectrum.png" width="100" height="auto"/></h3>
 
-PureSpectrum is a rapidly growing market research and insights platform. We simplify technology for researchers so they can gather and use consumer data the way they want – without disruption.
+PureSpectrum is a rapidly growing market research and insights platform. PureSpectrum simplifies technology for researchers so they can gather and use consumer data the way they want – without disruption.
