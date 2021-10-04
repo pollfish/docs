@@ -663,6 +663,8 @@ The url can contain the following query parameters
 | 11 | Gibberish                | The repondents answers contained gibberish in open-ended questions
 | 12 | Captcha                  | A captcha check failed for the respondent.
 | 13 | Third Party Termination  | A respondent was disqualified by a mediation partner.
+| 14 | Banned Phrases           | The respondent answered in opened questions with phrases that are banned
+| 15 | Disqualification Rules   | The respondent was disqualified since the responses between different similar questions were not consistent
 
 > Note: We are working on making **Third Party Termination** reasons more verbose
 
