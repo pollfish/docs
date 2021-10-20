@@ -1,5 +1,7 @@
 <div>
 <h2 class="static-page-title">POLLFISH Cookie Policy</h2>
+  
+Last updated: 20/03/2020
 
 <div id="templateRightMenuBody">
 
