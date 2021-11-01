@@ -558,25 +558,18 @@ import com.pollfish.callback.*;
 
 ### 5.2 Add support for cleartext http traffic (Optional)
 
-If you are looking to use Pollfish Mediation surveys from all the providers, in order to avoid any faulty behaviour on new Android devices we would advice that you allow cleartext http traffic. To achieve that you need to create a new file named **network_security_config.xml** under **res/xml** and add the following inside:
+If you are looking to use Pollfish Mediation surveys from all the providers, in order to avoid any faulty behaviour on new Android devices we would advice that you allow cleartext http traffic for the following domains. To achieve that you need to:
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<network-security-config>
-    <base-config cleartextTrafficPermitted="true">
-        <trust-anchors>
-            <certificates src="system" />
-        </trust-anchors>
-    </base-config>
-</network-security-config>
-```
+1. Donwload <a href="https://raw.githubusercontent.com/pollfish/android-sdk-pollfish/b94e812c8b61ad1ac72c16cd63892168c892a04c/resources/domain_whitelist.xml" download>
+  this file
+</a> and place it under **`res/xml`** directory.
 
-add in your Androidmanifest.xml reference the file above in the **android:networkSecurityConfig** tag as below:
+2. In your AndroidManifest.xml file add **`android:networkSecurityConfig`** tag as below:
 
 ```xml
  <application
     ...
-    android:networkSecurityConfig="@xml/network_security_config">
+    android:networkSecurityConfig="@xml/domain_whitelist">
 ```
 
 <br/>
