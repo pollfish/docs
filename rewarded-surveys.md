@@ -117,9 +117,9 @@ You can have a look for some integration tips <a href="https://www.pollfish.com/
 You can find examples in code on how to implement the rewarded approach in the links below:
 
 
-- [Android Sample Project](https://github.com/pollfish/android-sdk-pollfish/blob/master/sample-project/app/src/main/java/pollfish/com/sampleproject/RewardedSurveyActivity.java)
+- [Android Sample Project](https://github.com/pollfish/android-sdk-pollfish/blob/a7f65dce6fca7db835bf4ac9068e6740b8292841/sample-java/app/src/main/java/com/pollfish/sample/RewardedSurveyActivity.java)
 
-- [iOS Sample Project](https://github.com/pollfish/ios-sdk-pollfish/blob/master/SampleProject/SampleProject/SecondViewController.m)
+- [iOS Sample Project](https://github.com/pollfish/ios-sdk-pollfish/blob/92227220e45bf2e8cd2fb4c65e855dab148c76a8/SampleProjectSwift/SampleProjectSwift/SecondViewController.swift)
 
 - [Web Plugin Sample Project](https://github.com/pollfish/webplugin-rewarded-example)
 
