@@ -1010,6 +1010,16 @@ This parameter can be used optionally to prevent tampering around reward convers
 
 In order to generate the `signature` field you should sign the combination of `rewardConversion+rewardName+clickId` parameters using the HMAC-SHA1 algorithm and your account's secret_key that can be retrieved from the Account Information section on your Pollfish Dashboard.
 
+Please keep in mind if your `rewardConversion` is a whole number, you have to calculate the signature useing the floating point value with 1 decimal point.
+
+```kotlin
+val rewardConversion = 2
+val rewardName = "Dollars"
+val clickId = "CLICK_ID"
+
+val valueToSign = "2.0DollarsCLICK_ID" // This will be signed using HMAC-SHA1 and your account's secret key
+```
+
 The `signature` value should then be encoded using Base64.
 
 > **Note:** Although `rewardConversion` is mandatory for the hashing to work, the `rewardName` and `clickId` parameters are optional and you should add them for extra security.
