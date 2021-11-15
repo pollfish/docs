@@ -27,7 +27,7 @@ For all issues regarding method of payments, costs, taxes etc. not regulated or 
 
 ### 3. No refund after Subscription or Renewal
 
-Payments made on the Subscription and/or any Renewal Date, are not refundable in any case, not even in case where the Subscriber cancels the Subscription or where the Subscriber has chosen not to use the Credits 
+Payments made on the Subscription and/or any Renewal Date, are not refundable in any case, not even in case where the Subscriber cancels the Subscription or where the Subscriber has chosen not to use the Credits.
 
 ### 4. Part of Researcher Terms of Use
 
