@@ -94,7 +94,7 @@ Pollfish has a referral program in place, through which, a Publisher may introdu
 
 **5. FURTHER WARRANTIES AND OBLIGATIONS**
 
-In order to be entitled to use or continue to use our services, you acknowledge, and you agree that you meet the following conditions:
+**5.1** In order to be entitled to use or continue to use our services, you acknowledge, and you agree that you meet the following conditions:
 
 1. You have the capacity to enter and perform obligations. The services provided by Pollfish are not available to any person without capacity to exercise legal rights, or any Publisher disqualified from the system of Pollfish for any reason whatsoever;
 2. You are in compliance with the terms of this Agreement.
@@ -111,6 +111,14 @@ In order to be entitled to use or continue to use our services, you acknowledge,
 13. Pollfish services are compatible and can be used/registered in combination with other online advertisement networks;
 14. You will not access, process or modify the content or the form of any survey;
 15. You shall abstain from any misuse of the service and you shall not engage in any fraudulent or deceptive activity in the course of using our Services, including any fraudulent or deceptive activity which aims at gaining direct or indirect profit, benefit or advantage from any available Pollfish incentives, offers, referral bonuses or other benefits as set by Pollfish from time to time. Service misuse and/or fraudulent/ deceptive activity, as defined above, includes (but is not limited to) acts of virtual impersonation of allegedly different account operators, referral of one account to another account operated by the same Publisher (in order to take advantage of Pollfish referral scheme) use of external machines for purposes of false impersonation, taking advantage of possible bug or similar coding errors which may alter or misdirect calculation of due payments by Pollfish and use of methodologies such as VPN connections in order to generate virtual or falsified survey answers. Where such activity is detected by Pollfish&#39;s monitoring mechanisms, Pollfish may, at its own discretion, immediately block any further use of Pollfish services, disable any fraudulent account, recall all possible offers, benefits and bonuses of which the perpetrator(s) may have taken advantage by means of the aforementioned prohibited activity and request from perpetrator(s) to immediately compensate Pollfish for any caused damage, harm or loss of profit.
+
+**5.2** Inspection Rights of Pollfish. In order to ensure the quality of the app-user data transmitted to Pollfish via the Publisher App, in order to ensure compliance with our terms and in order to protect our service from fraudulent and deceptive activity (including but not limited to generation of virtual or falsified visitor traffic or survey answering), Pollfish may communicate with Publisher and may request from Publisher to provide to Pollfish general information supporting the App's real and consistent with basic industry standards, operation, management and traffic-generation (the "Inspection Process"). Such information may include information regarding the App's general content and industry-standard integration quality measures. Pollfish may request from Publisher to join a conference-call with Pollfish, for Publisher to provide the information mentioned above in person and in real time (such as through a Screen Sharing demonstration). Publisher agrees to promptly respond to all Inspection Process communications made by Pollfish (including joining requested conference calls, at a mutually convenient date and time) and provide requested information to prove App-quality and real-business operation of the App. In case Publisher denies or fails to respond to an Inspection Process call, or fails to provide the information requested by Pollfish, or Pollfish finds that the information provided is insufficient to support the App's real business operation and/or compliance with industry-basic quality standards and/or the terms of this Agreement, Pollfish may, at its sole discretion, terminate this Agreement, discontinue provision of any services to the Publisher and disqualify Publisher from the Pollfish system.
+
+ 
+
+ 
+
+ 
 
 **6. LICENSES**
 
