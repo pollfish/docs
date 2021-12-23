@@ -118,19 +118,19 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true&sig="s
 |42 | **target** | Int | Target SDK (Android) | | No | No
 |43 | **board** | String | The name of the underlying board | Android: like "goldfish" <br>iOS: [[UIDevice currentDevice] model] | No | No
 |44 | **serial** | String | A hardware serial number, if available. Alphanumeric only, case-insensitive (Android) | | No | No
-|45 | **iap\*\*** | JSON Array | List of installed apps objects (Android) | See below | No | No
-|46 <span class="demographics">•</span>| **gender** | Int | The gender of the user | Enumeration. See below for the list of possible values | No | No
+|45 | **iap\*\*** | JSON Array | List of installed apps objects (Android) - Deprecated | See below | No | No
+|46 <span class="demographics">•</span>| **gender** | Int | The gender of the user | Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
 |47 <span class="demographics">•</span>| **year_of_birth** | Int | The birth year of the user | A positive integer | No | No
-|48 <span class="demographics">•</span>| **marital_status** | Int | The marital status of the user | Enumeration. See below for the list of possible values | No | No
-|49 <span class="demographics">•</span>| **parental** | Int | How many kids the user has | Enumeration. See below for the list of possible values | No | No
-|50 <span class="demographics">•</span>| **education** | Int | The education level of the user | Enumeration. See below for the list of possible values | No | No
-|51 <span class="demographics">•</span>| **employment** | Int | The employment status of the user | Enumeration. See below for the list of possible values | No | No
-|52 <span class="demographics">•</span>| **career** | Int | The industry that the user is employed in | Enumeration. See below for the list of possible values | No | No
-|53 <span class="demographics">•</span>| **race** | Int | The race of the user | Enumeration. See below for the list of possible values | No | No
-|54 <span class="demographics">•</span>| **income** | Int | The level of the income of the user | Enumeration. See below for the list of possible values | No | No
-|55 <span class="demographics">•</span>| **spoken_languages** | Array[String] | The spoken languages of the user | Array of Enumeration. See below for the list of possible values | No | No
-|56 <span class="demographics">•</span>| **organization_role** | Int | The organization role of the user | Enumeration. See below for the list of possible values | No | No
-|57 <span class="demographics">•</span>| **number_of_employees** | Int | The number of employees in the organization of the user | Enumeration. See below for the list of possible values | No | No
+|48 <span class="demographics">•</span>| **marital_status** | Int | The marital status of the user | Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
+|49 <span class="demographics">•</span>| **parental** | Int | How many kids the user has | Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
+|50 <span class="demographics">•</span>| **education** | Int | The education level of the user | Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
+|51 <span class="demographics">•</span>| **employment** | Int | The employment status of the user | Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
+|52 <span class="demographics">•</span>| **career** | Int | The industry that the user is employed in | Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
+|53 <span class="demographics">•</span>| **race** | Int | The race of the user | Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
+|54 <span class="demographics">•</span>| **income** | Int | The level of the income of the user | Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
+|55 <span class="demographics">•</span>| **spoken_languages** | Array[String] | The spoken languages of the user | Array of Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
+|56 <span class="demographics">•</span>| **organization_role** | Int | The organization role of the user | Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
+|57 <span class="demographics">•</span>| **number_of_employees** | Int | The number of employees in the organization of the user | Enumeration. See [here](https://www.pollfish.com/docs/demographic-surveys) for the list of possible values | No | No
 |58 <span class="demographics">•</span>| **postal_code** | String | *(deprecated)* - The postal code of the location where the user currently resides in | | No | No
 |59 <span class="demographics">•</span>| **postal_data** | String | The postal data of the location where the user currently resides in | Contains postal code and country 2 letter ISO code seperated by pipe. ie: "11527&vert;GR", "10017&vert;US" | No | No
 |60 | **email** | String | The email of the user | A valid email address | No | No
