@@ -542,7 +542,7 @@ integration here : <https://github.com/pollfish/api-pollfish>
     }
 </style>
 
-## 5. Events (Optional) - Offerwall
+## 6. Events (Optional) - Offerwall
 
 When the html file loads on the user side, there are
 several javascript events that can be fired through the lifetime of a
@@ -615,7 +615,7 @@ integration here : <https://github.com/pollfish/api-offerwall-example>
 
 
 
-## 6. Request your account to get verified
+## 7. Request your account to get verified
 
 After you take live the API in release mode (set **"debug":false** or remove debug param from the URL), you should request your account to get verified from your Pollfish Developer Dashboard.
 
