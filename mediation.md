@@ -19,7 +19,7 @@ Publishers can also change through their Dashboard per mediation network the fol
 - **Minimum Incidence Rate (IR)** - Publisher can set the minimum IR of accepted surveys. IR is calculated as a percentage of successful completes over the total surveys served.
 - **Desktop Vs Mobile Surveys (when available)** - Publishers can enable and allow surveys that are not mobile optimized (ideal for websites)
 
-<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/doc_images/NetworksSetUpOp.png" width="700" height="auto"/>
+<p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/doc_images/NetworksSetUpSchle.png" width="700" height="auto"/>
 </p>
 
 <br/>
@@ -109,3 +109,7 @@ PureSpectrum is a rapidly growing market research and insights platform. PureSpe
 
 Precision Sample owns and operates proprietary online, mobile & social panels exceeding 25 million in major countries across North America, South America, Europe & Asia. With panel growth is trending at over 300,000 new members monthly our panels are among the largest and most capable in the industry.
 
+
+<h3> <img src="https://storage.googleapis.com/pollfish_production/doc_images/SchlesingerGroup_HEX.png" width="100" height="auto"/></h3>
+
+Schlesinger Group is a marketing research company specializing in qualitative and quantitative research data collection services, worldwide. It has 15 offices across key research markets in the United States and 10 in United Kingdom, Germany, France and Spain.
