@@ -106,11 +106,11 @@ In order to avoid user fraud it is strongly adviced to register a server-to-serv
 
 You can find detailed information on how to set up server-to-server callbacks [here](https://www.pollfish.com/docs/s2s)
 
-<h3>8. Register & Listen for Pollfish User Not Eligible notification (optional)</h3>
+<h3>9. Register & Listen for Pollfish User Not Eligible notification (optional)</h3>
 
 Since Pollfish is a survey platform, some times users maybe screened out once a survey is started. Having that said, you can register and listen for Pollfish User Not Eligible notification/listener.  If this event is fired you will not earn any money from that survey and you should not reward your users either. 
 
-<h3>9. Passing a custom user id upon survey completion to the server side (optional)</h3>
+<h3>10. Passing a custom user id upon survey completion to the server side (optional)</h3>
 
 If you want to pass a custom user param on your server side during survey completion you should follow the steps below:
 
