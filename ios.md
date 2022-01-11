@@ -916,7 +916,7 @@ The syntax for survey_class values is:
 
 ```
 survey_class: provider["/"type]
-provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "Dynata"
+provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
@@ -941,7 +941,11 @@ The whole set of values currently supported are:
 | **`Cint`**                  | Cint survey   
 | **`InnovateMR`**            | InnovateMR survey   
 | **`SaySo`**                 | SaySo survey   
-| **`Dynata`**                | Dynata survey
+| **`Dynata`**       | Dynata survey 
+| **`Yuno`**       | Yuno survey 
+| **`PureSpectrum`**       | PureSpectrum survey 
+| **`Opinionetwork`**       | Opinionetwork survey
+| **`SchlesingerGroup`**       | SchlesingerGroup survey
 
 <br/>
 
