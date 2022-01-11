@@ -884,7 +884,7 @@ As you may see in the example above you can get informed for the following value
 
 ```
 survey_class: provider["/"type]
-provider: "Pollfish" | "Toluna" | "Cint" | "Lucid" | "InnovateMR" | "SaySo" | "P2Sample"
+provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
@@ -909,7 +909,11 @@ The whole set of values currently supported are:
 | **Cint**         | Cint survey   
 | **InnovateMR**         | InnovateMR survey   
 | **SaySo**       | SaySo survey   
-| **P2Sample**       | P2Sample survey
+| **Dynata**       | Dynata survey 
+| **Yuno**       | Yuno survey 
+| **PureSpectrum**       | PureSpectrum survey 
+| **Opinionetwork**       | Opinionetwork survey
+| **SchlesingerGroup**       | SchlesingerGroup survey
 
 When a new mediation network enters the Pollfish network the appropriate values will be added.
 
