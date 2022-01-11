@@ -398,7 +398,7 @@ The whole set of values currently supported are:
 | **Yuno**       | Yuno survey 
 | **PureSpectrum**       | PureSpectrum survey 
 | **Opinionetwork**       | Opinionetwork survey
-| **SchesingerGroup**       | SchesingerGroup survey
+| **SchlesingerGroup**       | SchlesingerGroup survey
 
 When a new mediation network enters the Pollfish network the appropriate values will be added.
 
