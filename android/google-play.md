@@ -2,7 +2,6 @@
 v6.2.0
 
 - Adatping to new Google Play Advertising ID policies
-- Introducing the use of session id when advertising id is unavailable
 
 v6.1.6
 
