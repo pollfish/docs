@@ -234,6 +234,20 @@ cordova plugin remove cordova-plugin-pollfish
 
 <br/>
 
+**Android 12**
+
+Apps updating their target API level to 31 (Android 12) or higher will need to declare a Google Play services normal permission in the AndroidManifest.xml file.
+
+Navigate to the `platforms/android/app/src/main` directory inside your project's root, locate the AndroidManifest.xml file and add the following line just before the `<application>`.
+
+```xml
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+```
+
+You can read more about Google Advertising ID changes [here](https://support.google.com/googleplay/android-developer/answer/6048248).
+
+<br/>
+
 ## 4. Initialize Pollfish
 
 You can set several params to control the behaviour of Pollfish survey panel within your app with the use of the `pollfish.Builder` instance. Below you can see all the available options. Apart from the constructor all the other methods are optional.

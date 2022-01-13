@@ -1,5 +1,10 @@
-<div class="changelog" data-version="6.1.6">
+<div class="changelog" data-version="6.2.0">
+v6.2.0
+
+- Internal fixes
+
 v6.1.6
+
 - Internal fixes
 
 v6.1.5
@@ -127,7 +132,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.1.6'
+implementation 'com.pollfish:pollfish-universal:6.2.0'
 ```
 
 <tr>
@@ -298,7 +303,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.1.6'
+implementation 'com.pollfish:pollfish-universal:6.2.0'
 ```
 
 <tr>
@@ -488,7 +493,7 @@ android {
 
 dependencies {
     ...
-    implemetation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
+    implemetation "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
 }
 ```
 
@@ -503,7 +508,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.1.6'
+    implementation 'com.pollfish:pollfish-universal:6.2.0'
 }
 ```
 

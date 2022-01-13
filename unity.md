@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.1.3">
+<div class="changelog" data-version="6.1.4">
+v6.1.4
+
+- Updated with Pollfish Android SDK v6.2.0
+
 v6.1.3
 
 - Fixed XCode build issues with static linking enabled
@@ -403,7 +407,7 @@ Imported files will be listed in the following directories:
 > 
 > For example if a class from `com.google.android.gms` package is duplicated:
 >```groovy
->implementation 'com.pollfish:pollfish-googleplay:6.1.5' {
+>implementation 'com.pollfish:pollfish-googleplay:6.2.0' {
 >   exclude group: 'com.google.android.gms'
 >}
 >```
@@ -416,12 +420,32 @@ Imported files will be listed in the following directories:
 >```groovy  
 >dependencies {
 >  ...
->  implementation 'com.pollfish:pollfish-googleplay:6.1.5'
+>  implementation 'com.pollfish:pollfish-googleplay:6.2.0'
 >}
 >```
 >
 >and then include the Pollfish iOS SDK framework in you iOS XCode project in order for Pollfish to work properly. 
 >Please visit this <a href="https://www.pollfish.com/docs/ios">guide</a> to download the latest framework version and import it on a XCode project.
+
+
+<br/>
+
+> **Android 12**
+>
+>Apps updating their target API level to 31 (Android 12) or higher will need to declare a Google Play services normal permission in the AndroidManifest.xml file.
+>
+>Navigate to your exporter Android project's AndroidManifest.xml file, or to your AndroidManifest template file and add the following line just before the `<application>`.
+>
+>```xml
+><uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+>```
+>
+>You can read more about Google Advertising ID changes [here](https://support.google.com/googleplay/android-developer/answer/6048248).
+>
+><br/>
+
+
+<br/>
 
 </div>
 

@@ -1,4 +1,9 @@
-<div class="changelog" data-version="6.1.6">
+<div class="changelog" data-version="6.2.0">
+v6.2.0
+
+- Adatping to new Google Play Advertising ID policies
+- Introducing the use of session id when advertising id is unavailable
+
 v6.1.6
 
 - Internal fixes
@@ -126,7 +131,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.1.6'
+implementation 'com.pollfish:pollfish-googleplay:6.2.0'
 ```
 
 <tr>
@@ -297,7 +302,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.1.6'
+implementation 'com.pollfish:pollfish-googleplay:6.2.0'
 ```
 
 <tr>
@@ -494,7 +499,7 @@ android {
 
 dependencies {
     ...
-    implemetation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
+    implemetation "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
 }
 ```
 
@@ -509,7 +514,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-googleplay:6.1.6'
+    implementation 'com.pollfish:pollfish-googleplay:6.2.0'
 }
 ```
 
@@ -524,11 +529,23 @@ If you are using gradle you can easily add in your dependencies:
 ```groovy
 dependencies {
     ...
-    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.0'
 }
 ```
 
 > **Note:** If you cannot see surveys even in developer mode, please do check your logs to see if this is related with your current version of Google Play Services
+
+<br/>
+
+**Android 12**
+
+Apps updating their target API level to 31 (Android 12) or higher will need to declare a Google Play services normal permission in the AndroidManifest.xml file.
+
+```xml
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+```
+
+You can read more about Google Advertising ID changes [here](https://support.google.com/googleplay/android-developer/answer/6048248).
 
 <br/>
 

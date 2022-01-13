@@ -268,9 +268,22 @@ Applications that integrate Pollfish SDK are required to include Google Play Ser
 
 ```java
 dependencies {
-    implementation 'com.google.android.gms:play-services-ads:20.0.0'
+    implementation 'com.google.android.gms:play-services-ads:20.5.0'
 }
 ```
+
+<br/>
+
+**Android 12**
+
+Apps updating their target API level to 31 (Android 12) or higher will need to declare a Google Play services normal permission in the AndroidManifest.xml file.
+
+```xml
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+```
+
+You can read more about Google Advertising ID changes [here](https://support.google.com/googleplay/android-developer/answer/6048248).
+
 
 <br/>
 
@@ -306,7 +319,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-  implementation 'com.pollfish:pollfish-googleplay:6.1.6'
+  implementation 'com.pollfish:pollfish-googleplay:6.2.0'
 }
 ```
 
@@ -326,7 +339,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:6.1.6.0'
+  implementation 'com.pollfish.mediation:pollfish-admob:6.2.0.0'
 }
 ```
 
