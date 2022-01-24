@@ -173,6 +173,8 @@ Any of the above data, are therefore, collected by Pollfish under your permissio
 
 Please note that, whenever an app-user declines to take a survey or declines acceptance of this Policy, Pollfish will not proceed to any further collection of the app-user data in the future but can at all times use and process already collected automatically received data. If the app-user wants Pollfish to erase such data, he can at all times exercise this right according to the procedure set-out in section 14 of this Policy.
 
+The site is protected by hCaptcha and its [Privacy Policy](https://www.hcaptcha.com/privacy) and [Terms of Service](https://www.hcaptcha.com/terms) apply.
+
 **6. PROCESSING ACTIVITIES AND LEGAL BASES FOR PROCESSING**
 
 **6.1**  Pollfish collects, stores and processes your personal data for the following purposes:
