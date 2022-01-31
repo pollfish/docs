@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.0">
+<div class="changelog" data-version="6.2.1">
+v6.2.1
+
+- Fixing issue with missing android:exported attribute in AndroidManifest.xml
+
 v6.2.0
 
 - Adatping to new Google Play Advertising ID policies

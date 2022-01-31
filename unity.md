@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.1.4">
+<div class="changelog" data-version="6.1.5">
+v6.1.5
+
+- Updated with Pollfish Android SDK v6.2.1
+
 v6.1.4
 
 - Updated with Pollfish Android SDK v6.2.0
@@ -407,7 +411,7 @@ Imported files will be listed in the following directories:
 > 
 > For example if a class from `com.google.android.gms` package is duplicated:
 >```groovy
->implementation 'com.pollfish:pollfish-googleplay:6.2.0' {
+>implementation 'com.pollfish:pollfish-googleplay:6.2.1' {
 >   exclude group: 'com.google.android.gms'
 >}
 >```
@@ -420,7 +424,7 @@ Imported files will be listed in the following directories:
 >```groovy  
 >dependencies {
 >  ...
->  implementation 'com.pollfish:pollfish-googleplay:6.2.0'
+>  implementation 'com.pollfish:pollfish-googleplay:6.2.1'
 >}
 >```
 >

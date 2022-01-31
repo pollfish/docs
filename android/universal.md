@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.0">
+<div class="changelog" data-version="6.2.1">
+v6.2.1
+
+- Fixing issue with missing android:exported attribute in AndroidManifest.xml
+
 v6.2.0
 
 - Internal fixes
@@ -132,7 +136,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.2.0'
+implementation 'com.pollfish:pollfish-universal:6.2.1'
 ```
 
 <tr>
@@ -303,7 +307,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.2.0'
+implementation 'com.pollfish:pollfish-universal:6.2.1'
 ```
 
 <tr>
@@ -508,7 +512,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.2.0'
+    implementation 'com.pollfish:pollfish-universal:6.2.1'
 }
 ```
 
