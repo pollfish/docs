@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.1">
+<div class="changelog" data-version="6.2.2">
+v6.2.2
+
+- Fixing crashes caused by a RuntimeException in Pollfish survey activity
+
 v6.2.1
 
 - Fixing issue with missing android:exported attribute in AndroidManifest.xml
@@ -136,7 +140,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.2.1'
+implementation 'com.pollfish:pollfish-universal:6.2.2'
 ```
 
 <tr>
@@ -307,7 +311,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.2.1'
+implementation 'com.pollfish:pollfish-universal:6.2.2'
 ```
 
 <tr>
@@ -512,7 +516,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.2.1'
+    implementation 'com.pollfish:pollfish-universal:6.2.2'
 }
 ```
 
