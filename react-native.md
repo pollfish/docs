@@ -176,10 +176,9 @@ params.indicatorPosition(RNPollfish.Position.topLeft)
     .rewardInfo({
         rewardName: 'Points',
         rewardConversion: 1.3
-    })
-    .build();
+    });
 
-RNPollfish.init(params);
+RNPollfish.init(params.build());
 ```
 
 <br/>
