@@ -369,7 +369,7 @@ about the survey network and type. The syntax is
 
 ```
 survey_class: provider["/"type]
-provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup" | "YunoRouter"
+provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup" | "YunoRouter" | "IpsosMediation"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
@@ -400,6 +400,7 @@ The whole set of values currently supported are:
 | **Opinionetwork**       | Opinionetwork survey
 | **SchlesingerGroup**       | SchlesingerGroup survey
 | **YunoRouter**       | YunoRouter survey 
+| **IpsosMediation**       | IpsosMediation survey 
 
 When a new mediation network enters the Pollfish network the appropriate values will be added.
 

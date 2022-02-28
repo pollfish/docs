@@ -1239,7 +1239,7 @@ The syntax for survey_class values is:
 
 ```
 survey_class: provider["/"type]
-provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup" | "YunoRouter"
+provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup" | "YunoRouter" | "IpsosMediation"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
@@ -1270,6 +1270,7 @@ The whole set of values currently supported are:
 | **`Opinionetwork`**       | Opinionetwork survey
 | **`SchlesingerGroup`**       | SchlesingerGroup survey
 | **`YunoRouter`**       | YunoRouter survey 
+| **`IpsosMediation`**       | IpsosMediation survey 
 
 <br/>
 
