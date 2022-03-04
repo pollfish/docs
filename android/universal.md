@@ -1201,7 +1201,7 @@ Field | Description
 **`surveyLOI`**                | The expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI was not computed reliably
 **`surveyClass`**        | Information about the survey network and type
 **`rewardName`**         | A virtual reward name as specified on Publisher Dashboard 
-**`rewardValue`**        | A virtual reward value as caluclated via a given echange rate on Publisher Dashboard 
+**`rewardValue`**        | A virtual reward value as calculated via a given exchange rate on Publisher Dashboard 
 **`remainingCompletes`** | The number of remaining completes for the survey
 
 <br/>
@@ -1210,7 +1210,7 @@ The syntax for survey_class values is:
 
 ```
 survey_class: provider["/"type]
-provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup" | "YunoRouter" | "IpsosMediation"
+provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup" | "YunoRouter" | "IpsosMediation" | "ProdegeMR"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
@@ -1242,6 +1242,7 @@ The whole set of values currently supported are:
 | **`SchlesingerGroup`**       | SchlesingerGroup survey
 | **`YunoRouter`**       | YunoRouter survey 
 | **`IpsosMediation`**       | IpsosMediation survey 
+| **`ProdegeMR`**       | ProdegeMR survey 
 
 <br/>
 
