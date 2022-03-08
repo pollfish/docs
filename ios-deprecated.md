@@ -878,13 +878,13 @@ As you may see in the example above you can get informed for the following value
 - **survey_loi** : the expected time in minutes that it takes to complete the survey. This param is optional and will have as default the value -1 if it was not set and the LOI wan not computed reliably.
 - **survey_class** :  information about the survey network and type* 
 - **reward_name** :  a virtual reward name as specified on Developer Dashboard* 
-- **reward_vale** :  a virtual reward value as caluclated via a given echange rate on Developer Dashboard.* 
+- **reward_vale** :  a virtual reward value as calculated via a given exchange rate on Developer Dashboard.* 
 
 * The syntax for survey_class values is:
 
 ```
 survey_class: provider["/"type]
-provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup" | "YunoRouter"
+provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup" | "YunoRouter" | "IpsosMediation" | "ProdegeMR"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 ```
 
@@ -915,6 +915,8 @@ The whole set of values currently supported are:
 | **Opinionetwork**       | Opinionetwork survey
 | **SchlesingerGroup**       | SchlesingerGroup survey
 | **YunoRouter**       | YunoRouter survey
+| **IpsosMediation**       | IpsosMediation survey
+| **ProdegeMR**       | ProdegeMR survey
 
 When a new mediation network enters the Pollfish network the appropriate values will be added.
 
