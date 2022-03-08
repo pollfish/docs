@@ -417,7 +417,7 @@ If you everything worked fine during the previous steps, you should turn Pollfis
 
 <br/>
 
-# Optional
+# Optional section
 
 ## 6. Use and control Pollfish Max Adapter in your Rewarded Ad Unit
 
