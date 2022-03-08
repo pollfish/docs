@@ -417,7 +417,9 @@ If you everything worked fine during the previous steps, you should turn Pollfis
 
 <br/>
 
-## 6: Use and control Pollfish Max Adapter in your Rewarded Ad Unit
+# Optional
+
+## 6. Use and control Pollfish Max Adapter in your Rewarded Ad Unit
 
 Pollfish Max Adapter provides different options that you can use to control the behaviour of Pollfish SDK. This configuration, if applied, will override any configuration done in AppLovin's dashboard.
 
