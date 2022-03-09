@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.3">
+<div class="changelog" data-version="6.2.4">
+v6.2.4
+
+- Fixing issue with hiding the Pollfish panel when the UI orientation is locked and the device gets rotated
+
 v6.2.3
 
 - Internal fixes
