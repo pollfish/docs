@@ -192,8 +192,8 @@ pollfishplugin.initWithUserAttributes(
     'REQUEST_UUID', 
     false,
     {
-		gender: '1',
-		education: '1'
+	gender: '1',
+	education: '1'
 	});
 ```
 
@@ -262,26 +262,26 @@ Param               | Description
 **`.rewardMode(Boolean)`**           		        | Init in reward mode (skip Pollfish indicator to show a custom prompt)
 **`.requestUUID(String)`**               		    | Sets a unique id to identify a user and be passed through server-to-server callbacks
 **`.userProperties(Json)`**                  		| Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
-**`.rewardInfo(Json)`**                     	 	| An object holding information regarding the survey completion reward
+**`.rewardInfo(Json)`**                     	 	| An object holding information regarding the survey completion reward. If set `signature` must be calculated in order to receive surveys. See [here](https://www.pollfish.com/docs/api-documentation) in section **`Notes for sig query parameter`**
 **`.clickId`**         		                      	| A pass throught param that will be passed back through server-to-server callback
 **`.signature`**            	                 	| An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object. 
 
 <br/>
 
 ```js
-var params = new pollfish.Builder('ANDROID_API_KEY', 'IOS_API_KEY'); // Android & iOS
+var builder = new pollfish.Builder('ANDROID_API_KEY', 'IOS_API_KEY'); // Android & iOS
 ```
 
 ```js
-var params = new pollfish.Builder('ANDROID_API_KEY', null); // Android only
+var builder = new pollfish.Builder('ANDROID_API_KEY', null); // Android only
 ```
 
 ```js
-var params = new pollfish.Builder(null, 'IOS_API_KEY'); // iOS only
+var builder = new pollfish.Builder(null, 'IOS_API_KEY'); // iOS only
 ```
 
 ```js
-params.rewardMode(false)
+var params = builder.rewardMode(false)
 	.offerwallMode(false)
 	.releaseMode(false)
 	.indicatorPadding(50)
