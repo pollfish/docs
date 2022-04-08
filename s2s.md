@@ -115,6 +115,7 @@ underage_profiling | The respondent is below the allowed age of participation
 banned_phrase | The respondent entered in open ended questions a banned phrase
 disqualification_rule | The respondent has failed to provide consistent answers between similar questions
 straight_lining | The respondent gave identical (or nearly identical) answers to questions that are using the same response scale
+survey_already_taken | The respondent has already completed the survey
  
  > **Important:** These responses might change in the future
 
