@@ -1,4 +1,16 @@
-<div class="changelog" data-version="6.2.2.0">
+<div class="changelog" data-version="6.2.4.1">
+v6.2.4.1
+
+- Internal fixes
+
+v6.2.4.0
+
+- Updated with Pollfish Android SDK v6.2.4
+
+v6.2.3.0
+
+- Updated with Pollfish Android SDK v6.2.3
+
 v6.2.2.0
 
 - Updated with Pollfish Andorid SDK v6.2.2
@@ -110,8 +122,6 @@ v5.0.2.1
 - Initial Release
 
 </div>
-
-</br>
 
 This guide is for publishers looking to use AdMob mediation to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.
 
@@ -253,8 +263,9 @@ Users can pass a **JSON string** to provide the necessary params for Pollfish SD
 Key | Type
 ------------ | -------------
 **`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish | String
-**`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Bool
+**`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Boolean
 **`request_uuid`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks | String
+**`offerwall_mode`** <br/> Sets Pollfish SDK to Offerwall Mode | Boolean
 
 Example:
 
@@ -262,7 +273,8 @@ Example:
 {
     "api_key": "Pollfish API Key", 
     "release_mode": true, 
-    "request_uuid": "My user id"
+    "request_uuid": "My user id",
+    "offerwall_mode": false
 }
 ```
 
@@ -280,7 +292,7 @@ Applications that integrate Pollfish SDK are required to include Google Play Ser
 
 ```java
 dependencies {
-    implementation 'com.google.android.gms:play-services-ads:20.5.0'
+    implementation 'com.google.android.gms:play-services-ads:20.6.0'
 }
 ```
 
@@ -317,21 +329,33 @@ Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a
 
 Download Pollfish Android SDK or reference it through maven().
 
-#### **Download Pollfish Android SDK**
+**Download Pollfish Android SDK**
 
-Import Pollfish **.AAR** file to your project libraries  
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.2.5.zip) to download the latest version of Pollfish Android SDK 
+
+**Import Pollfish `.aar` file to your project libraries**
 
 If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate Pollfish aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
 
+**Integrate Google Play Services to your project**
+
+Applications that integrate Pollfish SDK are required to include Google Play Services library in order to give access to the Advertising ID of a device to the SDK. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
+
+```groovy
+dependencies {
+    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
+}
+```
+
 **OR**
 
-#### **Retrieve Pollfish Android SDK through maven()**
+**Retrieve Pollfish Android SDK through maven()**
 
 Retrieve Pollfish through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
 ```groovy
 dependencies {
-  implementation 'com.pollfish:pollfish-googleplay:6.2.2'
+  implementation 'com.pollfish:pollfish-googleplay:6.2.4'
 }
 ```
 
@@ -351,7 +375,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:6.2.2.0'
+  implementation 'com.pollfish.mediation:pollfish-admob:6.2.4.0'
 }
 ```
 
@@ -359,12 +383,133 @@ dependencies {
 
 ## 4. Request for a RewardedAd
 
-```java
-import com.pollfish.mediation.PollfishAdMobAdapter;
+Import the following packages
 
-AdRequest request = new AdRequest.Builder()
-                .build();
+<span style="text-decoration:underline">Kotlin</span>
+
+```kotlin
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 ```
+
+<span style="text-decoration:underline">Java</span>
+
+```java
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+```
+
+<br/>
+
+Initialize AdMob SDK by calling `MobileAds.initialize` method passing a `Context` and an `OnInitializationCompleteListener` listener as arguments.
+
+<span style="text-decoration:underline">Kotlin</span>
+
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+    ...
+
+    MobileAds.initialize(this) {
+        // Initialization completed
+        createAndLoadRewardedAd()
+    }
+}
+```
+
+<span style="text-decoration:underline">Java</span>
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    ...
+
+    MobileAds.initialize(this, initializationStatus -> {
+        // Initialization completed
+        createAndLoadRewardedAd();
+    });
+}
+```
+
+Request a Rewarded A from AdMob by calling `RewardedAd.load` passing a `Context`, you `AD_UNIT_KEY`, an `AdRequest` object instance and a `RewardedAdLoadCallback` abstract class implementation as arguments.
+
+<span style="text-decoration:underline">Kotlin</span>
+
+```kotlin
+val adRequest = AdRequest.Builder().build()
+
+RewardedAd.load(this, "AD_UNIT_KEY", adRequest, object : RewardedAdLoadCallback() {
+    override fun onAdLoaded(rewardedAd: RewardedAd) {
+        
+        rewardedAd.fullScreenContentCallback = object : FullScreenContentCallback() {
+            override fun onAdFailedToShowFullScreenContent(adError: AdError) {}
+
+            override fun onAdShowedFullScreenContent() {}
+
+            override fun onAdDismissedFullScreenContent() {}
+        }
+    }
+
+    override fun onAdFailedToLoad(loadAdError: LoadAdError) {}
+})
+```
+
+<span style="text-decoration:underline">Java</span>
+
+```java
+AdRequest request = new AdRequest.Builder().build();
+
+RewardedAd.load(this, "AD_UNIT_KEY", request, new RewardedAdLoadCallback() {
+
+    @Override
+    public void onAdLoaded(@NonNull RewardedAd rewardedAd) {
+        mRewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+            @Override
+            public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {}
+
+            @Override
+            public void onAdShowedFullScreenContent() {}
+
+            @Override
+            public void onAdDismissedFullScreenContent() {}
+        });
+    }
+
+    @Override
+    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {}
+
+});
+```
+
+When the Rewarded Ad is ready, present the ad by invoking `rewardedAd.show` passing an `Activity` and a reward completion block. Just to be sure, you can combine show with a check to see if the Ad you are about to show is actually ready.
+
+<span style="text-decoration:underline">Kotlin</span>
+
+```kotlin
+mRewardedAd?.show(this) { reward: RewardItem ->
+    // Reward received
+}
+```
+
+<span style="text-decoration:underline">Java</span>
+
+```java
+if (mRewardedAd != null) {
+    mRewardedAd.show(MainActivity.this, reward -> {
+        // Reward received
+    });
+}
+```
+
 <br/>
 
 ## 5. Publish your app on the store
@@ -379,31 +524,28 @@ If you everything worked fine during the previous steps, you should turn Pollfis
 
 # Optional section
 
-## 6. Create Pollfish AdMob Mediation Bundle object
+## 6. Configure programmatically Pollfish SDK behaviour
 
-Pollfish AdMob Adapter provides different options that you can use to control the behaviour of Pollfish SDK.
-
-<br/>
-
-Below you can see all the available options of **`PollfishExtrasBundleBuilder`** instance that is used to configure the behaviour of Pollfish SDK.
+Pollfish AdMob Adapter provides different options that you can use to control the behaviour of Pollfish SDK. This configuration, if applied, will override any configuration done in AdMob's dashboard.
 
 <br/>
 
-No | Description
------------- | -------------
-6.1 | **.`setAPIKey(String apiKey)`**  <br/> Sets Pollfish SDK API key as provided by Pollfish
-6.2 | **`.setRequestUUID(String requestUUID)`**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
-6.3 | **`.setReleaseMode(boolean releaseMode)`**  <br/> Sets Pollfish SDK to Developer or Release mode
+Below you can see all the available options of **PollfishExtrasBundleBuilder** instance that is used to configure the behaviour of Pollfish SDK.
 
 <br/>
 
-### **6.1. `.setAPIKey(String apiKey)`**
+No | Description | Type
+------------ | ------------- | ----
+6.1 | **`.setAPIKey(String apiKey)`**  <br/> Sets Pollfish SDK API key as provided by Pollfish | String
+6.2 | **`.setRequestUUID(String requestUUID)`**  <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks | String
+6.3 | **`.setReleaseMode(boolean releaseMode)`**  <br/> Sets Pollfish SDK to Developer or Release mode | Boolean
+6.4 | **`.setOfferwallMode(boolean offerwallMode)`** <br/> Sets Pollfish SDK to Offerwall Mode | Boolean
 
-Pollfish API Key as provided by Pollfish on Pollfish Dashboard. This value will be used only if you did not specify the API Key in AdMob's UI as desribed in step 2. If you have already specified Pollfish API Key on AdMob's UI, this param will be ignored.
+### 6.1 `.setAPIKey(String apiKey)`
 
-<br/>
+Pollfish API Key as provided by Pollfish on  [Pollfish Dashboard](https://www.pollfish.com/publisher/) after you sign up to the platform.  If you have already specified Pollfish API Key on AdMob's UI, this param will be ignored.
 
-### **6.2. `.setRequestUUID(String requestUUID)`**
+### 6.2 `.setRequestUUID(String requestUUID)`
 
 Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
 
@@ -411,31 +553,47 @@ In order to register for such callbacks you can set up your server URL on your a
 
 If you would like to read more on Pollfish s2s callbacks you can read the documentation [here](https://www.pollfish.com/docs/s2s)
 
-<br/>
-
-### **6.3 `.setReleaseMode(boolean releaseMode)`**
+### 6.3 `.setReleaseMode(boolean releaseMode)`
 
 Sets Pollfish SDK to Developer or Release mode.
 
-* **Developer mode** is used to show to the developer how Pollfish surveys will be shown through an app (useful during development and testing).
-* **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
+*   **Developer mode** is used to show to the developer how Pollfish surveys will be shown through an app (useful during development and testing).
+*   **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
 
 Pollfish AdMob Adapter runs Pollfish SDK in release mode by default. If you would like to test with Test survey, you should set release mode to fasle.
 
+### 6.4 `.offerwallMode(boolean offerwallMode)`
+
+Enables offerwall mode. If not set, one single survey is shown each time.
+
+<span style="text-decoration:underline">Kotlin</span>
+
+```kotlin
+val bundle = PollfishExtrasBundleBuilder()
+    .setAPIKey(POLLFISH_API_KEY)
+    .setReleaseMode(false)
+    .setRequestUUID("MY_UUID")
+    .setOfferwallMode(false)
+    .build()
+
+val request = AdRequest.Builder()
+    .addNetworkExtrasBundle(PollfishAdMobAdapter::class.java, bundle)
+    .build()
+```
+
+<span style="text-decoration:underline">Java</span>
+
 ```java
-import com.pollfish.mediation.PollfishAdMobAdapter;
-import com.pollfish.mediation.PollfishExtrasBundleBuilder;
-
-
 Bundle pollfishBundle = new PollfishExtrasBundleBuilder()
     .setAPIKey("YOUR_POLLFISH_API_KEY")
     .setReleaseMode(false)
     .setRequestUUID("MY_ID")
+    .setOfferwallMode(false)
     .build();
 
 AdRequest request = new AdRequest.Builder()
-                .addNetworkExtrasBundle(PollfishAdMobAdapter.class, pollfishBundle)
-                .build();
+    .addNetworkExtrasBundle(PollfishAdMobAdapter.class, pollfishBundle)
+    .build();
 ```
 
 <br/>

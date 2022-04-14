@@ -1,4 +1,13 @@
-<div class="changelog" data-version="6.2.2">
+<div class="changelog" data-version="6.2.4">
+v6.2.4
+
+- Fixing issue with immersive mode in Android APIs lower than 30
+- Fixing issue causing RejectedExecutionException
+
+v6.2.3
+
+- Adding support for IronSource mediation adapter
+
 v6.2.2
 
 - Fixing crashes caused by a RuntimeException in Pollfish survey activity
@@ -138,7 +147,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.2.2'
+implementation 'com.pollfish:pollfish-googleplay:6.2.4'
 ```
 
 <tr>
@@ -309,7 +318,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.2.2'
+implementation 'com.pollfish:pollfish-googleplay:6.2.4'
 ```
 
 <tr>
@@ -489,7 +498,7 @@ Download Pollfish Android SDK or reference it through the maven repository.
 
 #### **Download Pollfish Android SDK**
 
-Import Pollfish **.AAR** file to your project libraries  
+Import Pollfish **.aar** file to your project libraries  
 
 If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .AAR Package option and from the file browser locate Pollfish aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
 
@@ -521,7 +530,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-googleplay:6.2.2'
+    implementation 'com.pollfish:pollfish-googleplay:6.2.4'
 }
 ```
 
@@ -536,7 +545,7 @@ If you are using gradle you can easily add in your dependencies:
 ```groovy
 dependencies {
     ...
-    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:20.6.0'
 }
 ```
 
@@ -667,7 +676,7 @@ No          | Description
 5.3.1.6     | **`.rewardMode(Boolean)`** <br/> Initializes Pollfish in reward mode
 5.3.1.7     | **`.offerwallMode(Boolean)`** <br/> Sets Pollfish to offerwall mode
 5.3.1.8     | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
-5.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward
+5.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward. If set, `signature` must be calculated in order to receive surveys. See [here](https://www.pollfish.com/docs/api-documentation) in section **`Notes for sig query parameter`**
 5.3.1.10    | **`.clickId(String)`** <br/> A pass through param that will be passed back through server-to-server callback
 5.3.1.11    | **`.signature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
 
@@ -797,7 +806,7 @@ Here is an example of how a user can pass a `ViewGroup` through `Params.Builder`
 
 ```kotlin
 val params = Params.Builder("API_KEY")
-    .userLayout(window.decorView as ViewGroup)
+    .userLayout(viewGroup)
     .build()
 ```
 
@@ -805,7 +814,7 @@ val params = Params.Builder("API_KEY")
 
 ```java
 Params params = new Params.Builder("API_KEY")
-    .userLayout((ViewGroup) getWindow().getDecorView())
+    .userLayout(viewGroup)
     .build();
 ```
 

@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.1.7">
+<div class="changelog" data-version="6.1.8">
+v6.1.8
+
+- Updated with Pollfish Android SDK v6.2.4 and Pollfish iOS SDK v6.2.5
+
 v6.1.7
 
 - Updated with Pollfish iOS SDK v6.2.4
@@ -310,7 +314,7 @@ pollfishParams.UserAttributes(userAttributes);
 <td>
 <br/>
 
-```dart
+```csharp
 Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
   .OfferwallMode(offerwallMode)
   .IndicatorPadding(indicatorPadding)
@@ -434,7 +438,7 @@ Imported files will be listed in the following directories:
 > 
 > For example if a class from `com.google.android.gms` package is duplicated:
 >```groovy
->implementation 'com.pollfish:pollfish-googleplay:6.2.1' {
+>implementation 'com.pollfish:pollfish-googleplay:6.2.4' {
 >   exclude group: 'com.google.android.gms'
 >}
 >```
@@ -447,7 +451,7 @@ Imported files will be listed in the following directories:
 >```groovy  
 >dependencies {
 >  ...
->  implementation 'com.pollfish:pollfish-googleplay:6.2.1'
+>  implementation 'com.pollfish:pollfish-googleplay:6.2.4'
 >}
 >```
 >

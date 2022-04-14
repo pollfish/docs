@@ -1,4 +1,13 @@
-<div class="changelog" data-version="6.2.2">
+<div class="changelog" data-version="6.2.4">
+v6.2.4
+
+- Fixing issue with immersive mode in Android APIs lower than 30
+- Fixing issue causing RejectedExecutionException
+
+v6.2.3
+
+- Adding support for IronSource mediation adapter
+
 v6.2.2
 
 - Fixing crashes caused by a RuntimeException in Pollfish survey activity
@@ -140,7 +149,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.2.2'
+implementation 'com.pollfish:pollfish-universal:6.2.4'
 ```
 
 <tr>
@@ -311,7 +320,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.2.2'
+implementation 'com.pollfish:pollfish-universal:6.2.4'
 ```
 
 <tr>
@@ -516,7 +525,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.2.2'
+    implementation 'com.pollfish:pollfish-universal:6.2.4'
 }
 ```
 
@@ -638,7 +647,7 @@ No          | Description
 4.3.1.6     | **`.rewardMode(Boolean)`** <br/> Initializes Pollfish in reward mode
 4.3.1.7     | **`.offerwallMode(Boolean)`** <br/> Sets Pollfish to offerwall mode
 4.3.1.8     | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
-4.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward
+4.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward. If set, `signature` must be calculated in order to receive surveys. See [here](https://www.pollfish.com/docs/api-documentation) in section **`Notes for sig query parameter`**
 4.3.1.10    | **`.clickId(String)`** <br/> A pass through param that will be passed back through server-to-server callback
 4.3.1.11    | **`.signature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
 
@@ -768,7 +777,7 @@ Here is an example of how a user can pass a `ViewGroup` through `Params.Builder`
 
 ```kotlin
 val params = Params.Builder("API_KEY")
-    .userLayout(window.decorView as ViewGroup)
+    .userLayout(viewGroup)
     .build()
 ```
 
@@ -776,7 +785,7 @@ val params = Params.Builder("API_KEY")
 
 ```java
 Params params = new Params.Builder("API_KEY")
-    .userLayout((ViewGroup) getWindow().getDecorView())
+    .userLayout(viewGroup)
     .build();
 ```
 

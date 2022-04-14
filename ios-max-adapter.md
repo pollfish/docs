@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.4.0">
+<div class="changelog" data-version="6.2.5.0">
+v6.2.5.0
+
+- Updating with Pollfish SDK v6.2.5
+
 v6.2.4.0
 
 - Initial release

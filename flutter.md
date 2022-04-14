@@ -117,7 +117,7 @@ Add this to your package's pubspec.yaml file:
 ```yaml
 dependencies:
   ...
-  flutter_pollfish: ^4.0.5
+  flutter_pollfish: ^4.0.7
 ```
 
 Execute the following command
@@ -169,7 +169,7 @@ FlutterPollfish.instance.init(androidApiKey: null, iOSApiKey: 'IOS_API_KEY'); //
 
 <br/>
 
-### 4.1 Other Init params (optional)
+### 4.1 Configure Pollfish behaviour (Optional)
 
 During initialization you can pass different optional params:
 
@@ -182,34 +182,43 @@ During initialization you can pass different optional params:
 6. **`userProperties`**: Map<String, Object> - Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
 7. **`clickId`**: String - A pass throught param that will be passed back through server-to-server callback
 8. **`signature`**: String - An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
-9. **`rewardInfo`**: RewardInfo - An object holding information regarding the survey completion reward
+9. **`rewardInfo`**: RewardInfo - An object holding information regarding the survey completion reward. If set, `signature` must be calculated in order to receive surveys. See [here](https://www.pollfish.com/docs/api-documentation) in section **`Notes for sig query parameter`**
 
 <br/>
 
-#### Debug Vs Release Mode
 
-You can use Pollfish either in Debug or in Release mode. 
-  
-* **Debug mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
-* **Release mode** is the mode to be used for a released app (start receiving paid surveys).
+> ### Debug vs Release Mode
+>
+> You can use Pollfish either in Debug or in Release mode. 
+>  
+> * **Debug mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
+> * **Release mode** is the mode to be used for a released app (start receiving paid surveys).
+> 
+> **Note:** Be careful to set the `releaseMode` parameter to `true` when you release your app in a relevant app store!!
 
-> **Note:** In Android debugMode parameter is ignored. Your app turns into debug mode once it is signed with a debug key. If you sign your app with a release key it automatically turns into Release mode.
+<br/>
 
-> **Note:** Be careful to turn the `releaseMode` parameter to `true` when you release your app in a relevant app store!!
+> ### Reward Mode 
+> 
+> Setting the `rewardMode` to `false` during initialization enables controlling the behavior of Pollfish in an app from the Pollfish panel. Enabling reward mode ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small button) and always force open Pollfish view to app users. This method is usually used when app developers want to somehow incentivize their users before completing surveys to increase completion rates.
 
 <br/>
 
-### Reward Mode 
+Example of basic Pollfish initialization
 
-Reward mode false during initialization enables controlling the behavior of Pollfish in an app from Pollfish panel. Enabling reward mode ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small button) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates.
+```dart
+FlutterPollfish.instance.init(
+  androidApiKey: 'ANDROID_API_KEY',
+  iOSApiKey: 'IOS_API_KEY');
+```
 
-<br/>
+Example of Pollfish configuration using the available options
 
 ```dart
 FlutterPollfish.instance.init(
   androidApiKey: 'ANDROID_API_KEY',
   iOSApiKey: 'IOS_API_KEY',
-  pollfishPosition: 5,
+  indicatorPosition: Position.middleRight,
   indicatorPadding: 40,
   rewardMode: false,
   releaseMode: true,
@@ -219,7 +228,7 @@ FlutterPollfish.instance.init(
     'gender': '1',
     'education': '1',
     ...
-  }),
+  },
   signature: 'SIGNATURE',
   clickId: 'CLICK_ID',
   rewardInfo: RewardInfo('Point', 1.3));

@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.4">
+<div class="changelog" data-version="6.2.5">
+v6.2.5
+
+- Fixing issue with accessing Pollfish instance from a background thread
+
 v6.2.4
 
 - Fixing issue with hiding the Pollfish panel when the UI orientation is locked and the device gets rotated
@@ -195,11 +199,6 @@ Below you can see an example on how you can initialize Pollfish with the help of
 - (void) applicationDidBecomeActive:(UIApplication *)application 
 {
     PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
-
-    [params rewardMode:BOOL];
-    [params releaseMode:BOOL];
-    [params offerwallMode:BOOL];
-
     [Pollfish initWith:params delegate:self];
 }
 ```
@@ -208,11 +207,7 @@ Below you can see an example on how you can initialize Pollfish with the help of
 
 ```swift
 func applicationDidBecomeActive(application: UIApplication) {
-
     let params = PollfishParams("API_KEY")
-        .rewardMode(Bool)
-        .releaseMode(Bool)
-        .offerwallMode(Bool)
     
     Pollfish.initWith(params)
 }
@@ -234,11 +229,6 @@ struct ContentView: View {
 
     func initPollfish() {
         let params = PollfishParams("API_KEY")
-            .rewardMode(Bool)
-            .releaseMode(Bool)
-            .offerwallMode(Bool)
-            .viewContainer(PollfishView.view)
-            
         Pollfish.initWith(params)
     }
 }
@@ -268,7 +258,7 @@ No | Description
 6.2.6 | **`.rewardMode(Bool)`** <br/> Initializes Pollfish in reward mode
 6.2.7 | **`.offerwallMode(Bool)`** <br/> Sets Pollfish to offerwall mode
 6.2.8 | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
-6.2.9 | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward
+6.2.9 | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward. If set, `signature` must be calculated in order to receive surveys. See [here](https://www.pollfish.com/docs/api-documentation) in section **`Notes for sig query parameter`**
 6.2.10| **`.clickId(String)`** <br/> A pass throught param that will be passed back through server-to-server callback
 6.2.11| **`.singnature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
 6.2.12| **`.monitorOrientationChanges(Bool)`** <br/> Toggle SDK reinitalization when device orientation changes

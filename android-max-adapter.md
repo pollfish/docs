@@ -1,4 +1,12 @@
-<div class="changelog" data-version="6.2.2.0">
+<div class="changelog" data-version="6.2.4.0">
+v6.2.4.0
+
+- Updated with Pollfish Android SDK v6.2.4
+
+v6.2.3.0
+
+- Updated with Pollfish Android SDK v6.2.3
+
 v6.2.2.0
 
 - Initial release
@@ -184,6 +192,8 @@ Download Pollfish Android SDK or reference it through maven().
 
 **Download Pollfish Android SDK**
 
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.2.4.zip) to download the latest version of Pollfish Android SDK 
+
 **Import Pollfish `.aar` file to your project libraries**
 
 If you are using Android Studio, right click on your project and select New Module. Then select Import .jar or .aar Package option and from the file browser locate Pollfish aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
@@ -206,7 +216,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish:pollfish-googleplay:6.2.2'
+    implementation 'com.pollfish:pollfish-googleplay:6.2.4'
 }
 ```
 
@@ -216,7 +226,7 @@ dependencies {
 
 Import Pollfish Max Adapter **.aar** file to your project libraries  
 
-If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .aar Package option and from the file browser locate Pollfish MoPub Adapter aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
+If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .aar Package option and from the file browser locate Pollfish Max Adapter aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
 
 **OR**
 
@@ -226,7 +236,7 @@ Retrieve Pollfish Max Adapter through **maven()** with gradle by adding the foll
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-mopub:6.2.2.0'
+    implementation 'com.pollfish.mediation:pollfish-max:6.2.4.0'
 }
 ```
 
@@ -419,19 +429,11 @@ If you everything worked fine during the previous steps, you should turn Pollfis
 
 # Optional section
 
-## 6. Use and control Pollfish Max Adapter in your Rewarded Ad Unit
+## 6. Configure programmatically Pollfish SDK behaviour
 
 Pollfish Max Adapter provides different options that you can use to control the behaviour of Pollfish SDK. This configuration, if applied, will override any configuration done in AppLovin's dashboard.
 
 <br/>
-
-```kotlin
-rewardedAd = MaxRewardedAd.getInstance("AD_UNIT_ID", this);
-rewardedAd.setLocalExtraParameter("release_mode", false);
-rewardedAd.setLocalExtraParameter("offerwall_mode", true);
-rewardedAd.setLocalExtraParameter("api_key", "YOUR_POLLFISH_API_KEY");
-rewardedAd.setLocalExtraParameter("request_uuid", "REQUEST_UUID");
-```
 
 | No  | Description                                                                                                                                      |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -475,7 +477,16 @@ Enables offerwall mode. If not set, one single survey is shown each time.
 
 <br/>
 
+```kotlin
+rewardedAd = MaxRewardedAd.getInstance("25aa38dc0445505f", this)
+rewardedAd.setLocalExtraParameter("release_mode", false)
+rewardedAd.setLocalExtraParameter("offerwall_mode", true)
+rewardedAd.setLocalExtraParameter("api_key", "YOUR_POLLFISH_API_KEY")
+rewardedAd.setLocalExtraParameter("request_uuid", "REQUEST_UUID")
+```
+
 <br/>
+
 
 ## 7. Payouts on Screenouts
 
