@@ -66,7 +66,7 @@ Select **Reporting API** for revenue reporting and click **Save**. You will find
 
 <br/>
 
-<img style="margin: 0 auto; display: block; max-height: 250px;" src="https://storage.googleapis.com/pollfish_production/doc_images/ironsource_ios_network_list.png"/>
+<img style="margin: 0 auto; display: block; max-height: 300px;" src="https://storage.googleapis.com/pollfish_production/doc_images/ironsource_ios_network_list.png"/>
 
 <br/>
 
