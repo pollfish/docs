@@ -58,7 +58,7 @@ You can retrieve your account key by loging in to Pollfish Publisher account and
 
 <br/>
 
-<img style="margin: 0 auto; display: block; max-height: 300px;" src="https://storage.googleapis.com/pollfish_production/doc_images/ironsource_add_custom_network_2.png"/>
+<img style="margin: 0 auto; display: block; max-height: 400px;" src="https://storage.googleapis.com/pollfish_production/doc_images/ironsource_add_custom_network_2.png"/>
 
 <br/>
 
@@ -108,7 +108,7 @@ Enables offerwall mode. If not set, one single survey is shown each time.
 
 <br/>
 
-<img style="margin: 0 auto; display: block; max-height: 350px;" src="https://storage.googleapis.com/pollfish_production/doc_images/ironsource_ios_network_config.png"/>
+<img style="margin: 0 auto; display: block; max-height: 450px;" src="https://storage.googleapis.com/pollfish_production/doc_images/ironsource_ios_network_config.png"/>
 
 <br/>
 
