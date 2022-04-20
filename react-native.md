@@ -119,7 +119,34 @@ You can read more about Google Advertising ID changes [here](https://support.goo
 
 <br/>
 
-## 4. Initialize Pollfish
+## 4. Import `RNPollfish` module
+
+```js
+import RNPollfish from 'react-native-plugin-pollfish';
+```
+
+<br/>
+
+## 4. Create a `RNPollfish.Builder` instance
+
+The Pollfish plugin must be initialized with one or two api keys depending on which platforms are you targeting. You can retrieve an API key from Pollfish Dashboard when you [sign up](https://www.pollfish.com/signup/publisher) and create a new app.
+
+```js
+var builder = new RNPollfish.Builder('ANDROID_API_KEY', 'IOS_API_KEY')
+    .rewardMode(true); // Android & iOS
+```
+
+```js
+var builder = new RNPollfish.Builder('ANDROID_API_KEY', null)
+    .rewardMode(true); // Android only
+```
+
+```js
+var builder = new RNPollfish.Builder(null, 'IOS_API_KEY')
+    .rewardMode(true); // iOS only
+```
+
+### 4.1 Configure Pollfish behaviour (Optional)
 
 You can set several params to control the behaviour of Pollfish survey panel within your app with the use of the `RNPollfish.Builder` instance. Below you can see all the available options. Apart from the constructor all the other methods are optional.
 
@@ -139,31 +166,13 @@ Param               | Description
 
 <br/>
 
-Import `RNPollfish` module
+Example of Pollfish configuration using all the available options
 
 ```js
-import RNPollfish from 'react-native-plugin-pollfish';
-```
-
-Initialize Pollfish
-
-```js
-var params = new RNPollfish.Builder('ANDROID_API_KEY', 'IOS_API_KEY'); // Android & iOS
-```
-
-```js
-var params = new RNPollfish.Builder('ANDROID_API_KEY', null); // Android only
-```
-
-```js
-var params = new RNPollfish.Builder(null, 'IOS_API_KEY'); // iOS only
-```
-
-```js
-params.indicatorPosition(RNPollfish.Position.topLeft)
+builder.indicatorPosition(RNPollfish.Position.topLeft)
     .indicatorPadding(10)
     .offerwallMode(false)
-    .rewardMode(false)
+    .rewardMode(true)
     .releaseMode(false)
     .requestUUID('REQUEST_UUID')
     .userProperties({
@@ -177,30 +186,43 @@ params.indicatorPosition(RNPollfish.Position.topLeft)
         rewardName: 'Points',
         rewardConversion: 1.3
     });
-
-RNPollfish.init(params.build());
 ```
 
 <br/>
 
-### Debug Vs Release Mode
-
-You can use Pollfish either in Debug or in Release mode. 
-  
-* **Debug mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
-* **Release mode** is the mode to be used for a released app (start receiving paid surveys).
-
+> ### Debug vs Release Mode
+>
+> You can use Pollfish either in Debug or in Release mode. 
+>  
+> * **Debug mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
+> * **Release mode** is the mode to be used for a released app (start receiving paid surveys).
+> 
 > **Note:** Be careful to set the `releaseMode` parameter to `true` when you release your app in a relevant app store!!
 
 <br/>
 
-### Reward Mode 
-
-Setting the `rewardMode` to `false` during initialization enables controlling the behavior of Pollfish in an app from the Pollfish panel. Enabling reward mode ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small button) and always force open Pollfish view to app users. This method is usually used when app developers want to somehow incentivize their users before completing surveys to increase completion rates.
+> ### Reward Mode 
+> 
+> Setting the `rewardMode` to `false` during initialization enables controlling the behavior of Pollfish in an app from the Pollfish panel. Enabling reward mode ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small button) and always force open Pollfish view to app users. This method is usually used when app developers want to somehow incentivize their users before completing surveys to increase completion rates.
 
 <br/>
 
-## 5. Update your Privacy Policy
+## 5. Initialize Pollfish
+
+Last but not least. Build the `Params` object by invoking `.build()` on the `RNPollfish.Builder` instance that you've configured earlier and call `RNPollfish.init(params)` passing the `Params` object as an argument.
+
+```js
+var params = builder.build();
+RNPollfish.init(params);
+
+// OR
+
+RNPollfish.init(builder.build());
+```
+
+<br/>
+
+## 6. Update your Privacy Policy
 
 ### Add the following paragraph to your app's privacy policy
 
@@ -239,7 +261,7 @@ In our efforts to include publishers in this process and be as transparent as po
 
 <br/>
 
-## 6.  Request your account to get verified
+## 7.  Request your account to get verified
 
 After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
 
@@ -259,11 +281,11 @@ In this section we will list several options that can be used to control Pollfis
 
 <br/>
 
-## 7. Implement Pollfish Event Listeners 
+## 8. Implement Pollfish Event Listeners 
 
 <br/>
 
-### 7.1. Get notified when a Pollfish survey is received
+### 8.1. Get notified when a Pollfish survey is received
 
 You can get notified when a Pollfish survey is received. With this notification, you can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
 
@@ -285,7 +307,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishSurveyReceivedListener, (event) =
 
 <br/>
 
-### 7.2. Get notified when a Pollfish survey is completed
+### 8.2. Get notified when a Pollfish survey is completed
 
 You can get notified when a user completed a survey. With this notification, you can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
 
@@ -297,7 +319,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishSurveyCompletedListener, (event) 
 
 <br/>
 
-### 7.3. Get notified when a user is not eligible for a Pollfish survey
+### 8.3. Get notified when a user is not eligible for a Pollfish survey
 
 You can get notified when a user is not eligible for a Pollfish survey. In market research monetization, users can get screened out while completing a survey beucase they are not relevant with the audience that the market researcher was looking for. In that case the user not eligible notification will fire and the publisher will make no money from that survey. The user not eligible notification will fire after the surveyReceived event, when the user starts completing the survey.
 
@@ -309,7 +331,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishUserNotEligibleListener, (_) => {
 
 <br/>
 
-### 7.4. Get notified when a Pollfish survey is not available
+### 8.4. Get notified when a Pollfish survey is not available
 
 You can get notified when a Pollfish survey is not available.
 
@@ -321,7 +343,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishSurveyNotAvailableListener, (_) =
 
 <br/>
 
-### 7.5. Get notified when a user has rejected a Pollfish survey
+### 8.5. Get notified when a user has rejected a Pollfish survey
 
 You can get notified when a user has rejected a Pollfish survey.
 
@@ -333,7 +355,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishUserRejectedSurveyListener, (_) =
 
 <br/>
 
-### 7.6. Get notified when a Pollfish survey panel has opened
+### 8.6. Get notified when a Pollfish survey panel has opened
 
 You can register and get notified when a Pollfish survey panel has opened. Publishers usually use this notification to pause a game until the pollfish panel is closed again.
 
@@ -345,7 +367,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishOpenedListener, (_) => {
 
 <br/>
 
-### 7.7. Get notified when a Pollfish survey panel has closed
+### 8.7. Get notified when a Pollfish survey panel has closed
 
 You can register and get notified when a Pollfish survey panel has closed. Publishers usually use this notification to resume a game that they have previously paused when the Pollfish panel was opened.
 
@@ -357,7 +379,7 @@ RNPollfish.addEventListener(RNPollfish.PollfishClosedListener, (_) => {
 
 <br/>
 
-## 8. Manually show/hide Pollfish panel
+## 9. Manually show/hide Pollfish panel
 
 You can manually hide and show Pollfish by calling the functions below, after initialization.
 
@@ -371,7 +393,7 @@ RNPollfish.hide();
 
 <br/>
 
-## 9. Check if Pollfish surveys are available on your device
+## 10. Check if Pollfish surveys are available on your device
 
 After you initialize Pollfish and a survey is received you can check at any time if the survey is available at the device by calling the following function.
 
@@ -383,7 +405,7 @@ RNPollfish.isPollfishPresent((isPollfishPresent) => {
 
 <br/>
 
-## 10. Check if Pollfish panel is open
+## 11. Check if Pollfish panel is open
 
 You can check at any time if the survey panel is open by calling the following function.
 

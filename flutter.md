@@ -143,7 +143,15 @@ You can read more about Google Advertising ID changes [here](https://support.goo
 
 <br/>
 
-## 4. Initialize Pollfish
+## 4. Import `flutter_pollfish.dart` package 
+
+```dart
+import 'package:flutter_pollfish/flutter_pollfish.dart';
+```
+
+<br/>
+
+## 5. Initialize Pollfish
 
 Import Pollfish
 
@@ -151,25 +159,23 @@ Import Pollfish
 import 'package:flutter_pollfish/flutter_pollfish.dart';
 ```
 
-Initialize Pollfish using the Api keys from step 2. If your are targing only one platform (eg iOS) you can set the other's platform api key (Android) to `null`.
-
-For example:
+The Pollfish plugin must be initialized with one or two api keys depending on which platforms are you targeting. You can retrieve an API key from Pollfish Dashboard when you [sign up](https://www.pollfish.com/signup/publisher) and create a new app.
 
 ```dart
-FlutterPollfish.instance.init(androidApiKey: 'ANDROID_API_KEY', iOSApiKey: 'IOS_API_KEY'); // Android and iOS
+FlutterPollfish.instance.init(androidApiKey: 'ANDROID_API_KEY', iOSApiKey: 'IOS_API_KEY', rewardMode: true); // Android and iOS
 ```
 
 ```dart
-FlutterPollfish.instance.init(androidApiKey: 'ANDROID_API_KEY', iOSApiKey: null); // Android only
+FlutterPollfish.instance.init(androidApiKey: 'ANDROID_API_KEY', iOSApiKey: null, rewardMode: true); // Android only
 ```
 
 ```dart
-FlutterPollfish.instance.init(androidApiKey: null, iOSApiKey: 'IOS_API_KEY'); // iOS only
+FlutterPollfish.instance.init(androidApiKey: null, iOSApiKey: 'IOS_API_KEY', rewardMode: true); // iOS only
 ```
 
 <br/>
 
-### 4.1 Configure Pollfish behaviour (Optional)
+### 5.1 Configure Pollfish behaviour (Optional)
 
 During initialization you can pass different optional params:
 
@@ -209,7 +215,8 @@ Example of basic Pollfish initialization
 ```dart
 FlutterPollfish.instance.init(
   androidApiKey: 'ANDROID_API_KEY',
-  iOSApiKey: 'IOS_API_KEY');
+  iOSApiKey: 'IOS_API_KEY',
+  rewardMode: true);
 ```
 
 Example of Pollfish configuration using the available options
@@ -236,7 +243,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-## 5. Update your Privacy Policy
+## 6. Update your Privacy Policy
 
 ### Add the following paragraph to your app's privacy policy
 
@@ -275,7 +282,7 @@ In our efforts to include publishers in this process and be as transparent as po
 
 <br/>
 
-## 6. Request your account to get verified
+## 7. Request your account to get verified
 
 After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
 
@@ -295,11 +302,11 @@ In this section we will list several options that can be used to control Pollfis
 
 <br/>
 
-## 7. Implement Pollfish Event Listeners
+## 8. Implement Pollfish Event Listeners
 
 <br/>
 
-### 7.1. Get notified when a Pollfish survey is received
+### 8.1. Get notified when a Pollfish survey is received
 
 You can get notified when a Pollfish survey is received. With this notification, you can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
 
@@ -321,7 +328,7 @@ void onPollfishSurveyReceived(SurveyInfo? surveyInfo) => setState(() {
 
 <br/>
 
-### 7.2. Get notified when a Pollfish survey is completed
+### 8.2. Get notified when a Pollfish survey is completed
 
 You can get notified when a user completed a survey. With this notification, you can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
 
@@ -335,7 +342,7 @@ void onPollfishSurveyCompleted(SurveyInfo sureyInfo) => setState(() {
 
 <br/>
 
-### 7.3. Get notified when a user is not eligible for a Pollfish survey
+### 8.3. Get notified when a user is not eligible for a Pollfish survey
 
 You can get notified when a user is not eligible for a Pollfish survey. In market research monetization, users can get screened out while completing a survey beucase they are not relevant with the audience that the market researcher was looking for. In that case the user not eligible notification will fire and the publisher will make no money from that survey. The user not eligible notification will fire after the surveyReceived event, when the user starts completing the survey.
 
@@ -349,7 +356,7 @@ void onPollfishUserNotEligible() => setState(() {
 
 <br/>
 
-### 7.4. Get notified when a Pollfish survey is not available
+### 8.4. Get notified when a Pollfish survey is not available
 
 You can be notified when a Pollfish survey is not available.
 
@@ -363,7 +370,7 @@ void onPollfishSurveyNotAvailable() => setState(() {
 
 <br/>
 
-### 7.5. Get notified when a user has rejected a Pollfish survey
+### 8.5. Get notified when a user has rejected a Pollfish survey
 
 You can be notified when a user has rejected a Pollfish survey.
 
@@ -377,7 +384,7 @@ void onPollfishUserRejectedSurvey() => setState(() {
 
 <br/>
 
-### 7.6. Get notified when a Pollfish survey panel has opened
+### 8.6. Get notified when a Pollfish survey panel has opened
 
 You can register and get notified when a Pollfish survey panel has opened. Publishers usually use this notification to pause a game until the pollfish panel is closed again.
 
@@ -391,7 +398,7 @@ void onPollfishOpened() => setState(() {
 
 <br/>
 
-### 7.7. Get notified when a Pollfish survey panel has closed
+### 8.7. Get notified when a Pollfish survey panel has closed
 
 You can register and get notified when a Pollfish survey panel has closed. Publishers usually use this notification to resume a game that they have previously paused when the Pollfish panel was opened.
 
@@ -405,7 +412,7 @@ void onPollfishClosed() => setState(() {
 
 <br/>
 
-### 7.8 Unsubscribe from Pollfish Listeners
+### 8.8 Unsubscribe from Pollfish Listeners
 
 Please ensure you unsubscribe from Pollfish notification listeners at the end of the state's lifecycle
 
@@ -419,7 +426,7 @@ void dispose() {
 
 <br/>
 
-## 8. Manually show/hide Pollfish panel
+## 9. Manually show/hide Pollfish panel
 
 During the lifetime of a survey, you can manually hide and show Pollfish by calling the following functions.
 
@@ -435,7 +442,7 @@ FlutterPollfish.instance.hide();
 
 <br/>
 
-## 9. Check if Pollfish surveys are available on your device
+## 10. Check if Pollfish surveys are available on your device
 
 After a Pollish survey is received you can check at any time if the survey is available at the device by calling the following function.
 
@@ -447,7 +454,7 @@ FlutterPollfish.instance.isPollfishPresent().then((isPresent) => {
 
 <br/>
 
-## 10. Check if Pollfish panel is open
+## 11. Check if Pollfish panel is open
 
 You can check at any time if the survey panel is open by calling the following function.
 

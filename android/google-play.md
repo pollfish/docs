@@ -615,6 +615,7 @@ After linking your project to Google Play Services you can easily initialize Pol
 
 ```kotlin
 val params = Params.Builder("API_KEY")
+    .rewardMode(true)
     .build()
 
 Pollfish.initWith(activity, params);
@@ -624,20 +625,21 @@ Pollfish.initWith(activity, params);
 
 ```java
 Params params = Params.Builder("API_KEY")
+    .rewardMode(true)
     .build();
 
 Pollfish.initWith(activity, params);
 ```
 
-Once you have created the `Params` instance, then you can call `Pollfish.initWith()` in `onResume()` function of your Activity (just after `super.onResume()`) and you are ready to go.
+Once you have created the `Params` instance, then you can call `Pollfish.initWith()` in the `onCreate()` function of your Activity and you are ready to go.
 
 Below you can see an example:
 
 <span style="text-decoration: underline">Kotlin:</span>
 
 ```kotlin
-override fun onResume() {
-    super.onResume()
+override fun onCreate(savedInstanceState: Bundle) {
+    ...
 
     Pollfish.initWith(this, params)
 }
@@ -647,8 +649,8 @@ override fun onResume() {
 
 ```java
 @Override
-public void onResume() {
-    super.onResume();
+public void onCreate(Bundle savedInstanceState) {
+    ...
  
     Pollfish.initWith(this, params);
 }
@@ -685,18 +687,29 @@ No          | Description
 <br/>
 
 #### **5.3.1.1 `.indicatorPosition(Position)`**
-This setting sets the position where you wish to place Pollfish indicator ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) <br/> Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
 
-There are six different options available:
+Sets the Position where you wish to place Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) 
+
+<br/>
+
+Also this setting sets from which side of the screen you would like Pollfish survey panel to slide in.
+
+<br/> 
+
+Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
+
+<br/>
+
+<span style="text-decoration: underline">There are six different options available: </span> 
 
 * `Position.TOP_LEFT`
 * `Position.BOTTOM_LEFT`
 * `Position.MIDDLE_LEFT`
 * `Position.TOP_RIGHT`
 * `Position.MIDDLE_RIGHT`
-* `Position.BOTTOM_RIGHT` (default)
+* `Position.BOTTOM_RIGHT` 
 
-If you do not set explicity a position for Pollfish indicator, it will appear by default at `Position.BOTTOM_RIGHT`
+If you do not set explicity a position for Pollfish indicator, it will appear by default at `Position.TOP_LEFT`
 
 <br/>
 
@@ -992,7 +1005,7 @@ An object passing information during initialization regarding the reward setting
 <br/>
 
 ```kotlin
-data class SurveyInfo(
+data class RewardInfo(
     val rewardName: String,
     val rewardConversion: Double
 )
@@ -1026,6 +1039,8 @@ Params params = new Params.Builder("API_KEY")
 ```
 
 > **Note:** It's preferable to handle the reward settings through the Publisher's Dashboard
+
+> **Warning:** If a `rewardInfo` is set, please make sure to calculate and set the correct signature. By skipping this step you will be unable to receive surveys.
 
 <br/>
 

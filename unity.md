@@ -490,57 +490,99 @@ Imported files will be listed in the following directories:
 
 <br/>
 
-## 4. Initialize Pollfish
+## 4. Create `Pollfish.Params` instance
 
-You should use a MonoBehaviour object for your scene that will enable interaction with Pollfish Unity plugin. Pollfish should be initialized when an app starts or resumes (this way you will always receive new surveys when available).
-
-### Pollfish API Key
-
-In order to initialize Pollfish you need to create a `Pollfish.Params` instance:
+The Pollfish plugin must be initialized with your api key depending on which platforms are you targeting. You can retrieve an API key from Pollfish Dashboard when you [sign up](https://www.pollfish.com/signup/publisher) and create a new app.
 
 ```csharp
-Pollfish.Init(pollfishParams);
+#if UNITY_ANDROID
+	public string apiKey = "YOUR_ANDROID_API_KEY";
+#elif UNITY_IPHONE
+	public string apiKey = "YOUR_IOS_API_KEY";
+#endif
+
+Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
+  .RewardMode(true);
 ```
 
 <br/>
 
-### `Pollfish.Params` object
+### 4.1. Configure Pollfish behaviour (Optional)
 
-In order to initialize `Pollfish.Params`, you need an API Key as described in step 2.
+You can set several params to control the behaviour of Pollfish survey panel within your app with the use of the `Pollfish.Params` instance. Below you can see all the available options. Apart from the constructor all the other methods are optional.
 
-**`new Pollfish.Params(bool apiKey)`** - Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
+
+### 4.1.1. **`Constructor - Pollfish.Params(bool apiKey)`**
+
+Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
 
 ```csharp
 Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
-  .OfferwallMode(offerwallMode)
-  .IndicatorPadding(indicatorPadding)
-  .ReleaseMode(releaseMode)
-  .RewardMode(rewardMode)
-  .IndicatorPosition(indicatorPosition)
-  .RequestUUID(requestUUID)
-  .UserProperties(userProperties);
+  .RewardMode(rewardMode);
 ```
 
 `Pollfish.Params` can be configured with the following methods:
 
-1\. **`IndicatorPosition(Position indicatorPosition)`** - Sets the Position where you wish to place Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png)
+<br/>
+
+### 4.1.2. **`IndicatorPosition(Position indicatorPosition)`**
+
+Sets the Position where you wish to place Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) 
+
+<br/>
 
 Also this setting sets from which side of the screen you would like Pollfish survey panel to slide in.
 
+<br/> 
+
+Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
+
+<br/>
+
 <span style="text-decoration: underline">There are six different options available: </span> 
 
-*   **Position.TOP_LEFT**  
-*   **Position.TOP_RIGHT**  
-*   **Position.BOTTOM_LEFT**  
-*   **Position.BOTTOM_RIGHT**  
-*   **Position.MIDDLE_LEFT** 
-*   **Position.MIDDLE_RIGHT**  
+* `Position.TOP_LEFT`
+* `Position.BOTTOM_LEFT`
+* `Position.MIDDLE_LEFT`
+* `Position.TOP_RIGHT`
+* `Position.MIDDLE_RIGHT`
+* `Position.BOTTOM_RIGHT` 
 
-2\. **`.IndicatorPadding(int indicatorPadding)`** - The padding from the top or bottom of the screen according to PollfishPosition of the indicator (small icon) specified before (`.TOP_LEFT` is the default value)  
+If you do not set explicity a position for Pollfish indicator, it will appear by default at `Position.TOP_LEFT`
+
+<br/>
+
+> **Note:** If you would like to skip the Pollfish Indicator please set the `rewardMode` to `true`
+
+<br/>
+
+Below you can see an example on how you can set Pollfish indicator to slide from top right corner of the screen:
+
+<br/>
+
+```csharp
+Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
+  .IndicatorPosition(Position.TOP_RIGHT);
+```
+
+<br/>
+
+### 4.1.3. **`.IndicatorPadding(int indicatorPadding)`**
+
+The padding from the top or bottom of the screen according to position of the indicator (small icon) specified above (`.TOP_LEFT` is the default value)
+
+```java
+Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
+  .IndicatorPadding(8);
+```
 
 > **Note:** if used in MIDDLE position, padding is calculating from the top
 
-3\. **`.ReleaseMode(bool releaseMode)`** – Debug or Release mode  
+<br/>
+
+### 4.1.4. **`.ReleaseMode(bool releaseMode)`** 
+
+Sets Pollfish SDK to Developer or Release mode. If you do not set this param it will turn the SDK to Developer mode by default in order for the publisher to be able to test the survey flow.
 
 <span style="text-decoration: underline">You can use Pollfish either in Debug or in Release mode.</span>  
 
@@ -549,22 +591,69 @@ Also this setting sets from which side of the screen you would like Pollfish sur
 
 > **Note:** Be careful to set release mode parameter to true prior releasing to Google Play or AppStore!  
 
-4\. **`.RewardMode(bool rewardMode)`** – Initializes Pollfish in reward mode if set to true. By default this is set to false.
+```csharp
+Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
+  .ReleaseMode(true);
+```
 
-**true Vs false**
+<br/>
 
-*   **true** -  ignores Pollfish panel behavior from Pollfish Developer Dashboard. It always skips showing Pollfish indicator (small Pollfish icons) and hides Pollfish survey panel view from users. This method is aimed to be used when app developers want to incentivize first somehow their users. 
-*   **false** - is the standard way of using Pollfish in your apps. This option enables controlling behavior (intrusiveness) of Pollfish panel in an app from Pollfish Developer Dashboard.
+### 4.1.5. **`.RewardMode(bool rewardMode)`**
 
-5\. **`.OfferwallMode(bool offerwallMode)`** – Enables offerwall mode. If not set, one single survey is shown each time.
+Initializes Pollfish in reward mode. This means that Pollfish Indicator (section 5.3.1.1) will not be shown and Pollfish survey panel will be automatically hidden until the publisher explicitly calls Pollfish `show` function (The publisher should wait for the Pollfish Survey Received Callback). This behaviour enables the option for the publishers, to show a custom prompt to incentivize the users to participate in a survey.
 
-6\. **`.RequestUUID(string requestUUID)`** – Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
+> **Note:** If not set, the default value is false and Pollfish indicator is shown.
 
-7\. **`.UserProperties(Dictionary<string, string> userProperties)`** – Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
+This mode should be used if you want to incentivize users to participate to surveys. We have a detailed guide on how to implement the rewarded approach [here](https://www.pollfish.com/docs/rewarded-surveys)
 
-If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and also achieve a better fill rate and higher priced surveys.
+> **Note:** Reward mode should be used along with the Survey Received callback so the publisher knows when to prompt the user and call `Pollfish.show()`
 
-> **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default
+```csharp
+Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
+  .RewardMode(true);
+```
+
+<br/>
+
+### 4.1.6. **`.OfferwallMode(bool offerwallMode)`**
+
+Enables Pollfish in offerwall mode. If not specified Pollfish shows one survey at a time.
+
+<br/>
+
+Below you can see an example on how you can intialize Pollfish in Offerwall mode:
+
+```csharp
+Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
+  .OfferwallMode(true);
+```
+
+<br/>
+
+### 4.1.7. **`.RequestUUID(string requestUUID)`**
+
+Sets a unique id to identify a user or a request and be passed back to the publisher through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
+
+<br/>
+
+Below you can see an example on how you can pass a requestUUID during initialization:
+
+```csharp
+Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
+  .RequestUUID(true);
+```
+
+<br/>
+
+### 4.1.8. **`.UserProperties(Dictionary<string, string> userProperties)`**
+
+Passing user attributes to skip or shorten Pollfish Demographic surveys.
+
+If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and archieve better fill rate and higher priced surveys.
+
+> **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default.
+
+> **Note:** You can read more on demographic surveys along with a list with all the available options [here](https://www.pollfish.com/docs/demographic-surveys)
 
 An example of how you can pass user demographics can be found below:
 
@@ -582,46 +671,80 @@ Dictionary<string, string> userProperties = new Dictionary<string, string>
     { "income", "1" }
   };
 
-Pollfish.Params pollfishParams = new Pollfish.Params();
-
-pollfishParams.UserProperties(userProperties);
+Pollfish.Params pollfishParams = new Pollfish.Params()
+  .UserProperties(userProperties);
 ```
-
-You can check values mapping for demographic surveys in the following [section](https://www.pollfish.com/docs/demographic-surveys)
 
 <br/>
 
-Below you can see an example of the `Init` function. Remember to set your API key for each platform prior calling init:
+### 4.1.9. **`.ClickId(String clickId)`**
+
+A pass through parameter that will be returned back to the publisher through server-to-server callbacks as specified [here](https://www.pollfish.com/docs/s2s)
+
+<br/>
 
 ```csharp
-#if UNITY_ANDROID
-	public string apiKey = "YOUR_ANDROID_API_KEY";
-#elif UNITY_IPHONE
-	public string apiKey = "YOUR_IOS_API_KEY";
-#endif
-	
-private Position pollfishPosition = Position.MIDDLE_LEFT;
-private bool releaseMode = false;
-private bool rewardMode = false;
-private int indicatorPadding = 10;
-private int offerwallMode = false;
+Pollfish.Params pollfishParams = new Pollfish.Params()
+  .ClickId("CLICK_ID");
+```
 
+<br/>
+
+### 4.1.10. **`.RewardInfo(RewardInfo rewardInfo)`**
+
+An object passing information during initialization regarding the reward settings, overriding the values as speciefied on the Publisher's Dashboard
+
+<br/>
+
+```csharp
+public RewardInfo(string rewardName, double rewardConversion)
+```
+
+Field                  | Description
+-----------------------|------------
+**`rewardName`**       | Overrides the reward name as specified in the Publisher's Dashboard
+**`rewardConversion`** | Overrides the reward conversion as specified on the Publisher's Dashboard. Conversion is expecting a number matching this function ( ```1 USD = X Points``` ) where ```X``` is a ```Double``` number.
+
+```csharp
+RewardInfo rewardInfo = new RewardInfo("Diamonds", 1.1);
+
+ParaPollfish.Params pollfishParams = new Pollfish.Params()
+  .RewardInfo(rewardInfo);
+```
+
+<br/>
+
+### 4.1.11. **`.Signature(String signature)`**
+
+An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as provided in the `RewardInfo` object (4.1.10)
+
+This parameter can be used optionally to prevent tampering around reward conversion, if passed during initialisation. The platform supports url validation by requiring a hash of the `rewardConversion`, `rewardName`, and `clickId`. Failure to pass validation will result in no surveys return and firing **`PollfishSurveyNotAvailable`** callback.
+
+In order to generate the `signature` field you should sign the combination of `${rewardConversion}${rewardName}${clickId}` parameters using the HMAC-SHA1 algorithm and your account's secret_key that can be retrieved from the Account Information section on your Pollfish Dashboard.
+
+Please keep in mind if your `rewardConversion` is a whole number, you have to calculate the signature useing the floating point value with 1 decimal point.
+
+```csharp
+Pollfish.Params pollfishParams = new Pollfish.Params()
+  .Signature("SIGNATURE");
+```
+
+<br/>
+
+## 5. Initialize Pollfish
+
+Last but not least. Call `Pollfish.Init(params)` passing the `Params` object that you've configured earlier as an argument.
+
+```csharp
 public void OnEnable()
 {
-  Pollfish.Params pollfishParams = new Pollfish.Params()
-    .OfferwallMode(offerwallMode)
-    .IndicatorPadding(indicatorPadding)
-    .ReleaseMode(releaseMode)
-    .RewardMode(rewardMode)
-    .IndicatorPosition(pollfishPosition);
-		
-  Pollfish.Init(apiKey, pollfishParams);
+  Pollfish.Init(pollfishParams);
 }
 ```
 
 <br/>
 
-## 5.  Update your Privacy Policy
+## 6. Update your Privacy Policy
 
 Add the following paragraph to your App's Privacy Policy:
 
@@ -665,7 +788,7 @@ If you know attributes about a user like gender, age and others, you can provide
 
 <br/>
 
-## 6.  Request your account to get verified
+## 7.  Request your account to get verified
 
 After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
 
@@ -679,9 +802,9 @@ When your account is verified you will be able to start receiving paid surveys f
 
 <br/>
 
-## 7. Handle platform specific cases
+## 8. Handle platform specific cases
 
-### 7.1 Android targeting
+### 8.1 Android targeting
 
 <br/>
 
@@ -762,7 +885,7 @@ If you use proguard with your app, please insert the following lines in the prog
 
 <br/>
 
-###  7.2 If you are targeting iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
+### 8.2 If you are targeting iOS ![alt text](https://storage.googleapis.com/pollfish-images/ios-icon.png)
 
 ### Distributing your app to AppStore
 
@@ -778,11 +901,11 @@ In this section we will list several options that can be used to control Pollfis
 
 <br/>
 
-## 8. Implement Pollfish Event Listeners
+## 9. Implement Pollfish Event Listeners
 
 <br/>
 
-### 8.1. Get notified when a Pollfish survey is received
+### 9.1. Get notified when a Pollfish survey is received
 
 You can be notified when a Pollfish survey is received. With this notification, you can also get informed about the type of survey that was received, money to be earned if survey gets completed, shown in USD cents and other info around the survey such as LOI and IR.
 
@@ -810,7 +933,7 @@ public void SurveyReceived(SurveyInfo surveyInfo)
 
 <br/>
 
-### 8.2. Get notified when a Pollfish survey is completed
+### 9.2. Get notified when a Pollfish survey is completed
 
 You can be notified when a user completed a survey. With this notification, you can also get informed about the type of survey, money earned from that survey in USD cents and other info around the survey such as LOI and IR.
 
@@ -825,7 +948,7 @@ public void SurveyCompleted(SurveyInfo surveyInfo)
 
 <br/>
 
-### 8.3. Get notified when a user is not eligible for a Pollfish survey
+### 9.3. Get notified when a user is not eligible for a Pollfish survey
 
 You can be notified when a user is not eligible for a Pollfish survey. In market research monetization, users can get screened out while completing a survey beucase they are not relevant with the audience that the market researcher was looking for. In that case the user not eligible notification will fire and the publisher will make no money from that survey. The user not eligible notification will fire after the surveyReceived event, when the user starts completing the survey.
 
@@ -840,7 +963,7 @@ public void UserNotEligible()
 
 <br/>
 
-### 8.4. Get notified when a Pollfish survey is not available
+### 9.4. Get notified when a Pollfish survey is not available
 
 You can be notified when a Pollfish survey is not available.
 
@@ -855,7 +978,7 @@ public void SurveyNotAvailable()
 
 <br/>
 
-### 8.5. Get notified when a user has rejected a Pollfish survey
+### 9.5. Get notified when a user has rejected a Pollfish survey
 
 You can be notified when a user has rejected a Pollfish survey.
 
@@ -870,7 +993,7 @@ public void UserRejectedSurvey()
 
 <br/>
 
-### 8.6. Get notified when a Pollfish survey panel has opened
+### 9.6. Get notified when a Pollfish survey panel has opened
 
 You can register and get notified when a Pollfish survey panel has opened. Publishers usually use this notification to pause a game until the pollfish panel is closed again.
 
@@ -885,7 +1008,7 @@ public void SurveyOpened()
 
 <br/>
 
-### 8.7. Get notified when a Pollfish survey panel has closed
+### 9.7. Get notified when a Pollfish survey panel has closed
 
 You can register and get notified when a Pollfish survey panel has closed. Publishers usually use this notification to resume a game that they have previously paused when the Pollfish panel was opened.
 
@@ -898,7 +1021,7 @@ public void SurveyClosed()
 }
 ```
 
-### 8.8. Unsubsribe from Pollfish Event Listeners
+### 9.8. Unsubsribe from Pollfish Event Listeners
 
 Please make sure you unsubscribe from Pollfish Event Listeners, preferably on the scene destruction to avoid duplicated events.
 
@@ -917,7 +1040,7 @@ public void OnDisable()
 
 <br/>
 
-## 9. Manually show/hide Pollfish panel
+## 10. Manually show/hide Pollfish panel
 
 You can manually hide and show Pollfish by calling the functions below, after initialization.
 
@@ -931,7 +1054,7 @@ Pollfish.hide();
 
 <br/>
 
-## 10. Check if Pollfish Surveys are available on your device
+## 11. Check if Pollfish Surveys are available on your device
 
 After you initialize Pollfish and a survey is received you can check at any time if the survey is available at the device by calling the following function.
 
@@ -941,7 +1064,7 @@ bool isPresent = Pollfish.isPollfishPresent():
 
 <br/>
 
-## 11. Check if Pollfish Panel is open
+## 12. Check if Pollfish Panel is open
 
 You can check at any time if the survey panel is open by calling the following function.
 

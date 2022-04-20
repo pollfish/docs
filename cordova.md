@@ -248,7 +248,27 @@ You can read more about Google Advertising ID changes [here](https://support.goo
 
 <br/>
 
-## 4. Initialize Pollfish
+## 4. Create `pollfish.Builder` instance
+
+The Pollfish plugin must be initialized with one or two api keys depending on which platforms are you targeting. You can retrieve an API key from Pollfish Dashboard when you [sign up](https://www.pollfish.com/signup/publisher) and create a new app.
+
+
+```js
+var builder = new pollfish.Builder('ANDROID_API_KEY', 'IOS_API_KEY')
+	.rewardMode(true); // Android & iOS
+```
+
+```js
+var builder = new pollfish.Builder('ANDROID_API_KEY', null)
+	.rewardMode(true); // Android only
+```
+
+```js
+var builder = new pollfish.Builder(null, 'IOS_API_KEY')
+	.rewardMode(true); // iOS only
+```
+
+### 4.1. Configure Pollfish behaviour (Optional)
 
 You can set several params to control the behaviour of Pollfish survey panel within your app with the use of the `pollfish.Builder` instance. Below you can see all the available options. Apart from the constructor all the other methods are optional.
 
@@ -262,26 +282,17 @@ Param               | Description
 **`.rewardMode(Boolean)`**           		        | Init in reward mode (skip Pollfish indicator to show a custom prompt)
 **`.requestUUID(String)`**               		    | Sets a unique id to identify a user and be passed through server-to-server callbacks
 **`.userProperties(Json)`**                  		| Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
-**`.rewardInfo(Json)`**                     	 	| An object holding information regarding the survey completion reward. If set `signature` must be calculated in order to receive surveys. See [here](https://www.pollfish.com/docs/api-documentation) in section **`Notes for sig query parameter`**
+**`.rewardInfo(Json)`**                     	 	| An object holding information regarding the survey completion reward. If set, `signature` must be calculated in order to receive surveys. See [here](https://www.pollfish.com/docs/api-documentation) in section **`Notes for sig query parameter`**
 **`.clickId`**         		                      	| A pass throught param that will be passed back through server-to-server callback
 **`.signature`**            	                 	| An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object. 
 
 <br/>
 
-```js
-var builder = new pollfish.Builder('ANDROID_API_KEY', 'IOS_API_KEY'); // Android & iOS
-```
+Example of Pollfish configuration using the available options
+
 
 ```js
-var builder = new pollfish.Builder('ANDROID_API_KEY', null); // Android only
-```
-
-```js
-var builder = new pollfish.Builder(null, 'IOS_API_KEY'); // iOS only
-```
-
-```js
-var params = builder.rewardMode(false)
+var builder = builder
 	.offerwallMode(false)
 	.releaseMode(false)
 	.indicatorPadding(50)
@@ -305,26 +316,40 @@ pollfish.init(params);
 
 <br/>
 
-### Debug Vs Release Mode
-
-You can use Pollfish either in Debug or in Release mode. 
-  
-* **Debug mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
-* **Release mode** is the mode to be used for a released app (start receiving paid surveys).
-
-> **Note:** In Android debugMode parameter is ignored. Your app turns into debug mode once it is signed with a debug key. If you sign your app with a release key it automatically turns into Release mode.
-
-> **Note:** Be careful to turn the `releaseMode` parameter to `true` when you release your app in a relevant app store!!
+> ### Debug vs Release Mode
+>
+> You can use Pollfish either in Debug or in Release mode. 
+>  
+> * **Debug mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
+> * **Release mode** is the mode to be used for a released app (start receiving paid surveys).
+> 
+> **Note:** Be careful to set the `releaseMode` parameter to `true` when you release your app in a relevant app store!!
 
 <br/>
 
-### Reward Mode 
-
-Reward mode false during initialization enables controlling the behavior of Pollfish in an app from Pollfish panel. Enabling reward mode ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small button) and always force open Pollfish view to app users. This method is usually used when app developers want to incentivize first somehow their users before completing surveys to increase completion rates.
+> ### Reward Mode 
+> 
+> Setting the `rewardMode` to `false` during initialization enables controlling the behavior of Pollfish in an app from the Pollfish panel. Enabling reward mode ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small button) and always force open Pollfish view to app users. This method is usually used when app developers want to somehow incentivize their users before completing surveys to increase completion rates.
 
 <br/>
 
-## 5. Update your Privacy Policy
+## 5. Initialize Pollfish
+
+Last but not least. Build the `Params` object by invoking `.build()` on the `pollfish.Builder` instance that you've configured earlier and call `RNPollfish.init(params)` passing the `Params` object as an argument.
+
+```js
+var params = builder.build();
+pollfish.init(params);
+
+// OR
+
+pollfish.init(builder.build());
+```
+
+<br/>
+
+
+## 6. Update your Privacy Policy
 
 ### Add the following paragraph to your app's privacy policy
 
@@ -361,7 +386,7 @@ In our efforts to include publishers in this process and be as transparent as po
 
 <br/>
 
-## 6.  Request your account to get verified
+## 7.  Request your account to get verified
 
 After your app is published on an app store you should request your account to get verified from your Pollfish Developer Dashboard.
 
@@ -380,18 +405,6 @@ When your account is verified you will be able to start receiving paid surveys f
 In this section we will list several options that can be used to control Pollfish surveys behaviour, how to listen to several notifications or how to be eligible to more targeted (high-paid) surveys. All these steps are optional.
 
 <br/>
-
-## 7. Handling application entering to foreground
-
-You should handle the event when your app is entering to foreground in order to initialise Pollfish again by listening to the relevant event.
-
-For example:
-
-```js
-document.addEventListener("resume", () => {
-	pollfish.init(pollfishParams); 
-}, false);
-```
 
 ## 8. Implement Pollfish event listeners
 
