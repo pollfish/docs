@@ -5,7 +5,7 @@ v6.2.4.0
 
 </div>
 
-This guide is for publishers looking to use IronSource mediation to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.
+This guide is for publishers looking to use ironSource LevelPlay to load and show Rewarded Surveys from Pollfish in the same waterfall with other Rewarded Ads.
 
 <br/>
 
