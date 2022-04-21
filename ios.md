@@ -199,6 +199,7 @@ Below you can see an example on how you can initialize Pollfish with the help of
 - (void) applicationDidBecomeActive:(UIApplication *)application 
 {
     PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+    [params rewardMode:true];
     [Pollfish initWith:params delegate:self];
 }
 ```
@@ -208,6 +209,7 @@ Below you can see an example on how you can initialize Pollfish with the help of
 ```swift
 func applicationDidBecomeActive(application: UIApplication) {
     let params = PollfishParams("API_KEY")
+        .rewardMode(true)
     
     Pollfish.initWith(params)
 }
@@ -229,6 +231,7 @@ struct ContentView: View {
 
     func initPollfish() {
         let params = PollfishParams("API_KEY")
+            .rewardMode(true)
         Pollfish.initWith(params)
     }
 }
