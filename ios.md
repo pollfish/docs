@@ -51,7 +51,7 @@ v6.0.0
 * Target iOS 9.0 or higher
 * Create [Pollfish Developer Account](https://pollfish.com/login/publisher) and register an App
 
-> **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
+> **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user (each time the user will be considered a new one with an auto-generated user id - demographics will be asked each time). In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
 
 > **Note:** Insructions on how to request IDFA permission can be found in section 5.
 
