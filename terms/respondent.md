@@ -1,6 +1,6 @@
 **SURVEY RESPONDENTS PRIVACY POLICY**
 
-Last updated: 01/24/2022
+Last updated: 05/24/2022
 
 **SURVEY RESPONDENTS PRIVACY POLICY**
 
@@ -165,7 +165,7 @@ By accepting this Privacy Policy, you grant to us your (revocable at any time) c
 
 **(a) Automatically received data.** Automatically received data is collected and processed by us under your consent. When you choose to use an app which cooperates with Pollfish, you are informed, in such app&#39;s privacy policy, that the app interoperates with Pollfish and you are further informed about the categories of data collected about you by Pollfish and the purposes of such data processing by us. As regards specifically the collection of Advertising/Device IDs, these are collected only if the Survey Respondent has enabled access to his Advertising/Device ID, either through his system&#39;s settings or via a consent-prompt shown to him by the publisher of the app he is using. 
 
-Any of the above data, are therefore, collected by Pollfish under your permission and consent, which has already been granted by you by accepting the app's terms and conditions/privacy policy provided by the App Publisher or (for the Advertising/Device ID) by permitting access to your Advertising/Device ID. Please note that, as regards collection of the above data by Pollfish, Pollfish collects such automatically received data (or portion thereof) only insofar as, by accepting the app-publisher's terms of use or by permitting access to your Advertising/Device ID.  , you have consented to the collection and processing of such data (or portion thereof). If you have blocked collection of such data (or parts of such data) either by withholding consent in the process of accepting the App Publisher's ToS (according to the privacy options provided to you by the App Publisher), or by disabling relevant device settings, or by declining access to your Advertising/Device ID, Pollfish shall not be able to collect such withheld data.
+Any of the above data, are therefore, collected by Pollfish under your permission and consent, which has already been granted by you by accepting the app's terms and conditions/privacy policy provided by the App Publisher or (for the Advertising/Device ID) by permitting access to your Advertising/Device ID. Please note that, as regards collection of the above data by Pollfish, Pollfish collects such automatically received data (or portion thereof) only insofar as, by accepting the app-publisher's terms of use or by permitting access to your Advertising/Device ID you have consented to the collection and processing of such data (or portion thereof). If you have blocked collection of such data (or parts of such data) either by withholding consent in the process of accepting the App Publisher's ToS (according to the privacy options provided to you by the App Publisher), or by disabling relevant device settings, or by declining access to your Advertising/Device ID, Pollfish shall not be able to collect such withheld data.
 
 **(b) Sociodemographic data.** Whenever an app-user is served a Pollfish Internal Sociodemographic Survey, Pollfish asks for the user&#39;s consent with regards to the collection and processing of his data. The app-user is presented with a brief but accurate description of what data we collect, the purposes of processing and the recipients of data. Furthermore, the app-user is also referred to this Privacy Policy for more detailed information and is then asked to provide clear opt-in consent in order to take the survey. Subject to this opt-in consent, Pollfish collects and processes the Pollfish Respondent sociodemographic data according to this Policy.
 
@@ -220,9 +220,9 @@ The site is protected by hCaptcha and its [Privacy Policy](https://www.hcaptcha.
 
 The above-mentioned persons may on-sell the data they receive from us to further third parties, according to their privacy policies.
 
-**7.3**  We require from all third parties with whom we share your data to agree and warrant that all the processing operations in which they engage shall be lawful and compliant with the provisions of the GDPR and any further Data Protection Legislation which may be applicable to their business. For any transfer of personal information outside the EEA, we apply the European Commission Standard Contractual Clauses.
+**7.3**  We require from all third parties with whom we share your data to agree and warrant that all the processing operations in which they engage shall be lawful and compliant with applicable law, including, as applicable, the provisions of the GDPR the UK-GDPR and any further Data Protection Legislation which may be applicable to their business. For any transfer, by us, of GDPR protected personal information outside the EEA, we rely, as applicable, on valid EU Commission Adequacy decisions and/or apply the European Commission Standard Contractual Clauses. For any transfer of UK-GDPR protected personal information outside the UK we rely, as applicable, on valid UK adequacy regulations and/or apply the International Data Transfer Addendum to the EU Commission Standard Contractual Clauses.
 
-We also require that they provide, in particular in terms of expert knowledge, reliability and resources, sufficient guarantees to implement appropriate technical and organizational measures in such a manner that processing will meet the requirements the GDPR and ensure the protection of the rights of the data subject.
+We also require that third parties with whom we may share your data, provide, in particular in terms of expert knowledge, reliability and resources, sufficient guarantees to implement appropriate technical and organizational measures in such a manner that processing will meet the requirements of applicable law, including the GDPR, the UK-GDPR and the CCPA as applicable, and ensure the protection of the rights of the data subject.
 
 **7.4**  Pollfish does not itself collect (and does not allow third parties to directly collect e.g. via third party cookies), user multi-site or cross-app data through the operation of the Pollfish platform. However, Pollfish may share or license Pollfish-collected data with third entities which, after having received Pollfish data, may themselves associate them with other data (including multi-site data or cross-app data) previously collected/owned by them or licensed to them by other (non-Pollfish and non-Pollfish-affiliated) sources.
 
@@ -234,7 +234,7 @@ Such third-party entities, depending on their business scope, may engage in Onli
 - any other relevant FTC, NAI or DAA code, principles or other guidance relating to the collection and use of data or serving of advertising or other Targeted content in the mobile environment
 - all United States Federal Trade Commission (&quot;FTC&quot;) rules and guidelines regarding the collection, use or disclosure of information from or about a unique user of a website, application or mobile website and/or the device associated with such user.
 
-**7.5**  By accepting this Privacy Policy you grant your consent for the sharing of your personal information as described in this section 7.2. However, you can at all times withdraw your consent with regards to such sharing, by using the opt-out options provided to you under section 8 of this Policy or by submitting a request under section 14 of this Policy.
+**7.5**  By accepting this Privacy Policy you grant your consent for the sharing of your personal information as described in this section 7. However, you can at all times withdraw your consent with regards to such sharing, by using the opt-out options provided to you under section 8 of this Policy or by submitting a request under section 14 of this Policy.
 
 **8. OPT-OUT OPTIONS AND MANAGEMENT OF YOUR PERSONAL DATA**
 
@@ -286,7 +286,9 @@ You can use certain iOS device settings in order to disable Pollfish operation. 
 
 **9. INTERNATIONAL TRANSFERS**
 
-We may transfer the Personal Information we collect about you to the United States, where we are headquartered, and by accepting this Privacy Policy you explicitly permit us to do so. We may also transfer Personal Information to countries for which adequacy decisions have been issued, and/or use contractual protections for the transfer of Personal Information to third parties, such as the European Commission&#39;s Standard Contractual Clauses or their equivalent under applicable law.
+We may transfer the Personal Information we collect about you to the United States, where we are headquartered, and by accepting this Privacy Policy you explicitly permit us to do so. We may also transfer Personal Information to countries for which adequacy decisions have been issued, and/or use contractual protections for the transfer of Personal Information to third parties, such as the European Commission&#39;s Standard Contractual Clauses, the International Data Transfer Addendum to the EU Commission Standard Contractual Clauses or their equivalent under applicable law.
+
+Respondents located in China: You understand that your personal information will be processed outside of China, by Pollfish, in the following countries: USA and Greece. You also understand that your personal information will be processed outside of China in countries, including USA and EU (as the case may be) where (a) Pollfish Researcher Clients and Mediation Partners, having commissioned us with the distribution of their Surveys, may be seated (b) Other Pollfish Clients may be seated. For further information you can contact Pollfish any time. Further, you understand that your personal information will be processed outside of China in the following countries: USA, Canada, France, Romania, Israel, Pakistan and India by our Mediation Partner Toluna and its trustees IPGeo and IPQS.
 
 **10. DATA RETENTION**
 
@@ -339,17 +341,15 @@ Please note that we treat all Pollfish Respondents (California Residents and non
 
 **12. POLLFISH AND THE GDPR**
 
-Pollfish processes Personal Data in accordance with the GDPR requirements.
- In particular, Pollfish processes personal data only in accordance with GDPR data protection principles and GDPR data protection provisions.
- Pollfish also implements appropriate technical and organisational measures and demonstrates compliance and ensures that both in the planning and implementation of processing activities, data protection principles and appropriate safeguards are addressed and implemented (data protection by design and default).
+Where GDPR is applicable, Pollfish processes Personal Data in accordance with the GDPR requirements. Pollfish implements appropriate technical and organisational measures and demonstrates compliance and ensures that both in the planning and implementation of processing activities, data protection principles and appropriate safeguards are addressed and implemented (data protection by design and default).
 
-For more information you can visit our specially GDPR-dedicated page: https://www.pollfish.com/lp/gdpr/.
+For more information you can visit our specially GDPR-dedicated page: [https://www.pollfish.com/lp/gdpr/](https://www.pollfish.com/lp/gdpr/).
 
 **13. PRIVACY - POLLFISH AND THE EU-US PRIVACY SHIELD/SWISS-U.S. PRIVACY SHIELD**
 
 Although the EU-U.S. Privacy Shield Framework is no longer a valid mechanism to comply with EU data protection requirements when transferring personal data from the European Union to the United States, Pollfish continues to comply with the EU-U.S. Privacy Shield Framework and the Swiss – U.S. Privacy Shield Framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information transferred from the European Union and Switzerland to the United States.
 
-Pollfish has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. If there is any conflict between the terms in this Privacy Policy and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification, please visit https://www.privacyshield.gov/.
+Pollfish has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. If there is any conflict between the terms in this Privacy Policy and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification, please visit [https://www.privacyshield.gov/](https://www.privacyshield.gov/).
 
 Pollfish&#39;s participation in the Privacy Shield applies to all personal data that is subject to the Pollfish Privacy Statement and is received from the European Union, European Economic Area, and Switzerland. Pollfish will comply with the Privacy Shield Principles in respect of such personal data. Pollfish is also affirmatively committed to comply with the Swiss – U.S. Privacy Shield Framework.
 
@@ -385,7 +385,7 @@ Pollfish is subject to the investigatory and enforcement powers of the U.S. Fede
 
 (e) to lodge a complaint with a supervisory authority.
 
-We reserve the right to not satisfy in whole or in part a request under this section 14.1, if such non-satisfaction is grounded on the provisions of the GDPR (for EU citizens) or the CCPA (for California residents).
+We reserve the right to not satisfy in whole or in part a request under this section 14.1, if such non-satisfaction is grounded on the provisions of applicable law, including, as the case may be, the GDPR, the UK-GDPR or the CCPA as applicable.
 
 Where we receive an erasure request, we will so inform all Pollfish Clients with whom we have shared your personal information in the past, so that they also erase such data from their systems and providing us with a formal attestation in writing that they have so acted.
 

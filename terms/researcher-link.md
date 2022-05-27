@@ -1,6 +1,6 @@
 **POLLFISH SURVEY LINK RESEARCHER TERMS OF SERVICE &amp; PRIVACY POLICY**
 
-Last updated: 09/23/2021
+Last updated: 05/24/2022
 
 **WHO WE ARE**
 
@@ -22,7 +22,7 @@ Pollfish Inc. (&quot;Pollfish&quot; or &quot;we&quot; &quot;our&quot; or &quot;u
 
 **1.1**  Pollfish operates an on-line survey platform, through which a researcher (the &quot;Researcher&quot; or &quot;You&quot;) may conduct surveys. The Pollfish Survey Link Service (&quot;PSL Service&quot;), is a special service through which a Researcher may create questionnaires and be provided with a link, which Researcher may then distribute electronically to respondents of his own choice (via email or otherwise). The Respondent may click on the link and be shown the survey. Once the Respondent answers the survey questionnaire, the completed survey is stored by Pollfish, on behalf of the Researcher.
 
-**1.2**  Through the process described above, Pollfish collects and processes, on behalf of the Researcher, the following Respondent data (the &quot;PLS Survey Data&quot;):
+**1.2**  Through the process described above, Pollfish collects and processes, on behalf and under the instructions of the Researcher, the following Respondent data (the &quot;PLS Survey Data&quot;):
 
 (a) The Respondent&#39;s answers to the questionnaire distributed to the Respondent by the Researcher.
 
@@ -31,7 +31,7 @@ Pollfish Inc. (&quot;Pollfish&quot; or &quot;we&quot; &quot;our&quot; or &quot;u
 1. Device properties (IP address, operating system, browser and browser user agent, screen size and screen resolution)
 2. The source where the respondent came from if available (e.g. Facebook, twitter, email etc.)
 
-All data mentioned above, are collected and processed on behalf of the Researcher, who is the Controller of such Data. Pollfish acts as Service Provider/processor of abovementioned data.
+All data mentioned above, are collected and processed on behalf of the Researcher and under the instructions of the Researcher, who designates the means and purpose of processing and  is the Controller of such Data. Pollfish acts as Service Provider/processor of abovementioned data.
 
 **2. CHARGES &amp; PAYMENTS**
 
@@ -63,18 +63,21 @@ In order to use or continue to use our PSL Service, you acknowledge and you warr
 - invades privacy of others.
 - competes with Pollfish&#39;s activity and interests.
 
-1. By registering to Pollfish you do not gain control over our software or application.
-2. Surveys are distributed by you, only, through the means chosen by you in order to communicate with eligible respondents. Pollfish does not interfere with (a) the selection of eligible respondents (b) the targeting criteria (c) the distribution of the survey link.
-3. Pollfish shall not provide to you any information, personal information, data, personal data, e-mailing lists, or other identifiers of any natural person whatsoever. You will not provide to Pollifsh any names, addresses, email addresses or other identifiers (whether anonymous, psedonymized or real) of any natural person, including the Respondents to your Surveys, except to the extent that these are included/incorporated in the Survey answers stored by Pollfish.
-4. Once you have completed the survey questionnaire and you have been provided the link to your survey, you will not be allowed to make any amendments on the questionnaire.
-5. You shall abstain from any misuse and you shall not engage in any fraudulent or deceptive activity in the course of using our Services.
-6. Any processing of Respondent personal Data by you shall be compliant with Applicable Personal Data Legislation. Any processing of Respondent data pertaining to personal data of EU/Swiss residents by you, shall be compliant with the GDPR and you abide that, in any case, no processing of such personal data by you shall breach the GDPR. All California- residents&#39; information, processed by you shall be processed by you in accordance to the CCPA, as applicable.
-7. You will not process any Personal Data collected by you for direct marketing, promotional, selling or influencing the opinions or decisions of any Respondent, unless providing the Respondent with a clear-opt-out option for any such processing.
-8. In your communication with Respondents, you will comply with applicable legislation regarding e-mail spam and other forms of unsolicited communications.
+5. By registering to Pollfish you do not gain control over our software or application.
+6. Surveys are distributed by you, only, through the means chosen by you in order to communicate with eligible respondents. Pollfish does not interfere with (a) the selection of eligible respondents (b) the targeting criteria (c) the distribution of the survey link.
+7. Pollfish shall not provide to you any pre-survey or out-of-survey information, personal information, data, personal data, e-mailing lists, or other identifiers of any natural person whatsoever.Subject to applicable law (and such option being available only under this PSL service and not being available to Researchers when they use any other Pollfish service, including our standard survey service), you may ask questions (through your survey questionnaires) under which the Respondents may be invited to submit personally identifiable information to you. All such information shall be processed by you in accordance with applicable law.
+8. You will not provide to Pollifsh any names, addresses, email addresses or other identifiers (whether anonymous, psedonymized or real) of any natural person, including the Respondents to your Surveys, except to the extent that these are included/incorporated in the Survey answers stored by Pollfish on your behalf and under your (lawful) instructions.
+9. Once you have completed the survey questionnaire and you have been provided the link to your survey, you will not be allowed to make any amendments on the questionnaire.
+10. You shall abstain from any misuse and you shall not engage in any fraudulent or deceptive activity in the course of using our Services.
+11. Any processing of Respondent personal Data by you shall be compliant with Applicable Personal Data Legislation. Without limiting the foregoing, any processing of Respondent data pertaining to personal data of persons in the EU/EEA/ and the UK by you, shall be compliant with the GDPR and the UK GDPR and you abide that, in any case, no processing of such personal data by you shall breach applicable law. All California- residents' information, processed by you shall be processed by you in accordance with the CCPA, as applicable.
+12. You will not process any Personal Data collected by you for direct marketing, promotional, selling or influencing the opinions or decisions of any Respondent, unless providing the Respondent with a clear-opt-out option for any such processing.
+13. In your communication with Respondents, you will comply with applicable legislation regarding e-mail spam and other forms of unsolicited communications.
+14. You are responsible for obtaining the opt-in consent of the respondent for the collection and processing of any Respondent personal data by you. You are further responsible for providing to Respondent robust notice, in clear and easy-to-understand language of all necessary information, as required by applicable law, regarding the processing of the Respondent’s personal data by you, including, but not limited, to your name and contact details, the purpose of processing, any sharing of data with third parties, data retention period, and the ability of the Respondent to exercise his rights, as prescribed by applicable law, directly to you. 
+
 
 **5. LICENSE TO USE OUR SERVICE**
 
-**5.1**  Subject to the Terms and Conditions described in this Agreement, Pollfish grants to Researcher a revocable, non-exclusive, worldwide, non-assignable license to access and use the Pollfish Platform.
+**5.1**  Subject to the Terms and Conditions described in this Agreement, Pollfish grants to Researcher a revocable, non-exclusive, worldwide, non-assignable license to access and use the Pollfish PSL service.
 
 **6. OWNERSHIP OF REPORTING DELIVERABLES**
 
@@ -86,21 +89,23 @@ Pollfish may access, store and process the PSL Survey Data, in order to be able 
 
 **7. PERSONAL DATA SECURITY AND LAWFUL PROCESSING**
 
-**7.1 GDPR and further compliance with Applicable Law.**  Researcher shall be Controller of the PSL Survey Data. Researcher agrees and warranties that all such processing operations of which Researcher is Controller shall be lawful and compliant with the provisions of the General Data Protection Regulation 2016/679 (&quot;GDPR&quot;) and/or the CCPA (as applicable) and all and any further Personal Data Legislation which may be applicable to Researcher&#39;s business. You hereby agree and warrant that the PSL Survey Data shall not be processed by You in a way that may be illegal or may run contrary to the aforementioned Data Protection and Privacy Legislation.
+**7.1 GDPR and further compliance with Applicable Law.**  Researcher shall be Controller of the PSL Survey Data. Researcher agrees and warrans that all such processing operations of which Researcher is Controller shall be compliant with applicable law, including as the case may be, with the provisions of the General Data Protection Regulation 2016/679 (&quot;GDPR&quot;) the UK GDPR and/or the CCPA (as applicable) and all and any further Personal Data Legislation which may be applicable to Researcher&#39;s business and the processing operations of Researcher. You hereby agree and warrant that the PSL Survey Data shall not be processed by You in a way that may be illegal or may run contrary to the aforementioned Data Protection and Privacy Legislation.
 
-**7.2**  Pollfish is Processor (or Service Provider) of the PSL Survey Data. Processing of the PSL data by Pollfish is be made on the basis of the Data Processing Agreement (and Exhibit A thereof) included in Annex 1 of these ToU.
+**7.2**  Pollfish acts as Processor (or Service Provider) of the PSL Survey Data. Processing of the PSL data by Pollfish is made on the basis of the Data Processing Agreement (including Exhibit A and Exhibit B thereof, as applicable) included in Annex A of these ToU.
 
-**7.3** Where the data processing made by the Researcher/Controller involves EU/Swiss Citizens&#39;/Residents&#39; personal data, the Researcher declares and warrants that:
+**7.3** Researcher declares and warrants that:
 
-(a) Where applicable (e.g. if Researcher is a legal entity) Researcher shall maintain a Privacy Policy in its website, containing all lawful information on the processing of personal data, including the processing of Respondents&#39; personal data.
+(a) If Researcher is a legal entity, and in any case where Researcher maintains a website, Researcher shall maintain a Privacy Policy in its website, containing all lawful information on the processing of personal data, including the processing of Respondents&#39; personal data.
 
-(b) Researcher has obtained all legal consents for the processing of the Respondents&#39; personal data, where the legal basis of processing is consent (e.g. by requesting and receiving explicit opt-in consent by the Respondent, when communicating to him the relevant survey link)
+(b) Researcher shall actively obtain all legal consents for the processing of the Respondents&#39; personal data, where the legal basis of processing is consent, by requesting and receiving explicit opt-in consent by the Respondent, when communicating to him the relevant survey link.
 
-(c) Researcher shall provide to the Respondent, at the stage of data collection, all lawful information regarding the processing of personal data made by the Researcher in accordance with article 13 of the GDPR (e.g. by providing such information when communication the survey link to the Respondent)
+(c) Researcher shall provide to the Respondent, at a stage of prior to the collection of any data, all lawful information regarding the processing of personal data made by the Researcher in accordance with applicable law (e.g. by providing such information when communication the survey link to the Respondent)
 
 (d) Researcher shall implement and maintain all technical and organizational measures to ensure that the personal data processed are protected from accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to personal data transmitted, stored or otherwise processed.
 
-(e) Researcher shall inform Respondents and shall respond, in accordance with the GDPR and further data protection applicable law, to any requests, complaints or actions of Respondents regarding the exercise of their right to be informed, the right of access, the right to rectification, and upon fulfillment of the legal conditions, the right to erasure, to portability, to restriction of processing and to object. In case any such complaint or Respondent action is sent to/received by Pollfish, Pollfish shall inform Researcher without undue delay about such action/complaint and shall refer the Respondent to the Researcher for the handling by the latter, of said action/complaint.
+(e) Researcher shall inform Respondents and shall respond, in accordance with applicable data protection and privacy laws, to any requests, complaints or actions of Respondents regarding the exercise of their rights including, as applicable, under applicable law, the right to be informed, the right of access, the right to rectification, and upon fulfillment of the legal conditions, the right to erasure, to portability, to restriction of processing and to object. In case any such complaint or Respondent action is sent to/received by Pollfish, Pollfish shall inform Researcher without undue delay about such action/complaint and shall refer the Respondent to the Researcher for the handling by the latter, of said action/complaint.
+
+The Researcher hereby grants Pollfish the right to disclose to enquiring Respondents, Researcher’s name, address and contact information to the full extent that the above are available to Pollfish, in order for the Respondents to be able to directly contact you and exercise any rights afforded to them under applicable law.
 
 **8. TERMINATION**
 
@@ -154,13 +159,13 @@ Pollfish Properties, including, without limitation, all Content, Pollfish SDK, t
 
 **iv)** Is disclosed by the Receiving Party with the prior written approval of the Disclosing Party.
 
-For clarity, the Researcher Survey Data (excluding the &quot;Derived General Tagging Data), as well as all and any contact data of Researcher employees or representatives provided voluntarily by the Researcher for the commercial, legal, technical or other communications under this Agreement, shall be treated by Pollfish as Researcher&#39;s Confidential Information.
+For clarity, the PLS Service Data as well as all and any contact data of Researcher employees or representatives provided voluntarily by the Researcher for the commercial, legal, technical or other communications under this Agreement, shall be treated by Pollfish as Researcher&#39;s Confidential Information (without prejudice to Pollfish’s rights under the last paragraph of Section 7.3 above).
 
 **(b) &quot;Disclosing Party&quot;** means and refers to either party and all its associate companies, associates, employees, officers, servants, agents or professional advisors (including, without limitation, legal counsel, accountants, consultants, bankers and financial advisors), acting on behalf of such party (&quot;hereinafter referred to, collectively, as &quot;Representatives&quot;), where and whenever such party discloses confidential information to the other party.
 
 **(c) &quot;Receiving Party&quot;** means refers to either party and all its associate companies, associates, employees, officers, servants, agents or professional advisors (including, without limitation, legal counsel, accountants, consultants, bankers and financial advisors), acting on behalf of the Receiving Party (&quot;hereinafter referred to, collectively, as &quot;Representatives&quot;) where and whenever such party receives information from the other party.
 
-**11.2 Use of Confidential Information.**  The Confidential Information will be kept strictly confidential and shall not, without prior written consent, be, whether orally or in writing or by any other means, disclosed, divulged, provided or made accessible to any other person (the term &quot;person/s&quot; as used in this Agreement being broadly interpreted to include, without limitation, any corporation, company, partnership and individual as well), either directly or indirectly by the Receiving party or by its agents, representatives, officers, directors, partners, employees or advisors (including, without limitation, legal counsel, accountants, consultants, bankers and financial advisors), in any manner whatsoever, in whole or in part, and shall not be used by the Receiving party or its Representatives, for any purpose whatsoever other than for the performance of this Agreement (the &quot;Purpose&quot;). The Receiving party shall disclose the Confidential Information only to such of its directors, employees or representatives as they may need to know the Confidential Information for the Purpose. The Receiving party shall treat the Confidential Information with the same degree of care and with sufficient protection from unauthorized disclosure as the Receiving Party uses to maintain its own confidential or proprietary information. The Receiving party shall ensure that anyone to whom the Receiving party discloses the information complies with this Agreement as if they were the Receiving Party and that they enter into a Confidentiality Agreement with the Receiving party (or directly with the Disclosing party, if the latter so requests) on terms no less protective than those contained in this Agreement. Every party and its Representatives will take all necessary organizational and technical measures to ensure that all Confidential Information is properly safeguarded. In the event that the Receiving Party is required by law, Public Authorities or court order to disclose any Confidential Information to any third party, it shall use its best endeavors: (i) To inform the Disclosing Party of the full circumstances of the disclosure and the Confidential Information to be disclosed (ii) To consult with the Disclosing Party with the aim of taking all possible steps to avoid or limit disclosure and taking those steps where they would not result in significant adverse consequences to the Disclosing Party (iii) To gain assurances in relation to confidentiality from the body to whom the information shall be disclosed (iv) To limit the disclosure and provide only the absolutely necessary Confidential Information as requested by the Competent Authorities, provided, however that any such disclosed information will remain subject to this Confidentiality Agreement.
+**11.2 Use of Confidential Information.**  Without prejudice to Pollfish’s rights under the last paragraph of Section 7.3 above, the Confidential Information will be kept strictly confidential and shall not, without prior written consent, be, whether orally or in writing or by any other means, disclosed, divulged, provided or made accessible to any other person (the term &quot;person/s&quot; as used in this Agreement being broadly interpreted to include, without limitation, any corporation, company, partnership and individual as well), either directly or indirectly by the Receiving party or by its agents, representatives, officers, directors, partners, employees or advisors (including, without limitation, legal counsel, accountants, consultants, bankers and financial advisors), in any manner whatsoever, in whole or in part, and shall not be used by the Receiving party or its Representatives, for any purpose whatsoever other than for the performance of this Agreement (the &quot;Purpose&quot;). The Receiving party shall disclose the Confidential Information only to such of its directors, employees or representatives as they may need to know the Confidential Information for the Purpose. The Receiving party shall treat the Confidential Information with the same degree of care and with sufficient protection from unauthorized disclosure as the Receiving Party uses to maintain its own confidential or proprietary information. The Receiving party shall ensure that anyone to whom the Receiving party discloses the information complies with this Agreement as if they were the Receiving Party and that they enter into a Confidentiality Agreement with the Receiving party (or directly with the Disclosing party, if the latter so requests) on terms no less protective than those contained in this Agreement. Every party and its Representatives will take all necessary organizational and technical measures to ensure that all Confidential Information is properly safeguarded. In the event that the Receiving Party is required by law, Public Authorities or court order to disclose any Confidential Information to any third party, it shall use its best endeavors: (i) To inform the Disclosing Party of the full circumstances of the disclosure and the Confidential Information to be disclosed (ii) To consult with the Disclosing Party with the aim of taking all possible steps to avoid or limit disclosure and taking those steps where they would not result in significant adverse consequences to the Disclosing Party (iii) To gain assurances in relation to confidentiality from the body to whom the information shall be disclosed (iv) To limit the disclosure and provide only the absolutely necessary Confidential Information as requested by the Competent Authorities, provided, however that any such disclosed information will remain subject to this Confidentiality Agreement.
 
 **11.3 Survival.**  The Parties&#39; confidentiality obligations under this Section 11 of PART A of this Agreement shall survive for 5 years following any termination or expiration of this Agreement, provided that confidentiality obligations with respect to Confidential Information constituting trade secrets shall continue for as long as such Confidential Information shall be eligible for trade secret protection.
 
@@ -172,7 +177,7 @@ The past, present and future content of the Properties, including without limita
 
 Pollfish understands that surveys distributed may include sensitive or confidential information about the Researcher&#39;s business and operations (e.g. launching of a new product, marketing strategies etc as such information may be revealed directly or indirectly through the contents of a certain survey), which the Researcher does not want to be made public or become accessible to competitors. Pollfish cannot guarantee that the Respondents will treat such information as confidential and that they will desist from divulging or reproducing it. Therefore, in case your survey contains confidential information you wish to protect, we advise you to draft your surveys accordingly. Here are some indicative steps you could follow, in order to reduce aforementioned risks:
 
-(a) You could consider not using any mark, name, logo or other sign which may identify your Company,
+(a) You could consider not using any mark, name, logo or other sign which may identify your Company, (however you remain responsible for providing the Respondent with all relevant information, including name and contact information, for the purposes set out in clause 7.3 of this Agreement)
 
 (b) You could use an alternate-test name for the product related to your survey.
 
@@ -230,7 +235,7 @@ If you choose to communicate with us, we may collect and store such communicatio
 
 **(c)** To manage and protect our business (including in case of reorganization, sale of assets, merger or acquisition, liquidation and similar processes), for improving data security, fraud prevention, troubleshooting data and systems, system maintenance and testing, data hosting, managing our offices and other facilities. [legal basis of processing: legitimate interests]
 
-**(d)** to comply with state and federal laws in response to a court order, judicial or other government subpoena or warrant, or to otherwise cooperate with law enforcement activity or other legal process. We also reserve the right to disclose data collected by us, as we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Pollfish and others from fraudulent, abusive, or unlawful uses or activity; to investigate and defend ourselves against any claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Service and our other property; or to protect the rights, property, or safety of us, our users, or other persons or entities. [legal bases of processing: legitimate interests/Legal or regulatory obligation]
+**(d)** to comply with state and federal laws in response to a court order, judicial or other government subpoena or warrant, or to otherwise cooperate with law enforcement activity or other legal process. We also reserve the right to disclose data collected by us, as we believe, in good faith, is appropriate or necessary to take precautions against liability; to protect Pollfish and others from fraudulent, abusive, or unlawful uses or activity; to investigate and defend ourselves against any claims or allegations; to assist government enforcement agencies; to protect the security or integrity of the Service and our other property; or to protect the rights, property, or safety of us, our users, or other persons or entities, including in the case of last paragraph of section 7.3 of Part A of this Agreement. [legal bases of processing: legitimate interests/Legal or regulatory obligation]
 
 **(e)** for further internal analyses and statistical purposes, related to the interaction between Pollfish and its customers [legal base of processing: legitimate interests].
 
@@ -240,7 +245,7 @@ If you choose to communicate with us, we may collect and store such communicatio
 
 **3. DISCLOSURES OF YOUR PERSONAL DATA**
 
-**3.1**  We disclose or may disclose your personal data to the following data-recipients who supply services to Pollfish:
+**3.1**  We disclose or may disclose your personal data to the following data-recipients:
 
 | **DATA-RECIPIENT** | **PURPOSE** |
 | --- | --- |
@@ -248,12 +253,13 @@ If you choose to communicate with us, we may collect and store such communicatio
 | Suppliers of Analytics Services (such as Google analytics) | Analytics |
 | Lawyers | Protection of legal interests |
 | State Authorities | Compliance with regulatory and legal obligations |
+| Respondents | Under the last paragraph of section 7.3 of PART A of this Agreement |
 | Security, safety and anti-fraud service providers | Protection of legal interests, protection of client interests, security, anti-fraud |
 | External auditors | Regulatory, contractual and legal compliance |
 | Pollfish Headquarters located in the US, Affiliates and Corporate Investors | Internal business organization and management |
 | Mailing and communication service providers | Communication |
 
-**3.2**  We require from all third parties with whom we share your data to agree and warrant that all the processing operations in which they engage shall be lawful and compliant with the provisions of the GDPR (including the European Commission Standard Contractual Clauses, where applicable) and any further Data Protection Legislation which may be applicable to their business. We also require that they provide, in particular in terms of expert knowledge, reliability and resources, sufficient guarantees to implement appropriate technical and organizational measures in such a manner that processing will meet the requirements the GDPR (including the European Commission Standard Contractual Clauses, where applicable) and ensure the protection of the rights of the data subject.
+**3.2**  We require from all third parties with whom we share your data to agree and warrant that all the processing operations in which they engage shall be lawful and compliant with applicable law and, as the case may be, the provisions of the GDPR (including the European Commission Standard Contractual Clauses, where applicable) the UK-GDPR and any further Data Protection Legislation which may be applicable to their business. We also require that they provide, in particular in terms of expert knowledge, reliability and resources, sufficient guarantees to implement appropriate technical and organizational measures in such a manner that processing will meet the requirements of applicable law, including, as the case may be, the GDPR (including the European Commission Standard Contractual Clauses, where applicable) the UK GDPR (and relevant transfer mechanisms) and ensure the protection of the rights of the data subject.
 
 **4. MANAGEMENT OF YOUR PERSONAL DATA**
 
@@ -261,7 +267,7 @@ If you de-register from Pollfish or if the contract between us expires or is ter
 
 **5. INTERNATIONAL TRANSFERS**
 
-We may transfer the Personal Information we collect about you to the United States, where we are headquartered, and by accepting this PART B of this Agreement (Privacy Policy) you explicitly permit us to do so. We may also transfer Personal Information to countries for which adequacy decisions have been issued and use contractual protections for the transfer of Personal Information to third parties, such as the European Commission&#39;s Standard Contractual Clauses or their equivalent under applicable law..
+We may transfer the Personal Information we collect about you to the United States, where we are headquartered, and by accepting this PART B of this Agreement (Privacy Policy) you explicitly permit us to do so. We may also transfer Personal Information to countries for which adequacy decisions have been issued and use contractual protections for the transfer of Personal Information to third parties, such as the European Commission&#39;s Standard Contractual Clauses the UK-GDPR approved transfer mechanisms or their equivalent under applicable law.
 
 **6. DATA RETENTION**
 
@@ -301,11 +307,11 @@ All California residents may exercise their rights and choices under the CCPA, a
 
 **8. POLLFISH AND THE GDPR**
 
-Pollfish processes Personal Data in accordance with the GDPR requirements. In particular, Pollfish processes personal data only in accordance with GDPR data protection principles and GDPR data protection provisions. Pollfish also implements appropriate technical and organisational measures and demonstrates compliance and ensures that both in the planning and implementation of processing activities, data protection principles and appropriate safeguards are addressed and implemented (data protection by design and default). For more information you can visit our specially GDPR-dedicated page: https://www.pollfish.com/lp/gdpr/.
+Where the GDPR is applicable, Pollfish processes Personal Data in accordance with the GDPR requirements. Pollfish implements appropriate technical and organisational measures and demonstrates compliance and ensures that both in the planning and implementation of processing activities, data protection principles and appropriate safeguards are addressed and implemented (data protection by design and default). For more information you can visit our specially GDPR-dedicated page: [https://www.pollfish.com/lp/gdpr/](https://www.pollfish.com/lp/gdpr/).
 
 **9. PRIVACY - POLLFISH AND THE EU-US PRIVACY SHIELD/SWISS-U.S. PRIVACY SHIELD**
 
-Although the EU-U.S. Privacy Shield Framework is no longer a valid mechanism to comply with EU data protection requirements when transferring personal data from the European Union to the United States, Pollfish continues to comply with the EU-U.S. Privacy Shield Framework and the Swiss – U.S. Privacy Shield Framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information transferred from the European Union and Switzerland to the United States. Pollfish has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. If there is any conflict between the terms in this PART B of this Agreement (Privacy Policy) and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification, please visit https://www.privacyshield.gov/.
+Although the EU-U.S. Privacy Shield Framework is no longer a valid mechanism to comply with EU data protection requirements when transferring personal data from the European Union to the United States, Pollfish continues to comply with the EU-U.S. Privacy Shield Framework and the Swiss – U.S. Privacy Shield Framework as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal information transferred from the European Union and Switzerland to the United States. Pollfish has certified to the Department of Commerce that it adheres to the Privacy Shield Principles. If there is any conflict between the terms in this PART B of this Agreement (Privacy Policy) and the Privacy Shield Principles, the Privacy Shield Principles shall govern. To learn more about the Privacy Shield program, and to view our certification, please visit [https://www.privacyshield.gov/](https://www.privacyshield.gov/).
 
 Pollfish&#39;s participation in the Privacy Shield applies to all personal data that is subject to the Pollfish Privacy Statement and is received from the European Union, European Economic Area, and Switzerland. Pollfish will comply with the Privacy Shield Principles in respect of such personal data. Pollfish is also affirmatively committed to comply with the Swiss – U.S. Privacy Shield Framework.
 
@@ -337,7 +343,7 @@ Pollfish is subject to the investigatory and enforcement powers of the U.S. Fede
 
 (e) to lodge a complaint with a supervisory authority.
 
-We reserve the right to not satisfy in whole or in part a request under this section 10.1 of PART B of this Agreement, if such non-satisfaction is grounded on the provisions of the GDPR (for EU citizens) or the CCPA (for California residents).
+We reserve the right to not satisfy in whole or in part a request under this section 10.1 of PART B of this Agreement, if such non-satisfaction is grounded on the provisions of applicable law, including, where applicable, the GDPR, the UK-GDPR or the CCPA.
 
 Where we receive an erasure request, we will so inform all Pollfish Suppliers with whom we have shared your personal information in the past for business purposes, so that they also erase such data from their systems and providing us with a formal attestation in writing that they have so acted.
 
@@ -387,21 +393,27 @@ This Data Processing Addendum (&quot;DPA&quot;) and Exhibit A thereof forms indi
 
 **1.1**  In this Agreement the following words and phrases shall have the following meanings, unless inconsistent with the context or as otherwise specified:
 
-**&quot;personal data&quot;**  shall mean any information relating to a natural person («data subject») from which, directly or indirectly, the said natural person is or can be identified (his identity is verified);
+**&quot;Personal Data&quot;**  shall mean any information relating to an identified or identifiable natural person; an identifiable natural person is one can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person.
 
-**&quot;processing of personal data&quot;**  shall mean any operation or set of operations which is performed by the Processor on behalf of the Controller, which takes place with or without automated means, on personal data or on sets of personal data, collection, recording, organisation, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction;
+**&quot;Special Categories Data&quot;**  shall mean personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person’s sex life or sexual orientation. 
 
-**&quot;sub-processing&quot;**  shall mean the process by which either party arranges for a third party to carry out its obligations under this Agreement and &quot;Sub Contractor&quot; shall mean the party to whom the obligations are subcontracted;
+**&quot;Processing&quot;** shall mean any operation or set of operations which is performed on personal data or on sets of personal data, whether or not by automated means, such as collection, recording, organization, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise. making available, alignment or combination, restriction, erasure or destruction.
 
-**&quot;Technical and organisational security measures&quot;**  shall mean means those measures aimed at protecting personal data against accidental or unlawful destruction or accidental loss, alteration, unauthorised disclosure or access, in particular where the processing involves the transmission of data over a network, and against all other unlawful forms of processing, and
+**&quot;Controller&quot;** shall mean the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data.
 
-**&quot;Instruction&quot;**  shall mean the documented instructions offered by the Controller to the Processor and instruct the latter to perform specific actions regarding personal data. These instructions are initially specified in the MSA and ToU and may from time to time be modified, strengthened or replaced by the controller with separate documented instructions from the controller (personalized instructions).
+**&quot;Processor&quot;** shall mean natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.
+
+**&quot;sub-processing&quot;**  shall mean the process by which processor arranges for a third party to carry out its obligations under this Agreement.
+
+**&quot;Technical and organisational security measures&quot;**  shall mean means those measures aimed at protecting personal data against accidental or unlawful destruction or accidental loss, alteration, unauthorised disclosure or access, in particular where the processing involves the transmission of data over a network, and against all other unlawful forms of processing,
+
+**&quot;Instruction&quot;**  shall mean the documented instructions offered by the Controller to the Processor and instruct the latter to perform specific actions regarding personal data. These instructions may from time to time be modified, strengthened or replaced by the controller with separate documented instructions from the controller (personalized instructions).
 
 **2. SECURITY OBLIGATIONS OF THE PROCESSOR**
 
-**2.1**  The Processor shall only carry out those actions in respect of the personal data processed on behalf of the Controller as are expressly authorised by the Controller. Processor shall immediately inform Controller if, in its opinion, an instruction infringes GDPR.
+**2.1**  The Processor shall only carry out those actions in respect of the personal data processed on behalf of the Controller as are expressly authorised by the Controller. Processor shall immediately inform Controller if, in its opinion, an instruction infringes applicable law.
 
-**2.2**  Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of Processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, Processor shall implement appropriate technical and organizational measures to ensure a level of security appropriate to that risk, including, as appropriate, the measures referred to in Article 32(1) of the GDPR. In assessing the appropriate level of security, Processor shall take account in particular of the risks that are presented by Processing, in particular from a Personal Data Breach.
+**2.2**  Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of Processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, Processor shall implement appropriate technical and organizational measures to ensure a level of security appropriate to that risk, including, as appropriate and applicable, the measures referred to in Article 32(1) of the GDPR. In assessing the appropriate level of security, Processor shall take account in particular of the risks that are presented by Processing, in particular from a Personal Data Breach.
 
 **2.3**  Technical and organizational measures implemented by Processor shall include:
 
@@ -437,7 +449,7 @@ Encryption: use of encryption methods at rest and at transit.
 
 **4. SUB-PROCESSING**
 
-**4.1**  The Processor shall not appoint a sub-processor and shall not subcontract any of its rights or obligations under this Agreement without the prior written consent of the Controller. Controller hereby approves the following Subprocessor: Google Cloud Services (Data Center Location Iwoa, US)
+**4.1**  The Processor shall not appoint a sub-processor and shall not subcontract any of its rights or obligations under this Agreement without the prior written consent of the Controller. Controller hereby approves the following Subprocessor: Google Cloud Services (Data Center Location Iowa, US)
 
 **4.2**  Where the Processor, with the consent of the Controller, appoints a sub-processor and sub-contracts its obligations under this agreement it shall do so only by way of a written agreement with the sub-processor which imposes the same obligations in relation to the security of the processing on the sub-processor as are imposed on the Processor under this Agreement.
 
@@ -445,33 +457,29 @@ Encryption: use of encryption methods at rest and at transit.
 
 **5. DATA-SUBJECT RIGHTS**
 
-**5.1**  Taking into account the nature of the processing, the Processor shall assist the Controller by implementing appropriate technical and technological measures, insofar as possible, for the fulfillment of the Controller&#39;s obligations to respond to requests to exercise Data Subject rights under the GDPR. Processor shall promptly notify Controller in case it receives a request from a Data Subject under GDPR in respect of personal data. Processor shall not respond to such request except on the documented instructions of Controller or as required by applicable laws to which Processor is subject, in which case Processor shall inform Controller of that legal requirement before Processor responds to Data Subject&#39;s request.
-
-**6. INTERNATIONAL TRANSFERS**
-
-**6.1**  Any processing of Data outside the territory of the European Economic Area shall require the prior written consent of Controller and may only be carried out if all legal requirements under Applicable Data Protection Law for such processing are fulfilled. Such measures may include (without limitation) transferring the Data to a recipient in a country that the European Commission has decided provides adequate protection for personal data, to a recipient that has achieved binding corporate rules authorisation in accordance with Applicable Data Protection Law, or to a recipient that has executed standard contractual clauses adopted or approved by the European Commission.
+**5.1**  Taking into account the nature of the processing, the Processor shall assist the Controller by implementing appropriate technical and technological measures, insofar as possible, for the fulfillment of the Controller&#39;s obligations to respond to requests to exercise Data Subject rights under applicable law, including, as the case may be, the GDPR and the UK-GDPR. Processor shall promptly notify Controller in case it receives a request from a Data Subject in respect of personal data. Processor shall not respond to such request except on the documented instructions of Controller or as required by applicable laws to which Processor is subject, in which case Processor shall inform Controller of that legal requirement before Processor responds to Data Subject&#39;s request.
 
 **7. PERSONAL DATA BREACH, DATA PROTECTION IMPACT ASSESSEMENT AND PRIOR CONSULTATION**
 
-**7.1**  Processor shall notify Controller without undue delay upon it becoming aware of a Personal Data Breach, providing Controller with sufficient information to allow it to meet any obligations to report or inform Data Subjects of the Personal Data Breach. Processor shall cooperate with Controller and take such reasonable commercial steps as are directed by Controller to assist in the investigation, mitigation and remediation of each such Personal Data Breach.
+**6.1**  Processor shall notify Controller without undue delay upon it becoming aware of a Personal Data Breach, providing Controller with sufficient information to allow it to meet any obligations to report or inform Data Subjects of the Personal Data Breach. Processor shall cooperate with Controller and take such reasonable commercial steps as are directed by Controller to assist in the investigation, mitigation and remediation of each such Personal Data Breach.
 
-**7.2**  Processor shall provide reasonable assistance to Controller with any data protection impact assessments, and prior consultations with Supervising Authorities or other competent data privacy authorities.
+**6.2**  Processor shall provide reasonable assistance to Controller with any data protection impact assessments, and prior consultations with Supervising Authorities or other competent data privacy authorities.
 
-**8. RECORDS OF PROCESSING ACTIVITIES, DELETION OR RETURN OF DATA &amp; AUDIT RIGHTS**
+**7. RECORDS OF PROCESSING ACTIVITIES, DELETION OR RETURN OF DATA &amp; AUDIT RIGHTS**
 
-**8.1**  Processor shall appoint persons responsible for the protection of personal data as required by the applicable legislation, keep records of the processing activities under his responsibility, cooperate with the competent authorities and set at their disposal such records so that it can use them to monitor the processing operations in question.
+**7.1**  Processor shall appoint persons responsible for the protection of personal data as required by the applicable legislation, keep records of the processing activities under his responsibility, cooperate with the competent authorities and set at their disposal such records so that it can use them to monitor the processing operations in question.
 
-**8.2.**  At the choice of the Controller and based on his instructions, Processor, after the end of the provision of services relating to processing, shall (a) comply with any other agreement made between the parties concerning the return or destruction of data, or (b) return all personal data passed to the Processor by the Controller for processing, or (c) on receipt of instructions from the Controller, destroy all such data unless prohibited from doing so by any applicable law.
+**7.2.**  At the choice of the Controller and based on his instructions, Processor, after the end of the provision of services relating to processing, shall (a) comply with any other agreement made between the parties concerning the return or destruction of data, or (b) return all personal data passed to the Processor by the Controller for processing, or (c) on receipt of instructions from the Controller, destroy all such data unless prohibited from doing so by any applicable law.
 
-**8.3**  Processor shall make available to Controller all information necessary to demonstrate compliance with the obligations laid down in this Article and allow for and contribute to audits, including inspections, conducted by the controller or another auditor mandated by the Controller.
+**7.3**  Processor shall make available to Controller all information necessary to demonstrate compliance with the obligations laid down in this Article and allow for and contribute to audits, including inspections, conducted by the controller or another auditor mandated by the Controller.
 
-**9. TERM AND TERMINATION**
+**8. TERM AND TERMINATION**
 
-**9.1**  This Agreement shall continue in full force and effect for so long as the Processor is processing personal data on behalf of the Controller.
+**8.1**  This Agreement shall continue in full force and effect for so long as the Processor is processing personal data on behalf of the Controller.
 
-**10. GOVERNING LAW**
+**9. GOVERNING LAW**
 
-**10.1**  This Agreement shall be governed by and construed in accordance with the national law of the country in which the Controller is established.
+**9.1**  This Agreement shall be governed by and construed in accordance with the national law of the country in which the Controller is established.
 
 **EXHIBIT A to the Data Processing Addendum between Pollfish and Researcher**
 
@@ -890,3 +898,17 @@ For cases under 13 (a) (i) and/or (ii), as per Clause 13 (a) and/or (ii) as appl
 - ensuring limited data retention
 - accountability
 - allowing data portability and ensuring erasure
+
+**EXHIBIT B- PROCESSING OF DATA OF PERSONS IN THE UK**
+
+International Data Transfer Addendum to the EU Commission Standard Contractual Clauses (UK-SCCs)
+
+The following addendum shall be added to the Approved EU SCCs included in Appendix A: [https://ico.org.uk/media/for-organisations/documents/4019539/international-data-transfer-addendum.pdf](https://ico.org.uk/media/for-organisations/documents/4019539/international-data-transfer-addendum.pdf) (“**UK SCCs**”) and shall be hereby populated as follows: 
+
+(a) Table 1 of the UK SCCs shall be populated with the same details as listed in Annex 1 of the Approved EU SCCs
+
+(b) The first checkbox of Table 2 of the UK SCCs shall be selected and the date will be June 4, 2021. 
+
+(c) Table 3 of the UK SCCs shall be populated with the same details listed in the Approved EU SCCs (as applicable).
+
+(d) The “exporter” checkbox shall be selected in Table 4 of the UK SCCs.
