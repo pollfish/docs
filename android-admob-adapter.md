@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.4.1">
+<div class="changelog" data-version="6.2.4.2">
+v6.2.4.2
+
+- Internal fixes
+
 v6.2.4.1
 
 - Internal fixes
@@ -375,7 +379,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:6.2.4.0'
+  implementation 'com.pollfish.mediation:pollfish-admob:6.2.4.2'
 }
 ```
 
