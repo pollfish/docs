@@ -1,4 +1,9 @@
-<div class="changelog" data-version="6.2.5.0">
+<div class="changelog" data-version="6.2.5.1">
+v6.2.5.1
+
+- Fixing issue with missing armv7 architecture
+- Changing lower deployment target to iOS 10
+
 v6.2.5.0
 
 - Updating with Pollfish SDK v6.2.5
@@ -178,8 +183,8 @@ Run pod install on the command line to install PollfishMax pod.
 
 For Objective-C based projects you will need to create an empty Swift file including Foundation framework and a bridging header file named `YourProjectName-Bridging-Header.h`. Skipping this step will result to compilation failure.
 
-<!-- Add link to objc example project -->
-You can see an example [here]()
+
+You can see an example [here](https://github.com/pollfish/ios-max-adapter/tree/master/PollfishMaxAdapterExampleObjC)
 
 <br/>
 
