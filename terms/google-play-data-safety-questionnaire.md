@@ -50,10 +50,12 @@ Android Advertising ID collection happens automatically through the SDK if the r
 | Does the SDK collect the user&#39;s credit card, debit card, or bank account number? | No | N/A | N/A | N/A | N/A | N/A |
 | Does the SDK collect any of the user&#39;s other financial info? | Yes | Yes | No | No | Advertising or marketing | Surveys from clients might ask such questions. The users decide if they would like to participate. |
 
+
 | **Health and fitness** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
 | Does the SDK collect the user&#39;s health information? | Yes | Yes | No | No | Advertising or marketing | Surveys from clients might ask such questions. The users decide if they would like to participate. |
 | Does the SDK collect the user&#39;s fitness information? | Yes | Yes | No | No | Advertising or marketing | Surveys from clients might ask such questions. The users decide if they would like to participate. |
+
 
 | **Messages** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -61,10 +63,12 @@ Android Advertising ID collection happens automatically through the SDK if the r
 | Does the SDK collect the user&#39;s SMS or MMS messages? | No | N/A | N/A | N/A | N/A | N/A |
 | Does the SDK collect any of the user&#39;s other in-app messages? | No | N/A | N/A | N/A | N/A | N/A |
 
+
 | **Photos and videos** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
 | Does the SDK collect the user&#39;s photos? | No | N/A | N/A | N/A | N/A | N/A |
 | Does the SDK collect the user&#39;s videos? | No | N/A | N/A | N/A | N/A | N/A |
+
 
 | **Audio files** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -72,17 +76,21 @@ Android Advertising ID collection happens automatically through the SDK if the r
 | Does the SDK collect the user&#39;s music files? | No | N/A | N/A | N/A | N/A | N/A |
 | Does the SDK collect any of the user&#39;s other audio files? | No | N/A | N/A | N/A | N/A | N/A |
 
+
 | **Files and docs** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
 | Does the SDK collect the user&#39;s files and or documents? | No | N/A | N/A | N/A | N/A | N/A |
+
 
 | **Calendar** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
 | Does the SDK collect the user&#39;s calendar events? | No | N/A | N/A | N/A | N/A | N/A |
 
+
 | **Contacts** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
 | Does the SDK collect the user&#39;s contacts? | No | N/A | N/A | N/A | N/A | N/A |
+
 
 | **App activity** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -92,15 +100,18 @@ Android Advertising ID collection happens automatically through the SDK if the r
 | Does the SDK collect data on any other user-generated content? | Yes | Yes | No | No | Advertising or marketing | Surveys from clients might ask such questions. The users decide if they would like to participate. |
 | Does the SDK collect data on any other app activity? | No | N/A | N/A | N/A | N/A | N/A |
 
+
 | **Web browsing** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
 | Does the SDK collect data on the user&#39;s web browsing history? | No | N/A | N/A | N/A | N/A | N/A |
+
 
 | **App info and performance** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
 | Does the SDK collect crash logs? | No | N/A | N/A | N/A | N/A | N/A |
 | Does the SDK collect app diagnostics? | No | N/A | N/A | N/A | N/A | N/A |
 | Does the SDK collect any other app performance data? | No | N/A | N/A | N/A | N/A | N/A |
+
 
 | **Device or other identifiers** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
