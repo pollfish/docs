@@ -244,6 +244,85 @@ Implement `MARewardedAdDelegate` so that you are notified when your ad is ready 
 
 <br/>
 
+Request IDFA Permission (Recommended but optional)
+
+Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given.
+
+To display the App Tracking Transparency authorization request for accessing the IDFA, update your `Info.plist` to add the `NSUserTrackingUsageDescription` key with a custom message describing your usage. Below is an example description text:
+
+```xml
+<key>NSUserTrackingUsageDescription</key>
+<string>This identifier will be used to deliver personalized ads/surveys to you.</string>
+```
+
+To present the authorization request, call `requestTrackingAuthorization`. We recommend waiting for the completion callback prior to initializing.
+
+<span style="text-decoration:underline">Swift</span>
+
+```swift
+#if canImport(AppTrackingTransparency)
+import AppTrackingTransparency
+#endif
+
+...
+
+override func viewDidAppear(_ animated: Bool) {
+    if #available(iOS 14, *) {
+        requestIDFAPermission()
+    } else {
+        createRewardedAd()
+    }
+}
+
+@available(iOS 14, *)
+func requestIDFAPermission() {
+    #if canImport(AppTrackingTransparency)
+    ATTrackingManager.requestTrackingAuthorization { status in
+        DispatchQueue.main.async {
+            self.createRewardedAd()
+        }
+    }
+    #endif
+}
+```
+
+<span style="text-decoration:underline">Objective C</span>
+
+```objc
+#if __has_include(<AppTrackingTransparency/AppTrackingTransparency.h>)
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+#endif
+
+...
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (@available(iOS 14, *)) {
+        [self requestIDFAPermission];
+    } else {
+        [self createRewardedAd];
+    }
+}
+
+- (void)requestIDFAPermission {
+#if __has_include(<AppTrackingTransparency/AppTrackingTransparency.h>)
+    if (@available(iOS 14, *)) {
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self createRewardedAd];
+            });
+        }];
+    } else {
+        // Fallback on earlier versions
+    }
+#endif
+}
+```
+
+<br/>
+
 Request a RewardedAd from AppLovin by calling `load` in the `MARewardedAd` object instance you've created. By default Pollfish Max Adapter will use the configuration as provided on AppLovin's dashboard (step 2). If no configuration is provided or if you want to override any of those params please see step 6.
 
 <br/>

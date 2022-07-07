@@ -218,12 +218,91 @@ Once you’ve completed the above step, you can use Swift seamlessly within the 
 
 <br/>
 
-Initialize the IronSource SDK in your ViewController's `viewDidLoad` method, passing your App Key as provided by the IronSource dashboard.
+Request IDFA Permission (Recommended but optional)
+
+Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given.
+
+To display the App Tracking Transparency authorization request for accessing the IDFA, update your `Info.plist` to add the `NSUserTrackingUsageDescription` key with a custom message describing your usage. Below is an example description text:
+
+```xml
+<key>NSUserTrackingUsageDescription</key>
+<string>This identifier will be used to deliver personalized ads/surveys to you.</string>
+```
+
+To present the authorization request, call `requestTrackingAuthorization`. We recommend waiting for the completion callback prior to initializing.
 
 <span style="text-decoration:underline">Swift</span>
 
 ```swift
-override func viewDidLoad() {
+#if canImport(AppTrackingTransparency)
+import AppTrackingTransparency
+#endif
+
+...
+
+override func viewDidAppear(_ animated: Bool) {
+    if #available(iOS 14, *) {
+        requestIDFAPermission()
+    } else {
+        createAndLoadRewardedAd()
+    }
+}
+
+@available(iOS 14, *)
+func requestIDFAPermission() {
+    #if canImport(AppTrackingTransparency)
+    ATTrackingManager.requestTrackingAuthorization { status in
+        DispatchQueue.main.async {
+            self.createAndLoadRewardedAd()
+        }
+    }
+    #endif
+}
+```
+
+<span style="text-decoration:underline">Objective C</span>
+
+```objc
+#if __has_include(<AppTrackingTransparency/AppTrackingTransparency.h>)
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
+#endif
+
+...
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (@available(iOS 14, *)) {
+        [self requestIDFAPermission];
+    } else {
+        [self createAndLoadRewardedAd];
+    }
+}
+
+- (void)requestIDFAPermission {
+#if __has_include(<AppTrackingTransparency/AppTrackingTransparency.h>)
+    if (@available(iOS 14, *)) {
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self createAndLoadRewardedAd];
+            });
+        }];
+    } else {
+        // Fallback on earlier versions
+    }
+#endif
+}
+```
+
+<br/>
+
+Initialize the IronSource SDK in your ViewController's `viewDidLoad`, `viewWillAppear` methods or after the IDFA permission response, passing your App Key as provided by the IronSource dashboard.
+
+<span style="text-decoration:underline">Swift</span>
+
+```swift
+func createAndLoadRewardedAd() {
     ...
 
     ISIntegrationHelper.validateIntegration()   
@@ -235,7 +314,7 @@ override func viewDidLoad() {
 <span style="text-decoration:underline">Objective C</span>
 
 ```objc
-- (void)viewDidLoad {
+- (void)createAndLoadRewardedAd {
     ...
     
     [ISIntegrationHelper validateIntegration];

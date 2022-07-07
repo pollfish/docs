@@ -248,6 +248,14 @@ You can read more about Google Advertising ID changes [here](https://support.goo
 
 <br/>
 
+**iOS 14+**
+
+Request IDFA Permission (Recommended but optional)
+
+Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given. Our recommendation is that you should ask for IDFA usage permission prior to Pollfish initialization.
+
+<br/>
+
 ## 4. Create `pollfish.Builder` instance
 
 The Pollfish plugin must be initialized with one or two api keys depending on which platforms are you targeting. You can retrieve an API key from Pollfish Dashboard when you [sign up](https://www.pollfish.com/signup/publisher) and create a new app.

@@ -122,7 +122,7 @@ To display the App Tracking Transparency authorization request for accessing the
 
 ```xml
 <key>NSUserTrackingUsageDescription</key>
-<string>This identifier will be used to deliver personalized surveys to you.</string>
+<string>This identifier will be used to deliver personalized ads/surveys to you.</string>
 ```
 
 To present the authorization request, call `requestTrackingAuthorization`. We recommend waiting for the completion callback prior to initializing.

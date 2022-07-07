@@ -222,6 +222,18 @@ dependencies {
 
 <br/>
 
+**Android 12**
+
+Apps updating their target API level to 31 (Android 12) or higher will need to declare a Google Play services normal permission in the AndroidManifest.xml file.
+
+```xml
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+```
+
+You can read more about Google Advertising ID changes [here](https://support.google.com/googleplay/android-developer/answer/6048248).
+
+<br/>
+
 ## 3. Add Pollfish Max Adapter to your project
 
 Import Pollfish Max Adapter **.aar** file to your project libraries  
