@@ -1156,7 +1156,11 @@ In our efforts to include publishers and be as transparent as possible we provid
 If you know attributes about a user like gender, age and others, you can provide them during initialization as described in section 5.3.1.8 and skip or shorten this way, Pollfish Demographic surveys.
 
 <br/>
-
+	 
+### 6.1 Complete the Google Play Data Safety questionnaire
+<br/>
+When you publish your app your will be asked to complete the Google Play Data Safety questionnaire. For any info relevant to data collected and used from the Pollfish SDK please advice the following [link]([https://pollfish.com/login/publisher](https://www.pollfish.com/terms/google-play-data-safety-questionnaire)). 
+<br/>	 
 ## 7. Request your account to get verified from Pollfish Team
 
 After your app is published on an app store you should request your account to get verified from your Pollfish Dashboard.
