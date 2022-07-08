@@ -1,4 +1,8 @@
 <div class="changelog" data-version="6.2.4.0">
+v6.2.4.1
+
+- Internal fixes
+
 v6.2.4.0
 
 - Initial release
