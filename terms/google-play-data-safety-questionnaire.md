@@ -12,7 +12,7 @@ Pollfish submits all data collected under the https protocol. The data collected
 
 Data listed here do not replace the Pollfish privacy policy. Publishers are requested to read the [Pollfish privacy policy](https://www.pollfish.com/terms/publisher) prior integrating the Pollfish SDK.
 
-## **Data collection survey**
+### **Data collection survey**
 
 | **Question** | **Answer** | **Comments** |
 | --- | --- | --- |
@@ -20,11 +20,11 @@ Data listed here do not replace the Pollfish privacy policy. Publishers are requ
 | Is all of the data collected by the SDK encrypted in transit? | Yes | All submitted data are transmitted under the https protocol |
 | Does the SDK provide a way for users to request that their data is deleted? | Yes | Users can reach out at any time at [support@pollfish.com](mailto:support@pollfish.com) with their requests or reset their Ad ID on their own |
 
-## **Data handling**
+### **Data handling**
 
 Android Advertising ID collection happens automatically through the SDK if the relevant consent is provided by the user and the publisher has included the relevant permission in the Manifest.This Ad ID is used later on to target users with relevant surveys. The Ad ID can be reset or deleted at any time from the relevant Settings area on the device. If access to the Ad ID is limited, the SDK creates a one-off session id to be able to target users with non-personalised surveys.
 
-## **Data types**
+### **Data types**
 
 | **Location** | **Collected** | **Shared** | **Ephemeral** | **Required** | **Purpose** | **Comments** |
 | --- | --- | --- | --- | --- | --- | --- |
