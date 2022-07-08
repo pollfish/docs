@@ -1158,8 +1158,8 @@ If you know attributes about a user like gender, age and others, you can provide
 <br/>
 	 
 ### 6.1 Complete the Google Play Data Safety questionnaire
-<br/>
-When you publish your app your will be asked to complete the Google Play Data Safety questionnaire. For any info relevant to data collected and used from the Pollfish SDK please advice the following [link]([https://pollfish.com/login/publisher](https://www.pollfish.com/terms/google-play-data-safety-questionnaire)). 
+
+When you publish your app your will be asked to complete the Google Play Data Safety questionnaire. For any info relevant to data collected and used from the Pollfish SDK please advice the following [link](https://www.pollfish.com/terms/google-play-data-safety-questionnaire). 
 <br/>	 
 ## 7. Request your account to get verified from Pollfish Team
 
