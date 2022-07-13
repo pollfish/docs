@@ -608,6 +608,17 @@ In Market Research monetization users can get screened out within the survey sin
 
 <br/>
 
+## 8. Proguard
+
+If you use proguard with your app, please insert the following lines in your proguard configuration file:  
+
+```java
+-dontwarn com.pollfish.**
+-keep class com.pollfish.** { *; }
+```
+
+<br/>
+
 # More info
 
 You can read more info on how the Pollfish SDKs work or how to get started with Google AdMob at the following links:
