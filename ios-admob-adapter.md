@@ -1,94 +1,98 @@
-<div class="changelog" data-version="6.2.5.0">
+<div class="changelog" data-version="6.2.7.0">
+v6.2.7.0
+
+- Updating with Pollfish iOS SDK v6.2.7
+
 v6.2.5.0
 
-- Updated with Pollfish iOS SDK v6.2.5
+- Updating with Pollfish iOS SDK v6.2.5
 
 v6.2.4.0
 
-- Updated with Pollfish iOS SDK v6.2.4
+- Updating with Pollfish iOS SDK v6.2.4
 
 v6.2.3.0
 
-- Updated with Pollfish iOS SDK v6.2.3
+- Updating with Pollfish iOS SDK v6.2.3
 
 v6.2.2.0
 
-- Updated with Pollfish iOS SDK v6.2.2
+- Updating with Pollfish iOS SDK v6.2.2
 
 v6.2.1.0
 
-- Updated with Pollfish iOS SDK v6.2.1
+- Updating with Pollfish iOS SDK v6.2.1
 
 v6.2.0.0
 
-- Updated with Pollfish iOS SDK v6.2.0
+- Updating with Pollfish iOS SDK v6.2.0
 
 v6.1.0.0
 
-- Updated with Pollfish iOS SDK v6.1.0
+- Updating with Pollfish iOS SDK v6.1.0
 
 v6.0.3.0
 
-- Updated with Pollfish iOS SDK v6.0.3
+- Updating with Pollfish iOS SDK v6.0.3
 
 v6.0.2.0
 
-- Updated with Pollfish iOS SDK v6.0.2
+- Updating with Pollfish iOS SDK v6.0.2
 
 v6.0.1.0
     
-- Updated with Pollfish iOS SDK 6.0.1
+- Updating with Pollfish iOS SDK 6.0.1
     
 v6.0.0.0
     
-- Updated with Pollfish iOS SDK 6.0.0
-- Updated with Google-Mobile-SDK v8.3.0
+- Updating with Pollfish iOS SDK 6.0.0
+- Updating with Google-Mobile-SDK v8.3.0
     
 v.5.5.2.0
 
-- Updated with Pollfish iOS SDK 5.5.2
+- Updating with Pollfish iOS SDK 5.5.2
 
 v.5.5.1.0
 
-- Updated with Pollfish iOS SDK 5.5.1
+- Updating with Pollfish iOS SDK 5.5.1
 
 v.5.5.0.0
 
-- Changed packaging to .xcframework
-- Added support for arm64 devices
+- Changing packaging to .xcframework
+- Adding support for arm64 devices
     
 v.5.4.1.1
 
-- Updated with Pollfish iOS SDK 5.4.1
+- Updating with Pollfish iOS SDK 5.4.1
 
 v.5.3.1.1
 
-- Updated with Pollfish iOS SDK 5.3.1
+- Updating with Pollfish iOS SDK 5.3.1
 
 v.5.2.5.2
 
-- Updated User Not Eligible listener behaviour
+- Updating User Not Eligible listener behaviour
 
 v.5.2.5.1
 
-- Updated with Pollfish iOS SDK 5.2.5
+- Updating with Pollfish iOS SDK 5.2.5
 
 v.5.2.4.1
 
-- Updated with Pollfish iOS SDK 5.2.4
+- Updating with Pollfish iOS SDK 5.2.4
 
 v.5.2.3.1
 
-- Updated with Pollfish iOS SDK 5.2.3
-- Updated User Rejection listener behaviour
+- Updating with Pollfish iOS SDK 5.2.3
+- Updating User Rejection listener behaviour
 
 v.5.2.2.1
 
-- Updated with Pollfish iOS SDK 5.2.2
+- Updating with Pollfish iOS SDK 5.2.2
 
 v.5.2.1.1
 
-- Updated with Pollfish iOS SDK 5.2.1
+- Updating with Pollfish iOS SDK 5.2.1
 
 v.5.1.0.2
 

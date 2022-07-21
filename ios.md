@@ -1,4 +1,12 @@
-<div class="changelog" data-version="6.2.5">
+<div class="changelog" data-version="6.2.7">
+v6.2.7
+
+- Internal fixes
+
+v6.2.6
+
+- Internal fixes
+
 v6.2.5
 
 - Fixing issue with accessing Pollfish instance from a background thread

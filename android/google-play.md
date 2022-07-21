@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.4">
+<div class="changelog" data-version="6.2.5">
+v6.2.5
+
+- Fixing crashes when the back button is pressed
+
 v6.2.4
 
 - Fixing issue with immersive mode in Android APIs lower than 30

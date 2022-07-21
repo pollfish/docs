@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.5.1">
+<div class="changelog" data-version="6.2.7.0">
+v6.2.7.0
+
+- Updating with Pollfish iOS SDK v6.2.7
+
 v6.2.5.1
 
 - Fixing issue with missing armv7 architecture
