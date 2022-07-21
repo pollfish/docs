@@ -62,7 +62,7 @@ Scroll down to the bottom of the list and click on **Click here to add a Custom 
 
 Next you will be prompted to create a **New Custom Network**
 
-On the **Network Type** field select **SDK**. Set **Pollfish** as the value of **Custom Network Name** field. Set the **iOS Adapter Class Name** with the value **PollfishMaxAdapter**. Optionally, you can fill **Android/Fire OS Adapter Class Name** with **com.applovin.mediation.adapters.PollfishMediationAdapter**.
+On the **Network Type** field select **SDK**. Set **Pollfish** as the value of **Custom Network Name** field. Set the **iOS Adapter Class Name** with the value **PollfishMediationAdapter**. Optionally, you can fill **Android/Fire OS Adapter Class Name** with **com.applovin.mediation.adapters.PollfishMediationAdapter**.
 
 <br/>
 
