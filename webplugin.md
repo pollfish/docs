@@ -80,17 +80,21 @@ Login at [www.pollfish.com](//www.pollfish.com) and add a new app at Pollfish pa
     
     **Expected Parameters**: 
     
-    | Name             | Value Type
-    |:------------------|:--------------
-    | **gender**        | Number
-    | **year_of_birth** | Number
-    | **marital_status**| Number
-    | **parental**      | Number
-    | **education**     | Number
-    | **employment**    | Number
-    | **career**        | Number
-    | **race**          | Number
-    | **income**        | Number
+    | Name                              | Value Type
+    |:----------------------------------|:--------------
+    | **gender**                        | Number
+    | **year_of_birth**                 | Number
+    | **marital_status**                | Number
+    | **parental**                      | Number
+    | **education**                     | Number
+    | **employment**                    | Number
+    | **career**                        | Number
+    | **race**                          | Number
+    | **income**                        | Number
+    | **organization_role**             | Number
+    | **number_of_employees**           | Number
+    | **spoken_languages**              | Array of Numbers
+    | **postal_data**                   | String
 
     **Note**: You can add any number of the above demographics you know. We will ask the respondent the rest if anything is missing
     
@@ -141,6 +145,10 @@ var pollfishConfig = {
     career: 0,
     race: 0,
     income: 0,
+    organization_role: 0,
+    number_of_employees: 0,
+    spoken_languages: [0],
+    postal_data: "10017|US",
   },
 };
 
