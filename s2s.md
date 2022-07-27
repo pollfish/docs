@@ -39,7 +39,7 @@ http://www.example.com/pollfish/CPMdQdgAzHoL6360iXY5qLp?cpa=30&debug=true
 Every user can complete only once a specific survey. You can avoid dublicates in survey completion callbacks by appending and listening to **tx_id** param. This id is calculated by user id and survey id and uniquely identifies a survey completion by a user. A user should not complete the same survey twice. Having that said you should never receive callbacks with the same **tx_id** param. Use this param to avoid crediting a user more than once for the same survey.   
 
 
-| **Note:** You should always check debug param when verifying a callback. Please ignore debug=true callbacks when rewarding your users in a live app since this can be an indication of a tampered app.
+<span style="color:red">| <b>Note:</b> You should always check debug param when verifying a callback. Please ignore debug=true callbacks when rewarding your users in a live app since this can be an indication of a tampered app.</span>
 
 ### 4. Passing and retrieving your own unique id of a user through the callback
 
