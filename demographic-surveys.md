@@ -216,6 +216,7 @@ Below you can find the list of demographic info you can send over along with the
 |  | PASHTO | 41
 |  | ESTONIAN | 42
 |  | UZBEK | 43
+|  | ALBANIAN | 47
 
 | Key | Description | Value |
 | --- | --- | --- |
