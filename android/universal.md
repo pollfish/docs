@@ -153,7 +153,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.2.4'
+implementation 'com.pollfish:pollfish-universal:6.2.5'
 ```
 
 <tr>
@@ -324,7 +324,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.2.4'
+implementation 'com.pollfish:pollfish-universal:6.2.5'
 ```
 
 <tr>
@@ -529,7 +529,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.2.4'
+    implementation 'com.pollfish:pollfish-universal:6.2.5'
 }
 ```
 

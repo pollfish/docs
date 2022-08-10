@@ -191,7 +191,7 @@ Download Pollfish Android SDK or reference it through maven().
 
 **Download Pollfish Android SDK**
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.2.4.zip) to download the latest version of Pollfish Android SDK 
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.2.5.zip) to download the latest version of Pollfish Android SDK 
 
 **Import Pollfish `.aar` file to your project libraries**
 
@@ -215,7 +215,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish:pollfish-googleplay:6.2.4'
+    implementation 'com.pollfish:pollfish-googleplay:6.2.5'
 }
 ```
 
@@ -235,7 +235,7 @@ Retrieve Pollfish IronSource Adapter through **maven()** with gradle by adding t
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-ironsource:6.2.4.0'
+    implementation 'com.pollfish.mediation:pollfish-ironsource:6.2.5.0'
 }
 ```
 
