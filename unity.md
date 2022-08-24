@@ -1,4 +1,9 @@
-<div class="changelog" data-version="6.1.8">
+<div class="changelog" data-version="6.2.0">
+v6.2.0
+
+- Updated with Pollfish Android SDK v6.2.5 and Pollfish iOS SDK v6.2.7
+- Updated External Dependency Manager to 1.2.171
+
 v6.1.8
 
 - Updated with Pollfish Android SDK v6.2.4 and Pollfish iOS SDK v6.2.5
