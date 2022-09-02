@@ -716,7 +716,7 @@ The syntax for surveyClass values is:
 
 ```
 provider["/"type]
-provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup" | "YunoRouter" | "IpsosMediation" | "ProdegeMR"
+provider: "Pollfish" | "Toluna" | "Cint" | "InnovateMR" | "SaySo" | "Dynata" | "Yuno" | "PureSpectrum" | "Opinionetwork" | "SchlesingerGroup" | "YunoRouter" | "IpsosMediation" | "ProdegeMR" | "MR"
 type: "Basic" | "Playful" | "ThirdParty" | "Demographics" | "Internal"
 
 example: Pollfish/Playful
@@ -747,7 +747,8 @@ The whole set of values currently supported are:
 | **SchlesingerGroup**       | SchlesingerGroup survey
 | **YunoRouter**       | YunoRouter survey 
 | **IpsosMediation**       | IpsosMediation survey 
-| **ProdegeMR**       | ProdegeMR survey 
+| **ProdegeMR**       | ProdegeMR survey  
+| **MR**       | MR survey 
 
 When a new mediation network enters the Pollfish network the appropriate values will be added.
 
