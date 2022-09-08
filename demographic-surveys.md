@@ -217,6 +217,7 @@ Below you can find the list of demographic info you can send over along with the
 |  | ESTONIAN | 42
 |  | UZBEK | 43
 |  | ALBANIAN | 47
+|  | URDU_ROMAN | 48
 
 | Key | Description | Value |
 | --- | --- | --- |
