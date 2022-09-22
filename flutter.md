@@ -199,7 +199,7 @@ No      | Type                  | Description
 5.1.2   | `int`                 | **`indicatorPadding`** <br/> Sets padding from the top or bottom according to Position of the indicator.
 5.1.3   | `bool`                | **`offerwallMode`** <br/> Sets Pollfish to Offerwall mode.
 5.1.4   | `bool`                | **`releaseMode`** <br/> Sets Pollfish SDK to Debug or Release mode.
-5.1.5   | `bool`                | **`rewardMode`** <br/> Initializes Pollfish in reward mode.
+5.1.5   | `bool`                | **`rewardMode`** <br/> Initializes Pollfish in reward mode (skip Pollfish indicator to show a custom prompt).
 5.1.6   | `String`              | **`requestUUID`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks.
 5.1.7   | `Map<String, Object>` | **`userProperties`** <br/> Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys.
 5.1.8   | `RewardInfo`          | **`rewardInfo`** <br/> An object holding information regarding the survey completion reward.

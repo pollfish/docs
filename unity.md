@@ -540,9 +540,8 @@ No     | Description
 5.1.1  | **`.IndicatorPosition(Position)`**                 <br/> Sets the Position where you wish to place the Pollfish indicator.
 5.1.2  | **`.IndicatorPadding(int)`**                       <br/> Sets the padding from top or bottom depending on the position of the indicator.
 5.1.3  | **`.ReleaseMode(bool)`**                           <br/> Sets Pollfish SDK to Debug or Release Mode
-5.1.4  | **`.RewardMode(bool)`**                            <br/> Initializes in reward mode (skip Pollfish 
+5.1.4  | **`.RewardMode(bool)`**                            <br/> Initializes in reward mode (skip Pollfish indicator to show a custom prompt)
 5.1.5  | **`.OfferwallMode(bool)`**                         <br/> Sets Pollfish SDK to offerwall mode
-indicator to show a custom prompt)
 5.1.6  | **`.RequestUUID(string)`**                         <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
 5.1.7  | **`.UserProperties(Dictionary<string, string>)`**  <br/> Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys.
 5.1.8  | **`.ClickId(string)`**                             <br/> A pass throught param that will be passed back through server-to-server callback
