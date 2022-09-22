@@ -1,4 +1,9 @@
-<div class="changelog" data-version="6.2.0">
+<div class="changelog" data-version="6.3.0">
+v6.3.0
+
+- Adding a new configuration option to define a `userId` during initialization
+- Fixing issue with missing `PBXProject` references on Windows 
+
 v6.2.0
 
 - Updated with Pollfish Android SDK v6.2.5 and Pollfish iOS SDK v6.2.7
@@ -231,7 +236,7 @@ Pollfish is a mobile monetization platform delivering surveys instead of ads thr
 Pollfish Unity Plugin works with:
 
 * Android SDK 21 or higher using Google Play Services
-* iOS 9.0 or higher
+* iOS 11.0 or higher
 * Unity 2019 or higher
 * CocoaPods version 1.10.0 or higher
 
@@ -443,7 +448,7 @@ Imported files will be listed in the following directories:
 > 
 > For example if a class from `com.google.android.gms` package is duplicated:
 >```groovy
->implementation 'com.pollfish:pollfish-googleplay:6.2.4' {
+>implementation 'com.pollfish:pollfish-googleplay:6.3.0' {
 >   exclude group: 'com.google.android.gms'
 >}
 >```
@@ -456,7 +461,7 @@ Imported files will be listed in the following directories:
 >```groovy  
 >dependencies {
 >  ...
->  implementation 'com.pollfish:pollfish-googleplay:6.2.4'
+>  implementation 'com.pollfish:pollfish-googleplay:6.3.0'
 >}
 >```
 >
@@ -522,23 +527,32 @@ Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
 
 ### 4.1. Configure Pollfish behaviour (Optional)
 
-You can set several params to control the behaviour of Pollfish survey panel within your app with the use of the `Pollfish.Params` instance. Below you can see all the available options. Apart from the constructor all the other methods are optional.
-
-
-### 4.1.1. **`Constructor - Pollfish.Params(bool apiKey)`**
-
-Your API Key. This is the key that allows you to use Pollfish in your app. You can find it on Pollfish website after your registration, when you create an app in “My apps” section in the panel.  
-
-```csharp
-Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
-  .RewardMode(rewardMode);
-```
-
-`Pollfish.Params` can be configured with the following methods:
+You can set several params to control the behaviour of Pollfish survey panel within your app with the use of the `Pollfish.Params` instance. Below you can see all the available options.
 
 <br/>
 
-### 4.1.2. **`IndicatorPosition(Position indicatorPosition)`**
+> **Note:** All the params are optional, except the **`ReleaseMode`** setting that turns your integration in release mode prior publishing to the Google Play or App Store.
+
+<br/>
+
+No     | Description
+-------|------------
+5.1.1  | **`.IndicatorPosition(Position)`**                 <br/> Sets the Position where you wish to place the Pollfish indicator.
+5.1.2  | **`.IndicatorPadding(int)`**                       <br/> Sets the padding from top or bottom depending on the position of the indicator.
+5.1.3  | **`.ReleaseMode(bool)`**                           <br/> Sets Pollfish SDK to Debug or Release Mode
+5.1.4  | **`.RewardMode(bool)`**                            <br/> Initializes in reward mode (skip Pollfish 
+5.1.5  | **`.OfferwallMode(bool)`**                         <br/> Sets Pollfish SDK to offerwall mode
+indicator to show a custom prompt)
+5.1.6  | **`.RequestUUID(string)`**                         <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+5.1.7  | **`.UserProperties(Dictionary<string, string>)`**  <br/> Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys.
+5.1.8  | **`.ClickId(string)`**                             <br/> A pass throught param that will be passed back through server-to-server callback
+5.1.9  | **`.UserId(string)`**                              <br/> A unique id ised to identify a user
+5.1.10 | **`.RewardInfo(RewardInfo)`**                      <br/> An object holding information regarding the survey completion reward.
+5.1.11 | **`.Signature(string)`**                           <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object
+
+<br/>
+
+### 4.1.1. **`IndicatorPosition(Position indicatorPosition)`**
 
 Sets the Position where you wish to place Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) 
 
@@ -580,7 +594,7 @@ Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
 
 <br/>
 
-### 4.1.3. **`.IndicatorPadding(int indicatorPadding)`**
+### 4.1.2. **`.IndicatorPadding(int)`**
 
 The padding from the top or bottom of the screen according to position of the indicator (small icon) specified above (`.TOP_LEFT` is the default value)
 
@@ -593,7 +607,7 @@ Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
 
 <br/>
 
-### 4.1.4. **`.ReleaseMode(bool releaseMode)`** 
+### 4.1.3. **`.ReleaseMode(bool)`** 
 
 Sets Pollfish SDK to Developer or Release mode. If you do not set this param it will turn the SDK to Developer mode by default in order for the publisher to be able to test the survey flow.
 
@@ -611,9 +625,9 @@ Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
 
 <br/>
 
-### 4.1.5. **`.RewardMode(bool rewardMode)`**
+### 4.1.4. **`.RewardMode(bool)`**
 
-Initializes Pollfish in reward mode. This means that Pollfish Indicator (section 5.3.1.1) will not be shown and Pollfish survey panel will be automatically hidden until the publisher explicitly calls Pollfish `show` function (The publisher should wait for the Pollfish Survey Received Callback). This behaviour enables the option for the publishers, to show a custom prompt to incentivize the users to participate in a survey.
+Initializes Pollfish in reward mode. This means that Pollfish Indicator (section 4.1.1) will not be shown and Pollfish survey panel will be automatically hidden until the publisher explicitly calls Pollfish `show` function (The publisher should wait for the Pollfish Survey Received Callback). This behaviour enables the option for the publishers, to show a custom prompt to incentivize the users to participate in a survey.
 
 > **Note:** If not set, the default value is false and Pollfish indicator is shown.
 
@@ -628,7 +642,7 @@ Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
 
 <br/>
 
-### 4.1.6. **`.OfferwallMode(bool offerwallMode)`**
+### 4.1.5. **`.OfferwallMode(bool)`**
 
 Enables Pollfish in offerwall mode. If not specified Pollfish shows one survey at a time.
 
@@ -643,7 +657,7 @@ Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
 
 <br/>
 
-### 4.1.7. **`.RequestUUID(string requestUUID)`**
+### 4.1.6. **`.RequestUUID(string)`**
 
 Sets a unique id to identify a user or a request and be passed back to the publisher through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
 
@@ -658,7 +672,7 @@ Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
 
 <br/>
 
-### 4.1.8. **`.UserProperties(Dictionary<string, string> userProperties)`**
+### 4.1.7. **`.UserProperties(Dictionary<string, string>)`**
 
 Passing user attributes to skip or shorten Pollfish Demographic surveys.
 
@@ -690,7 +704,7 @@ Pollfish.Params pollfishParams = new Pollfish.Params()
 
 <br/>
 
-### 4.1.9. **`.ClickId(String clickId)`**
+### 4.1.8. **`.ClickId(string)`**
 
 A pass through parameter that will be returned back to the publisher through server-to-server callbacks as specified [here](https://www.pollfish.com/docs/s2s)
 
@@ -703,9 +717,28 @@ Pollfish.Params pollfishParams = new Pollfish.Params()
 
 <br/>
 
-### 4.1.10. **`.RewardInfo(RewardInfo rewardInfo)`**
+### 4.1.9. **`.UserId(string)`**
+
+A unique id used to identify the user
+
+Setting the `userId` will override the default behaviour and use that instead of the Advertising Id, of the corresponding platform, in order to identify a user
+
+<span style="color: red">You can pass the id of a user as identified on your system. Pollfish will use this id to identify the user across sessions instead of an ad id/idfa as advised by the stores. You are solely responsible for aligning with store regulations by providing this id and getting relevant consent by the user when necessary. Pollfish takes no responsibility for the usage of this id. In any request from your users on resetting/deleting this id and/or profile created, you should be solely liable for those requests.</span>
+
+<br/>
+
+```csharp
+Pollfish.Params pollfishParams = new Pollfish.Params()
+  .UserId("USER_ID");
+```
+
+<br/>
+
+### 4.1.10. **`.RewardInfo(RewardInfo)`**
 
 An object passing information during initialization regarding the reward settings, overriding the values as speciefied on the Publisher's Dashboard
+
+We strogly advise that you should use the Publisher Dashboard to provide Reward Info if your use case does not require a dynamic value.
 
 <br/>
 
@@ -727,19 +760,53 @@ ParaPollfish.Params pollfishParams = new Pollfish.Params()
 
 <br/>
 
-### 4.1.11. **`.Signature(String signature)`**
+> **Warning:** If a `rewardInfo` is set, please make sure to calculate and set the correct signature (4.1.11). By skipping this step you will be unable to receive surveys.
 
-An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as provided in the `RewardInfo` object (4.1.10)
+<br/>
 
-This parameter can be used optionally to prevent tampering around reward conversion, if passed during initialisation. The platform supports url validation by requiring a hash of the `rewardConversion`, `rewardName`, and `clickId`. Failure to pass validation will result in no surveys return and firing **`PollfishSurveyNotAvailable`** callback.
+### 4.1.11. **`.Signature(string)`**
 
-In order to generate the `signature` field you should sign the combination of `${rewardConversion}${rewardName}${clickId}` parameters using the HMAC-SHA1 algorithm and your account's secret_key that can be retrieved from the Account Information section on your Pollfish Dashboard.
+An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as provided in the `RewardInfo` object (4.1.10). If `rewardConversion` and `rewardName` are defined, `signature` is required to be calculated and set as well.
 
-Please keep in mind if your `rewardConversion` is a whole number, you have to calculate the signature useing the floating point value with 1 decimal point.
+This parameter can be used to prevent tampering around reward conversion, if passed during initialisation. The platform supports url validation by requiring a hash of the `rewardConversion`, `rewardName`, and `clickId`. Failure to pass validation will result in no surveys return and firing **`PollfishSurveyNotAvailable`** callback.
+
+In order to generate the `signature` field you should sign the combination of `$"{rewardConversion}{rewardName}{clickId}"` parameters using the HMAC-SHA1 algorithm and your account's secret_key that can be retrieved from the Account Information section on your Pollfish Dashboard.
+
+> **Note:** Although `rewardConversion` and `rewardName` are mandatory for the hashing to work, `clickId` parameter is optional and you should add them for extra security.
+
+<br/>
+
+> **Note:** Please keep in mind if your `rewardConversion` is a whole number, you have to calculate the signature useing the floating point value with 1 decimal point.
+
+<br/>
 
 ```csharp
 Pollfish.Params pollfishParams = new Pollfish.Params()
   .Signature("SIGNATURE");
+```
+
+<br/>
+
+Sample C# (.NET 6) code to generate valid signatures. 
+
+This method should work on lower .NET versions as well if you use string concatenation instead of interpolation.
+
+
+```csharp
+using System.Text;
+using System.Security.Cryptography;
+
+string key = "ACCOUNT_SECRET_KEY";
+string signData = $"{rewardConversion}{rewardName}{clickId}";
+		
+var encoding = new System.Text.UTF8Encoding();
+		
+byte[] messageBytes = encoding.GetBytes(signData);
+byte[] keyBytes = encoding.GetBytes(key);
+		
+byte[] hashMessage = new HMACSHA1(keyBytes).ComputeHash(messageBytes);
+		
+string signature = Convert.ToBase64String(hashMessage);
 ```
 
 <br/>

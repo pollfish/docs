@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.7">
+<div class="changelog" data-version="6.3.0">
+v6.3.0
+
+- Adding a new configuration option to define a `userId` during initialization
+
 v6.2.7
 
 - Internal fixes
@@ -56,7 +60,7 @@ v6.0.0
 # Prerequisites
 
 * Use XCode 12 or higher
-* Target iOS 9.0 or higher
+* Target iOS 11.0 or higher
 * Create [Pollfish Developer Account](https://pollfish.com/login/publisher) and register an App
 
 > **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user (each time the user will be considered a new one with an auto-generated user id - demographics will be asked each time). In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
@@ -114,7 +118,6 @@ The project will appear at the top of the Link Binary With Libraries section and
 Add a Podfile with Pollfish framework as a pod reference:
 
 ```ruby
-platform :ios, '9.0'
 pod 'Pollfish'
 ```
 
@@ -165,7 +168,9 @@ func requestIDFA() {
 
 > **Note:** This step should be preferably followed when targeting iOS 14+. If you sould like to see an example in code visit this [repository](https://github.com/pollfish/ios-sdk-pollfish)
 
-> **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
+> **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given.
+
+> **Note:** There is also the option to define a userId during initialization. Read more on section 6.2.11
 
 <br/>
 
@@ -255,7 +260,7 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 
 <br/>
 
-> **Note:** All the params are optional, except the **`releaseMode`** setting that turns your integration in release mode prior publishing to the AppStore 
+> **Note:** All the params are optional, except the **`releaseMode`** setting that turns your integration in release mode prior publishing to the App Store.
 
 <br/>
 
@@ -269,10 +274,11 @@ No | Description
 6.2.6 | **`.rewardMode(Bool)`** <br/> Initializes Pollfish in reward mode
 6.2.7 | **`.offerwallMode(Bool)`** <br/> Sets Pollfish to offerwall mode
 6.2.8 | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
-6.2.9 | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward. If set, `signature` must be calculated in order to receive surveys. See [here](https://www.pollfish.com/docs/api-documentation) in section **`Notes for sig query parameter`**
+6.2.9 | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward.
 6.2.10| **`.clickId(String)`** <br/> A pass throught param that will be passed back through server-to-server callback
-6.2.11| **`.singnature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
-6.2.12| **`.monitorOrientationChanges(Bool)`** <br/> Toggle SDK reinitalization when device orientation changes
+6.3.11| **`.userId(String)`** <br/> A unique id used to identify a user
+6.2.12| **`.singnature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
+6.2.13| **`.monitorOrientationChanges(Bool)`** <br/> Toggle SDK reinitalization when device orientation changes
 
 <br/>
 
@@ -578,12 +584,14 @@ let pollfishParams = PollfishParams("API_KEY")
 
 An object holding information regarding the reward settings, overriding the values as speciefied in the Publisher's Dashboard
 
+We strogly advise that you should use the Publisher Dashboard to provide Reward Info if your use case does not require a dynamic value.
+
 <br/>
 
 ```swift
 struct RewardInfo {
     let rewardName: String
-    let rewardConversion: Float
+    let rewardConversion: Double
 }
 ```
 
@@ -609,13 +617,15 @@ PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
 
 ```swift
 let rewardInfo = RewardInfo(rewardName: "Diamonds",
-                            rewardConversion: 1.1f)
+                            rewardConversion: 1.1)
 
 let pollfishParams = PollfishParams("API_KEY")
     .rewardInfo(rewardInfo)
 ```
 
-> **Note:** It's preferable to handle the reward settings through the Publisher's Dashboard
+<br/>
+
+> **Warning:** If a `rewardInfo` is set, please make sure to calculate and set the correct signature (6.2.12). By skipping this step you will be unable to receive surveys.
 
 <br/>
 
@@ -642,9 +652,36 @@ let pollfishParams = PollfishParams("API_KEY")
 
 <br/>
 
-#### **6.2.11 `signature(String)`**
+#### **6.2.11 `userId(String)`**
 
-An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as passed through the `RewardInfo` object (5.2.10)
+An optional id used to identify a user
+
+Setting the `userId` will override the default behaviour and use that instead of the IDFA in order to identify a user
+
+<span style="color: red">You can pass the id of a user as identified on your system. Pollfish will use this id to identify the user across sessions instead of an ad id/idfa as advised by the stores. You are solely responsible for aligning with store regulations by providing this id and getting relevant consent by the user when necessary. Pollfish takes no responsibility for the usage of this id. In any request from your users on resetting/deleting this id and/or profile created, you should be solely liable for those requests.</span>
+
+<br/>
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params userId:@"USER_ID"];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+
+```swift
+let pollfishParams = PollfishParams("API_KEY")
+    .userId("USER_ID")
+```
+
+<br/>
+
+#### **6.2.12 `signature(String)`**
+
+An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as passed through the `RewardInfo` object (6.2.9)
 
 This parameter can be used optionally to prevent tampering around reward conversion, if passed during initialisation. The platform supports url validation by requiring a hash of the `rewardConversion`, `rewardName`, and `clickId`. Failure to pass validation will result in firing **`PollfishSurveyNotAvailable`** callback.
 
@@ -652,7 +689,13 @@ In order to generate the `signature` field you should sign the combination of `r
 
 The `signature` value should then be encoded using Base64.
 
-> **Note:** Although `rewardConversion` is mandatory for the hashing to work, the `rewardName` and `clickId` parameters are optional and you should add them for extra security.
+<br/>
+
+> **Note:** Although `rewardConversion` and `rewardName` are mandatory for the hashing to work, `clickId` parameter is optional and you should add them for extra security.
+
+<br/>
+
+> **Note:** Please keep in mind if your `rewardConversion` is a whole number, you have to calculate the signature useing the floating point value with 1 decimal point.
 
 <br/>
 
@@ -673,7 +716,44 @@ let pollfishParams = PollfishParams("API_KEY")
 
 <br/>
 
-#### **6.2.12 `monitorOrientationChanges(Bool)`**
+Sample code to generate valid signatures
+
+<span style="text-decoration: underline">Swift:</span>
+
+```swift
+import CommonCrypto
+
+let cKey = "<ACCOUNT_SECRET_KEY>"
+let data = "<REWARD_CONVERSION><REWARD_NAME><CLICK_ID>"
+
+var digest = [UInt8](repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
+CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1), key, key.count, self, self.count, &digest)
+let data = Data(bytes: digest, count: Int(CC_SHA1_DIGEST_LENGTH))
+let signature = data.base64EncodedString()
+```
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```objc
+#include <CommonCrypto/CommonDigest.h>
+#include <CommonCrypto/CommonHMAC.h>
+
+const char *cKey = [@"<ACCOUNT_SECRET_KEY>" cStringUsingEncoding:NSUTF8StringEncoding];
+const char *cData = [[NSString stringWithFormat:@"%@%@%@", @"<REWARD_CONVERSION>", @"<REWARD_NAME>", @"<CLICK_ID>"] cStringUsingEncoding:NSUTF8StringEncoding];
+
+unsigned char cHMAC[CC_SHA1_DIGEST_LENGTH];
+
+CCHmac(kCCHmacAlgSHA1, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+
+NSData *HMAC = [[NSData alloc] initWithBytes: cHMAC
+                                        length: sizeof(cHMAC)];
+
+NSString *signature = [HMAC base64EncodedStringWithOptions:0];
+```
+
+<br/>
+
+#### **6.2.13 `monitorOrientationChanges(Bool)`**
 
 An optional parameter used to toggle SDK reinitalization when device orientation changes. By default the SDK initializes when a device orientation changes.
 

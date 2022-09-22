@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.7.0">
+<div class="changelog" data-version="6.3.0.0">
+v6.3.0.0
+
+- Updating with Pollfish iOS SDK v6.3.0
+
 v6.2.7.0
 
 - Updating with Pollfish iOS SDK v6.2.7
@@ -17,7 +21,7 @@ This guide is for publishers looking to use ironSource LevelPlay to load and sho
 
 - [Pollfish Developer Account](https://www.pollfish.com/dashboard/dev/)
 - [IronSource Developer Account](https://platform.ironsrc.com/partners)
-- iOS 10.0 or later
+- iOS 11.0 or later
 - XCode 12
 
 > **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
@@ -176,9 +180,6 @@ Run pod install on the command line to install PollfishIronSourceAdapter pod.
 ## Important step Objective-C based projects
 
 For Objective-C based projects you will need to create an empty Swift file including Foundation framework and a bridging header file named `YourProjectName-Bridging-Header.h`. Skipping this step will result to compilation failure.
-
-<!-- Add link to objc example project -->
-You can see an example [here]()
 
 <br/>
 

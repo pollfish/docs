@@ -1,7 +1,11 @@
-<div class="changelog" data-version="6.2.5.0">
+<div class="changelog" data-version="6.3.0.0">
+v6.3.0.0
+
+- Updated with Pollfish Android SDK v6.3.0
+
 v6.2.5.0
 
-- Update with Pollfish Android SDK v6.2.5
+- Updated with Pollfish Android SDK v6.2.5
 
 v6.2.4.0
 
@@ -220,7 +224,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish:pollfish-googleplay:6.2.5'
+    implementation 'com.pollfish:pollfish-googleplay:6.3.0'
 }
 ```
 
@@ -252,7 +256,7 @@ Retrieve Pollfish Max Adapter through **maven()** with gradle by adding the foll
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-max:6.2.5.0'
+    implementation 'com.pollfish.mediation:pollfish-max:6.3.0.0'
 }
 ```
 

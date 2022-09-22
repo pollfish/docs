@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.7.0">
+<div class="changelog" data-version="6.3.0.0">
+v6.3.0.0
+
+- Updating with Pollfish iOS SDK v6.3.0
+
 v6.2.7.0
 
 - Updating with Pollfish iOS SDK v6.2.7
@@ -106,7 +110,7 @@ This guide is for publishers looking to use AdMob mediation to load and show Rew
 
 * [Pollfish Developer Account](https://www.pollfish.com/dashboard/dev/)
 * [AdMob Account](https://apps.admob.com/)
-* iOS 9.0 or later
+* iOS 11.0 or later
 
 <br/>
 

@@ -10,7 +10,7 @@ Pollfish Flutter Plugin can be found on Dart Packages [website](https://pub.dart
 # Prerequisites
 
 *	Android SDK 21 or higher using Google Play Services
-*	iOS version 9.0 or higher
+*	iOS version 11.0 or higher
 * Flutter version 1.20.0 or higher
 * Dart SDK version 2.12.0 or higher
 * CocoaPods version 1.10.0 or higher
@@ -117,7 +117,7 @@ Add this to your package's pubspec.yaml file:
 ```yaml
 dependencies:
   ...
-  flutter_pollfish: ^4.0.8
+  flutter_pollfish: ^4.1.0
 ```
 
 Execute the following command
@@ -185,36 +185,311 @@ FlutterPollfish.instance.init(androidApiKey: null, iOSApiKey: 'IOS_API_KEY', rew
 
 ### 5.1 Configure Pollfish behaviour (Optional)
 
-During initialization you can pass different optional params:
-
-1. **`indicatorPosition`**: Position - `Position.topLeft`, `.topRight`, `.middleLeft`, `.middleRight`, `.bottomLeft`, `.bottomRight` (defines the side of the Pollfish panel, and position of Pollfish indicator)
-2. **`indicatorPadding`**: int - Sets padding from the top or bottom according to Position of the indicator
-3. **`releaseMode`**: bool - Sets Pollfish SDK to Debug or Release mode. Use Developer mode to test your implementation with demo surveys
-4. **`rewardMode`**: bool - Initializes Pollfish in reward mode (used when implementing a Rewarded approach)
-5. **`requestUUID`**: String - Sets a unique id to identify a user. This param will be passed back through server-to-server callbacks
-5. **`offerwallMode`**: bool - Sets Pollfish to Offerwall mode
-6. **`userProperties`**: Map<String, Object> - Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys. You can see a detailed list of the user attributes you can pass with their keys at the following [link](https://www.pollfish.com/docs/demographic-surveys)
-7. **`clickId`**: String - A pass throught param that will be passed back through server-to-server callback
-8. **`signature`**: String - An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
-9. **`rewardInfo`**: RewardInfo - An object holding information regarding the survey completion reward. If set, `signature` must be calculated in order to receive surveys. See [here](https://www.pollfish.com/docs/api-documentation) in section **`Notes for sig query parameter`**
+You can set several params to control the behaviour of Pollfish survey panel within your app with the use of the various optional arguments of the initialization function. Below you can see all the available options.
 
 <br/>
 
-
-> ### Debug vs Release Mode
->
-> You can use Pollfish either in Debug or in Release mode. 
->  
-> * **Debug mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).
-> * **Release mode** is the mode to be used for a released app (start receiving paid surveys).
-> 
-> **Note:** Be careful to set the `releaseMode` parameter to `true` when you release your app in a relevant app store!!
+> **Note:** All the params are optional, except the **`releaseMode`** setting that turns your integration in release mode prior publishing to the Google Play or App Store.
 
 <br/>
 
-> ### Reward Mode 
-> 
-> Setting the `rewardMode` to `false` during initialization enables controlling the behavior of Pollfish in an app from the Pollfish panel. Enabling reward mode ignores Pollfish behavior from Pollfish panel. It always skips showing Pollfish indicator (small button) and always force open Pollfish view to app users. This method is usually used when app developers want to somehow incentivize their users before completing surveys to increase completion rates.
+No      | Type                  | Description
+--------|-----------------------|------------
+5.1.1   | `Position`            | **`indicatorPosition`** <br/> Sets the Position where you wish to place the Pollfish indicator.
+5.1.2   | `int`                 | **`indicatorPadding`** <br/> Sets padding from the top or bottom according to Position of the indicator.
+5.1.3   | `bool`                | **`offerwallMode`** <br/> Sets Pollfish to Offerwall mode.
+5.1.4   | `bool`                | **`releaseMode`** <br/> Sets Pollfish SDK to Debug or Release mode.
+5.1.5   | `bool`                | **`rewardMode`** <br/> Initializes Pollfish in reward mode.
+5.1.6   | `String`              | **`requestUUID`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks.
+5.1.7   | `Map<String, Object>` | **`userProperties`** <br/> Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys.
+5.1.8   | `RewardInfo`          | **`rewardInfo`** <br/> An object holding information regarding the survey completion reward.
+5.1.9   | `String`              | **`clickId`** <br/> A pass throught param that will be passed back through server-to-server callback.
+5.1.10  | `String`              | **`userId`** <br/> A unique id used to identify a user.
+5.1.11  | `String`              | **`signature`** <br/> A parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object.
+
+<br/>
+
+### 5.1.1. **`indicatorPosition`**
+
+Sets the Position where you wish to place Pollfish indicator --> ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) 
+
+<br/>
+
+Also this setting sets from which side of the screen you would like Pollfish survey panel to slide in.
+
+<br/> 
+
+Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
+
+<br/>
+
+<span style="text-decoration: underline">There are six different options available: </span> 
+
+* `Position.topLeft` 
+* `Position.topRight`
+* `Position.middleLeft`
+* `Position.middleRight`
+* `Position.bottomLeft`
+* `Position.bottomRight`
+
+If you do not set explicity a position for Pollfish indicator, it will appear by default at `Position.topLeft`
+
+<br/>
+
+> **Note:** If you would like to skip the Pollfish Indicator please set the `rewardMode` to `true`
+
+<br/>
+
+Below you can see an example on how you can set Pollfish indicator to slide from top right corner of the screen:
+
+<br/>
+
+```dart
+FlutterPollfish.instance.init(
+  ...
+  indicatorPosition: Position.topRight
+);
+```
+
+<br/>
+
+### 4.1.2. **`indicatorPadding`**
+
+The padding from the top or bottom of the screen according to position of the indicator (small icon) specified above (`.topLeft` is the default value)
+
+```dart
+FlutterPollfish.instance.init(
+  ...
+  indicatorPadding: 8
+);
+```
+
+> **Note:** if used in bottom position, padding is calculating from the bottom
+
+<br/>
+
+### 4.1.3. **`offerwallMode`**
+
+Enables Pollfish in offerwall mode. If not specified Pollfish shows one survey at a time.
+
+Below you can see an example on how you can intialize Pollfish in Offerwall mode:
+
+```dart
+FlutterPollfish.instance.init(
+  ...
+  offerwallMode: true
+);
+```
+
+<br/>
+
+### 4.1.4. **`releaseMode`** 
+
+Sets Pollfish SDK to Developer or Release mode. If you do not set this param it will turn the SDK to Developer mode by default in order for the publisher to be able to test the survey flow.
+
+<span style="text-decoration: underline">You can use Pollfish either in Debug or in Release mode.</span>  
+
+*   **Debug/Developer mode** is used to show to the developer how Pollfish will be shown through an app (useful during development and testing).  
+*   **Release mode** is the mode to be used for a released app in AppStore (start receiving paid surveys).  
+
+> **Note:** Be careful to set release mode parameter to true prior releasing to Google Play or AppStore!  
+
+```dart
+FlutterPollfish.instance.init(
+  ...
+  releaseMode: true
+);
+```
+
+<br/>
+
+### 4.1.5. **`rewardMode`**
+
+Initializes Pollfish in reward mode. This means that Pollfish Indicator (section 4.1.1) will not be shown and Pollfish survey panel will be automatically hidden until the publisher explicitly calls Pollfish `show` function (The publisher should wait for the Pollfish Survey Received Callback). This behaviour enables the option for the publishers, to show a custom prompt to incentivize the users to participate in a survey.
+
+> **Note:** If not set, the default value is false and Pollfish indicator is shown.
+
+This mode should be used if you want to incentivize users to participate to surveys. We have a detailed guide on how to implement the rewarded approach [here](https://www.pollfish.com/docs/rewarded-surveys)
+
+> **Note:** Reward mode should be used along with the Survey Received callback so the publisher knows when to prompt the user and call `FlutterPollfish.instance.show();`
+
+<br/>
+
+```dart
+FlutterPollfish.instance.init(
+  ...
+  rewardMode: true
+);
+```
+
+<br/>
+
+### 4.1.6. **`requestUUID`**
+
+Sets a unique id to identify a user or a request and be passed back to the publisher through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
+
+<br/>
+
+Below you can see an example on how you can pass a requestUUID during initialization:
+
+```dart
+FlutterPollfish.instance.init(
+  ...
+  requestUUID: "REQUEST_UUID"
+);
+```
+
+<br/>
+
+### 4.1.7. **`userProperties(Json)`**
+
+Passing user attributes to skip or shorten Pollfish Demographic surveys.
+
+If you know upfront some user attributes like gender, age, education and others you can pass them during initialization in order to shorten or skip entirely Pollfish Demographic surveys and archieve better fill rate and higher priced surveys.
+
+> **Note:** You need to contact Pollfish live support on our website to request your account to be eligible for submitting demographic info through your app, otherwise values submitted will be ignored by default.
+
+> **Note:** You can read more on demographic surveys along with a list with all the available options [here](https://www.pollfish.com/docs/demographic-surveys)
+
+An example of how you can pass user demographics can be found below:
+
+```dart
+final userProperties = {
+	"gender": "1",
+	"year_of_birth": "1974",
+	"marital_status": "2",
+	"parental": "3",
+	"education": "1",
+	"employment": "1",
+	"career": "2",
+	"race": "3",
+	"income": "1",
+};
+
+FlutterPollfish.instance.init(
+  ...
+  userProperties: userProperties
+);
+```
+
+<br/>
+
+### 4.1.8. **`rewardInfo`**
+
+A Json object passing information during initialization regarding the reward settings, overriding the values as speciefied on the Publisher's Dashboard
+
+We strogly advise that you should use the Publisher Dashboard to provide Reward Info if your use case does not require a dynamic value.
+
+<br/>
+
+```dart
+class RewardInfo(rewardName: String, rewardConversion: double)
+```
+
+<br/>
+
+Field                  | Description
+-----------------------|------------
+**`rewardName`**       | Overrides the reward name as specified in the Publisher's Dashboard
+**`rewardConversion`** | Overrides the reward conversion as specified on the Publisher's Dashboard. Conversion is expecting a number matching this function ( ```1 USD = X Points``` ) where ```X``` is a ```Double``` number.
+
+<br/>
+
+```dart
+final rewardInfo = RewardInfo('Dollars', 1.2);
+
+FlutterPollfish.instance.init(
+  ...
+  rewardInfo: rewardInfo
+);
+```
+
+<br/>
+
+> **Warning:** If a `rewardInfo` is set, please make sure to calculate and set the correct signature (4.1.11). By skipping this step you will be unable to receive surveys.
+
+<br/>
+
+### 4.1.9. **`clickId`**
+
+A pass through parameter that will be returned back to the publisher through server-to-server callbacks as specified [here](https://www.pollfish.com/docs/s2s)
+
+<br/>
+
+```dart
+FlutterPollfish.instance.init(
+  ...
+  clickId: clickId
+);
+```
+
+<br/>
+
+### 4.1.10. **`.userId(String)`**
+
+A unique id used to identify the user
+
+Setting the `userId` will override the default behaviour and use that instead of the Advertising Id, of the corresponding platform, in order to identify a user
+
+<span style="color: red">You can pass the id of a user as identified on your system. Pollfish will use this id to identify the user across sessions instead of an ad id/idfa as advised by the stores. You are solely responsible for aligning with store regulations by providing this id and getting relevant consent by the user when necessary. Pollfish takes no responsibility for the usage of this id. In any request from your users on resetting/deleting this id and/or profile created, you should be solely liable for those requests.</span>
+
+<br/>
+
+```dart
+FlutterPollfish.instance.init(
+  ...
+  userId: userId
+);
+```
+
+<br/>
+
+### 4.1.11. **`.signature(String)`**
+
+An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as provided in the `RewardInfo` object (4.1.10). If `rewardConversion` and `rewardName` are defined, `signature` is required to be calculated and set as well.
+
+This parameter can be used to prevent tampering around reward conversion, if passed during initialisation. The platform supports url validation by requiring a hash of the `rewardConversion`, `rewardName`, and `clickId`. Failure to pass validation will result in no surveys return and firing **`PollfishSurveyNotAvailable`** callback.
+
+In order to generate the `signature` field you should sign the combination of `$rewardConversion$rewardName$clickId` parameters using the HMAC-SHA1 algorithm and your account's secret_key that can be retrieved from the Account Information section on your Pollfish Dashboard.
+
+> **Note:** Although `rewardConversion` and `rewardName` are mandatory for the hashing to work, `clickId` parameter is optional and you should add them for extra security.
+
+<br/>
+
+> **Note:** Please keep in mind if your `rewardConversion` is a whole number, you have to calculate the signature useing the floating point value with 1 decimal point.
+
+<br/>
+
+```dart
+FlutterPollfish.instance.init(
+  ...
+  signature: "SIGNATURE"
+);
+```
+
+<br/>
+
+Dart code to generate valid signatures. 
+
+This method requires you to install the [`crypto`](https://pub.dev/packages/crypto) Dart package.
+
+<br/>
+
+```dart
+import 'dart:convert';
+import 'package:crypto/crypto.dart';
+
+double rewardConversion = 1.2;
+String rewardName = '<REWARD_NAME>';
+String clickId = '<CLICK_ID>';
+
+String secret = '<ACCOUNT_SECRET_KEY>';
+String message = '$rewardConversion$rewardName$clickId';
+
+Hmac hmac = new Hmac(sha1, secret.codeUnits);
+Digest digest = hmac.convert(message.codeUnits);
+String base64Mac = base64.encode(digest.bytes);
+```
 
 <br/>
 
@@ -246,6 +521,7 @@ FlutterPollfish.instance.init(
   },
   signature: 'SIGNATURE',
   clickId: 'CLICK_ID',
+  userId: 'USER_ID',
   rewardInfo: RewardInfo('Point', 1.3));
 ```
 

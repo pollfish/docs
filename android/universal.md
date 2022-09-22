@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.5">
+<div class="changelog" data-version="6.3.0">
+v6.3.0
+
+- Adding a new configuration option to define a `userId` during initialization
+
 v6.2.5
 
 - Fixing crashes when the back button is pressed
@@ -153,7 +157,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.2.5'
+implementation 'com.pollfish:pollfish-universal:6.3.0'
 ```
 
 <tr>
@@ -324,7 +328,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.2.5'
+implementation 'com.pollfish:pollfish-universal:6.3.0'
 ```
 
 <tr>
@@ -487,9 +491,13 @@ PollFish.showOnTopOfActivity(activity);
 
 Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
 
+<br/>
+
 ## 2. Add new app on Pollfish Dashboard and copy the given API Key
 
 Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
+
+<br/>
 
 ## 3. Download and import Pollfish .aar file
 
@@ -529,13 +537,14 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.2.5'
+    implementation 'com.pollfish:pollfish-universal:6.3.0'
 }
 ```
 
+<br/>
+
 ## 4. Embed Pollfish in your code
 
-<br/>
 
 ### 4.1 Import Pollfish classes
 
@@ -639,7 +648,7 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 
 <br/>
 
-> **Note:** All the params are optional, except the **`releaseMode`** setting that turns your integration in release mode prior publishing to any Android App store
+> **Note:** All the params are optional, except the **`releaseMode`** setting that turns your integration in release mode prior publishing to any Android App store.
 
 <br/>
 
@@ -653,7 +662,7 @@ No          | Description
 4.3.1.6     | **`.rewardMode(Boolean)`** <br/> Initializes Pollfish in reward mode
 4.3.1.7     | **`.offerwallMode(Boolean)`** <br/> Sets Pollfish to offerwall mode
 4.3.1.8     | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
-4.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward. If set, `signature` must be calculated in order to receive surveys. See [here](https://www.pollfish.com/docs/api-documentation) in section **`Notes for sig query parameter`**
+4.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward.
 4.3.1.10    | **`.clickId(String)`** <br/> A pass through param that will be passed back through server-to-server callback
 4.3.1.11    | **`.signature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
 
@@ -977,6 +986,8 @@ Params params = new Params.Builder("API_KEY")
 
 An object passing information during initialization regarding the reward settings, overriding the values as speciefied on the Publisher's Dashboard
 
+We strogly advise that you should use the Publisher Dashboard to provide Reward Info if your use case does not require a dynamic value.
+
 <br/>
 
 ```kotlin
@@ -1013,9 +1024,9 @@ Params params = new Params.Builder("API_KEY")
     .build();
 ```
 
-> **Note:** It's preferable to handle the reward settings through the Publisher's Dashboard
+<br/>
 
-> **Warning:** If a `rewardInfo` is set, please make sure to calculate and set the correct signature. By skipping this step you will be unable to receive surveys.
+> **Warning:** If a `rewardInfo` is set, please make sure to calculate and set the correct signature (4.3.12). By skipping this step you will be unable to receive surveys.
 
 <br/>
 
@@ -1043,27 +1054,47 @@ Params params = new Params.Builder("API_KEY")
 
 <br/>
 
-#### **4.3.1.11 `.signature(String)`**
+### **4.3.1.11 `.userId(String)`**
 
-An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as provided in the `RewardInfo` object (5.3.1.9)
+An optional id used to identify a user
+
+<span style="color: red">You can pass the id of a user as identified on your system. Pollfish will use this id to identify the user across sessions instead of an ad id/idfa as advised by the stores. You are solely responsible for aligning with store regulations by providing this id and getting relevant consent by the user when necessary. Pollfish takes no responsibility for the usage of this id. In any request from your users on resetting/deleting this id and/or profile created, you should be solely liable for those requests.</span>
+
+<br/>
+
+<span style="text-decoration: underline">Kotlin:</span>
+
+```kotlin
+val params = Params.Builder("API_KEY")
+    .userId("USER_ID")
+    .build()
+```
+
+<span style="text-decoration: underline">Java:</span>
+
+```java
+Params params = new Params.Builder("API_KEY")
+    .signature("USER_ID")
+    .build();
+```
+
+<br/>
+
+#### **4.3.1.12 `.signature(String)`**
+
+An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as provided in the `RewardInfo` object (4.3.1.9)
 
 This parameter can be used optionally to prevent tampering around reward conversion, if passed during initialisation. The platform supports url validation by requiring a hash of the `rewardConversion`, `rewardName`, and `clickId`. Failure to pass validation will result in no surveys return and firing **`PollfishSurveyNotAvailable`** callback.
 
-In order to generate the `signature` field you should sign the combination of `rewardConversion+rewardName+clickId` parameters using the HMAC-SHA1 algorithm and your account's secret_key that can be retrieved from the Account Information section on your Pollfish Dashboard.
+In order to generate the `signature` field you should sign the combination of `${rewardConversion}${rewardName}${clickId}` parameters using the HMAC-SHA1 algorithm and your account's secret_key that can be retrieved from the Account Information section on your Pollfish Dashboard.
 
-Please keep in mind if your `rewardConversion` is a whole number, you have to calculate the signature useing the floating point value with 1 decimal point.
+<br/>
 
-```kotlin
-val rewardConversion = 2
-val rewardName = "Dollars"
-val clickId = "CLICK_ID"
+> **Note:** Although `rewardConversion` and `rewardName` are mandatory for the hashing to work, `clickId` parameter is optional and you should add them for extra security.
 
-val valueToSign = "2.0DollarsCLICK_ID" // This will be signed using HMAC-SHA1 and your account's secret key
-```
+<br/>
 
-The `signature` value should then be encoded using Base64.
-
-> **Note:** Although `rewardConversion` is mandatory for the hashing to work, the `rewardName` and `clickId` parameters are optional and you should add them for extra security.
+> **Note:** Please keep in mind if your `rewardConversion` is a whole number, you have to calculate the signature useing the floating point value with 1 decimal point.
 
 <br/>
 
@@ -1081,6 +1112,44 @@ val params = Params.Builder("API_KEY")
 Params params = new Params.Builder("API_KEY")
     .signature("SIGNATURE")
     .build();
+```
+
+<br/>
+
+Sample code to generate valid signatures
+
+<span style="text-decoration: underline">Kotlin:</span>
+
+```kotlin
+val rewardConversion = 2.0
+val rewardName = "Dollars"
+val clickId = "CLICK_ID"
+val secretKey = "ACCOUNT_SECRET_KEY"
+
+val valueToSign = "$rewardConversion$rewardName$clickId"
+
+val signingKey = SecretKeySpec(secretKey.toByteArray(Charsets.UTF_8), "HmacSHA1")
+val mac = Mac.getInstance("HmacSHA1")
+mac.init(secretKey)
+
+val signature = Base64.getEncoder().encodeToString(mac.doFinal(valueToSign.toByteArray(Charsets.UTF_8)))
+```
+
+<span style="text-decoration: underline">Java:</span>
+
+```java
+double rewardConversion = 2.0;
+String rewardName = "Dollars";
+String clickId = "CLICK_ID";
+String secretKey = "ACCOUNT_SECRET_KEY";
+
+String valueToSign = "" + rewardConversion + rewardName + clickId;
+
+SecretKeySpec signingKey = new SecretKeySpec(secretKey.getBytes(StandardCharsets.UTF_8), "HmacSHA1");
+Mac mac = Mac.getInstance("HmacSHA1");
+mac.init(signingKey);
+
+String signature = Base64.getEncoder().encodeToString(mac.doFinal(valueToSign.getBytes(StandardCharsets.UTF_8)));
 ```
 
 <br/>

@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.2.7.0">
+<div class="changelog" data-version="6.3.0.0">
+v6.3.0.0
+
+- Updating with Pollfish iOS SDK v6.3.0
+
 v6.2.7.0
 
 - Updating with Pollfish iOS SDK v6.2.7
@@ -26,7 +30,7 @@ This guide is for publishers looking to use Max mediation to load and show Rewar
 
 - [Pollfish Developer Account](https://www.pollfish.com/dashboard/dev/)
 - [AppLovin Developer Account](https://dash.applovin.com/login)
-- iOS 10.0 or later
+- iOS 11.0 or later
 - XCode 12
 
 > **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
