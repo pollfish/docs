@@ -1379,7 +1379,7 @@ The whole set of values currently supported are:
 | **`IpsosMediation`**       | IpsosMediation survey 
 | **`ProdegeMR`**       | ProdegeMR survey  
 | **`MR`**       | MR survey
-| **Samplicious**	| Samplicious survey
+| **`Samplicious`**	| Samplicious survey
 
 <br/>
 
