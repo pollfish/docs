@@ -321,11 +321,7 @@ The url can contain the following query parameters
 | 1 | from  | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the beginning of the time period for the query. <br>If omitted, the default is one month before parameter to. | No
 | 2 | to    | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the end of the time period for the query. <br>If omitted, the default is the current date. | No
 
-<br/>
-
 > Note: Please keep in mind that the timeframe between 'from' and 'to' parameters should not exceed 31 days.
-
-<br/>
 
 ### Server Response
 
@@ -400,11 +396,7 @@ The url can contain the following query parameters
 | 1 | from  | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the beginning of the time period for the query. <br>If omitted, the default is one month before parameter to. | No
 | 2 | to    | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the end of the time period for the query. <br>If omitted, the default is the current date. | No
 
-<br/>
-
 > Note: Please keep in mind that the timeframe between 'from' and 'to' parameters should not exceed 31 days.
-
-<br/>
 
 ### Server Response
 
@@ -438,11 +430,7 @@ The url can contain the following query parameters
 | 2 | to    | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the end of the time period for the query. <br>If omitted, the default is the current date. | No
 | 3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
 
-<br/>
-
 > Note: Please keep in mind that the timeframe between 'from' and 'to' parameters should not exceed 31 days.
-
-<br/>
 
 ### Server Response
 
@@ -554,6 +542,18 @@ The url can contain the following query parameters
 
 returns the total revenue per provider of the specified app for a
 designated time period
+
+The url can contain the following query parameters
+
+### **Parameter**
+
+|   | Name  | JSON Type     | Description                      | Required
+|---|:------|:--------------|:---------------------------------|:--------
+| 1 | from  | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the beginning of the time period for the query. <br>If omitted, the default is one month before parameter to. | No
+| 2 | to    | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the end of the time period for the query. <br>If omitted, the default is the current date. | No
+| 3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
+
+> Note: Please keep in mind that the timeframe between 'from' and 'to' parameters should not exceed 31 days.
 
 ### Server Response
 
@@ -709,11 +709,7 @@ The url can contain the following query parameters
 | 2 | to    | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the end of the time period for the query. <br>If omitted, the default is the current date. | No
 | 3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
 
-<br/>
-
 > Note: Please keep in mind that the timeframe between 'from' and 'to' parameters should not exceed 31 days.
-
-<br/>
 
 ### Server Response
 
@@ -780,11 +776,7 @@ designated time period
 | 2 | to    | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the end of the time period for the query. <br>If omitted, the default is the current date. | No
 | 3 | countries    | string        | A comma separated list of ISO Alpha-2 country codes for which the cummulative revenue is computed. <br>If omitted, all countries are assumed. | No
 
-<br/>
-
 > Note: Please keep in mind that the timeframe between 'from' and 'to' parameters should not exceed 31 days.
-
-<br/>
 
 
 ### Server Response
@@ -818,11 +810,7 @@ The url can contain the following query parameters
 | 1 | from  | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the beginning of the time period for the query. <br>If omitted, the default is one month before parameter to. | No
 | 2 | to    | string        | A date in ISO8601 format (yyyy-MM-dd) . The timezone is UTC. This is the end of the time period for the query. <br>If omitted, the default is the current date. | No
 
-<br/>
-
 > Note: Please keep in mind that the timeframe between 'from' and 'to' parameters should not exceed 31 days.
-
-<br/>
 
 ### Server Response
 
