@@ -103,7 +103,7 @@ Key | Type
 **`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish | String
 **`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Bool
 **`oferrwall_mode`** <br/> Sets Pollfish SDK to Oferwall Mode | Bool
-**`request_uuid`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks | String
+**`request_uuid`** <br/> Sets a pass-through param to be received via the server-to-server callbacks | String
 
 Example:
 
@@ -464,7 +464,7 @@ rewardedAd.setLocalExtraParameterForKey("api_key", value: "YOUR_API_KEY")
 | No  | Description                                                                                                                                      |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 6.1 | **`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish                                                                            |
-| 6.2 | **`request_uuid`** <br/> Sets a unique identifier to identify a user and be passed through to [s2s callbacks](https://www.pollfish.com/docs/s2s) |
+| 6.2 | **`request_uuid`** <br/> Sets a pass-through param to be received via the [s2s callbacks](https://www.pollfish.com/docs/s2s) |
 | 6.3 | **`release_mode`** <br/> Toggles Pollfish SDK Developer or Release mode                                                                          |
 | 6.4 | **`offerwallMode`** <br/> Sets Pollfish SDK to Offerwall Mode                                                                                    |
 
@@ -478,7 +478,7 @@ Pollfish API Key as provided by Pollfish on [Pollfish Dashboard](https://www.pol
 
 ### 6.2 `request_uuid`
 
-Sets a unique id to identify a user and be passed through s2s callbacks upon survey completion.
+Sets a pass-through param to be received via the server-to-server callbacks.
 
 In order to register for such callbacks you can set up your server URL on your app's page on Pollfish Developer Dashboard. On each survey completion you will receive a callback to your server including the `request_uuid` param passed.
 
