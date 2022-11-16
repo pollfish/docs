@@ -200,7 +200,7 @@ No      | Type                  | Description
 5.1.3   | `bool`                | **`offerwallMode`** <br/> Sets Pollfish to Offerwall mode.
 5.1.4   | `bool`                | **`releaseMode`** <br/> Sets Pollfish SDK to Debug or Release mode.
 5.1.5   | `bool`                | **`rewardMode`** <br/> Initializes Pollfish in reward mode (skip Pollfish indicator to show a custom prompt).
-5.1.6   | `String`              | **`requestUUID`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks.
+5.1.6   | `String`              | **`requestUUID`** <br/> Sets a pass-through param to be receive via the server-to-server callbacks
 5.1.7   | `Map<String, Object>` | **`userProperties`** <br/> Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys.
 5.1.8   | `RewardInfo`          | **`rewardInfo`** <br/> An object holding information regarding the survey completion reward.
 5.1.9   | `String`              | **`clickId`** <br/> A pass throught param that will be passed back through server-to-server callback.
@@ -326,7 +326,7 @@ FlutterPollfish.instance.init(
 
 ### 4.1.6. **`requestUUID`**
 
-Sets a unique id to identify a user or a request and be passed back to the publisher through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
+Sets a pass-through param to be receive via the server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
 
 <br/>
 
