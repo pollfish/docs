@@ -119,7 +119,7 @@ No | Key | Type
 2.1 | **`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish | String
 2.2 | **`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Bool
 2.4 | **`oferrwall_mode`** <br/> Sets Pollfish SDK to Oferwall Mode | Bool
-2.4 | **`request_uuid`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks | String
+2.4 | **`request_uuid`** <br/> Sets a pass-through param to be received via the server-to-server callbacks | String
 
 Example:
 
@@ -364,7 +364,7 @@ Below you can see all the key-value available options of that you can use to con
 No | Description
 ------------ | -------------
 6.1 | **`api_key: String`** <br/> Sets Pollfish SDK API key as provided by Pollfish
-6.2 | **`request_uuid: Bool`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+6.2 | **`request_uuid: Bool`** <br/> Sets a pass-through param to be received via the server-to-server callbacks
 6.3 | **`release_mode: Bool`** <br/> Sets Pollfish SDK to Developer or Release mode
 6.4 | **`offerwall_mode: Bool`** <br/> Sets Pollfish SDK to Oferwall Mode  
 
@@ -376,7 +376,7 @@ Pollfish API Key as provided by Pollfish on [Pollfish Dashboard](https://www.pol
 
 #### **6.2 `request_uuid`**
 
-Sets a unique id to identify a user and be passed through server-to-server callbacks on survey completion. 
+Sets a pass-through param to be received via the server-to-server callbacks.
 
 In order to register for such callbacks you can set up your server URL on your app's page on Pollfish Developer Dashboard and then pass your requestUUID through ParamsBuilder object during initialization. On each survey completion you will receive a callback to your server including the requestUUID param passed.
 
