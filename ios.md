@@ -267,7 +267,7 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 No | Description
 ------------ | -------------
 6.2.1 | **`.indicatorPosition(IndicatorPosition)`** <br/> Sets the Position where you wish to place the Pollfish indicator
-6.2.2 | **`.requestUUID(String)`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+6.2.2 | **`.requestUUID(String)`** <br/> Sets a pass-through param to be receive via the server-to-server callbacks
 6.2.3 | **`.indicatorPadding(Int)`** <br/> Sets the padding from the top or the bottom of the view, according to the Position of Pollfish indicator
 6.2.4 | **`.viewContainer(UIView)`** <br/> Sets a view container that Pollfish surveys will be rendered above it
 6.2.5 | **`.releaseMode(Bool)`** <br/> Sets Pollfish SDK to Developer or Release mode
@@ -329,7 +329,7 @@ let params = PollfishParams("API_KEY")
 
 #### **6.2.2 `.requestUUID(String)`**
 
-Sets a unique id to identify a user and be passed through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>.
+Sets a pass-through param to be receive via the server-to-server callbacks. You can read more on how to retrieve this param through the callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>.
 
 <br/>
 
@@ -342,14 +342,14 @@ Below you can see an example on how you can pass a requestUUID during initializa
 ```objc
 PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
 
-[params requestUUID:@"USER_ID"];
+[params requestUUID:@"PASS_TRHOUGH_PARAM"];
 ```
 
 <span style="text-decoration: underline">Swift:</span>
 
 ```swift
 let pollfishParams = PollfishParams("API_KEY")
-    .requestUUID="USER_ID";
+    .requestUUID="PASS_THROUGH_PARAM";
 ```
 
 <br/>
