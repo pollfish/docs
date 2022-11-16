@@ -655,7 +655,7 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 No          | Description
 ------------|------------
 4.3.1.1     | **`.indicatorPosition(Position)`** <br/> Sets the Position where you wish to place the Pollfish indicator
-4.3.1.2     | **`.requestUUID(String)`** <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+4.3.1.2     | **`.requestUUID(String)`** <br/> Sets a pass-through param to be receive via the server-to-server callbacks
 4.3.1.3     | **`.indicatorPadding(Int)`** <br/> Sets the padding (in dp) from top or bottom according to the Position of the indicator
 4.3.1.4     | **`.userLayout(ViewGroup)`** <br/> Sets a layout container that Pollfish surveys will be rendered above it
 4.3.1.5     | **`.releaseMode(Boolean)`** <br/>  Sets Pollfish SDK to Developer or Release mode
@@ -729,7 +729,7 @@ Params params = new Params.Builder("API_KEY")
 
 #### **4.3.1.2 `.requestUUID(String)`**
 
-Sets a unique id to identify a user or a request and be passed back to the publisher through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
+Sets a pass-through param to be receive via the server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
 
 <br/>
 
@@ -741,7 +741,7 @@ Below you can see an example on how you can pass a requestUUID during initializa
 
 ```kotlin
 val params = Params.Builder("API_KEY")
-    .requestUUID("YOUR_UUID")
+    .requestUUID("PASS_THROUGH_PARAM")
     .build()
 ```
 
@@ -749,7 +749,7 @@ val params = Params.Builder("API_KEY")
 
 ```java
 Params params = new Params.Builder("API_KEY")
-    .requestUUID("YOUR_UUID")
+    .requestUUID("PASS_THROUGH_PARAM")
     .build();
 ```
 
