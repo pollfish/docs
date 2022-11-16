@@ -542,7 +542,7 @@ No     | Description
 5.1.3  | **`.ReleaseMode(bool)`**                           <br/> Sets Pollfish SDK to Debug or Release Mode
 5.1.4  | **`.RewardMode(bool)`**                            <br/> Initializes in reward mode (skip Pollfish indicator to show a custom prompt)
 5.1.5  | **`.OfferwallMode(bool)`**                         <br/> Sets Pollfish SDK to offerwall mode
-5.1.6  | **`.RequestUUID(string)`**                         <br/> Sets a unique id to identify a user and be passed through server-to-server callbacks
+5.1.6  | **`.RequestUUID(string)`**                         <br/> Sets a pass-through param to be receive via the server-to-server callbacks
 5.1.7  | **`.UserProperties(Dictionary<string, string>)`**  <br/> Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys.
 5.1.8  | **`.ClickId(string)`**                             <br/> A pass throught param that will be passed back through server-to-server callback
 5.1.9  | **`.UserId(string)`**                              <br/> A unique id ised to identify a user
@@ -658,7 +658,7 @@ Pollfish.Params pollfishParams = new Pollfish.Params(apiKey)
 
 ### 4.1.6. **`.RequestUUID(string)`**
 
-Sets a unique id to identify a user or a request and be passed back to the publisher through server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
+Sets a pass-through param to be receive via the server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
 
 <br/>
 
