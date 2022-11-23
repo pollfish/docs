@@ -170,7 +170,7 @@ func requestIDFA() {
 
 > **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given.
 
-> **Note:** There is also the option to define a userId during initialization. Read more on section 6.2.11
+> **Note:** <b>If you do not want to request a permission for accessing the IDFA there is also the option to define a userId during initialization. Read more on section 6.2.11</b>
 
 <br/>
 
