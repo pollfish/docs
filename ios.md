@@ -78,7 +78,7 @@ v6.0.0
 2. Register a new App on Pollfish Developer Dashboard and copy the given API Key
 3. Download and import Pollfish.xcframework to your project
 4. Add AdSupport.framework, AppTackingTransparency.framework, SystemConfiguration.framework and CoreTelephony.framework to your project
-5. Request IDFA tracking permission 
+5. Request IDFA tracking permission or pass a userId
 6. Embed pollfish in your code and call init
 7. Set to **Release mode** and release in AppStore
 8. Update your privacy policy
