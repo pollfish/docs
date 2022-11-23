@@ -479,8 +479,9 @@ PollFish.showOnTopOfActivity(activity);
 3. Download and import Pollfish .aar file
 4. Import Google Play Services into your project
 5. Embed Pollfish in your code and call init
-6. Update your privacy policy, enable **releaseMode** and publish on Google Play
-7. Request your account to get verified from Pollfish Team
+6. Add permission for accessing the Advertising ID or pass the userId 
+7. Update your privacy policy, enable **releaseMode** and publish on Google Play
+8. Request your account to get verified from Pollfish Team
 
 > **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old
 
