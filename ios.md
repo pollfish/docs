@@ -67,6 +67,9 @@ v6.0.0
 
 > **Note:** Insructions on how to request IDFA permission can be found in section 5.
 
+
+> **Note:** <b>If you do not want to request a permission for accessing the IDFA there is also the option to define a userId during initialization. Read more on section 6.2.11</b>
+> 
 </br>
 
 # Quick Guide
