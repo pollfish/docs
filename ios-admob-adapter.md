@@ -282,13 +282,13 @@ Run **pod install** on the command line to install  Pollfish cocoapod.
 
 ## 3. Add Pollfish AdMob Adapter to your project
 
-**Manual integration**
+### **Manual integration**
 
 Download Pollfish iOS AdMob Adapter framework and then in Xcode, select the target that you want to use and in the Build Phases tab expand the Link Binary With Libraries section. Press the + button, and press Add other… In the dialog box that appears, go to the Pollfish framework’s location and select it.
 
-**OR**
+<br>
 
-**CocoaPoda integration**
+### **CocoaPods**
 
 Add a Podfile with Pollfish framework as a pod reference:
 
@@ -299,6 +299,28 @@ pod 'PollfishAdMobAdapter'
 You can find latest Pollfish iOS SDK version on CocoaPods here
 
 Run pod install on the command line to install Pollfish cocoapod.
+
+<br>
+
+### **Swift Package Manager**
+
+The Pollfish AdMob Adapter supports Swift Package Manager starting in version 6.3.0.0. Follow the steps below to import the Swift package.
+
+> **Note:** Note: If migrating from a CocoaPods-based project, run pod deintegrate to remove CocoaPods from your Xcode project. The CocoaPods-generated .xcworkspace file can safely be deleted afterward. If you're adding the Pollfish AdMob Adapter to a project for the first time, this step can be ignored.
+
+<br>
+
+In Xcode, install the Pollfish AdMob Adapter Swift Package by navigating to File > Add Packages....
+
+In the prompt that appears, search for the Pollfish AdMob Adapter Swift Package GitHub repository:
+
+```
+https://github.com/pollfish/ios-admob-adapter.git
+```
+
+Select the version of the Pollfish AdMob Adapter you want to use. For new projects, we recommend using the Up to Next Major Version.
+
+Once you're finished, Xcode will begin resolving your package dependencies and downloading them in the background. For more details on how to add package dependencies, see [Apple's article](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
 
 <br/>
 

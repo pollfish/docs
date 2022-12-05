@@ -116,7 +116,9 @@ The project will appear at the top of the Link Binary With Libraries section and
 
 <br/>
 
-## or skip steps 3. and 4. and go through CocoaPods
+## or skip steps 3. and 4. and go through CocoaPods or Swift Package Manager
+
+### **CocoaPods**
 
 Add a Podfile with Pollfish framework as a pod reference:
 
@@ -129,6 +131,28 @@ You can find latest Pollfish iOS SDK version on CocoaPods [here](https://cocoapo
 Run **pod install** on the command line to install  Pollfish cocoapod.
 
 <br/>
+
+### **Swift Package Manager**
+
+The Pollfish iOS SDK supports Swift Package Manager starting in version 6.3.0. Follow the steps below to import the Swift package.
+
+> **Note:** Note: If migrating from a CocoaPods-based project, run pod deintegrate to remove CocoaPods from your Xcode project. The CocoaPods-generated .xcworkspace file can safely be deleted afterward. If you're adding the Pollfish iOS SDK to a project for the first time, this step can be ignored.
+
+<br>
+
+In Xcode, install the Pollfish iOS SDK Swift Package by navigating to File > Add Packages....
+
+In the prompt that appears, search for the Pollfish iOS SDK Swift Package GitHub repository:
+
+```
+https://github.com/pollfish/ios-sdk-pollfish.git
+```
+
+Select the version of the Pollfish iOS SDK you want to use. For new projects, we recommend using the Up to Next Major Version.
+
+Once you're finished, Xcode will begin resolving your package dependencies and downloading them in the background. For more details on how to add package dependencies, see [Apple's article](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app).
+
+<br>
 
 ## 5. Request IDFA Tracking permission
 
