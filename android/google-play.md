@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.3.0">
+<div class="changelog" data-version="6.3.1">
+v6.3.1
+
+- Internal fixes
+
 v6.3.0
 
 - Adding a new configuration option to define a `userId` during initialization

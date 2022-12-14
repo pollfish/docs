@@ -1,4 +1,9 @@
-<div class="changelog" data-version="6.3.0">
+<div class="changelog" data-version="7.0.0">
+v7.0.0
+
+- Updated with Pollfish Android SDK v6.3.1 and Pollfish iOS SDK v6.3.1
+- Switched for jar to arr for the Pollfish Android bridge library
+
 v6.3.0
 
 - Adding a new configuration option to define a `userId` during initialization
@@ -259,7 +264,7 @@ You can find instructions on how to install ios-support package and request for 
 * Update your app's privacy policy
 * Request your account to get verified from Pollfish Dashboard
 
-> **Note:** If you are updating from version v5 or lower to v6 or higher we recommend to clean your project from any of Pollfish Unity Plugin files and then import the lastest version. A comparisson between the v5 and v6 public API can be found on the following migration guide
+> **Note:** If you are updating from version v5.x.x to v6.x.x or v6.x.x to v7.x.x we recommend to clean your project from any of Pollfish Unity Plugin files and then import the lastest version. A comparisson between the v5 and v6 public API can be found on the following migration guide
 
 <br/>
 
@@ -448,7 +453,7 @@ Imported files will be listed in the following directories:
 > 
 > For example if a class from `com.google.android.gms` package is duplicated:
 >```groovy
->implementation 'com.pollfish:pollfish-googleplay:6.3.0' {
+>implementation 'com.pollfish:pollfish-googleplay:6.3.1' {
 >   exclude group: 'com.google.android.gms'
 >}
 >```
@@ -461,7 +466,7 @@ Imported files will be listed in the following directories:
 >```groovy  
 >dependencies {
 >  ...
->  implementation 'com.pollfish:pollfish-googleplay:6.3.0'
+>  implementation 'com.pollfish:pollfish-googleplay:6.3.1'
 >}
 >```
 >
