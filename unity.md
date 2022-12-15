@@ -1,4 +1,8 @@
-<div class="changelog" data-version="7.0.0">
+<div class="changelog" data-version="7.0.1">
+v7.0.1
+
+Updated with Pollfish Android SDK v6.3.2
+
 v7.0.0
 
 - Updated with Pollfish Android SDK v6.3.1 and Pollfish iOS SDK v6.3.1

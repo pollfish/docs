@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.3.1">
+<div class="changelog" data-version="6.3.2">
+v6.3.2
+
+- Internal fixes
+
 v6.3.1
 
 - Internal fixes
