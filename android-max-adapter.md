@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.3.2.0">
+<div class="changelog" data-version="6.3.3.0">
+V6.3.3.0
+
+- Updated with Pollfish Android SDK v6.3.3
+
 V6.3.2.0
 
 - Updated with Pollfish Android SDK v6.3.2

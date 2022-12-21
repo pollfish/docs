@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.3.2">
+<div class="changelog" data-version="6.3.3">
+v6.3.3
+
+- Fixing Thread related issues
+
 v6.3.2
 
 - Internal fixes
