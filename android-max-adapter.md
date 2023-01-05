@@ -1,13 +1,17 @@
-<div class="changelog" data-version="6.3.3.0">
-V6.3.3.0
+<div class="changelog" data-version="6.3.3.1">
+v6.3.3.1
+
+- Adding the option to configure the Pollfish user id through the adapter
+
+v6.3.3.0
 
 - Updated with Pollfish Android SDK v6.3.3
 
-V6.3.2.0
+v6.3.2.0
 
 - Updated with Pollfish Android SDK v6.3.2
 
-V6.3.1.0
+v6.3.1.0
 
 - Updated with Pollfish Android SDK v6.3.1
 
@@ -85,8 +89,8 @@ dependencies {
 
 # Quick Guide
 
-- Set up AppLovin Rewarded Ads
 - Set up Pollfish
+- Set up AppLovin Rewarded Ads
 - Add Pollfish Max Adapter to your project
 - Publish your app
 
@@ -96,9 +100,23 @@ dependencies {
 
 Below you can find a step by step guide on how to incorporate Pollfish surveys with AppLovin's Max mediation:
 
-## 1. Set up AppLovin Rewarded Ads
+## 1. Set up Pollfish
 
-### 1.1. Create a new Network
+### 1.1. Obtain a Developer Account
+
+Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
+
+<br/>
+
+### 1.2. Add new app on Pollfish Publisher Dashboard and copy the given API Key
+
+Login at [www.pollfish.com](www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Publisher Dashboard. Copy then the given API key for this app in order to use later on.
+
+<br/>
+
+## 2. Set up AppLovin Rewarded Ads
+
+### 2.1. Create a new Network
 
 First you need to sign in to your [AppLovin account](https://dash.applovin.com/login). Add Pollfish Network as a **Custom Network**. On the side menu navigate to Mediation -> Manage -> Networks
 
@@ -116,7 +134,7 @@ On the **Network Type** field select **SDK**. Set **Pollfish** as the value of *
 
 <br/>
 
-### 1.2. Create a Rewarded Ad Unit
+### 2.2. Create a Rewarded Ad Unit
 
 If you have not created a Rewarded Ad Unit in your app yet, navigate to Mediation -> Manage -> Ad Units and click **New Ad Unit**.
 
@@ -136,7 +154,15 @@ Give your Ad Unit a name and select the Android option as the Platform. Start ty
 
 <br/>
 
-Scroll down till you find the **Custom Networks & Deals** section and enable **Pollfish** newtork. Optionally provide a JSON formatted string with your Pollfish confiiguration (alternatively you can pass those params in code as described in Step 6) using the `setLocalExtraParameter` method of your `RewardedAd` object instance. 
+Scroll down till you find the **Custom Networks & Deals** section and enable **Pollfish** newtork. 
+
+<br/>
+
+Paste the Pollfish Api Key as provided by the Pollfish Dashboard (step 1.2) into the Placement ID input field. 
+
+<br/>
+
+Optionally provide a JSON formatted string with your Pollfish confiiguration (alternatively you can pass those params in code as described in Step 6) using the `setLocalExtraParameter` method of your `RewardedAd` object instance. 
 
 <br/>
 
@@ -144,20 +170,18 @@ Scroll down till you find the **Custom Networks & Deals** section and enable **P
 
 JSON configuration structure
 
-Key | Type
--------------| -------------
-**`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish | String
-**`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Bool
-**`oferrwall_mode`** <br/> Sets Pollfish SDK to Oferwall Mode | Bool
-**`request_uuid`** <br/> Sets a pass-through param to be received via the server-to-server callbacks | String
+Key | Type | Required
+----| ---- | --------
+**`api_key` (Deprecated)** <br/> Sets Pollfish SDK API key as provided by Pollfish | String | No (if placement id is set)
+**`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Bool | Yes
+**`request_uuid`** <br/> Sets a pass-through param to be received via the server-to-server callbacks | String | No
 
 Example:
 
 ```json
 {
-    "api_key": "API_KEY", 
+    "api_key": "API_KEY", // This is deprecated, use the Placement ID instead
     "release_mode": true,
-    "offerwall_mode": true,
     "request_uuid": "REQUEST_UUID" 
 }
 ```
@@ -180,43 +204,29 @@ Finally, click create.
 
 <br/>
 
-### 1.3. Add AppLovin SDK to your porject
+## 3. Add Pollfish Max Adapter to your project
 
-Retrieve AppLovin SDK through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in dependencies section:
+### **Retrieve Pollfish Max Adapter through maven()**
+
+Retrieve Pollfish Max Adapter through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
 
 ```groovy
 dependencies {
-    implementation 'com.applovin:applovin-sdk:11.1.2'
+    implementation 'com.pollfish.mediation:pollfish-max:6.3.3.1'
 }
 ```
 
-<br/>
+### **Manual install**
 
-## 2 Set Up Pollfish
+**Download Pollfish Android Max Adapter `.aar` file and import to your project libraries**
 
-### 2.1. Obtain a Developer Account
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/AppLovin/Pollfish%20Max%20Adapter%20Android-6.3.3.1.zip) to download the latest version of Pollfish Android SDK 
 
-Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
+> **Note**: If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .aar Package option and from the file browser locate Pollfish Max Adapter aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
 
-<br/>
+**Download Pollfish Android SDK `.aar` file and import to your project libraries**
 
-### 2.2. Add new app on Pollfish Publisher Dashboard and copy the given API Key
-
-Login at [www.pollfish.com](www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Publisher Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
-
-<br/>
-
-## 2.3. Add Pollfish SDK to your project
-
-Download Pollfish Android SDK or reference it through maven().
-
-**Download Pollfish Android SDK**
-
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.2.5.zip) to download the latest version of Pollfish Android SDK 
-
-**Import Pollfish `.aar` file to your project libraries**
-
-If you are using Android Studio, right click on your project and select New Module. Then select Import .jar or .aar Package option and from the file browser locate Pollfish aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.3.3.zip) to download the latest version of Pollfish Android SDK 
 
 **Integrate Google Play Services to your project**
 
@@ -225,18 +235,6 @@ Applications that integrate Pollfish SDK are required to include Google Play Ser
 ```groovy
 dependencies {
     implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
-}
-```
-
-**OR**
-
-**Retrieve Pollfish Android SDK through maven()**
-
-Retrieve Pollfish through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in dependencies section:
-
-```groovy
-dependencies {
-    implementation 'com.pollfish:pollfish-googleplay:6.3.0'
 }
 ```
 
@@ -251,26 +249,6 @@ Apps updating their target API level to 31 (Android 12) or higher will need to d
 ```
 
 You can read more about Google Advertising ID changes [here](https://support.google.com/googleplay/android-developer/answer/6048248).
-
-<br/>
-
-## 3. Add Pollfish Max Adapter to your project
-
-Import Pollfish Max Adapter **.aar** file to your project libraries  
-
-If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .aar Package option and from the file browser locate Pollfish Max Adapter aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
-
-**OR**
-
-**Retrieve Pollfish Max Adapter through maven()**
-
-Retrieve Pollfish Max Adapter through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
-
-```groovy
-dependencies {
-    implementation 'com.pollfish.mediation:pollfish-max:6.3.0.0'
-}
-```
 
 <br/>
 
@@ -467,12 +445,12 @@ Pollfish Max Adapter provides different options that you can use to control the 
 
 <br/>
 
-| No  | Description                                                                                                                                      |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 6.1 | **`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish                                                                            |
+| No  | Description                                                                                                                                             |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 6.1 | **`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish                                                                                   |
 | 6.2 | **`request_uuid`** <br/> Sets a pass-through param to be received via the server-to-server callbacks [s2s callbacks](https://www.pollfish.com/docs/s2s) |
-| 6.3 | **`release_mode`** <br/> Toggles Pollfish SDK Developer or Release mode                                                                          |
-| 6.4 | **`offerwallMode`** <br/> Sets Pollfish SDK to Offerwall Mode                                                                                    |
+| 6.3 | **`release_mode`** <br/> Toggles Pollfish SDK Developer or Release mode                                                                                 |
+| 6.4 | **`user_id`** <br/> Sets a unique identifier to identify a user                                                                                         |
 
 <br/>
 
@@ -503,18 +481,26 @@ Pollfish Max Adapter runs Pollfish SDK in release mode by default. If you would 
 
 <br/>
 
-### 6.4 `offerwall_mode`
+### 6.4 `user_id`
 
-Enables offerwall mode. If not set, one single survey is shown each time.
+An optional id used to identify a user
+
+Setting the `userId` will override the default behaviour and use that instead of the Advertising Id in order to identify a user
+
+<span style="color: red">You can pass the id of a user as identified on your system. Pollfish will use this id to identify the user across sessions instead of an ad id/idfa as advised by the stores. You are solely responsible for aligning with store regulations by providing this id and getting relevant consent by the user when necessary. Pollfish takes no responsibility for the usage of this id. In any request from your users on resetting/deleting this id and/or profile created, you should be solely liable for those requests.</span>
+
+<br/>
+
+Below you can see all the available configuration options for Pollfish Max Adapter.
 
 <br/>
 
 ```kotlin
-rewardedAd = MaxRewardedAd.getInstance("25aa38dc0445505f", this)
-rewardedAd.setLocalExtraParameter("release_mode", false)
-rewardedAd.setLocalExtraParameter("offerwall_mode", true)
+rewardedAd = MaxRewardedAd.getInstance("AD_UNIT_ID", this)
 rewardedAd.setLocalExtraParameter("api_key", "YOUR_POLLFISH_API_KEY")
 rewardedAd.setLocalExtraParameter("request_uuid", "REQUEST_UUID")
+rewardedAd.setLocalExtraParameter("release_mode", true)
+rewardedAd.setLocalExtraParameter("user_id", "USER_ID")
 ```
 
 <br/>

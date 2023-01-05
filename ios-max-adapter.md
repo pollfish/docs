@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.3.1.0">
+<div class="changelog" data-version="6.3.1.1">
+v6.3.1.1
+
+- Adding the option to configure the Pollfish user id through the adapter
+
 v6.3.1.0
 
 - Updating with Pollfish iOS SDK v6.3.1
@@ -37,14 +41,14 @@ This guide is for publishers looking to use Max mediation to load and show Rewar
 - iOS 11.0 or later
 - XCode 12
 
-> **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given
+> **Note:** Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower.
 
 </br>
 
 # Quick Guide
 
-- Set up AppLovin Rewarded Ads
 - Set up Pollfish
+- Set up AppLovin Rewarded Ads
 - Add Pollfish Max Adapter to your project
 - Publish your app
 
@@ -54,9 +58,23 @@ This guide is for publishers looking to use Max mediation to load and show Rewar
 
 Below you can find a step by step guide on how to incorporate Pollfish surveys with AppLovin's Max mediation:
 
-## 1. Set up AppLovin Rewarded Ads
+## 1. Set Up Pollfish
 
-### 1.1. Create a new Network
+### 1.1. Obtain a Developer Account
+
+Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
+
+<br/>
+
+### 1.2. Add new app on Pollfish Publisher Dashboard and copy the given API Key
+
+Login at [www.pollfish.com](www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Publisher Dashboard. Copy then the given API key for this app in order to use later on.
+
+<br/>
+
+## 2. Set up AppLovin Rewarded Ads
+
+### 2.1. Create a new Network
 
 First you need to sign in to your [AppLovin account](https://dash.applovin.com/login). Add Pollfish Network as a **Custom Network**. On the side menu navigate to Mediation -> Manage -> Networks
 
@@ -74,7 +92,7 @@ On the **Network Type** field select **SDK**. Set **Pollfish** as the value of *
 
 <br/>
 
-### 1.2. Create a Rewarded Ad Unit
+### 2.2. Create a Rewarded Ad Unit
 
 If you have not created a Rewarded Ad Unit in your app yet, navigate to Mediation -> Manage -> Ad Units and click **New Ad Unit**.
 
@@ -94,7 +112,15 @@ Give your Ad Unit a name and select the iOS option as the Platform. Start typing
 
 <br/>
 
-Scroll down till you find the **Custom Networks & Deals** section and enable **Pollfish** newtork. Optionally provide a JSON formatted string with your Pollfish confiiguration (alternatively you can pass those params in code as described in Step 6) using the `setLocalExtraParameterForKey` method of your `MARewardedAd` object instance. 
+Scroll down till you find the **Custom Networks & Deals** section and enable **Pollfish** newtork. 
+
+<br/>
+
+Paste the Pollfish Api Key as provided by the Pollfish Dashboard (step 1.2) into the Placement ID input field. 
+
+<br/>
+
+Optionally provide a JSON formatted string with your Pollfish confiiguration (alternatively you can pass those params in code as described in Step 6) using the `setLocalExtraParameterForKey` method of your `MARewardedAd` object instance. 
 
 <br/>
 
@@ -102,20 +128,18 @@ Scroll down till you find the **Custom Networks & Deals** section and enable **P
 
 JSON configuration structure
 
-Key | Type
--------------| -------------
-**`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish | String
-**`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Bool
-**`oferrwall_mode`** <br/> Sets Pollfish SDK to Oferwall Mode | Bool
-**`request_uuid`** <br/> Sets a pass-through param to be received via the server-to-server callbacks | String
+Key | Type | Required
+----| ---- | --------
+**`api_key` (Deprecated)** <br/> Sets Pollfish SDK API key as provided by Pollfish | String | No (if placement id is set)
+**`release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Bool | Yes
+**`request_uuid`** <br/> Sets a pass-through param to be received via the server-to-server callbacks | String | No
 
 Example:
 
 ```json
 {
-    "api_key": "API_KEY", 
+    "api_key": "API_KEY", // This is deprecated, use the Placement ID instead
     "release_mode": true,
-    "offerwall_mode": true,
     "request_uuid": "REQUEST_UUID" 
 }
 ```
@@ -138,21 +162,21 @@ Finally, click create.
 
 <br/>
 
-## 2. Set Up Pollfish
-
-### 2.1. Obtain a Developer Account
-
-Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
-
-<br/>
-
-### 2.2. Add new app on Pollfish Publisher Dashboard and copy the given API Key
-
-Login at [www.pollfish.com](www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Publisher Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
-
-<br/>
-
 ## 3. Add Pollfish Max Adapter to your project
+
+### **Retrieve Pollfish Max Adapter through CocoaPods**
+
+Add a Podfile with PollfishMaxAdapter pod reference:
+
+```ruby
+pod 'PollfishMaxAdapter'
+```
+
+You can find the latest PollfishMaxAdapter version on CocoaPods [here](https://cocoapods.org/pods/PollfishMaxAdapter)
+
+Run pod install on the command line to install PollfishMax pod.
+
+<br/>
 
 ### **Manually import PollfishMaxAdapter**
 
@@ -174,20 +198,6 @@ Add the following frameworks (if you don’t already have them) in your project
 - CoreTelephony.framework
 - SystemConfiguration.framework 
 - WebKit.framework (added in Pollfish v4.4.0)
-
-**OR**
-
-### **Retrieve Pollfish Max Adapter through CocoaPods**
-
-Add a Podfile with PollfishMaxAdapter pod reference:
-
-```ruby
-pod 'PollfishMaxAdapter'
-```
-
-You can find the latest PollfishMaxAdapter version on CocoaPods [here](https://cocoapods.org/pods/PollfishMaxAdapter)
-
-Run pod install on the command line to install PollfishMax pod.
 
 <br/>
 
@@ -258,7 +268,7 @@ Implement `MARewardedAdDelegate` so that you are notified when your ad is ready 
 
 Request IDFA Permission (Recommended but optional)
 
-Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower. Offerwall integrations perform better compared to single survey integrations when no IDFA permission is given.
+Pollfish surveys can work with or without the IDFA permission on iOS 14+. If no permission is granted in the ATT popup, the SDK will serve non personalized surveys to the user. In that scenario the conversion is expected to be lower.
 
 To display the App Tracking Transparency authorization request for accessing the IDFA, update your `Info.plist` to add the `NSUserTrackingUsageDescription` key with a custom message describing your usage. Below is an example description text:
 
@@ -457,20 +467,12 @@ Pollfish Max Adapter provides different options that you can use to control the 
 
 <br/>
 
-```swift
-rewardedAd = MARewardedAd.shared(withAdUnitIdentifier: "AD_UNIT_ID")
-rewardedAd.setLocalExtraParameterForKey("release_mode", value: true)
-rewardedAd.setLocalExtraParameterForKey("offerwall_mode", value: true)
-rewardedAd.setLocalExtraParameterForKey("request_uuid", value: "REQUEST_UUID")
-rewardedAd.setLocalExtraParameterForKey("api_key", value: "YOUR_API_KEY")
-```
-
-| No  | Description                                                                                                                                      |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 6.1 | **`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish                                                                            |
+| No  | Description                                                                                                                  |
+| --- | -----------------------------------------------------------------------------------------------------------------------------|
+| 6.1 | **`api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish                                                        |
 | 6.2 | **`request_uuid`** <br/> Sets a pass-through param to be received via the [s2s callbacks](https://www.pollfish.com/docs/s2s) |
-| 6.3 | **`release_mode`** <br/> Toggles Pollfish SDK Developer or Release mode                                                                          |
-| 6.4 | **`offerwallMode`** <br/> Sets Pollfish SDK to Offerwall Mode                                                                                    |
+| 6.3 | **`release_mode`** <br/> Toggles Pollfish SDK Developer or Release mode                                                      |
+| 6.4 | **`user_id`** <br/> Sets a unique identifier to identify a user                                                              |
 
 <br/>
 
@@ -501,9 +503,27 @@ Pollfish Max Adapter runs Pollfish SDK in release mode by default. If you would 
 
 <br/>
 
-### 6.4 `offerwall_mode`
+### 6.4 `user_id`
 
-Enables offerwall mode. If not set, one single survey is shown each time.
+An optional id used to identify a user
+
+Setting the `userId` will override the default behaviour and use that instead of the Advertising Id in order to identify a user
+
+<span style="color: red">You can pass the id of a user as identified on your system. Pollfish will use this id to identify the user across sessions instead of an ad id/idfa as advised by the stores. You are solely responsible for aligning with store regulations by providing this id and getting relevant consent by the user when necessary. Pollfish takes no responsibility for the usage of this id. In any request from your users on resetting/deleting this id and/or profile created, you should be solely liable for those requests.</span>
+
+<br/>
+
+Below you can see all the available configuration options for Pollfish Max Adapter.
+
+<br/>
+
+```swift
+rewardedAd = MARewardedAd.shared(withAdUnitIdentifier: "AD_UNIT_ID")
+rewardedAd.setLocalExtraParameterForKey("api_key", value: "YOUR_API_KEY")
+rewardedAd.setLocalExtraParameterForKey("request_uuid", value: "REQUEST_UUID")
+rewardedAd.setLocalExtraParameterForKey("release_mode", value: true)
+rewardedAd.setLocalExtraParameterForKey("user_id", value: "USER_ID")
+```
 
 <br/>
 
