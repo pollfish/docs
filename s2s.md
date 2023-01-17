@@ -325,7 +325,7 @@ You can secure the reconciliation callback with a signature, similar to survey c
 
 ### 2.5 Checking reconciliation callback logs
 
-You can check logs from your s2s reconciliation callbacks history by navigating to the Mediation Reconciliations page on your Dashboard.
+You can check logs from your s2s reconciliation callbacks history by navigating to the Mediation -> Reconciliations page on your Dashboard.
 
 <img src="https://storage.googleapis.com/pollfish_production/doc_images/reconciliation_logs.png">
 
