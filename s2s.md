@@ -1,7 +1,7 @@
 
-## Server-to-Server postback call for survey completion
+## 1. Server-to-Server postback call for survey completion
 
-### 1. Introduction
+### 1.1 Introduction
 
 #### Server-to-Server postback call for survey completion
 
@@ -18,7 +18,7 @@ Server-to-server callbacks can be used to retrieve several different params on p
 
 In general, we advice to monitor all these parameters on your server side.
 
-### 2. Testing postback calls in developer mode 
+### 1.2 Testing postback calls in developer mode 
 
 You can test server-to-server callbacks in developer mode. On every survey completion a callback will be fired. In that call a **debug=true** parameter will be appended to indicate that the callback is for a survey completed in developer mode. If your app is turned in release mode, no debug parameter will exist in the call.
 
@@ -34,32 +34,32 @@ could produce a URL in developer mode like the following:
 http://www.example.com/pollfish/CPMdQdgAzHoL6360iXY5qLp?cpa=30&debug=true
 ```
 
-### 3. Uniquely identifying a survey completion (avoiding duplicates)
+### 1.3 Uniquely identifying a survey completion (avoiding duplicates)
 
 Every user can complete only once a specific survey. You can avoid dublicates in survey completion callbacks by appending and listening to **tx_id** param. This id is calculated by user id and survey id and uniquely identifies a survey completion by a user. A user should not complete the same survey twice. Having that said you should never receive callbacks with the same **tx_id** param. Use this param to avoid crediting a user more than once for the same survey.   
 
 
 <span style="color:red">| <b>Note:</b> You should always check debug param when verifying a callback. Please ignore debug=true callbacks when rewarding your users in a live app since this can be an indication of a tampered app.</span>
 
-### 4. Passing and retrieving your own unique id of a user through the callback
+### 1.4 Passing and retrieving your own unique id of a user through the callback
 
 You can pass a unique id for a user (as you may use it in your own system) through the SDK, during intiialization. You can retrieve this id through the server-to-server callback if you append **request_uuid** parameter to the call.
 
-### 5. Retrieving info around cpa and rewards
+### 1.5 Retrieving info around cpa and rewards
 
-#### 5.1 Retrieving CPA value for a given survey
+#### 1.5.1 Retrieving CPA value for a given survey
 
 You can easily retrieve through every callback how much money were earned in USD cents, by appending and reading param with name **cpa**.
 
 | **Note:** Demographic collection surveys will fire an s2s with CPA=0  and deliver no revenue to the publisher in all the different integration approaches since this is part of the onboarding process for the users. You can enable and provide a reward for the users for these surveys, through the App Settings area of the Dashboard to increase engagement.
 
-#### 5.2 Retrieving Reward Name and Reward Value for a given survey
+#### 1.5.2 Retrieving Reward Name and Reward Value for a given survey
 
 In every callback received, aside from money earned you can retrieve the Reward Name and Reward Value, by appending and reading params with name **reward_name** and/or **reward_value**.
 
 | **Note:** You can set those values per app, through the Publisher Dashboard under section `Reward Settings`
 
-### 6. Getting notified when a user is not eligible
+### 1.6 Getting notified when a user is not eligible
 
 You can register and receive callbacks when a user was not eligible for a survey. User not eligible in that case means that either the user was screened out from a particular survey or he/she was marked as fraud by our anti-fraud system.
 
@@ -119,9 +119,9 @@ survey_already_taken | The respondent has already completed the survey
  
  > **Important:** These responses might change in the future
 
-### 7. Securing your callback with signature
+### 1.7 Securing your callback with signature
 
-#### 7.1 How to include a signature in the callback URLs
+#### 1.7.1 How to include a signature in the callback URLs
 
 As with all callback URL parameters, in order to receive values for a parameter you have to include the corresponding parameter placeholder in the URL that you submit to Pollfish. For the **signature** parameter you have to include the **[[signature]]** parameter placeholder. If you do not included it then your callback URLs will not be signed. Because of this the following URL templates will result in not having your callback URLs signed.
 
@@ -144,7 +144,7 @@ http://www.example.com/pollfish-callback?tx_id=[[tx_id]]&time=[[timestamp]]&sig=
 http://www.example.com/pollfish-callback?tx_id=[[tx_id]]&time=[[timestamp]]&cpa=[[cpa]]&device=[[device_id]]&request_uuid=[[request_uuid]]&sig=[[signature]]
 ```
 
-#### 7.2 Effective use of URL signatures
+#### 1.7.2 Effective use of URL signatures
 
 If you want to be protected by fake requests forged by malicious third parties then including the **signature** in your URL is not enough. You must make sure that you include at least one other parameter that varies a lot between requests or is unique between requests. We recommend using at least the **tx_id** parameter in combination with the **signature** parameter to protect against fake callback requests. 
 
@@ -172,7 +172,7 @@ http://www.example.com/pollfish-callback?id=[[tx_id]]time=[[timestamp]]&sig=[[si
 
 Includes both **tx_id** and **timestamp**.
 
-#### 7.3 How signatures are produced
+#### 1.7.3 How signatures are produced
 
 The **signature** of the callback URLs is the result of appling the  [HMAC-SHA1](https://en.wikipedia.org/wiki/Hash-based_message_authentication_code) hash function to the **[[parameters]]** that are included in the URL using your account's secret_key.
 
@@ -205,7 +205,7 @@ https://www.example.com?device_id=my-device-id&cpa=30&timestamp=1463152452308&tx
 
 Please note that the string is created using the parameter values before they are URL encoded.
 
-#### 7.4 How to verify signatures
+#### 1.7.4 How to verify signatures
 
 To verify the signature in server-to-server postback calls follow the below proceedure:
 
@@ -221,7 +221,7 @@ To verify the signature in server-to-server postback calls follow the below proc
 
 Please note that during developer mode the `debug=true` parameter is *not included* in the input of the signature.
 
-#### 7.5 Example code for signature verification
+#### 1.7.5 Example code for signature verification
 
 ```php
 <!DOCTYPE html>
@@ -279,12 +279,55 @@ Please note that during developer mode the `debug=true` parameter is *not includ
 </html>
 ```
 
-### 8. Checking callback logs
+### 1.8 Checking callback logs
 
-You can check logs from your s2s callbacks history simply by selecting the relevant button on your Dashboard.
+You can check logs from your s2s callbacks history simply by navigating to Mediation -> Monitoring page on your Dashboard.
 
-<img src="https://storage.googleapis.com/pollfish-images/show_logs.png">
+<img src="https://storage.googleapis.com/pollfish_production/doc_images/monitoring_logs.png">
 
-In that popup you will find all callbacks generated from Pollfish servers for your app, sorted by date. You can easily track the status of each call and response from you server side. Each call in the logs is clickable and you can also search for a specific callback based on specific params of your url structure.
+In this page you will find all callbacks generated from Pollfish servers for your app, sorted by date. You can easily track the status of each call and response from you server side. Each call in the logs is clickable and you can also search for a specific callback based on specific params of your url structure.
 
+
+
+## 2. Server-to-Server postback call for reconciliation
+
+### 2.1 Introduction
+
+#### Server-to-Server postback call for reconciliations
+
+
+In order to get notified directly for the reconciliations, you can set a Server-to-Server webhook URL through the Pollfish developer dashboard, in your app's Settings page. On every reconciliation occurring through your app an HTTP GET request will be made using that URL.
+
+<img src="https://storage.googleapis.com/pollfish_production/doc_images/reconciliation_url.png">
+
+
+Server-to-server callbacks can be used to retrieve several different params on the publisher's server side.
+
+<img src="https://storage.googleapis.com/pollfish_production/doc_images/reconciliation_params.png">
+
+In general, we advise you to monitor all these parameters on your server side.
+
+
+### 2.2 Uniquely identifying reconciliation
+
+You should use the **tx_id** param that was used in a completion earlier on, to uniquely identify a reconciliation.
+
+
+### 2.3 Retrieving info around reconciliation cpa
+
+You can easily retrieve through every callback the amount of money that will be reverted in USD cents, by appending and reading the param with the name **cpa**. The cpa value will always be a positive number (cpa>0).
+
+
+### 2.4 Securing your callback with signature
+
+You can secure the reconciliation callback with a signature, similar to survey completion callback. Please refer to paragraph 1.7 of completion callbacks.
+
+
+### 2.5 Checking reconciliation callback logs
+
+You can check logs from your s2s reconciliation callbacks history by navigating to the Mediation Reconciliations page on your Dashboard.
+
+<img src="https://storage.googleapis.com/pollfish_production/doc_images/reconciliation_logs.png">
+
+In this page you will find all reconciliation callbacks generated from Pollfish servers for your app, sorted by date. You can easily track the status of each call and response from your server side. Each call in the logs is clickable and you can also search for a specific callback based on specific params of your url structure.
 
