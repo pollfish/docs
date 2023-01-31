@@ -244,7 +244,6 @@ Below you can find the list of demographic info you can send over along with the
 |  | SALES_STAFF | 20
 |  | BUYER_PURCHASING_AGENT | 21
 |  | OTHER_NON_MANAGEMENT | 22
-|  | NOT_WORK | 23
 |  | PREFER_NOT_TO_SAY | 24
 
 </br>
