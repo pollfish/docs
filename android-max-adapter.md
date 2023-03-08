@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.3.3.1">
+<div class="changelog" data-version="6.4.0.0">
+v6.4.0.0
+
+- Updated with Pollfish Android SDK v6.4.0
+
 v6.3.3.1
 
 - Adding the option to configure the Pollfish user id through the adapter
@@ -182,7 +186,7 @@ Example:
 {
     "api_key": "API_KEY", // This is deprecated, use the Placement ID instead
     "release_mode": true,
-    "request_uuid": "REQUEST_UUID" 
+    "request_uuid": "REQUEST_UUID"
 }
 ```
 
@@ -212,7 +216,7 @@ Retrieve Pollfish Max Adapter through **maven()** with gradle by adding the foll
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-max:6.3.3.1'
+    implementation 'com.pollfish.mediation:pollfish-max:6.4.0.0'
 }
 ```
 
@@ -220,13 +224,13 @@ dependencies {
 
 **Download Pollfish Android Max Adapter `.aar` file and import to your project libraries**
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/AppLovin/Pollfish%20Max%20Adapter%20Android-6.3.3.1.zip) to download the latest version of Pollfish Android SDK 
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/AppLovin/Pollfish%20Max%20Adapter%20Android-6.4.0.0.zip) to download the latest version of Pollfish Android SDK 
 
 > **Note**: If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .aar Package option and from the file browser locate Pollfish Max Adapter aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
 
 **Download Pollfish Android SDK `.aar` file and import to your project libraries**
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.3.3.zip) to download the latest version of Pollfish Android SDK 
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.4.0.zip) to download the latest version of Pollfish Android SDK 
 
 **Integrate Google Play Services to your project**
 

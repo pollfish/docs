@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.3.3.0">
+<div class="changelog" data-version="6.4.0.0">
+V6.4.0.0
+
+- Updated with Pollfish Android SDK v6.4.0
+
 V6.3.3.0
 
 - Updated with Pollfish Android SDK v6.3.3
@@ -231,7 +235,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish:pollfish-googleplay:6.3.0'
+    implementation 'com.pollfish:pollfish-googleplay:6.4.0'
 }
 ```
 
@@ -251,7 +255,7 @@ Retrieve Pollfish IronSource Adapter through **maven()** with gradle by adding t
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-ironsource:6.3.0.0'
+    implementation 'com.pollfish.mediation:pollfish-ironsource:6.4.0.0'
 }
 ```
 

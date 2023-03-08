@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.3.3">
+<div class="changelog" data-version="6.4.0">
+v6.4.0
+
+- Internal updates
+
 v6.3.3
 
 - Fixing Thread related issues
@@ -169,7 +173,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.3.0'
+implementation 'com.pollfish:pollfish-universal:6.4.0'
 ```
 
 <tr>
@@ -340,7 +344,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.3.0'
+implementation 'com.pollfish:pollfish-universal:6.4.0'
 ```
 
 <tr>
@@ -549,7 +553,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.3.0'
+    implementation 'com.pollfish:pollfish-universal:6.4.0'
 }
 ```
 

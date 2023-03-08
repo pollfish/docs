@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.3.3.0">
+<div class="changelog" data-version="6.4.0.0">
+V6.4.0.0
+
+- Updated with Pollfish Android SDK v6.4.0
+
 V6.3.3.0
 
 - Updated with Pollfish Android SDK v6.3.3
@@ -355,7 +359,7 @@ Download Pollfish Android SDK or reference it through maven().
 
 **Download Pollfish Android SDK**
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.2.5.zip) to download the latest version of Pollfish Android SDK 
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.4.0.zip) to download the latest version of Pollfish Android SDK 
 
 **Import Pollfish `.aar` file to your project libraries**
 
@@ -379,7 +383,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-  implementation 'com.pollfish:pollfish-googleplay:6.3.0'
+  implementation 'com.pollfish:pollfish-googleplay:6.4.0'
 }
 ```
 
@@ -399,7 +403,7 @@ Retrieve Pollfish through **maven()** with gradle by adding the following line i
 
 ```groovy
 dependencies {
-  implementation 'com.pollfish.mediation:pollfish-admob:6.3.0.0'
+  implementation 'com.pollfish.mediation:pollfish-admob:6.4.0.0'
 }
 ```
 

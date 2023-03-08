@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.3.1.1">
+<div class="changelog" data-version="6.4.0.0">
+v6.4.0.0
+
+- Updating with Pollfish iOS SDK v6.4.0
+
 v6.3.1.1
 
 - Adding the option to configure the Pollfish user id through the adapter
@@ -140,7 +144,7 @@ Example:
 {
     "api_key": "API_KEY", // This is deprecated, use the Placement ID instead
     "release_mode": true,
-    "request_uuid": "REQUEST_UUID" 
+    "request_uuid": "REQUEST_UUID"
 }
 ```
 
