@@ -5,15 +5,15 @@ v7.0.4
 
 v7.0.3
 
-Updated with Pollfish Android SDK v6.4.0 and Pollfish iOS SDK v6.4.0
+- Updated with Pollfish Android SDK v6.4.0 and Pollfish iOS SDK v6.4.0
 
 v7.0.2
 
-Updated with Pollfish Android SDK v6.3.3
+- Updated with Pollfish Android SDK v6.3.3
 
 v7.0.1
 
-Updated with Pollfish Android SDK v6.3.2
+- Updated with Pollfish Android SDK v6.3.2
 
 v7.0.0
 
