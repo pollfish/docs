@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.4.0">
+<div class="changelog" data-version="6.4.1">
+v6.4.0
+
+- Fixing survey panel orientation issues
+
 v6.4.0
 
 - Internal updates
