@@ -558,17 +558,18 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 
 No     | Description
 -------|------------
-5.1.1  | **`.IndicatorPosition(Position)`**                 <br/> Sets the Position where you wish to place the Pollfish indicator.
-5.1.2  | **`.IndicatorPadding(int)`**                       <br/> Sets the padding from top or bottom depending on the position of the indicator.
-5.1.3  | **`.ReleaseMode(bool)`**                           <br/> Sets Pollfish SDK to Debug or Release Mode
-5.1.4  | **`.RewardMode(bool)`**                            <br/> Initializes in reward mode (skip Pollfish indicator to show a custom prompt)
-5.1.5  | **`.OfferwallMode(bool)`**                         <br/> Sets Pollfish SDK to offerwall mode
-5.1.6  | **`.RequestUUID(string)`**                         <br/> Sets a pass-through param to be receive via the server-to-server callbacks
-5.1.7  | **`.UserProperties(Dictionary<string, string>)`**  <br/> Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys.
-5.1.8  | **`.ClickId(string)`**                             <br/> A pass throught param that will be passed back through server-to-server callback
-5.1.9  | **`.UserId(string)`**                              <br/> A unique id ised to identify a user
-5.1.10 | **`.RewardInfo(RewardInfo)`**                      <br/> An object holding information regarding the survey completion reward.
-5.1.11 | **`.Signature(string)`**                           <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object
+4.1.1  | **`.IndicatorPosition(Position)`**                 <br/> Sets the Position where you wish to place the Pollfish indicator.
+4.1.2  | **`.IndicatorPadding(int)`**                       <br/> Sets the padding from top or bottom depending on the position of the indicator.
+4.1.3  | **`.ReleaseMode(bool)`**                           <br/> Sets Pollfish SDK to Debug or Release Mode
+4.1.4  | **`.RewardMode(bool)`**                            <br/> Initializes in reward mode (skip Pollfish indicator to show a custom prompt)
+4.1.5  | **`.OfferwallMode(bool)`**                         <br/> Sets Pollfish SDK to offerwall mode
+4.1.6  | **`.RequestUUID(string)`**                         <br/> Sets a pass-through param to be receive via the server-to-server callbacks
+4.1.7  | **`.UserProperties(Dictionary<string, string>)`**  <br/> Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys.
+4.1.8  | **`.ClickId(string)`**                             <br/> A pass throught param that will be passed back through server-to-server callback
+4.1.9  | **`.UserId(string)`**                              <br/> A unique id ised to identify a user
+4.1.10 | **`.RewardInfo(RewardInfo)`**                      <br/> An object holding information regarding the survey completion reward.
+4.1.11 | **`.Signature(string)`**                           <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object
+4.1.12 | **`.MonitorOrientation(bool)`**                    <br/> Toggle SDK reinitalization when device orientation changes
 
 <br/>
 
@@ -827,6 +828,21 @@ byte[] keyBytes = encoding.GetBytes(key);
 byte[] hashMessage = new HMACSHA1(keyBytes).ComputeHash(messageBytes);
 		
 string signature = Convert.ToBase64String(hashMessage);
+```
+
+<br/>
+
+### 4.1.12 **`.MonitorOrientation(bool)`**
+
+An optional parameter used to toggle SDK reinitalization when device orientation changes. By default the SDK initializes when a device orientation changes.
+
+Note: Setting this option to false will force survey panel to render at full screen size on iPad.
+
+<br/>
+
+```csharp
+Pollfish.Params pollfishParams = new Pollfish.Params()
+  .MonitorOrientation(false);
 ```
 
 <br/>
