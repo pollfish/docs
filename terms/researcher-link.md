@@ -159,7 +159,7 @@ Pollfish Properties, including, without limitation, all Content, Pollfish SDK, t
 
 **iv)** Is disclosed by the Receiving Party with the prior written approval of the Disclosing Party.
 
-For clarity, the PLS Service Data as well as all and any contact data of Researcher employees or representatives provided voluntarily by the Researcher for the commercial, legal, technical or other communications under this Agreement, shall be treated by Pollfish as Researcher&#39;s Confidential Information (without prejudice to Pollfish’s rights under the last paragraph of Section 7.3 above).
+For clarity, the PLS Survey Data as well as all and any contact data of Researcher employees or representatives provided voluntarily by the Researcher for the commercial, legal, technical or other communications under this Agreement, shall be treated by Pollfish as Researcher&#39;s Confidential Information (without prejudice to Pollfish’s rights under the last paragraph of Section 7.3 above).
 
 **(b) &quot;Disclosing Party&quot;** means and refers to either party and all its associate companies, associates, employees, officers, servants, agents or professional advisors (including, without limitation, legal counsel, accountants, consultants, bankers and financial advisors), acting on behalf of such party (&quot;hereinafter referred to, collectively, as &quot;Representatives&quot;), where and whenever such party discloses confidential information to the other party.
 
