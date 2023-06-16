@@ -888,7 +888,7 @@ and on the **App Store Connect** in the App's Privacy Policy section, update the
 | Product Interaction | Such as app launches, taps, clicks, scrolling information, music listening data, video views, saved place in a game, video, or song, or other information about how the user interacts with the app | NO |  |
 | Advertising Data | Such as information about the advertisements the user has seen | NO | Pollfish monitors the number of surveys a user has seen but not any advertisement  within or outside it's context |
 | Other Usage Data | Any other data about user activity in the app | NO | |
-|  **Diagnostics** | --- | --- | --- |
+| **Diagnostics** | --- | --- | --- |
 | Crash Data | Such as crash logs | NO | |
 | Performance Data | Such as launch time, hang rate, or energy use | NO | |
 | Other Diagnostic Data | Any other data collected for the purposes of measuring technical diagnostics related to the app | NO | |

@@ -1254,8 +1254,35 @@ If you know attributes about a user like gender, age and others, you can provide
 	 
 ### 6.1 Complete the Google Play Data Safety questionnaire
 
-When you publish your app your will be asked to complete the Google Play Data Safety questionnaire. For any info relevant to data collected and used from the Pollfish SDK please advice the following [link](https://www.pollfish.com/terms/google-play-data-safety-questionnaire). 
-<br/>	 
+When you publish your app your will be asked to complete the Google Play Data Safety questionnaire. For any info relevant to data collected and used from the Pollfish SDK please advice the following [link](https://www.pollfish.com/terms/google-play-data-safety-questionnaire). For Pollfish SDK the only questions that should be answered is under the **Data types** step, **Device or other IDs** section. Please select the checkbox:
+
+<br/>
+
+<img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/google-play-data-safety.png"/>
+
+<br/>
+
+After selecting the above checkbox, you will be prompted to answer a questionnaire regarding the **Device or other IDs** on the **Data usage and handling** step. Please answer the questionnaire with the following suggested answers:
+
+<details><summary>➤ <b>Questionnaire Answers</b> (Click to expand)</summary>
+
+| Question | Answer
+| --- | --- |
+| **Is this data collected, shared, or both?** |
+| Collected | YES |
+| Shared | YES |
+| **Is this data processed ephemerally?** | NO |
+| **Is this data required for your app, or can users choose whether it's collected?** | Users can choose whether this data is collected |
+| **Why is this user data collected?** | |
+| Advertising or marketing | YES |
+| **Why is this user data shared?** | |
+| Advertising or marketing | YES |
+
+</details>
+
+<br/>
+
+
 ## 7. Request your account to get verified from Pollfish Team
 
 After your app is published on an app store you should request your account to get verified from your Pollfish Dashboard.
