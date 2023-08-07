@@ -1,4 +1,4 @@
-Last updated: 03/13/2023
+Last updated: 08/07/2023
 
 **POLLFISH PRIVACY POLICY**
 
@@ -8,7 +8,7 @@ Pollfish values your privacy and is dedicated to the establishment of a fully tr
 
 **1. WHO WE ARE**
 
-Pollfish Inc. (hereinafter Pollfish) is a US company seated at 1460 Broadway New York, NY 10036, USA. Pollfish operates a Greek Branch (hereinafter the Branch) located at Pirri 5 Athens, Attica 11527, GR.
+Pollfish LLC. (hereinafter Pollfish) is a US company seated at 1460 Broadway New York, NY 10036, USA. Pollfish operates a Greek Branch (hereinafter the Branch) located at Pirri 5 Athens, Attica 11527, GR.
 
 **2. WHAT WE DO**
 
