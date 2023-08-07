@@ -1,6 +1,6 @@
 **PUBLISHER TERMS OF SERVICE &amp; PRIVACY POLICY**
 
-Last updated: 03/13/2023
+Last updated: 08/07/2023
 
 **WHO WE ARE**
 
