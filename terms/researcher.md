@@ -1,12 +1,12 @@
 **RESEARCHER TERMS OF SERVICE &amp; PRIVACY POLICY**
 
-Last updated: 03/16/2023
+Last updated: 08/07/2023
 
 **WHO WE ARE**
 
-Pollfish Inc. is a US company seated at 1460 Broadway New York, NY 10036, USA. Pollfish operates a Greek Branch (hereinafter &quot;the Branch&quot;) located at Pirri 5 Athens, Attica 11527, GR.
+Pollfish LLC. is a US company seated at 1460 Broadway New York, NY 10036, USA. Pollfish operates a Greek Branch (hereinafter &quot;the Branch&quot;) located at Pirri 5 Athens, Attica 11527, GR.
 
-Pollfish Inc. (&quot;Pollfish&quot; or &quot;we&quot; &quot;our&quot; or &quot;us&quot;) owns and controls Pollfish services, and provides access to the Pollfish.com website, at the url: www.pollfish.com and all subdomains under the pollfish.com domain and related properties (the &quot;Website&quot;), software, data and materials accessed via the Website (the &quot;Service(s)&quot; or &quot;Properties&quot;).
+Pollfish LLC. (&quot;Pollfish&quot; or &quot;we&quot; &quot;our&quot; or &quot;us&quot;) owns and controls Pollfish services, and provides access to the Pollfish.com website, at the url: www.pollfish.com and all subdomains under the pollfish.com domain and related properties (the &quot;Website&quot;), software, data and materials accessed via the Website (the &quot;Service(s)&quot; or &quot;Properties&quot;).
 
 **THIS AGREEMENT**
 
@@ -452,7 +452,7 @@ The present Agreement and its interpretation shall be governed by and construed 
 
 **APPENDIX A – Controller to Controller Agreement**
 
-Between Pollfish Inc. and Researcher
+Between Pollfish LLC. and Researcher
 
 **1**  Researcher hereby represents, warrants and undertakes that it will:
 
@@ -837,7 +837,7 @@ These Clauses shall be governed by the law of one of the EU Member States, provi
 
 **A.	LIST OF PARTIES**
 
-**Data exporter(s):** *Pollfish Inc.*
+**Data exporter(s):** *Pollfish LLC.*
 
 **Address:** *1460 Broadway, New York, NY 10036, USA*
 
@@ -1385,7 +1385,7 @@ These Clauses shall be governed by the law of one of the EU Member States, provi
 
 
 
-**Name:** Pollfish Inc.
+**Name:** Pollfish LLC.
 
 **Address:** 1460 Broadway, New York, NY 10036, USA
 
