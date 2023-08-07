@@ -4,7 +4,7 @@ Last updated: 03/13/2023
 
 **WHO WE ARE**
 
-Pollfish Inc. is a US company seated at 1460 Broadway New York, NY 10036, USA. Pollfish operates a Greek Branch (hereinafter &quot;the Branch&quot;) located at Pirri 5 Athens, Attica 11527, GR. ("Pollfish" or "we" "our" or "us").
+Pollfish LLC. is a US company seated at 1460 Broadway New York, NY 10036, USA. Pollfish operates a Greek Branch (hereinafter &quot;the Branch&quot;) located at Pirri 5 Athens, Attica 11527, GR. ("Pollfish" or "we" "our" or "us").
 
 Pollfish owns and controls Pollfish services, and provides access to the Pollfish.com website, at the url: www.pollfish.com and all subdomains under the pollfish.com domain and related properties (the &quot;Website&quot;), software, data and materials accessed via the Website (&quot;Properties&quot;).
 
@@ -858,7 +858,7 @@ Activities relevant to the data transferred under these Clauses: App owner
 
 Role: Controller
 
-Data importer(s): Pollfish Inc.
+Data importer(s): Pollfish LLC.
 
 Address: 1460 Broadway, New York, NY 10036, USA
 
