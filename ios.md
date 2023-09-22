@@ -1,5 +1,9 @@
-<div class="changelog" data-version="6.4.1">
-v6.4.0
+<div class="changelog" data-version="6.4.2">
+v6.4.2
+
+- Fixing carrier related issues in iOS 16
+
+v6.4.1
 
 - Fixing survey panel orientation issues
 
