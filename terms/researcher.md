@@ -1,6 +1,6 @@
 **RESEARCHER TERMS OF SERVICE &amp; PRIVACY POLICY**
 
-Last updated: 08/07/2023
+Last updated: 09/26/2023
 
 **WHO WE ARE**
 
@@ -438,9 +438,9 @@ We do not charge a fee to process or respond to your verifiable request unless i
 
 Please contact us with any questions or comments about our Privacy Policy, your personal information, our third-party disclosure practices, or your consent choices by email: support@pollfish.com
 
-Pollfish designates as its representative in the EU, who acts on Pollfish&#39;s behalf and who may be addressed by any supervisory authority and be subject to enforcement proceedings in the event of non-compliance with the GDPR by Pollifish, Mr Zissis Bellas, who can be contacted at the following address: gdpr@pollfish.com Pollfish remains fully liable under the GDPR.
+Pollfish designates as its representative in the EU, who acts on Pollfish&#39;s behalf and who may be addressed by any supervisory authority and be subject to enforcement proceedings in the event of non-compliance with the GDPR by Pollifish, Mr. Stacey Olliff, who can be contacted at the following address: gdpr@pollfish.com Pollfish remains fully liable under the GDPR.
 
-Pollfish appoints as a Data Protection Officer Mr Zissis Bellas, who can be contacted at the following addressgdpr@pollfish.com
+Pollfish appoints as a Data Protection Officer Mr. Stacey Olliff, who can be contacted at the following address: gdpr@pollfish.com
 
 **13. CHANGES AND UPDATES TO THIS AGREEMENT**
 
@@ -841,7 +841,7 @@ These Clauses shall be governed by the law of one of the EU Member States, provi
 
 **Address:** *1460 Broadway, New York, NY 10036, USA*
 
-**Contact person&#39;s name, position and contact details:** *Zissis Bellas, DPO, zissis@pollfish.com*
+**Contact person&#39;s name, position and contact details:** *Stacey Olliff, DPO, stacey.o@prodege.com*
 
 **Activities relevant to the data transferred under these Clauses:** *Online Survey Platform*
 
@@ -1389,7 +1389,7 @@ These Clauses shall be governed by the law of one of the EU Member States, provi
 
 **Address:** 1460 Broadway, New York, NY 10036, USA
 
-**Contact person&#39;s name, position and contact details:** *Zissis Bellas, DPO, zissis@pollfish.com*
+**Contact person&#39;s name, position and contact details:** *Stacey Olliff, DPO, stacey.o@prodege.com*
 
 **Activities relevant to the data transferred under these Clauses:** Online Survey Platform
 
