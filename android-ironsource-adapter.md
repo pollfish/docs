@@ -1,17 +1,22 @@
-<div class="changelog" data-version="6.4.0.0">
-V6.4.0.0
+<div class="changelog" data-version="7.0.0-beta01.0">
+v7.0.0-beta01.0
+
+- Updated with new Prodege Android SDK v7.0.0-beta01
+- Introduced placements and rewarded video ads
+
+v6.4.0.0
 
 - Updated with Pollfish Android SDK v6.4.0
 
-V6.3.3.0
+v6.3.3.0
 
 - Updated with Pollfish Android SDK v6.3.3
 
-V6.3.2.0
+v6.3.2.0
 
 - Updated with Pollfish Android SDK v6.3.2
 
-V6.3.1.0
+v6.3.1.0
 
 - Updated with Pollfish Android SDK v6.3.1
 
@@ -39,72 +44,60 @@ This guide is for publishers looking to use ironSource LevelPlay to load and sho
 
 # Prerequisites
 
-- [Pollfish Developer Account](https://www.pollfish.com/dashboard/dev/)
+- [Prodege Publisher Account](https://www.pollfish.com/dashboard/dev/)
 - [IronSource Developer Account](https://platform.ironsrc.com/partners)
 - Android API 21 or later
-- Java version 1.8
+- Java 1.8
+- Kotlin 1.9.0
 
-> **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Pollfish SDK, since Pollfish does not collect responses from users less than 16 years old
+> **Note:** Apps designed for [Children and Families program](https://play.google.com/about/families/ads-monetization/) should not be using Prodege SDK, since Prodege does not collect responses from users less than 16 years old.
 
-> **Note:** Pollfish SDK requires minSdk 21. If your app supports a lower minSdk you can still build your app.
-
-<details><summary> ➤ For apps with minSDK lower than 21 please follow the steps here (Click to expand)</summary>
-
-**AndroidManifest.xml**
-
-```xml
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    ... >
-
-    <uses-sdk tools:overrideLibrary="com.pollfish" />
-
-    <application
-	... >
-        ...
-    </application>
-```
-
-**app/build.gradle**
-
-```groovy
-defaultConfig {
-    ...
-    multiDexEnabled true
-}
-
-dependencies {
-    ...
-    implementation 'androidx.multidex:multidex:2.0.1'
-}
-```
-
-</details>
+> **Note:** Prodege SDK requires minSdk 21. If your app supports a lower minSdk you can still build your app please refer to section 7.
 
 </br>
 
 # Quick Guide
 
+- Set up Prodege Rewarded Ads
 - Set up IronSource Rewarded Ads
-- Set up Pollfish
-- Add Pollfish IronSource Adapter to your project
+- Add Prodege IronSource Adapter to your project
 - Publish your app
 
 <br/>
 
 # Analytical Steps
 
-Below you can find a step by step guide on how to incorporate Pollfish surveys with IronSource mediation:
+Below you can find a step by step guide on how to incorporate Prodege surveys with IronSource mediation:
 
-## 1. Set up IronSource Rewarded Ads
+## 1. Set Up Prodege Rewarded Ads
 
-### 1.1. Add Pollfish Network
+### 1.1. Obtain a Publisher Account
 
-First you need to sign in to your [IronSource account](https://platform.ironsrc.com/partners). Add Pollfish Network as a **Custom Network**. On the side menu navigate to Monetize -> Setup -> SDK Netwokrs
+Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher).
+
+<br/>
+
+### 1.2. Add new app on the Publisher Dashboard and copy the given API Key
+
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on the [Publisher Dashboard](https://www.pollfish.com/publisher/). Copy then the given API key for this app in order to use later on.
+
+<br/>
+
+### 1.3. Create a Rewarded Ad Placement and copy the given Placement Id
+
+Create a Rewarded placement by clicking "Create a Placement". Provide a name an select the ad unit and ad format. Copy the given placement id in order to use later on.
+
+<br/>
+
+## 2. Set up IronSource Rewarded Ads
+
+### 2.1. Add Prodege Network
+
+First you need to sign in to your [IronSource account](https://platform.ironsrc.com/partners). Add Prodege Network as a **Custom Network**. On the side menu navigate to Monetize -> Setup -> SDK Netwokrs.
 
 Select you application from the Applications list and on the top of the page you will find a **Manage Networks** button. Click it and then click on the **Custom Adapter** option. 
 
-Type **`15baf95f5`** as the Custom Adapter Network key on the input prompt and click **Enter Key**. 
+Type **`15bfa4f19`** as the Custom Adapter Network key on the input prompt and click **Enter Key**. 
 
 <br/>
 
@@ -112,8 +105,8 @@ Type **`15baf95f5`** as the Custom Adapter Network key on the input prompt and c
 
 <br/>
 
-You will be prompted to enter your Pollfish Reporting Key.
-You can retrieve your account key by loging in to Pollfish Publisher account and navigating to your **Account information**.
+You will be prompted to enter your Prodege Reporting Key.
+You can retrieve your account key by loging in to the [Publisher Dashboard](https://www.pollfish.com/publisher/) and navigating to your **Account information**.
 
 <br/>
 
@@ -125,7 +118,7 @@ You can retrieve your account key by loging in to Pollfish Publisher account and
 
 <br/>
 
-Select **Reporting API** for revenue reporting and click **Save**. You will find your newly added Network under the name **Pollfish** on each app's mediation network list.
+Select **Reporting API** for revenue reporting and click **Save**. You will find your newly added Network under the name **Prodege** on each app's mediation network list.
 
 <br/>
 
@@ -133,41 +126,54 @@ Select **Reporting API** for revenue reporting and click **Save**. You will find
 
 <br/>
 
-Configure Pollfish Network by clicking on the **Setup** button on the **Pollfish** network row from your App's Network list.
+Configure Prodege Network by clicking on the **Setup** button on the **Prodege** network row from your App's Network list.
 
 Fill the following input fields.
 
-Key | Type
--------------| -------------
-**1.1.1. `api_key`** <br/> Sets Pollfish SDK API key as provided by Pollfish | String
-**1.1.2. `request_uuid`** <br/> Sets a pass-through param to be received via the server-to-server callbacks | String
-**1.1.3. `release_mode`** <br/> Sets Pollfish SDK to Developer or Release mode | Boolean
-**1.1.4. `oferrwall_mode`** <br/> Sets Pollfish SDK to Oferwall Mode | Boolean
+| Key                                                                                                                                                             | Level    | Type    | Nullable |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|---------|----------|
+| **2.1.1. `api_key`** <br/> Your application's API key as provided by the [Publisher Dashboard](https://www.pollfish.com/publisher/).                            | App      | String  | No       |
+| **2.1.2. `test_mode`** <br/> Toggles the Prodege SDK Test mode.                                                                                                 | App      | String  | Yes      |
+| **2.1.3. `placement_id`** <br/> Your ad unit's placement id as provided by the [Publisher Dashboard](https://www.pollfish.com/publisher/).                      | Instance | String  | No       |
+| **2.1.4. `request_uuid`** <br/> Sets a pass-through param to be received via the server-to-server callbacks [s2s callbacks](https://www.pollfish.com/docs/s2s). | Instance | String  | Yes      |
+| **2.1.5. `muted`** <br/> Toggles Prodege video ads mute state.                                                                                                  | Instance | Boolean | Yes      |
 
 <br/>
 
-### 1.1.1 `api_key`
+### 2.1.1 `api_key`
 
-Pollfish API Key as provided by Pollfish on [Pollfish Dashboard](https://www.pollfish.com/publisher/) after you sign up to the platform.
+Your application's API key as provided by the [Publisher Dashboard](https://www.pollfish.com/publisher/).
 
-### 1.1.2 `request_uuid` or `null`
+<br/>
 
-Sets a pass-through param to be received via the server-to-server callbacks
+### 2.1.2 `test_mode`
 
-In order to register for such callbacks you can set up your server URL on your app's page on Pollfish Developer Dashboard and then pass your requestUUID through ParamsBuilder object during initialization. On each survey completion you will receive a callback to your server including the requestUUID param passed.
+Toggles the Prodege SDK Test mode.
 
-If you would like to read more on Pollfish s2s callbacks you can read the documentation [here](https://www.pollfish.com/docs/s2s)
+- **`true`** is used to show to the developer how Prodege ads will be shown through an app (useful during development and testing).
+- **`false`** is the mode to be used for a released app in any app store (start receiving paid surveys).
 
-### 1.1.3. `release_mode`
+<br/>
 
-Sets Pollfish SDK to Developer or Release mode.
+### 2.1.3 `placement_id`
 
-*   **Developer mode** is used to show to the developer how Pollfish surveys will be shown through an app (useful during development and testing).
-*   **Release mode** is the mode to be used for a released app in any app store (start receiving paid surveys).
+Your ad unit's placement id as provided by the [Publisher Dashboard](https://www.pollfish.com/publisher/).
 
-### 1.1.4 `oferrwall_mode`
+<br/>
 
-Enables offerwall mode. If not set, one single survey is shown each time.
+### 2.1.4 `request_uuid` or `null`
+
+Sets a pass-through param to be received via the server-to-server callbacks.
+
+In order to register for such callbacks you can set up your server URL on your app's page on [Publisher Dashboard](https://www.pollfish.com/publisher/). On each conversion you will receive a callback to your server including the requestUUID param passed.
+
+If you would like to read more on s2s callbacks you can read the documentation [here](https://www.pollfish.com/docs/s2s)
+
+<br/>
+
+### 2.1.5. `muted`
+
+Sets Prodege video ads mute state.
 
 <br/>
 
@@ -179,83 +185,45 @@ After adding the above required info click **Save**
 
 <br/>
 
-### 1.2. Add IronSource SDK to your porject
+## 3. Add Prodege IronSource Adapter to your project
 
-Retrieve IronSource SDK through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in dependencies section:
+### **3.1. Retrieve Prodege IronSource Adapter through maven()**
+
+Retrieve Prodege IronSource Adapter through **maven()** with gradle by adding the following line in your app's module **build.gradle** file:
 
 ```groovy
 dependencies {
-    implementation 'com.applovin:applovin-sdk:11.1.2'
+    implementation 'com.prodege.mediation:prodege-ironsource:7.0.0-beta01.0'
 }
 ```
 
 <br/>
 
-## 2 Set Up Pollfish
+### **3.2. Manual installation**
 
-### 2.1. Obtain a Developer Account
-
-Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher)
+> **Note:** If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .aar Package option and from the file browser locate the `.aar` file. Right click again on your project and in the Module Dependencies tab choose to add the module that you recently added, as a dependency.
 
 <br/>
 
-### 2.2. Add new app on Pollfish Publisher Dashboard and copy the given API Key
+### 3.2.1. Download Prodege Android IronSource Adapter `.aar` file and import it into your project's libraries
 
-Login at [www.pollfish.com](www.pollfish.com/login/publisher) and click "Add a new app" on Pollfish Publisher Dashboard. Copy then the given API key for this app in order to use later on, when initializing Pollfish within your code.
-
-<br/>
-
-## 2.3. Add Pollfish SDK to your project
-
-Download Pollfish Android SDK or reference it through maven().
-
-**Download Pollfish Android SDK**
-
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.2.5.zip) to download the latest version of Pollfish Android SDK 
-
-**Import Pollfish `.aar` file to your project libraries**
-
-If you are using Android Studio, right click on your project and select New Module. Then select Import .jar or .aar Package option and from the file browser locate Pollfish aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
-
-**Integrate Google Play Services to your project**
-
-Applications that integrate Pollfish SDK are required to include Google Play Services library in order to give access to the Advertising ID of a device to the SDK. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup).
-
-```groovy
-dependencies {
-    implementation 'com.google.android.gms:play-services-ads-identifier:17.0.0'
-}
-```
-
-**OR**
-
-**Retrieve Pollfish Android SDK through maven()**
-
-Retrieve Pollfish through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in dependencies section:
-
-```groovy
-dependencies {
-    implementation 'com.pollfish:pollfish-googleplay:6.4.0'
-}
-```
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/AdMob/Pollfish%20Android%20AdMob%20Adapter-6.4.0.0.zip) to download the latest version of Prodege Android IronSource Adapter SDK.
 
 <br/>
 
-## 3. Add Pollfish IronSource Adapter to your project
+### 3.2.2. Download Prodege Android SDK `.aar` file and import it into your project's libraries
 
-Import Pollfish IronSource Adapter **.aar** file to your project libraries  
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Pollfish%20Google%20Play%20Android%20SDK-6.4.0.zip) to download the latest version of Prodege Android SDK 
 
-If you are using Android Studio, right click on your project and select New Module. Then select Import .JAR or .aar Package option and from the file browser locate Pollfish MoPub Adapter aar file. Right click again on your project and in the Module Dependencies tab choose to add Pollfish module that you recently added, as a dependency.
+<br/>
 
-**OR**
+### 3.2.3. Integrate Google Play Services to your project (Optional)
 
-**Retrieve Pollfish IronSource Adapter through maven()**
-
-Retrieve Pollfish IronSource Adapter through **maven()** with gradle by adding the following line in your project **build.gradle** (not the top level one, the one under 'app') in  dependencies section:  
+Applications that integrate Prodege SDK may use Google Play Services library in order to give access to the Advertising ID of a device to the SDK. Further details regarding integration with the Google Play services library can be found [here](https://developers.google.com/android/guides/setup). By skipping this step you have to provide a userId during initialization. Refer to section 6 for more details.
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish.mediation:pollfish-ironsource:6.4.0.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
 }
 ```
 
@@ -277,11 +245,11 @@ You can read more about Google Advertising ID changes [here](https://support.goo
 
 <br/>
 
-> **Note:** If you have already implemented Rewarded Ads in your app you can skip this step
+> **Note:** If you have already implemented Rewarded Ads in your app you can skip this step.
 
 <br/>
 
-IImport the following packages
+Import the following packages.
 
 <span style="text-decoration:underline">Kotlin</span>
 
@@ -365,7 +333,7 @@ if (IronSource.isRewardedVideoAvailable())
 
 <br/>
 
-You can view a short example on how to intergate rewarded ads below
+You can view a short example on how to intergate rewarded ads below.
 
 <span style="text-decoration:underline">Kotlin</span>
 
@@ -373,7 +341,7 @@ You can view a short example on how to intergate rewarded ads below
 class MainActivity : AppCompatActivity(), RewardedVideoListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        ...
+        // ...
 
         IntegrationHelper.validateIntegration(this)
         IronSource.setRewardedVideoListener(this)
@@ -381,13 +349,13 @@ class MainActivity : AppCompatActivity(), RewardedVideoListener {
     }
 
     override fun onResume() {
-        ...
+        // ...
 
         IronSource.onResume(this)
     }
 
     override fun onPause() {
-        ...
+        // ...
 
         IronSource.onPause(this)
     }
@@ -423,7 +391,7 @@ class MainActivity extends AppCompatActivity implements RewardedVideoListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        ...
+        // ...
 
         IntegrationHelper.validateIntegration(this);
         IronSource.setRewardedVideoListener(this);
@@ -432,14 +400,14 @@ class MainActivity extends AppCompatActivity implements RewardedVideoListener {
 
     @Override
     protected void onResume() {
-        ...
+        // ...
         
         IronSource.onResume(this);
     }
 
     @Override
     protected void onPause() {
-        ...
+        // ...
 
         IronSource.onPause(this);
     }
@@ -480,37 +448,119 @@ class MainActivity extends AppCompatActivity implements RewardedVideoListener {
 
 ## 5. Publish your app on the store
 
-If you everything worked fine during the previous steps, you should turn Pollfish to release mode and publish your app.
+If everything worked fine during the previous steps, you are ready to proceed with publishing your app.
 
-> **Note:** After you take your app live, you should request your account to get verified through Pollfish Dashboard in the App Settings area.
+> **Note:** After you take your app live, you should request your account to get verified through the [Publisher Dashboard](https://www.pollfish.com/publisher/) in the App Settings area.
 
-> **Note:** There is an option to show **Standalone Demographic Questions** needed for Pollfish to target users with surveys even when no actually surveys are available. Those surveys do not deliver any revenue to the publisher (but they can increase fill rate) and therefore if you do not want to show such surveys in the Waterfall you should visit your **App Settings** are and disable that option. You can read more [here](https://www.pollfish.com/docs/demographic-surveys)
+> **Note:** There is an option to show **Standalone Demographic Questions** needed for Prodege to target users with surveys even when no actually surveys are available. Those surveys do not deliver any revenue to the publisher (but they can increase fill rate) and therefore if you do not want to show such surveys in the Waterfall you should visit your **App Settings** are and disable that option. You can read more [here](https://www.pollfish.com/docs/demographic-surveys).
 
 <br/>
 
 # Optional section
 
-## 6. Payouts on Screenouts
+## 6. Configure the Prodege SDK programmatically
+
+Prodege IronSource Adapter provided a couple of options you can use to control the behaviour of Prodege SDK. Any configuration, if applied, will override the corresponding configuration done in IronSource's dashboard.
+
+### **6.1. `.setUserId(String)`**
+
+An optional id used to identify a user.
+
+Setting the Prodege's `userId` will override the default behaviour and use that instead of the Advertising Id in order to identify a user.
+
+> **Note:** <span style="color: red">You can pass the id of a user as identified on your system. Prodege will use this id to identify the user across sessions instead of an ad id/idfa as advised by the stores. You are solely responsible for aligning with store regulations by providing this id and getting relevant consent by the user when necessary. Prodege takes no responsibility for the usage of this id. In any request from your users on resetting/deleting this id and/or profile created, you should be solely liable for those requests.</span>
+
+<span style="text-decoration:underline">Kotlin</span>
+
+```kotlin
+ProdegeCustomAdapter.setUserId("USER_ID")
+```
+
+<span style="text-decoration:underline">Java</span>
+
+```java
+ProdegeCustomAdapter.setUserId("USER_ID");
+```
+
+<br/>
+
+### **6.2. `.setTestMode(Boolean)`**
+
+- **`true`** is used to show to the developer how Prodege ads will be shown through an app (useful during development and testing).
+- **`false`** is the mode to be used for a released app in any app store (start receiving paid surveys).
+
+If you have already specified the test mode on IronSource's UI, this will override the one defined on Web UI.
+
+Prodege IronSource Adapter works by default in live mode. If you would like to test with test ads:
+
+<span style="text-decoration:underline">Kotlin</span>
+
+```kotlin
+ProdegeCustomAdapter.setTestMode(true)
+```
+
+<span style="text-decoration:underline">Java</span>
+
+```java
+ProdegeCustomAdapter.setTestMode(true);
+```
+
+<br/>
+
+## 7. Minimum SDK version
+
+Prodege SDK requires at minimum Android API 21 in order to work. You can still build your app if your app minimum target is lower than 21.
+
+**AndroidManifest.xml**
+
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-sdk tools:overrideLibrary="com.prodege" />
+
+    <!-- ... -->
+```
+
+**app/build.gradle**
+
+```groovy
+defaultConfig {
+    // ...
+
+    multiDexEnabled true
+}
+
+dependencies {
+    // ...
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+}
+```
+
+<br/>
+
+## 8. Payouts on Screenouts
 
 In Market Research monetization users can get screened out within the survey since the Researcher might be looking a different user based on the provided answers. Screenouts do not deliver any revenue for the publisher nor any reward for the users. If you would like to activate payouts on screenouts too please follow the steps as described [here](https://www.pollfish.com/docs/pay-on-screenouts).
 
 <br/>
 
-## 7. Proguard
+## 9. Proguard
 
 If you use proguard with your app, please insert the following lines in your proguard configuration file:  
 
 ```java
--dontwarn com.pollfish.**
--keep class com.pollfish.** { *; }
+-dontwarn com.prodege.**
+-keep class com.prodege.** { *; }
 ```
 
 <br/>
 
 # More info
 
-You can read more info on how the Pollfish SDKs work or how to get started with IronSource at the following links:
+You can read more info on how the Prodege SDKs work or how to get started with IronSource at the following links:
 
-[Pollfish Android SDK](https://pollfish.com/docs/android/google-play)
+[Prodege Android SDK](https://pollfish.com/docs/android/google-play)
 
 [IronSource Android SDK](https://developers.is.com/ironsource-mobile/android/android-sdk)
