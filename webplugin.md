@@ -133,6 +133,7 @@ Below you can see an example of the pollfishConfig object with all the recommend
 var pollfishConfig = {
   api_key: "api_key_goes_here",
   user_id: "user_id_here",
+  placement_key: "placement_key_here",
   debug: true,
   offerwall: false,
   request_uuid: "string_uuid",
