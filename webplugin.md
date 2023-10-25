@@ -34,7 +34,11 @@ Register at [www.pollfish.com](//www.pollfish.com) as a Developer.
 
 Login at [www.pollfish.com](//www.pollfish.com) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your pollfishConfig object in your app.
 
-### 3\. Set up the pollfishConfig object
+### 3\. Create a new placement and copy the given Placement Id
+
+Navigate in your Pollfish Dashboard under App Settings - Placements and choose "Create a Placement". You can select a Rewarded Ad or an Offerwall approach based on your placement needs with any of the available Ad Formats(it can change later through placement settings). Hit "Create Placement" and keep the created Placement Id.
+
+### 4\. Set up the pollfishConfig object
 
 **IMPORTANT: Pollfish will autostart serving surveys once the pollfishConfig object is set, with a valid api key. Although it is recommended to start displaying surveys after a click action.**
 
@@ -214,7 +218,7 @@ function customSurveyNotAvailable(){
 You can check the webplugin rewarded example in the following repository:
 [https://github.com/pollfish/webplugin-rewarded-example](https://github.com/pollfish/webplugin-rewarded-example)
 
-### 4\. Include the necessary files in your website
+### 5\. Include the necessary files in your website
 
 Include the jQuery library with version greater or equal than 1.4.3 if it's not already included, as the example below:
 
@@ -248,7 +252,7 @@ Then include the Pollfish Webplugin, as the example below:
 
 After the ready callback is called, you can open the full survey panel, as described in the next section.
 
-### 5\. Show & hide Pollfish Webplugin explicitly
+### 6\. Show & hide Pollfish Webplugin explicitly
 
 **Show the survey panel so that the user can respond immediately**  
 
@@ -264,7 +268,7 @@ _If you call Pollfish.showFullSurvey and there is no available survey, they will
 Pollfish.hide();
 ```
 
-#### 6\. Explicitly re-initialise Pollfish Webplugin
+#### 7\. Explicitly re-initialise Pollfish Webplugin
 
 After a user successfully completes a survey or gets screened out, you might want to allow your user to receive another survey.
 This could be achieved by calling Pollfish.restart which will request a new survey for the user.
