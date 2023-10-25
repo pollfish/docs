@@ -104,6 +104,10 @@ Navigate in your Pollfish Dashboard under App Settings - Placements and choose "
     
     **Note 2**: In order to minimize fraudulent use of this property, it will be **ignored by default**. You will need to           contact our support team and request extra authorization to send your own demographics.
 
+12.  <span class="params"><b>placement_key</b> (required)</span>
+
+The Id of the Placement that you want to load (from step 3). The settings configured on the specific Placement will apply in your integration.
+
 ### Other pollfishConfig object callback options (optional)
 
 Pollfish Webplugin provides some callback functions to call when specific actions are executed in the Pollfish survey.
