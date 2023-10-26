@@ -19,7 +19,7 @@ In our efforts to include publishers in this process and be as transparent as po
 
 1) By monitoring the process in code and excluding any users by listening to the relevant notifications (Pollfish Survey Received, Pollfish Survey Completed) and checking the Pay Per Survey (PPS) field which will be 0 USD cents. Bear in mind that by filtering out all surveys with PPS 0 will also stop all free internal surveys, since they also have a PPS of 0.
 
-2) By providing an option to disable Standalone Demographic Surveys through the Settings section of an app on Pollfish Developer Dashboard, without the need to make any changes in code. (Changes are effective immediately.)
+2) By providing an option to disable Standalone Demographic Surveys through the Survey Settings section of a Placement on Pollfish Developer Dashboard, without the need to make any changes in code. (Changes are effective immediately.)
 
 ![alt text](https://user-images.githubusercontent.com/2513939/67956242-6c5ee700-fbfc-11e9-87bf-2d408115829d.png)
 
