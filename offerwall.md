@@ -33,7 +33,7 @@ Below, you can see a list of all the logical steps needed, in order to show Poll
 
 <h3>1. Customize Offerwall Settings through Pollfish Dashboard</h3>
 
-In the App Settings area of your Dashboard, you should visit the Offerwall area and set your preferred settings.
+In the App Settings area of your Dashboard, you should create an Offerwall Placement and set your preferred settings.
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/dashboard_offerwall.png" width="460" height="auto"/>
 
@@ -54,7 +54,7 @@ You can customize the following settings:
 
 <h3>2. Customize Mediation Network Settings</h3>
 
-In the Mediation Settings area of your Dashboard you can customize the type of surveys you would like to see within the offerwall. You can enable or disable providers, set price floors per network, maxiumum length of survey, minimum aceptable conversion rate and even filter out surveys based on keywords!
+In the Survey settings of an Offerwall Placement you can customize the type of surveys you would like to see within the offerwall. You can enable or disable providers, set price floors per network, maxiumum length of survey, minimum aceptable conversion rate and even filter out surveys based on keywords!
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/mediation_latest.png" width="600" height="auto"/>
 
@@ -102,7 +102,7 @@ You can register and listen for Pollfish survey completed notifications/listener
 
 <h3>8. Register for server-to-server (s2s) callbacks on survey completion</h3>
 
-In order to avoid user fraud it is strongly adviced to register a server-to-server callback on Pollfish Developer Dashboard in order to receive a relevant notification on your server side upon survey completion. Once this notification is receivedm you can reward your users.
+In order to avoid user fraud it is strongly adviced to register a server-to-server callback on Pollfish Developer Dashboard in order to receive a relevant notification on your server side upon survey completion. Once this notification is received you can reward your users.
 
 You can find detailed information on how to set up server-to-server callbacks [here](https://www.pollfish.com/docs/s2s)
 
