@@ -345,7 +345,7 @@ Retrieve Prodege AdMob Adapter through **maven()** with gradle by adding the fol
 
 ```groovy
 dependencies {
-  implementation 'com.pollfish.mediation:prodege-admob:7.0.0-beta01.0'
+  implementation 'com.prodege.mediation:prodege-admob:7.0.0-beta01.0'
 }
 ```
 
@@ -781,6 +781,6 @@ If you use proguard with your app, please insert the following lines in your pro
 
 You can read more info on how the Prodege SDKs work or how to get started with Google AdMob at the following links:
 
-[Prodege Android SDK](https://pollfish.com/docs/android/google-play)
+[Prodege Android SDK](https://pollfish.com/docs/android-v7)
 
 [AdMob Android SDK](https://developers.google.com/admob/android/quick-start)

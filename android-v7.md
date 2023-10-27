@@ -62,7 +62,7 @@ Retrieve Prodege SDK through **maven()** with gradle by adding the following lin
 
 ```groovy
 dependencies {
-    implementation 'com.pollfish:prodege:7.0.0-beta01'
+    implementation 'com.prodege:prodege:7.0.0-beta01'
 }
 ```
 
