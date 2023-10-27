@@ -16,7 +16,11 @@ at [www.pollfish.com/publisher](https://www.pollfish.com/login/publisher)
 Login at [www.pollfish.com/publisher](http://www.pollfish.com/publisher) and click "Add a new app" on Pollfish Developer Dashboard in section "My Apps". 
 Copy the given API key for this app in order to use later on, when initializing Pollfish within your code.
 
-### 3. Request a new survey from Pollfish servers
+### 3. Create a new placement and copy the given Placement Id
+
+Navigate in your Pollfish Dashboard under App Settings - Placements and choose "Create a Placement". You can select a Rewarded Ad or an Offerwall approach based on your placement needs with any of the available Ad Formats(it can change later through placement settings). Hit "Create Placement" and keep the created Placement Id.
+
+### 4. Request a new survey from Pollfish servers
 
 #### SERVER REGISTER
 
@@ -148,6 +152,7 @@ https://wss.pollfish.com/v2/device/register/true?json={}&dontencrypt=true&sig="s
 |72 | **click_id** | String | A pass-through param that will be passed back through s2s callback | "aRandomClickId" | No | No
 |73 | **sortBy** | String | Select the sorting parameter of the survey list | reward / loi / ir | No | No
 |74 | **order**  | String | Select the sorting direction of the survey list | asc / desc      | No | No  
+|75 | **placement_key**  | String | The Id of the Placement that you want to load (from step 3). The settings configured on the specific Placement will apply in your integration |       | No | Yes  
 </br>
 
 ### Notes for `device_id` (4)
@@ -214,7 +219,7 @@ $sig = base64_encode(hash_hmac("sha1" , "$reward_conversion$reward_name$click_id
 
 ### Notes for `content_type` (70)
 
-In order to get a list of surveys for the json offerwall integration you are required to set **"offerwall"** parameter to **"true"** and **"content_type"** parameter to **"json"**.
+In order to get a list of surveys for the json offerwall integration you are required to set **"offerwall"** parameter to **"true"**, **"content_type"** parameter to **"json"** and **"placement_key"** should have the Id of a Rewarded Ad Placement. Settings of the specific Placement will apply on each survey that the users enter through the returned "survey_link".
 This way you can retrieve a longer list of surveys than the html version (limited to 60), along with an HTTP responce code of 200. If no matching surveys are found then the response body will be empty with an HTTP response code of 204.
 
 When the necessary demographics are not know for a specific device id (a user) then the the response will contain one "Demographic Survey" and the flag **"hasDemographics"** will be set to false. This Demographic survey (**"survey_class":"Pollfish/Demographics"** ), is part of the onboarding process of the user and it does not deliver any revenue when it gets completed (CPA =0). When a Demographic survey is presented, the users has to answer all the demographic questions in order to unlock the list of Pollfish and Mediation surveys. New demographic questions might be added from time to time (or re-asked) and surveys might be locked again until those are answered in the relevant demographic survey.
@@ -430,7 +435,7 @@ and present only if the LOI can be computed reliably.
 
 A displayable HTML page
 
-## 4. Server-to-server callbacks  (Optional)
+## 5. Server-to-server callbacks  (Optional)
 
 You can register and listen for two server-to-server callback events:
 
@@ -456,7 +461,7 @@ that param to the callback structure as explained in the link above.
   </tr>
 </table>
 
-## 5. Events (Optional) - Single Survey
+## 6. Events (Optional) - Single Survey
 
 When the html file loads on the user side, there are
 several javascript events that can be fired through the lifetime of a
@@ -560,7 +565,7 @@ integration here : <https://github.com/pollfish/api-pollfish>
     }
 </style>
 
-## 6. Events (Optional) - Offerwall
+## 7. Events (Optional) - Offerwall
 
 When the html file loads on the user side, there are
 several javascript events that can be fired through the lifetime of a
@@ -633,7 +638,7 @@ integration here : <https://github.com/pollfish/api-offerwall-example>
 
 
 
-## 7. Request your account to get verified
+## 8. Request your account to get verified
 
 After you take live the API in release mode (set **"debug":false** or remove debug param from the URL), you should request your account to get verified from your Pollfish Developer Dashboard.
 

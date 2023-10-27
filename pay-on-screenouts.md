@@ -3,7 +3,7 @@
 
 Pay on Screenouts is a feature provided by Pollfish in order to allow partners to have more predictable revenue. This feature aims to overcome Market Research monetization limitations where users can get screened out from a survey and not get a reward even if they intent to honestly fill one.
 
-With focus on providing an optimal user experience, respecting users' time and ensuring revenue in every session, partners can enable Pay on Screenouts feature per Mediation Network per app through their Dashboard. Pay on Screenouts feature distributes in a more fair way, revenue from successful survey completes, in every session including on screenouts with a small compromise in the payout in survey completion. No minimum payouts or price floors are applied in that case.
+With focus on providing an optimal user experience, respecting users' time and ensuring revenue in every session, partners can enable Pay on Screenouts feature per Mediation Network per Placement through their Dashboard. Pay on Screenouts feature distributes in a more fair way, revenue from successful survey completes, in every session including on screenouts with a small compromise in the payout in survey completion. No minimum payouts or price floors are applied in that case.
 
 > **Note:**  Payable screenouts are screenouts that happened because the user got screened out for different reasons such as profiling, screenout on a screening question, quota full, survey closed and other reasons that took time from the user who was trying to answer honestly but did not manage to successfully complete the survey. Screenouts due to fraud, quality, VPN or security are not payable. 
 
@@ -11,7 +11,7 @@ With focus on providing an optimal user experience, respecting users' time and e
 
 <h2>Activating Pay on Screenouts</h2>
 
-Publishers can visit their Dashboard in the <i>Settings-Mediation Settings</i> area and <b>Enable</b> or <b>Disable</b> Pay on Screenouts feature per Mediation Network per App. 
+Publishers can visit their Dashboard in the *App Settings-Placement-Survey Settings* area and <b>Enable</b> or <b>Disable</b> Pay on Screenouts feature per Mediation Network per Placement. 
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/enable_pay.png" width="650" height="auto"/>
 
@@ -24,7 +24,7 @@ In the same section the publisher can  review the current rates on payments for 
 
 <h2>User Experience</h2>
 
-If publishers would like to deliver a reward to their users on screenouts and prompt them within the survey's UI, they should enable the <i>Reward Settings</i> setting, depending on their integration approach, in the <i>Settings-App Settings</i> area of their app.
+If publishers would like to deliver a reward to their users on screenouts and prompt them within the survey's UI, they should enable the <i>Reward Settings</i> setting, depending on their integration approach, in the *App Settings-Placement-Survey Settings* area of their app.
 
 <p align="center"><img style="margin: 0 auto; display: block;" src="https://storage.googleapis.com/pollfish_production/doc_images/reward_settings.png" width="320" height="auto"/>
 

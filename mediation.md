@@ -11,7 +11,7 @@ Pollfish internal mediation algorithm optimizes to distribute the best convertin
 
 <h2>Mediation Settings</h2>
 
-Publishers can log in to their Pollfish Dashboard and enable or disable any survey provider that they do not like through their apps without the need for any changes in code. Mediation settings are applied per app.
+Publishers can log in to their Pollfish Dashboard and enable or disable any survey provider that they do not like through their apps without the need for any changes in code. Mediation settings are applied per Placement.
 
 Publishers can also change through their Dashboard per mediation network the following settings:
 
@@ -38,7 +38,7 @@ Mediation Router automatically looks for a new survey when a user gets screened 
 <p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/router.gif" width="500" height="auto"/>
 </p>
 
-Publishers have also the ability to select from their app's settings the number of times a user should be allowed to get a new survey opportunity, if got screened out while trying to complete a survey.
+Publishers have also the ability to select from their Survey Placement's settings the number of times a user should be allowed to get a new survey opportunity, if got screened out while trying to complete a survey.
 
 <p align="center"><img style="margin: 0 auto; display: block;  border: 1px solid #eeeeee;" src="https://storage.googleapis.com/pollfish_production/other/set_router.png" width="700" height="auto"/>
 </p>

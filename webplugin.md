@@ -34,7 +34,11 @@ Register at [www.pollfish.com](//www.pollfish.com) as a Developer.
 
 Login at [www.pollfish.com](//www.pollfish.com) and add a new app at Pollfish panel in section My Apps and copy the given API key for this app to use later in your pollfishConfig object in your app.
 
-### 3\. Set up the pollfishConfig object
+### 3\. Create a new placement and copy the given Placement Id
+
+Navigate in your Pollfish Dashboard under App Settings - Placements and choose "Create a Placement". You can select a Rewarded Ad or an Offerwall approach based on your placement needs with any of the available Ad Formats(it can change later through placement settings). Hit "Create Placement" and keep the created Placement Id.
+
+### 4\. Set up the pollfishConfig object
 
 **IMPORTANT: Pollfish will autostart serving surveys once the pollfishConfig object is set, with a valid api key. Although it is recommended to start displaying surveys after a click action.**
 
@@ -100,6 +104,10 @@ Login at [www.pollfish.com](//www.pollfish.com) and add a new app at Pollfish pa
     
     **Note 2**: In order to minimize fraudulent use of this property, it will be **ignored by default**. You will need to           contact our support team and request extra authorization to send your own demographics.
 
+12.  <span class="params"><b>placement_key</b> (required)</span>
+
+The Id of the Placement that you want to load (from step 3). The settings configured on the specific Placement will apply in your integration.
+
 ### Other pollfishConfig object callback options (optional)
 
 Pollfish Webplugin provides some callback functions to call when specific actions are executed in the Pollfish survey.
@@ -125,6 +133,7 @@ Below you can see an example of the pollfishConfig object with all the recommend
 var pollfishConfig = {
   api_key: "api_key_goes_here",
   user_id: "user_id_here",
+  placement_key: "placement_key_here",
   debug: true,
   offerwall: false,
   request_uuid: "string_uuid",
@@ -214,7 +223,7 @@ function customSurveyNotAvailable(){
 You can check the webplugin rewarded example in the following repository:
 [https://github.com/pollfish/webplugin-rewarded-example](https://github.com/pollfish/webplugin-rewarded-example)
 
-### 4\. Include the necessary files in your website
+### 5\. Include the necessary files in your website
 
 Include the jQuery library with version greater or equal than 1.4.3 if it's not already included, as the example below:
 
@@ -248,7 +257,7 @@ Then include the Pollfish Webplugin, as the example below:
 
 After the ready callback is called, you can open the full survey panel, as described in the next section.
 
-### 5\. Show & hide Pollfish Webplugin explicitly
+### 6\. Show & hide Pollfish Webplugin explicitly
 
 **Show the survey panel so that the user can respond immediately**  
 
@@ -264,7 +273,7 @@ _If you call Pollfish.showFullSurvey and there is no available survey, they will
 Pollfish.hide();
 ```
 
-#### 6\. Explicitly re-initialise Pollfish Webplugin
+#### 7\. Explicitly re-initialise Pollfish Webplugin
 
 After a user successfully completes a survey or gets screened out, you might want to allow your user to receive another survey.
 This could be achieved by calling Pollfish.restart which will request a new survey for the user.
@@ -282,7 +291,7 @@ We invite you to check and comply with the respondent’s terms of use. Pollfish
 
 ### Add the following paragraph to your app's privacy policy
 
-*“This website uses Pollfish web plugin. Pollfish is an on-line survey platform, through which, anyone may conduct surveys. Pollfish collaborates with Developers of applications for smartphones and website owners in order to have access to users of such applications/websites and address survey questionnaires to them. This website uses and enables Pollfish cookies. When a user connects to this website, Pollfish detects whether the user is eligible for a survey. Data collected by Pollfish will be associated with your answers to the questionnaires whenever Pollfish sents such questionnaires to eligible users. For a full list of data received by Pollfish through this website, please read carefully Pollfish respondent terms located at https://www.pollfish.com/terms/respondent. By using this website you accept this privacy policy document and you hereby give your explicit consent for the placement of a Pollfish cookie in your system and the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by using the Pollfish “opt out section” available on Pollfish website or by disabling “third party cookies” from your browser’s settings. We once more invite you to check the Pollfish respondent’s terms of use, if you wish to have more detailed view of the way Pollfish works.*
+*“This website uses Pollfish web plugin. Pollfish is an on-line offer platform, through which, app users are exposed to market research surveys and/or third-party ads (“Offers”). . Pollfish collaborates with publishers of applications for smartphones and website owners in order to have access to users of such applications and address Offers to them. This website uses and enables Pollfish cookies in order for Pollfish to be able to serve Offers through our website. Pollfish collects and processes your data in accordance with all applicable law requirements. For a full list of data received by Pollfish through this app, and for further information on how Pollfish processes such data please read carefully Pollfish’s Privacy Policy for users of Apps collaborating with Pollfish available at https://www.pollfish.com/terms/respondent. Your data may be transferred by Pollfish to non-EEA countries in accordance with all applicable law requirements, including use of EU Commission Standard Contractual Clauses. Pollfish may share such data with third parties, clients and business partners, for commercial purposes. By using this website you accept this privacy policy document and you hereby give your consent for the processing by Pollfish of the aforementioned data. Furthermore, you are informed that you may disable Pollfish operation at any time by visiting the following link https://www.pollfish.com/respondent/opt-out We once more invite you to check the Pollfish Privacy Policy, if you wish to have more detailed view of the way Pollfish works and with whom Pollfish may further share your data."*
 
 <br/><br/><br/>
 
