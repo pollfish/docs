@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.4.0">
+<div class="changelog" data-version="6.5.0">
+v6.5.0
+
+- Adding support for placement id initialization option
+
 v6.4.0
 
 - Internal updates
@@ -173,7 +177,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.4.0'
+implementation 'com.pollfish:pollfish-universal:6.5.0'
 ```
 
 <tr>
@@ -344,7 +348,7 @@ implementation 'com.pollfish:pollfish:5.6.0:universalRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-universal:6.4.0'
+implementation 'com.pollfish:pollfish-universal:6.5.0'
 ```
 
 <tr>
@@ -553,7 +557,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-universal:6.4.0'
+    implementation 'com.pollfish:pollfish-universal:6.5.0'
 }
 ```
 
@@ -680,7 +684,9 @@ No          | Description
 4.3.1.8     | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
 4.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward.
 4.3.1.10    | **`.clickId(String)`** <br/> A pass through param that will be passed back through server-to-server callback
-4.3.1.11    | **`.signature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
+4.3.1.11    | **`.userId(String)`** <br/> <br/> A unique id used to identify a user
+4.3.1.12    | **`.signature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
+4.3.1.13    | **`.placementId(String)`** <br/> The id of the placement to load.
 
 > **Note:** You can also register and listen for different callbacks that fire during a survey lifecycle through the `Params.Builder`. You can read more in section 9.
 
@@ -1166,6 +1172,30 @@ Mac mac = Mac.getInstance("HmacSHA1");
 mac.init(signingKey);
 
 String signature = Base64.getEncoder().encodeToString(mac.doFinal(valueToSign.getBytes(StandardCharsets.UTF_8)));
+```
+
+<br/>
+
+#### 4.3.1.13 `.placementId(String)`**
+
+The id of the placement you wish to load as provided by the publisher dashboard. If not provided, then the default placement of the ad unit will be loaded.
+
+<br/>
+
+<span style="text-decoration: underline">Kotlin:</span>
+
+```kotlin
+val params = Params.Builder("API_KEY")
+    .placementId("PLACEMENT_ID")
+    .build()
+```
+
+<span style="text-decoration: underline">Java:</span>
+
+```java
+Params params = new Params.Builder("API_KEY")
+    .placementId("PLACEMENT_ID")
+    .build();
 ```
 
 <br/>

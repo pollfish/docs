@@ -167,16 +167,17 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 No     | Description
 -------|------------
 5.1.1  | **`.indicatorPosition(RNPollfish.Position)`**   <br/> Sets the Position where you wish to place the Pollfish indicator.
-5.1.2  | **`.indicatorPadding(Int)`**                    <br/> Sets the padding from top or bottom depending on the position of the indicator.
-5.1.3  | **`.offerwallMode(Boolean)`**                   <br/> Sets Pollfish SDK to offerwall mode
-5.1.4  | **`.releaseMode(Boolean)`**                     <br/> Sets Pollfish SDK to Debug or Release Mode
-5.1.5  | **`.rewardMode(Boolean)`**                      <br/> Initializes in reward mode (skip Pollfish indicator to show a custom prompt)
-5.1.6  | **`.requestUUID(String)`**                      <br/> Sets a pass-through param to be receive via the server-to-server callbacks
-5.1.7  | **`.userProperties(Json)`**                     <br/> Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys.
-5.1.8  | **`.rewardInfo(Json)`**                         <br/> An object holding information regarding the survey completion reward.
-5.1.9  | **`.clickId(String)`**                                  <br/> A pass throught param that will be passed back through server-to-server callback
-5.1.10 | **`.userId(String)`**                                   <br/> A unique id ised to identify a user
-5.1.11 | **`.signature(String)`**                                <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object
+5.1.2  | **`.indicatorPadding(Int)`** <br/> Sets the padding from top or bottom depending on the position of the indicator.
+5.1.3  | **`.offerwallMode(Boolean)`** <br/> Sets Pollfish SDK to offerwall mode
+5.1.4  | **`.releaseMode(Boolean)`** <br/> Sets Pollfish SDK to Debug or Release Mode
+5.1.5  | **`.rewardMode(Boolean)`** <br/> Initializes in reward mode (skip Pollfish indicator to show a custom prompt)
+5.1.6  | **`.requestUUID(String)`** <br/> Sets a pass-through param to be receive via the server-to-server callbacks
+5.1.7  | **`.userProperties(Json)`** <br/> Send attributes that you receive from your app regarding a user, in order to receive a better fill rate and higher priced surveys.
+5.1.8  | **`.rewardInfo(Json)`** <br/> An object holding information regarding the survey completion reward.
+5.1.9  | **`.clickId(String)`** <br/> A pass throught param that will be passed back through server-to-server callback
+5.1.10 | **`.userId(String)`** <br/> A unique id ised to identify a user
+5.1.11 | **`.signature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object
+5.1.12 | **`.placementId(String)`** <br/> The id of the placement to load                   
 
 <br/>
 
@@ -421,6 +422,18 @@ const signature = crypto.createHmac('sha1', secret).update(message).digest().toS
 
 <br/>
 
+### 5.1.12. **`.placementId(String)`**
+
+The id of the placement you wish to load as provided by the publisher dashboard. If not provided, then the default placement of the ad unit will be loaded.
+
+<br/>
+
+```js
+builder.placementId("PLACEMENT_ID");
+```
+
+<br/>
+
 Example of Pollfish configuration using all the available options
 
 ```js
@@ -438,6 +451,7 @@ builder.indicatorPosition(RNPollfish.Position.topLeft)
     .clickId('CLICK_ID')
     .userId('USER_ID')
     .signature('SINGNATURE')
+    .placementId('PLACEMENT_ID')
     .rewardInfo({
         rewardName: 'Points',
         rewardConversion: 1.3

@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.4.2">
+<div class="changelog" data-version="6.5.0">
+v6.5.0
+
+- Adding support for placement id initialization option
+
 v6.4.2
 
 - Fixing carrier related issues in iOS 16
@@ -309,23 +313,24 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 
 No | Description
 ------------ | -------------
-6.2.1 | **`.indicatorPosition(IndicatorPosition)`** <br/> Sets the Position where you wish to place the Pollfish indicator
-6.2.2 | **`.requestUUID(String)`** <br/> Sets a pass-through param to be receive via the server-to-server callbacks
-6.2.3 | **`.indicatorPadding(Int)`** <br/> Sets the padding from the top or the bottom of the view, according to the Position of Pollfish indicator
-6.2.4 | **`.viewContainer(UIView)`** <br/> Sets a view container that Pollfish surveys will be rendered above it
-6.2.5 | **`.releaseMode(Bool)`** <br/> Sets Pollfish SDK to Developer or Release mode
-6.2.6 | **`.rewardMode(Bool)`** <br/> Initializes Pollfish in reward mode
-6.2.7 | **`.offerwallMode(Bool)`** <br/> Sets Pollfish to offerwall mode
-6.2.8 | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
-6.2.9 | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward.
-6.2.10| **`.clickId(String)`** <br/> A pass throught param that will be passed back through server-to-server callback
-6.3.11| **`.userId(String)`** <br/> A unique id used to identify a user
-6.2.12| **`.singnature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
-6.2.13| **`.monitorOrientationChanges(Bool)`** <br/> Toggle SDK reinitalization when device orientation changes
+6.2.1.1  | **`.indicatorPosition(IndicatorPosition)`** <br/> Sets the Position where you wish to place the Pollfish indicator
+6.2.1.2  | **`.requestUUID(String)`** <br/> Sets a pass-through param to be receive via the server-to-server callbacks
+6.2.1.3  | **`.indicatorPadding(Int)`** <br/> Sets the padding from the top or the bottom of the view, according to the Position of Pollfish indicator
+6.2.1.4  | **`.viewContainer(UIView)`** <br/> Sets a view container that Pollfish surveys will be rendered above it
+6.2.1.5  | **`.releaseMode(Bool)`** <br/> Sets Pollfish SDK to Developer or Release mode
+6.2.1.6  | **`.rewardMode(Bool)`** <br/> Initializes Pollfish in reward mode
+6.2.1.7  | **`.offerwallMode(Bool)`** <br/> Sets Pollfish to offerwall mode
+6.2.1.8  | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
+6.2.1.9  | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward.
+6.2.1.10 | **`.clickId(String)`** <br/> A pass throught param that will be passed back through server-to-server callback
+6.3.1.11 | **`.userId(String)`** <br/> A unique id used to identify a user
+6.2.1.12 | **`.singnature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
+6.2.1.13 | **`.monitorOrientationChanges(Bool)`** <br/> Toggle SDK reinitalization when device orientation changes
+6.2.1.14 | **`.placementId(String)`** <br/> The id of the placement to load.
 
 <br/>
 
-#### **6.2.1 `.indicatorPosition(IndicatorPosition)`**
+#### **6.2.1.1 `.indicatorPosition(IndicatorPosition)`**
 This setting sets the Position where you wish to place Pollfish indicator  ![alt text](https://storage.googleapis.com/pollfish_production/multimedia/pollfish_indicator_small.png) <br/> Pollfish indicator is shown only if Pollfish is used in a non rewarded mode.
 
 There are six different options available:
@@ -370,7 +375,7 @@ let params = PollfishParams("API_KEY")
 
 <br/>
 
-#### **6.2.2 `.requestUUID(String)`**
+#### **6.2.1.2 `.requestUUID(String)`**
 
 Sets a pass-through param to be receive via the server-to-server callbacks. You can read more on how to retrieve this param through the callbacks <a href="https://www.pollfish.com/docs/s2s">here</a>.
 
@@ -397,7 +402,7 @@ let pollfishParams = PollfishParams("API_KEY")
 
 <br/>
 
-#### **6.2.3 `.indicatorPadding(Int)`**
+#### **6.2.1.3 `.indicatorPadding(Int)`**
 
 Sets padding from the top or the bottom of the screen according to the Position of the Pollfish indicator. Below you can see an example on how to add padding of 50 from the bottom of the screen, prior rendering Pollfish indicator.
 
@@ -426,7 +431,7 @@ let pollfishParams = PollfishParams("API_KEY")
 
 <br/>
 
-#### **6.2.4 `.pollfishViewContainer(UIView)`**
+#### **6.2.1.4 `.pollfishViewContainer(UIView)`**
 
 Sets a UIView container where Pollfish survey panel will be rendered. If this param is not set, the SDK will render Pollfish surveys on a new `UIViewController` on top of everything. 
 
@@ -466,7 +471,7 @@ For instructions on how to initialize with a custom ```View``` see section 6.2
 
 <br/>
 
-#### **6.2.5 `.releaseMode(Bool)`**
+#### **6.2.1.5 `.releaseMode(Bool)`**
 
 Sets Pollfish SDK to Developer or Release mode. If you do not set this param it will turn the SDK to Developer mode by default in order for the developer to be able to test with test surveys.
 
@@ -497,7 +502,7 @@ let pollfishParams = PollfishParams("API_KEY")
 ```
 <br/>
 
-#### **6.2.6 `.rewardMode(Bool)`**
+#### **6.2.1.6 `.rewardMode(Bool)`**
 
 Initializes Pollfish in reward mode. This means that Pollfish Indicator will not be shown and Pollfish survey panel will be automatically hidden until the publisher explicitly calls Pollfish show function (The publisher should wait for the pollfish survey received callbacks). This behaviour enables the option for the publisher, to show a custom prompt to incentivize the user to participate to the survey.
 
@@ -528,7 +533,7 @@ You can read more on how you can use the rewardMode to incentivize users to part
 
 <br/>
 
-#### **6.2.7 `.offerwallMode(Bool)`**
+#### **6.2.1.7 `.offerwallMode(Bool)`**
 
 Enables Pollfish in offerwall mode. If not specified Pollfish is shown as one survey at a time.
 
@@ -553,7 +558,7 @@ let pollfishParams = PollfishParams("API_KEY")
 
 <br/>
 
-#### **6.2.8 `.userProperties(UserProperties)`**
+#### **6.2.1.8 `.userProperties(UserProperties)`**
 
 Passing user attributes to skip or shorten Pollfish Demographic surveys.
 
@@ -623,7 +628,7 @@ let pollfishParams = PollfishParams("API_KEY")
 
 <br/>
 
-#### **6.2.9 `rewardInfo(RewardInfo)`**
+#### **6.2.1.9 `.rewardInfo(RewardInfo)`**
 
 An object holding information regarding the reward settings, overriding the values as speciefied in the Publisher's Dashboard
 
@@ -672,7 +677,7 @@ let pollfishParams = PollfishParams("API_KEY")
 
 <br/>
 
-#### **6.2.10 `clickId(String)`**
+#### **6.2.1.10 `.clickId(String)`**
 
 A pass through param that will be passed back through server-to-server callbacks as specified [here](https://www.pollfish.com/docs/s2s)
 
@@ -695,7 +700,7 @@ let pollfishParams = PollfishParams("API_KEY")
 
 <br/>
 
-#### **6.2.11 `userId(String)`**
+#### **6.2.1.11 `.userId(String)`**
 
 An optional id used to identify a user
 
@@ -722,7 +727,7 @@ let pollfishParams = PollfishParams("API_KEY")
 
 <br/>
 
-#### **6.2.12 `signature(String)`**
+#### **6.2.1.12 `.signature(String)`**
 
 An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as passed through the `RewardInfo` object (6.2.9)
 
@@ -796,7 +801,7 @@ NSString *signature = [HMAC base64EncodedStringWithOptions:0];
 
 <br/>
 
-#### **6.2.13 `monitorOrientationChanges(Bool)`**
+#### **6.2.1.13 `.monitorOrientationChanges(Bool)`**
 
 An optional parameter used to toggle SDK reinitalization when device orientation changes. By default the SDK initializes when a device orientation changes.
 
@@ -813,12 +818,32 @@ PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
 ```
 
 <span style="text-decoration: underline">Swift:</span>
+
 ```swift
 let pollfishParams = PollfishParams("API_KEY")
     .monitorOrientationChanges(true)
 ```
 
----
+#### **6.2.1.14 `.placementId(String)`**
+
+The id of the placement you wish to load as provided by the publisher dashboard. If not provided, then the default placement of the ad unit will be loaded.
+
+<br/>
+
+<span style="text-decoration: underline">Objective-C:</span>
+
+```objc
+PollfishParams *params = [[PollfishParams alloc] init:@"API_KEY"];
+
+[params placementId:@"PLACEMENT_ID"];
+```
+
+<span style="text-decoration: underline">Swift:</span>
+
+```swift
+let pollfishParams = PollfishParams("API_KEY")
+    .placementId("PLACEMENT_ID")
+```
 
 <br/>
 

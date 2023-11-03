@@ -117,7 +117,7 @@ Add this to your package's pubspec.yaml file:
 ```yaml
 dependencies:
   ...
-  flutter_pollfish: ^4.1.6
+  flutter_pollfish: ^4.2.0
 ```
 
 Execute the following command
@@ -206,6 +206,7 @@ No      | Type                  | Description
 5.1.9   | `String`              | **`clickId`** <br/> A pass throught param that will be passed back through server-to-server callback.
 5.1.10  | `String`              | **`userId`** <br/> A unique id used to identify a user.
 5.1.11  | `String`              | **`signature`** <br/> A parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object.
+5.1.12  | `String`              | **`placementId`** <br/> The id of the placement to load as provided by the publisher dashboard.
 
 <br/>
 
@@ -253,7 +254,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-### 4.1.2. **`indicatorPadding`**
+### 5.1.2. **`indicatorPadding`**
 
 The padding from the top or bottom of the screen according to position of the indicator (small icon) specified above (`.topLeft` is the default value)
 
@@ -268,7 +269,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-### 4.1.3. **`offerwallMode`**
+### 5.1.3. **`offerwallMode`**
 
 Enables Pollfish in offerwall mode. If not specified Pollfish shows one survey at a time.
 
@@ -283,7 +284,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-### 4.1.4. **`releaseMode`** 
+### 5.1.4. **`releaseMode`** 
 
 Sets Pollfish SDK to Developer or Release mode. If you do not set this param it will turn the SDK to Developer mode by default in order for the publisher to be able to test the survey flow.
 
@@ -303,7 +304,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-### 4.1.5. **`rewardMode`**
+### 5.1.5. **`rewardMode`**
 
 Initializes Pollfish in reward mode. This means that Pollfish Indicator (section 4.1.1) will not be shown and Pollfish survey panel will be automatically hidden until the publisher explicitly calls Pollfish `show` function (The publisher should wait for the Pollfish Survey Received Callback). This behaviour enables the option for the publishers, to show a custom prompt to incentivize the users to participate in a survey.
 
@@ -324,7 +325,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-### 4.1.6. **`requestUUID`**
+### 5.1.6. **`requestUUID`**
 
 Sets a pass-through param to be receive via the server-to-server callbacks. You can read more on how to retrieve this param through the callbacks [here](https://www.pollfish.com/docs/s2s)
 
@@ -341,7 +342,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-### 4.1.7. **`userProperties(Json)`**
+### 5.1.7. **`userProperties(Json)`**
 
 Passing user attributes to skip or shorten Pollfish Demographic surveys.
 
@@ -374,7 +375,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-### 4.1.8. **`rewardInfo`**
+### 5.1.8. **`rewardInfo`**
 
 A Json object passing information during initialization regarding the reward settings, overriding the values as speciefied on the Publisher's Dashboard
 
@@ -410,7 +411,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-### 4.1.9. **`clickId`**
+### 5.1.9. **`clickId`**
 
 A pass through parameter that will be returned back to the publisher through server-to-server callbacks as specified [here](https://www.pollfish.com/docs/s2s)
 
@@ -425,7 +426,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-### 4.1.10. **`.userId(String)`**
+### 5.1.10. **`.userId(String)`**
 
 A unique id used to identify the user
 
@@ -444,7 +445,7 @@ FlutterPollfish.instance.init(
 
 <br/>
 
-### 4.1.11. **`.signature(String)`**
+### 5.1.11. **`.signature(String)`**
 
 An optional parameter used to secure the `rewardName` and `rewardConversion` parameters as provided in the `RewardInfo` object (4.1.10). If `rewardConversion` and `rewardName` are defined, `signature` is required to be calculated and set as well.
 
@@ -493,6 +494,21 @@ String base64Mac = base64.encode(digest.bytes);
 
 <br/>
 
+### 5.1.12. **`placementId`**
+
+The id of the placement you wish to load as provided by the publisher dashboard. If not provided, then the default placement of the ad unit will be loaded.
+
+<br/>
+
+```dart
+FlutterPollfish.instance.init(
+  ...
+  placementId: "PLACEMENT_ID"
+);
+```
+
+<br/>
+
 Example of basic Pollfish initialization
 
 ```dart
@@ -520,6 +536,7 @@ FlutterPollfish.instance.init(
     ...
   },
   signature: 'SIGNATURE',
+  placementId: 'PLACEMENT_ID',
   clickId: 'CLICK_ID',
   userId: 'USER_ID',
   rewardInfo: RewardInfo('Point', 1.3));

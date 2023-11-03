@@ -1,4 +1,8 @@
-<div class="changelog" data-version="6.4.0">
+<div class="changelog" data-version="6.5.0">
+v6.5.0
+
+- Adding support for placement id initialization option
+
 v6.4.0
 
 - Internal updates
@@ -171,7 +175,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.4.0'
+implementation 'com.pollfish:pollfish-googleplay:6.5.0'
 ```
 
 <tr>
@@ -342,7 +346,7 @@ implementation 'com.pollfish:pollfish:5.6.0:googleplayRelease@aar'
 <br/>
 
 ```groovy
-implementation 'com.pollfish:pollfish-googleplay:6.4.0'
+implementation 'com.pollfish:pollfish-googleplay:6.5.0'
 ```
 
 <tr>
@@ -562,7 +566,7 @@ Retrieve Pollfish through **mavenCentral()** with gradle by adding the following
 ```groovy
 dependencies {
     ...
-    implementation 'com.pollfish:pollfish-googleplay:6.4.0'
+    implementation 'com.pollfish:pollfish-googleplay:6.5.0'
 }
 ```
 
@@ -700,18 +704,19 @@ You can set several params to control the behaviour of Pollfish survey panel wit
 
 No          | Description
 ------------|------------
-5.3.1.1     | **`.indicatorPosition(Position)`** <br/> Sets the Position where you wish to place the Pollfish indicator
-5.3.1.2     | **`.requestUUID(String)`** <br/> Sets a pass-through param to be receive via the server-to-server callbacks
-5.3.1.3     | **`.indicatorPadding(Int)`** <br/> Sets the padding (in dp) from top or bottom according to the Position of the indicator
-5.3.1.4     | **`.userLayout(ViewGroup)`** <br/> Sets a layout container that Pollfish surveys will be rendered above it
-5.3.1.5     | **`.releaseMode(Boolean)`** <br/>  Sets Pollfish SDK to Developer or Release mode
-5.3.1.6     | **`.rewardMode(Boolean)`** <br/> Initializes Pollfish in reward mode
-5.3.1.7     | **`.offerwallMode(Boolean)`** <br/> Sets Pollfish to offerwall mode
-5.3.1.8     | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
-5.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward.
-5.3.1.10    | **`.clickId(String)`** <br/> A pass through param that will be passed back through server-to-server callback
-5.3.1.11    | **`.userId(String)`** <br/> A unique id used to identify a user
-5.3.1.11    | **`.signature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
+6.3.1.1     | **`.indicatorPosition(Position)`** <br/> Sets the Position where you wish to place the Pollfish indicator
+6.3.1.2     | **`.requestUUID(String)`** <br/> Sets a pass-through param to be receive via the server-to-server callbacks
+6.3.1.3     | **`.indicatorPadding(Int)`** <br/> Sets the padding (in dp) from top or bottom according to the Position of the indicator
+6.3.1.4     | **`.userLayout(ViewGroup)`** <br/> Sets a layout container that Pollfish surveys will be rendered above it
+6.3.1.5     | **`.releaseMode(Boolean)`** <br/>  Sets Pollfish SDK to Developer or Release mode
+6.3.1.6     | **`.rewardMode(Boolean)`** <br/> Initializes Pollfish in reward mode
+6.3.1.7     | **`.offerwallMode(Boolean)`** <br/> Sets Pollfish to offerwall mode
+6.3.1.8     | **`.userProperties(UserProperties)`** <br/> Provides user attributes upfront during initialization
+6.3.1.9     | **`.rewardInfo(RewardInfo)`** <br/> An object holding information regarding the survey completion reward.
+6.3.1.10    | **`.clickId(String)`** <br/> A pass through param that will be passed back through server-to-server callback
+6.3.1.11    | **`.userId(String)`** <br/> A unique id used to identify a user
+6.3.1.12    | **`.signature(String)`** <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `RewardInfo` object
+6.3.1.13    | **`.placementId(String)`** <br/> The id of the placement to load
 
 > **Note:** You can also register and listen for different callbacks that fire during a survey lifecycle through the `Params.Builder`. You can read more in section 9.
 
@@ -1208,6 +1213,30 @@ Mac mac = Mac.getInstance("HmacSHA1");
 mac.init(signingKey);
 
 String signature = Base64.getEncoder().encodeToString(mac.doFinal(valueToSign.getBytes(StandardCharsets.UTF_8)));
+```
+
+<br/>
+
+#### **6.3.1.13 `.placementId(String)`**
+
+The id of the placement you wish to load as provided by the publisher dashboard. If not provided, then the default placement of the ad unit will be loaded.
+
+<br/>
+
+<span style="text-decoration: underline">Kotlin:</span>
+
+```kotlin
+val params = Params.Builder("API_KEY")
+    .placementId("PLACEMENT_ID")
+    .build()
+```
+
+<span style="text-decoration: underline">Java:</span>
+
+```java
+Params params = new Params.Builder("API_KEY")
+    .placementId("PLACEMENT_ID")
+    .build();
 ```
 
 <br/>

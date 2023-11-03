@@ -1,4 +1,9 @@
-<div class="changelog" data-version="7.0.5">
+<div class="changelog" data-version="7.1.0">
+v7.1.0
+
+- Adding support for placement id initialization option
+- Updated with Pollfish iOS SDK v6.5.0 and Android SDK v6.5.0
+
 v7.0.5
 
 - Updated with Pollfish iOS SDK v6.4.2
@@ -574,6 +579,7 @@ No     | Description
 4.1.10 | **`.RewardInfo(RewardInfo)`**                      <br/> An object holding information regarding the survey completion reward.
 4.1.11 | **`.Signature(string)`**                           <br/> An optional parameter used to secure the `rewardConversion` and `rewardName` parameters passed on `rewardInfo` `Json` object
 4.1.12 | **`.MonitorOrientation(bool)`**                    <br/> Toggle SDK reinitalization when device orientation changes
+4.1.13 | **`.PlacementId(String)`**                         <br/> The id of the placement to load
 
 <br/>
 
@@ -847,6 +853,19 @@ Note: Setting this option to false will force survey panel to render at full scr
 ```csharp
 Pollfish.Params pollfishParams = new Pollfish.Params()
   .MonitorOrientation(false);
+```
+
+<br/>
+
+### 4.1.13 **`.PlacementId(String)`**
+
+The id of the placement you wish to load as provided by the publisher dashboard. If not provided, then the default placement of the ad unit will be loaded.
+
+<br/>
+
+```csharp
+Pollfish.Params pollfishParams = new Pollfish.Params()
+  .PlacementId("PLACEMENT_ID");
 ```
 
 <br/>
