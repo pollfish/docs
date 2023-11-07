@@ -264,7 +264,7 @@ Below you can find the list of demographic info you can send over along with the
 |  | DO_NOT_WORK | 11
 |  | PREFER_NOT_TO_SAY | 12
 
-If you need to find household income mapping for a specific country you can have a look at the following [link](https://www.pollfish.com/pf/household-income-mapping)
+If you need to find household income mapping for a specific country you can have a look at the following [link](https://www.resources.pollfish.com/pf/household-income-mapping)
 
 
 </br>
