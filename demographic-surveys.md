@@ -169,6 +169,8 @@ Below you can find the list of demographic info you can send over along with the
 |  | HIGH_III | 6
 |  | PREFER_NOT_TO_SAY | 7
 
+If you need to find household income mapping for a specific country you can have a look at the following [link](https://www.resources.pollfish.com/pf/household-income-mapping)
+
 </br>
 
 | Key | Description | Value |
@@ -219,6 +221,8 @@ Below you can find the list of demographic info you can send over along with the
 |  | ALBANIAN | 47
 |  | URDU_ROMAN | 48
 
+</br>
+
 | Key | Description | Value |
 | --- | --- | --- |
 | `organization_role` | OWNER_PARTNER | 0
@@ -263,9 +267,6 @@ Below you can find the list of demographic info you can send over along with the
 |  | GREATER_THAN_FIVE_THOUSANDS | 10
 |  | DO_NOT_WORK | 11
 |  | PREFER_NOT_TO_SAY | 12
-
-If you need to find household income mapping for a specific country you can have a look at the following [link](https://www.resources.pollfish.com/pf/household-income-mapping)
-
 
 </br>
 
