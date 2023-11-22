@@ -1,4 +1,12 @@
-<div class="changelog" data-version="7.0.0-beta01.0">
+<div class="changelog" data-version="7.0.0-beta03.0">
+v7.0.0-beta03.0
+
+- Updated with Prodege Android SDK v7.0.0-beta03
+
+v7.0.0-beta02.0
+
+- Updated with Prodege Android SDK v7.0.0-beta02
+
 v7.0.0-beta01.0
 
 - Updated with new Prodege Android SDK v7.0.0-beta01
@@ -177,7 +185,7 @@ Retrieve Prodege Max Adapter through **maven()** with gradle by adding the follo
 
 ```groovy
 dependencies {
-    implementation 'com.prodege.mediation:prodege-max:7.0.0-beta01.0'
+    implementation 'com.prodege.mediation:prodege-max:7.0.0-beta03.0'
 }
 ```
 
@@ -191,13 +199,13 @@ dependencies {
 
 ### 3.2.1. Download Prodege Android Max Adapter `.aar` file and import it into your project's libraries
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/AppLovin/Prodege%20Android%20Max%20Adapter-7.0.0-beta01.0.zip) to download the latest version of Prodege Android Max Adapter SDK.
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/AppLovin/Prodege%20Android%20Max%20Adapter-7.0.0-beta03.0.zip) to download the latest version of Prodege Android Max Adapter SDK.
 
 <br/>
 
 ### 3.2.2. Download Prodege Android SDK `.aar` file and import it into your project's libraries
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Prodege%20Android%20SDK-7.0.0-beta01.zip) to download the latest version of Prodege Android SDK. 
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Prodege%20Android%20SDK-7.0.0-beta03.zip) to download the latest version of Prodege Android SDK. 
 
 <br/>
 

@@ -1,4 +1,12 @@
-<div class="changelog" data-version="7.0.0-beta01.0">
+<div class="changelog" data-version="7.0.0-beta03">
+7.0.0-beta03
+
+- Fixing issues with Adnroid 8
+
+7.0.0-beta02
+
+- Fixing internal issues
+
 7.0.0-beta01
 
 - new SDK with support for placements and rewarded ads
@@ -62,7 +70,7 @@ Retrieve Prodege SDK through **maven()** with gradle by adding the following lin
 
 ```groovy
 dependencies {
-    implementation 'com.prodege:prodege:7.0.0-beta01'
+    implementation 'com.prodege:prodege:7.0.0-beta03'
 }
 ```
 
@@ -91,7 +99,7 @@ android {
 dependencies {
     // ...
     
-    implemetation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.0' s
+    implemetation 'org.jetbrains.kotlin:kotlin-stdlib:1.9.0'
 }
 ```
 
