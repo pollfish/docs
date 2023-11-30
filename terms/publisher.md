@@ -272,15 +272,15 @@ Publisher must require and confirm that all Third-Party Affiliates bind themselv
 
 This Agreement shall commence on the date your Registration is approved and shall continue thereafter until terminated as provided herein (the “Term”). You may terminate your use of the Services at any time by removing all Pollfish Creative from your Platform and deleting all copies of the Creative. To request to cancel or delete your account, contact the Pollfish team at info@pollfish.com. We may terminate your participation in one or more Services or this Agreement at any time and for any reason in our sole discretion with or without prior notice to you by disabling the relevant Services or Features, or by providing you with written notice of termination. Upon termination of your participation in one or more Services or this Agreement for any reason, you will immediately cease all use of and delete all associated Creative and all intellectual property or Confidential Information of Pollfish or our Clients, and will cease representing yourself as a Pollfish or Client affiliate or publisher for any relevant Surveys or Offers. Should Pollfish terminate this Agreement due to your breach, you forfeit all rights to any outstanding Commission payments. Should your Platform become inoperable during the Term, you must provide Pollfish with at least 30 days’ advance notice of that fact and arrange final payment during that time, or Pollfish will not be liable for Commissions incurred between your last payment and the date you ceased operations. Except as expressly indicated herein, all rights to validly accrued payments or Commissions, causes of action and any provisions, which by their terms are intended to survive termination, shall survive any termination.
 
-**14. REMEDIES**
+**15. REMEDIES**
 
 In addition to any other rights and remedies available under Applicable Laws or this Agreement, Pollfish reserves the right to delete or cancel any User actions submitted through your Platform and withhold or freeze any unpaid Commissions or charge back paid Commissions to your account if: (i) Pollfish determines that you have violated this Agreement, (ii) Pollfish receives any User or Client complaints about your participation in the Services which Pollfish reasonably believes to have violated this Agreement or (iii) any Conversion is later determined to have not met the requirements set forth in this Agreement or in the relevant Creative, or is otherwise rejected by a Client. Such withholding or freezing of Commissions, or charge backs for paid Commissions, shall be without regard as to whether such Commissions were earned because of such breach. In the event of a material breach of this Agreement, Pollfish reserves the right to disclose your identity and contact information to appropriate law enforcement or regulatory authorities or any third party that has been directly damaged by your actions. Pollfish reserves the right to terminate at any time your use of our Services, in case of any breach of the present Agreement, which may impose liability upon Pollfish.
 
-**15. INDEMNIFICATION**
+**16. INDEMNIFICATION**
 
 You hereby agree to indemnify, defend and hold harmless Pollfish and our Clients and their respective subsidiaries, publishers, partners and licensors, directors, officers, employees, owners and agents against any and all claims, actions, demands, liabilities, losses, damages, judgments, settlements, costs, and expenses (including reasonable attorneys’ fees and costs) based on (i) your breach of any term of this Agreement, including any representation, warranty, covenant, restriction or obligation of Publisher herein, (ii) any misuse by you or by a party under your reasonable control, or by a party that obtained access through you, of the Services, Features, Website, Creative, Surveys, Offers or any intellectual property or Pollfish or a Client, or (iii) any claim related to your Platform, including but not limited to, the content contained on your Platform (except for the Creative). Pollfish will provide you with written notice of any claim, suit or action from which you must indemnify Pollfish.
 
-**16. DISCLAIMER**
+**17. DISCLAIMER**
 
 (i) THE POLLFISH WEBSITE, FEATURES, CREATIVE, OFFERS, AND SURVEYS, AND THE SERVICES PROVIDED IN CONNECTION THEREWITH, ARE PROVIDED TO PUBLISHER “AS IS,” “AS AVAILABLE,” AND “WITH ALL FAULTS.” EXCEPT AS EXPRESSLY SET FORTH HEREIN, POLLFISH EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT, AND ANY WARRANTIES ARISING OUT OF COURSE OF DEALING, USAGE, OR TRADE. POLLFISH DOES NOT WARRANT THAT OUR SERVICES, FEATURES OR ANY CREATIVE WILL MEET PUBLISHER’S SPECIFIC REQUIREMENTS OR THAT THE OPERATION OF THE WEBSITE, FEATURES OR CREATIVE WILL BE COMPLETELY ERROR-FREE OR UNINTERRUPTED. POLLFISH EXPRESSLY DISCLAIMS ANY LIABILITY FOR ANY ACT OR OMISSION OF A CLIENT OR THEIR PRODUCTS OR SERVICES. POLLFISH DOES NOT GUARANTEE THAT PUBLISHER WILL EARN ANY COMMISSION, OR ANY SPECIFIC AMOUNT OF COMMISSIONS, FROM THE SERVICES.
 
@@ -288,23 +288,23 @@ You hereby agree to indemnify, defend and hold harmless Pollfish and our Clients
 
 (iii) Pollfish does not evaluate, nor does it endorse, the views, policies, products or services presented in Client Surveys or Offers and does not warrant or guarantee that all third-party Creative will comply with Applicable Laws.
 
-**17. LIMITATION OF LIABILITY**
+**18. LIMITATION OF LIABILITY**
 
 IN NO EVENT SHALL POLLFISH BE LIABLE FOR ANY UNAVAILABILITY OR INOPERABILITY OF THE WEBSITE, FEATURES, OR SERVICES, NOR ANY TECHNICAL MALFUNCTION, COMPUTER ERROR, CORRUPTION OR LOSS OF INFORMATION, OR OTHER INJURY, DAMAGE OR DISRUPTION OF ANY KIND BEYOND THE REASONABLE CONTROL OF POLLFISH. IN NO EVENT WILL POLLFISH BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, PERSONAL INJURY / WRONGFUL DEATH, SPECIAL OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO, LOSS OF PROFITS OR LOSS OF BUSINESS OPPORTUNITY, EVEN IF SUCH DAMAGES ARE FORESEEABLE AND WHETHER OR NOT POLLFISH HAS BEEN ADVISED OF THE POSSIBILITY THEREOF. POLLFISH’S CUMULATIVE LIABILITY TO PUBLISHER, FROM ALL CAUSES OF ACTION AND ALL THEORIES OF LIABILITY, WILL BE LIMITED TO AND WILL NOT EXCEED THE AMOUNTS PAID TO PUBLISHER BY POLLFISH IN COMMISSIONS DURING THE SIX (6) MONTHS IMMEDIATELY PRIOR TO SUCH CLAIM.
 
-**18. CONFIDENTIALITY**
+**19. CONFIDENTIALITY**
 
 Except as otherwise provided in this Agreement or with Pollfish’s written consent, you agree that all information, including, without limitation, any technical features or specifications, trade secrets, software code or SDKs, business or financial information, customer or vendor lists, or pricing or sales information, concerning Pollfish or any of our Clients or affiliates, provided by or on behalf of any of them (the “Confidential Information”) is and shall remain strictly confidential and secret and you shall not utilize any Confidential Information, directly or indirectly, for any purpose other than fulfilling your rights and obligations under this Agreement, except and solely to the extent that any such information is: (i) generally known or available to the public through a source not directly or indirectly attributable to you, or (ii) the disclosure of the Confidential Information is required by law or by the competent authorities. Publisher shall not use any information obtained under this Agreement to develop, enhance or operate a service that competes with the Website, Features or Services, or assist any other party to do the same.
 
-**19. INTELLECTUAL PROPERTY**
+**20. INTELLECTUAL PROPERTY**
 
 The past, present and future content of the Website, Features or Services, including without limitation, copyright works and all intellectual property rights (including Industrial Property rights) such as software, logos, trademarks domain names, designs, graphics, pictures, photos, texts, newsletters, etc. and any and all copyright material and all other intellectual property right and/or materials related to the Website, Features or Services are the sole property of Pollfish. Except as stated herein, no rights in the Website, Features or Services are granted to you.
 
-**20. MODIFICATIONS**
+**21. MODIFICATIONS**
 
 In addition to any other form of notice permitted under this Agreement, Pollfish may modify any of the terms or conditions of this Agreement at any time by providing you notice at the email address of record for your registered account, and/or posting a notification in your Dashboard. The changes will become effective ten (10) business days after such notice is transmitted. If the modifications are unacceptable to you, you should terminate this Agreement within that ten (10) business day period. Your continued use of the Website, Features or Services after ten (10) business days have elapsed from transmission of the notice will constitute your acceptance of any such change. In addition, Pollfish may change, suspend, or discontinue any aspect of a Survey or Offer, or its Creative, or remove, alter, or modify any tags, text, graphic or banner ad in connection with such Creative, at any time and without advance notice to you. Publisher agrees to promptly implement any request from Pollfish to remove, alter or modify any Creative, graphic or banner ad used by Publisher in connection with this Agreement.
 
-**21. NOTICES**
+**22. NOTICES**
 
 Except as expressly indicated above, all notices required or permitted under this Agreement shall be in writing, reference this Agreement and be deemed given: (i) one day after deposit with a commercial overnight carrier for overnight delivery, with written verification of receipt, or (ii) by delivery of electronic mail to the e-mail address provided below or by the other Party. 
 
@@ -323,19 +323,19 @@ legal@prodege.com</br></br>
 <ins>FOR SUPPLIER:</ins></br>
 Using such contact information as has been provided to Pollfish in writing.
 
-**22. ASSIGNMENT AND TRANSFER**
+**23. ASSIGNMENT AND TRANSFER**
 
 Neither Party shall assign or transfer this Agreement without the express prior written consent of the other Party, provided, however, that either Party may assign or transfer this Agreement to an acquiror of all or substantially all of the assigning Party’s business, assets or capital stock, by asset sale, stock sale, merger or otherwise, without the prior written consent of the other Party.
 
-**23. GOVERNING LAW AND DISPUTES**
+**24. GOVERNING LAW AND DISPUTES**
 
 The Parties will make every effort to amicably resolve any disputes arising under this Agreement.  Should they nevertheless fail to reach an informal resolution, this Agreement will be governed by and interpreted in accordance with the laws of the State of California, without reference to its conflicts of law principles. The Parties agree any suit, action or proceeding (“Dispute”) seeking to enforce any provision of, or based on any matter arising out of or in connection with, this Agreement shall be brought exclusively in state or Federal court of competent jurisdiction sitting in Los Angeles County, California, and each of the Parties hereby consents to the jurisdiction of such courts in any Dispute, and irrevocably waives, to the fullest extent permitted by law, any objection it may now or hereafter have to venue for the Dispute, including any objection based on inconvenient forum.
 
 If any provision of this Agreement is held by a court of competent jurisdiction to be contrary to law, the provision shall be modified by the court and interpreted so as best to accomplish the objectives of the original provision to the fullest extent permitted by law, or else stricken, and the remaining provisions of this Agreement not affected by the invalidity shall remain in effect. Each Party acknowledges that it and its counsel has participated in the drafting of this Agreement and therefore the Agreement shall not be construed against either Party.
 
-**24. ENTIRE AGREEMENT**
+**25. ENTIRE AGREEMENT**
 
-This Agreement contains the sole and entire agreement between Publisher and Pollfish with respect to its subject matter and–other than as stated in Section 20 above–it shall not be modified except by a written instrument signed by both Parties. The Parties agree that no other document, including any click-through terms, conditions or acknowledgments served by Publisher, shall prevail over this Agreement, and any Services that Pollfish provides to Publisher shall be governed by the terms of this Agreement, notwithstanding whether such Services are approved in a separate document or communication that references this Agreement. This Agreement may be signed in any number of counterparts, each of which shall be deemed an original, with the same effect as if the signatures thereto and hereto were upon the same instrument.
+This Agreement contains the sole and entire agreement between Publisher and Pollfish with respect to its subject matter and–other than as stated in Section 21 above–it shall not be modified except by a written instrument signed by both Parties. The Parties agree that no other document, including any click-through terms, conditions or acknowledgments served by Publisher, shall prevail over this Agreement, and any Services that Pollfish provides to Publisher shall be governed by the terms of this Agreement, notwithstanding whether such Services are approved in a separate document or communication that references this Agreement. This Agreement may be signed in any number of counterparts, each of which shall be deemed an original, with the same effect as if the signatures thereto and hereto were upon the same instrument.
 
 </br>
 
