@@ -1,4 +1,12 @@
-<div class="changelog" data-version="7.0.0-beta03.0">
+<div class="changelog" data-version="7.0.0-beta05.0">
+v7.0.0-beta05.0
+
+- Updated with Prodege Android SDK v7.0.0-beta05
+
+v7.0.0-beta04.0
+
+- Updated with Prodege Android SDK v7.0.0-beta04
+
 v7.0.0-beta03.0
 
 - Updated with Prodege Android SDK v7.0.0-beta03

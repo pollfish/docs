@@ -1,4 +1,12 @@
-<div class="changelog" data-version="7.0.0-beta03.0">
+<div class="changelog" data-version="7.0.0-beta05.0">
+v7.0.0-beta05.0
+
+- Updated with Prodege Android SDK v7.0.0-beta05
+
+v7.0.0-beta04.0
+
+- Updated with Prodege Android SDK v7.0.0-beta04
+
 v7.0.0-beta03.0
 
 - Updated with Prodege Android SDK v7.0.0-beta03
@@ -197,7 +205,7 @@ Retrieve Prodege IronSource Adapter through **maven()** with gradle by adding th
 
 ```groovy
 dependencies {
-    implementation 'com.prodege.mediation:prodege-ironsource:7.0.0-beta03.0'
+    implementation 'com.prodege.mediation:prodege-ironsource:7.0.0-beta05.0'
 }
 ```
 
@@ -211,13 +219,13 @@ dependencies {
 
 ### 3.2.1. Download Prodege Android IronSource Adapter `.aar` file and import it into your project's libraries
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/IronSource/Prodege%20Android%20IronSource%20Adapter-7.0.0-beta03.0.zip) to download the latest version of Prodege Android IronSource Adapter SDK.
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/IronSource/Prodege%20Android%20IronSource%20Adapter-7.0.0-beta05.0.zip) to download the latest version of Prodege Android IronSource Adapter SDK.
 
 <br/>
 
 ### 3.2.2. Download Prodege Android SDK `.aar` file and import it into your project's libraries
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Prodege%20Android%20SDK-7.0.0-beta03.zip) to download the latest version of Prodege Android SDK 
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Prodege%20Android%20SDK-7.0.0-beta05.zip) to download the latest version of Prodege Android SDK 
 
 <br/>
 

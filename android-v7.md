@@ -1,4 +1,12 @@
-<div class="changelog" data-version="7.0.0-beta03">
+<div class="changelog" data-version="7.0.0-beta05">
+7.0.0-beta05
+
+- Fixing issue with blank end card after app returning to foreground
+
+7.0.0-beta04
+
+- Internal fixes
+
 7.0.0-beta03
 
 - Fixing issues with Adnroid 8
