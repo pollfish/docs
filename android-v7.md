@@ -1,4 +1,8 @@
-<div class="changelog" data-version="7.0.0-beta05">
+<div class="changelog" data-version="7.0.0-beta06">
+7.0.0-beta06
+
+- Fixing internal issues causing ANRs
+
 7.0.0-beta05
 
 - Fixing issue with blank end card after app returning to foreground
@@ -78,7 +82,7 @@ Retrieve Prodege SDK through **maven()** with gradle by adding the following lin
 
 ```groovy
 dependencies {
-    implementation 'com.prodege:prodege:7.0.0-beta03'
+    implementation 'com.prodege:prodege:7.0.0-beta06'
 }
 ```
 
@@ -90,7 +94,7 @@ dependencies {
 
 ### 4.2.1 Download Prodege Android SDK `.aar` file and import it into your project's libraries
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Prodege%20Android%20SDK-7.0.0-beta01.zip) to download the latest version of Prodege SDK.
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Prodege%20Android%20SDK-7.0.0-beta06.zip) to download the latest version of Prodege SDK.
 
 **For Java based projects** you will have to include the Kotlin runtime library in your module dependencies and set the java to version 1.8.
 
