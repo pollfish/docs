@@ -1,4 +1,8 @@
-<div class="changelog" data-version="7.0.0-beta06">
+<div class="changelog" data-version="7.0.0-beta07">
+7.0.0-beta07
+
+- Fixing internal issues causing occasional crashes 
+
 7.0.0-beta06
 
 - Fixing internal issues causing ANRs
