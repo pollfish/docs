@@ -201,7 +201,7 @@ Retrieve Prodege Max Adapter through **maven()** with gradle by adding the follo
 
 ```groovy
 dependencies {
-    implementation 'com.prodege.mediation:prodege-max:7.0.0-beta06.0'
+    implementation 'com.prodege.mediation:prodege-max:7.0.0-beta07.0'
 }
 ```
 
@@ -215,13 +215,13 @@ dependencies {
 
 ### 3.2.1. Download Prodege Android Max Adapter `.aar` file and import it into your project's libraries
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/AppLovin/Prodege%20Android%20Max%20Adapter-7.0.0-beta06.0.zip) to download the latest version of Prodege Android Max Adapter SDK.
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/AppLovin/Prodege%20Android%20Max%20Adapter-7.0.0-beta07.0.zip) to download the latest version of Prodege Android Max Adapter SDK.
 
 <br/>
 
 ### 3.2.2. Download Prodege Android SDK `.aar` file and import it into your project's libraries
 
-Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Prodege%20Android%20SDK-7.0.0-beta06.zip) to download the latest version of Prodege Android SDK. 
+Click [here](https://storage.googleapis.com/pollfish_production/sdk/Android/Prodege%20Android%20SDK-7.0.0-beta07.zip) to download the latest version of Prodege Android SDK. 
 
 <br/>
 
