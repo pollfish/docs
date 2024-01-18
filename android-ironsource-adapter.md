@@ -581,7 +581,7 @@ If you use proguard with your app, please insert the following lines in your pro
 
 <br/>
 
-# <a href="#vast-tag"></a>Guide for VAST Tag
+# <a id="vast-tag"></a>Guide for VAST Tag
 
 To fetch Rewarded Videos throught IronSource Direct Deals using a VAST Tag URL you have to follow the steps described next.
 
