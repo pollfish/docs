@@ -62,7 +62,7 @@ This guide is for publishers looking to use IronSource LevelPlay to load and sho
 
 <br/>
 
-Publishers integrated the IronSource SDK directly can receive Rewarded Videos through VAST tag solution and the IronSource Direct Deals. Guide for this approach is found at section [Guide for VAST Tag through IronSource Direct Deals](#vast-tag).
+Publishers integrated the IronSource SDK directly can receive Rewarded Videos through VAST tag solution and the IronSource Direct Deals. Guide for this approach is found at section [Guide for VAST Tag](#guide-for-vast-tag).
 
 <br/>
 
@@ -581,9 +581,9 @@ If you use proguard with your app, please insert the following lines in your pro
 
 <br/>
 
-# <a name="vast-tag"></a>Guide for VAST Tag through IronSource Direct Deals
+# Guide for VAST Tag
 
-To fetch Rewarded Videos throught IronSource Direct Deals you have to follow the steps described next.
+To fetch Rewarded Videos throught IronSource Direct Deals using a VAST Tag URL you have to follow the steps described next.
 
 ## 1. Set Up Prodege Rewarded Ads
 
