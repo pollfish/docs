@@ -622,12 +622,13 @@ https://wss.pollfish.com/v2/device/register/true?json={"ip":"[IP]","device_id":"
 
 ## 3. Set Up IronSource Direct Deal
 
-Navigate to your IronSource Dashboard and select Setup -> Direct Deals or click [here](https://mobile-campaigns.isprog.com/#/campaigns) to navigate to your IronSource Direct Deals Campaigns list.
+Navigate to your IronSource Dashboard and select Setup -> Direct Deals or click [here](https://mobile-campaigns.isprog.com/#/campaigns) to go directly to your IronSource Direct Deals Campaigns list.
+
 Create a new Campaign. In the new Campaign page provide a Name and a CPM value. Select `Tag Type: VAST` and in the `Tag URL` field input the VAST tag URL created in step 2.
 
 Save your changes and you should now be able to fetch Rewarded Videos through the VAST tag campaign.
 
-**Important**: In order to identify the user and have valid metrics of the performance you have to provide GDPR access to IronSource SDK. More details can be found [here](https://developers.is.com/ironsource-mobile/android/regulation-advanced-settings/)
+**Important**: In order to identify the user and have valid metrics of the performance you have to provide GDPR consent for the user in your IronSource SDK. More details can be found [here](https://developers.is.com/ironsource-mobile/android/regulation-advanced-settings/)
 
 # More info
 
