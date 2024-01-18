@@ -62,7 +62,7 @@ This guide is for publishers looking to use IronSource LevelPlay to load and sho
 
 <br/>
 
-Publishers integrated the IronSource SDK directly can receive Rewarded Videos through VAST tag solution and the IronSource Direct Deals. Guide for this approach is found at section [Guide for VAST Tag](#vast-tag).
+Publishers integrated the IronSource SDK directly can receive Rewarded Videos through VAST tag solution and the IronSource Direct Deals. Guide for this approach is found at section [Guide for VAST Tag](https://www.pollfish.com/docs/android-ironsource-adapter#vast-tag).
 
 <br/>
 
