@@ -630,6 +630,8 @@ Save your changes and you should now be able to fetch Rewarded Videos through th
 
 **Important**: In order to identify the user and have valid metrics of the performance you have to provide GDPR consent for the user in your IronSource SDK. More details can be found [here](https://developers.is.com/ironsource-mobile/android/regulation-advanced-settings/)
 
+<br>
+
 # More info
 
 You can read more info on how the Prodege SDKs work or how to get started with IronSource at the following links:
