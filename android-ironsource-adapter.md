@@ -62,6 +62,10 @@ This guide is for publishers looking to use IronSource LevelPlay to load and sho
 
 <br/>
 
+Publishers integrated the IronSource SDK directly can receive Rewarded Videos through VAST tag solution and the IronSource Direct Deals. Guide for this approach is found at section [Guide for VAST Tag through IronSource Direct Deals](#vast-tag).
+
+<br/>
+
 # Prerequisites
 
 - [Prodege Publisher Account](www.pollfish.com/login/publisher)
@@ -576,6 +580,54 @@ If you use proguard with your app, please insert the following lines in your pro
 ```
 
 <br/>
+
+# <a name="vast-tag"></a>Guide for VAST Tag through IronSource Direct Deals
+
+To fetch Rewarded Videos throught IronSource Direct Deals you have to follow the steps described next.
+
+## 1. Set Up Prodege Rewarded Ads
+
+### 1.1. Obtain a Publisher Account
+
+Register as a Publisher at [www.pollfish.com](https://www.pollfish.com/signup/publisher).
+
+<br/>
+
+### 1.2. Add new app on the Publisher Dashboard and copy the given API Key
+
+Login at [www.pollfish.com](//www.pollfish.com/login/publisher) and click "Add a new app" on the [Publisher Dashboard](https://www.pollfish.com/publisher/). Copy then the given API key for this app in order to use later on.
+
+<br/>
+
+### 1.3. Create a Rewarded Ad Placement and copy the given Placement Id
+
+Create a Rewarded placement by clicking "Create a Placement". Provide a name an select the ad unit Rewarded Ad and ad format Rewarded Video. Copy the given placement id in order to use later on.
+
+<br/>
+
+## 2. Create the VAST tag URL
+
+Initial VAST tag URL:
+```
+https://wss.pollfish.com/v2/device/register/true?json={"ip":"[IP]","device_id":"[IFA]","api_key":"{{api_key}}","placement_key":"{{placement_key}}","encryption":"NONE","version":"5","os":"1","usr_agent":"[UA]","vastTag":"true"}&dontencrypt=true
+```
+
+Replace the parameter values of `{{api_key}}` & `{{placement_key}}` with the keys found in steps 1.2 & 1.3 respectively.
+
+Your final VAST tag URL should look like this:
+
+```
+https://wss.pollfish.com/v2/device/register/true?json={"ip":"[IP]","device_id":"[IFA]","api_key":"3c0e0fd5-f48a-4335-8968-0301f550608a","placement_key":"f8a11c34-db84-4c52-9609-e79193ee0c56","encryption":"NONE","version":"5","os":"1","usr_agent":"[UA]","vastTag":"true"}&dontencrypt=true
+```
+
+## 3. Set Up IronSource Direct Deal
+
+Navigate to your IronSource Dashboard and select Setup -> Direct Deals or click [here](https://mobile-campaigns.isprog.com/#/campaigns) to navigate to your IronSource Direct Deals Campaigns list.
+Create a new Campaign. In the new Campaign page provide a Name and a CPM value. Select `Tag Type: VAST` and in the `Tag URL` field input the VAST tag URL created in step 2.
+
+Save your changes and you should now be able to fetch Rewarded Videos through the VAST tag campaign.
+
+**Important**: In order to identify the user and have valid metrics of the performance you have to provide GDPR access to IronSource SDK. More details can be found [here](https://developers.is.com/ironsource-mobile/android/regulation-advanced-settings/)
 
 # More info
 
