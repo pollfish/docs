@@ -1,4 +1,4 @@
-**RESEARCHER TERMS OF SERVICE &amp; PRIVACY POLICY**
+**RESEARCHER TERMS OF USE**
 
 Last updated: 09/26/2023
 
@@ -10,13 +10,13 @@ Pollfish LLC. (&quot;Pollfish&quot; or &quot;we&quot; &quot;our&quot; or &quot;u
 
 **THIS AGREEMENT**
 
-**PART A [Terms of Service]** of this Researcher Terms of Service and Privacy Policy (this &quot;Agreement&quot;) governs your use of the Pollfish Website and Services as made available to you by Pollfish.
+**PART A [RESEARCHER TERMS OF USE]** of this Researcher Terms of Use and Privacy Policy (this &quot;Agreement&quot;) governs your use of the Pollfish Website and Services as made available to you by Pollfish.
 
-**PART B [Privacy Policy]** of this Agreement discloses the ways we process your personal information, the purposes of processing and your Privacy rights.
+**PART B [RESEARCHER TERMS OF USE - POLLFISH SURVEY LINK]** of this Pollfish Survey Link Researcher Terms of Service and Privacy Policy (this "Agreement") governs your use of the Pollfish Website and Pollfish Survey Link Service as made available to you by Pollfish.
 
 **In order to access the Pollfish Website and Service you are requested to accept and conform to this Agreement, otherwise you will not have access to our Services.**
 
-**PART A: TERMS OF SERVICE**
+**PART A: TERMS OF USE**
 
 **1. OUR SERVICE**
 
@@ -225,6 +225,187 @@ The past, present and future content of the Properties, including without limita
 Pollfish understands that surveys distributed may include sensitive or confidential information about the Researcher&#39;s business and operations (e.g. launching of a new product, marketing strategies etc as such information may be revealed directly or indirectly through the contents of a certain survey), which the Researcher does not want to be made public or become accessible to competitors. Pollfish cannot guarantee that the Respondents will treat such information as confidential and that they will desist from divulging or reproducing it. Therefore, in case your survey contains confidential information you wish to protect, we advise you to draft your surveys accordingly. Here are some indicative steps you could follow, in order to reduce aforementioned risks:
 
 (a) You could consider not using any mark, name, logo or other sign which may identify your Company,
+
+(b) You could use an alternate-test name for the product related to your survey.
+
+Please note that experience has proven that "confidentiality notifications" presented to the Respondent at the end of surveys usually has the opposite effect than the one expected, since Respondents seem to share information flagged as "confidential", more often than they do with information which is not directly identifiable as confidential or sensitive.
+
+**PART B: RESEARCHER TERMS OF USE - POLLFISH SURVEY LINK**
+
+**WHO WE ARE**
+
+Pollfish LLC. is a US company seated at 1460 Broadway New York, NY 10036, USA. Pollfish operates a Greek Branch (hereinafter &quot;the Branch&quot;) located at Pirri 5 Athens, Attica 11527, GR.
+
+Pollfish LLC. (&quot;Pollfish&quot; or &quot;we&quot; &quot;our&quot; or &quot;us&quot;) owns and controls Pollfish services, and provides access to the Pollfish.com website, at the url: www.pollfish.com and all subdomains under the pollfish.com domain and related properties (the &quot;Website&quot;), software, data and materials accessed via the Website (the &quot;Services&quot; or &quot;Properties&quot;).
+
+**THIS AGREEMENT**
+
+**PART A [Terms of Use]** of this Pollfish Survey Link Researcher Terms of Use and Privacy Policy (this &quot;Agreement&quot;) governs your use of the Pollfish Website and Pollfish Survey Link Service as made available to you by Pollfish.
+
+**In order to access the Pollfish Website and the Pollfish Survey Link Service you are requested to accept and conform to this Agreement, otherwise you will not have access to our Services.**
+
+**PART A: TERMS OF SERVICE**
+
+**1. THE POLLFISH SURVEY LINK SERVICE**
+
+**1.1**  Pollfish operates an on-line survey platform, through which a researcher (the &quot;Researcher&quot; or &quot;You&quot;) may conduct surveys. The Pollfish Survey Link Service (&quot;PSL Service&quot;), is a special service through which a Researcher may create questionnaires and be provided with a link, which Researcher may then distribute electronically to respondents of his own choice (via email or otherwise). The Respondent may click on the link and be shown the survey. Once the Respondent answers the survey questionnaire, the completed survey is stored by Pollfish, on behalf of the Researcher.
+
+**1.2**  Through the process described above, Pollfish collects and processes, on behalf and under the instructions of the Researcher, the following Respondent data (the &quot;PLS Survey Data&quot;):
+
+(a) The Respondent&#39;s answers to the questionnaire distributed to the Respondent by the Researcher.
+
+(b) certain anonymous passive Data of the Respondent and more specifically the following:
+
+1. Device properties (IP address, operating system, browser and browser user agent, screen size and screen resolution)
+2. The source where the respondent came from if available (e.g. Facebook, twitter, email etc.)
+
+All data mentioned above, are collected and processed on behalf of the Researcher and under the instructions of the Researcher, who designates the means and purpose of processing and  is the Controller of such Data. Pollfish acts as Service Provider/processor of abovementioned data.
+
+**2. CHARGES &amp; PAYMENTS**
+
+**2.1**  The PSL Service is currently provided at no charge. Pollfish reserves the right, at any time, to change, in the future, its &quot;free-of-charge&quot; policy with respect to the PSL Service. Any such change will not affect any services provided to Researcher before the implementation of said pricing policy.
+
+**3. REGISTRATION**
+
+**3.1** In order to use our PSL Service you will have to register, by completing the registration process and providing Pollfish all the necessary information requested in the registration form, including email, password, or any other information requested by Pollfish.
+
+**3.2** You agree to provide only true and accurate information. You further acknowledge that you will control your account and that you are liable for any unlawful act occurring under your account.
+
+**3.3** You are responsible for maintaining the confidentiality of your password or account information, and for restricting access to your device (computer, smart phone etc) so that others may not access any password protected portion of the Website or other Properties and Services using your name, username, or password in whole or in part.
+
+**3.4** You further take full responsibility for all actions and activities performed through your account. You should inform Pollfish for any unauthorized use of your account or any breach of security. Pollfish staff may login to your account from time to time for maintenance or assistance purposes.
+
+**4. WARRANTIES AND OBLIGATIONS**
+
+In order to use or continue to use our PSL Service, you acknowledge and you warrant that you meet the following conditions:
+
+1. You have the authority to enter and perform obligations. The services provided by Pollfish are not available to any person without capacity to exercise legal rights or any Researcher disqualified from the system by Pollfish for any reason whatsoever.
+2. You are in compliance with the terms set by this Agreement.
+3. You will regularly review this Agreement in order to be informed on potential changes.
+4. You shall not use the PSL Service to transmit content (including questionnaire content which you have formed through the use of our service) that:
+
+- is defamatory, fraudulent, deceptive, racial, abusive, threatening, harassing, pornographic.
+- may infringe intellectual property rights of others such as Copyright, Trademarks, trade secrets, patents or may harm the right of privacy or any other right of any party.
+- Is unlawful or encourages or supports illegal activities.
+- does not respect and is not in accordance with all standing Laws. (including data protection and Protection of Privacy laws as well as COPPA).
+- invades privacy of others.
+- competes with Pollfish&#39;s activity and interests.
+
+5. By registering to Pollfish you do not gain control over our software or application.
+6. Surveys are distributed by you, only, through the means chosen by you in order to communicate with eligible respondents. Pollfish does not interfere with (a) the selection of eligible respondents (b) the targeting criteria (c) the distribution of the survey link.
+7. Pollfish shall not provide to you any pre-survey or out-of-survey information, personal information, data, personal data, e-mailing lists, or other identifiers of any natural person whatsoever.Subject to applicable law (and such option being available only under this PSL service and not being available to Researchers when they use any other Pollfish service, including our standard survey service), you may ask questions (through your survey questionnaires) under which the Respondents may be invited to submit personally identifiable information to you. All such information shall be processed by you in accordance with applicable law.
+8. You will not provide to Pollifsh any names, addresses, email addresses or other identifiers (whether anonymous, psedonymized or real) of any natural person, including the Respondents to your Surveys, except to the extent that these are included/incorporated in the Survey answers stored by Pollfish on your behalf and under your (lawful) instructions.
+9. Once you have completed the survey questionnaire and you have been provided the link to your survey, you will not be allowed to make any amendments on the questionnaire.
+10. You shall abstain from any misuse and you shall not engage in any fraudulent or deceptive activity in the course of using our Services.
+11. Any processing of Respondent personal Data by you shall be compliant with Applicable Personal Data Legislation. Without limiting the foregoing, any processing of Respondent data pertaining to personal data of persons in the EU/EEA/ and the UK by you, shall be compliant with the GDPR and the UK GDPR and you abide that, in any case, no processing of such personal data by you shall breach applicable law. All California- residents' information, processed by you shall be processed by you in accordance with the CCPA, as applicable.
+12. You will not process any Personal Data collected by you for direct marketing, promotional, selling or influencing the opinions or decisions of any Respondent, unless providing the Respondent with a clear-opt-out option for any such processing.
+13. In your communication with Respondents, you will comply with applicable legislation regarding e-mail spam and other forms of unsolicited communications.
+14. You are responsible for obtaining the opt-in consent of the respondent for the collection and processing of any Respondent personal data by you. You are further responsible for providing to Respondent robust notice, in clear and easy-to-understand language of all necessary information, as required by applicable law, regarding the processing of the Respondent’s personal data by you, including, but not limited, to your name and contact details, the purpose of processing, any sharing of data with third parties, data retention period, and the ability of the Respondent to exercise his rights, as prescribed by applicable law, directly to you. 
+
+
+**5. LICENSE TO USE OUR SERVICE**
+
+**5.1**  Subject to the Terms and Conditions described in this Agreement, Pollfish grants to Researcher a revocable, non-exclusive, worldwide, non-assignable license to access and use the Pollfish PSL service.
+
+**6. OWNERSHIP OF REPORTING DELIVERABLES**
+
+**6.1** Researcher shall be the exclusive owner of all PSL Survey Data. Pollfish shall not use or acquire access to any Survey Data, except for the purpose of providing the service to the Researcher. Under certain circumstances, Pollfish may be obliged to disclose said data to Public Authorities as required by applicable law, including the case of a subpoena, an investigation by Data Authorities or related procedure.
+
+**6.2 Limited License to use the PSL Survey Data.**  Researcher grants to Pollfish a perpetual, worldwide, non-revocable, non-exclusive license to access and use the &quot;PSL Survey Data&quot; solely for the following purposes and under the following limitations:
+
+Pollfish may access, store and process the PSL Survey Data, in order to be able to monitor the Survey Process and provide its services to Researcher. Pollfish may also access, store and process the PSL Survey Data for purposes of prevention and detection of illegal activity, fraud or network security incidents and for verifying Researcher&#39;s compliance with the terms of this Agreement.
+
+**7. PERSONAL DATA SECURITY AND LAWFUL PROCESSING**
+
+**7.1 GDPR and further compliance with Applicable Law.**  Researcher shall be Controller of the PSL Survey Data. Researcher agrees and warrans that all such processing operations of which Researcher is Controller shall be compliant with applicable law, including as the case may be, with the provisions of the General Data Protection Regulation 2016/679 (&quot;GDPR&quot;) the UK GDPR and/or the CCPA (as applicable) and all and any further Personal Data Legislation which may be applicable to Researcher&#39;s business and the processing operations of Researcher. You hereby agree and warrant that the PSL Survey Data shall not be processed by You in a way that may be illegal or may run contrary to the aforementioned Data Protection and Privacy Legislation.
+
+**7.2**  Pollfish acts as Processor (or Service Provider) of the PSL Survey Data. Processing of the PSL data by Pollfish is made on the basis of the Data Processing Agreement (including Exhibit A and Exhibit B thereof, as applicable) included in Annex A of these ToU.
+
+**7.3** Researcher declares and warrants that:
+
+(a) If Researcher is a legal entity, and in any case where Researcher maintains a website, Researcher shall maintain a Privacy Policy in its website, containing all lawful information on the processing of personal data, including the processing of Respondents&#39; personal data.
+
+(b) Researcher shall actively obtain all legal consents for the processing of the Respondents&#39; personal data, where the legal basis of processing is consent, by requesting and receiving explicit opt-in consent by the Respondent, when communicating to him the relevant survey link.
+
+(c) Researcher shall provide to the Respondent, at a stage of prior to the collection of any data, all lawful information regarding the processing of personal data made by the Researcher in accordance with applicable law (e.g. by providing such information when communication the survey link to the Respondent)
+
+(d) Researcher shall implement and maintain all technical and organizational measures to ensure that the personal data processed are protected from accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to personal data transmitted, stored or otherwise processed.
+
+(e) Researcher shall inform Respondents and shall respond, in accordance with applicable data protection and privacy laws, to any requests, complaints or actions of Respondents regarding the exercise of their rights including, as applicable, under applicable law, the right to be informed, the right of access, the right to rectification, and upon fulfillment of the legal conditions, the right to erasure, to portability, to restriction of processing and to object. In case any such complaint or Respondent action is sent to/received by Pollfish, Pollfish shall inform Researcher without undue delay about such action/complaint and shall refer the Respondent to the Researcher for the handling by the latter, of said action/complaint.
+
+The Researcher hereby grants Pollfish the right to disclose to enquiring Respondents, Researcher’s name, address and contact information to the full extent that the above are available to Pollfish, in order for the Respondents to be able to directly contact you and exercise any rights afforded to them under applicable law.
+
+**8. TERMINATION**
+
+**8.1**  Pollfish reserves the right to terminate this Agreement at any time, for convenience with 30 days prior notice. In case of breach of this Agreement by the Researcher, Pollfish can immediately terminate this Agreement without notice.
+
+**8.2**  The rights, duties and responsibilities of the Parties shall continue in full force and effect until the effective date of any termination or expiration of this Agreement, as applicable. Upon termination or expiration of this Agreement, Researcher shall desist from any further use of the Services.
+
+**8.3**  Sections 7, 8, 9, 11, 12 and 13 of PART A of this Agreement shall survive termination of this Agreement.
+
+**9. INDEMNIFICATION**
+
+**9.1**  You hereby indemnify and hold Pollfish harmless and agree to defend against any third party claim or action brought against Pollfish or any of its parent, subsidiary or affiliated companies, from and against any and all claims, actions, losses, liabilities, damages, costs and expenses (including legal fees and costs) arising out of or in connection with any claim(s) regarding the: (a) breach of any warranty, representation, covenant or agreement made by you in this Agreement; b) misuse of Pollfish service; c) violation of any third party rights; and d) violation of all and any applicable laws or regulations, including applicable legislation on personal data protection.
+
+**9.2**  Pollfish hereby indemnifies and holds you harmless and agrees to defend against any third party claim or action brought against you or any of your parent, subsidiary or affiliated companies, employees, representatives, directors, and officers from and against any and all claims, actions, losses, liabilities, damages, costs and expenses (including legal fees and costs) arising out of or in connection with any claim(s) regarding the breach of any warranty, representation, covenant or agreement made by Pollfish in this Agreement.
+
+**9.3**  The indemnified party must (a) promptly notify the indemnifying party in writing of any third-party claim (provided that a failure to promptly notify will not relieve the indemnifying party of its indemnification obligations, except to the extent it has been prejudiced by such failure); (b) reasonably cooperate with the indemnifying party in the defense of the matter; and (c) give the indemnifying party primary control of the defense of the matter and negotiations for its settlement, at its own expenses. The indemnified party may, at its own expense, join in the defense with counsel of its choice. The indemnifying party may not enter into a settlement unless it has obtained the written consent of the indemnified party (not to be unreasonably withheld).
+
+**10. DISCLAIMER**
+
+**10.1**  Without limitation of anything else set forth in the present agreement you understand and agree that Pollfish further limits its liability in connection with your use of its properties as set forth:
+
+Pollfish Properties, including, without limitation, all Content, Pollfish SDK, the site, the Platform, the service and the functions made available on or accessed through or sent from the website, are provided &quot;AS IS,&quot; &quot;as available, &quot; and &quot;with all faults&quot; without warranties implied or statutory including without limitation warranties of merchantability, fitness for a particular use and non-infringement. Pollfish and its parents, subsidiaries and affiliates make no representation or warranties or endorsements of any kind whatsoever (express or implied) about:
+
+1. the Pollfish SDK
+2. Pollfish Content
+3. Pollfish platform, and service;
+4. Pollfish services and functions made accessible on or accessed through Pollfish SDK;
+5. any products or services offered via the website or hypertext links to third parties; and/or
+6. the treatment of any information, content, material or data transmitted by users to the Properties;
+7. security associated with the transmission of information through the properties or any linked site.
+
+**10.2**  Pollfish is trying to build the best service for its users, however, it cannot guarantee the uninterrupted or error-free function of the Pollfish SDK, site, platform, service and functions or that the defects will be corrected or that it will be free of viruses. Therefore, Pollfish does not warrant that the Pollfish SDK, site, platform, panel, service, functions contained therein are or will be uninterrupted, error-free, accurate, complete or current, that defects will be corrected; or that the Properties or the servers that make them available are free of viruses or other harmful components.
+
+**10.3**  Pollfish is not responsible for any technical issues in relation to any telecommunications or internet network (including in relation to speed or bandwidth), including any injury or damage to entrant&#39;s or any other person&#39;s device related to or resulting from the participation, access or downloading any materials in a Pollfish Survey.
+
+**10.4**  Pollfish has no control over the content of the Surveys created by the Researcher and cannot be held liable for any misuse of the Service by the Researcher.
+
+**10.5**  Pollfish reserves its right to terminate at any time your use of its Services, in case of any breach of the present agreement which may impose liability upon Pollfish.
+
+**11. CONFIDENTIALITY**
+
+**11.1 Definitions.**  As used in this Agreement,
+
+**(a) &quot;Confidential Information&quot;** means any proprietary information, including third party information, disclosed, in whatever tangible form or medium, to the other party, irrespective of whether it is clearly marked &quot;confidential&quot; (or with some other proprietary notice or not) and (ii) all information disclosed orally or otherwise in intangible form by the disclosing party. Confidential information shall not include any part of such information which:
+
+**i)** Is in or comes into the public domain in any way without breach of this Agreement by the Receiving party;
+
+**ii)** Has been independently developed by the Receiving Party without recourse to the Confidential Information;
+
+**iii)** The Receiving Party obtains or has available from a source other than the Disclosing Party without breach by the Receiving Party of any confidentiality or non-disclosure Agreement; put in force between the Receiving Party and this third source; and/or without breach by this third source, of any confidentiality or non-disclosure Agreement put in force between such third source and the Disclosing Party;
+
+**iv)** Is disclosed by the Receiving Party with the prior written approval of the Disclosing Party.
+
+For clarity, the PLS Survey Data as well as all and any contact data of Researcher employees or representatives provided voluntarily by the Researcher for the commercial, legal, technical or other communications under this Agreement, shall be treated by Pollfish as Researcher&#39;s Confidential Information (without prejudice to Pollfish’s rights under the last paragraph of Section 7.3 above).
+
+**(b) &quot;Disclosing Party&quot;** means and refers to either party and all its associate companies, associates, employees, officers, servants, agents or professional advisors (including, without limitation, legal counsel, accountants, consultants, bankers and financial advisors), acting on behalf of such party (&quot;hereinafter referred to, collectively, as &quot;Representatives&quot;), where and whenever such party discloses confidential information to the other party.
+
+**(c) &quot;Receiving Party&quot;** means refers to either party and all its associate companies, associates, employees, officers, servants, agents or professional advisors (including, without limitation, legal counsel, accountants, consultants, bankers and financial advisors), acting on behalf of the Receiving Party (&quot;hereinafter referred to, collectively, as &quot;Representatives&quot;) where and whenever such party receives information from the other party.
+
+**11.2 Use of Confidential Information.**  Without prejudice to Pollfish’s rights under the last paragraph of Section 7.3 above, the Confidential Information will be kept strictly confidential and shall not, without prior written consent, be, whether orally or in writing or by any other means, disclosed, divulged, provided or made accessible to any other person (the term &quot;person/s&quot; as used in this Agreement being broadly interpreted to include, without limitation, any corporation, company, partnership and individual as well), either directly or indirectly by the Receiving party or by its agents, representatives, officers, directors, partners, employees or advisors (including, without limitation, legal counsel, accountants, consultants, bankers and financial advisors), in any manner whatsoever, in whole or in part, and shall not be used by the Receiving party or its Representatives, for any purpose whatsoever other than for the performance of this Agreement (the &quot;Purpose&quot;). The Receiving party shall disclose the Confidential Information only to such of its directors, employees or representatives as they may need to know the Confidential Information for the Purpose. The Receiving party shall treat the Confidential Information with the same degree of care and with sufficient protection from unauthorized disclosure as the Receiving Party uses to maintain its own confidential or proprietary information. The Receiving party shall ensure that anyone to whom the Receiving party discloses the information complies with this Agreement as if they were the Receiving Party and that they enter into a Confidentiality Agreement with the Receiving party (or directly with the Disclosing party, if the latter so requests) on terms no less protective than those contained in this Agreement. Every party and its Representatives will take all necessary organizational and technical measures to ensure that all Confidential Information is properly safeguarded. In the event that the Receiving Party is required by law, Public Authorities or court order to disclose any Confidential Information to any third party, it shall use its best endeavors: (i) To inform the Disclosing Party of the full circumstances of the disclosure and the Confidential Information to be disclosed (ii) To consult with the Disclosing Party with the aim of taking all possible steps to avoid or limit disclosure and taking those steps where they would not result in significant adverse consequences to the Disclosing Party (iii) To gain assurances in relation to confidentiality from the body to whom the information shall be disclosed (iv) To limit the disclosure and provide only the absolutely necessary Confidential Information as requested by the Competent Authorities, provided, however that any such disclosed information will remain subject to this Confidentiality Agreement.
+
+**11.3 Survival.**  The Parties&#39; confidentiality obligations under this Section 11 of PART A of this Agreement shall survive for 5 years following any termination or expiration of this Agreement, provided that confidentiality obligations with respect to Confidential Information constituting trade secrets shall continue for as long as such Confidential Information shall be eligible for trade secret protection.
+
+**12. INTELLECTUAL PROPERTY RIGHTS**
+
+The past, present and future content of the Properties, including without limitation, copyright works and all intellectual property rights (including Industrial Property rights) such as software, logos, trademarks domain names, designs, graphics, pictures, photos, texts, newsletters, etc and any and all copyright material and all other intellectual property right and/or materials related to the Properties (collectively &quot;Content&quot;) are the sole property of Pollfish. Except as stated herein, no rights in or to the Content and/or to the Properties are granted to you.
+
+**13. PRESERVING CONFIDENTIALITY OF SURVEYS**
+
+Pollfish understands that surveys distributed may include sensitive or confidential information about the Researcher&#39;s business and operations (e.g. launching of a new product, marketing strategies etc as such information may be revealed directly or indirectly through the contents of a certain survey), which the Researcher does not want to be made public or become accessible to competitors. Pollfish cannot guarantee that the Respondents will treat such information as confidential and that they will desist from divulging or reproducing it. Therefore, in case your survey contains confidential information you wish to protect, we advise you to draft your surveys accordingly. Here are some indicative steps you could follow, in order to reduce aforementioned risks:
+
+(a) You could consider not using any mark, name, logo or other sign which may identify your Company, (however you remain responsible for providing the Respondent with all relevant information, including name and contact information, for the purposes set out in clause 7.3 of this Agreement)
 
 (b) You could use an alternate-test name for the product related to your survey.
 
